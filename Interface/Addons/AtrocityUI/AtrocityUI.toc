@@ -1,0 +1,54 @@
+## Interface: 100007
+## Author: Ripdisk
+## Version: 5.3.2
+## Title: |cff7381ffAtrocityUI|r
+## Notes: AtrocityUI Installer and Media
+## DefaultState: enabled
+## SavedVariables: AtrocityUIDB
+## X-BigWigs: 5.2.0
+## X-Details: 5.3.1
+## X-ElvUI: 5.3.2
+## X-MRT: 5.3.0
+## X-OmniCD: 5.3.0
+## X-Plater: 5.3.2
+## X-WeakAuras: 5.3.2
+## X-GladiusEx: 5.2.0
+## X-WarpDeplete: 5.2.0
+## RequiredDeps: ElvUI
+## OptionalDeps: AtrocityMedia
+
+## Base AtrocityUI installer addon files
+AtrocityUI.lua
+
+AddonDataExported\1080p\BigWigs.lua
+AddonDataExported\1080p\Details.lua
+AddonDataExported\1080p\ElvUI.lua
+AddonDataExported\1080p\MRT.lua
+AddonDataExported\1080p\OmniCD.lua
+AddonDataExported\1080p\Plater.lua
+AddonDataExported\1080p\WeakAuras.lua
+AddonDataExported\1080p\GladiusEx.lua
+AddonDataExported\1080p\WarpDeplete.lua
+
+AddonDataExported\1440p\BigWigs.lua
+AddonDataExported\1440p\Details.lua
+AddonDataExported\1440p\ElvUI.lua
+AddonDataExported\1440p\MRT.lua
+AddonDataExported\1440p\OmniCD.lua
+AddonDataExported\1440p\Plater.lua
+AddonDataExported\1440p\WeakAuras.lua
+AddonDataExported\1440p\GladiusEx.lua
+AddonDataExported\1440p\WarpDeplete.lua
+
+AddonDataExported\Common\AddonSkins.lua
+
+## Import functions
+AddonImports\ElvUI.lua
+AddonImports\Details.lua
+AddonImports\BigWigs.lua
+AddonImports\MRT.lua
+AddonImports\OmniCD.lua
+AddonImports\WeakAuras.lua
+AddonImports\GladiusEx.lua
+AddonImports\WarpDeplete.lua
+AddonImports\Plater.lua

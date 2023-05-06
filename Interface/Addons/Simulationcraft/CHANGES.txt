@@ -1,0 +1,10 @@
+lightweight tag dff6ac78bd3cae2ab35aa3b637725ef6f3e83cb1 10.0.7-03
+Author:	Dave Hendler <sollaires@gmail.com>
+Date:	Sat Mar 25 11:49:19 2023 -0700
+
+commit dff6ac78bd3cae2ab35aa3b637725ef6f3e83cb1
+Author: Dave Hendler <sollaires@gmail.com>
+Date:   Sat Mar 25 11:49:19 2023 -0700
+
+    Better error messaging when a loadout is corrupted
+

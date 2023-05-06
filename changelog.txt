@@ -1,0 +1,108 @@
+[v5.3.2]
+Removed load condition for Remorseless Winter as the spell is now baseline.
+Flask missing reminder will now show up if remaining duration is less than 5 minutes or missing, as it is not usable in combat.
+Flask missing reminder will no longer show up in combat.
+Fixed Y offset on Emerald Communion
+Add stack count to Blade of Justice to account for Improved Blade of Justice talent.
+Fixed load conditions for Divine Toll for all 3 paladin specs.
+Divine Protection duration added for paladin to Defensives group.
+Added Plater mod to track Skyreach on nameplates.
+Removed Plater scaling of certain nameplates.
+Removed the weird name overwrites for some mobs (didn't know these existed lol).
+Fixed the installer not correctly applying the colored profiles when ran on Evoker.
+Healing Stream / Cloudburst totem weakaura now shows when totem is active with glow + duration of totem.
+Nature's Swiftness is now being tracked for Resto Shaman.
+Stormkeeper is now being tracked for Resto Shaman.
+Fixed load conditions for High Tide for Resto Shaman.
+Fixed load conditions for Undulation for Resto Shaman.
+Tracking for Tidebringer added for Resto Shaman.
+Tracking for Nature's Swiftness buff added for Resto Shaman.
+Tracking for Stormkeeper buff added for Resto Shaman.
+Tracking for Master of the Elements buff added for Resto Shaman.
+Texturized self Earth Shield icon on healing frames for Resto Shaman.
+Added tracking for Ancestral Guidance for Resto Shaman.
+Added tracking for Flame Shock CD.
+Fixed Of Dusk and Dawn progress bar load condition for Paladin
+Fixed slight misposition of Essences on Evokers for 1080p.
+
+==========================================================
+
+[v5.3.1]
+Paladin Holy Power bar fix for 1080p.
+Details script to auto change on dungeons added.
+
+==========================================================
+
+[v5.3.0]
+General:
+Interrupted Combat text should now load for Evoker specs. 
+Fixed class colored elv profiles loading for Evoker via the installer.
+OmniCD extra bars spells should now be capped to 5 to prevent overflow.
+Reverted tracking on OmniCD to main primary offensive spell left of frame.
+Removed unnecessary entries from Utility Bar's custom sort.
+Healer OmniCD layout for arenas should now function properly.
+Details autorun script to change meter based on dungeons temporarily removed. This is due to an issue that we haven't found a longterm solution to yet.
+
+Dungeons:
+Energy Surge debuff in Nokhud Offensive now shows up for any class that can purge it.
+Quaking Circle Range check now has correct debuffID.
+Court of Stars auto select spy aura added.
+
+Warlock:
+Demonology Blazing Meteor positioning fixed.
+Added functionality improvements to Madness of Azj'Aqir tracking.
+
+Priest:
+Fixed Shadow Word: Death glow with inescapable torment.
+New Penance tracker for Discipline priest.
+Resource Bar now predicts insanity gain from Mindgames.
+Pain Suppression in Top Bar now has correct font size for stacks.
+Discipline: Mindbender rearranged on Primary Bar group.
+
+Monk:
+Expel Harm in utility bar is now only tracked for Mistweaver.
+Purged nonexistant Faeline Stomp buff aura from buff groups.
+Added tracking for Transfer the Power, and 2p/4p for Windwalker monk.
+
+Mage:
+Arcane Charges frame strata set to Background.
+
+DH:
+Added Spell in Range conditions for DH sigils.
+
+DK:
+Plaguebringer tracking added for Unholy DK.
+Death Grip now desaturates correctly to account for second charge.
+
+Druid:
+Resource Bar is now correctly tracking AP gains from Wrath with and without Soul of the Forest.
+Survival Instincts in Top Bar now has correct font size for stacks.
+Fixed load conditions for Apex Predator's Craving for feral druid
+Fixed load condition for Predatory Swiftness for feral druid
+Removed Owlweave weakaura
+Added tracking for Incarn Restealth buff for feral.
+
+Shaman:
+Fixed Frost Shock triggers to correctly glow and show stacks of buffs for certain languages.
+Fix to Cloudburst Totem causing lag.
+
+Evoker:
+Emerald Communion moved to Primary Bar for Pres Evoker.
+Moved Stasis weakaura up to prevent overlap with buff bar.
+Empowered stage now shows up on castbar for Empowered spells as Evoker
+
+Paladin:
+Templar Slash glow for Ret Paladin
+Highlord's Judgment now being tracked on Boss Frames.
+Inquisitor's Ire now being tracked.
+Divine Arbiter now being tracked.
+Removed obsolete Retribution auras.
+
+Warrior:
+Fixed load condition for Rend in Boss Debuffs.
+Added Fatal Mark to Boss Debuff group.
+Added load conditions to a handful of warrior weakauras to improve performance.
+Arms Execute should now track CD when spec'd out of Improved Execute.
+Pruned tracking some useless buffs for Warrior.
+Mortal Strke now glows at 2 stacks of EP.
+Executer's Precision now tracking own debuff only.
