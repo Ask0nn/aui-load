@@ -1,7 +1,7 @@
 local E, L, C = select(2, ...):unpack()
 
 local LSM = E.Libs.LSM
-LSM:Register("font", "PT Sans Narrow", "Interface\\Addons\\OmniCD\\Media\\Fonts\\PTSansNarrow-Bold.ttf", bit.bor(LSM.LOCALE_BIT_western, LSM.LOCALE_BIT_ruRU))
+LSM:Register("font", "PT Sans Narrow", "Interface\\Addons\\OmniCD\\Libs\\Fonts\\PTSansNarrow-Bold.ttf", bit.bor(LSM.LOCALE_BIT_western, LSM.LOCALE_BIT_ruRU))
 LSM:Register("statusbar", "OmniCD Flat", "Interface\\Addons\\OmniCD\\Media\\omnicd-texture_flat.blp")
 
 local LSM_Font = {}
@@ -11,23 +11,23 @@ local defaultFonts = {}
 
 if LOCALE_koKR then
 	defaultFonts.statusBar = {"기본 글꼴", 22, "NONE", 0, 0, 0, 1, -1}
-	defaultFonts.icon = {"기본 글꼴", 11, "OUTLINE", 0, 0, 0, 1, -1}
+	defaultFonts.icon = {"기본 글꼴", 11, "OUTLINE", 0, 0, 0, 0, 0}
 	defaultFonts.anchor = {"기본 글꼴", 12, "NONE", 0, 0, 0, 1, -1}
 elseif LOCALE_zhCN then
 	defaultFonts.statusBar = {"默认", 22, "NONE", 0, 0, 0, 1, -1}
-	defaultFonts.icon = {"默认", 15, "OUTLINE", 0, 0, 0, 1, -1}
+	defaultFonts.icon = {"默认", 15, "OUTLINE", 0, 0, 0, 0, 0}
 	defaultFonts.anchor = {"默认", 15, "NONE", 0, 0, 0, 1, -1}
 elseif LOCALE_zhTW then
 	defaultFonts.statusBar = {"預設", 22, "NONE", 0, 0, 0, 1, -1}
-	defaultFonts.icon = {"預設", 15, "OUTLINE", 0, 0, 0, 1, -1}
+	defaultFonts.icon = {"預設", 15, "OUTLINE", 0, 0, 0, 0, 0}
 	defaultFonts.anchor = {"預設", 15, "NONE", 0, 0, 0, 1, -1}
 elseif LOCALE_ruRU then
 	defaultFonts.statusBar = {"PT Sans Narrow", 22, "NONE", 0, 0, 0, 1, -1}
-	defaultFonts.icon = {"PT Sans Narrow", 10, "OUTLINE", 0, 0, 0, 1, -1}
+	defaultFonts.icon = {"PT Sans Narrow", 10, "OUTLINE", 0, 0, 0, 0, 0}
 	defaultFonts.anchor = {"PT Sans Narrow", 12, "NONE", 0, 0, 0, 1, -1}
 else
 	defaultFonts.statusBar = {"PT Sans Narrow", 22, "NONE", 0, 0, 0, 1, -1}
-	defaultFonts.icon = {"PT Sans Narrow", 10, "OUTLINE", 0, 0, 0, 1, -1}
+	defaultFonts.icon = {"PT Sans Narrow", 10, "OUTLINE", 0, 0, 0, 0, 0}
 	defaultFonts.anchor = {"PT Sans Narrow", 12, "NONE", 0, 0, 0, 1, -1}
 end
 
@@ -45,6 +45,7 @@ C["General"] = {
 			mmColor = {r=1, g=1, b=1},
 			mmssColor = {r=1, g=1, b=1},
 		},
+		useElvUICooldownTimer = true,
 	}
 }
 
@@ -67,18 +68,16 @@ local flagFixForDF = {
 
 }
 
-function E:SetFontProperties(fontString, db, size)
-	local flag = db.flag
-	if flag == "NONE" then
-		fontString:SetShadowOffset(1, -1)
-		fontString:SetShadowColor(0, 0, 0, 1)
-	else
-		fontString:SetShadowOffset(0, 0)
-		fontString:SetShadowColor(0, 0, 0, 0)
+function E:SetFontProperties(fontString, db)
+	local ofsX, flag = db.ofsX, db.flag
+	if db.font == "Homespun" then
+		ofsX, flag = 0, "MONOCHROMEOUTLINE"
 	end
-	flag = db.font == "Homespun" and "MONOCHROMEOUTLINE" or flag
+	fontString:SetShadowOffset(ofsX, -ofsX)
+	fontString:SetShadowColor(db.r, db.g, db.b, ofsX == 0 and 0 or 1)
+
 	flag = (E.isDF or E.isWOTLKC341) and flagFixForDF[flag] or flag
-	fontString:SetFont(LSM:Fetch("font", db.font), size or db.size, flag)
+	fontString:SetFont(LSM:Fetch("font", db.font), db.size, flag)
 end
 
 function E:ConfigTextures()
@@ -120,9 +119,7 @@ local fontInfo = {
 		min = 8, max = 32, step = 1,
 	},
 	flag = {
-		disabled = function(info)
-			return E.options.args.General.args.fonts.args[ info[3] ].disabled or E.profile.General.fonts[ info[3] ].font == "Homespun"
-		end,
+		disabled = function(info) return E.profile.General.fonts[ info[3] ].font == "Homespun" end,
 		name = L["Font Outline"],
 		order = 3,
 		type = "select",
@@ -133,10 +130,20 @@ local fontInfo = {
 			["THICKOUTLINE"] = "THICKOUTLINE"
 		},
 	},
+	ofsX = {
+		disabled = function(info) return E.profile.General.fonts[ info[3] ].font == "Homespun" end,
+		name = L["Font Shadow"],
+		order = 4,
+		type = "select",
+		values = {
+			[0] = NONE,
+			[1] = "1, -1",
+		}
+	},
 }
 
 local General = {
-	name = GENERAL,
+	name = E.STR.WHATS_NEW_ESCSEQ .. GENERAL,
 	order = 10,
 	type = "group",
 	childGroups = "tab",
@@ -205,15 +212,34 @@ local General = {
 			}
 		},
 		cooldownText = {
-			name = L["Timers"],
+			name = E.STR.WHATS_NEW_ESCSEQ .. L["Timers"],
 			order = 30,
 			type = "group",
 			get = function(info) return E.profile.General.cooldownText[ info[3] ][ info[#info] ] end,
 			set = function(info, value) E.profile.General.cooldownText[ info[3] ][ info[#info] ] = value E:Refresh() end,
 			args = {
+				coooldownTimer = {
+					name = E.STR.WHATS_NEW_ESCSEQ .. L["Cooldown Timer"],
+					order = 100,
+					type = "group",
+					inline = true,
+					args = {
+						useElvUICooldownTimer = {
+							disabled = function() return not _G.ElvUI end,
+							name = L["Use ElvUI Timer"],
+							desc = L["[Show Numbers for Cooldowns] must be disabled in Blizzard's \'Options/Action Bars\' menu."],
+							type = "toggle",
+							get = function(info) return E.profile.General.cooldownText.useElvUICooldownTimer end,
+							set = function(info, value)
+								E.profile.General.cooldownText.useElvUICooldownTimer = value
+								E.Libs.OmniCDC.StaticPopup_Show("OMNICD_RELOADUI", E.STR.RELOAD_UI)
+							end,
+						},
+					}
+				},
 				statusBar = {
 					name = L["Status Bar"],
-					order = 100,
+					order = 200,
 					type = "group",
 					inline = true,
 					args = {

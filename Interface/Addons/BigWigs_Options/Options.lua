@@ -104,12 +104,26 @@ local acOptions = {
 							ldbi:Hide("BigWigs")
 						end
 					end,
-					width = "full",
+					width = 1.5,
+				},
+				compartment = {
+					type = "toggle",
+					name = L.compartmentMenu,
+					desc = L.compartmentMenu_desc,
+					order = 14,
+					get = function() return not ldbi:IsButtonInCompartment("BigWigs") end,
+					set = function(_, v)
+						if v then
+							ldbi:RemoveButtonFromCompartment("BigWigs")
+						else
+							ldbi:AddButtonToCompartment("BigWigs", "Interface\\AddOns\\BigWigs\\Media\\Icons\\core-enabled")
+						end
+					end,
 				},
 				separator2 = {
 					type = "description",
 					name = " ",
-					order = 14,
+					order = 15,
 					width = "full",
 				},
 				flash = {
@@ -334,7 +348,7 @@ local function getSlaveOption(self)
 	local flag = self:GetUserData("flag")
 	local current = module.db.profile[key]
 	if type(current) ~= "number" or type(flag) ~= "number" then
-		error(notNumberError:format(tostringall(key, module.moduleName, current, flag)))
+		error(notNumberError:format(tostring(key), tostring(module.moduleName), tostring(current), tostring(flag)))
 	end
 	return bit.band(current, flag) == flag
 end
@@ -458,6 +472,7 @@ local icons = {
 	EMPHASIZE = "Interface\\AddOns\\BigWigs\\Media\\Icons\\Menus\\EmphasizeMessage",
 	ME_ONLY_EMPHASIZE = "Interface\\AddOns\\BigWigs\\Media\\Icons\\Menus\\EmphasizeMessageMeOnly",
 	DISPEL = "Interface\\AddOns\\BigWigs\\Media\\Icons\\Menus\\Dispel",
+	-- PRIVATE = "Interface\\AddOns\\BigWigs\\Media\\Icons\\Menus\\Private",
 }
 
 local function hasOptionFlag(dbKey, module, key)
@@ -577,12 +592,15 @@ local advancedTabs = {
 
 function getAdvancedToggleOption(scrollFrame, dropdown, module, bossOption)
 	local dbKey, name, desc, icon, alternativeName = BigWigs:GetBossOptionDetails(module, bossOption)
+	local widgets = {}
+
 	local back = AceGUI:Create("Button")
 	back:SetText(L.back)
 	back:SetFullWidth(true)
 	back:SetCallback("OnClick", function()
 		showToggleOptions(dropdown, nil, dropdown:GetUserData("bossIndex"), true)
 	end)
+	widgets[#widgets + 1] = back
 
 	local check = AceGUI:Create("CheckBox")
 	check:SetLabel(alternativeName and L.alternativeName:format(name, alternativeName) or name)
@@ -600,14 +618,15 @@ function getAdvancedToggleOption(scrollFrame, dropdown, module, bossOption)
 	if icon then
 		check:SetImage(icon, 0.07, 0.93, 0.07, 0.93)
 	end
+	widgets[#widgets + 1] = check
 
 	-- Create role-specific secondary checkbox
-	local roleRestrictionCheckbox = nil
 	for i, key in next, BigWigs:GetRoleOptions() do
 		local flag = C[key]
 		local dbv = module.toggleDisabled and module.toggleDisabled[dbKey] or module.toggleDefaults[dbKey]
 		if bit.band(dbv, flag) == flag then
 			local roleName, roleDesc = BigWigs:GetOptionDetails(key)
+			local roleRestrictionCheckbox
 			if key == "TANK" then
 				roleRestrictionCheckbox = getSlaveToggle(roleName, roleDesc, dbKey, module, flag, check, icons.TANK)
 			elseif key == "HEALER" then
@@ -620,7 +639,18 @@ function getAdvancedToggleOption(scrollFrame, dropdown, module, bossOption)
 			roleRestrictionCheckbox:SetDescription(roleDesc)
 			roleRestrictionCheckbox:SetFullWidth(true)
 			roleRestrictionCheckbox:SetUserData("desc", nil) -- Remove tooltip set by getSlaveToggle() function
+			widgets[#widgets + 1] = roleRestrictionCheckbox
 		end
+	end
+
+	if hasOptionFlag(dbKey, module, "PRIVATE") then
+		local privateAuraText = AceGUI:Create("Label")
+		privateAuraText:SetText(L.PRIVATE_desc)
+		-- privateAuraText:SetColor(1, 0.82, 0)
+		-- privateAuraText:SetImage(icons.PRIVATE)
+		privateAuraText:SetFullWidth(true)
+		-- privateAuraText:SetHeight(30)
+		widgets[#widgets + 1] = privateAuraText
 	end
 
 	local tabs = AceGUI:Create("TabGroup")
@@ -634,12 +664,9 @@ function getAdvancedToggleOption(scrollFrame, dropdown, module, bossOption)
 	tabs:SetUserData("master", check)
 	tabs:SetUserData("scrollFrame", scrollFrame)
 	tabs:SelectTab("options")
+	widgets[#widgets + 1] = tabs
 
-	if roleRestrictionCheckbox then
-		return back, check, roleRestrictionCheckbox, tabs
-	else
-		return back, check, tabs
-	end
+	return unpack(widgets)
 end
 
 local spellUpdater = CreateFrame("Frame")
@@ -789,7 +816,7 @@ local function getDefaultToggleOption(scrollFrame, dropdown, module, bossOption)
 	local showFlags = {
 		"TANK_HEALER", "TANK", "HEALER", "DISPEL",
 		"EMPHASIZE", "ME_ONLY", "ME_ONLY_EMPHASIZE", "COUNTDOWN", "FLASH", "ICON", "SAY", "SAY_COUNTDOWN",
-		"PROXIMITY", "INFOBOX", "ALTPOWER", "NAMEPLATEBAR",
+		"PROXIMITY", "INFOBOX", "ALTPOWER", "NAMEPLATEBAR", --"PRIVATE",
 	}
 	for i = 1, #showFlags do
 		local key = showFlags[i]
@@ -859,7 +886,7 @@ local function getDefaultToggleOption(scrollFrame, dropdown, module, bossOption)
 	return check, button
 end
 
-local listAbilitiesInChat = nil
+local listAbilitiesInChat
 do
 	local SendChatMessage = loader.SendChatMessage
 	local function output(channel, ...)
@@ -924,8 +951,6 @@ do
 						if desc > 0 then
 							local spellName = GetSpellInfo(desc)
 							link = ("\124cff71d5ff\124Hspell:%d:0\124h[%s]\124h\124r"):format(desc, spellName)
-						else
-							-- EJ?
 						end
 					end
 				end
@@ -1229,21 +1254,62 @@ do
 	local function onTreeGroupSelected(widget, event, value)
 		widget:ReleaseChildren()
 		local zoneId = value:match("\001(-?%d+)$")
-		local defaultEnabled = value == "BigWigs_Dragonflight"
+		local bigwigsContent = value:match("(BigWigs_%a+)$")
 		if zoneId then
 			onZoneShow(widget, tonumber(zoneId))
-		elseif value:match("^BigWigs_") and not defaultEnabled and GetAddOnEnableState(playerName, value) == 0 then
+		elseif bigwigsContent and value ~= loader.currentExpansion.name then -- Any BigWigs content, but skip when clicking the current expansion header
+			local addonState = loader:GetAddOnState(bigwigsContent)
+			local string = addonState == "MISSING" and L.missingAddOn or addonState == "DISABLED" and L.disabledAddOn
+			if string then
+				local container = AceGUI:Create("SimpleGroup")
+				container:SetFullWidth(true)
+				widget:AddChild(container)
+
 				local missing = AceGUI:Create("Label")
-				missing:SetText(L.missingPlugin:format(value))
+				missing:SetText(string:format(bigwigsContent))
 				missing:SetFontObject(GameFontHighlight)
 				missing:SetFullWidth(true)
-				widget:AddChild(missing)
-		elseif value:match("^LittleWigs_") and GetAddOnEnableState(playerName, "LittleWigs") == 0 then
+				container:AddChild(missing)
+
+				if addonState == "DISABLED" then
+					local reload = AceGUI:Create("Button")
+					reload:SetText(BigWigsAPI:GetLocale("BigWigs: Plugins").enable)
+					reload:SetAutoWidth(true)
+					reload:SetUserData("addonName", bigwigsContent)
+					reload:SetCallback("OnClick", function(reloadWidget)
+						loader.EnableAddOn(reloadWidget:GetUserData("addonName"))
+						C_UI.Reload()
+					end)
+					container:AddChild(reload)
+				end
+			end
+		elseif value:match("^LittleWigs_") then -- All LittleWigs content addons, all come from 1 zip
+			if value == loader.currentExpansion.littlewigsName then value = "LittleWigs" end
+			local addonState = loader:GetAddOnState(value)
+			local string = addonState == "MISSING" and L.missingAddOn or addonState == "DISABLED" and L.disabledAddOn
+			if not loader.usingLittleWigsRepo and string then
+				local container = AceGUI:Create("SimpleGroup")
+				container:SetFullWidth(true)
+				widget:AddChild(container)
+
 				local missing = AceGUI:Create("Label")
-				missing:SetText(L.missingPlugin:format("LittleWigs"))
+				missing:SetText(string:format(value))
 				missing:SetFontObject(GameFontHighlight)
 				missing:SetFullWidth(true)
-				widget:AddChild(missing)
+				container:AddChild(missing)
+
+				if addonState == "DISABLED" then
+					local reload = AceGUI:Create("Button")
+					reload:SetText(BigWigsAPI:GetLocale("BigWigs: Plugins").enable)
+					reload:SetAutoWidth(true)
+					reload:SetUserData("addonName", value)
+					reload:SetCallback("OnClick", function(reloadWidget)
+						loader.EnableAddOn(reloadWidget:GetUserData("addonName"))
+						C_UI.Reload()
+					end)
+					container:AddChild(reload)
+				end
+			end
 		else
 			statusTable.groups[value] = true
 			widget:RefreshTree()
@@ -1271,26 +1337,24 @@ do
 			local addonNameToHeader = {}
 			local defaultHeader
 			if value == "bigwigs" then
-				defaultHeader = "BigWigs_Dragonflight"
+				defaultHeader = loader.currentExpansion.name
 				for i = 1, #expansionHeader do
 					local value = "BigWigs_" .. expansionHeader[i]
-					local defaultEnabled = value == "BigWigs_Dragonflight"
 					treeTbl[i] = {
 						text = EJ_GetTierInfo(i),
 						value = value,
-						enabled = (defaultEnabled or GetAddOnEnableState(playerName, value) > 0),
+						enabled = true,
 					}
 					addonNameToHeader[value] = i
 				end
 			elseif value == "littlewigs" then
-				defaultHeader = "LittleWigs_Dragonflight"
-				local enabled = GetAddOnEnableState(playerName, "LittleWigs") > 0
+				defaultHeader = loader.currentExpansion.littlewigsName
 				for i = 1, #expansionHeader do
 					local value = "LittleWigs_" .. expansionHeader[i]
 					treeTbl[i] = {
 						text = EJ_GetTierInfo(i),
 						value = value,
-						enabled = enabled,
+						enabled = true,
 					}
 					addonNameToHeader[value] = i
 				end
@@ -1299,43 +1363,58 @@ do
 			do
 				local zoneToId, alphabeticalZoneList = {}, {}
 				for k in next, loader:GetZoneMenus() do
-					local zone
+					local zoneName
 					if k < 0 then
 						local tbl = GetMapInfo(-k)
 						if tbl then
-							zone = tbl.name
+							zoneName = tbl.name
 						else
-							zone = tostring(k)
+							zoneName = tostring(k)
 						end
 					else
-						zone = GetRealZoneText(k)
-						if zone == "" then
+						zoneName = GetRealZoneText(k)
+						if zoneName == "" then
 							-- if GetRealZoneText returns an empty string it's probably due to installing the wrong version of BigWigs or otherwise
 							-- having a module enabled for a zone that doesn't exist.
 							-- use the zone key as the menu name in that case instead of the empty string.
-							zone = tostring(k)
+							zoneName = tostring(k)
 						end
 					end
-					if zone then
-						if zoneToId[zone] then
-							zone = zone .. "1" -- When instances exist more than once (Karazhan)
+					if zoneName then
+						if zoneToId[zoneName] then
+							zoneName = zoneName .. "1" -- When instances exist more than once (Karazhan)
 						end
-						zoneToId[zone] = k
-						alphabeticalZoneList[#alphabeticalZoneList+1] = zone
+						zoneToId[zoneName] = k
+						alphabeticalZoneList[#alphabeticalZoneList+1] = zoneName
+					end
+				end
+
+				for k, v in next, loader.currentExpansion.zones do -- Parse current content zones
+					local zoneName = GetRealZoneText(k)
+					if not zoneToId[zoneName] and not loader.usingBigWigsRepo then -- If we have no registered menus for current content, and not using the Git repo
+						alphabeticalZoneList[#alphabeticalZoneList+1] = zoneName -- We want to create sub menus in the GUI for disabled/missing BigWigs current content addons
+						zoneToId[zoneName] = {k, v}
 					end
 				end
 
 				sort(alphabeticalZoneList) -- Make alphabetical
 				for i = 1, #alphabeticalZoneList do
 					local zoneName = alphabeticalZoneList[i]
-					local id = zoneToId[zoneName]
+					local entry = zoneToId[zoneName]
+					local name, id
+					if type(entry) == "table" then
+						id = entry[1]
+						name = entry[2]
+					else
+						id = entry
+					end
 
 					local parent = loader.zoneTbl[id] and addonNameToHeader[loader.zoneTbl[id]] -- Get expansion number for this zone
 					local treeParent = treeTbl[parent] -- Grab appropriate expansion name
 					if treeParent and treeParent.enabled then -- third-party plugins can add empty zones if you don't have the expansion addon enabled
 						if not treeParent.children then treeParent.children = {} end -- Create sub menu table
 						tinsert(treeParent.children, { -- Add new instance/zone sub menu
-							value = id,
+							value = name or id,
 							text = zoneName,
 						})
 					end

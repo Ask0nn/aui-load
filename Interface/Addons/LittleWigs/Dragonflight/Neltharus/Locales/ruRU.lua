@@ -1,12 +1,16 @@
 local L = BigWigs:NewBossLocale("Neltharus Trash", "ruRU")
 if not L then return end
 if L then
+	L.custom_on_autotalk = "Авторазговор"
+	--L.custom_on_autotalk_desc = "Instantly selects the gossip options to get profession buffs."
+
 	L.qalashi_warden = "Куалаши-страж"
 	L.qalashi_hunter = "Куалаши-охотник"
 	L.overseer_lahar = "Надзиратель Лахар"
 	L.qalashi_trainee = "Куалаши-новобранец"
 	L.qalashi_bonetender = "Куалаши-костестраж"
 	L.qalashi_irontorch = "Куалаши-факельщица"
+	L.qalashi_bonesplitter = "Куалаши-костедробительница"
 	L.qalashi_lavabearer = "Куалаши - воин лавы"
 	L.irontorch_commander = "Командир Железного Факела"
 	L.forgewrought_monstrosity = "Выкованное чудовище"
@@ -14,6 +18,12 @@ if L then
 	L.qalashi_thaumaturge = "Куалаши-чудотворица"
 	L.apex_blazewing = "Жарокрыл-вожак"
 	L.qalashi_lavamancer = "Куалаши-лавамант"
+end
+
+L = BigWigs:NewBossLocale("Chargath, Bane of Scales", "ruRU")
+if L then
+	L.slow = "Замедление"
+	L.boss = "БОССЕ"
 end
 
 L = BigWigs:NewBossLocale("Warlord Sargha", "ruRU")

@@ -131,7 +131,7 @@ function PS:ShowProfileDialog(text)
 
 		Resizer:SetPoint("BOTTOMRIGHT", -8, 8)
 		Resizer:SetSize(16, 16)
-		Resizer:SetNormalTexture([[Interface\AddOns\OmniCD\Media\omnicd-bullet-resizer]])
+		Resizer:SetNormalTexture(E.Libs.OmniCDC.texture.resizer)
 		local Resizer_Normal = Resizer:GetNormalTexture()
 		Resizer_Normal:SetPoint("BOTTOMRIGHT")
 		Resizer_Normal:SetPoint("TOPLEFT", Resizer, "CENTER")

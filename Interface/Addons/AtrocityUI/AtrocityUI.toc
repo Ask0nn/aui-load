@@ -1,6 +1,6 @@
-## Interface: 100007
+## Interface: 100100
 ## Author: Ripdisk
-## Version: 5.3.2
+## Version: 6.0.0
 ## Title: |cff7381ffAtrocityUI|r
 ## Notes: AtrocityUI Installer and Media
 ## DefaultState: enabled
@@ -9,9 +9,9 @@
 ## X-Details: 5.3.1
 ## X-ElvUI: 5.3.2
 ## X-MRT: 5.3.0
-## X-OmniCD: 5.3.0
-## X-Plater: 5.3.2
-## X-WeakAuras: 5.3.2
+## X-OmniCD: 6.0.0
+## X-Plater: 6.0.0
+## X-WeakAuras: 6.0.0
 ## X-GladiusEx: 5.2.0
 ## X-WarpDeplete: 5.2.0
 ## RequiredDeps: ElvUI

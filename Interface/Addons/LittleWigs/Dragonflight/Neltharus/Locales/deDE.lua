@@ -1,12 +1,16 @@
 local L = BigWigs:NewBossLocale("Neltharus Trash", "deDE")
 if not L then return end
 if L then
+	L.custom_on_autotalk = "Automatisch ansprechen"
+	L.custom_on_autotalk_desc = "Wählt direkt die Dialogoptionen um Berufs-Stärkungszauber zu erhalten."
+
 	L.qalashi_warden = "Wächter der Qalashi"
 	L.qalashi_hunter = "Jäger der Qalashi"
 	L.overseer_lahar = "Aufseher Lahar"
 	L.qalashi_trainee = "Lehrling der Qalashi"
 	L.qalashi_bonetender = "Knochenhüter der Qalashi"
 	L.qalashi_irontorch = "Eisenfackel der Qalashi"
+	L.qalashi_bonesplitter = "Knochenspalterin der Qalashi"
 	L.qalashi_lavabearer = "Lavaträger der Qalashi"
 	L.irontorch_commander = "Eisenfackelkommandant"
 	L.forgewrought_monstrosity = "Geschmiedetes Monstrum"
@@ -14,6 +18,12 @@ if L then
 	L.qalashi_thaumaturge = "Thaumaturgin der Qalashi"
 	L.apex_blazewing = "Apexflammenschwinge"
 	L.qalashi_lavamancer = "Lavamagier der Qalashi"
+end
+
+L = BigWigs:NewBossLocale("Chargath, Bane of Scales", "deDE")
+if L then
+	L.slow = "Verlangsamen"
+	L.boss = "BOSS"
 end
 
 L = BigWigs:NewBossLocale("Warlord Sargha", "deDE")

@@ -171,6 +171,7 @@ function P:UpdatePositionValues()
 	self.breakPoint = E.db.priority[db.breakPoint]
 	self.breakPoint2 = E.db.priority[db.breakPoint2]
 	self.displayInactive = db.displayInactive
+	self.maxNumIcons = db.maxNumIcons == 0 and 100 or db.maxNumIcons
 
 	local growRowsUpward = db.growUpward
 	local growY = growRowsUpward and 1 or -1

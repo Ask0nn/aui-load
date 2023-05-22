@@ -107,8 +107,9 @@ function P:SetCooldownElements(icon, charges)
 	icon.cooldown:SetHideCountdownNumbers(noCount)
 	if E.OmniCC then
 		E.OmniCC.Cooldown.SetNoCooldownCount(icon.cooldown, noCount)
-
-
+	elseif icon.cooldown.timer then
+		icon.cooldown.timer:SetShown(not noCount)
+		icon.cooldown.timer.forceDisabled = noCount
 	end
 end
 
@@ -206,7 +207,7 @@ function P:StartCooldown(icon, cd, isRecharge, noGlow)
 			icon:SetAlpha(E.db.icons.activeAlpha)
 		end
 		if frame.shouldRearrangeInterrupts then
-			self:SetExIconLayout(key, true, true)
+			self:SetExIconLayout(key, true)
 		end
 	end
 
@@ -283,7 +284,7 @@ function P:ResetAllIcons(reason)
 
 	for key, frame in pairs(self.extraBars) do
 		if frame.shouldRearrangeInterrupts then
-			self:SetExIconLayout(key, true, true)
+			self:SetExIconLayout(key, true)
 		end
 	end
 end

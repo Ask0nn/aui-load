@@ -305,8 +305,8 @@ function E:UnitFrames()
 			t.index = index
 			t.minGroup = minGroup
 			local f = {}
-			local insertFrame = function(name)
-				for j = 1, index do
+			local insertFrame = function(name, overrideIndex)
+				for j = 1, overrideIndex or index do
 					local frameName = name .. j
 					tinsert(f, frameName)
 				end
@@ -315,7 +315,7 @@ function E:UnitFrames()
 				for j = 1, 3 do
 					for k = 1, 8 do
 						local formatted = format(frame, j, k)
-						insertFrame(formatted)
+						insertFrame(formatted, k == 1 and 40) -- 'Raid Wide Sorting' fix
 					end
 				end
 			elseif strfind(frame, "%%d") then
@@ -359,11 +359,10 @@ end
 function E:Counters()
 	if IsAddOnLoaded("OmniCC") then
 		self.OmniCC = OmniCC
-	-- WA no longer shows double text with Blizzard and Elv
---	elseif not GetCVarBool("countdownForCooldowns") then
---		local ElvUI1 = ElvUI and ElvUI[1]
---		self.ElvUI1 = ElvUI1 and type(ElvUI1.CooldownEnabled) == "function" and ElvUI1:CooldownEnabled()
---		and type(ElvUI1.RegisterCooldown) == "function" and type(ElvUI1.ToggleCooldown) == "function" and ElvUI1
+	elseif not GetCVarBool("countdownForCooldowns") and E.profile.General.cooldownText.useElvUICooldownTimer then -- WA no longer shows double text...
+		local ElvUI1 = ElvUI and ElvUI[1]
+		self.ElvUI1 = ElvUI1 and type(ElvUI1.CooldownEnabled) == "function" and ElvUI1:CooldownEnabled()
+			and type(ElvUI1.RegisterCooldown) == "function" and ElvUI1
 	end
 end
 

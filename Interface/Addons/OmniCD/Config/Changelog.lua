@@ -1,46 +1,35 @@
 local E, L, C = select(2, ...):unpack()
 
 if E.isClassic then E.changelog = [=[
-v1.14.3.2744
-	version update
+v1.14.3.2752
+	Max Number of Visible Icons will correctly work with Display Inactive Icons disabled
 
-v1.14.3.2724
-	Fixed sync for cross realm group members
-
-Full list of changes can be found in the CHANGELOG file
+v1.14.3.2751
+	Added option to use ElvUI's timer (in General menu)
 ]=]
 elseif E.isBCC then E.changelog = [=[
 v2.5.4.2722
 	Fixed sync for cross realm group members
-
-Full list of changes can be found in the CHANGELOG file
 ]=]
 elseif E.isWOTLKC then E.changelog = [=[
-v3.4.1.2744
-	minor bug fixes
+v3.4.1.2752
+	Max Number of Visible Icons will correctly work with Display Inactive Icons disabled
 
-v3.4.1.2743
-	Cooldowns will reset when an encounter ends
-	Fixed nil error
-	Jan 31, 2023 Hotfixes
-
-Full list of changes can be found in the CHANGELOG file
+v3.4.1.2751
+	3.4.2 font flag fix
+	Added option to use ElvUI's timer (in General menu)
 ]=]
 else E.changelog = [=[
-v10.0.7.2746
-	Cloudburst Totem will correctly replace Healing Stream Totem
-	Casting Echo will correctly interact with Just in Time (Talent)
-	CD timers will explicitly use Blizzard's CD text
-	|cffff2020ElvUI user can safely? enable Blizzard's CD text as WAs no longer show duplicate text|r
+v10.1.0.2752
+	Max Number of Visible Icons will correctly work with Display Inactive Icons disabled
+	Healing Stream Totem will correctly add a charge if you have both talents as Restoration spec
+	Fixed Fortitude of the Bear CD
 
-v10.0.7.2745
-	Patch 10.0.7 updates
-	Added additional sorting for the Raid Bar
-	Added UseIconAlpha for the Raid Bar
-	Addon will no longer sync with older versions (inspection will continue to work)
-
-	Battle Res Plugin: Arclight Vital Connector will correctly consume a charge
-
-Full list of changes can be found in the CHANGELOG file
+v10.1.0.2751
+	Added Season 2 Obsidian PvP Trinkets
+	Added Embers of Neltharion Tier Set bonuses
+	Added option to use ElvUI's timer (in General menu)
 ]=]
 end
+
+E.changelog = E.changelog .. "\n\n|cff808080Full list of changes can be found in the CHANGELOG file"

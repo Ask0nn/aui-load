@@ -5,7 +5,14 @@ if L then
 	L.vicious_basilisk = "Basilisco sañoso"
 	L.earthen_warder = "Depositario terráneo"
 	L.earthen_weaver = "Tejedor terráneo"
-	L.cavern_seeker = "Buscador de la caverna"
 	L.runic_protector = "Protector rúnico"
+	L.cavern_seeker = "Buscador de la caverna"
 	L.ebonstone_golem = "Gólem de ébano"
+	L.earthen_guardian = "Guardián terráneo"
+	L.infinite_agent = "Agente Infinito"
+end
+
+L = BigWigs:NewBossLocale("Sentinel Talondras", "esES") or BigWigs:NewBossLocale("Sentinel Talondras", "esMX")
+if L then
+	L.boss = "JEFE"
 end

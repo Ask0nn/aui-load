@@ -23,6 +23,14 @@ local defaults = {
     currentPullFormat = "(+:percent:)",
     customCurrentPullFormat = "(+:percent:)",
 
+    showForcesGlow = true,
+    demoForcesGlow = false,
+	  forcesGlowColor = "FFD12F14",
+    forcesGlowLineCount = 18,
+    forcesGlowFrequency = 0.13,
+    forcesGlowLength = 10,
+    forcesGlowThickness = 2,
+
     showTooltipCount = true,
     tooltipCountFormat = "+:count: / :percent:",
     customTooltipCountFormat = "+:count: / :percent:",
@@ -77,7 +85,7 @@ local defaults = {
     bar3TextureColor = "FF979797",
     forcesTextureColor = "FFBB9E22",
     forcesOverlayTextureColor = "FFFF5515",
-
+    
     -- Font sizes for text parts
     deathsFontSize = 16,
     timerFontSize = 34,
@@ -113,7 +121,8 @@ local defaults = {
     objectivesOffset = 4,
 
     -- Utility options
-    insertKeystoneAutomatically = true
+    insertKeystoneAutomatically = true,
+    showMillisecondsWhenDungeonCompleted = true
   }
 }
 
@@ -323,6 +332,7 @@ function WarpDeplete:InitOptions()
       general = group(L["General"], false, {
         lineBreak(),
         toggle(L["Insert keystone automatically"], "insertKeystoneAutomatically", "UpdateLayout"),
+        toggle(L["Show millisecond precision after dungeon completion"], "showMillisecondsWhenDungeonCompleted", "UpdateLayout"),
         lineBreak(),
 
         group(L["Forces Display"], true, {
@@ -356,7 +366,11 @@ function WarpDeplete:InitOptions()
             desc = L["Use the following tags to set your custom format"] .. ":"
               .. "\n- :percent: " .. L["Shows the current forces percentage (e.g. 82.52%)"]
               .. "\n- :count: " .. L["Shows the current forces count (e.g. 198)"]
-              .. "\n- :totalcount: " .. L["Shows the total forces count (e.g. 240)"],
+              .. "\n- :totalcount: " .. L["Shows the total forces count (e.g. 240)"]
+              .. "\n- :remainingcount: " .. L["Shows the remaining amount of forces needed to complete"]
+              .. "\n- :remainingcountafterpull: " .. L["Shows the remaining amount of forces needed to complete after current pull"]
+              .. "\n- :remainingpercent: " .. L["Shows the remaining percentage of forces to achieve 100%"]
+              .. "\n- :remainingpercentafterpull: " .. L["Shows the remaining percentage of forces to achieve 100% after current pull"],
             multiline = false,
             width = 2,
             hidden = function() return WarpDeplete.db.profile.forcesFormat ~= ":custom:" end,
@@ -456,6 +470,62 @@ function WarpDeplete:InitOptions()
               WarpDeplete:UpdateLayout()
             end,
           },
+        }),
+
+        group(L["Forces Glow"], true, {
+          {
+            type = "toggle",
+            name = L["Show Forces Glow"],
+            desc = L["Show a glow around the forces action bar if the current pull will bring it to 100%"],
+            get = function(info) return WarpDeplete.db.profile.showForcesGlow end,
+            set = function(info, value)
+              WarpDeplete.db.profile.showForcesGlow = value
+              WarpDeplete:UpdateDemoModeForces()
+              WarpDeplete:UpdateLayout()
+            end
+          },
+
+          {
+            type = "toggle",
+            name = L["Show in Demo Mode"],
+            desc = L["Show the forces glow in demo mode"],
+            hidden = function() return not WarpDeplete.db.profile.showForcesGlow end,
+            get = function(info) return WarpDeplete.db.profile.demoForcesGlow end,
+            set = function(info, value)
+              WarpDeplete.db.profile.demoForcesGlow = value
+              WarpDeplete:UpdateDemoModeForces()
+              WarpDeplete:UpdateLayout()
+            end
+          },
+
+          lineBreak(function() return not WarpDeplete.db.profile.showForcesGlow end, 3),
+
+          color(L["Color"], "forcesGlowColor", "UpdateGlowAppearance", {
+            hidden = function() return not WarpDeplete.db.profile.showForcesGlow end,
+            width = 1 / 2,
+          }),
+
+          lineBreak(function() return not WarpDeplete.db.profile.showForcesGlow end, 3),
+
+          range(L["Line Count"], "forcesGlowLineCount", "UpdateGlowAppearance", {
+            hidden = function() return not WarpDeplete.db.profile.showForcesGlow end,
+            min = 1, max = 30, step = 1, width = 5 / 6,
+          }),
+
+          range(L["Line Length"], "forcesGlowLength", "UpdateGlowAppearance", {
+            hidden = function() return not WarpDeplete.db.profile.showForcesGlow end,
+            min = 1, max = 10, step = 1, width = 5 / 6,
+          }),
+
+          range(L["Line Thickness"], "forcesGlowThickness", "UpdateGlowAppearance", {
+            hidden = function() return not WarpDeplete.db.profile.showForcesGlow end,
+            min = 1, max = 5, step = 0.1, width = 5 / 6,
+          }),
+
+          range(L["Frequency"], "forcesGlowFrequency", "UpdateGlowAppearance", {
+            hidden = function() return not WarpDeplete.db.profile.showForcesGlow end,
+            min = 0.05, max = 0.5, step = 0.01, width = 5 / 6,
+          }),
         }),
 
         group(L["Death log tooltip"], true, {

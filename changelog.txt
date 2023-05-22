@@ -1,3 +1,76 @@
+[v6.0.0]
+General & Addon:
+Added preliminiary dungeon auras, will adjust more in the upcoming versions as I play the patch out, specifically with concern to sounds -credits @goodoption.
+Added Aberrus raid auras.
+Added stack texts for agility trinket auras to account for new trinket having multiple charges, condition set to only load with trinket equipped.
+Added tracking for new class trinkets for healer buff group.
+Added tracking for new class trinkets for ranged buff group.
+Added tracking for new class trinkets for melee buff group.
+Further pruned buffs deemed as bloat from buff groups.
+Added tracking for Voice of the Silent Star for healer buff group.
+Added tracking for Voice of the Silent Star for ranged buff group.
+Added tracking for Voice of the Silent Star for melee buff group.
+Added tracking for Vial of Animated Blood for melee buff group.
+Added Plater NPC colors for Season 2.
+Added timer and debuff tracking for Entangled affix.
+
+Death Knight:
+Removed tracking of Rune Mastery for Frost DK.
+Added tracking for Unholy DK set bonus.
+
+Demon Hunter:
+
+Druid:
+Fixed Orbit Breaker weakaura for Druid to accomodate new tier.
+Fixed load condition for Incapacitating Roar to make it load for Balance.
+
+Evoker:
+Added tracking for Preservation Evoker set bonus.
+
+Hunter:
+Removed obsolete tracking for Marksmanship: Double Tap.
+Added tracking for Marksmanship: Salvo.
+Added load condition for tracking of Fortitude of the Bear as Survival.
+
+Mage:
+Added tracking for Fire Mage set bonus.
+
+Monk:
+Added tracking for Mistweaver Monk set bonus.
+
+Paladin:
+Fixed Divine Purpose load conditions.
+Added duration tracking for combo spell of Templar Strike.
+
+Priest:
+Removed obsolete Void Eruption weakaura for Shadow.
+Removed obsolete Surge of Darkness weakaura for Shadow.
+Mind Flay: Insanity aura is now also tracking Mind Spike: Insanity
+Added stacks to Mind Flay/Spike: Insanity aura.
+Removed Mind Melt triggers for Mind Blast due to rework.
+Added Power Word: Shield to secondary bar for Shadow Priest.
+Added conditions for being out of mana for Shadow on some spells in secondary bar.
+Added Mind Soothe to the utility bar.
+Added some new spells and fixed some new spells for the Resource Bar for Shadow in Essentials.
+Added Shadow 4P tracking.
+Added tracking for Idol of Yogg Saron.
+Added tracking for Discipline Priest set bonus.
+
+Rogue:
+
+Shaman:
+Added tracking for Restoration Shaman set bonus.
+Added tracking for Elemental Shaman set bonus.
+Added tracking for Enhancement Shaman set bonus.
+
+Warlock:
+
+Warrior:
+Added tracking for Arms Warrior set bonus.
+Added tracking for Fury Warrior set bonus.
+
+==========================================================
+
 [v5.3.2]
 Removed load condition for Remorseless Winter as the spell is now baseline.
 Flask missing reminder will now show up if remaining duration is less than 5 minutes or missing, as it is not usable in combat.

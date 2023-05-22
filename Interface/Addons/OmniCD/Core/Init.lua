@@ -25,10 +25,12 @@ NS[1].Comm = CreateFrame("Frame")
 NS[1].Cooldowns = CreateFrame("Frame")
 
 NS[1].AddOn = AddOnName
+local GetAddOnMetadata = C_AddOns and C_AddOns.GetAddOnMetadata or GetAddOnMetadata
 NS[1].Version = GetAddOnMetadata(AddOnName, "Version")
 NS[1].Author = GetAddOnMetadata(AddOnName, "Author")
 NS[1].Notes = GetAddOnMetadata(AddOnName, "Notes")
 NS[1].License = GetAddOnMetadata(AddOnName, "X-License")
+NS[1].Localizations = GetAddOnMetadata(AddOnName, "X-Localizations")
 NS[1].userGUID = UnitGUID("player")
 NS[1].userName = UnitName("player")
 NS[1].userRealm = GetRealmName()

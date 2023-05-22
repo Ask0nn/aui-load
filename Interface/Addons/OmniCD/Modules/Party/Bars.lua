@@ -11,6 +11,9 @@ elseif E.preCata then
 end
 
 local SpellTooltip = CreateFrame("GameTooltip", "OmniCDSpellTooltip", UIParent, "GameTooltipTemplate")
+local TOOLTIP_UPDATE_TIME = 0.2
+SpellTooltip.updateTooltipTimer = TOOLTIP_UPDATE_TIME
+
 local FEIGN_DEATH = 5384
 local TOUCH_OF_KARMA = 125174
 local DEBUFF_HEARTSTOP_AURA = 214975
@@ -60,7 +63,7 @@ function P:SetEnabledColorScheme(info)
 
 	for key, frame in pairs(P.extraBars) do
 		if frame.shouldRearrangeInterrupts then
-			P:SetExIconLayout(key, true, true)
+			P:SetExIconLayout(key, true)
 		end
 	end
 end
@@ -79,6 +82,7 @@ local function CooldownBarFrame_OnEvent(self, event, ...)
 		if unit ~= info.unit and unit ~= UNIT_TO_PET[info.unit] then
 			return
 		end
+
 
 		if spellID == 384255 then
 			if not CM.syncedGroupMembers[guid] then
@@ -295,14 +299,30 @@ local function OmniCDCooldown_OnHide(self)
 		end
 
 		if frame.shouldRearrangeInterrupts then
-			P:SetExIconLayout(key, true, true)
+			P:SetExIconLayout(key, true)
 		end
 	end
 end
 
+local function SpellTooltip_OnUpdate(self, elapsed)
+	self.updateTooltipTimer = self.updateTooltipTimer - elapsed
+	if self.updateTooltipTimer > 0 then
+		return
+	end
+	self.updateTooltipTimer = TOOLTIP_UPDATE_TIME
+	local owner = self:GetOwner()
+	if owner then
+		self:SetSpellByID(owner.tooltipID or owner.spellID)
+	end
+end
+SpellTooltip:SetScript("OnUpdate", SpellTooltip_OnUpdate)
+
 local function OmniCDIcon_OnEnter(self)
-	SpellTooltip:SetOwner(self, "ANCHOR_RIGHT")
-	SpellTooltip:SetSpellByID(self.tooltipID or self.spellID)
+	local id = self.tooltipID or self.spellID
+	if id then
+		SpellTooltip:SetOwner(self, "ANCHOR_RIGHT")
+		SpellTooltip:SetSpellByID(id)
+	end
 end
 
 local function OmniCDIcon_OnLeave()
@@ -360,13 +380,15 @@ local function GetIcon(barFrame, iconIndex)
 		icon.icon:SetSnapToPixelGrid(false)
 
 		icon.name:SetFontObject(E.IconFont)
-
-
-
+		if E.ElvUI1 then
+			E.ElvUI1:RegisterCooldown(icon.cooldown, "OmniCD")
+		end
 		icon.cooldown:SetScript("OnHide", OmniCDCooldown_OnHide)
 		icon:SetScript("OnEnter", OmniCDIcon_OnEnter)
 		icon:SetScript("OnLeave", OmniCDIcon_OnLeave)
-		icon:SetPassThroughButtons("LeftButton", "RightButton")
+		if not E.isClassic then
+			icon:SetPassThroughButtons("LeftButton", "RightButton")
+		end
 	end
 
 	icon:SetParent(barFrame.container)
@@ -397,9 +419,10 @@ end
 
 function P:SetBarBackdrop(barFrame)
 	local icons = barFrame.icons
+	local db = E.db.icons
 	for i = 1, barFrame.numIcons do
 		local icon = icons[i]
-		self:SetBorder(icon)
+		self:SetBorder(icon, db)
 	end
 end
 
@@ -630,8 +653,9 @@ function P:UpdateUnitBar(guid, isUpdateBarsOrGRU)
 								end
 
 
-								if E.majorMovementAbilitiesByIDs[spellID] then
-									if self:GetBuffDuration(unit, 381748) then
+								local blessingOfTheBronze = E.majorMovementAbilitiesByIDs[spellID]
+								if blessingOfTheBronze then
+									if self:GetBuffDuration(unit, blessingOfTheBronze) then
 										info.auras["isBlessingOfTheBronze"] = true
 									end
 								end
@@ -759,6 +783,8 @@ function P:UpdateUnitBar(guid, isUpdateBarsOrGRU)
 	if notUser or not self.isUserHidden then
 		self:ApplySettings(frame)
 		self:SetIconLayout(frame, true)
+	else
+		self:SetAnchor(frame)
 	end
 	if not isUpdateBarsOrGRU then
 		self:UpdateExBars()

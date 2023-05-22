@@ -3,7 +3,7 @@
 ## Interface-BCC: 20504
 ## Interface-Wrath: 30401
 ## Title: Lib: DRList-1.0
-## Version: v1.3.9
+## Version: a65f8ab
 ## X-Category: Library
 ## X-License: MIT
 ## X-Curse-Project-ID: 315757

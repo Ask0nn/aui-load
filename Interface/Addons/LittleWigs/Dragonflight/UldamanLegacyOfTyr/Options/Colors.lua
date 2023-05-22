@@ -10,7 +10,7 @@ BigWigs:AddColors("The Lost Dwarves", {
 })
 
 BigWigs:AddColors("Bromach", {
-	[369605] = "yellow",
+	[369605] = "cyan",
 	[369660] = "green",
 	[369675] = "red",
 	[369700] = "yellow",
@@ -20,28 +20,30 @@ BigWigs:AddColors("Bromach", {
 
 BigWigs:AddColors("Sentinel Talondras", {
 	[372600] = {"green","red","yellow"},
-	[372623] = {"blue","green","yellow"},
+	[372623] = {"blue","yellow"},
 	[372701] = "orange",
 	[372718] = {"blue","red"},
-	[372719] = {"orange","red"},
+	[372719] = {"green","orange","red"},
 })
 
 BigWigs:AddColors("Emberon", {
 	[368990] = "cyan",
 	[369043] = "green",
-	[369061] = "red",
+	[369061] = "purple",
 	[369110] = "orange",
 })
 
 BigWigs:AddColors("Chrono-Lord Deios", {
 	[375727] = "purple",
-	[376049] = "red",
+	[376049] = "orange",
 	[376208] = "yellow",
 	[376325] = "blue",
 	[377405] = {"blue","red"},
 })
 
 BigWigs:AddColors("Uldaman: Legacy of Tyr Trash", {
+	[369328] = "red",
+	[369335] = "purple",
 	[369337] = "blue",
 	[369365] = {"blue","orange","red"},
 	[369366] = {"blue","orange"},
@@ -50,5 +52,8 @@ BigWigs:AddColors("Uldaman: Legacy of Tyr Trash", {
 	[369465] = "orange",
 	[369811] = "orange",
 	[369823] = {"red","yellow"},
-	[381593] = "yellow",
+	[377500] = {"red","yellow"},
+	[381593] = "red",
+	[382578] = "orange",
+	[386104] = "green",
 })

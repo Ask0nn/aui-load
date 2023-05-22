@@ -67,10 +67,10 @@ local timersEasy = {
 		[385574] = {43.5, 35, 50, 25, 55}, -- Tempest Wing
 	},
 	[3] = {
-		[377594] = {34.5, 41, 41.9}, -- Lightning Breath
-		[385574] = {66.4, 58.9, 26.9}, -- Tempest Wing
-		[377467] = {41.5, 60, 60}, -- Fulminating Charge
-		[386410] = {22.5, 30, 30, 30, 30, 30}, -- Thunderous Blast
+		[377594] = {34.5, 41, 41.9, 75, 42}, -- Lightning Breath
+		[385574] = {66.4, 58.9, 26.9, 31, 59}, -- Tempest Wing
+		[377467] = {41.5, 60, 60, 57}, -- Fulminating Charge
+		[386410] = {22.5, 30, 30, 30, 30, 30, 27, 30, 30}, -- Thunderous Blast
 	},
 }
 
@@ -91,7 +91,7 @@ local timersHeroic = {
 	},
 	[3] = {
 		[377594] = {31.3, 43.5, 42.0}, -- Lightning Breath
-		[385574] = {65.9, 64.0, 22.0}, -- Tempest Wing
+		[385574] = {65.9, 64.0, 22.0, 31}, -- Tempest Wing
 		[377467] = {40.9, 60.0, 60.0}, -- Fulminating Charge
 		[386410] = {21.8, 30, 30, 30, 30, 30}, -- Thunderous Blast
 		[399713] = {25.9, 63.0, 34.0}, -- Magnetic Charge
@@ -433,7 +433,7 @@ function mod:IntermissionAddDeaths(args)
 			end
 		end
 	elseif args.mobId == 199547 or addToNumber[args.sourceGUID] then -- Frostforged Zealot
-		self:StopBar(CL.count:format(self:SpellName(397382, addToNumber[args.sourceGUID]))) -- Shattering Shroud
+		self:StopBar(CL.count:format(self:SpellName(397382), addToNumber[args.sourceGUID])) -- Shattering Shroud
 	elseif args.mobId == 199549 or addToNumber[args.sourceGUID] then -- Flamesworn Herald
 		self:StopBar(CL.count:format(self:SpellName(397387), addToNumber[args.sourceGUID])) -- Flame Shield
 	elseif args.mobId == 193760 then -- Surging Ruiner
@@ -455,9 +455,9 @@ end
 
 function mod:UNIT_HEALTH(event, unit)
 	if self:GetHealth(unit) < 67 then -- Intermission 1 at 65%
+		self:UnregisterUnitEvent(event, unit)
 		self:Message("stages", "green", CL.soon:format(CL.count:format(CL.intermission, 1)), false)
 		self:PlaySound("stages", "info")
-		self:UnregisterUnitEvent(event, unit)
 	end
 end
 
@@ -652,7 +652,7 @@ function mod:CHAT_MSG_RAID_BOSS_EMOTE(_, msg)
 		lightningDevastationCount = lightningDevastationCount + 1
 		local stage = self:GetStage()
 		if stage == 2.5 or (stage == 1.5 and lightningDevastationCount < 5) then -- Only 4 on each platform in stage 1.5 (intermission 1)
-			local cd = 0
+			local cd
 			if self:Easy() then
 				cd = stage == 1.5 and 27 or 32.8
 			elseif self:Mythic() then

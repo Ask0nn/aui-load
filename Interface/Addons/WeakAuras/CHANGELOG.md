@@ -1,30 +1,26 @@
-# [5.4.3](https://github.com/WeakAuras/WeakAuras2/tree/5.4.3) (2023-03-22)
+# [5.5.3](https://github.com/WeakAuras/WeakAuras2/tree/5.5.3) (2023-05-07)
 
-[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/5.4.2...5.4.3)
+[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/5.5.2...5.5.3)
 
 ## Highlights
 
-  
+ - Template updates for Shadow Priest
+- Bug fixes 
 
 ## Commits
 
-InfusOnWoW (3):
+InfusOnWoW (6):
 
-- Fix regression in dynamic conditions
-- Tweak AuraBars once more
-- Tweak Unit Spellcast Succeded trigger
-
-Stanzilla (1):
-
-- Update TOC for Retail Patch 10.0.7
-
-emptyrivers (1):
-
-- decrement nameSource on deleting subOption that precedes the name source
+- Templates Shadow Priest: Update for 10.1
+- Cast trigger: Disable various checks for non-casting trigger
+- Spell Cooldown Progress trigger: Add an option to follow overrides
+- Fix Cast trigger latency for some interactions
+- Fix issue with Smooth Progress, Min/Max clamps and overlays
+- Fix lua error in Reputatin trigger while outside world
 
 mrbuds (3):
 
-- Unit Spellcast Succeded trigger: set %name / %n to spell's name
-- Aura Trigger: fix "Cast by a player character"  option (#4352)
-- Aura trigger: fix Lua error with new API (#4351)
+- Fix Retail talent widget offsets
+- GetUnitFrame anchor callback: safeguard against nil index error
+- Fix weakauras loading on wotlk ptr
 

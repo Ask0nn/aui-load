@@ -1,6 +1,43 @@
 ------------------------------------------------------------------------------
 -- Dragonflight
 --
+v10.1.0.2751
+	Added Season 2 Obsidian PvP Trinkets
+	Added Embers of Neltharion Tier Set bonuses
+	Added option to use ElvUI's timer (in General menu)
+	Fixed spell tooltips showing a blank text if the spell hasn't been cached yet
+	Fixed option panel dropdown menu tooltip not showing
+
+v10.1.0.2750
+	Patch 10.1 updates
+	Blessing of the Bronze CDR added to non-Evoker classes
+
+v10.0.7.2748
+	Fixed CDR to Incarn: Guardian of Ursoc
+	nil error fix (nil mapInfo, nil info on sorting extraBars)
+	Added ElvUI Raid Wide Sorting
+
+v10.0.7.2747
+	Added option to limit the number of visible icons per unit
+	Added option to move icon names vertically
+	Added option to scale status bar names
+	Added option to rename Extra Bars
+	Fixed Divine Protection for Rets
+	Fixed Divine Purpose procs for Rets (HoJ CDR)
+	Fixed Fire Breath CD reduction for Preservation
+	Fixed anchor visibility not updating on zone change
+	Visibility by Group Size can be configured for each zone separately
+	Empowered spell will reset if the cast fails (simplified)
+	Lib updates - cell padding, flash button fix, dropdown fix
+
+	Hotfixes
+	MARCH 28, 2023
+	Holy Priest
+	Fixed a bug causing Symbol of Hope to reduce the cooldown of both Divine Protection and Shield of Vengeance for Retribution
+	Paladins. It will now only reduce the cooldown of Divine Protection.
+
+	10.1 PTR fixes
+
 v10.0.7.2746
 	Cloudburst Totem will correctly replace Healing Stream Totem
 	Casting Echo will correctly interact with Just in Time (Talent)
@@ -9,7 +46,7 @@ v10.0.7.2746
 	Cleaned up OmniCC support
 	Removed ElvUI CD text support
 	CD timers will explicitly use Blizzard's CD text
-	|cffff2020ElvUI user can safely? enable Blizzard's CD text as WAs no longer show duplicate text|r
+	ElvUI user can safely? enable Blizzard's CD text as WAs no longer show duplicate text
 	Fixed lib load order
 
 v10.0.7.2745
@@ -658,6 +695,15 @@ v2.5.0
 ------------------------------------------------------------------------------
 -- WOTLKC
 --
+v3.4.1.2751
+	3.4.2 font flag fix
+	Added option to use ElvUI's timer (in General menu)
+	Fixed spell tooltips showing a blank text if the spell hasn't been cached yet
+	Fixed option panel dropdown menu tooltip not showing
+
+v3.4.1.2750
+	minor bug fixes
+
 v3.4.1.2744
 	Fixed option panel taint error
 
@@ -755,8 +801,13 @@ v2.6.01-bcc
 ------------------------------------------------------------------------------
 -- classic era
 --
-v1.14.3.2744
-	version update
+v1.14.3.2751
+	Added option to use ElvUI's timer (in General menu)
+	Fixed spell tooltips showing a blank text if the spell hasn't been cached yet
+	Fixed option panel dropdown menu tooltip not showing
+
+v1.14.3.2750
+	minor bug fixes
 
 v1.14.3.2724
 	Fixed sync for cross realm group members
