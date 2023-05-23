@@ -1,3 +1,76 @@
+[v6.1.0]
+General & Addon:
+Removed Quaking affix group.
+Removed Grievous affix icon.
+Changed all Dungeon auras to properly use the Atrocity texture.
+Adjusted size & positioning of all Nameplate CDs
+Added tracking for Shard of Rokmora to Defensives Group - Absorbs
+Added tracking for Talisman of the Cragsharper to Defensives Group - Absorbs
+Added tracking for Treemouth's Festering Splinter to Defensives Group - Absorbs
+Updated Login Glues for 10.1
+New NPC colors again with NPC color explanations 
+Removed border from Private raid group.
+Adjusted Class Bars in Dungeon group colors
+Decently sized overhaul to prune sounds and auras for Dungeons group
+Fixed Bomb Dispenser trinket appearing properly with correct stacks for all agility classes.
+
+Death Knight:
+
+Demon Hunter:
+Added tracking for Serrated Glaive debuff
+Added tracking for Vengeance 4p
+
+Druid:
+Fixed Orbit Breaker condition.
+Fixed Feral: Thrash Debuff weakaura in Primary Bar 
+Removed stack text field from Feral: Apex Predator's Craving.
+Switched Feral/Guardian: Berserk spellids from Names to Exact Spell ID.
+
+Evoker:
+
+Hunter:
+Deleted weird Salvo Buff/Debuff aura in Buffs (Melee/Tank)
+Deleted Double Tap buff tracking in Buffs (Melee/Tank)
+Added Salvo tracking in Buffs(Melee/Tank)
+Replaced Trueshot buff with tracking for Windrunners
+Added tracking for Dire Pack.
+
+Mage:
+Added Arcane: Nether Tempest debuff to Buffs (Caster)
+Added Arcane: 4p to Buffs (Caster)
+Added load condition for Charring Embers to only load with 2p or more.
+
+Monk:
+
+Paladin:
+Added Not Spell Known condition for Paladin: Consecration
+Added tracking for Empyrean Legacy in Healer Buffs underneath Seal of Clarity.
+
+Priest:
+Fixed Desaturation on Holy: Sanctify load condition for stacks.
+Added tracking for Rhapsody underneath Spirit of Redemption
+Fixed talent load condition for Holy: Answered Prayers
+Priest: Surge of Light now shows stack count.
+Holy: Apotheosis in Buff Bar now has additional load condition to load if spec'd into Answered Prayers.
+Added Protective Light to Defensives and Mobility
+Reorganized Secondary Bar for priest to be more in line with other specs
+
+Rogue:
+Delete Finality: Powder and Finality: Evis
+Delete: Dance Macabre
+Combined Dance Macabre and Shadow Dance
+
+Shaman:
+Removed Mana Spring totem.
+
+Warlock:
+
+Warrior:
+Added Fury: 4p buff to Bloodthirst icon.
+Removed Fury: 4p buff from Buffs (Melee/Tank)
+
+==========================================================
+
 [v6.0.0]
 General & Addon:
 Added preliminiary dungeon auras, will adjust more in the upcoming versions as I play the patch out, specifically with concern to sounds -credits @goodoption.

@@ -37,12 +37,9 @@ L["Affixes"] = "Аффиксы"
 L["Aggravated Skitterfly"] = "Рассерженная стрекотуха"
 L["Agitated Nimbus"] = "Беспокойное облако"
 L["Agronox"] = "Агронокс"
---[[Translation missing --]]
-L["Ahn'kahar Slasher"] = "Ahn'kahar Slasher"
---[[Translation missing --]]
-L["Ahn'kahar Spell Flinger"] = "Ahn'kahar Spell Flinger"
---[[Translation missing --]]
-L["Ahn'kahar Swarmer"] = "Ahn'kahar Swarmer"
+L["Ahn'kahar Slasher"] = "Ан'кахарский измельчитель"
+L["Ahn'kahar Spell Flinger"] = "Ан'кахарский метатель заклинаний"
+L["Ahn'kahar Swarmer"] = "Ан'кахарский паук"
 --[[Translation missing --]]
 L["Ahn'kahar Watcher"] = "Ahn'kahar Watcher"
 --[[Translation missing --]]
@@ -64,13 +61,11 @@ L["Algeth'ar Security"] = "Алгет'арский охранник"
 L["AlgetharAcademy"] = "Академия Алгет'ар"
 --[[Translation missing --]]
 L["Alliance Berserker"] = "Alliance Berserker"
---[[Translation missing --]]
-L["Alliance Cleric"] = "Alliance Cleric"
+L["Alliance Cleric"] = "Священник Альянса"
 --[[Translation missing --]]
 L["Alliance Ranger"] = "Alliance Ranger"
 L["Alpha Eagle"] = "Орел-вожак"
---[[Translation missing --]]
-L["Altairus"] = "Altairus"
+L["Altairus"] = "Альтаирий"
 L["AltarOfShadow"] = "Альтарь тени"
 L["Amalgam of Souls"] = "Слияние душ"
 --[[Translation missing --]]
@@ -85,8 +80,7 @@ L["Animated Guardian"] = "Оживший страж"
 L["Animated Storm"] = "Ожившая буря"
 L["Animated Weapon"] = "Оживленное оружие"
 L["Anodized Coilbearer"] = "Анодированный разрядниконосец"
---[[Translation missing --]]
-L["Anomalus"] = "Anomalus"
+L["Anomalus"] = "Аномалус"
 --[[Translation missing --]]
 L["Anub'ar Champion"] = "Anub'ar Champion"
 --[[Translation missing --]]
@@ -101,8 +95,7 @@ L["Anub'ar Prime Guard"] = "Anub'ar Prime Guard"
 L["Anub'ar Shadowcaster"] = "Anub'ar Shadowcaster"
 --[[Translation missing --]]
 L["Anub'ar Skirmisher"] = "Anub'ar Skirmisher"
---[[Translation missing --]]
-L["Anub'ar Warrior"] = "Anub'ar Warrior"
+L["Anub'ar Warrior"] = "Ануб'арский воин"
 --[[Translation missing --]]
 L["Anub'ar Webspinner"] = "Anub'ar Webspinner"
 --[[Translation missing --]]
@@ -111,8 +104,7 @@ L["Anub'arak"] = "Anub'arak"
 L["Anub'Rekhan"] = "Anub'Rekhan"
 L["Apex Blazewing"] = "Жарокрыл-вожак"
 L["Apply to preset"] = "Применить к маршруту"
---[[Translation missing --]]
-L["Aqua Rager"] = "Aqua Rager"
+L["Aqua Rager"] = "Водяной яростень"
 L["Aqu'sirr"] = "Аква'сирр"
 L["Arachnopod Destroyer"] = "Арахнобот-разрушитель"
 L["Aranasi Broodmother"] = "Аранасийская мать выводка"
@@ -129,11 +121,9 @@ L["Arcane Warden"] = "Волшебный страж"
 L["Arcanid"] = "Арканид"
 L["Archdruid Glaidalis"] = "Верховный друид Глайдалис"
 L["Ardenweald"] = "Арденвельд"
---[[Translation missing --]]
-L["Armored Mistral"] = "Armored Mistral"
+L["Armored Mistral"] = "Бронированный мистраль"
 L["Armored Overseer"] = "Тяжелый смотритель"
---[[Translation missing --]]
-L["Asaad"] = "Asaad"
+L["Asaad"] = "Асаад"
 L["Ash'Golm"] = "Вул'кан"
 L["Ashvane Cannoneer"] = "Канонир дома Эшвейнов"
 L["Ashvane Commander"] = "Командир из корпорации Эшвейнов"
@@ -170,19 +160,13 @@ L["Awakened A"] = "Пробудившийся (А)"
 L["Awakened B"] = "Пробудившийся (Б)"
 L["Azerite Extractor"] = "Экстрактор азерита"
 L["Azerokk"] = "Азерокк"
---[[Translation missing --]]
-L["Azjol-Nerub"] = "Azjol-Nerub"
+L["Azjol-Nerub"] = "Азжол-Неруб"
 L["Azules"] = "Азуль"
---[[Translation missing --]]
-L["Azure Captain"] = "Azure Captain"
---[[Translation missing --]]
-L["Azure Enforcer"] = "Azure Enforcer"
---[[Translation missing --]]
-L["Azure Inquisitor"] = "Azure Inquisitor"
---[[Translation missing --]]
-L["Azure Invader"] = "Azure Invader"
---[[Translation missing --]]
-L["Azure Ley-Whelp"] = "Azure Ley-Whelp"
+L["Azure Captain"] = "Лазурный капитан"
+L["Azure Enforcer"] = "Лазурный головорез"
+L["Azure Inquisitor"] = "Лазурный инквизитор"
+L["Azure Invader"] = "Лазурный захватчик"
+L["Azure Ley-Whelp"] = "Детеныш лазурного дракона"
 --[[Translation missing --]]
 L["Azure Magus"] = "Azure Magus"
 --[[Translation missing --]]
@@ -195,13 +179,11 @@ L["Azure Sorcerer"] = "Azure Sorcerer"
 L["Azure Spellbinder"] = "Azure Spellbinder"
 --[[Translation missing --]]
 L["Azure Stalker"] = "Azure Stalker"
---[[Translation missing --]]
-L["Azure Warder"] = "Azure Warder"
+L["Azure Warder"] = "Лазурный хранитель"
 L["Azureblade"] = "Лазурный Клинок"
 L["Baalgar the Watchful"] = "Баалгар Бдительный"
 L["Backup Singer"] = "Бэк-вокалистка"
---[[Translation missing --]]
-L["Baelog"] = "Baelog"
+L["Baelog"] = "Бейлог"
 L["Balakar Khan"] = "Хан Балакар"
 L["Balara"] = "Балара <Дочь хана>"
 --[[Translation missing --]]
@@ -285,16 +267,13 @@ L["Bolstering"] = "Усиливающий"
 L["Bomb Tonk"] = "Бомботанк"
 L["Bone Magus"] = "Костяной чародей"
 L["Bonebolt Hunter"] = "Охотник-костестрел"
---[[Translation missing --]]
-L["Bonegrinder"] = "Bonegrinder"
+L["Bonegrinder"] = "Костомол"
 L["Bonemaw"] = "Костебрюх"
---[[Translation missing --]]
-L["Bony Construct"] = "Bony Construct"
+L["Bony Construct"] = "Костлявое создание"
 L["Boomer XP-500"] = "Бабахун XP-500"
 L["Borka the Brute"] = "Борка Бесчеловечный"
 L["Bottom Feeder"] = "Донный краб"
---[[Translation missing --]]
-L["Bound Air Elemental"] = "Bound Air Elemental"
+L["Bound Air Elemental"] = "Укрощенный элементаль воздуха"
 L["Bound Energy"] = "Обузданная энергия"
 --[[Translation missing --]]
 L["Bound Fire Elemental"] = "Bound Fire Elemental"
@@ -316,16 +295,14 @@ L["Brawling Patron"] = "Драчливый завсегдатай"
 L["Brittlebone Crossbowman"] = "Хрупкий арбалетчик"
 L["Brittlebone Mage"] = "Хрупкий маг"
 L["Brittlebone Warrior"] = "Хрупкий воин"
---[[Translation missing --]]
-L["Bromach"] = "Bromach"
+L["Bromach"] = "Бромач"
 L["Brood Ambusher"] = "Таящийся паук"
 L["Brood Assassin"] = "Паук-убийца"
 L["Brother Ironhull"] = "Брат Айронхалл"
 L["Brush Size"] = "Размер кисти"
 L["Brutal Spire of Ny'alotha"] = "Жестокий шпиль Ни'алоты"
 L["Burly Deckhand"] = "Дюжий матрос"
---[[Translation missing --]]
-L["Burly Rock-Thrower"] = "Burly Rock-Thrower"
+L["Burly Rock-Thrower"] = "Дюжий камнемет"
 L["Burning Geode"] = "Пылающая жеода"
 L["Bursting"] = "Взрывной"
 L["Cancel"] = "Отменить"
@@ -335,8 +312,7 @@ L["Cannot rename preset to '%s'"] = "Не удается переименова�
 L["Captain Eudora"] = "Капитан Юдора"
 L["Captain Jolly"] = "Капитан Джолли"
 L["Captain Raoul"] = "Капитан Рауль"
---[[Translation missing --]]
-L["Carrion Spinner"] = "Carrion Spinner"
+L["Carrion Spinner"] = "Ткач-падальщик"
 L["Carrion Worm"] = "Червь-трупоед"
 L["Cartel Muscle"] = "Громила из картеля"
 L["Cartel Skulker"] = "Тихоступ из картеля"
@@ -344,22 +320,17 @@ L["Cartel Smuggler"] = "Контрабандист из картеля"
 L["Cartel Wiseguy"] = "Авторитет из картеля"
 L["Catacombs"] = "Катакомбы"
 L["Cathedral of Eternal Night"] = "Собор Вечной Ночи"
---[[Translation missing --]]
-L["Cavern Seeker"] = "Cavern Seeker"
---[[Translation missing --]]
-L["Centrifuge Construct"] = "Centrifuge Construct"
---[[Translation missing --]]
-L["Chamber of Flames"] = "Chamber of Flames"
+L["Cavern Seeker"] = "Пещерный ловец"
+L["Centrifuge Construct"] = "Центрифужное создание"
+L["Chamber of Flames"] = "Чертог Пламени"
 L["Chamber Overseer"] = "Страж Вестибюля"
 L["Chamber Sentinel"] = "Часовой чертогов"
 L["ChamberOfFlames"] = "Чертог Пламени"
 L["Champion Druna"] = "Защитница Друна"
 L["Champion of Hodir"] = "Защитник Ходира"
 L["Channeler Varisz"] = "Чародейка Варис"
---[[Translation missing --]]
-L["Chaotic Rift"] = "Chaotic Rift"
---[[Translation missing --]]
-L["Chargath, Bane of Scales"] = "Chargath, Bane of Scales"
+L["Chaotic Rift"] = "Хаотический разлом"
+L["Chargath, Bane of Scales"] = "Чаргат Дробитель Чешуи"
 L["Charged Dust Devil"] = "Заряженная песчаная дьяволица"
 L["Choose Enemy Forces Format"] = "Выберите формат для отображения вражеских сил"
 L["Choose Enemy Style. Requires Reload"] = "Выберите стиль для сил врага. Потребуется перезагрузка"
@@ -368,10 +339,8 @@ L["Choose number of colors"] = "Выберите количество цвето
 L["Choose preferred color palette"] = "Выберите цветовую палитру"
 L["Chopper Redhook"] = "Головорез Краснокрюк"
 L["Chosen Blood Matron"] = "Избранная кровавая матрона"
---[[Translation missing --]]
-L["Chrono-Lord Deios"] = "Chrono-Lord Deios"
---[[Translation missing --]]
-L["Chrono-Lord Epoch"] = "Chrono-Lord Epoch"
+L["Chrono-Lord Deios"] = "Хронолорд Дейос"
+L["Chrono-Lord Epoch"] = "Хронолорд Эпох"
 L["Claw Fighter"] = "Боец-коготь"
 L["Click the fullscreen button for a maximized view of MDT."] = "Вы можете перевести MDT в полноэкранный режим, нажав стрелочку в правом верхнем углу."
 L["Click to adjust color settings"] = "Нажмите, чтобы изменить настройки цвета"
@@ -381,8 +350,7 @@ L["Click to switch to current week"] = "Нажмите, чтобы выбрат�
 L["Click to toggle AddOn Window"] = "[ЛКМ] - открыть окно MDT"
 L["Clicking this button will attempt to join the ongoing Live Session of your group or create a new one if none is found"] = "При нажатии этой кнопки будет произведена попытка присоединиться к 'Прямой трансляции' Вашей группы или таковой будет создан, если сеанс не будет найден"
 L["Clockwork Sapper"] = "Робот-сапер"
---[[Translation missing --]]
-L["Cloud Prince"] = "Cloud Prince"
+L["Cloud Prince"] = "Принц облаков"
 L["Coastwalker Goliath"] = "Береговой голиаф"
 L["Coin-Operated Crowd Pummeler"] = "Платный разгонятель толпы"
 L["Coldmist Stalker"] = "Паук-ловец холодного тумана"
@@ -390,19 +358,16 @@ L["Coldmist Widow"] = "Черная вдова холодного тумана"
 L["Color Blind Friendly"] = "Режим для людей с дальтонизмом"
 L["Colorpicker"] = "Палитра цветов"
 L["Colossal Tentacle"] = "Огромное щупальце"
---[[Translation missing --]]
-L["Commander Kolurg"] = "Commander Kolurg"
+L["Commander Kolurg"] = "Командир Колург"
 L["Commander Shemdah'sohn"] = "Командир Шемда'сон"
---[[Translation missing --]]
-L["Commander Stoutbeard"] = "Commander Stoutbeard"
+L["Commander Stoutbeard"] = "Командир Пивобород"
 L["Commander Zo'far"] = "Командир Зо'фар"
 L["Commerce Enforcer"] = "Охранитель коммерции"
 L["conflictPrompt"] = "MDT обнаружил, что у Вас установлены некоторые дополнения, конфликтующие с MDT. Удалите следующие дополнения:"
 L["Congealed Slime"] = "Сгусток слизи"
 L["Conjured Lasher"] = "Сотворенный плеточник"
 L["ConnectedTip"] = "Группы, обведенные в MDT, не соответствуют объединению НИП в игре."
---[[Translation missing --]]
-L["Containment Apparatus"] = "Containment Apparatus"
+L["Containment Apparatus"] = "Аппарат сдерживания"
 L["Control Undead"] = "Порабощение нежити"
 L["Copy"] = "Копировать"
 L["Cordana Felsong"] = "Кордана Оскверненная Песнь"
@@ -425,10 +390,8 @@ L["Cragmaw the Infested"] = "Кроглот Зараженный"
 L["Crawler Mine"] = "Ползучая мина"
 L["Crawth"] = "Кроут"
 L["Crazed Incubator"] = "Бешеная наседка"
---[[Translation missing --]]
-L["Crazed Mana-Surge"] = "Crazed Mana-Surge"
---[[Translation missing --]]
-L["Crazed Mana-Wraith"] = "Crazed Mana-Wraith"
+L["Crazed Mana-Surge"] = "Безумный манаплеск"
+L["Crazed Mana-Wraith"] = "Безумный призрак маны"
 L["Crazed Marksman"] = "Обезумевший стрелок"
 L["Crazed Razorbeak"] = "Обезумевший остроклюв"
 L["Create"] = "Создать"
@@ -436,10 +399,8 @@ L["Create a new preset"] = "Создать новый маршрут"
 L["Creepy Crawler"] = "Мерзкий ползун"
 L["Critter"] = "Зверек"
 L["Cruel Bonecrusher"] = "Жестокая костекрушительница"
---[[Translation missing --]]
-L["Crypt Fiend"] = "Crypt Fiend"
---[[Translation missing --]]
-L["Crypt Reaver"] = "Crypt Reaver"
+L["Crypt Fiend"] = "Некрорахнид"
+L["Crypt Reaver"] = "Некрорахнид-разоритель"
 L["CryptOfTheAncients"] = "Склеп Древних"
 L["Crystal Fury"] = "Кристальная ярость"
 L["Crystal Thrasher"] = "Кристальный крушитель"
@@ -448,8 +409,7 @@ L["CrystalChamber"] = "Кристальные чертоги"
 L["Crystalline Frayer"] = "Crystalline Frayer"
 --[[Translation missing --]]
 L["Crystalline Keeper"] = "Crystalline Keeper"
---[[Translation missing --]]
-L["Crystalline Protector"] = "Crystalline Protector"
+L["Crystalline Protector"] = "Кристаллический заступник"
 --[[Translation missing --]]
 L["Crystalline Shardling"] = "Crystalline Shardling"
 --[[Translation missing --]]
@@ -470,8 +430,7 @@ L["Cutwater Striker"] = "Боец из братства Волнорезов"
 L["Cyanigosa"] = "Cyanigosa"
 --[[Translation missing --]]
 L["Cyclone"] = "Cyclone"
---[[Translation missing --]]
-L["Cyclone Summit"] = "Cyclone Summit"
+L["Cyclone Summit"] = "Вершина Смерча"
 --[[Translation missing --]]
 L["Dalronn the Controller"] = "Dalronn the Controller"
 L["Damaged Golem"] = "Поврежденный голем"
@@ -486,19 +445,16 @@ L["Dark Rune Elementalist"] = "Dark Rune Elementalist"
 --[[Translation missing --]]
 L["Dark Rune Giant"] = "Dark Rune Giant"
 L["Dark Rune Ravager"] = "Разрушитель из клана Темных Рун"
---[[Translation missing --]]
-L["Dark Rune Scholar"] = "Dark Rune Scholar"
+L["Dark Rune Scholar"] = "Ученый из клана Темных Рун"
 --[[Translation missing --]]
 L["Dark Rune Shaper"] = "Dark Rune Shaper"
 --[[Translation missing --]]
 L["Dark Rune Theurgist"] = "Dark Rune Theurgist"
 L["Dark Rune Thunderer"] = "Рокотун из клана Темных Рун"
---[[Translation missing --]]
-L["Dark Rune Warrior"] = "Dark Rune Warrior"
+L["Dark Rune Warrior"] = "Воин клана Темных Рун"
 --[[Translation missing --]]
 L["Dark Rune Worker"] = "Dark Rune Worker"
---[[Translation missing --]]
-L["Dark Touched Warrior"] = "Dark Touched Warrior"
+L["Dark Touched Warrior"] = "Помеченный Тьмой воин"
 L["Darkheart Thicket"] = "Чаща Темного Сердца"
 L["Darkheart Thicket Sublevel"] = "Чаща Темного Сердца"
 --[[Translation missing --]]
@@ -522,8 +478,7 @@ L["Death Knight Captain"] = "Death Knight Captain"
 --[[Translation missing --]]
 L["Death Knight Cavalier"] = "Death Knight Cavalier"
 L["Death Speaker"] = "Вестник смерти"
---[[Translation missing --]]
-L["Deathcharger Steed"] = "Deathcharger Steed"
+L["Deathcharger Steed"] = "Конь смерти-жеребец"
 L["Decatriarch Wratheye"] = "Гниломаг Око Гнева"
 L["Decay Speaker"] = "Голос разложения"
 L["Decayed Elder"] = "Разложившийся старый древень"
@@ -568,8 +523,7 @@ L["Detention Block"] = "Тюремный блок"
 L["Detonating Crystal"] = "Детонирующий кристалл"
 L["Devos"] = "Девия"
 L["Devoted Accomplice"] = "Усердный подручный"
---[[Translation missing --]]
-L["Devouring Ghoul"] = "Devouring Ghoul"
+L["Devouring Ghoul"] = "Всепожирающий вурдалак"
 L["Devouring Maggot"] = "Прожорливая личинка"
 L["Devout Blood Priest"] = "Преданная жрица крови"
 L["Dinomancer Kish'o"] = "Диномант Киш'о"
@@ -597,20 +551,13 @@ L["Dragonflayer Ascent"] = "Dragonflayer Ascent"
 L["Dragonflayer Bonecrusher"] = "Dragonflayer Bonecrusher"
 --[[Translation missing --]]
 L["Dragonflayer Deathseeker"] = "Dragonflayer Deathseeker"
---[[Translation missing --]]
-L["Dragonflayer Fanatic"] = "Dragonflayer Fanatic"
---[[Translation missing --]]
-L["Dragonflayer Forge Master"] = "Dragonflayer Forge Master"
---[[Translation missing --]]
-L["Dragonflayer Heartsplitter"] = "Dragonflayer Heartsplitter"
---[[Translation missing --]]
-L["Dragonflayer Ironhelm"] = "Dragonflayer Ironhelm"
---[[Translation missing --]]
-L["Dragonflayer Metalworker"] = "Dragonflayer Metalworker"
---[[Translation missing --]]
-L["Dragonflayer Overseer"] = "Dragonflayer Overseer"
---[[Translation missing --]]
-L["Dragonflayer Runecaster"] = "Dragonflayer Runecaster"
+L["Dragonflayer Fanatic"] = "Фанатик из клана Укротителей драконов"
+L["Dragonflayer Forge Master"] = "Выплавщик из клана Укротителей драконов"
+L["Dragonflayer Heartsplitter"] = "Разрыватель сердец из клана Укротителей драконов"
+L["Dragonflayer Ironhelm"] = "Железоголов из клана Укротителей драконов"
+L["Dragonflayer Metalworker"] = "Металлорез из клана Укротителей драконов"
+L["Dragonflayer Overseer"] = "Надзиратель из клана Укротителей драконов"
+L["Dragonflayer Runecaster"] = "Заклинатель рун из клана Укротителей драконов"
 --[[Translation missing --]]
 L["Dragonflayer Seer"] = "Dragonflayer Seer"
 --[[Translation missing --]]
@@ -622,47 +569,27 @@ L["Dragonflayer Weaponsmith"] = "Dragonflayer Weaponsmith"
 L["Dragonflight Season 1"] = "Драконы 1 сезон"
 L["Dragonflight Season 2"] = "Драконы 2 сезон"
 L["Dragonkin"] = "Драконид"
---[[Translation missing --]]
-L["Drakkari Bat"] = "Drakkari Bat"
---[[Translation missing --]]
-L["Drakkari Battle Rider"] = "Drakkari Battle Rider"
---[[Translation missing --]]
-L["Drakkari Colossus"] = "Drakkari Colossus"
---[[Translation missing --]]
-L["Drakkari Commander"] = "Drakkari Commander"
---[[Translation missing --]]
-L["Drakkari Earthshaker"] = "Drakkari Earthshaker"
---[[Translation missing --]]
-L["Drakkari Fire Weaver"] = "Drakkari Fire Weaver"
---[[Translation missing --]]
-L["Drakkari Frenzy"] = "Drakkari Frenzy"
---[[Translation missing --]]
-L["Drakkari God Hunter"] = "Drakkari God Hunter"
---[[Translation missing --]]
-L["Drakkari Golem"] = "Drakkari Golem"
---[[Translation missing --]]
-L["Drakkari Guardian"] = "Drakkari Guardian"
---[[Translation missing --]]
-L["Drakkari Gutripper"] = "Drakkari Gutripper"
---[[Translation missing --]]
-L["Drakkari Inciter"] = "Drakkari Inciter"
---[[Translation missing --]]
-L["Drakkari Lancer"] = "Drakkari Lancer"
---[[Translation missing --]]
-L["Drakkari Medicine Man"] = "Drakkari Medicine Man"
---[[Translation missing --]]
-L["Drakkari Raider"] = "Drakkari Raider"
---[[Translation missing --]]
-L["Drakkari Rhino"] = "Drakkari Rhino"
---[[Translation missing --]]
-L["Drakkari Scytheclaw"] = "Drakkari Scytheclaw"
---[[Translation missing --]]
-L["Drakkari Shaman"] = "Drakkari Shaman"
+L["Drakkari Bat"] = "Нетопырь Драккари"
+L["Drakkari Battle Rider"] = "Боевой наездник Драккари"
+L["Drakkari Colossus"] = "Колосс Драккари"
+L["Drakkari Commander"] = "Командир Драккари"
+L["Drakkari Earthshaker"] = "Землетряс Драккари"
+L["Drakkari Fire Weaver"] = "Огнепряд Драккари"
+L["Drakkari Frenzy"] = "Бешенка Драккари"
+L["Drakkari God Hunter"] = "Охотник бога Драккари"
+L["Drakkari Golem"] = "Голем Драккари"
+L["Drakkari Guardian"] = "Страж Драккари"
+L["Drakkari Gutripper"] = "Потрошитель Драккари"
+L["Drakkari Inciter"] = "Поджигатель Драккари"
+L["Drakkari Lancer"] = "Пикейщик Драккари"
+L["Drakkari Medicine Man"] = "Целитель Драккари"
+L["Drakkari Raider"] = "Мародер Драккари"
+L["Drakkari Rhino"] = "Люторог Драккари"
+L["Drakkari Scytheclaw"] = "Смертехват Драккари"
+L["Drakkari Shaman"] = "Шаман Драккари"
 L["Drakonid Breaker"] = "Драконид-разрушительница"
---[[Translation missing --]]
-L["Drakos the Interrogator"] = "Drakos the Interrogator"
---[[Translation missing --]]
-L["Drak'Tharon Keep"] = "Drak'Tharon Keep"
+L["Drakos the Interrogator"] = "Дракос Дознаватель"
+L["Drak'Tharon Keep"] = "Крепость Драк'Тарон"
 --[[Translation missing --]]
 L["Drak'Tharon Overlook"] = "Drak'Tharon Overlook"
 L["Drawing: Arrow"] = "Рисование: стрелка"
@@ -670,8 +597,7 @@ L["Drawing: Eraser"] = "Рисование: ластик"
 L["Drawing: Freehand"] = "Рисование: карандаш"
 L["Drawing: Line"] = "Рисование: линия"
 L["Dread Captain Lockwood"] = "Жуткий капитан Локвуд"
---[[Translation missing --]]
-L["Dread Creeper"] = "Dread Creeper"
+L["Dread Creeper"] = "Жуткий ползун"
 L["Dreadborne Seer"] = "Жуткорожденный провидец"
 L["Dreadfang"] = "Лютоклык"
 L["Dreadfire Imp"] = "Бес ужасающего огня"
@@ -706,8 +632,7 @@ L["Earlier Version"] = "У Вас уже есть маршрут с таким �
 L["Earthen Custodian"] = "Earthen Custodian"
 --[[Translation missing --]]
 L["Earthen Guardian"] = "Earthen Guardian"
---[[Translation missing --]]
-L["Earthen Warder"] = "Earthen Warder"
+L["Earthen Warder"] = "Земельник-дозорный"
 --[[Translation missing --]]
 L["Earthen Weaver"] = "Earthen Weaver"
 L["Earthrager"] = "Земляной яростень"
@@ -735,13 +660,11 @@ L["Embalming Fluid"] = "Бальзамировочный состав"
 --[[Translation missing --]]
 L["Embalming Slime"] = "Embalming Slime"
 L["Emberhusk Dominator"] = "Углепанцирный подчинитель"
---[[Translation missing --]]
-L["Emberon"] = "Emberon"
+L["Emberon"] = "Тлерон"
 L["Embershard Scorpion"] = "Угольный скорпион"
 L["Emissary of the Tides"] = "Посланница глубин"
 L["Empty"] = "Пустой"
---[[Translation missing --]]
-L["Empyrean Assassin"] = "Empyrean Assassin"
+L["Empyrean Assassin"] = "Небесный убийца"
 L["Enable Minimap Button"] = "Включить кнопку миникарты"
 L["Enchanted Broodling"] = "Зачарованный паучонок"
 L["Enchanted Emissary"] = "Зачарованная посланница"
@@ -760,26 +683,22 @@ L["Enemy Info NPC Stealth Detect"] = "Обнаружение незаметно�
 L["Enraged Direhorn"] = "Разъяренный дикорог"
 L["Enraged Mask"] = "Яростная маска"
 L["Enraged Spirit"] = "Разъяренный дух"
---[[Translation missing --]]
-L["Enraging Ghoul"] = "Enraging Ghoul"
+L["Enraging Ghoul"] = "Разъярившийся вурдалак"
 L["Enslave Demon"] = "Порабощение демона"
---[[Translation missing --]]
-L["Enslaved Proto-Drake"] = "Enslaved Proto-Drake"
+L["Enslaved Proto-Drake"] = "Порабощенный протодракон"
 L["Enslaved Shieldmaiden"] = "Порабощенная дева щита"
 L["Enthralled Guard"] = "Порабощенный стражник"
 L["Entropic Spire of Ny'alotha"] = "Энтропический шпиль Ни'алоты"
 L["Eredar Chaosbringer"] = "Эредарский вестник хаоса"
 --[[Translation missing --]]
 L["Erekem"] = "Erekem"
---[[Translation missing --]]
-L["Eric \"The Swift\""] = "Eric \"The Swift\""
+L["Eric \"The Swift\""] = "Эрик \"Быстрый\""
 L["Erkhart Stormvein"] = "Эркхарт Кровь Бури"
 L["Erudite Slayer"] = "Убийца эрудитов"
 L["Etherdiver"] = "Эфирный Ныряльщик"
 L["Ethereal Restorer"] = "Алгет'арский целитель"
 L["Executioner Varruth"] = "Палач Варрут"
---[[Translation missing --]]
-L["Executor of the Caliph"] = "Executor of the Caliph"
+L["Executor of the Caliph"] = "Палач калифа"
 L["Executor Tarvold"] = "Вершитель Тарвольд"
 L["Exhumed Spirit"] = "Эксгумированный дух"
 L["Expand the top toolbar to gain access to drawing and note features."] = "Разверните верхнюю панель инструментов, чтобы получить доступ к функциям рисования и заметок."
@@ -842,8 +761,7 @@ L["Flashfrost Chillweaver"] = "Ткач Холода Морозной Вспыш
 L["Flashfrost Earthshaper"] = "Демиург Морозной Вспышки"
 L["Fleeting Manifestation"] = "Изменчивое воплощение"
 L["Flesh Crafter"] = "Изготовитель кадавров"
---[[Translation missing --]]
-L["Flesheating Ghoul"] = "Flesheating Ghoul"
+L["Flesheating Ghoul"] = "Плотоядный вурдалак"
 L["Fleshrender Nok'gar"] = "Раздиратель Плоти Нок'Гар"
 L["Fleshripper Vulture"] = "Стервятник-шкуродер"
 L["Focused Ritualist"] = "Настойчивый ритуалист"
@@ -854,8 +772,7 @@ L["Forces only: 5/200"] = "Силы врага: 5/200"
 L["Forces+%: 5/200 (2.5%)"] = "Силы врага+%: 5/200 (2.5%)"
 L["Forest Swarmer"] = "Лесной ползун"
 L["Forge Construct"] = "Порождение горна"
---[[Translation missing --]]
-L["Forgemaster Gorek"] = "Forgemaster Gorek"
+L["Forgemaster Gorek"] = "Главный кузнец Горек"
 --[[Translation missing --]]
 L["Forgewrought Monstrosity"] = "Forgewrought Monstrosity"
 L["Forgotten Denizen"] = "Забытый обитатель глубин"
@@ -927,13 +844,11 @@ L["Ghostly Protector"] = "Фантомный защитник"
 L["Ghostly Retainer"] = "Фантомный вельможа"
 L["Ghostly Steward"] = "Бестелесный распорядитель"
 L["Ghostly Understudy"] = "Бестелесный дублер"
---[[Translation missing --]]
-L["Ghoul Tormentor"] = "Ghoul Tormentor"
+L["Ghoul Tormentor"] = "Вурдалак-мучитель"
 L["Giant"] = "Великан"
 L["Gilded Priestess"] = "Позолоченная жрица"
 L["Gildedfur Stag"] = "Золотистый олень"
---[[Translation missing --]]
-L["Glacial Proto-Dragon"] = "Glacial Proto-Dragon"
+L["Glacial Proto-Dragon"] = "Ледниковый протодракон"
 L["Glayvianna Soulrender"] = "Терзательница душ Глевианна"
 L["Glazer"] = "Смотрящий"
 L["Globgrog"] = "Склизгл"
@@ -949,8 +864,7 @@ L["Gorechop"] = "Кроворуб"
 L["Goregrind"] = "Кровомес"
 L["Goregrind Bits"] = "Куски Кровомеса"
 L["Gorestained Piglet"] = "Запачканный кровью поросенок"
---[[Translation missing --]]
-L["Gortok Palehoof"] = "Gortok Palehoof"
+L["Gortok Palehoof"] = "Горток Бледное Копыто"
 --[[Translation missing --]]
 L["Gothik the Harvester"] = "Gothik the Harvester"
 --[[Translation missing --]]
@@ -958,8 +872,7 @@ L["Grand Magus Telestra"] = "Grand Magus Telestra"
 L["Grand Overseer"] = "Старший смотритель"
 L["Grand Proctor Beryllia"] = "Верховная надзирательница Бериллия"
 L["Grand Shadow-Weaver"] = "Великий заклинатель теней"
---[[Translation missing --]]
-L["Grand Vizier Ertan"] = "Grand Vizier Ertan"
+L["Grand Vizier Ertan"] = "Великий визирь Эртан"
 --[[Translation missing --]]
 L["Grand Widow Faerlina"] = "Grand Widow Faerlina"
 L["Granyth"] = "Гранит"
@@ -1003,37 +916,28 @@ L["Guardian Lasher"] = "Страж-плеточник"
 L["Guardian of Life"] = "Хранитель жизни"
 L["Guardian Sentry"] = "Охранник"
 L["Guardian's Library"] = "Библиотека хранителя"
---[[Translation missing --]]
-L["Gulping Goliath"] = "Gulping Goliath"
+L["Gulping Goliath"] = "Голиаф-проглот"
 --[[Translation missing --]]
 L["Gundrak"] = "Gundrak"
 L["Gunker"] = "Токсикоид"
 L["Gushing Slime"] = "Хлещущая слизь"
---[[Translation missing --]]
-L["Gust Soldier"] = "Gust Soldier"
---[[Translation missing --]]
-L["Gusting Proto-Dragon"] = "Gusting Proto-Dragon"
+L["Gust Soldier"] = "Клубящийся солдат"
+L["Gusting Proto-Dragon"] = "Воздушный протодракон"
 L["Gutchewer Bear"] = "Медведь-кишкожуй"
 L["Gutshot"] = "Пузострелка"
 L["Gutstabber"] = "Брюхокол"
 L["Hadal Darkfathom"] = "Хадал Черная Бездна"
---[[Translation missing --]]
-L["Hadronox"] = "Hadronox"
---[[Translation missing --]]
-L["Hadronox's Lair"] = "Hadronox's Lair"
+L["Hadronox"] = "Хадронокс"
+L["Hadronox's Lair"] = "Логово Хадронокса"
 L["Hakkar the Soulflayer"] = "Хаккар Свежеватель Душ"
 L["Halkias"] = "Халкиас"
---[[Translation missing --]]
-L["Hall of the Keepers"] = "Hall of the Keepers"
+L["Hall of the Keepers"] = "Зал Хранителей"
 L["Hall of the Moon"] = "Зал Луны"
 L["HallOfTheKeepers"] = "Зал Хранителей"
 L["Halls of Atonement"] = "Чертоги Покаяния"
---[[Translation missing --]]
-L["Halls of Infusion"] = "Halls of Infusion"
---[[Translation missing --]]
-L["Halls of Lightning"] = "Halls of Lightning"
---[[Translation missing --]]
-L["Halls of Stone"] = "Halls of Stone"
+L["Halls of Infusion"] = "Чертоги Насыщения"
+L["Halls of Lightning"] = "Чертоги Молний"
+L["Halls of Stone"] = "Чертоги Камня"
 L["Halls of Valor"] = "Чертоги Доблести"
 L["Halls of Valor Sublevel"] = "Чертоги Доблести"
 L["HallsOfAtonementFloor1"] = "Чертоги Покаяния"
@@ -1100,15 +1004,11 @@ L["Hold SHIFT to delete all presets with the delete preset button."] = "Удер
 L["Honored Raptor"] = "Почитаемый ящер"
 L["Honor's Ascent"] = "Подъем Чести"
 L["Hoodoo Hexer"] = "Проклинатель худу"
---[[Translation missing --]]
-L["Horde Berserker"] = "Horde Berserker"
---[[Translation missing --]]
-L["Horde Cleric"] = "Horde Cleric"
---[[Translation missing --]]
-L["Horde Ranger"] = "Horde Ranger"
+L["Horde Berserker"] = "Ордынский берсерк"
+L["Horde Cleric"] = "Ордынский священник"
+L["Horde Ranger"] = "Ордынский следопыт"
 L["Hourglass Tidesage"] = "Заклинатель волн с "
---[[Translation missing --]]
-L["Howling Gale"] = "Howling Gale"
+L["Howling Gale"] = "Воющая буря"
 --[[Translation missing --]]
 L["Hulking Berserker"] = "Hulking Berserker"
 L["Humanoid"] = "Гуманоид"
@@ -1116,8 +1016,7 @@ L["Hungry Lasher"] = "Голодный плеточник"
 L["Hylbrande"] = "Хильбранд"
 L["Hymdall"] = "Химдалль"
 L["Hyrja"] = "Хирья"
---[[Translation missing --]]
-L["Ichoron"] = "Ichoron"
+L["Ichoron"] = "Гнойрон"
 L["Ickor Bileflesh"] = "Икор Желчная Плоть"
 L["If the Minimap Button is enabled"] = "Если кнопка миникарты включена"
 L["Ignis the Furnace Master"] = "Повелитель Горнов Игнис"
@@ -1137,30 +1036,22 @@ L["Increase Brush Size"] = "Увеличить размер кисти"
 L["Infected Bear"] = "Зараженный медведь"
 L["Infected Lasher"] = "Зараженный плеточник"
 L["Infected Peasant"] = "Зараженный крестьянин"
---[[Translation missing --]]
-L["Infectious Ghoul"] = "Infectious Ghoul"
+L["Infectious Ghoul"] = "Заразный вурдалак"
 L["Infernal Imp"] = "Инфернальный бес"
 L["Infested"] = "Зараженный"
---[[Translation missing --]]
-L["Infinite Adversary"] = "Infinite Adversary"
---[[Translation missing --]]
-L["Infinite Agent"] = "Infinite Agent"
---[[Translation missing --]]
-L["Infinite Hunter"] = "Infinite Hunter"
+L["Infinite Adversary"] = "Неприятель из рода Бесконечности"
+L["Infinite Agent"] = "Посланница из рода Бесконечности"
+L["Infinite Hunter"] = "Охотник из рода Бесконечности"
 --[[Translation missing --]]
 L["Infinite Timereaver"] = "Infinite Timereaver"
---[[Translation missing --]]
-L["Infinite Whelp"] = "Infinite Whelp"
+L["Infinite Whelp"] = "Дракончик бесконечности"
 L["Infused Pyromancer"] = "Наполненный силой пиромант"
 L["Infused Quill-feather"] = "Зачарованное перо"
 L["Infused Whelp"] = "Заряженный дракончик"
---[[Translation missing --]]
-L["Infuser Sariya"] = "Infuser Sariya"
---[[Translation missing --]]
-L["Infuser's Rotunda"] = "Infuser's Rotunda"
+L["Infuser Sariya"] = "Насыщательница Сария"
+L["Infuser's Rotunda"] = "Ротонда Насыщателя"
 L["InfusersRotunda"] = "Ротонда Насыщателя"
---[[Translation missing --]]
-L["Infusion Chamber"] = "Infusion Chamber"
+L["Infusion Chamber"] = "Зал Насыщения"
 L["Infusion Chambers"] = "Залы насыщения"
 L["InfusionChamber"] = "Залы насыщения"
 L["Ingra Maloch"] = "Ингра Малох"
@@ -1218,12 +1109,9 @@ L["Join Live Session"] = "Присоединиться к 'Прямой тран
 L["Junkyard D.0.G."] = "Сторожевой бот модели "
 L["Juvenile Runestag"] = "Молодой рунический олень"
 L["K.U.-J.0."] = "КУ-ДЖ0"
---[[Translation missing --]]
-L["Kel'Thuzad"] = "Kel'Thuzad"
---[[Translation missing --]]
-L["Keristrasza"] = "Keristrasza"
---[[Translation missing --]]
-L["Khajin the Unyielding"] = "Khajin the Unyielding"
+L["Kel'Thuzad"] = "Кел'Тузад"
+L["Keristrasza"] = "Керистраза"
+L["Khajin the Unyielding"] = "Каджин Непреклонная"
 L["King"] = "Король"
 L["King A'akul"] = "Король А'акул"
 L["King Bjorn"] = "Король Бьорн"
@@ -1280,8 +1168,7 @@ L["LargePresetWarning"] = "Вы пытаетесь поделиться очен
 L["Lashing Voidling"] = "Порождение Бездны"
 --[[Translation missing --]]
 L["Lava Flare"] = "Lava Flare"
---[[Translation missing --]]
-L["Lavanthor"] = "Lavanthor"
+L["Lavanthor"] = "Лавантор"
 L["Legion"] = "Легион"
 L["Legion Hound"] = "Гончая Легиона"
 L["Lesser Sha"] = "Малый ша"
@@ -1326,8 +1213,7 @@ L["Loyal Stoneborn"] = "Верный камнерожденный"
 L["Lubricator"] = "Смазчик"
 L["Ludwig Von Tortollan"] = "Людвиг фон Тортоллен"
 L["L'ura"] = "Л'ура"
---[[Translation missing --]]
-L["Lurking Tempest"] = "Lurking Tempest"
+L["Lurking Tempest"] = "Затаившаяся буря"
 --[[Translation missing --]]
 L["Mad Scientist"] = "Mad Scientist"
 L["Maddened Survivalist"] = "Обезумевший мастер выживания"
@@ -1343,8 +1229,7 @@ L["Mage Slayer"] = "Mage Slayer"
 L["Mage-Lord Urom"] = "Mage-Lord Urom"
 L["MaggotNote"] = "Примечание относительно Прожорливых личинок:%s%sПрожорливые личинки с баффом «Паразитические» будут пытаться «заразить» игроков%sПосле успешного применения «Заражения» Прожорливые личинки исчезнут и создадут 2x Прожорливых личинок после того, как закончится дебафф на зараженном игроке. .%sВы можете получить только 1 очко за убийство первоначальной Зараженной личинки - 2 недавно появившихся Зараженных личинки не дают очки.%s%sЗараженные крестьяне порождают 3x Прожорливых личинок, которые дают 1 очко каждый.%sЭти Прожорливые личинки отображаются рядом с Зараженными крестьянами"
 L["Magma Rager"] = "Магматический яростень"
---[[Translation missing --]]
-L["Magmatusk"] = "Magmatusk"
+L["Magmatusk"] = "Магмобивень"
 --[[Translation missing --]]
 L["Maiden of Grief"] = "Maiden of Grief"
 L["Maiden of Virtue"] = "Благочестивая дева"
@@ -1385,8 +1270,7 @@ L["MDI Mode"] = "Режим MDI"
 L["MDT: Error importing preset"] = "MDT: Ошибка импорта маршрута"
 L["MDT: Spells for %s:"] = "MDT: Заклинания для %s:"
 L["MDT: Use /mdt minimap to show the minimap icon again"] = "MDT: используйте /mdt minimap, чтобы снова отобразить значок миникарты"
---[[Translation missing --]]
-L["Meathook"] = "Meathook"
+L["Meathook"] = "Мясной Крюк"
 L["Mech Jockey"] = "Механожокей"
 L["Mechagon"] = "Мехагон"
 L["Mechagon - Junkyard"] = "Операция \"Мехагон\" - свалка"
@@ -1420,8 +1304,7 @@ L["Mine Rat"] = "Кобольд-рудокоп"
 L["minecartNote"] = "Вагонетка%sМожет быть использована игроками"
 L["Minion of Doubt"] = "Служитель Сомнения"
 L["Minion of Zul"] = "Прислужник Зула"
---[[Translation missing --]]
-L["Minister of Air"] = "Minister of Air"
+L["Minister of Air"] = "Служитель воздуха"
 L["Mire Soldier"] = "Болотный солдат"
 L["Misguided Nymph"] = "Заблудшая нимфа"
 L["Mistcaller"] = "Призывательница Туманов"
@@ -1521,10 +1404,8 @@ L["Nokhud Warsmith"] = "Боевой кузнец из клана Нокхуд"
 L["Nokhud Warspear"] = "Боевое копье клана Нокхуд"
 L["Not specified"] = "Не указано"
 L["Note Text:"] = "Текст записки"
---[[Translation missing --]]
-L["Noth the Plaguebringer"] = "Noth the Plaguebringer"
---[[Translation missing --]]
-L["Novos the Summoner"] = "Novos the Summoner"
+L["Noth the Plaguebringer"] = "Нот Чумной"
+L["Novos the Summoner"] = "Новос Призыватель"
 L["Nullmagic Hornswog"] = "Рогоплав-магоед"
 L["Oakheart"] = "Дубосерд"
 L["Oasis Security"] = "Охранник "
@@ -1532,8 +1413,7 @@ L["Odyn"] = "Один"
 L["Off-Duty Laborer"] = "Отдыхающий работник"
 L["Officer Quarters"] = "Офицерская"
 L["Ogron Laborer"] = "Огрон-работник"
---[[Translation missing --]]
-L["Olaf"] = "Olaf"
+L["Olaf"] = "Олаф"
 L["Olmyr the Enlightened"] = "Олмир Просвещенный"
 L["Omega Buster"] = ""
 L["Oozing Leftovers"] = "Сочащиеся ошметки"
@@ -1576,12 +1456,9 @@ L["Patrol Captain Gerdo"] = "Капитан патруля Гердо"
 L["Peril"] = "Опасность"
 L["Pestilence Slime"] = "Моровая слизь"
 L["Pestilent Harvester"] = "Заразный добытчик"
---[[Translation missing --]]
-L["Phantasmal Air"] = "Phantasmal Air"
---[[Translation missing --]]
-L["Phantasmal Cloudscraper"] = "Phantasmal Cloudscraper"
---[[Translation missing --]]
-L["Phantasmal Fire"] = "Phantasmal Fire"
+L["Phantasmal Air"] = "Ирреальный воздух"
+L["Phantasmal Cloudscraper"] = "Ирреальный туческреб"
+L["Phantasmal Fire"] = "Ирреальный огонь"
 --[[Translation missing --]]
 L["Phantasmal Mammoth"] = "Phantasmal Mammoth"
 --[[Translation missing --]]
@@ -1625,8 +1502,7 @@ L["Players can join the live session by either clicking this button or the Live 
 L["Please report any bugs on https://github.com/Nnoggie/MythicDungeonTools/issues"] = "Пожалуйста, сообщайте об ошибках здесь: https://github.com/Nnoggie/MythicDungeonTools/issues"
 --[[Translation missing --]]
 L["Plundering Geist"] = "Plundering Geist"
---[[Translation missing --]]
-L["Poisonous Skitterer"] = "Poisonous Skitterer"
+L["Poisonous Skitterer"] = "Заразный паук-быстролап"
 L["Polymorph"] = "Превращение"
 L["Portal Guardian"] = "Страж портала"
 --[[Translation missing --]]
@@ -1645,24 +1521,17 @@ L["Primal Juggernaut"] = "Изначальный исполин"
 L["Primal Stormshield"] = "Изначальный щит бури"
 L["Primal Terrasentry"] = "Изначальный земляной часовой"
 L["Primal Thundercloud"] = "Изначальная грозовая туча"
---[[Translation missing --]]
-L["Primal Tsunami"] = "Primal Tsunami"
+L["Primal Tsunami"] = "Изначальное цунами"
 L["Primalist Arcblade"] = "Воин стихий – искрящий клинок"
 L["Primalist Cinderweaver"] = "Пеплоплет воинов стихий"
---[[Translation missing --]]
-L["Primalist Earthshaker"] = "Primalist Earthshaker"
+L["Primalist Earthshaker"] = "Воин стихий – землетряс"
 L["Primalist Flamedancer"] = "Воин стихий – танцор пламени"
---[[Translation missing --]]
-L["Primalist Galesinger"] = "Primalist Galesinger"
---[[Translation missing --]]
-L["Primalist Geomancer"] = "Primalist Geomancer"
---[[Translation missing --]]
-L["Primalist Icecaller"] = "Primalist Icecaller"
---[[Translation missing --]]
-L["Primalist Ravager"] = "Primalist Ravager"
+L["Primalist Galesinger"] = "Воин стихий – певица бури"
+L["Primalist Geomancer"] = "Воин стихий – геомант"
+L["Primalist Icecaller"] = "Воин стихий – сотворительница льда"
+L["Primalist Ravager"] = "Опустошитель воинов стихий"
 L["Primalist Shockcaster"] = "Воин стихий – искромаг"
---[[Translation missing --]]
-L["Primalist Shocktrooper"] = "Primalist Shocktrooper"
+L["Primalist Shocktrooper"] = "Воин стихий – штурмовик"
 L["Primalist Stormspeaker"] = "Воин стихий – буревестник"
 L["Primalist Thunderbeast"] = "Изначальный громозверь"
 --[[Translation missing --]]
@@ -1671,10 +1540,8 @@ L["Prince Keleseth"] = "Prince Keleseth"
 L["Prince Taldaram"] = "Prince Taldaram"
 L["Prison Bars"] = "Тюремные решетки"
 L["Prison Gate"] = "Тюремные ворота"
---[[Translation missing --]]
-L["Proto-Drake Handler"] = "Proto-Drake Handler"
---[[Translation missing --]]
-L["Proto-Drake Rider"] = "Proto-Drake Rider"
+L["Proto-Drake Handler"] = "Укротитель протодраконов"
+L["Proto-Drake Rider"] = "Всадник на протодраконе"
 L["Pull Drop Clear Pull"] = "Очистить группу"
 L["Pull Drop Close"] = "Закрыть"
 L["Pull Drop Color"] = "Цвет"
@@ -1692,29 +1559,18 @@ L["Pull Drop Reset Color"] = "Сбросить цвет"
 L["Pull Drop Reset Preset"] = "Сбросить маршрут"
 L["Purification Construct"] = "Голем-чистильщик"
 L["Putrid Butcher"] = "Гнилостный мясник"
---[[Translation missing --]]
-L["Qalashi Blacksmith"] = "Qalashi Blacksmith"
---[[Translation missing --]]
-L["Qalashi Bonesplitter"] = "Qalashi Bonesplitter"
---[[Translation missing --]]
-L["Qalashi Bonetender"] = "Qalashi Bonetender"
---[[Translation missing --]]
-L["Qalashi Hunter"] = "Qalashi Hunter"
---[[Translation missing --]]
-L["Qalashi Irontorch"] = "Qalashi Irontorch"
---[[Translation missing --]]
-L["Qalashi Lavabearer"] = "Qalashi Lavabearer"
+L["Qalashi Blacksmith"] = "Куалаши-кузнец"
+L["Qalashi Bonesplitter"] = "Куалаши-костедробительница"
+L["Qalashi Bonetender"] = "Куалаши-костестраж"
+L["Qalashi Hunter"] = "Куалаши-охотник"
+L["Qalashi Irontorch"] = "Куалаши-факельщица"
+L["Qalashi Lavabearer"] = "Куалаши - воин лавы"
 L["Qalashi Lavamancer"] = "Куалаши-лавамант"
---[[Translation missing --]]
-L["Qalashi Plunderer"] = "Qalashi Plunderer"
---[[Translation missing --]]
-L["Qalashi Spinecrusher"] = "Qalashi Spinecrusher"
---[[Translation missing --]]
-L["Qalashi Thaumaturge"] = "Qalashi Thaumaturge"
---[[Translation missing --]]
-L["Qalashi Trainee"] = "Qalashi Trainee"
---[[Translation missing --]]
-L["Qalashi Warden"] = "Qalashi Warden"
+L["Qalashi Plunderer"] = "Куалаши-расхититель"
+L["Qalashi Spinecrusher"] = "Куалаши-хребтолом"
+L["Qalashi Thaumaturge"] = "Куалаши-чудотворица"
+L["Qalashi Trainee"] = "Куалаши-новобранец"
+L["Qalashi Warden"] = "Куалаши-страж"
 L["Quaking"] = "Сотрясающий"
 L["Queen Patlaa"] = "Королева Патлаа"
 L["Queen Wasi"] = "Королева Уаси"
@@ -1798,14 +1654,12 @@ L["Risen Drakkari Death Knight"] = "Risen Drakkari Death Knight"
 L["Risen Drakkari Handler"] = "Risen Drakkari Handler"
 --[[Translation missing --]]
 L["Risen Drakkari Soulmage"] = "Risen Drakkari Soulmage"
---[[Translation missing --]]
-L["Risen Drakkari Warrior"] = "Risen Drakkari Warrior"
+L["Risen Drakkari Warrior"] = "Восставший воин Драккари"
 L["Risen Lancer"] = "Восставший копейщик"
 L["Risen Mystic"] = "Восставший мистик"
 L["Risen Scout"] = "Восставший разведчик"
 L["Risen Soul"] = "Восставшая душа"
---[[Translation missing --]]
-L["Risen Squire"] = "Risen Squire"
+L["Risen Squire"] = "Восставший рыцарь смерти"
 L["Risen Swordsman"] = "Восставший мечник"
 L["Risen Warlord"] = "Воскрешенный полководец"
 L["Risen Warrior"] = "Восставший воин"
@@ -1846,8 +1700,7 @@ L["Runecarver Sorn"] = "Резчик рун Сорн"
 L["Runemaster Molgeim"] = "Мастер рун Молгейм"
 L["Runestag Elderhorn"] = "Рунический старорог"
 L["Runic Disciple"] = "Руническая послушница"
---[[Translation missing --]]
-L["Runic Protector"] = "Runic Protector"
+L["Runic Protector"] = "Рунический защитник"
 L["Sacrificial Pits"] = "Жертвенная яма"
 L["Sacristy of Elune"] = "Ризница Элуны"
 L["Sadana Bloodfury"] = "Садана Кровавое Безумие"
@@ -1911,13 +1764,11 @@ L["Select the dungeon level"] = "Выбрать уровень подземел�
 L["Sending: %.1f"] = "Отправка: %.1f"
 L["Seneschal M'bara"] = "Сенешаль М'бара"
 L["Sentient Oil"] = "Разумное масло"
---[[Translation missing --]]
-L["Sentinel Talondras"] = "Sentinel Talondras"
+L["Sentinel Talondras"] = "Часовая Талондрас"
 L["Separation Assistant"] = "Ассистент-расчленитель"
 L["Sergeant Bainbridge"] = "Сержант Бейнбридж"
 L["Serpentrix"] = "Змеикс"
---[[Translation missing --]]
-L["Servant of Asaad"] = "Servant of Asaad"
+L["Servant of Asaad"] = "Слуга Асаада"
 L["Settings"] = "Настройки"
 L["Sewer Gate"] = "Сточная калитка"
 L["Sewer Vicejaw"] = "Сточный злобнокус"
@@ -1925,8 +1776,7 @@ L["Sha of Doubt"] = "Ша Сомнения"
 L["Shackle Undead"] = "Сковывание нежити"
 L["Shackled Soul"] = "Скованная душа"
 L["Shade of Medivh"] = "Тень Медива"
---[[Translation missing --]]
-L["Shade of Naxxramas"] = "Shade of Naxxramas"
+L["Shade of Naxxramas"] = "Тень Наксрамаса"
 L["Shade of Xavius"] = "Тень Ксавия"
 L["Shadow Hunter"] = "Темная охотница"
 L["Shadow Mistress"] = "Владычица теней"
@@ -1989,8 +1839,7 @@ L["Siegemaster Olugar"] = "Осадный мастер Олугар"
 L["Siegemaster Rokra"] = "Осадный мастер Рокра"
 L["Silence"] = "Немота"
 L["Silt Crab"] = "Ильный краб"
---[[Translation missing --]]
-L["Sir Zeliek"] = "Sir Zeliek"
+L["Sir Zeliek"] = "Сэр Зелиек"
 L["Sister Briar"] = "Сестра Брайар"
 L["Sister Malady"] = "Сестра Маладия"
 L["Sister Solena"] = "Сестра Солена"
@@ -2012,19 +1861,16 @@ L["Skeletal Waiter"] = "Скелет-официант"
 L["Skeletal Warrior"] = "Скелет-воин"
 --[[Translation missing --]]
 L["Skittering Crawler"] = "Skittering Crawler"
---[[Translation missing --]]
-L["Skittering Swarmer"] = "Skittering Swarmer"
+L["Skittering Swarmer"] = "Быстролапый членистоног"
 L["Skittish"] = "Упрямый"
 L["Skjal"] = "Скьял"
 L["Skrog Tidestomper"] = "Скрог-волнодав"
 L["Skrog Wavecrasher"] = "Скрог-волнолом"
 L["Skulking Gutstabber"] = "Затаившийся брюхокол"
---[[Translation missing --]]
-L["Skulking Zealot"] = "Skulking Zealot"
+L["Skulking Zealot"] = "Затаившийся фанатик"
 L["Skulloc"] = "Черепон"
 L["Skycap'n Kragg"] = "Небесный капитан Крагг"
---[[Translation missing --]]
-L["Skyfall Star"] = "Skyfall Star"
+L["Skyfall Star"] = "Упавшая звезда"
 L["Skylord Tovra"] = "Повелительница небес Товра"
 --[[Translation missing --]]
 L["Slad'ran"] = "Slad'ran"
@@ -2088,8 +1934,7 @@ L["Spitting Cobra"] = "Spitting Cobra"
 L["Sporecaller Zancha"] = "Заклинатель спор Занча"
 L["Spriggan Barkbinder"] = "Спригган - заклинатель коры"
 L["Spriggan Mendbender"] = "Спригган - подчинитель разума"
---[[Translation missing --]]
-L["Squallbringer Cyraz"] = "Squallbringer Cyraz"
+L["Squallbringer Cyraz"] = "Вестник бури Сайраз"
 --[[Translation missing --]]
 L["Stalagg"] = "Stalagg"
 L["Start or join the current |cFF00FF00Live Session|r"] = "Создайте или присоединитесь к текущей |cFF00FF00'Прямой трансляции'|r"
@@ -2145,7 +1990,6 @@ L["Stormforged Tactician"] = "Stormforged Tactician"
 --[[Translation missing --]]
 L["Stormfury Revenant"] = "Stormfury Revenant"
 L["Storming"] = "Бушующий"
---[[Translation missing --]]
 L["Storming Vortex"] = "Storming Vortex"
 L["Storm's End"] = "Предел шторма"
 L["Stormsurge Totem"] = "Тотем энергии бури"
@@ -2157,8 +2001,7 @@ L["Strider Tonk"] = "Танк-долгоног"
 L["Strife"] = "Раздор"
 L["Stun"] = "Оглушение"
 L["Subjugated Soul"] = "Порабощенная душа"
---[[Translation missing --]]
-L["Subterranean Proto-Dragon"] = "Subterranean Proto-Dragon"
+L["Subterranean Proto-Dragon"] = "Подземный протодракон"
 L["Sunken Denizen"] = "Утонувший обитатель глубин"
 L["Support Officer"] = "Офицер поддержки"
 L["Surgeon Stitchflesh"] = "Хирург Трупошов"
@@ -2170,8 +2013,7 @@ L["Taintheart Deadeye"] = "Скверносерд-стрелок"
 L["Taintheart Stalker"] = "Скверносерд-лазутчик"
 L["Taintheart Summoner"] = "Скверносерд-призыватель"
 L["Talixae Flamewreath"] = "Таликса Пламя Гнева"
---[[Translation missing --]]
-L["Tamed Phoenix"] = "Tamed Phoenix"
+L["Tamed Phoenix"] = "Прирученный феникс"
 L["Tank Buster MK1"] = ""
 L["Tarasek Delver"] = "Тарасекк-расхититель <Расколотое Пламя>"
 L["Tarspitter Lurker"] = "Смолоплюй-ползун"
@@ -2199,8 +2041,7 @@ L["Teeming"] = "Кишащий"
 L["Teera"] = "Тиира"
 L["Telash Greywing"] = "Телаш Серокрылый"
 L["Tempest Channeler"] = "Чаротворица бури"
---[[Translation missing --]]
-L["Temple Adept"] = "Temple Adept"
+L["Temple Adept"] = "Служитель храма"
 L["Temple Attendant"] = "Служитель храма"
 L["Temple of Sethraliss"] = "Храм Сетралисс"
 L["Temple of Sethraliss Sublevel"] = "Храм Сетралисс"
@@ -2213,11 +2054,9 @@ L["Territorial Eagle"] = "Агрессивный орел"
 L["Test Subject"] = "Подопытная крыса"
 --[[Translation missing --]]
 L["Thaddius"] = "Thaddius"
---[[Translation missing --]]
-L["Thane Korth'azz"] = "Thane Korth'azz"
+L["Thane Korth'azz"] = "Тан Корт'азз"
 L["The Antechamber of Ulduar"] = "Вестибюль Ульдуара"
---[[Translation missing --]]
-L["The Arachnid Quarter"] = "The Arachnid Quarter"
+L["The Arachnid Quarter"] = "Паучий квартал"
 L["The Arcway"] = "Катакомбы Сурамара"
 L["The Arcway Sublevel"] = "Катакомбы Сурамара"
 L["The Balconies"] = "Балконы"
@@ -2225,14 +2064,11 @@ L["The Banquet Hall"] = "Пиршественный зал"
 L["The Brig"] = "Гауптвахта"
 --[[Translation missing --]]
 L["The Brood Pit"] = "The Brood Pit"
---[[Translation missing --]]
-L["The Burning Cauldron"] = "The Burning Cauldron"
+L["The Burning Cauldron"] = "Горячий котел"
 L["The Cellar"] = "Погреб"
---[[Translation missing --]]
-L["The Construct Quarter"] = "The Construct Quarter"
+L["The Construct Quarter"] = "Квартал Мерзости"
 L["The Crybaby Hozen"] = "Хозен-плакса"
---[[Translation missing --]]
-L["The Culling of Stratholme"] = "The Culling of Stratholme"
+L["The Culling of Stratholme"] = "Очищение Стратхольма"
 L["The Curator"] = "Смотритель"
 L["The Drain"] = "Стоки"
 L["The Emerald Archives"] = "Изумрудные архивы"
@@ -2252,25 +2088,20 @@ L["The Jeweled Estate"] = "Самоцветный дворец"
 --[[Translation missing --]]
 L["The Lower Necropolis"] = "The Lower Necropolis"
 L["The Menagerie"] = "Зверинец"
---[[Translation missing --]]
-L["The Military Quarter"] = "The Military Quarter"
+L["The Military Quarter"] = "Военный квартал"
 L["The Mind's Eye"] = "Око Разума"
 L["The MOTHERLODE!!"] = "ЗОЛОТАЯ ЖИЛА!!!"
 L["The MOTHERLODE!! Sublevel"] = "ЗОЛОТАЯ ЖИЛА!!!"
 L["The Naglfar"] = "\"Нагльфар\""
 L["The Necrotic Wake"] = "Смертельная тризна"
---[[Translation missing --]]
-L["The Nexus"] = "The Nexus"
+L["The Nexus"] = "Нексус"
 L["The Nodding Tiger"] = "Кивающий тигр"
---[[Translation missing --]]
-L["The Oculus"] = "The Oculus"
---[[Translation missing --]]
-L["The Plague Quarter"] = "The Plague Quarter"
+L["The Oculus"] = "Окулус"
+L["The Plague Quarter"] = "Чумной квартал"
 L["The Platinum Pummeler"] = ""
 L["The preset will continuously synchronize between all party members participating in the Live Session"] = "Маршрут будет постоянно синхронизироваться между всеми членами группы, которые участвуют в 'Прямой трансляции'"
 L["The Prison of Yogg-Saron"] = "Тюрьма Йогг-Сарона"
---[[Translation missing --]]
-L["The Prophet Tharon'ja"] = "The Prophet Tharon'ja"
+L["The Prophet Tharon'ja"] = "Пророк Тарон'джа"
 L["The Raging Tempest"] = "Яростная буря"
 L["The Raven's Crown"] = "Корона Ворона"
 L["The Ravenscrypt"] = "Крипта Воронов"
@@ -2290,14 +2121,11 @@ L["The Underrot"] = "Подгнилье"
 L["The Underrot Sublevel"] = "Подгнилье"
 --[[Translation missing --]]
 L["The Upper Necropolis"] = "The Upper Necropolis"
---[[Translation missing --]]
-L["The Vault of Tyr"] = "The Vault of Tyr"
+L["The Vault of Tyr"] = "Хранилище Тира"
 --[[Translation missing --]]
 L["The Vestibules of Drak'Tharon"] = "The Vestibules of Drak'Tharon"
---[[Translation missing --]]
-L["The Violet Hold"] = "The Violet Hold"
---[[Translation missing --]]
-L["The Vortex Pinnacle"] = "The Vortex Pinnacle"
+L["The Violet Hold"] = "Аметистовая крепость"
+L["The Vortex Pinnacle"] = "Вершина Смерча"
 L["The Warden's Court"] = "Суд Стражей"
 L["TheArcaneConservatory"] = "Магический консерваторий"
 L["Theater of Pain"] = "Театр Боли"
@@ -2343,8 +2171,7 @@ L["Toggle Window"] = "Переключить окно"
 L["Toiling Groundskeeper"] = "Работящий смотритель"
 L["Tol Dagor"] = "Тол Дагор"
 L["Tol Dagor Sublevel1"] = "Тол Дагор"
---[[Translation missing --]]
-L["Tomb Horror"] = "Tomb Horror"
+L["Tomb Horror"] = "Могильный ужас"
 --[[Translation missing --]]
 L["Tomb Stalker"] = "Tomb Stalker"
 L["Tormented Bloodseeker"] = "Истерзанный кровопийца"
@@ -2363,14 +2190,12 @@ L["Tribunal of the Ages"] = "Tribunal of the Ages"
 L["Trickclaw Mystic"] = "Хитроклык-мистик"
 L["Tricktotem"] = "Лови-тотем <Царица Разрушения>"
 L["Trixie Tazer"] = "Трикси Искрожгучка"
---[[Translation missing --]]
-L["Trollgore"] = "Trollgore"
+L["Trollgore"] = "Кровотролль"
 L["Trothak"] = "Тротак"
 L["Troubled Soul"] = "Неспокойная душа"
 --[[Translation missing --]]
 L["Tunneling Ghoul"] = "Tunneling Ghoul"
---[[Translation missing --]]
-L["Turbulent Squall"] = "Turbulent Squall"
+L["Turbulent Squall"] = "Вихревой шквал"
 L["Twilight Adherent"] = "Приверженец культа Сумеречного Молота"
 --[[Translation missing --]]
 L["Twilight Apostle"] = "Twilight Apostle"
@@ -2394,8 +2219,7 @@ L["Ukhel Corruptor"] = "Укхельский осквернитель"
 L["Ukhel Deathspeaker"] = "Укхельский вестник смерти"
 L["Ukhel Willcrusher"] = "Укхельский сокрушитель воли"
 L["Ularogg Cragshaper"] = "Уларогг Скаломол"
---[[Translation missing --]]
-L["Uldaman: Legacy of Tyr"] = "Uldaman: Legacy of Tyr"
+L["Uldaman: Legacy of Tyr"] = "Ульдаман: Наследие Тира"
 L["UldamanLegacyOfTyr"] = "Ульдаман: Наследие Тира"
 L["Ulduar"] = "Ульдуар"
 L["Umbral War-Adept"] = "Темный адепт войны"
@@ -2403,8 +2227,7 @@ L["Umbrelskul"] = "Мраскул"
 L["Unbound Abomination"] = "Освобожденное чудовище"
 --[[Translation missing --]]
 L["Unbound Firestorm"] = "Unbound Firestorm"
---[[Translation missing --]]
-L["Uncategorized"] = "Uncategorized"
+L["Uncategorized"] = "Без категории"
 L["Undead"] = "Нежить"
 L["Underrot Tick"] = "Клещ из Подгнилья"
 L["underrotMatronNote"] = "Матрона 4+5 может появляться как на левой, так и на правой платформе"
@@ -2450,10 +2273,8 @@ L["Urg'roth, Breaker of Heroes"] = "Ург'рот Сокрушитель Гер�
 L["Urh Relic"] = "Реликвия Урт"
 L["Use /mdt reset to restore the default position and scale of MDT."] = "Используйте команду /mdt reset, чтобы восстановить положение и масштаб MDT по умолчанию."
 L["Use as a starting point:"] = "Использовать как начальную точку:"
---[[Translation missing --]]
-L["Utgarde Keep"] = "Utgarde Keep"
---[[Translation missing --]]
-L["Utgarde Pinnacle"] = "Utgarde Pinnacle"
+L["Utgarde Keep"] = "Крепость Утгард"
+L["Utgarde Pinnacle"] = "Вершина Утгард"
 L["Valarjar Aspirant"] = "Валарьяр-претендентка"
 L["Valarjar Champion"] = "Валарьяр-защитник"
 L["Valarjar Falconer"] = "Валарьяр-сокольница"
@@ -2464,14 +2285,12 @@ L["Valarjar Runecarver"] = "Валарьяр - резчик рун"
 L["Valarjar Shieldmaiden"] = "Валарьяр - дева щита"
 L["Valarjar Thundercaller"] = "Валарьяр - призыватель молний"
 L["Valarjar Trapper"] = "Валарьяр-зверолов"
---[[Translation missing --]]
-L["Varos Cloudstrider"] = "Varos Cloudstrider"
+L["Varos Cloudstrider"] = "Варос Заоблачный Странник"
 L["Vault Guard"] = "Страж хранилища"
 L["Vault of the Betrayer"] = "Каземат Предателя"
 L["Vault of the Wardens"] = "Казематы Стражей"
 L["Vault of the Wardens Sublevel"] = "Казематы Стражей"
---[[Translation missing --]]
-L["Venom Stalker"] = "Venom Stalker"
+L["Venom Stalker"] = "Ядовитый паук-скакун"
 L["Venomfang"] = "Ядовитый паук"
 L["Venomous Ophidian"] = "Ядовитый змей"
 L["Venomous Sniper"] = "Стрелок-отравитель"
@@ -2489,8 +2308,7 @@ L["Vestige of Doubt"] = "Частица сомнений"
 L["Veteran Sparkcaster"] = "Опытный заклинатель искр"
 L["Vexamus"] = "Вексам"
 L["Viceroy Nezhar"] = "Наместник Незжар"
---[[Translation missing --]]
-L["Vicious Basilisk"] = "Vicious Basilisk"
+L["Vicious Basilisk"] = "Злобный василиск"
 L["Vicious Gargon"] = "Свирепый гаргон"
 L["Vicious Hyena"] = "Злобная гиена"
 L["Vicious Manafang"] = "Злобный зачарованный паук"
@@ -2516,8 +2334,7 @@ L["Volatile Memory"] = "Нестабильное воспоминание"
 L["Volatile Sapling"] = "Нестабильный побег"
 L["Volcanic"] = "Вулканический"
 L["Vol'kaal"] = "Вол'каал"
---[[Translation missing --]]
-L["Volkhan"] = "Volkhan"
+L["Volkhan"] = "Волхан"
 L["Vol'zith the Whisperer"] = "Вол'зит Шепчущая"
 L["VortexPinnacle"] = "Вершина Смерча"
 L["Vy Relic"] = "Реликвия Ви"
@@ -2527,20 +2344,15 @@ L["Wandering Shellback"] = "Бродячий панцирник"
 L["Wanton Sapper"] = "Бесшабашная подрывница"
 L["War Ohuna"] = "Боевой охун"
 L["Warlord Parjesh"] = "Полководец Паржеш"
---[[Translation missing --]]
-L["Warlord Sargha"] = "Warlord Sargha"
+L["Warlord Sargha"] = "Полководец Сарга"
 L["Warp Shade"] = "Искаженная тень"
 L["Warp Stalker"] = "Прыгуана"
 L["Waste Pipes"] = "Барахлопровод"
 L["Waste Processing Unit"] = "Переработчик отходов"
---[[Translation missing --]]
-L["Watcher Gashra"] = "Watcher Gashra"
---[[Translation missing --]]
-L["Watcher Irideus"] = "Watcher Irideus"
---[[Translation missing --]]
-L["Watcher Narjil"] = "Watcher Narjil"
---[[Translation missing --]]
-L["Watcher Silthik"] = "Watcher Silthik"
+L["Watcher Gashra"] = "Дозорный Гашра"
+L["Watcher Irideus"] = "Страж Иридий"
+L["Watcher Narjil"] = "Дозорный Нарджил"
+L["Watcher Silthik"] = "Дозорный Силтик"
 L["Watchful Inquisitor"] = "Бдительный инквизитор"
 L["Waterlogged Soul Guard"] = "Промокший насквозь страж душ"
 L["Waycrest Manor"] = "Усадьба Уэйкрестов"
@@ -2553,8 +2365,7 @@ L["Welding Bot"] = "Сварочный робот"
 L["Wholesome Hostess"] = "Благонравная горничная"
 L["Wicked Oppressor"] = "Зловещая подавительница"
 L["Wild Lasher"] = "Безумный плеточник"
---[[Translation missing --]]
-L["Wild Vortex"] = "Wild Vortex"
+L["Wild Vortex"] = "Дикое завихрение"
 L["Wilted Oak"] = "Увядший дуб"
 L["Windspeaker Heldis"] = "Говорящая с ветрами Хелдис"
 L["Winter Revenant"] = "Зимний загробник"
@@ -2569,43 +2380,32 @@ L["Witherling"] = "Иссушительница"
 L["Wo Relic"] = "Реликвия Во"
 L["Workshop Defender"] = "Защитник мастерской"
 L["Wrath of Azshara"] = "Гнев Азшары"
---[[Translation missing --]]
-L["Wrath of the Lich King"] = "Wrath of the Lich King"
+L["Wrath of the Lich King"] = "Гнев Короля-лича"
 L["Wrathguard Bladelord"] = "Страж гнева - мастер клинка"
 L["Wrathguard Felblade"] = "Страж гнева - клинок Скверны"
 L["Wrathguard Flamebringer"] = "Страж гнева – возжигатель"
 L["Wrathguard Invader"] = "Страж гнева - завоеватель"
---[[Translation missing --]]
-L["Wretched Belcher"] = "Wretched Belcher"
+L["Wretched Belcher"] = "Гнусный изрыгатель"
 L["Wretched Plagueborer"] = "Жалкий чумной бурильщик"
 L["Wyrmtongue Scavenger"] = "Змееуст-барахольщик"
 L["Wyrmtongue Trickster"] = "Змееуст-плутишка"
 L["Xav the Unfallen"] = "Ксав Несломленный"
 L["XB-488 Disposalbot"] = "Утилятор XB-488"
 L["XD-175 Compactobot"] = "Компактобот XD-175"
---[[Translation missing --]]
-L["Xevozz"] = "Xevozz"
+L["Xevozz"] = "Ксевозз"
 L["Xiang"] = "Сян <Два жонглера>"
 L["Xira the Underhanded"] = "Зира Двурушница"
 L["XR-949 Salvagebot"] = "Добычатор XR-949"
 L["XT-002 Deconstructor"] = "Разрушитель XT-002"
 L["Yazma"] = "Язма"
---[[Translation missing --]]
-L["Ymirjar Berserker"] = "Ymirjar Berserker"
---[[Translation missing --]]
-L["Ymirjar Dusk Shaman"] = "Ymirjar Dusk Shaman"
---[[Translation missing --]]
-L["Ymirjar Flesh Hunter"] = "Ymirjar Flesh Hunter"
---[[Translation missing --]]
-L["Ymirjar Harpooner"] = "Ymirjar Harpooner"
---[[Translation missing --]]
-L["Ymirjar Necromancer"] = "Ymirjar Necromancer"
---[[Translation missing --]]
-L["Ymirjar Savage"] = "Ymirjar Savage"
---[[Translation missing --]]
-L["Ymirjar Warrior"] = "Ymirjar Warrior"
---[[Translation missing --]]
-L["Ymirjar Witch Doctor"] = "Ymirjar Witch Doctor"
+L["Ymirjar Berserker"] = "Имирьярский берсерк"
+L["Ymirjar Dusk Shaman"] = "Имирьярский шаман заката"
+L["Ymirjar Flesh Hunter"] = "Имирьярский плотоед"
+L["Ymirjar Harpooner"] = "Имирьярский гарпунщик"
+L["Ymirjar Necromancer"] = "Имирьярский некромант"
+L["Ymirjar Savage"] = "Имирьярский дикарь"
+L["Ymirjar Warrior"] = "Имирьярский воин"
+L["Ymirjar Witch Doctor"] = "Имирьярский знахарь"
 L["Ymiron, the Fallen King"] = "Имирон, падший король"
 L["Yogg-Saron"] = "Йогг-Сарон"
 L["You are using MDT. You rock!"] = "Вы используете MDT. Вы крут!"
@@ -2613,8 +2413,7 @@ L["You can always return to the current Live Session preset by clicking the 'Ret
 L["You can choose from different color palettes in the automatic pull coloring settings menu."] = "Вы можете выбрать различные цветовые палитры в меню настроек автоматического окрашивания."
 L["You can cycle through different floors by holding CTRL and using the mousewheel."] = "Вы можете переключаться между разными этажами, удерживая CTRL и используя колесо мыши."
 L["You can cycle through dungeons by holding ALT and using the mousewheel."] = "Вы можете переключаться между подземельями, удерживая клавишу ALT и используя колесо мыши."
---[[Translation missing --]]
-L["Young Storm Dragon"] = "Young Storm Dragon"
+L["Young Storm Dragon"] = "Молодой грозовой дракон"
 L["Yu'lon"] = "Юй-лун <Нефритовая Змея>"
 L["Zanazal the Wise"] = "Заназал Мудрый"
 L["Zanchuli Witch-Doctor"] = "Занчульская знахарка"
@@ -2633,6 +2432,5 @@ L["Zo'phex"] = "Зо'фекс"
 L["Zul'gamux"] = "Зул'гамуз"
 L["Zul'Gurub"] = "Зул'Гуруб"
 L["Zuraal the Ascended"] = "Зураал Перерожденный"
---[[Translation missing --]]
-L["Zuramat the Obliterator"] = "Zuramat the Obliterator"
+L["Zuramat the Obliterator"] = "Зурамат Уничтожитель"
 
