@@ -82,9 +82,6 @@ end
 
 L = BigWigs:NewBossLocale("Echo of Neltharion", "itIT")
 if L then
-	L.custom_on_repeating_sunder_reality = "Ripeti Avviso per Frammentazione della Realtà"
-	L.custom_on_repeating_sunder_reality_desc = "Ripeti un messaggio durante il lancio di Distruzione d'Ebano fino a che non entri dentro un portale."
-
 	L.twisted_earth = "Muri"
 	L.echoing_fissure = "Fessura"
 	L.rushing_darkness = "Distruggi Linee"
@@ -92,6 +89,10 @@ if L then
 	L.umbral_annihilation = "Annientamento"
 	L.sunder_reality = "Portali"
 	L.ebon_destruction = "Big Bang"
+
+	--L.wall_breaker = "Wall Breaker (Mythic)"
+	--L.wall_breaker_desc = "A player targeted by Rushing Darkness will be chosen as the wall breaker. They will be marked ({rt6}) and send a message in say chat. This is restricted to Mythic difficulty on stage 1."
+	--L.wall_breaker_message = "Wall Breaker"
 end
 
 L = BigWigs:NewBossLocale("Scalecommander Sarkareth", "itIT")
@@ -103,4 +104,17 @@ if L then
 
 	--L.boss_immune = "Boss Immune"
 	--L.ebon_might = "Adds Immune"
+end
+
+L = BigWigs:NewBossLocale("Aberrus, the Shadowed Crucible Trash", "itIT")
+if L then
+	L.edgelord = "Campionessa della Soglia Frammentata" -- NPC 198873
+	L.naturalist = "Naturalista Frammentato" -- NPC 201746
+	L.siegemaster = "Maestro d'Assedio Frammentato" -- NPC 198874
+	L.banner = "Stendardo" -- Short for "Sundered Flame Banner" NPC 205638
+	L.arcanist = "Arcanista Frammentata" -- NPC 201736
+	L.chemist = "Alchimista Frammentata" -- NPC 205656
+	L.fluid = "Fluido d'Animazione" -- NPC 203939
+	L.slime = "Poltiglia Ribollente" -- NPC 205651
+	L.goo = "Viscidume Strisciante" -- NPC 205820
 end

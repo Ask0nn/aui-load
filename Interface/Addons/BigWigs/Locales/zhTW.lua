@@ -55,6 +55,7 @@ L.spell_under_you = "BigWigs: 法術在你腳下"
 
 -- Options.lua
 L.options = "選項"
+L.optionsKey = "ID:%s" -- The key that messages/bars/options use
 L.raidBosses = "團隊首領"
 L.dungeonBosses = "地城首領"
 L.introduction = "歡迎使用 BigWigs 戲弄各個首領。請繫好安全帶，吃吃花生並享受這次旅行。它不會吃了你的孩子，但會協助你的團隊與新的首領進行戰鬥，如同享受饕餮大餐一樣。"
@@ -126,6 +127,8 @@ L.VOICE = "語音"
 L.VOICE_desc = "如果安裝了語音插件，此選項可以開啟並播放警報音效文件。"
 L.COUNTDOWN = "倒數"
 L.COUNTDOWN_desc = "啟用後，倒數最後五秒會顯示聲音及文字。想像有人在你的畫面中央以巨大的數字倒數「5... 4... 3... 2... 1...」。"
+L.CASTBAR_COUNTDOWN = "施法倒數計時"
+L.CASTBAR_COUNTDOWN_desc = "啟用後，為施法條的最後五秒顯示巨大的文字與語音倒數。"
 L.INFOBOX = L.infobox
 L.INFOBOX_desc = L.infobox_desc
 L.SOUND = "音效"
@@ -139,7 +142,7 @@ L.ME_ONLY_EMPHASIZE_desc = "啟用後會強調所有只施放在你的技能相�
 L.NAMEPLATEBAR = "名條計時條"
 L.NAMEPLATEBAR_desc = "當多個敵方單位施放相同的法術時，在名條上方顯示各自的計時條。如果不想要名條上依附的計時條，請停用此項。"
 L.PRIVATE = "私有光環"
-L.PRIVATE_desc = "私有光環無法用一般方式追蹤，但可以在音效分頁指定「點名在你身上」的音效。"
+L.PRIVATE_desc = "私有光環無法用一般方式追蹤，但可以在音效分頁指定「只對自身」的音效。"
 
 L.advanced = "進階選項"
 L.back = "<< 返回"

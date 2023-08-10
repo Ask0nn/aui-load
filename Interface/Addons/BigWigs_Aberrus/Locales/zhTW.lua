@@ -82,9 +82,6 @@ end
 
 L = BigWigs:NewBossLocale("Echo of Neltharion", "zhTW")
 if L then
-	L.custom_on_repeating_sunder_reality = "重複傳送門警告"
-	L.custom_on_repeating_sunder_reality_desc = "在黯黑毀滅施法期間，持續發送警告，直到你進入粉碎現實的傳送門為止。"
-
 	L.twisted_earth = "石牆"
 	L.echoing_fissure = "迴響"
 	L.rushing_darkness = "擊退破牆"
@@ -92,6 +89,10 @@ if L then
 	L.umbral_annihilation = "滅殺"
 	L.sunder_reality = "傳送門"
 	L.ebon_destruction = "大爆炸"
+
+	L.wall_breaker = "破牆者（傳奇模式）"
+	L.wall_breaker_desc = "在傳奇模式的第一階段中，指定一名中了奔竄黑暗的玩家為 {rt6}，負責破牆。"
+	L.wall_breaker_message = "破牆者"
 end
 
 L = BigWigs:NewBossLocale("Scalecommander Sarkareth", "zhTW")
@@ -100,7 +101,21 @@ if L then
 	L.claws_debuff = "坦克爆炸"
 	L.emptiness_between_stars = "空無"
 	L.void_slash = "正面斬擊"
+	L.scouring_eternity = "躲藏"
 
-	--L.boss_immune = "Boss Immune"
-	--L.ebon_might = "Adds Immune"
+	L.boss_immune = "首領免疫"
+	L.ebon_might = "小怪免疫"
+end
+
+L = BigWigs:NewBossLocale("Aberrus, the Shadowed Crucible Trash", "zhTW")
+if L then
+	--L.edgelord = "Sundered Edgelord" -- NPC 198873
+	--L.naturalist = "Sundered Naturalist" -- NPC 201746
+	--L.siegemaster = "Sundered Siegemaster" -- NPC 198874
+	--L.banner = "Banner" -- Short for "Sundered Flame Banner" NPC 205638
+	--L.arcanist = "Sundered Arcanist" -- NPC 201736
+	--L.chemist = "Sundered Chemist" -- NPC 205656
+	--L.fluid = "Animation Fluid" -- NPC 203939
+	L.slime = "冒泡軟泥怪" -- NPC 205651
+	--L.goo = "Crawling Goo" -- NPC 205820
 end

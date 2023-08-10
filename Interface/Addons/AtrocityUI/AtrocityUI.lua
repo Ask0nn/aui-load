@@ -11,11 +11,6 @@ InstallationSoundFile = "Interface\\AddOns\\AtrocityMedia\\Sounds\\Info.ogg"
 -- Stores exported data for bigwigs 1080p/1440p settings
 atrocityUIData.BigWigs3DB = {}
 
--- Stores exported data for DBM 1080p/1440p settings
-atrocityUIData.DBM_AllSavedOptions = {}
-atrocityUIData.DBM_MinimapIcon = {}
-atrocityUIData.DBT_AllPersistentOptions = {}
-
 -- Stores exported details profile string for 1080p/1440p settings
 atrocityUIData.DetailsProfileString = {}
 
@@ -34,9 +29,6 @@ atrocityUIData.PlaterDB = {}
 
 -- Stores exported data for WeakAuras 1080/1440p settings
 atrocityUIData.WeakAurasSaved = {}
-
--- Stores exported data for GladiusEx 1080/1440p settings
-atrocityUIData.GladiusExDB = {}
 
 -- Stores exported data for WarpDeplete 1080/1440p settings
 atrocityUIData.WarpDepleteDB = {}
@@ -79,9 +71,6 @@ end
 -- else False
 function IsModuleOutOfDate(addonName)
 	addonFileName = addonName
-	if addonName == "DBM" then
-		addonFileName = "DBM-Core"
-	end
 	return (AtrocityUIDB.InstalledVersions[addonName] == nil or AtrocityUIDB.InstalledVersions[addonName] < GetAddonInstalledVersion(addonName)) and IsAddOnLoaded(addonFileName)
 end
 
@@ -176,8 +165,7 @@ local addOns = {
 	[4] = "OmniCD",
 	[5] = "Plater",
 	[6] = "WeakAuras",
-	[7] = "GladiusEx",
-	[8] = "WarpDeplete",
+	[7] = "WarpDeplete",
 }
 
 local updatePage = function()
@@ -224,22 +212,6 @@ local pages = {
 			PluginInstallFrame.Option2:SetText(string.format(ClassColor("Class Color")))
 		end
 	end,
-	-- ["DBM"] = function(shouldImport, forceReImport, resolution)
-	-- 	return function()
-	-- 		PluginInstallFrame.SubTitle:SetFormattedText("DBM Profile")
-	-- 		PluginInstallFrame.Desc1:SetText("Click below to import the DBM profile.")
-	-- 		if forceReImport then
-	-- 			PluginInstallFrame.Desc2:SetText(Red(string.format("This will import DBM %s.", GetAddonInstalledVersion("DBM"))))
-	-- 		elseif shouldImport then
-	-- 			PluginInstallFrame.Desc2:SetText(string.format("Your version of DBM is %s but the latest is %s. The below button will update the DBM profile and load it.", Red(GetAddonSavedVersion("DBM")), Green(GetAddonInstalledVersion("DBM"))))
-	-- 		else
-	-- 			PluginInstallFrame.Desc2:SetText(string.format("Your version of DBM is %s, which is the latest. The below button will just load the profile.", Green(GetAddonSavedVersion("DBM"))))
-	-- 		end
-	-- 		PluginInstallFrame.Option1:Show()
-	-- 		PluginInstallFrame.Option1:SetScript("OnClick", function() atrocityUIData:SetDBM(resolution, shouldImport) end)
-	-- 		PluginInstallFrame.Option1:SetText(TextSetOrInstall((shouldImport or forceReImport), "DBM"))
-	-- 	end
-	-- end,
 	["BigWigs"] = function(shouldImport, forceReImport, resolution)
 		return function()
 			PluginInstallFrame.SubTitle:SetFormattedText("BigWigs Profile")
@@ -345,22 +317,6 @@ local pages = {
 			end
 		end
 	end,
-	["GladiusEx"] = function(shouldImport, forceReImport, resolution)
-		return function()
-			PluginInstallFrame.SubTitle:SetFormattedText("GladiusEx Profile")
-			PluginInstallFrame.Desc1:SetText("Click below to import the GladiusEx profile.")
-			if forceReImport then
-				PluginInstallFrame.Desc2:SetText(Red(string.format("This will import GladiusEx %s.", GetAddonInstalledVersion("GladiusEx"))))
-			elseif shouldImport then
-				PluginInstallFrame.Desc2:SetText(string.format("Your version of GladiusEx is %s but the latest is %s. The below button will update the GladiusEx profile and load it.", Red(GetAddonSavedVersion("GladiusEx")), Green(GetAddonInstalledVersion("GladiusEx"))))
-			else
-				PluginInstallFrame.Desc2:SetText(string.format("Your version of GladiusEx is %s, which is the latest. The below button will just load the profile.", Green(GetAddonSavedVersion("GladiusEx"))))
-			end
-			PluginInstallFrame.Option1:Show()
-			PluginInstallFrame.Option1:SetScript("OnClick", function() atrocityUIData:SetGladiusEx(resolution, shouldImport) end)
-			PluginInstallFrame.Option1:SetText(TextSetOrInstall((shouldImport or forceReImport), "GladiusEx"))
-		end
-	end,
 	["WarpDeplete"] = function(shouldImport, forceReImport, resolution)
 		return function()
 			PluginInstallFrame.SubTitle:SetFormattedText("WarpDeplete Profile")
@@ -389,14 +345,12 @@ local pages = {
 local stepTitles = {
 	["Intro"] = "Introduction",
 	["ElvUI"] = "ElvUI Profile",
-	-- ["DBM"] = "DBM Profile",
 	["BigWigs"] = "BigWigs Profile",
 	["Details"] = "Details Profile",
 	["MRT"] = "MRT Profile",
 	["OmniCD"] = "OmniCD Profile",
 	["Plater"] = "Plater Profile",
 	["WeakAuras"] = "Weakauras Profile",
-	["GladiusEx"] = "GladiusEx Profile",
 	["WarpDeplete"] = "WarpDeplete Profile",
 	["Finish"] = "Finish",
 }
@@ -577,6 +531,7 @@ function GetDualSpecConfigFromClass(className, useColor)
 		["Evoker"] = {
             "AtrocityUI", -- [1]
             "AtrocityUI Healer", -- [2]
+			"AtrocityUI Healer", -- [3]
             ["enabled"] = true,
         },
     }
@@ -616,6 +571,7 @@ function GetDualSpecConfigFromClass(className, useColor)
 		["Evoker"] = {
             "AtrocityUI [C]", -- [1]
             "AtrocityUI Healer [C]", -- [2]
+			"AtrocityUI Healer [C]", -- [3]
             ["enabled"] = true,
         },
     }
@@ -672,11 +628,6 @@ function AtrocityUI:Initialize()
 		if IsAddOnLoaded("Details") then
 			Details:Disable()
 			Details:DisablePlugin("DETAILS_PLUGIN_STREAM_OVERLAY")
-		end
-	
-		-- Hide GladiusEx on run
-		if IsAddOnLoaded("GladiusEx") then
-			GladiusEx:Disable()
 		end
 	end
 

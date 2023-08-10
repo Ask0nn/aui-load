@@ -1,6 +1,6 @@
 # Details! Damage Meter
 
-## [Details.20230520.11023.151](https://github.com/Tercioo/Details-Damage-Meter/tree/Details.20230520.11023.151) (2023-05-20)
-[Full Changelog](https://github.com/Tercioo/Details-Damage-Meter/compare/Details.20230520.11022.151...Details.20230520.11023.151) 
+## [Details.20230713.11701.154](https://github.com/Tercioo/Details-Damage-Meter/tree/Details.20230713.11701.154) (2023-07-14)
+[Full Changelog](https://github.com/Tercioo/Details-Damage-Meter/compare/Details.20230713.11700.154...Details.20230713.11701.154) 
 
-- Hour0 bug fix  
+- Framework Update  

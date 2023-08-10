@@ -82,9 +82,6 @@ end
 
 L = BigWigs:NewBossLocale("Echo of Neltharion", "frFR")
 if L then
-	L.custom_on_repeating_sunder_reality = "Avertissement Réalité Fracturée répétée"
-	L.custom_on_repeating_sunder_reality_desc = "Répète un message durant l'incantation de Destruction d'ébène jusqu'à ce que vous alliez dans un portail."
-
 	L.twisted_earth = "Murs"
 	L.echoing_fissure = "Fissure"
 	L.rushing_darkness = "Lignes d'impact"
@@ -92,6 +89,10 @@ if L then
 	L.umbral_annihilation = "Annéantissement"
 	L.sunder_reality = "Portails"
 	L.ebon_destruction = "Destruction d'ébène"
+
+	--L.wall_breaker = "Wall Breaker (Mythic)"
+	--L.wall_breaker_desc = "A player targeted by Rushing Darkness will be chosen as the wall breaker. They will be marked ({rt6}) and send a message in say chat. This is restricted to Mythic difficulty on stage 1."
+	--L.wall_breaker_message = "Wall Breaker"
 end
 
 L = BigWigs:NewBossLocale("Scalecommander Sarkareth", "frFR")
@@ -103,4 +104,17 @@ if L then
 
 	--L.boss_immune = "Boss Immune"
 	--L.ebon_might = "Adds Immune"
+end
+
+L = BigWigs:NewBossLocale("Aberrus, the Shadowed Crucible Trash", "frFR")
+if L then
+	L.edgelord = "Dame des lames fracturée" -- NPC 198873
+	L.naturalist = "Naturaliste fracturé" -- NPC 201746
+	L.siegemaster = "Maître de siège fracturé" -- NPC 198874
+	L.banner = "Bannière" -- Short for "Sundered Flame Banner" NPC 205638
+	L.arcanist = "Arcaniste fracturée" -- NPC 201736
+	L.chemist = "Chimiste fracturée" -- NPC 205656
+	L.fluid = "Fluide d'animation" -- NPC 203939
+	L.slime = "Gelée bouillonnante" -- NPC 205651
+	L.goo = "Mucus rampant" -- NPC 205820
 end

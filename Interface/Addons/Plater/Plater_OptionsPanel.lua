@@ -400,7 +400,7 @@ function Plater.OpenOptionsPanel()
 	statusBar:SetAlpha (0.9)
 	statusBar:SetFrameLevel (f:GetFrameLevel()+10)
 	
-	DF:BuildStatusbarAuthorInfo (statusBar, "Plater is Maintained by ", "Ariani | Terciob")
+	DF:BuildStatusbarAuthorInfo (statusBar, "Plater is Maintained by ", "Cont1nuity & Terciob")
 	
 	--if (DF.IsDragonflight()) then
 	local bottomGradient = DF:CreateTexture(f, {gradient = "vertical", fromColor = {0, 0, 0, 0.6}, toColor = "transparent"}, 1, 100, "artwork", {0, 1, 0, 1}, "bottomGradient")
@@ -1600,7 +1600,7 @@ local debuff_options = {
 			Plater.DisableAuraTest = value
 			if (value) then
 				auraOptionsFrame.DisableAuraTest()
-			else
+			elseif Plater.db.profile.aura_enabled then
 				auraOptionsFrame.EnableAuraTest()
 			end
 		end,
@@ -1621,6 +1621,8 @@ local debuff_options = {
 			Plater.UpdateAllPlates()
 			
 			if (not value) then
+				Plater.DisableAuraTest = true
+				auraOptionsFrame.DisableAuraTest()
 				for _, plateFrame in ipairs (Plater.GetAllShownPlates()) do
 					for _, frame in ipairs (plateFrame.unitFrame.BuffFrame.PlaterBuffList) do
 						frame:Hide()
@@ -1629,7 +1631,11 @@ local debuff_options = {
 						frame:Hide()
 					end
 				end
+			else
+				Plater.DisableAuraTest = false
+				auraOptionsFrame.EnableAuraTest()
 			end
+			auraOptionsFrame:RefreshOptions()
 		end,
 		name = "OPTIONS_ENABLED",
 		desc = "OPTIONS_ENABLED",
@@ -12556,6 +12562,26 @@ end
 			name = "Friendly Nameplates out of combat",
 			desc = "Automatically enable / disable friendly nameplates out of combat.",
 		},
+		{
+			type = "toggle",
+			get = function() return Plater.db.profile.auto_toggle_combat.blizz_healthbar_ic end,
+			set = function (self, fixedparam, value) 
+				Plater.db.profile.auto_toggle_combat.blizz_healthbar_ic = value
+				Plater.RefreshAutoToggle()
+			end,
+			name = "Hide Blizzard Healthbars in combat",
+			desc = "Automatically enable / disable showing blizzard nameplate healthbars in combat.",
+		},
+		{
+			type = "toggle",
+			get = function() return Plater.db.profile.auto_toggle_combat.blizz_healthbar_ooc end,
+			set = function (self, fixedparam, value) 
+				Plater.db.profile.auto_toggle_combat.blizz_healthbar_ooc = value
+				Plater.RefreshAutoToggle()
+			end,
+			name = "Hide Blizzard Healthbars out of combat",
+			desc = "Automatically enable / disable showing blizzard nameplate healthbars out of combat.",
+		},
 		
 		{type = "breakline"},
 		{type = "breakline"},
@@ -13639,6 +13665,19 @@ end
 			nocombat = true,
 		},
 		
+		{
+			type = "toggle",
+			get = function() return GetCVarBool ("SoftTargetNameplateInteract") end,
+			set = function (self, fixedparam, value) 
+				if (not InCombatLockdown()) then
+					SetCVar ("SoftTargetNameplateInteract", value and "1" or "0")
+				else
+					Plater:Msg (L["OPTIONS_ERROR_CVARMODIFY"])
+				end
+			end,
+			name = "Force nameplates on soft-interact target",
+			desc = "Force show the nameplate on your soft-interact target.",
+		},
 		{
 			type = "toggle",
 			get = function() return Plater.db.profile.show_healthbars_on_softinteract end,

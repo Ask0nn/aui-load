@@ -362,6 +362,21 @@ local textureUVs = {
 	"borderLeft",
 }
 
+
+local pendingPassThroughButtons = {}
+function P:UpdatePassThroughButtons()
+	local showTooltip = E.db.icons.showTooltip
+	for i = #pendingPassThroughButtons, 1, -1 do
+		local icon = pendingPassThroughButtons[i]
+		icon:SetPassThroughButtons("LeftButton", "RightButton")
+		icon.isPassThrough = true
+		if showTooltip then
+			icon:EnableMouse(true)
+		end
+		pendingPassThroughButtons[i] = nil
+	end
+end
+
 local function GetIcon(barFrame, iconIndex)
 	local icon = tremove(unusedIcons)
 	if not icon then
@@ -386,13 +401,16 @@ local function GetIcon(barFrame, iconIndex)
 		icon.cooldown:SetScript("OnHide", OmniCDCooldown_OnHide)
 		icon:SetScript("OnEnter", OmniCDIcon_OnEnter)
 		icon:SetScript("OnLeave", OmniCDIcon_OnLeave)
-		if not E.isClassic then
-			icon:SetPassThroughButtons("LeftButton", "RightButton")
+		if icon.SetPassThroughButtons then
+			if P.inLockdown then
+				tinsert(pendingPassThroughButtons, icon)
+			else
+				icon:SetPassThroughButtons("LeftButton", "RightButton")
+				icon.isPassThrough = true
+			end
 		end
 	end
-
 	icon:SetParent(barFrame.container)
-
 	barFrame.icons[iconIndex] = icon
 	return icon
 end
@@ -639,6 +657,11 @@ function P:UpdateUnitBar(guid, isUpdateBarsOrGRU)
 									end
 								end
 
+
+								if info.talentData[412713] and spellID ~= 404381 then
+									cd = cd * 0.9
+								end
+
 								modData = E.spell_chmod_talents[spellID]
 								if modData then
 									for k = 1, #modData, 2 do
@@ -688,6 +711,11 @@ function P:UpdateUnitBar(guid, isUpdateBarsOrGRU)
 										ch = ch + essData[2]
 									end
 								end
+							elseif i == 2 then
+
+								if info.talentData[412713] then
+									cd = cd * 0.9
+								end
 							end
 						end
 						ch = ch > 1 and ch
@@ -703,6 +731,7 @@ function P:UpdateUnitBar(guid, isUpdateBarsOrGRU)
 							iconIndex = iconIndex + 1
 							icon = frame.icons[iconIndex] or GetIcon(frame, iconIndex)
 						end
+
 						icon.name:Hide()
 						icon.guid = guid
 						icon.spellID = spellID

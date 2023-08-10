@@ -4,7 +4,7 @@
 
 local mod, CL = BigWigs:NewBoss("Assault of the Zaqali", 2569, 2524)
 if not mod then return end
-mod:RegisterEnableMob(199659, 202791) -- Warlord Kagni, Ignara
+mod:RegisterEnableMob(199659, 199703, 202791) -- Warlord Kagni, Magma Mystic, Ignara
 mod:SetEncounterID(2682)
 mod:SetRespawnTime(30)
 mod:SetStage(1)
@@ -19,6 +19,7 @@ local phoenixRushCount = 1
 local vigorousGaleCount = 1
 local zaqaliAideCount = 1
 local magmaMysticCount = 1
+local tempBlockBigAddMsg = false
 
 --------------------------------------------------------------------------------
 -- Localization
@@ -28,8 +29,8 @@ local L = mod:GetLocale()
 if L then
 	-- These are in-game emotes and need to match the text shown in-game
 	-- You should also replace the comment (--) with the full emote as it shows in-game
-	L.zaqali_aide_north_emote_trigger = "northern battlement" -- |TInterface\\ICONS\\Ability_Hunter_KillCommand.blp:20|t Commanders ascend the southern battlement!
-	L.zaqali_aide_south_emote_trigger = "southern battlement" -- |TInterface\\ICONS\\Ability_Hunter_KillCommand.blp:20|t Commanders ascend the northern battlement!
+	L.zaqali_aide_north_emote_trigger = "northern battlement" -- |TInterface\\ICONS\\Ability_Hunter_KillCommand.blp:20|t Commanders ascend the northern battlement!
+	L.zaqali_aide_south_emote_trigger = "southern battlement" -- |TInterface\\ICONS\\Ability_Hunter_KillCommand.blp:20|t Commanders ascend the southern battlement!
 
 	L.north = "North"
 	L.south = "South"
@@ -68,14 +69,14 @@ function mod:GetOptions()
 		-- Ignara (Mythic)
 		401108, -- Phoenix Rush
 		401381, -- Blazing Focus
-		407017, -- Vigorous Gale
+		407009, -- Vigorous Gale
 		-- Stage 2
 		406585, -- Ignara's Fury
 		410516, -- Catastrophic Slam
 		410351, -- Flaming Cudgel
 	}, {
 		["stages"] = "general",
-		[398938] = -26209, -- Warlord Kagni
+		[408959] = -26209, -- Warlord Kagni
 		[397383] = -26217, -- Magma Mystic
 		[401401] = -26213, -- Flamebound Huntsman
 		[408620] = -26210, -- Obsidian Guard
@@ -84,7 +85,7 @@ function mod:GetOptions()
 	}, {
 		[404382] = CL.big_adds, -- Zaqali Aide (Big Adds)
 		[397383] = L.molten_barrier, -- Molten Barrier (Barrier)
-		[398938] = CL.leap, -- Devastating Leap (Leap)
+		[408959] = CL.leap, -- Devastating Leap (Leap)
 		[401381] = CL.fixate, -- Blazing Focus (Fixate)
 		[407009] = CL.pushback, -- Vigorous Gale (Pushback)
 		[410516] = L.catastrophic_slam, -- Catastrophic Slam (Door Slam)
@@ -94,6 +95,7 @@ end
 function mod:OnBossEnable()
 	self:RegisterEvent("RAID_BOSS_EMOTE")
 	self:RegisterUnitEvent("UNIT_SPELLCAST_SUCCEEDED", nil, "boss1")
+	self:Log("SPELL_CAST_SUCCESS", "ZaqaliAide", 412818, 412820) -- North, South || XXX still not in, being investigated
 
 	self:Log("SPELL_AURA_APPLIED", "BarrierBackfireApplied", 404687)
 	self:Log("SPELL_AURA_APPLIED_DOSE", "BarrierBackfireApplied", 404687)
@@ -137,6 +139,7 @@ function mod:OnEngage()
 	zaqaliAideCount = 1
 	vigorousGaleCount = 1
 	phoenixRushCount = 1
+	tempBlockBigAddMsg = false
 
 	self:Bar(401258, 12) -- Heavy Cudgel
 	self:Bar(397383, self:Easy() and 26.5 or 28, L.add_bartext:format(L.molten_barrier, L.both, magmaMysticCount)) -- Molten Barrier
@@ -158,32 +161,71 @@ function mod:UNIT_HEALTH(event, unit)
 	end
 end
 
-function mod:UNIT_SPELLCAST_SUCCEEDED(_, unit, _, spellId)
+function mod:UNIT_SPELLCAST_SUCCEEDED(_, _, _, spellId)
 	if spellId == 406591 then -- Call Ignara (2s earlier than Ignara's Flame _APPLIED)
 		self:Message("stages", "green", self:SpellName(spellId), "artifactability_firemage_phoenixbolt")
 		-- self:PlaySound("stages", "alert")
+	elseif spellId == 410207 or spellId == 411767 then -- south, north
+		tempBlockBigAddMsg = true -- Temp workaround for new emotes added in 10.1.5
+		self:SimpleTimer(function() tempBlockBigAddMsg = false end, 2)
 	end
 end
 
-function mod:RAID_BOSS_EMOTE(_, msg)
-	if msg:find(L.zaqali_aide_south_emote_trigger, nil, true) then
-		self:StopBar(L.add_bartext:format(CL.big_adds, L.south, zaqaliAideCount))
-		self:Message(404382, "cyan", L.zaqali_aide_message:format(CL.big_adds, L.south))
-	elseif msg:find(L.zaqali_aide_north_emote_trigger, nil, true) then
-		self:StopBar(L.add_bartext:format(CL.big_adds, L.north, zaqaliAideCount))
-		self:Message(404382, "cyan", L.zaqali_aide_message:format(CL.big_adds, L.north))
-	else
-		return
-	end
-	self:PlaySound(404382, "info")
-	zaqaliAideCount = zaqaliAideCount + 1
+do
+	local timer = { 5.0, 21.8, 29.2, 22.9, 21.1 } -- 40.3, 33.5, 22.9, 21.1, 5.0, 21.8, 29.2, 23.0
+	local side = { "south", "south", "north", "north", "north" }
+	local newIDs = false
+	function mod:ZaqaliAide(args)
+		if not newIDs then
+			newIDs = true
+			self:UnregisterEvent("RAID_BOSS_EMOTE")
+			self:Error("New IDs are active.")
+		end
+		if args.spellId == 412820 then -- South
+			self:StopBar(L.add_bartext:format(CL.big_adds, L.south, zaqaliAideCount))
+			self:Message(404382, "cyan", L.zaqali_aide_message:format(CL.big_adds, L.south))
+		else -- North
+			self:StopBar(L.add_bartext:format(CL.big_adds, L.north, zaqaliAideCount))
+			self:Message(404382, "cyan", L.zaqali_aide_message:format(CL.big_adds, L.north))
+		end
+		self:PlaySound(404382, "info")
+		zaqaliAideCount = zaqaliAideCount + 1
 
-	if self:GetStage() == 1 then
-		local index = (zaqaliAideCount % 5) + 1
-		local timer = { 5.0, 21.8, 29.2, 22.9, 21.1 } -- 40.3, 33.5, 22.9, 21.1, 5.0, 21.8, 29.2, 23.0
-		local cd = zaqaliAideCount == 2 and 33.5 or timer[index]
-		local side = { "south", "south", "north", "north", "north" }
-		self:Bar(404382, cd, L.add_bartext:format(CL.big_adds, L[side[index]], zaqaliAideCount))
+		if self:GetStage() == 1 then
+			local index = (zaqaliAideCount % 5) + 1
+			local cd = zaqaliAideCount == 2 and 33.5 or timer[index]
+			self:Bar(404382, cd, L.add_bartext:format(CL.big_adds, L[side[index]], zaqaliAideCount))
+		end
+	end
+
+	function mod:RAID_BOSS_EMOTE(_, msg)
+		if msg:find(L.zaqali_aide_south_emote_trigger, nil, true) then
+			if tempBlockBigAddMsg then -- Temp workaround for new mystic north/south emotes added in 10.1.5 that are detected by our basic trigger
+				tempBlockBigAddMsg = false -- Hopefully the new CLEU spells will be hotfixed in soon and we can drop emote detection
+				return
+			else
+				self:StopBar(L.add_bartext:format(CL.big_adds, L.south, zaqaliAideCount))
+				self:Message(404382, "cyan", L.zaqali_aide_message:format(CL.big_adds, L.south))
+			end
+		elseif msg:find(L.zaqali_aide_north_emote_trigger, nil, true) then
+			if tempBlockBigAddMsg then
+				tempBlockBigAddMsg = false
+				return
+			else
+				self:StopBar(L.add_bartext:format(CL.big_adds, L.north, zaqaliAideCount))
+				self:Message(404382, "cyan", L.zaqali_aide_message:format(CL.big_adds, L.north))
+			end
+		else
+			return
+		end
+		self:PlaySound(404382, "info")
+		zaqaliAideCount = zaqaliAideCount + 1
+
+		if self:GetStage() == 1 then
+			local index = (zaqaliAideCount % 5) + 1
+			local cd = zaqaliAideCount == 2 and 33.5 or timer[index]
+			self:Bar(404382, cd, L.add_bartext:format(CL.big_adds, L[side[index]], zaqaliAideCount))
+		end
 	end
 end
 
@@ -223,21 +265,21 @@ function mod:VigorousGale(args)
 	local side = vigorousGaleCount % 2 == 0 and "north" or "south"
 	local msg = L.add_bartext:format(CL.pushback, L[side], vigorousGaleCount)
 	self:StopBar(msg)
-	self:Message(407017, "red", msg)
-	self:PlaySound(407017, "warning")
+	self:Message(args.spellId, "red", msg)
+	self:PlaySound(args.spellId, "warning")
 	vigorousGaleCount = vigorousGaleCount + 1
 
 	local cd = vigorousGaleCount % 2 == 0 and 66 or 32 -- 66~68, 32~??
 	side = vigorousGaleCount % 2 == 0 and "north" or "south"
-	self:CDBar(407017, cd, L.add_bartext:format(CL.pushback, L[side], vigorousGaleCount))
+	self:CDBar(args.spellId, cd, L.add_bartext:format(CL.pushback, L[side], vigorousGaleCount))
 end
 
 -- Warlord Kagni
-function mod:IgnaraFlameApplied(args)
+function mod:IgnaraFlameApplied()
 	self:Bar("stages", 23, L.boss_returns, "artifactability_firemage_phoenixbolt")
 end
 
-function mod:IgnaraFlameRemoved(arg)
+function mod:IgnaraFlameRemoved()
 	self:StopBar(L.boss_returns)
 	self:Message("stages", "green", L.boss_returns, "artifactability_firemage_phoenixbolt")
 	self:PlaySound("stages", "info")
@@ -245,7 +287,7 @@ function mod:IgnaraFlameRemoved(arg)
 	self:Bar(401258, self:Mythic() and 18 or 12) -- Heavy Cudgel
 	self:Bar(408959, 44, L.add_bartext:format(CL.leap, L.south, devastatingLeapCount)) -- Leap: South (1)
 	if self:Mythic() then
-		self:CDBar(407017, 19, L.add_bartext:format(CL.pushback, L.south, vigorousGaleCount)) -- Pushback: South (1)
+		self:CDBar(407009, 19, L.add_bartext:format(CL.pushback, L.south, vigorousGaleCount)) -- Pushback: South (1)
 		self:CDBar(401108, 40, L.add_bartext:format(self:SpellName(401108), L.south, phoenixRushCount)) -- Phoenix Rush: South (1)
 	end
 end
@@ -254,25 +296,27 @@ function mod:DevastatingLeap(args)
 	local side = devastatingLeapCount % 2 == 0 and "north" or "south"
 	local msg = L.add_bartext:format(CL.leap, L[side], devastatingLeapCount)
 	self:StopBar(msg)
-	self:Message(408959, "orange", msg)
-	self:PlaySound(408959, "alarm")
+	self:Message(args.spellId, "orange", msg)
+	self:PlaySound(args.spellId, "alarm")
 	devastatingLeapCount = devastatingLeapCount + 1
 
 	local cd = devastatingLeapCount % 2 == 0 and 47.5 or 53
 	side = devastatingLeapCount % 2 == 0 and "north" or "south"
-	self:Bar(408959, cd, L.add_bartext:format(CL.leap, L[side], devastatingLeapCount))
+	self:Bar(args.spellId, cd, L.add_bartext:format(CL.leap, L[side], devastatingLeapCount))
 end
 
-function mod:HeavyCudgel(args)
-	local unit = self:GetUnitIdByGUID(args.sourceGUID)
-	if not unit or IsItemInRange(116139, unit) then -- 50yd
-		self:Message(args.spellId, "purple")
-		self:PlaySound(args.spellId, "alert") -- frontal
-	end
-	cudgelCount = cudgelCount + 1
-	if cudgelCount > 2 then -- 2nd cast fired when he lands
-		local timer = { 26.0, 22.0, 31.0, 21.0 } -- 22.0, 31.0, 21.0, 26.0 repeating
-		self:Bar(args.spellId, timer[(cudgelCount % 4) + 1])
+do
+	local timer = { 26.0, 22.0, 31.0, 21.0 } -- 22.0, 31.0, 21.0, 26.0 repeating
+	function mod:HeavyCudgel(args)
+		local unit = self:GetUnitIdByGUID(args.sourceGUID)
+		if not unit or IsItemInRange(116139, unit) then -- 50yd
+			self:Message(args.spellId, "purple")
+			self:PlaySound(args.spellId, "alert") -- frontal
+		end
+		cudgelCount = cudgelCount + 1
+		if cudgelCount > 2 then -- 2nd cast fired when he lands
+			self:Bar(args.spellId, timer[(cudgelCount % 4) + 1])
+		end
 	end
 end
 
@@ -433,16 +477,18 @@ function mod:CatastrophicSlam(args)
 	self:CDBar(args.spellId, 26.7, CL.count:format(L.catastrophic_slam, devastatingLeapCount))
 end
 
-function mod:FlamingCudgel(args)
-	local msg = CL.count:format(args.spellName, cudgelCount)
-	self:StopBar(msg)
-	self:Message(args.spellId, "purple", msg)
-	self:PlaySound(args.spellId, "alert")
-	cudgelCount = cudgelCount + 1
-
+do
 	local timer = { 19.0, 12.0, 23.0 } -- 12.0, 23.0, 19.0 repeating
-	local cd = timer[(cudgelCount % 3) + 1]
-	self:Bar(args.spellId, cd, CL.count:format(args.spellName, cudgelCount))
+	function mod:FlamingCudgel(args)
+		local msg = CL.count:format(args.spellName, cudgelCount)
+		self:StopBar(msg)
+		self:Message(args.spellId, "purple", msg)
+		self:PlaySound(args.spellId, "alert")
+		cudgelCount = cudgelCount + 1
+
+		local cd = timer[(cudgelCount % 3) + 1]
+		self:Bar(args.spellId, cd, CL.count:format(args.spellName, cudgelCount))
+	end
 end
 
 function mod:FlamingCudgelApplied(args)

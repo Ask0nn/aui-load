@@ -1,3 +1,385 @@
+[v7.2]
+General & Addon: 
+Fixed Dominance trinkets spellID for all specs associated.
+Removed Glow from Dominance trinkets.
+Fixed stack amount on Dominance trinkets.
+Moved Boss Button to left of raid frames for Healer elvUI profiles.
+Added Restoration Druid, Mistweaver Monk, and Augmentation Evoker to Combat Texts Interrupt WA load conditions.
+Added Anvil Duration tracking into Missing Buffs aura group (loads when out of combat and in 5man dungeons only).
+
+Death Knight: 
+
+Demon Hunter: 
+
+Druid: 
+Druid Combo Points for non-feral no longer overlap other auras.
+Checked Own Only for all Resto Druid debuff tracking.
+Item equipped load condition removed from Druid weapon tracking.
+Correct spellID added to Druid: Weapon.
+Fixed Adapative Swarm aura loading if not spec'd into talent.
+Added Abundance tracking back to Buff Bar.
+Fixed After the Wildfire aura spamming "not in a party".
+
+Evoker: 
+GCDbar now loads for Augmentation Evoker.
+Added Augmentation Quell tracking to enhanced Castbar mod in Plater.
+Added Spell not Known condition to Augmentation Evoker for Time Skip aura.
+
+Hunter: 
+
+Mage: 
+Fixed Searing Touch debuff for Mage.
+Fixed Fire Mage Tier tracker debuff.
+Fixed icon zoom setting for Hyperthermia Proc.
+Fixed icon zoom setting for Tier tracker.
+Shadow offset removed from text on Freezing Wind bar.
+
+Monk: 
+
+Paladin:
+Pruned Exorcism from Paladin: Primary Bar.
+
+Priest: 
+Shadow Word: Pain maximum duration set to 21.
+Fixed Mindgames loading for Disc/Holy when you weren't spec'd into it.
+
+Rogue: 
+
+Shaman: 
+Added tracking for Spirit Walk to Defensives & Mobility.
+
+Warlock: 
+Removed Malefic Affliction from Buff Bar.
+Removed Fel Covenant from Buff Bar.
+
+Warrior:
+Hurricane talent load conditions fixed.
+Sudden Death talent load conditions fixed.
+Avatar talent load conditions fixed.
+
+==========================================================
+
+[v7.1]
+General & Addon:
+Target of Target frames now removed from Position Controller.
+Reverted Plater castbars to previous version because new castbars had worse visibility in keys.
+
+Death Knight:
+
+Demon Hunter:
+
+Druid:
+Fixed After the Wildfire aura.
+Added tracking of Dire Fixation for Feral Druid.
+Added tracking of 4p for Feral Druid.
+Fixed Feral Bleed Powers with a new aura.
+Added CP tracking from Berserk into Berserk buff icon.
+
+Evoker:
+Hover now glows when Time Spiral buff is active.
+Disintegrate ticks removed from Evoker group as they are now handled by default with new castbar.
+Quell now tracked for Aug Evoker.
+Unravel now tracked for Aug and Pres Evokers.
+Wing Buffet tracking added for Aug Evokers.
+Tail Swipe tracking added for Aug Evokers.
+Weapon Enchant weakaura now loads for all 3 evoker specs.
+Fixed Defy Fate aura for Aug Evoker.
+Blacklisted Defy Fate elvui aura.
+Fixed Echo Preservation spells in aura filters for ElvUI.
+Emerald Blossom will now only glow if you have the talent Dream of Spring spec'd and Essence Burst procs.
+
+Hunter:
+
+Mage:
+Fixed the abberus tier set to show all in one icon instead of split between 2
+Added free glow indicator to phoenix flames with tier set
+Shifted a few icons so they dont clip with blizzard spell alerts
+Moved winter's chill icon positioning and moved icy veins down in its place
+Removed excessive glows on some meaningless buffs
+Fixed GCD swipe on fire blast charge so it no longer shows GCD swipe
+Fixed weird duration indicator on a free frost mage flurry proc causing confusion on the actual remaining CD of the abilities charges
+
+Monk:
+
+Paladin:
+Hammer of Justice now desaturates when on CD.
+Deleted Text 3 on Holy Shock aura. 
+Changed Tyr's Deliverance aura to exact spellID.
+Awakening aura should now glow at 11 stacks.
+
+Priest:
+
+Rogue:
+Subtlety rogue Slice and Dice aura talent load condition removed.
+
+Shaman:
+
+Warlock:
+Pruned Soulkeeper aura from Warlock.
+
+Warrior:
+
+==========================================================
+
+[v7.0]
+General & Addon:
+Addition of addon TalentTreeTweaks to the installer.
+ElvUI Minimap Location Text set to uniform font size (14) on all profiles.
+ElvUI Minimap Location Text set to mouseover on all profiles.
+Hid ElvUI Addon Compartment on all profiles.
+Adjusted ElvUI Queue Status
+Added second MRT column to track PI/Grip/Rescue.
+Added Time Dilation tracking to MRT
+Set Raid 1 in Elv to only show 4 groups.
+Set Raid 3 in Elv to show 8 groups.
+ElvUI Tooltip hidden without combat override key (ALT).
+BigWigs Normal Bars moved above Details
+Combat Timer moved above Details.
+Combat Ress tracker moved above Details.
+Moved tooltip to account for 1 BigWigs bar
+WarpDeplete sizing changes.
+Moved Missing Buffs group to below minimap and reduced size
+Halls of Infusion Icons - Buffs moved flush top left
+Combat Text size lowered to 16.
+ElvUI Player Debuffs re-enabled & resized to match top bar icons
+Added glow to all mobility spells when Time Spiral buff is found.
+Added glow to all defensive spells when Symbol of Hope buff is found.
+Freeehold: Bars - Special adjusted to 1 border offset.
+Blacklisted Ominous Chromatic Essence from Primary Bar
+Fixed spellID for Neltharion's Call to Suffering.
+Adjusted lifebloom aura filter positioning.
+Fixed appearance, sizing, and positioning of dungeon nameplate CDs.
+Removed Zephyr from Defensives & Mobility and added it to RaidCDs.
+Pruned some obsolete spells from Defensives & Mobility.
+Removed Spiteful script from Plater (bloat because aura handles it).
+Removed Font Shadow on OmniCD text.
+Adjusted Healers: Single Res aura to show for any target being ressurected.
+Adjusted colors of bars in Dungeons - Utility - Class Bars.
+Removed sound conditional on Crowd Control group for Dungeons.
+Slightly lowered font size for BigWigs messages.
+Adjusted text on Boss frames to match new target frames.
+Moved Target of Target name inside of Target frame.
+Adjusted positioning of name and health inside of Target frame.
+Disabled Target of Target frame.
+Fixed Aura Reorder script for Shadow Priest to correctly show VT -> SW:P -> DP in that order.
+Disabled tracking of Tail Swipe and Wing Buffet in OmniCD.
+Moved MRT note flush top left
+Removed Sated weakaura in Dungeons group. 
+Reduced font size of Missing Buffs to 16.
+Fixed Call to Suffering spellID.
+Fixed Call to Chaos spellID.
+Added tracking for Ancient Concordance [fix load condition]
+Added tracking for Awakened Faeline [fix load condition]
+Reverted target highlight color on plater to 7381ff.
+Removed Dodge Orb aura from last boss Uldaman.
+Moved Sleep Walk debuff to Buff Special on Plater.
+Fixed Details autorun code.
+Added tracking for Afflicted affix.
+Fixed omnicd positioning and sizing.
+Changed Target Castbar strata to show behind power text.
+Adjusted omnicd spell tracking for healer to only show defensives.
+Removed tracking of Fury warrior's avatar on DPS omnicd profile.
+Added mana potion item count tracking to utility bar.
+Returned gcdbar for healer.Increased castbar height for healer and repositioned to line up with top bar.
+Adjusted positioning of all icons above castbar for healer.
+Added tracking for Incorporeal affix.
+Disabled load for healer mana as healer spec in dungeons.
+Adjusted player and target frame size by 1px to fix buff misalignment.
+Adjusted size of buffs to match target bar icons.
+Adjusted # of buffs to accomodate for new sizing.
+Renamed ElvUI Position Controller to Position Controller.
+Adjusted BigWigs size & positioning to accomodate for new buffs.
+Adjusted Plater buff sizing to use less Y axis.
+Removed Show Health amount on Plater nameplates.
+Added Quell to Target castbar WA tracking.
+Added stack count to Defensives group.
+Added text to indicate which buff you have on Spoils of Neltharus weakaura.
+Adjusted the way castbar handles evoker spells.
+Repositioned some spells on secondary bar for evoker.
+ 
+Hiding castbar cast names (leaving tickbox option for those who are going to want to re-enable).
+Adjusted the Healer castbar for the Evoker changes made to caster castbar.
+Added tracking for Spiritbloom for Pres Evokers in aura filters for ElvUI. 
+Fixed Steady Shot resource bar generation predictions.
+Fixed the Class Bars in dungeon group's res timers to have a character abbrev set.
+Disabled Renew aura indicator in raid frames for ElvUI.
+Reorganized all buff groups into class specific groups, now found within each class weakaura package
+Included Buff Group organization removed bloated triggers and conditions for every aura
+Did a decent bit of pruning of old auras mostly season 1 trinkets and tier sets
+Added primary bar 2 for healers to Resto Shaman, Mistweaver monk, Resto druid, and Holy Paladin.
+Adjusted various class weakuras for resto shaman mistweaver, resto druid and holy paladin to fit new layout
+Adjusted most Ranged/caster spec auras to fit new baseline profile (specifically cast bar and vertical axis adjustments)
+Fixed cape proc buff.
+Added a preemptive timer for when Avalanche is coming in Neltharion's Lair.
+Made Clear Entangling aura more visible and added a sound.
+Made CC Incorporeal aura more visible.
+Plater nameplates now have a flash effect when targeting you with a specific spell (not loaded outside of parties or as tank spec).
+Spell Reflectable casts have been updated within the Plater mod and should now show correctly again for S2 dungeons.
+Fixed 1px misposition of Healer castbar & gcd bar.
+Fixed some issues with certain auras not showing up on other language clients.
+Fixed .1px misalignment of BigWigs anchor in Position Controller when having a specific number of spells on actionbar.
+Deleted Healer BigWigs profile and using one profile universally going forward.
+Moved Interrupt Bar location for Healer profile in OmniCD to below Target frame and same length as target frame.
+Changed Frame Strata of all Target Top Bars to Inherited to accomodate for things such as party lead crown on target frame.
+Added aura indicator to elvui for important new tyr's deliverance buff for hpally to frames
+Combed through every pack and made consistent borders to every class pack and essentials using full white square template in case anybody removes details and loses borders.
+Fixed load conditions for healer castbar so augmentation loads.
+Full sweep of all abilities removing exact spell match from all class groups.
+Changed Targeting Glow in ElvUI frames
+added Prescience and ebon might to all class buff groups
+Added Augmentation Evoker to the Exception rules for the elvui position controller (like healer specs)
+added augmentation to DPS potion CD in the utility group's load condition
+Added duration to all DPS DoT progress bars.
+Revised naming convention for all auras.
+Adjusted positioning of Healer CDs aura group to a cleaner / more visible position in healer UI.
+Added debuff tracking to primary bar 2 for healers.
+Fixed Empowered Tiers showing on Evoker castbars.
+Added tracking for Ursoc'c Fury in Absorbs group.
+Added tracking for After the Wildfire in buff bar.
+Pruned Maul from the Primary Bar.
+Fixed player frame being 1px off for healer UI.
+Shortened Warp Deplete bar length.
+Added preliminary Dawn of the Infinite dungeon auras. (credits for base auras to Lars.)
+Added Dragonriding UI.GladiusEX removed from UI & installer. Replacement arena frames and PvP auras to come in the next version.
+Fixed some inconsistencies with Top Bar / Target Top Bar x and y offsets & sizing of icons across entire UI.
+Added tracking for Mirror of Fractured Tomorrows trinket to all buff bar groups.
+Castbar has dynamic ticks for casters/healers when playing mage or evoker.
+ 
+Death Knight:
+Fixed Death Grip desaturation.
+Removed DRW buff tracking (since it was already being tracked in Defensives group).
+added Glow to remorseless winter when gathering storm stacks are high, ability is active, but CD completed notifying recast opportunity
+
+Demon Hunter:
+Added tracking for Serrated Glaive debuff
+Added tracking for Vengeance 4p
+
+Druid:
+Fixed Orbit Breaker condition.
+Fixed Astral Power prediction for Resource Bar.
+Set Orbit Breaker to only load in Combat.
+Added Maximum Progress to progress bars for Sunfire/Moonfire to hopefully fix the pandemic window becoming too tiny when repeatedly extending with starfall.
+Added Starsurge to druid primary bar 2
+Added weapon tracking for Druid primary bar.
+Added tracking for Dream of Cenarius in buff bar.
+Berserk and Heart of the Wild offsets fixed.
+
+Evoker:
+Fixed charge conditions for Obsidian Scales.
+Fixed charge conditions for Hover.
+Removed Show GCD for Obsidian Scales.
+Removed Show GCD for Renewing Blaze
+Removed Show GCD for Time Dilation
+Set Time Dilation to load only for Preservation.
+Removed Spell Known load condition for Time Dilation and added Talent Load condition.
+Adjusted Glow for Disintegrate.
+Adjusted Glow for Pyre.
+Removed Show GCD for Hover.
+Removed Show GCD and Exact Spell Match for Quell.
+Added Show GCD and removed Exact Spell Match for Tail Swipe.
+Added Show GCD and removed Exact Spell Match for Wing Buffet.
+Adjusted Glow for Fire Breath.
+Adjusted Glow for Eternity Surge.
+Added Spell Usable False condition to Tip the Scales.
+Removed Glow and second trigger from Tip the Scales.
+Removed Show GCD from Tip the Scales.
+Removed Exact Spell Match from Tip the Scales.
+Added Tip the Scals buff to buff bar.
+Removed stacks from Dragonrage buff in buff bar.
+Removed stacks from Snapfire buff in buff bar.
+Repositioned Evoker Primary Bar abilities.
+Fixed Preservation 4p aura not loading correctly
+Added leaping flames buff for Dev evoker
+Added Augmentation Evoker Weakauras using elvui healer layout, includes new primary bar 2 layout for healers going forward
+Fixed weird and bloated conditions for a lot of the Devastation evoker buff auras.
+Added tracking for Devastation 4p.
+Added primary bar 2 (healer) and associated setup for preservation evoker.
+Reorganized and shuffled around which bars certain abilties show up on for preservation evoker.
+Fixed load conditions for all Evoker weakauras post patch.
+Added timelessness and weyrnstone to missing buff reminders for augmentation.
+Added Augmentation abilities to Defensive bar.
+Added Augmentation load condition to utility  bar abilities such as cauterizing flames.
+Added glow to augmentation Eruption when affected by Essence Burst
+Fixed broken load conditions with Augmentation buff Infernos blessing
+added Blistering scales CD to primary bar for Augmentation
+Hunter:
+Deleted weird Salvo Buff/Debuff aura in Buffs (Melee/Tank)
+Deleted Double Tap buff tracking in Buffs (Melee/Tank)
+Added Salvo tracking in Buffs(Melee/Tank)
+Replaced Old Trueshot buff with one that includes windrunners guidance
+Added Dire Pack tracking
+Added tracking for Survival 4p.
+Added proper tracking for survival's weird coordinated assault pet autocast thing.
+
+Mage:
+Added Arcane: Nether Tempest debuff to Buffs (Caster)
+Added Arcane: 4p to Buffs (Caster)
+Fixed the shadow offsets on text for Arcane: Mana.
+Removed Mage rune of power buff indicator and CD in primary bar.
+Fixed Freezing Winds tick to be every 3s, rather than every 2.
+Significant overhaul and reorganization of all three mage Specs following the rework
+Removed mage abilities and buffs were pruned, new buffs added
+Important mage buffs removed from buff group and added to static locations
+fixed Freezing winds tracker
+Added Ice cold variant of ice block spell ID to defensive and mobility group
+ 
+Monk:
+Added Spell in Range conditions for Mistweaver: RSK & Mistweaver: Blackout Kick.
+Pruned Duplicate mistweaver dps abilities from primary bar 1 (now in primary bar 2).
+
+Paladin:
+Added Not Spell Known condition for Paladin: Consecration
+Fixed Own Only checks in Retribution: Execution Sentence.
+Moved Templar Strikes timer to the top right of icon to stop overlapping CD.
+Fixed Retribution: Blade of Justice desaturate on charges.
+Added CSAA tracking aura for retribution.
+Large overhaul of Holy paladin, polished primary bar 2, removed old auras from removed talents/abilities, added new buffs and abilities.
+Shuffled around holy paladin abilities to be more in line with priest locations (top of target bar)
+added Awakening tracking to holy paladin
+Fixed load conditions for hand of divinity and tyrs deliverance.
+
+Priest:
+Fixed Pain Suppression stack count positioning.
+Added frame glow for Power Word: Life.
+Adjusted sorting of healing priest primary bars.
+Added tracking of Body and Soul to defensives group.
+Rhapsody now loads for discipline.
+Rhapsody buff now only appears at >= 17 stacks.
+Moved Halo & Divine Star to secondary bar.
+Fixed load conditions for Idol of Yogg Saron and added a glow at >= 23 stacks.
+Shadowfiend duration should now correctly load without Mindbender.
+Split tracking of Voidform and Dark Ascension auras to accommodate for Blizzard change..
+Re-added spriest potion buff to the group.
+
+Rogue:
+
+Shaman:
+Load condition fixed for Elemental Blast.
+Load condition fixed for Earth Elemental.
+Load condition fixed for Feral Spirit.
+Load condition fixed for Primordial Wave.
+Removed Spirit Wolf from Restoration buff bar.
+Load condition fixed for Flash Flood.
+Load condition fixed for Earthen Wall.
+Load condition fixed for Cloudburst totem.
+Load condition fixed for Unleash Life.
+Fixed Healing Rain positioning.
+Combined Flame Shock duration and CD into one aura for Resto Shaman. 
+
+Warlock:
+Havoc Duration now adjusts it's positioning based on Madness talent rather than Eradication.
+Moved Eradication for Destruction warlock into the Primary Bar.
+Moved Madness of the Azj'Aqir aura to the old Eradication location.
+
+Warrior:
+Added Fury: 4p buff to Bloodthirst icon.
+Removed Fury: 4p buff from Buffs (Melee/Tank)
+Added cooldown of stance swap onto icon of Defensive Stance.
+Renamed Ravager aura to Warrior: Ravager
+Repositioned Primary Bar for Warrior.
+
+==========================================================
+
 [v6.1.0]
 General & Addon:
 Removed Quaking affix group.

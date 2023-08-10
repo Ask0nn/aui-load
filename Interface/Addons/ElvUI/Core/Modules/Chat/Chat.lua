@@ -381,6 +381,7 @@ do --this can save some main file locals
 		z['Notlucky-LaughingSkull']		= ElvGreen -- [Horde] Warrior
 		z['Unluckyone-LaughingSkull']	= ElvGreen -- [Horde] Shaman
 		z['Luckydruid-LaughingSkull']	= ElvGreen -- [Alliance] Druid
+		z['Lucky-LaughingSkull']		= ElvGreen -- [Horde] x
 		-- Repooc
 		z['Sifpooc-Stormrage']			= itsPooc	-- [Alliance] DH
 		z['Fragmented-Stormrage']		= itsPooc	-- [Alliance] Warlock
@@ -445,6 +446,7 @@ do --this can save some main file locals
 		z['Gur-Area52']				= itsThradex -- Horde
 		z['Archmage-Area52']		= itsThradex -- Horde
 		z['Counselor-Area52']		= itsThradex -- Horde
+		z['Psychiatrist-Area 52']	= itsThradex -- Horde
 		z['Monk-CenarionCircle']	= itsThradex
 		z['Thradex-Stormrage']		= itsThradex
 		z['Wrecked-Stormrage']		= itsThradex

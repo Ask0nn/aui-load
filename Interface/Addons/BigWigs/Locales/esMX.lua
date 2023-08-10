@@ -55,6 +55,7 @@ L.spell_under_you = "BigWigs: Habilidad debajo de ti"
 
 -- Options.lua
 L.options = "Opciones"
+--L.optionsKey = "Key: %s" -- The key that messages/bars/options use
 L.raidBosses = "Jefes de Banda"
 L.dungeonBosses = "Jefes de Mazmorras"
 L.introduction = "Bienvenido a BigWigs. Abróchate el cinturón y come cacahuetes mientras disfrutas del paseo. De manera no intrusiva te ayudará a preparar ese nuevo encuentro de banda como una cena de 7 platos para tu grupo de banda."
@@ -126,6 +127,8 @@ L.VOICE = "Voz"
 L.VOICE_desc = "Si tienes un plugin de voz instalado, esta opción le permitirá reproducir un archivo de sonido que hable en este aviso para ti."
 L.COUNTDOWN = "Cuenta regresiva"
 L.COUNTDOWN_desc = "Si está activo, una cuenta regresiva vocal y visual será agregada para los últimos 5 segundos. Imagina a alguien contando hacia atrás \"5... 4... 3... 2... 1...\" con un número grande en el medio de la pantalla."
+--L.CASTBAR_COUNTDOWN = "Countdown (cast bars only)"
+--L.CASTBAR_COUNTDOWN_desc = "If enabled, a vocal and visual countdown will be added for the last 5 seconds of the cast bars."
 L.INFOBOX = L.infobox
 L.INFOBOX_desc = L.infobox_desc
 L.SOUND = "Sonido"

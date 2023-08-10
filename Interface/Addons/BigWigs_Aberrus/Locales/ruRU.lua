@@ -23,7 +23,7 @@ end
 
 L = BigWigs:NewBossLocale("The Forgotten Experiments", "ruRU")
 if L then
-	--L.rending_charge_single = "First Charge"
+	L.rending_charge_single = "Цель первого рывка"
 	L.massive_slam = "Фронтал"
 	L.unstable_essence_new = "Бомба каст"
 	L.custom_on_unstable_essence_high = "Сообщения в чат о высоких стаках Нестабильной Сущности"
@@ -82,9 +82,6 @@ end
 
 L = BigWigs:NewBossLocale("Echo of Neltharion", "ruRU")
 if L then
-	L.custom_on_repeating_sunder_reality = "Повторяющиеся уведомления о Тёмном Уничтожении"
-	L.custom_on_repeating_sunder_reality_desc = "Напоминать о касте Тёмного Уничтожения, пока вы не зайдёте в портал."
-
 	L.twisted_earth = "Стены"
 	L.echoing_fissure = "Разлом"
 	L.rushing_darkness = "Линии отталкивания"
@@ -92,6 +89,10 @@ if L then
 	L.umbral_annihilation = "Уничтожение"
 	L.sunder_reality = "Порталы"
 	L.ebon_destruction = "Большой взрыв"
+
+	L.wall_breaker = "Ломатель стенки (Мифик)"
+	L.wall_breaker_desc = "Игрок, являющийся целью Стремительной тьмы будет выбран в качестве ломателя стенки. Они будут отмечены ({rt6}) и отправят сообщение в чат. Работает только в мифической сложности на 1й фазе."
+	L.wall_breaker_message = "Ломатель стенки"
 end
 
 L = BigWigs:NewBossLocale("Scalecommander Sarkareth", "ruRU")
@@ -101,6 +102,19 @@ if L then
 	L.emptiness_between_stars = "Забвение"
 	L.void_slash = "Фронтал"
 
-	--L.boss_immune = "Boss Immune"
-	--L.ebon_might = "Adds Immune"
+	L.boss_immune = "Босс иммун"
+	L.ebon_might = "Ады иммун кик"
+end
+
+L = BigWigs:NewBossLocale("Aberrus, the Shadowed Crucible Trash", "ruRU")
+if L then
+	L.edgelord = "Владыка клинка из Пламени" -- NPC 198873
+	L.naturalist = "Натуралист из Пламени" -- NPC 201746
+	L.siegemaster = "Осадный мастер из Пламени" -- NPC 198874
+	L.banner = "Знамя" -- Short for "Sundered Flame Banner" NPC 205638
+	L.arcanist = "Чародей из Пламени" -- NPC 201736
+	L.chemist = "Химик из Расколотого Пламени" -- NPC 205656
+	L.fluid = "Живая жидкость" -- NPC 203939
+	L.slime = "Булькающая жижа" -- NPC 205651
+	L.goo = "Ползучая жижа" -- NPC 205820
 end

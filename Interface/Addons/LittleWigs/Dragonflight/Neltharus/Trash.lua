@@ -6,6 +6,7 @@ local mod, CL = BigWigs:NewBoss("Neltharus Trash", 2519)
 if not mod then return end
 mod.displayName = CL.trash
 mod:RegisterEnableMob(
+	189342, -- Burning Chain
 	193293, -- Qalashi Warden
 	189227, -- Qalashi Hunter
 	189669, -- Binding Spear
@@ -17,6 +18,7 @@ mod:RegisterEnableMob(
 	189467, -- Qalashi Bonesplitter
 	189472, -- Qalashi Lavabearer
 	189466, -- Irontorch Commander
+	189471, -- Qalashi Blacksmith
 	194816, -- Forgewrought Monstrosity
 	189786, -- Blazing Aegis
 	192786, -- Qalashi Plunderer
@@ -34,6 +36,7 @@ if L then
 	L.custom_on_autotalk = "Autotalk"
 	L.custom_on_autotalk_desc = "Instantly selects the gossip options to get profession buffs."
 
+	L.burning_chain = "Burning Chain"
 	L.qalashi_warden = "Qalashi Warden"
 	L.qalashi_hunter = "Qalashi Hunter"
 	L.overseer_lahar = "Overseer Lahar"
@@ -43,6 +46,7 @@ if L then
 	L.qalashi_bonesplitter = "Qalashi Bonesplitter"
 	L.qalashi_lavabearer = "Qalashi Lavabearer"
 	L.irontorch_commander = "Irontorch Commander"
+	L.qalashi_blacksmith = "Qalashi Blacksmith"
 	L.forgewrought_monstrosity = "Forgewrought Monstrosity"
 	L.qalashi_plunderer = "Qalashi Plunderer"
 	L.qalashi_thaumaturge = "Qalashi Thaumaturge"
@@ -58,6 +62,8 @@ function mod:GetOptions()
 	return {
 		-- General
 		"custom_on_autotalk",
+		-- Burning Chain
+		374451, -- Burning Chain
 		-- Qalashi Warden
 		382708, -- Volcanic Guard
 		{384597, "TANK_HEALER"}, -- Blazing Slash
@@ -66,13 +72,14 @@ function mod:GetOptions()
 		-- Overseer Lahar
 		395427, -- Burning Roar
 		376186, -- Eruptive Crush
+		{372461, "DISPEL"}, -- Imbued Magma
 		-- Qalashi Trainee
 		372311, -- Magma Fist
 		-- Qalashi Bonetender
 		372223, -- Mending Clay
 		-- Qalashi Irontorch
 		372201, -- Scorching Breath
-		384161, -- Mote of Combustion
+		{384161, "DISPEL"}, -- Mote of Combustion
 		-- Qalashi Bonesplitter
 		372225, -- Dragonbone Axe
 		-- Qalashi Lavabearer
@@ -80,18 +87,23 @@ function mod:GetOptions()
 		-- Irontorch Commander
 		372296, -- Conflagrant Battery
 		373084, -- Scorching Fusillade
+		-- Qalashi Blacksmith
+		{372971, "TANK_HEALER"}, -- Reverberating Slam
 		-- Forgewrought Monstrosity
 		376200, -- Blazing Detonation
 		-- Qalashi Plunderer
 		378827, -- Explosive Concoction
 		-- Qalashi Thaumaturge
 		378282, -- Molten Core
+		378818, -- Magma Conflagration
 		-- Apex Blazewing
 		381663, -- Candescent Tempest
 		-- Qalashi Lavamancer
+		382791, -- Molten Barrier
 		383651, -- Molten Army
 	}, {
 		["custom_on_autotalk"] = CL.general,
+		[374451] = L.burning_chain,
 		[382708] = L.qalashi_warden,
 		[372561] = L.qalashi_hunter,
 		[395427] = L.overseer_lahar,
@@ -101,11 +113,12 @@ function mod:GetOptions()
 		[372225] = L.qalashi_bonesplitter,
 		[379406] = L.qalashi_lavabearer,
 		[372296] = L.irontorch_commander,
+		[372971] = L.qalashi_blacksmith,
 		[376200] = L.forgewrought_monstrosity,
 		[378827] = L.qalashi_plunderer,
 		[378282] = L.qalashi_thaumaturge,
 		[381663] = L.apex_blazewing,
-		[383651] = L.qalashi_lavamancer,
+		[382791] = L.qalashi_lavamancer,
 	}
 end
 
@@ -113,6 +126,9 @@ function mod:OnBossEnable()
 	-- General
 	self:RegisterEvent("GOSSIP_SHOW")
 	self:Log("SPELL_CAST_START", "ThrowExperimentalConcoction", 376169)
+
+	-- Burning Chain
+	self:Log("SPELL_CAST_SUCCESS", "BurningChainPickedUp", 374451)
 
 	-- Qalashi Warden
 	self:Log("SPELL_CAST_START", "VolcanicGuard", 382708)
@@ -125,6 +141,7 @@ function mod:OnBossEnable()
 	-- Overseer Lahar
 	self:Log("SPELL_CAST_START", "BurningRoar", 395427)
 	self:Log("SPELL_CAST_START", "EruptiveCrush", 376186)
+	self:Log("SPELL_AURA_APPLIED", "ImbuedMagmaApplied", 372461)
 	self:Death("OverseerLaharDeath", 189235)
 
 	-- Qalashi Trainee
@@ -149,6 +166,9 @@ function mod:OnBossEnable()
 	self:Log("SPELL_CAST_START", "ScorchingFusillade", 373084)
 	self:Death("IrontorchCommanderDeath", 189466)
 
+	-- Qalashi Blacksmith
+	self:Log("SPELL_CAST_START", "ReverberatingSlam", 372971)
+
 	-- Forgewrought Monstrosity
 	self:Log("SPELL_CAST_START", "BlazingDetonation", 376200)
 
@@ -157,11 +177,14 @@ function mod:OnBossEnable()
 
 	-- Qalashi Thaumaturge
 	self:Log("SPELL_CAST_START", "MoltenCore", 378282)
+	self:Log("SPELL_CAST_START", "MagmaConflagration", 378818)
 
 	-- Apex Blazewing
 	self:Log("SPELL_AURA_APPLIED", "CandescentTempest", 381663)
 
 	-- Qalashi Lavamancer
+	self:Log("SPELL_CAST_START", "MoltenBarrier", 382791)
+	self:Log("SPELL_AURA_REMOVED", "MoltenBarrierRemoved", 382791)
 	self:Log("SPELL_CAST_START", "MoltenArmy", 383651)
 end
 
@@ -194,6 +217,13 @@ function mod:ThrowExperimentalConcoction(args)
 		magmatuskModule:Enable()
 		magmatuskModule:Warmup()
 	end
+end
+
+-- Burning Chain
+
+function mod:BurningChainPickedUp(args)
+	self:TargetMessage(args.spellId, "green", args.destName)
+	self:PlaySound(args.spellId, "info", nil, args.destName)
 end
 
 -- Qalashi Warden
@@ -253,6 +283,13 @@ function mod:EruptiveCrush(args)
 	self:CDBar(args.spellId, 20.6)
 end
 
+function mod:ImbuedMagmaApplied(args)
+	if self:Me(args.destGUID) or self:Dispeller("magic", nil, args.spellId) then
+		self:TargetMessage(args.spellId, "yellow", args.destName)
+		self:PlaySound(args.spellId, "alert", nil, args.destName)
+	end
+end
+
 function mod:OverseerLaharDeath(args)
 	self:StopBar(395427) -- Burning Roar
 	self:StopBar(376186) -- Eruptive Crush
@@ -263,6 +300,9 @@ end
 do
 	local prev = 0
 	function mod:MagmaFist(args)
+		if self:Friendly(args.sourceFlags) then -- these NPCs can be mind-controlled by Priests
+			return
+		end
 		-- this is cast during RP fighting, filter unless in combat
 		local unit = self:GetUnitIdByGUID(args.sourceGUID)
 		if unit and UnitAffectingCombat(unit) then
@@ -279,6 +319,9 @@ end
 -- Qalashi Bonetender
 
 function mod:MendingClay(args)
+	if self:Friendly(args.sourceFlags) then -- these NPCs can be mind-controlled by Priests
+		return
+	end
 	self:Message(args.spellId, "yellow", CL.casting:format(args.spellName))
 	self:PlaySound(args.spellId, "alert")
 end
@@ -288,6 +331,9 @@ end
 do
 	local prev = 0
 	function mod:ScorchingBreath(args)
+		if self:Friendly(args.sourceFlags) then -- these NPCs can be mind-controlled by Priests
+			return
+		end
 		local t = args.time
 		if t - prev > 1 then
 			prev = t
@@ -298,12 +344,15 @@ do
 end
 
 function mod:MoteOfCombustion(args)
+	if self:Friendly(args.sourceFlags) then -- these NPCs can be mind-controlled by Priests
+		return
+	end
 	self:Message(args.spellId, "yellow", CL.casting:format(args.spellName))
 	self:PlaySound(args.spellId, "alert")
 end
 
 function mod:MoteOfCombustionApplied(args)
-	if self:Dispeller("magic") and self:Friendly(args.destFlags) then
+	if self:Me(args.destGUID) or (self:Dispeller("magic", nil, args.spellId) and self:Friendly(args.destFlags)) then
 		self:TargetMessage(args.spellId, "red", args.destName)
 		self:PlaySound(args.spellId, "alert", nil, args.destName)
 	end
@@ -314,6 +363,9 @@ end
 do
 	local prev = 0
 	function mod:DragonboneAxe(args)
+		if self:Friendly(args.sourceFlags) then -- these NPCs can be mind-controlled by Priests
+			return
+		end
 		local t = args.time
 		if t - prev > 1 then
 			prev = t
@@ -356,6 +408,16 @@ function mod:IrontorchCommanderDeath(args)
 	self:StopBar(373084) -- Scorching Fusillade
 end
 
+-- Qalashi Blacksmith
+
+function mod:ReverberatingSlam(args)
+	self:Message(args.spellId, "purple")
+	self:PlaySound(args.spellId, "alert")
+	-- technically outrangeable if you're fast and it won't go on CD unless it hits, so
+	-- if this is uncommented it should probably be moved to SUCCESS.
+	--self:NameplateCDBar(args.spellId, 17.0, args.sourceGUID)
+end
+
 -- Forgewrought Monstrosity
 
 function mod:BlazingDetonation(args)
@@ -373,6 +435,14 @@ end
 -- Qalashi Thaumaturge
 
 function mod:MoltenCore(args)
+	self:Message(args.spellId, "red", CL.casting:format(args.spellName))
+	self:PlaySound(args.spellId, "alert")
+end
+
+function mod:MagmaConflagration(args)
+	if self:Friendly(args.sourceFlags) then -- these NPCs can be mind-controlled by Priests
+		return
+	end
 	self:Message(args.spellId, "yellow")
 	self:PlaySound(args.spellId, "alert")
 end
@@ -385,6 +455,17 @@ function mod:CandescentTempest(args)
 end
 
 -- Qalashi Lavamancer
+
+function mod:MoltenBarrier(args)
+	-- cast just once at 50% health, must burn shield to interrupt Molten Army
+	self:Message(args.spellId, "red")
+	self:PlaySound(args.spellId, "info")
+end
+
+function mod:MoltenBarrierRemoved(args)
+	self:Message(args.spellId, "green", CL.removed:format(args.spellName))
+	self:PlaySound(args.spellId, "info")
+end
 
 function mod:MoltenArmy(args)
 	self:Message(args.spellId, "yellow", CL.casting:format(args.spellName))

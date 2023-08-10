@@ -1,4 +1,4 @@
-## Interface: 100100
+## Interface: 100105
 
 ## Title: BigWigs [|cffeda55fCore|r]
 ## Title-zhCN: BigWigs [|cffeda55f核心|r]
@@ -23,7 +23,7 @@
 ## Notes-esES: Núcleo de BigWigs.
 ## Notes-esMX: Núcleo de BigWigs.
 ## IconTexture: Interface\AddOns\BigWigs\Media\Icons\core-enabled
-## Version: v280
+## Version: v287
 
 ## LoadOnDemand: 1
 ## Dependencies: BigWigs

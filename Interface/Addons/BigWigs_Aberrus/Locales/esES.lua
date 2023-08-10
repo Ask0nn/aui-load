@@ -82,9 +82,6 @@ end
 
 L = BigWigs:NewBossLocale("Echo of Neltharion", "esES")
 if L then
-	--L.custom_on_repeating_sunder_reality = "Repeating Sunder Reality Warning"
-	--L.custom_on_repeating_sunder_reality_desc = "Repeat a message during the Ebon Destruction cast until you get inside a portal."
-
 	--L.twisted_earth = "Walls"
 	--L.echoing_fissure = "Fissure"
 	--L.rushing_darkness = "Knock Lines"
@@ -92,6 +89,10 @@ if L then
 	--L.umbral_annihilation = "Annihilation"
 	--L.sunder_reality = "Portals"
 	--L.ebon_destruction = "Big Bang"
+
+	--L.wall_breaker = "Wall Breaker (Mythic)"
+	--L.wall_breaker_desc = "A player targeted by Rushing Darkness will be chosen as the wall breaker. They will be marked ({rt6}) and send a message in say chat. This is restricted to Mythic difficulty on stage 1."
+	--L.wall_breaker_message = "Wall Breaker"
 end
 
 L = BigWigs:NewBossLocale("Scalecommander Sarkareth", "esES")
@@ -103,4 +104,17 @@ if L then
 
 	--L.boss_immune = "Boss Immune"
 	--L.ebon_might = "Adds Immune"
+end
+
+L = BigWigs:NewBossLocale("Aberrus, the Shadowed Crucible Trash", "esES")
+if L then
+	L.edgelord = "Señora de filos hendida" -- NPC 198873
+	L.naturalist = "Naturalista hendido" -- NPC 201746
+	L.siegemaster = "Maestro de asedios hendido" -- NPC 198874
+	L.banner = "Estandarte" -- Short for "Sundered Flame Banner" NPC 205638
+	L.arcanist = "Arcanista hendida" -- NPC 201736
+	L.chemist = "Química hendida" -- NPC 205656
+	L.fluid = "Fluido de animación" -- NPC 203939
+	L.slime = "Babosa burbujeante" -- NPC 205651
+	L.goo = "Baba trepadora" -- NPC 205820
 end

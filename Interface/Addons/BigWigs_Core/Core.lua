@@ -98,12 +98,10 @@ end
 
 function mod:ENCOUNTER_START(_, id)
 	for _, module in next, bosses do
-		if module.engageId == id then
-			if not module.enabled then
-				module:Enable()
-				if UnitGUID("boss1") then -- Only if _START fired after IEEU
-					module:Engage()
-				end
+		if module:GetEncounterID() == id and not module:IsEnabled() then
+			module:Enable()
+			if UnitGUID("boss1") then -- Only if _START fired after IEEU
+				module:Engage()
 			end
 		end
 	end
@@ -115,7 +113,7 @@ end
 
 local enablezones, enablemobs = {}, {}
 local function enableBossModule(module, sync)
-	if not module.enabled then
+	if not module:IsEnabled() then
 		module:Enable()
 		if sync and not module.worldBoss then
 			module:Sync("Enable", module.moduleName)
@@ -125,7 +123,7 @@ end
 
 local function shouldReallyEnable(unit, moduleName, mobId, sync)
 	local module = bosses[moduleName]
-	if not module or module.enabled then return end
+	if not module or module:IsEnabled() then return end
 	if (not module.VerifyEnable or module:VerifyEnable(unit, mobId, GetBestMapForUnit("player"))) then
 		enableBossModule(module, sync)
 	end
@@ -255,7 +253,7 @@ do
 					if (t - lastNamePlateBar) > 25 then
 						lastNamePlateBar = t
 						core:Print(L.testNameplate)
-						core:SendMessage("BigWigs_StartNameplateBar", core, msg, msg, 25, icon, false, guid)
+						core:SendMessage("BigWigs_StartNameplateTimer", core, msg, msg, 25, icon, false, guid)
 					end
 					return
 				end
@@ -271,7 +269,7 @@ end
 local function bossComm(_, msg, extra, sender)
 	if msg == "Enable" and extra then
 		local m = bosses[extra]
-		if m and not m.enabled and sender ~= pName then
+		if m and not m:IsEnabled() and sender ~= pName then
 			enableBossModule(m)
 		end
 	end
@@ -420,7 +418,7 @@ function core:Error(msg, noPrint)
 	if not noPrint then
 		core:Print(msg)
 	end
-	geterrorhandler()(msg)
+	geterrorhandler()("BigWigs: ".. msg)
 end
 
 -------------------------------------------------------------------------------

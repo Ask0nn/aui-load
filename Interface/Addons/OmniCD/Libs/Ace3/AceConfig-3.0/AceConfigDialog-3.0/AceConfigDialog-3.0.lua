@@ -17,7 +17,7 @@ local OmniCDC =	 LibStub("OmniCDC")
 --[[ s r
 local MAJOR, MINOR = "AceConfigDialog-3.0", 85
 ]]
-local MAJOR, MINOR = "AceConfigDialog-3.0-OmniCD", 90 -- 82 DF -- 87 backdrop
+local MAJOR, MINOR = "AceConfigDialog-3.0-OmniCD", 91 -- 82 DF -- 87 backdrop
 -- e
 local AceConfigDialog, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 
@@ -1546,7 +1546,7 @@ local function FeedOptions(appName, options,container,rootframe,path,group,inlin
 								check:SetLabel(name == ALL and text or "") -- name "" is header row
 								check:SetUserData("value", value)
 								check:SetUserData("text", text)
-								check:SetDisabled(disabled or value == item)
+								check:SetDisabled(disabled or (type(item)=="table" and item[value] or value == item))
 								check:SetTriState(v.tristate)
 								check:SetValue(GetOptionsMemberValue("get",v, options, path, appName, value))
 								check:SetCallback("OnValueChanged", ActivateMultiControl_NoRefresh) -- don't refresh layout (laggy)

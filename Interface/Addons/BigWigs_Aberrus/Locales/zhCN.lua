@@ -61,7 +61,8 @@ if L then
 	L.energy_gained = "获得能量: %d"
 
 	-- Mythic
-	-- L.unleash_shadowflame = "暗焰宝珠"
+	L.unleash_shadowflame = "暗焰宝珠"
+	L.shadowflame_energy = "吸收治疗"
 end
 
 L = BigWigs:NewBossLocale("The Vigilant Steward, Zskarn", "zhCN")
@@ -82,9 +83,6 @@ end
 
 L = BigWigs:NewBossLocale("Echo of Neltharion", "zhCN")
 if L then
-	L.custom_on_repeating_sunder_reality = "传送门重复警告"
-	L.custom_on_repeating_sunder_reality_desc = "在黑檀摧残的施法过程中，持续重复警告信息，直到进入隔绝现实传送门为止。"
-
 	L.twisted_earth = "土墙"
 	L.echoing_fissure = "裂隙"
 	L.rushing_darkness = "击退破墙"
@@ -92,6 +90,10 @@ if L then
 	L.umbral_annihilation = "歼灭"
 	L.sunder_reality = "传送门"
 	L.ebon_destruction = "大爆炸"
+
+	L.wall_breaker = "破墙者（史诗）"
+	L.wall_breaker_desc = "给被点名奔袭之暗的一位玩家标记{rt6}为破墙者。将{rt6}信息并在喊话中发送。这仅限在史诗模式的第一阶段。"
+	L.wall_breaker_message = "破墙者"
 end
 
 L = BigWigs:NewBossLocale("Scalecommander Sarkareth", "zhCN")
@@ -100,7 +102,21 @@ if L then
 	L.claws_debuff = "坦克爆炸"
 	L.emptiness_between_stars = "虚渺"
 	L.void_slash = "正面斩击"
+	L.scouring_eternity = "躲藏"
 
 	L.boss_immune = "首领免疫"
 	L.ebon_might = "小怪免疫"
+end
+
+L = BigWigs:NewBossLocale("Aberrus, the Shadowed Crucible Trash", "zhCN")
+if L then
+	L.edgelord = "碎裂锋刃领主" -- NPC 198873
+	L.naturalist = "碎裂自然学家" -- NPC 201746
+	L.siegemaster = "碎裂攻城大师" -- NPC 198874
+	L.banner = "旗帜" -- "碎裂之焰旗帜"的简称 NPC 205638
+	L.arcanist = "碎裂奥术师" -- NPC 201736
+	L.chemist = "碎裂炼金师" -- NPC 205656
+	L.fluid = "活化液体" -- NPC 203939
+	L.slime = "冒泡的软泥" -- NPC 205651
+	L.goo = "匍匐粘液" -- NPC 205820
 end

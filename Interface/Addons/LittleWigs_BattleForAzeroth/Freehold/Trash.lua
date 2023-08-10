@@ -106,7 +106,7 @@ function mod:GetOptions()
 		-- Irontide Buccaneer
 		257870, -- Blade Barrage
 		-- Irontide Ravager
-		257899, -- Painful Motivation
+		{257899, "DISPEL"}, -- Painful Motivation
 		-- Irontide Officer
 		{257908, "DISPEL"}, -- Oiled Blade
 		-- Irontide Stormcaller
@@ -188,6 +188,7 @@ function mod:OnBossEnable()
 	self:Log("SPELL_CAST_START", "PainfulMotivation", 257899)
 	self:Log("SPELL_AURA_APPLIED", "PainfulMotivationApplied", 257899)
 	-- Irontide Officer
+	self:Log("SPELL_CAST_START", "OiledBlade", 257908)
 	self:Log("SPELL_AURA_APPLIED", "OiledBladeApplied", 257908)
 	-- Irontide Stormcaller
 	self:Log("SPELL_CAST_START", "ThunderingSquall", 257736)
@@ -230,9 +231,12 @@ end
 -- Irontide Bonesaw
 
 function mod:HealingBalm(args)
+	if self:Friendly(args.sourceFlags) then -- these NPCs can be mind-controlled by Priests
+		return
+	end
 	self:Message(args.spellId, "yellow", CL.casting:format(args.spellName))
 	self:PlaySound(args.spellId, "warning")
-	--self:NameplateBar(args.spellId, 25.5, args.sourceGUID)
+	--self:NameplateCDBar(args.spellId, 25.5, args.sourceGUID)
 end
 
 function mod:HealingBalmApplied(args)
@@ -253,9 +257,12 @@ end
 -- Irontide Crackshot
 
 function mod:AzeriteGrenade(args)
+	if self:Friendly(args.sourceFlags) then -- these NPCs can be mind-controlled by Priests
+		return
+	end
 	self:Message(args.spellId, "orange")
 	self:PlaySound(args.spellId, "alarm")
-	--self:NameplateBar(args.spellId, 23.0, args.sourceGUID)
+	--self:NameplateCDBar(args.spellId, 23.0, args.sourceGUID)
 end
 
 -- Irontide Corsair
@@ -278,7 +285,7 @@ do
 			prev = castGUID
 			self:Message(274400, "red")
 			self:PlaySound(274400, "alarm")
-			--self:NameplateBar(274400, 17.0, self:UnitGUID(unit))
+			--self:NameplateCDBar(274400, 17.0, self:UnitGUID(unit))
 		end
 	end
 end
@@ -288,7 +295,7 @@ end
 function mod:SeaSpoutSuccess(args)
 	self:Message(args.spellId, "orange")
 	self:PlaySound(args.spellId, "alarm")
-	--self:NameplateBar(args.spellId, 17.0, args.sourceGUID)
+	--self:NameplateCDBar(args.spellId, 17.0, args.sourceGUID)
 end
 
 -- Cutwater Knife Juggler
@@ -311,8 +318,11 @@ do
 	end
 
 	function mod:RicochetingThrow(args)
+		if self:Friendly(args.sourceFlags) then -- these NPCs can be mind-controlled by Priests
+			return
+		end
 		self:GetUnitTarget(printTarget, 0.1, args.sourceGUID)
-		--self:NameplateBar(args.spellId, 8.5, args.sourceGUID)
+		--self:NameplateCDBar(args.spellId, 8.5, args.sourceGUID)
 	end
 end
 
@@ -321,6 +331,9 @@ end
 do
 	local prev = 0
 	function mod:FrostBlast(args)
+		if self:Friendly(args.sourceFlags) then -- these NPCs can be mind-controlled by Priests
+			return
+		end
 		local t = args.time
 		if t - prev > 2 then
 			prev = t
@@ -332,6 +345,7 @@ do
 end
 
 -- Blacktooth Scrapper
+
 do
 	local prev = 0
 	function mod:BlindRageApplied(args)
@@ -352,7 +366,7 @@ end
 function mod:ShatteringBellow(args)
 	self:Message(args.spellId, "red")
 	self:PlaySound(args.spellId, "alarm")
-	--self:NameplateBar(args.spellId, 27.9, args.sourceGUID)
+	--self:NameplateCDBar(args.spellId, 27.9, args.sourceGUID)
 end
 
 -- Bilge Rat Swabby
@@ -387,12 +401,15 @@ end
 function mod:RatTraps(args)
 	self:Message(args.spellId, "yellow")
 	self:PlaySound(args.spellId, "alarm")
-	--self:NameplateBar(args.spellId, 20.6, args.sourceGUID)
+	--self:NameplateCDBar(args.spellId, 20.6, args.sourceGUID)
 end
 
 -- Bilge Rat Buccaneer
 
 function mod:GoinBananas(args)
+	if self:Friendly(args.sourceFlags) then -- these NPCs can be mind-controlled by Priests
+		return
+	end
 	self:Message(args.spellId, "orange")
 	self:PlaySound(args.spellId, "alarm")
 	--self:NameplateCDBar(args.spellId, 17.0, args.sourceGUID)
@@ -406,7 +423,7 @@ function mod:PlagueStepApplied(args)
 		self:PlaySound(args.spellId, "alert", nil, args.destName)
 	end
 	-- TODO if nameplate CD bars are uncommented, this should move to SUCCESS
-	--self:NameplateBar(args.spellId, 20.6, args.sourceGUID)
+	--self:NameplateCDBar(args.spellId, 20.6, args.sourceGUID)
 end
 
 -- Soggy Shiprat
@@ -430,13 +447,13 @@ end
 function mod:BoulderThrow(args)
 	self:Message(args.spellId, "orange")
 	self:PlaySound(args.spellId, "alarm")
-	--self:NameplateBar(args.spellId, 19.4, args.sourceGUID)
+	--self:NameplateCDBar(args.spellId, 19.4, args.sourceGUID)
 end
 
 function mod:GroundShatter(args)
 	self:Message(args.spellId, "yellow")
 	self:PlaySound(args.spellId, "alarm")
-	--self:NameplateBar(args.spellId, 19.4, args.sourceGUID)
+	--self:NameplateCDBar(args.spellId, 19.4, args.sourceGUID)
 end
 
 -- Irontide Buccaneer
@@ -444,6 +461,9 @@ end
 do
 	local prev = 0
 	function mod:BladeBarrage(args)
+		if self:Friendly(args.sourceFlags) then -- these NPCs can be mind-controlled by Priests
+			return
+		end
 		local t = args.time
 		if t - prev > 1.5 then
 			prev = t
@@ -465,24 +485,33 @@ end
 do
 	local prev = 0
 	function mod:PainfulMotivationApplied(args)
-		local t = args.time
-		if t - prev > 2 then
-			prev = t
-			self:Message(args.spellId, "red", CL.other:format(args.spellName, args.destName))
-			self:PlaySound(args.spellId, "info")
+		if self:Dispeller("enrage", nil, args.spellId) then
+			local t = args.time
+			if t - prev > 2 then
+				prev = t
+				self:Message(args.spellId, "red", CL.other:format(args.spellName, args.destName))
+				self:PlaySound(args.spellId, "info")
+			end
 		end
 	end
 end
 
 -- Irontide Officer
 
+function mod:OiledBlade(args)
+	if self:Tank() then
+		-- alerting on cast start because this can be spell reflected
+		self:Message(args.spellId, "purple")
+		self:PlaySound(args.spellId, "alert")
+	end
+	--self:NameplateCDBar(args.spellId, 13.3, args.sourceGUID)
+end
+
 function mod:OiledBladeApplied(args)
-	if self:Me(args.destGUID) or self:Dispeller("magic", nil, args.spellId) then
+	if self:Dispeller("magic", nil, args.spellId) then
 		self:TargetMessage(args.spellId, "purple", args.destName)
 		self:PlaySound(args.spellId, "warning", nil, args.destName)
 	end
-	-- TODO if nameplate CD bars are uncommented, this should move to SUCCESS
-	--self:NameplateCDBar(args.spellId, 13.3, args.sourceGUID)
 end
 
 -- Irontide Stormcaller
@@ -493,8 +522,8 @@ do
 		local t = args.time
 		if t - prev > 1.5 then
 			prev = t
-			self:Message(args.spellId, "orange")
-			self:PlaySound(args.spellId, "long")
+			self:Message(args.spellId, "orange", CL.casting:format(args.spellName))
+			self:PlaySound(args.spellId, "warning")
 		end
 		--self:NameplateCDBar(args.spellId, 21.8, args.sourceGUID)
 	end
