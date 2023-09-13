@@ -1,9 +1,9 @@
-## Interface: 100105
+## Interface: 100107
 ## Title: Talent Tree Tweaks
 ## Author: Numy
 ## IconTexture: Interface\Addons\TalentTreeTweaks\media\icon
 ## Notes: Various improvements and addition to the Dragonflight talent tree UI
-## Version: v1.10.4
+## Version: v1.10.5
 ## X-Curse-Project-ID: 678792
 ## SavedVariables: TalentTreeTweaksDB
 

@@ -23,9 +23,11 @@ mod:RegisterEnableMob(
 	205152, -- Lerai, Timesworn Maiden
 	201222, -- Valow, Timesworn Keeper
 	199748, -- Timeline Marauder
+	208061, -- Temporal Rift
 	208438, -- Infinite Saboteur
 	206230, -- Infinite Diversionist
 	208698, -- Infinite Riftmage
+	205363, -- Time-Lost Waveshaper
 	206070, -- Chronaxie
 	203861, -- Horde Destroyer
 	208208, -- Alliance Destroyer
@@ -63,6 +65,7 @@ if L then
 	L.timeline_marauder = "Timeline Marauder"
 	L.infinite_saboteur = "Infinite Saboteur"
 	L.infinite_riftmage = "Infinite Riftmage"
+	L.timelost_waveshaper = "Time-Lost Waveshaper"
 	L.chronaxie = "Chronaxie"
 	L.horde_destroyer = "Horde Destroyer"
 	L.alliance_destroyer = "Alliance Destroyer"
@@ -70,6 +73,9 @@ if L then
 	L.paladin_of_the_silver_hand = "Paladin of the Silver Hand"
 	L.horde_raider_alliance_knight = "Horde Raider / Alliance Knight"
 	L.infinite_timebender = "Infinite Timebender"
+
+	L.custom_on_rift_autotalk = "Autotalk"
+	L.custom_on_rift_autotalk_desc = "Instantly start channeling to open the Temporal Rift."
 end
 
 --------------------------------------------------------------------------------
@@ -78,6 +84,9 @@ end
 
 function mod:GetOptions()
 	return {
+		-- General
+		"custom_on_rift_autotalk",
+
 		------ Galakrond's Fall ------
 		-- Infinite Chronoweaver
 		411994, -- Chronomelt
@@ -118,6 +127,8 @@ function mod:GetOptions()
 		419351, -- Bronze Exhalation
 		-- Infinite Riftmage
 		418200, -- Infinite Burn
+		-- Time-Lost Waveshaper
+		411300, -- Fish Bolt Volley
 		-- Chronaxie
 		419516, -- Chronal Eruption
 		419511, -- Temporal Link
@@ -128,14 +139,19 @@ function mod:GetOptions()
 		418684, -- Deploy Dwarven Bombers
 		-- Horde Farseer
 		407891, -- Healing Wave
+		407906, -- Earthquake
 		-- Paladin of the Silver Hand
 		417011, -- Holy Light
+		417002, -- Consecration
 		-- Horde Raider / Alliance Knight
 		407124, -- Rallying Shout
 		407125, -- Sundering Slam
 		-- Infinite Timebender
 		412378, -- Dizzying Sands
 	}, {
+		-- General
+		["custom_on_rift_autotalk"] = CL.general,
+
 		------ Galakrond's Fall ------
 		[411994] = L.infinite_chronoweaver,
 		[412012] = L.infinite_timeslicer,
@@ -155,6 +171,7 @@ function mod:GetOptions()
 		[417481] = L.timeline_marauder,
 		[419351] = L.infinite_saboteur,
 		[418200] = L.infinite_riftmage,
+		[411300] = L.timelost_waveshaper,
 		[419516] = L.chronaxie,
 		[407535] = L.horde_destroyer,
 		[418684] = L.alliance_destroyer,
@@ -168,6 +185,9 @@ end
 function mod:OnBossEnable()
 	-- Warmups
 	self:RegisterEvent("CHAT_MSG_MONSTER_YELL")
+
+	-- Autotalk
+	self:RegisterEvent("GOSSIP_SHOW")
 
 	------ Galakrond's Fall ------
 
@@ -230,6 +250,9 @@ function mod:OnBossEnable()
 	-- Infinite Riftmage
 	self:Log("SPELL_CAST_START", "InfiniteBurn", 418200)
 
+	-- Time-Lost Waveshaper
+	self:Log("SPELL_CAST_START", "FishBoltVolley", 411300)
+
 	-- Chronaxie
 	self:Log("SPELL_CAST_START", "ChronalEruption", 419516)
 	self:Log("SPELL_AURA_APPLIED", "ChronalEruptionApplied", 419517)
@@ -244,9 +267,13 @@ function mod:OnBossEnable()
 
 	-- Horde Farseer
 	self:Log("SPELL_CAST_START", "HealingWave", 407891)
+	self:Log("SPELL_AURA_APPLIED", "EarthquakeDamage", 407906)
+	self:Log("SPELL_PERIODIC_DAMAGE", "EarthquakeDamage", 407906)
 
 	-- Paladin of the Silver Hand
 	self:Log("SPELL_CAST_START", "HolyLight", 417011)
+	self:Log("SPELL_AURA_APPLIED", "ConsecrationDamage", 417002)
+	self:Log("SPELL_PERIODIC_DAMAGE", "ConsecrationDamage", 417002)
 
 	-- Horde Raider / Alliance Knight
 	self:Log("SPELL_CAST_START", "RallyingShout", 407124)
@@ -269,6 +296,17 @@ function mod:CHAT_MSG_MONSTER_YELL(_, msg)
 		if iridikronModule then
 			iridikronModule:Enable()
 			iridikronModule:Warmup()
+		end
+	end
+end
+
+-- Autotalk
+
+function mod:GOSSIP_SHOW(event)
+	if self:GetOption("custom_on_rift_autotalk") then
+		if self:GetGossipID(110513) then
+			-- <Attempt to open the rift.>
+			self:SelectGossipID(110513)
 		end
 	end
 end
@@ -479,7 +517,7 @@ end
 -- Infinite Saboteur
 
 function mod:BronzeExhalation(args)
-	self:Message(args.spellId, "orange")
+	self:Message(args.spellId, "purple")
 	self:PlaySound(args.spellId, "alarm")
 	--self:NameplateCDBar(args.spellId, 18.2, args.sourceGUID)
 end
@@ -490,6 +528,14 @@ function mod:InfiniteBurn(args)
 	self:Message(args.spellId, "red", CL.casting:format(args.spellName))
 	self:PlaySound(args.spellId, "alert")
 	--self:NameplateCDBar(args.spellId, 9.7, args.sourceGUID)
+end
+
+-- Time-Lost Waveshaper
+
+function mod:FishBoltVolley(args)
+	self:Message(args.spellId, "yellow", CL.casting:format(args.spellName))
+	self:PlaySound(args.spellId, "alert")
+	--self:NameplateCDBar(args.spellId, 13.3, args.sourceGUID)
 end
 
 -- Chronaxie
@@ -544,6 +590,20 @@ function mod:HealingWave(args)
 	-- TODO unknown CD
 end
 
+do
+	local prev = 0
+	function mod:EarthquakeDamage(args)
+		if self:Me(args.destGUID) then
+			local t = args.time
+			if t - prev > 1.5 then
+				prev = t
+				self:PersonalMessage(args.spellId, "underyou")
+				self:PlaySound(args.spellId, "underyou", nil, args.destName)
+			end
+		end
+	end
+end
+
 -- Paladin of the Silver Hand
 
 function mod:HolyLight(args)
@@ -552,25 +612,52 @@ function mod:HolyLight(args)
 	-- TODO unknown CD
 end
 
--- Horde Raider
-
-function mod:RallyingShout(args)
-	self:Message(args.spellId, "red", CL.casting:format(args.spellName))
-	self:PlaySound(args.spellId, "alert")
-	--self:NameplateCDBar(args.spellId, 10.9, args.sourceGUID)
+do
+	local prev = 0
+	function mod:ConsecrationDamage(args)
+		if self:Me(args.destGUID) then
+			local t = args.time
+			if t - prev > 1.5 then
+				prev = t
+				self:PersonalMessage(args.spellId, "underyou")
+				self:PlaySound(args.spellId, "underyou", nil, args.destName)
+			end
+		end
+	end
 end
 
-function mod:SunderingSlam(args)
-	-- TODO purple?
-	self:Message(args.spellId, "orange")
-	self:PlaySound(args.spellId, "alarm")
-	--self:NameplateCDBar(args.spellId, 14.5, args.sourceGUID)
+-- Horde Raider / Alliance Knight
+
+do
+	local prev = 0
+	function mod:RallyingShout(args)
+		local t = args.time
+		if t - prev > 1.5 then
+			prev = t
+			self:Message(args.spellId, "red", CL.casting:format(args.spellName))
+			self:PlaySound(args.spellId, "alert")
+		end
+		--self:NameplateCDBar(args.spellId, 10.9, args.sourceGUID)
+	end
+end
+
+do
+	local prev = 0
+	function mod:SunderingSlam(args)
+		local t = args.time
+		if t - prev > 1.5 then
+			prev = t
+			self:Message(args.spellId, "orange")
+			self:PlaySound(args.spellId, "alarm")
+		end
+		--self:NameplateCDBar(args.spellId, 14.5, args.sourceGUID)
+	end
 end
 
 -- Infinite Timebender
 
 function mod:DizzyingSands(args)
 	self:Message(args.spellId, "red", CL.casting:format(args.spellName))
-	self:PlaySound(args.spellId, "alert")
+	self:PlaySound(args.spellId, "warning")
 	--self:NameplateCDBar(args.spellId, 29.1, args.sourceGUID)
 end

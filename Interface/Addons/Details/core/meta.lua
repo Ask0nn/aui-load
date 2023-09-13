@@ -639,7 +639,7 @@ local classTypeUtility = Details.atributos.misc
 		end
 	end
 
-	---start/restart the internal garbage collector runtime
+	---start/restart the internal garbage collector runtime ~garbage
 	---@param bShouldForceCollect boolean if true, the garbage collector will run regardless of the time interval
 	---@param lastEvent unixtime no call is passing lastEvent at the moment
 	function Details222.GarbageCollector.RestartInternalGarbageCollector(bShouldForceCollect, lastEvent)
@@ -696,7 +696,7 @@ local classTypeUtility = Details.atributos.misc
 
 		--refresh nas janelas
 		if (amountActorRemoved > 0) then
-			Details:InstanciaCallFunction(Details.reset_window)
+			Details:InstanceCallDetailsFunc(Details.reset_window)
 		end
 
 		--cleanup backlisted pets within the handler of actor containers
@@ -773,11 +773,13 @@ local classTypeUtility = Details.atributos.misc
 
 					if (canCollect) then
 						amountCleaned = amountCleaned + 1
+
 						if (containerId == 1 or containerId == 2) then --damage or healing
 							Details222.TimeMachine.RemoveActor(actorObject)
 						end
+
 						--remove the actor from the container
-						Details:DestroyActor(actorObject, actorContainer, combatObject)
+						Details:DestroyActor(actorObject, actorContainer, combatObject) --a window showing 'Auras & Void Zones' did not refreshed and had an actor pointing to here
 					end
 				end
 			end
@@ -797,13 +799,18 @@ local classTypeUtility = Details.atributos.misc
 				end
 
 				actorContainer:Cleanup()
+
+				--refresh the breakdown window
+				if (Details.BreakdownWindowFrame:IsShown()) then
+					Details222.BreakdownWindow.RefreshPlayerScroll()
+				end
 			end
 
 			actorContainer.need_refresh = true
-		end
+		end --end of containerId loop
 
 		return amountCleaned
-	end
+	end --end of collectGarbage function
 
 	---run the garbage collector
 	---@param overriteLastEvent unixtime
@@ -865,7 +872,7 @@ local classTypeUtility = Details.atributos.misc
 		amountRemoved = amountRemoved + collectGarbage(overallCombatObject, overriteLastEvent)
 
 		if (amountRemoved > 0) then
-			Details:InstanciaCallFunction(Details.ScheduleUpdate)
+			Details:InstanceCallDetailsFunc(Details.ScheduleUpdate)
 			Details:RefreshMainWindow(-1)
 		end
 

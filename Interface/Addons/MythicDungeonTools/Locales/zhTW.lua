@@ -76,6 +76,8 @@ L["Alpha Eagle"] = "Alpha Eagle"
 --[[Translation missing --]]
 L["Altairus"] = "Altairus"
 L["AltarOfShadow"] = "暗影祭壇"
+L["altKeyDownStatusText"] = "顯示敵群數量"
+L["altKeyGroupsTip"] = "在所有敵人上面按住 ALT 不放來顯示敵方群組數量"
 L["Amalgam of Souls"] = "融合之魂"
 --[[Translation missing --]]
 L["Amanitar"] = "Amanitar"
@@ -336,6 +338,7 @@ after this pull]=] ] = [=[這波拉怪後
 L[ [=[Bounty stacks 
 after this pull]=] ] = [=[這波拉怪後
 連帶幾堆]=]
+L["Bounty stacks after this pull"] = "此次拉怪也會引到"
 --[[Translation missing --]]
 L["Bracken Warscourge"] = "Bracken Warscourge"
 --[[Translation missing --]]
@@ -381,8 +384,7 @@ L["Cathedral of Eternal Night"] = "永夜聖殿"
 L["Cavern Seeker"] = "Cavern Seeker"
 --[[Translation missing --]]
 L["Centrifuge Construct"] = "Centrifuge Construct"
---[[Translation missing --]]
-L["Chamber of Flames"] = "Chamber of Flames"
+L["Chamber of Flames"] = "烈焰之室"
 --[[Translation missing --]]
 L["Chamber Overseer"] = "Chamber Overseer"
 L["Chamber Sentinel"] = "大厅哨兵"
@@ -507,6 +509,8 @@ L["Crystalline Protector"] = "Crystalline Protector"
 L["Crystalline Shardling"] = "Crystalline Shardling"
 --[[Translation missing --]]
 L["Crystalline Tender"] = "Crystalline Tender"
+L["ctrlKeyCountTip"] = "在所有敵人上面按住 CTRL 不放來顯示敵方部隊進度"
+L["ctrlKeyDownStatusText"] = "顯示敵方部隊"
 --[[Translation missing --]]
 L["Curious Swoglet"] = "Curious Swoglet"
 L["Cursed Falke"] = "被诅咒的飞鹰"
@@ -523,8 +527,7 @@ L["Cutwater Striker"] = "破浪打击者"
 L["Cyanigosa"] = "Cyanigosa"
 --[[Translation missing --]]
 L["Cyclone"] = "Cyclone"
---[[Translation missing --]]
-L["Cyclone Summit"] = "Cyclone Summit"
+L["Cyclone Summit"] = "漩渦尖塔"
 --[[Translation missing --]]
 L["Dalronn the Controller"] = "Dalronn the Controller"
 L["Damaged Golem"] = "损坏的傀儡"
@@ -1139,13 +1142,11 @@ L["Hadronox"] = "Hadronox"
 L["Hadronox's Lair"] = "Hadronox's Lair"
 L["Hakkar the Soulflayer"] = "夺灵者哈卡"
 L["Halkias"] = "哈尔吉亚斯"
---[[Translation missing --]]
-L["Hall of the Keepers"] = "Hall of the Keepers"
+L["Hall of the Keepers"] = "守衛者大廳"
 L["Hall of the Moon"] = "月之殿堂"
 L["HallOfTheKeepers"] = "守衛者大廳"
 L["Halls of Atonement"] = "贖罪之殿"
---[[Translation missing --]]
-L["Halls of Infusion"] = "Halls of Infusion"
+L["Halls of Infusion"] = "灌注迴廊"
 --[[Translation missing --]]
 L["Halls of Lightning"] = "Halls of Lightning"
 --[[Translation missing --]]
@@ -1165,6 +1166,7 @@ L["Hardened Steel Berserker"] = "Hardened Steel Berserker"
 L["Hardened Steel Reaver"] = "Hardened Steel Reaver"
 --[[Translation missing --]]
 L["Hardened Steel Skycaller"] = "Hardened Steel Skycaller"
+L["hardResetButton"] = "重置 MDT"
 L["hardResetPrompt"] = "是否確定要重置所有設定，恢復成預設值? 將會需要重新載入介面!"
 L["hardResetPromptTitle"] = "刪除所有設定"
 L["Harlan Sweete"] = "哈兰·斯威提"
@@ -1282,11 +1284,9 @@ L["Infused Quill-feather"] = "注能的羽翎"
 L["Infused Whelp"] = "Infused Whelp"
 --[[Translation missing --]]
 L["Infuser Sariya"] = "Infuser Sariya"
---[[Translation missing --]]
-L["Infuser's Rotunda"] = "Infuser's Rotunda"
+L["Infuser's Rotunda"] = "灌注者圓形大廳"
 L["InfusersRotunda"] = "灌注者圓形大廳"
---[[Translation missing --]]
-L["Infusion Chamber"] = "Infusion Chamber"
+L["Infusion Chamber"] = "灌注室"
 L["Infusion Chambers"] = "注入之廳"
 L["InfusionChamber"] = "灌注室"
 L["Ingra Maloch"] = "英格拉·马洛克"
@@ -1532,6 +1532,7 @@ L["MDT Error"] = "MDT Error"
 L["MDT: Error importing preset"] = "MDT: 匯入路線時發生錯誤"
 L["MDT: Spells for %s:"] = "MDT: %s 的技能:"
 L["MDT: Use /mdt minimap to show the minimap icon again"] = "MDT: 輸入 /mdt minimap 再次顯示小地圖按鈕。"
+L["MDTGuideNote"] = "MDT 導覽視窗不是 M+ 地城規劃工具 Mythic Dungeon Tools 的一部分，是另一個獨立的插件。"
 --[[Translation missing --]]
 L["Meathook"] = "Meathook"
 L["Mech Jockey"] = "机甲驾驶员"
@@ -2486,8 +2487,7 @@ L["The Banquet Hall"] = "宴會大廳"
 L["The Brig"] = "禁閉室"
 --[[Translation missing --]]
 L["The Brood Pit"] = "The Brood Pit"
---[[Translation missing --]]
-L["The Burning Cauldron"] = "The Burning Cauldron"
+L["The Burning Cauldron"] = "燃燒大鍋"
 L["The Cellar"] = "地窖"
 --[[Translation missing --]]
 L["The Construct Quarter"] = "The Construct Quarter"
@@ -2561,14 +2561,12 @@ L["The Underrot"] = "幽腐深窟"
 L["The Underrot Sublevel"] = "幽腐深窟"
 --[[Translation missing --]]
 L["The Upper Necropolis"] = "The Upper Necropolis"
---[[Translation missing --]]
-L["The Vault of Tyr"] = "The Vault of Tyr"
+L["The Vault of Tyr"] = "提爾寶庫"
 --[[Translation missing --]]
 L["The Vestibules of Drak'Tharon"] = "The Vestibules of Drak'Tharon"
 --[[Translation missing --]]
 L["The Violet Hold"] = "The Violet Hold"
---[[Translation missing --]]
-L["The Vortex Pinnacle"] = "The Vortex Pinnacle"
+L["The Vortex Pinnacle"] = "漩渦尖塔"
 L["The Warden's Court"] = "看守者之廷"
 L["TheArcaneConservatory"] = "祕法存護所"
 L["Theater of Pain"] = "苦痛劇場"
@@ -2683,8 +2681,7 @@ L["Ukhel Deathspeaker"] = "Ukhel Deathspeaker"
 --[[Translation missing --]]
 L["Ukhel Willcrusher"] = "Ukhel Willcrusher"
 L["Ularogg Cragshaper"] = "乌拉罗格·塑山"
---[[Translation missing --]]
-L["Uldaman: Legacy of Tyr"] = "Uldaman: Legacy of Tyr"
+L["Uldaman: Legacy of Tyr"] = "奧達曼：提爾的遺產"
 L["UldamanLegacyOfTyr"] = "奧達曼：提爾的遺產"
 --[[Translation missing --]]
 L["Ulduar"] = "Ulduar"
@@ -2735,6 +2732,7 @@ L["Unyielding Contender"] = "不屈的参赛者"
 --[[Translation missing --]]
 L["Unyielding Garrison"] = "Unyielding Garrison"
 L["Update"] = "更新"
+L["updateNote"] = "請將此插件更新到最新版本，或是刪除。"
 L["Upper Broken Stair"] = "破碎樓梯上層"
 L["Upper Library"] = "圖書館上層"
 L["Upper Livery Stables"] = "獸欄上層"

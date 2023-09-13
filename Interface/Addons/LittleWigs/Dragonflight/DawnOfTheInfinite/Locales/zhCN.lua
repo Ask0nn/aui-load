@@ -21,6 +21,7 @@ if L then
 	L.timeline_marauder = "时间线掠夺者"
 	L.infinite_saboteur = "永恒破坏者"
 	L.infinite_riftmage = "永恒裂隙法师"
+	L.timelost_waveshaper = "迷时塑波者"
 	L.chronaxie = "克罗纳克西"
 	L.horde_destroyer = "部落驱除坦克"
 	L.alliance_destroyer = "联盟驱逐舰"
@@ -28,4 +29,7 @@ if L then
 	L.paladin_of_the_silver_hand = "白银之手圣骑士"
 	L.horde_raider_alliance_knight = "部落狼骑兵 / 联盟骑士"
 	L.infinite_timebender = "永恒曲时者"
+
+	L.custom_on_rift_autotalk = "自动对话"
+	L.custom_on_rift_autotalk_desc = "立即开始引导裂隙稳定度来打开时光裂隙。"
 end

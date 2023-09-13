@@ -11,6 +11,42 @@ local DESTINATIONS = {
   { name = "Discord", url = "https://discord.gg/tdxMPb3" },
 }
 
+local function getDiagnostics()
+  local presetExport = MDT:TableToString(MDT:GetCurrentPreset(), true, 5)
+  local addonVersion = GetAddOnMetadata(AddonName, "Version")
+  local locale = GetLocale()
+  local dateString = date("%d/%m/%y %H:%M:%S")
+  local gameVersion = select(4, GetBuildInfo())
+  local name, realm = UnitFullName("player")
+  local regionId = GetCurrentRegion()
+  local regions = {
+    [1] = "US",
+    [2] = "Korea",
+    [3] = "Europe",
+    [4] = "Taiwan",
+    [5] = "China",
+    [72] = "PTR"
+  }
+  local region = regions[regionId]
+  local combatState = InCombatLockdown() and "In combat" or "Out of combat"
+  local mapID = C_Map.GetBestMapForUnit("player");
+  local zoneInfo = format("Zone: %s (%d)", C_Map.GetMapInfo(C_Map.GetMapInfo(mapID).parentMapID).name, mapID)
+  return {
+    presetExport = presetExport,
+    addonVersion = addonVersion,
+    locale = locale,
+    dateString = dateString,
+    gameVersion = gameVersion,
+    name = name,
+    realm = realm,
+    region = region,
+    combatState = combatState,
+    zoneInfo = zoneInfo
+  }
+end
+
+local hasShown = false
+
 function MDT:DisplayErrors(force)
   if not force and hasShown then return end
   hasShown = true
@@ -117,12 +153,23 @@ function MDT:DisplayErrors(force)
       startCopyAction(errorFrame.errorBox, errorBoxCopyButton, errorBoxText)
     end)
 
+    errorFrame.hardResetButton = AceGUI:Create("Button")
+    local hardResetButton = errorFrame.hardResetButton
+    hardResetButton:SetText(L["hardResetButton"])
+    hardResetButton:SetHeight(40)
+    hardResetButton:SetCallback("OnClick", function(widget, callbackName, value)
+      MDT:Async(function()
+        MDT:OpenConfirmationFrame(450, 150, L["hardResetPromptTitle"], L["Delete"], L["hardResetPrompt"], MDT.HardReset)
+      end, "hardReset")
+    end)
+
     errorFrame:AddChild(errorFrame.errorBox)
     errorFrame:AddChild(errorFrame.errorBoxCopyButton)
+    errorFrame:AddChild(errorFrame.hardResetButton)
 
     --error button
     local errorButton = AceGUI:Create("Icon")
-    errorButton:SetImage("Interface\\AddOns\\MythicDungeonTools\\Textures\\icons", 0.75, 1, 0.25, 0.5)
+    errorButton:SetImage("Interface\\AddOns\\MythicDungeonTools\\Textures\\icons", 0.76, 1, 0.25, 0.5)
     errorButton:SetCallback("OnClick", function(widget, callbackName)
       MDT:DisplayErrors("true")
     end)
@@ -144,7 +191,7 @@ function MDT:DisplayErrors(force)
     errorButtonGroup.frame:SetBackdropColor(0, 0, 0, 0)
     errorButtonGroup:SetWidth(40)
     errorButtonGroup:SetHeight(40)
-    errorButtonGroup:SetPoint("LEFT", MDTVersion, "RIGHT", -5, -1)
+    errorButtonGroup:SetPoint("LEFT", MDT.main_frame.bottomLeftPanelString, "RIGHT", -5, -1)
     errorButtonGroup:SetLayout("Flow")
     errorButtonGroup.frame:SetFrameStrata("High")
     errorButtonGroup.frame:SetFrameLevel(7)
@@ -154,27 +201,14 @@ function MDT:DisplayErrors(force)
   end
 
   for _, error in ipairs(caughtErrors) do
-    errorBoxText = errorBoxText..error.message.."\n"
+    errorBoxText = errorBoxText..error.count.."x: "..error.message.."\n"
   end
   --add diagnostics
-  local presetExport = MDT:TableToString(MDT:GetCurrentPreset(), true, 5)
-  local addonVersion = GetAddOnMetadata(AddonName, "Version")
-  local locale = GetLocale()
-  local dateString = date("%d/%m/%y %H:%M:%S")
-  local gameVersion = select(4, GetBuildInfo())
-  local name, realm = UnitFullName("player")
-  local regionId = GetCurrentRegion()
-  local regions = {
-    [1] = "US",
-    [2] = "Korea",
-    [3] = "Europe",
-    [4] = "Taiwan",
-    [5] = "China",
-    [72] = "PTR"
-  }
-  local region = regions[regionId]
-  errorBoxText = errorBoxText.."\n"..dateString.."\nMDT: "..addonVersion.."\nClient: "..gameVersion.." "..locale.."\nCharacter: "..name.."-"..realm.." ("..region..")".."\n\nRoute:\n"..presetExport
-  errorBoxText = errorBoxText.."\n\nStacktraces\n\n"
+  local diagnostics = getDiagnostics()
+  errorBoxText = errorBoxText.."\n"..diagnostics.dateString.."\nMDT: "..diagnostics.addonVersion.."\nClient: "..diagnostics.gameVersion.." "..diagnostics.locale.."\nCharacter: "..diagnostics.name.."-"..diagnostics.realm.." ("..diagnostics.region..")"
+  errorBoxText = errorBoxText.."\n"..diagnostics.combatState.."\n"..diagnostics.zoneInfo.."\n"
+  errorBoxText = errorBoxText.."\nRoute:\n"..diagnostics.presetExport
+  errorBoxText = errorBoxText.."\nStacktraces\n\n"
   for _, error in ipairs(caughtErrors) do
     errorBoxText = errorBoxText..error.stackTrace.."\n"
   end
@@ -193,13 +227,17 @@ local function onError(msg, stackTrace, name)
   -- return early on duplicate errors
   for _, error in pairs(caughtErrors) do
     if error.message == e then
+      error.count = error.count + 1
       addTrace = false
       return false
     end
   end
   local stackTraceValue = stackTrace and name..":\n"..stackTrace
-  tinsert(caughtErrors, { message = e, stackTrace = stackTraceValue })
+  tinsert(caughtErrors, { message = e, stackTrace = stackTraceValue, count = 1 })
   addTrace = true
+  local diagnostics = getDiagnostics()
+  local diagnosticString = diagnostics.dateString.."\nMDT: "..diagnostics.addonVersion.."\nClient: "..diagnostics.gameVersion.." "..diagnostics.locale.."\n"..diagnostics.region
+  -- MDT.WagoAnalytics:Error(e..diagnosticString)
   if MDT.errorTimer then MDT.errorTimer:Cancel() end
   MDT.errorTimer = C_Timer.NewTimer(0.5, function()
     MDT:DisplayErrors(true)
@@ -216,10 +254,17 @@ function MDT:OnError(msg, stackTrace, name)
   onError(msg, stackTrace, name)
 end
 
+function MDT:GetErrors()
+  return caughtErrors
+end
+
 function MDT:RegisterErrorHandledFunctions()
   --register all functions except the ones that have to run as coroutines
   local blacklisted = {
     ["DungeonEnemies_UpdateSelected"] = true,
+    ["DungeonEnemies_UpdateEnemiesAsync"] = true,
+    ["ReloadPullButtons"] = true,
+    ["DrawAllPresetObjects"] = true,
     ["AddPull"] = true,
     ["ClearPull"] = true,
     ["ShowInterfaceInternal"] = true,
