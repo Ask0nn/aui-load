@@ -6,7 +6,7 @@ local Util = TTT.Util;
 local L = TTT.L;
 
 --- @type LibUIDropDownMenu
-local LibDD = LibStub('LibUIDropDownMenu-4.0');
+local LibDD = LibStub('LibUIDropDownMenuNumy-4.0');
 
 TalentTreeTweaks_DropDownControlReplacementMixin = CreateFromMixins(DropDownControlMixin);
 
@@ -114,42 +114,115 @@ function Module:SetupHook()
     self:SecureHook('ShowUIPanel', 'OnShowUIPanel')
     self:SecureHook('HideUIPanel', 'OnHideUIPanel')
 
+    self:SecureHook(talentsTab, 'UpdateInspecting', 'OnUpdateInspecting');
     self:ReplaceCopyLoadoutButton(talentsTab);
 
     self:HandleMultiActionBarTaint();
 end
 
+function Module:OnUpdateInspecting(talentsTab)
+    local isInspecting = talentsTab:IsInspecting();
+    if not isInspecting then
+        self.cachedInspectExportString = nil;
+
+        return;
+    end
+    self.cachedInspectExportString = talentsTab:GetInspectUnit() and C_Traits.GenerateInspectImportString(talentsTab:GetInspectUnit()) or talentsTab:GetInspectString();
+end
+
 function Module:ReplaceCopyLoadoutButton(talentsTab)
     talentsTab.InspectCopyButton:SetOnClickHandler(function()
-        local loadoutString = talentsTab:GetInspectUnit() and C_Traits.GenerateInspectImportString(talentsTab:GetInspectUnit()) or talentsTab:GetInspectString();
-        if loadoutString ~= '' then
+        local loadoutString =
+            self.cachedInspectExportString
+            or (talentsTab:GetInspectUnit() and C_Traits.GenerateInspectImportString(talentsTab:GetInspectUnit()) or talentsTab:GetInspectString());
+        if loadoutString and (loadoutString ~= "") then
             Util:CopyText(loadoutString, L['Inspected Build']);
         end
     end);
 end
 
-local nop = function() end;
-local function makeFEnvReplacement(original, functionsToNop)
+local function purgeKey(table, key)
+    TextureLoadingGroupMixin.RemoveTexture({textures = table}, key);
+end
+local function makeFEnvReplacement(original, replacement)
     local fEnv = {};
     setmetatable(fEnv, { __index = function(t, k)
-        if functionsToNop[k] then
-            return nop;
-        end
-        return original[k];
+        return replacement[k] or original[k];
     end});
     return fEnv;
 end
+
 function Module:HandleMultiActionBarTaint()
     if self.db.disableMultiActionBarShowHide then
         self.originalOnShowFEnv = self.originalOnShowFEnv or getfenv(ClassTalentFrame.OnShow);
-        self.originalOnHideFEnv = self.originalOnHideFEnv or getfenv(ClassTalentFrame.OnHide);
 
-        setfenv(ClassTalentFrame.OnShow, makeFEnvReplacement(self.originalOnShowFEnv, { MultiActionBar_ShowAllGrids = true }));
-        setfenv(ClassTalentFrame.OnHide, makeFEnvReplacement(self.originalOnHideFEnv, { MultiActionBar_HideAllGrids = true }));
-    elseif self.originalOnShowFEnv and self.originalOnHideFEnv then
+        setfenv(ClassTalentFrame.OnShow, makeFEnvReplacement(self.originalOnShowFEnv, {
+            TalentMicroButton = {
+                EvaluateAlertVisibility = function()
+                    HelpTip:HideAllSystem("MicroButtons");
+                end,
+            },
+            MultiActionBar_ShowAllGrids = nop,
+            UpdateMicroButtons = function() self:TriggerMicroButtonUpdate() end,
+        }));
+
+        self:SecureHook(FrameUtil, 'UnregisterFrameForEvents', function(frame)
+            if frame == ClassTalentFrame then
+                self:MakeOnHideSafe();
+            end
+        end);
+    elseif self.originalOnShowFEnv then
         setfenv(ClassTalentFrame.OnShow, self.originalOnShowFEnv);
-        setfenv(ClassTalentFrame.OnHide, self.originalOnHideFEnv);
+        self:Unhook(FrameUtil, 'UnregisterFrameForEvents');
     end
+    if
+        self.originalOnShowFEnv
+        and TalentMicroButton and TalentMicroButton.HasTalentAlertToShow
+        and not self:IsHooked(TalentMicroButton, 'HasTalentAlertToShow')
+    then
+        self:SecureHook(TalentMicroButton, 'HasTalentAlertToShow', function()
+            purgeKey(TalentMicroButton, 'canUseTalentUI');
+            purgeKey(TalentMicroButton, 'canUseTalentSpecUI');
+        end);
+    end
+end
+
+function Module:MakeOnHideSafe()
+    if not issecurevariable(ClassTalentFrame, 'lockInspect') then
+        if not ClassTalentFrame.lockInspect then
+            purgeKey(ClassTalentFrame, 'lockInspect');
+        else
+            -- get blizzard to set the value to true
+            TextureLoadingGroupMixin.AddTexture({textures = ClassTalentFrame}, 'lockInspect');
+        end
+    end
+    local isInspecting = ClassTalentFrame:IsInspecting();
+    local notSecure = false;
+    if not issecurevariable(ClassTalentFrame, 'inspectUnit') then
+        purgeKey(ClassTalentFrame, 'inspectUnit');
+        notSecure = true;
+    end
+    if not issecurevariable(ClassTalentFrame, 'inspectString') then
+        purgeKey(ClassTalentFrame, 'inspectString');
+        notSecure = true;
+    end
+    if notSecure and isInspecting then
+        -- get blizzard to set the value to true
+        TextureLoadingGroupMixin.AddTexture({textures = ClassTalentFrame}, 'inspectString');
+    end
+end
+
+function Module:TriggerMicroButtonUpdate()
+    local cvarName = 'Numy_TalentTreeTweaks';
+    -- the LFDMicroButton will trigger UpdateMicroButtons() in its OnEvent, without checking the event itself.
+    -- CVAR_UPDATE is easy enough to trigger at will, so we make use of that
+    LFDMicroButton:RegisterEvent('CVAR_UPDATE');
+    if not self.cvarRegistered then
+        C_CVar.RegisterCVar(cvarName);
+        self.cvarRegistered = true;
+    end
+    C_CVar.SetCVar(cvarName, GetCVar(cvarName) == '1' and '0' or '1');
+    LFDMicroButton:UnregisterEvent('CVAR_UPDATE');
 end
 
 function Module:EnableDropDownReplacement()

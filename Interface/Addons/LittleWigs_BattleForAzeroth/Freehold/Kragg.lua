@@ -31,8 +31,7 @@ end
 
 function mod:OnBossEnable()
 	-- Stages
-	-- 10.1.7: Encounter Event no longer logs and Spawn Parrot is still hidden
-	self:RegisterUnitEvent("UNIT_SPELLCAST_SUCCEEDED", nil, "boss1") -- Spawn Parrot
+	self:Log("SPELL_CAST_SUCCESS", "SpawnParrot", 256056)
 
 	-- Stage 1: Mounted Assault
 	self:Log("SPELL_CAST_START", "Charrrrrge", 255952)
@@ -57,17 +56,14 @@ end
 
 -- Stages
 
-function mod:UNIT_SPELLCAST_SUCCEEDED(event, unit, _, spellId)
-	if spellId == 256056 then -- Spawn Parrot
-		self:StopBar(255952) -- Charrrrrge
-		self:Message(spellId, "cyan", CL.percent:format(75, self:SpellName(spellId)))
-		self:PlaySound(spellId, "long")
-		self:CDBar(256005, 2.4) -- Vile Bombardment
-		self:CDBar(256106, 5.3) -- Azerite Powder Shot
-		if not self:Normal() then
-			self:CDBar(272046, 14.0) -- Dive Bomb
-		end
-		self:UnregisterUnitEvent(event, unit)
+function mod:SpawnParrot(args)
+	self:Message(args.spellId, "cyan", CL.percent:format(75, args.spellName))
+	self:PlaySound(args.spellId, "long")
+	self:StopBar(255952) -- Charrrrrge
+	self:CDBar(256005, 2.4) -- Vile Bombardment
+	self:CDBar(256106, 5.3) -- Azerite Powder Shot
+	if not self:Normal() then
+		self:CDBar(272046, 14.0) -- Dive Bomb
 	end
 end
 

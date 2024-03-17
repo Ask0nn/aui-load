@@ -10,11 +10,16 @@
 		--add the original name to the global namespace
 		_detalhes = _G.Details --[[GLOBAL]]
 
+		__details_debug = __details_debug or {}
+		if (__details_debug.prescience_timeline) then
+			wipe(__details_debug.prescience_timeline)
+		end
+
 		local addonName, Details222 = ...
 		local version, build, date, tocversion = GetBuildInfo()
 
-		Details.build_counter = 11902
-		Details.alpha_build_counter = 11902 --if this is higher than the regular counter, use it instead
+		Details.build_counter = 12236
+		Details.alpha_build_counter = 12236 --if this is higher than the regular counter, use it instead
 		Details.dont_open_news = true
 		Details.game_version = version
 		Details.userversion = version .. " " .. Details.build_counter
@@ -74,6 +79,12 @@
 			return Details222.ColorScheme[colorScheme]
 		end
 
+		function Details222.DebugMsg(...)
+			if (Details.debug) then
+				print("|cFFCCAAAADetails! Debug:|r", ...)
+			end
+		end
+
 		--namespace for damage spells (spellTable)
 		Details222.DamageSpells = {}
 		--namespace for texture
@@ -87,6 +98,7 @@
 		Details222.Instances = {}
 		Details222.Combat = {}
 		Details222.MythicPlus = {}
+		Details222.MythicPlusBreakdown = {}
 		Details222.EJCache = {}
 		Details222.Segments = {}
 		Details222.Tables = {}
@@ -103,6 +115,7 @@
 			Schedules = {},
 		}
 		Details222.TimeMachine = {}
+		Details222.OnUseItem = {Trinkets = {}}
 
 		Details222.Date = {
 			GetDateForLogs = function()
@@ -124,6 +137,10 @@
 		Details222.CurrentDPS = {
 			Cache = {}
 		}
+		--store all data from the encounter journal
+		Details222.EncounterJournalDump = {}
+		--aura scanner
+		Details222.AuraScan = {}
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --initialization stuff
@@ -137,12 +154,93 @@ do
 
 	--change logs
 	--[=[
-
-
 	--]=]
 
 	local news = {
-		{"v10.1.0.11901.151", "September 09th, 2023"},
+		{"v10.2.0.12236.155", "January 20th, 2024"},
+		"Added Blistering Scales and Mana Restored to the Evoker Predicted Damage bar.",
+		"Fixed an issue which was making the Evoker Predicted Damage bar to show beyond the window width.",
+		"Fixed the key level up animation at the new End of Mythic+ Run panel.",
+		"Lib Open Raid updated to use Burst communications (Grim). The command /keys should give all Keys of the party almost instantly now.",
+		"Framework updated and other minor fixes.",
+
+		{"v10.2.0.12220.155", "January 14th, 2024"},
+		"Ignoring the heal of Smoldering Seedling trinket (Flamanis).",
+		"Attribute Judgement of Light to the healed on Wrath (Flamanis).",
+		"Fixed an error while scrolling down target npcs in the breakdown window.",
+		"Fixed an error when clicking to open the Death Recap by Details!.",
+		"End of Mythic Run panel got updates.",
+		"Many tooltips in Details! are now rouded!",
+		"Evoker extra bar tooltip's, now also show the uptime of Black Attunement and Prescience applications.",
+		"Breakdown Window now show Plater Npc Colors in the target box.",
+		"Added event: 'COMBAT_MYTHICPLUS_OVERALL_READY', trigger when the overall segment for the mythic+ is ready.",
+		"Added event: 'COMBAT_PLAYER_LEAVING', trigger at the beginning of the leave combat process.",
+		"Added: Details:IsInMythicPlus() return true if the player is on a mythic dungeon run.",
+		"CombatObjects now have the key 'is_challenge' if the combat is a part of a challenge mode or mythic+ run.",
+		"Lib Open Raid updated.",
+
+		{"v10.2.0.12188.155", "December 28th, 2023"},
+		"Dreamwalker's Healing Potion now shows in the Healing Potion & Stone custom display.",
+		"Added the 'Remove Battleground Segments' option to the menu that opens when hovering over the erase button.",
+		"Attempt to fix Battleground faction icons, shown on enemy players damage bars.",
+		"API: Actor:GetSpellContainer(containerName) now also accepts dispelwhat, interrupt, interruptwhat, interrupttargets.",
+		"Fixed custom scripts showing the damage text too close to the dps text.",
+		"Fixed Dynamic Overall Data, showing overlapped texts for damage and dps.",
+		"Fixed an error when hovering over some spells in the Auras panel on the Player Breakdown window.",
+		"Fixed the character item level, which was not showing for players that left the party group on the Player Breakdown window.",
+		"Fixed boss images not showing at the segments selection menu.",
+		"Other updates related to encounter journal and mythic+, both under development.",
+		"Update Details! Framework for bug fixes.",
+		"Update lib Open Raid (more cooldowns added).",
+
+		{"v10.2.0.12109.155", "December 14th, 2023"},
+		"Classic now uses the same combat log reader as retail (Flamanis).",
+		"Merged Rage of Fyr'alath spells (equara)",
+		"Added Rogue Ambushes to merged spells (WillowGryph).",
+		"The Remove Common Segments option now also removes segments trash between raid bosses.",
+		"Fixed an issue where auras applied before combat start, such as Power Infusion and Prescience, which are counted towards the target, were not being accounted for.",
+		"Added to Combat Class: classCombat:GetRunTimeNoDefault(). This returns the run time of the Mythic+ if available, nil otherwise.",
+
+		{"v10.2.0.12096.155", "December 1st, 2023"},
+		"Added Mythic+ Overall DPS calculation options: 'Use Total Combat Time' and 'Use Run Time'. These options are available in the Mythic Dungeon section of the options panel. The option 'Use Run Time', takes the player's damage and divide by the total elapsed time of the run.",
+		"Added reset options: 'Remove Common Segments' and 'Reset, but keep Mythic+ Overall Segments'.",
+		"Added trinket 'Corrupted Starlight' and 'Dreambinder, Loom of the Great Cycle' extra information.",
+		"Fixes for the API change of distance checks.",
+		"Fixed some panels in the options panel, not closing at pressing the X button.",
+		"Fixed the Pet of a Pet detection non ending loop (Flamanis).",
+		"Fixed the issue of combats having only 1 second of duration.",
+		"Fixed the Damage Graphic not showing after a Mythic+ run.",
+		"Fixed an issue while renaming a spell, the change wouldn't stick and the spell would be renamed back to the original name.",
+		"Fixed death logs now showing the green healing bar.",
+		"Fixed Augmentation Evoker not showing the extra predicted damage bar.",
+		"Fixed an issue where users were unable to see interrupts and cooldowns.",
+		"Added to Combat Class: combat:GetRunTime(). This returns the run time if available or combat:GetCombatTime() if not.",
+
+		{"v10.2.0.12023.155", "November 08th, 2023"},
+		"Several fixes to make the addon work with the combat log changes done on patch 10.2.0.",
+		"Added trinket data for patch 10.2.0.",
+		"Fixed an issue with death tooltips going off-screen when the window is too close to a screen border.",
+		"Fixed a spam of errors during battlegrounds when an enemy player heal with a dot spell.",
+
+		{"v10.1.7.12012.155", "October 27th, 2023"},
+		"Implemented [Pip's Emerald Friendship Badge] trinket buffs.",
+		"Implemented the amount of times 'On Use' trinkets are used.",
+		"10.2 trinket damage spells renamed to the item name.",
+		"Framework Upgrade",
+		"Lib OpenRaid Upgrade.",
+		"Fixed the issue 'Segment Not Found' while resetting data.",
+		"Fixed Rogue icon",
+		"Fixed an issue with the healing merge amount on death tooltips (Flamanis).",
+		"Fixed 'extraStatusbar' showing in wrong views (non-player-dmg) (Continuity).",
+		"Removed LibCompress (Flamanis).",
+
+		{"v10.1.7.11914.155", "September 13th, 2023"},
+		"Added an extra bar within the evoker damage bar, this new bar when hovered over shows the buff uptime of Ebon Might and Prescience on all players.",
+		"ToC Files of all plugins got updated.",
+		"Fixed the error 'Attempt to compare string with number' on vanilla (Flamanis).",
+		"Fixed the error 'object:ToolTip() is invalid'.",
+
+		{"v10.1.7.11901.155", "September 09th, 2023"},
 		"Evoker Predicted Damage improvements.",
 		"Improved spellId check for first hit when entering a combat (Flamanis).",
 		"Replaced Classic Era deprecated functions (Flamanis).",
@@ -151,11 +249,11 @@ do
 		"Attempt to fix death log healing spam where a spell has multiple heals in the same millisecond.",
 		"Fixed an error with the old comparison window.",
 
-		{"v10.1.5.11856.151", "August 13th, 2023"},
+		{"v10.1.7.11856.155", "August 13th, 2023"},
 		"Fixed an issue with importing a profile with a corrupted time type.",
 		"Added Elemental Shaman overload spells (WillowGryph).",
 
-		{"v10.1.5.11855.151", "August 12th, 2023"},
+		{"v10.1.5.11855.155", "August 12th, 2023"},
 		"Forcing update interval to 0.1 on arenas matches using the real-time dps feature.",
 		"More parser cleanups and code improvements.",
 		"Auras tab now ignores regular 'world auras' (those weekly buffs of reputation, etc)",
@@ -403,29 +501,6 @@ do
 		"/details auras: show a panel with your current auras, spell ids and spell payload.",
 		"/details perf: show performance issues when you get a warning about freezes due to UpdateAddOnMemoryUsage().",
 		"/details npcid: get the npc id of your target (a box is shown with the number ready to be copied).",
-
-		{"v9.2.0.10001.146", "Aug 10th, 2022"},
-		"New feature: Arena DPS Bar, can be enabled at the Broadcaster Tools section, shows a bar in 'kamehameha' style showing which team is doing more damage in the latest 3 seconds.",
-		"/keystone now has more space for the dungeon name.",
-		"Revamp on the options section for Broadcaster tools.",
-		"Added 'Icon Size Offset' under Options > Bars: General, this new option allow to adjust the size of the class/spec icon shown on each bar.",
-		"Added 'Show Faction Icon' under Options > Bars: General, with this new option, you can choose to not show the faction icon, this icon is usually shown during battlegrounds.",
-		"Added 'Faction Icon Size Offset' under Options > Bars: General, new option to adjust the size of the faction icon.",
-		"Added 'Show Arena Role Icon' under Options > Bars: General, new option to hide or show the role icon of players during an arena match.",
-		"Added 'Clear On Start PVP' overall data option (Flamanis).",
-		"Added 'Arena Role Icon Size Offset' under Options > Bars: General, new option which allow to control the size of the arena role icon.",
-		"Added 'Level' option to Wallpapers, the wallpaper can now be placed on different levels which solves issues where the wallpaper is too low of certain configuration.",
-		"Streamer! plugin got updates, now it is more clear to pick which mode to use.",
-		"WotLK classic compatibility (Flamanis, Daniel Henry).",
-		"Fixed Grimrail Depot cannon and granades damage be added to players (dios-david).",
-		"Fixed the title bar text not showing when using the Custom Title Bar feature.",
-		"Fixed an issue with Dynamic Overall Damage printing errors into the chat window (Flamanis).",
-		"Role detection in classic versions got improvements.",
-		"New API: Details:GetTop5Actors(attributeId), return the top 5 actors from the selected attribute.",
-		"New API: Details:GetActorByRank(attributeId, rankIndex), return an actor from the selected attribute and rankIndex.",
-		"Major cleanup and code improvements on dropdowns for library Details! Framework.",
-		"Cleanup on NickTag library.",
-		"Removed LibGroupInSpecT, LibItemUpgradeInfo and LibCompress. These libraries got replaced by OpenRaidLib and LibDeflate.",
 	}
 
 	local newsString = "|cFFF1F1F1"
@@ -484,7 +559,7 @@ do
 
 		--current instances of the exp (need to maintain)
 			_detalhes.InstancesToStoreData = { --mapId
-				[2522] = true, --sepulcher of the first ones
+				[2549] = true, --amirdrassil
 			}
 
 		--store shield information for absorbs
@@ -1360,6 +1435,21 @@ if (select(4, GetBuildInfo()) >= 100000) then
 	end)
 end
 
+local classCacheName = Details222.ClassCache.ByName
+local classCacheGUID = Details222.ClassCache.ByGUID
+
+function Details222.ClassCache.GetClassFromCache(value)
+	return classCacheName[value] or classCacheGUID[value]
+end
+
+function Details222.ClassCache.AddClassToCache(value, whichCache)
+	if (whichCache == "name") then
+		classCacheName[value] = true
+	elseif (whichCache == "guid") then
+		classCacheGUID[value] = true
+	end
+end
+
 function Details222.ClassCache.GetClass(value)
 	local className = Details222.ClassCache.ByName[value] or Details222.ClassCache.ByGUID[value]
 	if (className) then
@@ -1435,6 +1525,8 @@ Details222.UnitIdCache.Party = {
 	[3] = "party3",
 	[4] = "party4",
 }
+
+Details222.UnitIdCache.PartyIds = {"player", "party1", "party2", "party3", "party4"}
 
 Details222.UnitIdCache.Boss = {
 	[1] = "boss1",

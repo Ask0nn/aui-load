@@ -400,6 +400,11 @@ Filters.mainOptions.args.auraIndicator.args.countGroup.args.countAnchor = ACH:Se
 Filters.mainOptions.args.auraIndicator.args.countGroup.args.countX = ACH:Range(L["X-Offset"], nil, 2, { min = -75, max = 75, step = 1 })
 Filters.mainOptions.args.auraIndicator.args.countGroup.args.countY = ACH:Range(L["Y-Offset"], nil, 3, { min = -75, max = 75, step = 1 })
 
+Filters.mainOptions.args.auraIndicator.args.cooldownGroup = ACH:Group(L["Cooldown Text"], nil, 25)
+Filters.mainOptions.args.auraIndicator.args.cooldownGroup.args.cooldownAnchor = ACH:Select(L["Anchor Point"], nil, 1, C.Values.AllPoints)
+Filters.mainOptions.args.auraIndicator.args.cooldownGroup.args.cooldownX = ACH:Range(L["X-Offset"], nil, 2, { min = -75, max = 75, step = 1 })
+Filters.mainOptions.args.auraIndicator.args.cooldownGroup.args.cooldownY = ACH:Range(L["Y-Offset"], nil, 3, { min = -75, max = 75, step = 1 })
+
 Filters.mainOptions.args.spellGroup = ACH:Group(function() return GetSpellNameRank(GetSelectedSpell()) end, nil, -15, nil, FilterSettings, FilterSettings, nil, function() return not selectedSpell or (selectedFilter == 'Aura Indicator (Pet)' or selectedFilter == 'Aura Indicator (Profile)' or selectedFilter == 'Aura Indicator (Class)' or selectedFilter == 'Aura Indicator (Global)') end)
 Filters.mainOptions.args.spellGroup.inline = true
 Filters.mainOptions.args.spellGroup.args.enable = ACH:Toggle(L["Enable"], nil, 0, nil, nil, nil, nil, nil, nil, function() return (selectedFilter == 'Aura Indicator (Pet)' or selectedFilter == 'Aura Indicator (Profile)' or selectedFilter == 'Aura Indicator (Class)' or selectedFilter == 'Aura Indicator (Global)') end)
@@ -414,10 +419,6 @@ Filters.mainOptions.args.spellGroup.args.forDebuffIndicator.args.stackThreshold 
 Filters.mainOptions.args.spellGroup.args.ownOnly = ACH:Toggle(L["Casted by Player Only"], L["Only highlight the aura that originated from you and not others."], 5, nil, nil, nil, nil, nil, nil, function() return selectedFilter ~= 'Aura Highlight' end)
 
 Filters.help = ACH:Group(L["Help"], nil, 2)
-
-local COLOR = E:ClassColor(E.myclass, true)
-local COLOR1 = format('|c%s', COLOR.colorStr)
-local COLOR2 = '|cFFFFFFFF'
 
 local FilterHelp = {
 	L["*Whitelists:|r ^Boss, Mount, MyPet, OtherPet, Personal, nonPersonal, CastByUnit, notCastByUnit, Dispellable (includes steal-able), notDispellable, CastByNPC, CastByPlayers, BlizzardNameplate|r"],
@@ -447,7 +448,7 @@ local FilterHelp = {
 }
 
 for i, text in ipairs(FilterHelp) do
-	Filters.help.args['help'..i] = ACH:Description(text:gsub('*', COLOR1):gsub('%^', COLOR2), i, 'medium')
+	Filters.help.args['help'..i] = ACH:Description(text:gsub('*', E.InfoColor):gsub('%^', '|cFFffffff'), i, 'medium')
 end
 
 function C:SetToFilterConfig(filter)

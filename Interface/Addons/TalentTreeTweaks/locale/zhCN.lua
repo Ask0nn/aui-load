@@ -6,18 +6,14 @@ local L = LibStub("AceLocale-3.0"):NewLocale(name, "zhCN")
 if not L then return end
 
 -- TalentTreeTweaks
---[[Translation missing --]]
 L[ [=[%d points spent past the gate.
-%d extra points above the gate are free to be moved away.]=] ] = [=[%d points spent past the gate.
-%d extra points above the gate are free to be moved away.]=]
+%d extra points above the gate are free to be moved away.]=] ] = "花费 %d 点才可以解锁此天赋。在此天赋上方有 %d 点的额外点数可自由移动。"
 L[ [=[|cff33ff99TTT-DragonRiding Auto Purchaser:|r Purchased %d new talents.
 %s]=] ] = [=[|cff33ff99TTT-御龙术学习通知：|r学会了新天赋 %d
 %s]=]
 L["A workaround for one of the ways that Talent Tree taint can block action buttons from working."] = "尝试修复天赋树界面引发的污染会使动作条被禁用的问题。"
---[[Translation missing --]]
-L["Add the button to NodeInfo table when dumped"] = "Add the button to NodeInfo table when dumped"
---[[Translation missing --]]
-L["Adds a _button property to the nodeInfo table, which is a reference to the talent button."] = "Adds a _button property to the nodeInfo table, which is a reference to the talent button."
+L["Add the button to NodeInfo table when dumped"] = "保存时将按键添加到节点信息内"
+L["Adds a _button property to the nodeInfo table, which is a reference to the talent button."] = "对节点信息添加一个_button 属性，这是对天赋的引用。"
 L["Adds a button to link the currently shown build in chat."] = "在下拉菜单旁边添加一个按钮，点击即可将目前启用的配置发送至聊天。"
 L["Adds a few fixes for minor issues."] = "修正一些小问题。"
 L["Adds a mini tree in various tooltips for Talent Tree Builds"] = "在天赋相关的鼠标提示附加一个天赋树方案的剪影，例如天赋配置下拉菜单、观察目标界面右下的天赋按钮、玩家在聊天中发送的天赋配置等等。"
@@ -40,8 +36,7 @@ L["Background Transparency"] = "背景透明度"
 L["blocked in combat"] = "战斗中禁用"
 L["Change Background"] = "更改背景"
 L["Change Scale"] = "调整缩放"
---[[Translation missing --]]
-L["Choose how the mini tree is displayed."] = "Choose how the mini tree is displayed."
+L["Choose how the mini tree is displayed."] = "选择迷你天赋树如何显示。"
 L["Click to respec to this specialization."] = "点击切换至此专精。"
 L["Click:"] = "点击："
 L["Clickable Export Strings In Chat"] = "可点击字串"
@@ -52,12 +47,10 @@ L["CTRL + Click:"] = "CTRL + 点击："
 L["CTRL-C to copy %s"] = "CTRL-C 复制 %s"
 L["CTRL-C to copy spellID"] = "CTRL-C 复制法术 ID"
 L["CTRL-clicking a talent will open a table inspector of your choice, with the nodeInfo associated with the node."] = "CTRL 点击任意天赋即可打开暴雪的 table inspector 开发工具，查看该天赋的 nodeInfo 节点信息。"
---[[Translation missing --]]
-L["Debug Talent.nodeInfo"] = "Debug Talent.nodeInfo"
+L["Debug Talent.nodeInfo"] = "Talent.nodeInfo 侦错"
 L["Disable MultiActionBar_ShowAllGrids on Show"] = "禁用 MultiActionBar_ShowAllGrids"
 L["Disables the MultiActionBar_ShowAllGrids function, which can cause nasty taint issues."] = "停用 MultiActionBar_ShowAllGrids 功能，因为它会造成严重的污染，引发大量错误。"
---[[Translation missing --]]
-L["Display Style"] = "Display Style"
+L["Display Style"] = "显示样式"
 L["DragonRiding Auto Purchaser"] = "御龙术学习通知"
 L["Dump the nodeInfo table to chat."] = "将 nodeInfo 的节点信息表转储至聊天。"
 L["Enable Talent Tree Viewer Diff"] = "启用Talent Tree Viewer （天赋模拟器）比对"
@@ -86,10 +79,8 @@ L["Mute chat spam while switching loadouts or specs."] = "过滤切换专精和�
 L["Open in Talent Tree Viewer"] = "以 Talent Tree Viewer 开启"
 L["Open loadout in default Inspect UI"] = "以暴雪原生天赋界面开启此方案"
 L["Opens Blizzard's table inspect window."] = "開啟暴雪的 table inspect 窗口"
---[[Translation missing --]]
-L["Path NodeId"] = "Path NodeId"
---[[Translation missing --]]
-L["Perk NodeId"] = "Perk NodeId"
+L["Path NodeId"] = "路径节点ID"
+L["Perk NodeId"] = "双重节点ID"
 L["Post in Chat"] = "发送至聊天"
 L["Print in chat whenever a new talent is purchased."] = "在聊天框通知你学会了新的御龙术。"
 L["Professions Tooltip"] = "专业鼠标提示"
@@ -103,14 +94,10 @@ L["Reset the color to default"] = "重置颜色"
 L["Reset the colors to default"] = "重置颜色"
 L["Respec Buttons"] = "专精按钮"
 L["Right-click to share"] = "右键点击分享"
---[[Translation missing --]]
-L["Row/Col"] = "Row/Col"
---[[Translation missing --]]
-L["Row/Col Info"] = "Row/Col Info"
---[[Translation missing --]]
-L["Scale"] = "Scale"
---[[Translation missing --]]
-L["Scale of the mini tree."] = "Scale of the mini tree."
+L["Row/Col"] = "行/列"
+L["Row/Col Info"] = "行/列 信息"
+L["Scale"] = "缩放"
+L["Scale of the mini tree."] = "迷你天赋树缩放"
 L["Scale Talent Frame"] = "界面缩放"
 L["Search by ID"] = "以 ID 查找"
 L["Shift + Left-Click:"] = "Shift + 左键点击："
@@ -123,13 +110,10 @@ L["Show Example link in chat"] = "发送范例"
 L["Show the difference between your talent choices, and the talent build in Talent Tree Viewer."] = "在 Talent Tree Viewer （天赋模拟器）中，显示你当前的天赋与模拟器中的配置的差异。"
 L["Shows an example of a clickable link in chat."] = "在聊天窗口显示一个可点击连结的示例。"
 L["Shows the difference between your talent choices, and the inspected player's talent choices."] = "显示你与你观察的目标在天赋选择上的差异。"
---[[Translation missing --]]
-L["Simple dots"] = "Simple dots"
---[[Translation missing --]]
-L["Spell Icon"] = "Spell Icon"
+L["Simple dots"] = "简易节点"
+L["Spell Icon"] = "法术图标"
 L["Spell ID"] = "法术 ID"
---[[Translation missing --]]
-L["SpellID"] = "SpellID"
+L["SpellID"] = "法术 ID"
 L["Talent Loadout String"] = "配置字符串"
 L["Talent Tooltip"] = "天赋鼠标提示"
 L["TalentTreeTweaks Diff Viewer"] = "TalentTreeTweaks 差异比对器"

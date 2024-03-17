@@ -308,11 +308,12 @@ local cleanfunction = function() end
 	healthBarMetaFunctions.UpdateHealPrediction = function(self)
 		local currentHealth = self.currentHealth
 		local currentHealthMax = self.currentHealthMax
-		local healthPercent = currentHealth / currentHealthMax
 
 		if (not currentHealthMax or currentHealthMax <= 0) then
 			return
 		end
+
+		local healthPercent = currentHealth / currentHealthMax
 
 		--order is: the health of the unit > damage absorb > heal absorb > incoming heal
 		local width = self:GetWidth()
@@ -1456,8 +1457,22 @@ detailsFramework.CastFrameFunctions = {
 		end
 	end,
 
-	UpdateCastingInfo = function(self, unit)
-		local name, text, texture, startTime, endTime, isTradeSkill, castID, notInterruptible, spellID = CastInfo.UnitCastingInfo(unit)
+	UpdateCastingInfo = function(self, unit, ...)
+		local unitID, castID, spellID = ...
+		local name, text, texture, startTime, endTime, isTradeSkill, uciCastID, notInterruptible, uciSpellID = CastInfo.UnitCastingInfo(unit)
+		spellID = uciSpellID or spellID
+		castID = uciCastID or castID
+		
+		if spellID and (not name or not texture or not text) then
+			local siName, _, siIcon, siCastTime = GetSpellInfo(spellID)
+			texture = texture or siIcon
+			name = name or siName
+			text = text or siName
+			if not startTime then
+				startTime = GetTime()
+				endTime = startTime + siCastTime
+			end
+		end
 
 		--is valid?
 		if (not self:IsValid(unit, name, isTradeSkill, true)) then
@@ -1518,8 +1533,8 @@ detailsFramework.CastFrameFunctions = {
 		self:UpdateInterruptState()
 	end,
 
-	UNIT_SPELLCAST_START = function(self, unit)
-		self:UpdateCastingInfo(unit)
+	UNIT_SPELLCAST_START = function(self, unit, ...)
+		self:UpdateCastingInfo(unit, ...)
 		self:RunHooksForWidget("OnCastStart", self, self.unit, "UNIT_SPELLCAST_START")
 	end,
 
@@ -1569,7 +1584,20 @@ detailsFramework.CastFrameFunctions = {
 
 	UpdateChannelInfo = function(self, unit, ...)
 		local unitID, castID, spellID = ...
-		local name, text, texture, startTime, endTime, isTradeSkill, notInterruptible, spellID, _, numStages = CastInfo.UnitChannelInfo (unit)
+		local name, text, texture, startTime, endTime, isTradeSkill, notInterruptible, uciSpellID, _, numStages = CastInfo.UnitChannelInfo (unit)
+		spellID = uciSpellID or spellID
+		castID = uciCastID or castID
+		
+		if spellID and (not name or not texture or not text) then
+			local siName, _, siIcon, siCastTime = GetSpellInfo(spellID)
+			texture = texture or siIcon
+			name = name or siName
+			text = text or siName
+			if not startTime then
+				startTime = GetTime()
+				endTime = startTime + siCastTime
+			end
+		end
 
 		--is valid?
 		if (not self:IsValid (unit, name, isTradeSkill, true)) then
@@ -1935,6 +1963,7 @@ function detailsFramework:CreateCastBar(parent, name, settingsOverride)
 	--mixins
 	detailsFramework:Mixin(castBar, detailsFramework.CastFrameFunctions)
 	detailsFramework:Mixin(castBar, detailsFramework.StatusBarFunctions)
+
 
 	castBar:CreateTextureMask()
 	castBar:AddMaskTexture(castBar.flashTexture)

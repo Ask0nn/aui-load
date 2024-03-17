@@ -1,10 +1,10 @@
-lightweight tag 185bd019754a74b23eca2d9ab4734810404d5d98 10.1.7-01
+lightweight tag b010a358c1cb0d39cdf67e6245c29ddce499dd54 10.2.5-01
 Author:	Dave Hendler <sollaires@gmail.com>
-Date:	Thu Aug 31 12:39:26 2023 -0700
+Date:	Wed Jan 17 20:00:03 2024 -0800
 
-commit 185bd019754a74b23eca2d9ab4734810404d5d98
+commit b010a358c1cb0d39cdf67e6245c29ddce499dd54
 Author: Dave Hendler <sollaires@gmail.com>
-Date:   Thu Aug 31 12:39:26 2023 -0700
+Date:   Wed Jan 17 20:00:03 2024 -0800
 
-    Bump TOC for 10.1.7
+    Bump TOC for 10.2.5
 

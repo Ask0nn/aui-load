@@ -306,19 +306,16 @@ local Actions = {
           WeakAuras.UpdateGroupOrders(group.data)
           WeakAuras.ClearAndUpdateOptions(group.data.id)
           WeakAuras.ClearAndUpdateOptions(source.data.id)
-          WeakAuras.FillOptions()
           group.callbacks.UpdateExpandButton();
           group:ReloadTooltip()
         else
           WeakAuras.Add(source.data)
           WeakAuras.ClearAndUpdateOptions(source.data.id)
-          WeakAuras.FillOptions()
         end
       else
         -- move source into the top-level list
         WeakAuras.Add(source.data)
         WeakAuras.ClearAndUpdateOptions(source.data.id)
-        WeakAuras.FillOptions()
       end
     else
       error("Calling 'Group' with invalid source. Reload your UI to fix the display list.")
@@ -349,6 +346,7 @@ local Actions = {
     end
   end
 }
+
 
 local function GetAction(target, area)
   if target and area then
@@ -1352,12 +1350,18 @@ local methods = {
     return not OptionsPrivate.IsCollapsed(self.data.id, "displayButton", "", true)
   end,
   ["DisableExpand"] = function(self)
+    if self.expand.disabled then
+      return
+    end
     self.expand:Disable();
     self.expand.disabled = true;
     self.expand.expanded = false;
     self.expand:SetNormalTexture("Interface\\BUTTONS\\UI-PlusButton-Disabled.blp");
   end,
   ["EnableExpand"] = function(self)
+    if not self.expand.disabled then
+      return
+    end
     self.expand.disabled = false;
     if(self:GetExpanded()) then
       self:Expand();
@@ -1414,15 +1418,10 @@ local methods = {
   ["GetGroupOrder"] = function(self)
     return self.frame.dgrouporder;
   end,
-  ["DisableLoaded"] = function(self)
-    self.loaded.title = L["Not Loaded"];
-    self.loaded.desc = L["This display is not currently loaded"];
-    self.loaded:SetNormalTexture("Interface\\BUTTONS\\UI-GuildButton-OfficerNote-Disabled.blp");
-  end,
-  ["EnableLoaded"] = function(self)
-    self.loaded.title = L["Loaded"];
-    self.loaded.desc = L["This display is currently loaded"];
-    self.loaded:SetNormalTexture("Interface\\BUTTONS\\UI-GuildButton-OfficerNote-Up.blp");
+  ["SetLoaded"] = function(self, color, title, description)
+    self.loaded.title = title;
+    self.loaded.desc = description;
+    self.loaded:GetNormalTexture():SetVertexColor(unpack(color))
   end,
   ["Pick"] = function(self)
     self.frame:LockHighlight();
@@ -1727,9 +1726,8 @@ local function Constructor()
   loaded:SetHeight(16);
   loaded:SetPoint("BOTTOM", button, "BOTTOM");
   loaded:SetPoint("LEFT", icon, "RIGHT", 0, 0);
-  loaded:SetNormalTexture("Interface\\BUTTONS\\UI-GuildButton-OfficerNote-Up.blp");
-  loaded:SetDisabledTexture("Interface\\BUTTONS\\UI-GuildButton-OfficerNote-Disabled.blp");
-  --loaded:SetHighlightTexture("Interface\\BUTTONS\\UI-Panel-MinimizeButton-Highlight.blp");
+  loaded:SetNormalTexture("Interface\\AddOns\\WeakAuras\\Media\\Textures\\loaded");
+  loaded:GetNormalTexture():SetVertexColor(0, 0, 0, 0) -- transparent
   loaded.title = L["Loaded"];
   loaded.desc = L["This display is currently loaded"];
   loaded:SetScript("OnEnter", function() Show_Tooltip(button, loaded.title, loaded.desc) end);

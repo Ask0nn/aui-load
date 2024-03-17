@@ -14,6 +14,7 @@ local activeDurations = {}
 local healthPools = {}
 local units = {"boss1", "boss2", "boss3", "boss4", "boss5"}
 local difficultyTable = BigWigsLoader.isRetail and {
+	--[9] = "normal", -- raid40 (molten core/BWL/AQ40)
 	[14] = "normal",
 	[15] = "heroic",
 	[16] = "mythic",
@@ -23,16 +24,17 @@ local difficultyTable = BigWigsLoader.isRetail and {
 	[4] = "25N", -- 25N
 	[5] = "10H", -- 10H
 	[6] = "25H", -- 25H
+	[9] = "normal", -- raid40 (molten core/BWL/AQ40)
 	[175] = "normal", -- raid10 (karazhan) -- move from 3 (fake) to 175 (guessed)
-	[9] = "normal", -- raid40
 	[148] = "normal", -- raid20
 	[176] = "normal", -- raid 25 (sunwell)
+	[198] = "normal", -- raid10 (Blackfathom Deeps - Classic Season of Discovery)
 }
 local SPELL_DURATION_SEC = SPELL_DURATION_SEC -- "%.2f sec"
 local GetTime = GetTime
 
 --[[
-10.1.5
+10.2.0
 1. Normal
 2. Heroic
 3. 10 Player
@@ -76,8 +78,9 @@ local GetTime = GetTime
 171. Path of Ascension: Humility
 172. World Boss
 192. Challenge Level 1
+205. Dungeon Follower
 
-3.4.2
+3.4.3
 1. Normal
 2. Heroic
 3. 10 Player
@@ -93,7 +96,7 @@ local GetTime = GetTime
 193. 10 Player (Heroic)
 194. 25 Player (Heroic)
 
-1.14.4
+1.15.0
 Doesn't return results
 /run for i=1, 1000 do local n = GetDifficultyInfo(i) if n then print(i..".", n) end end
 ]]--
@@ -153,21 +156,25 @@ do
 						type = "toggle",
 						name = L.printWipeOption,
 						order = 1,
+						width = 1.5,
 					},
 					printKills = {
 						type = "toggle",
 						name = L.printDefeatOption,
 						order = 2,
+						width = 1.5,
 					},
 					printHealth = {
 						type = "toggle",
 						name = L.printHealthOption,
 						order = 3,
+						width = 1.5,
 					},
 					printNewBestKill = {
 						type = "toggle",
 						name = L.printBestTimeOption,
 						order = 4,
+						width = 1.5,
 						disabled = function() return not plugin.db.profile.saveBestKill or not plugin.db.profile.enabled end,
 					},
 				},

@@ -14,6 +14,8 @@ local L = WeakAuras.L
 	L["%d |4aura:auras; added"] = "%d |4aura:auras; agregada(s)"
 	L["%d |4aura:auras; deleted"] = "%d |4aura:auras; eliminada(s)"
 	L["%d |4aura:auras; modified"] = "%d |4aura:auras; modificada(s)"
+	--[[Translation missing --]]
+	L["%d |4aura:auras; with meta data modified"] = "%d |4aura:auras; with meta data modified"
 	L["%i auras selected"] = "%i auras seleccionados"
 	--[[Translation missing --]]
 	L["%i."] = "%i."
@@ -68,6 +70,8 @@ local L = WeakAuras.L
 	L["%s %s, Particles: %d, Frequency: %0.2f, Scale: %0.2f"] = "%s %s, Partículas: %d, Frecuencia: %0.2f, Escala: %0.2f"
 	--[[Translation missing --]]
 	L["%s %u. Overlay Function"] = "%s %u. Overlay Function"
+	--[[Translation missing --]]
+	L["%s (%s)"] = "%s (%s)"
 	L["%s Alpha: %d%%"] = "%s Alfa: %d%%"
 	L["%s Color"] = "%s Color"
 	--[[Translation missing --]]
@@ -221,6 +225,8 @@ Enable this setting if you want this timer to be hidden, or when using a WeakAur
 	--[[Translation missing --]]
 	L["and with width |cFFFF0000%s|r and %s"] = "and with width |cFFFF0000%s|r and %s"
 	L["Angle"] = "Ángulo"
+	--[[Translation missing --]]
+	L["Angle Between Auras"] = "Angle Between Auras"
 	L["Animate"] = "Animar"
 	L["Animated Expand and Collapse"] = "Expansión y contracción animada"
 	--[[Translation missing --]]
@@ -457,6 +463,8 @@ UNIT_POWER, UNIT_AURA PLAYER_TARGET_CHANGED]=]
 	L["Delete children and group"] = "Eliminar dependientes y grupo"
 	--[[Translation missing --]]
 	L["Delete Entry"] = "Delete Entry"
+	--[[Translation missing --]]
+	L["Deleting auras: "] = "Deleting auras: "
 	L["Desaturate"] = "Desaturar"
 	--[[Translation missing --]]
 	L["Description"] = "Description"
@@ -589,7 +597,7 @@ UNIT_POWER, UNIT_AURA PLAYER_TARGET_CHANGED]=]
 	--[[Translation missing --]]
 	L["False"] = "False"
 	--[[Translation missing --]]
-	L["Fetch Affected/Unaffected Names"] = "Fetch Affected/Unaffected Names"
+	L["Fetch Affected/Unaffected Names and Units"] = "Fetch Affected/Unaffected Names and Units"
 	--[[Translation missing --]]
 	L["Fetch Raid Mark Information"] = "Fetch Raid Mark Information"
 	--[[Translation missing --]]
@@ -631,6 +639,8 @@ Can use \ to escape -.]=]
 	--[[Translation missing --]]
 	L["Find Auras"] = "Find Auras"
 	L["Finish"] = "Completar"
+	--[[Translation missing --]]
+	L["Finishing..."] = "Finishing..."
 	L["Fire Orb"] = "Orbe de fuego"
 	L["Font"] = "Font"
 	L["Font Size"] = "Tamaño de las banderas"
@@ -786,6 +796,8 @@ Con |cFF00CC00>= 0|r se activará siempre.]=]
 	--[[Translation missing --]]
 	L["Ignore Disconnected"] = "Ignore Disconnected"
 	--[[Translation missing --]]
+	L["Ignore out of casting range"] = "Ignore out of casting range"
+	--[[Translation missing --]]
 	L["Ignore out of checking range"] = "Ignore out of checking range"
 	--[[Translation missing --]]
 	L["Ignore Self"] = "Ignore Self"
@@ -884,6 +896,8 @@ Con |cFF00CC00>= 0|r se activará siempre.]=]
 	L["Load"] = "Cargar"
 	L["Loaded"] = "Cargado"
 	--[[Translation missing --]]
+	L["Loaded/Standby"] = "Loaded/Standby"
+	--[[Translation missing --]]
 	L["Lock Positions"] = "Lock Positions"
 	--[[Translation missing --]]
 	L["Loop"] = "Loop"
@@ -936,6 +950,8 @@ Con |cFF00CC00>= 0|r se activará siempre.]=]
 	L["Move this display down in its group's order"] = "Bajar esta aura conservando el orden de su grupo"
 	L["Move this display up in its group's order"] = "Subir esta aura conservando el orden de su grupo"
 	L["Move Up"] = "Subir"
+	--[[Translation missing --]]
+	L["Moving auras: "] = "Moving auras: "
 	L["Multiple Displays"] = "Múltiples auras"
 	L["Multiselect ignored tooltip"] = [=[|cFFFF0000Ignorado|r - |cFF777777Único|r - |cFF777777Múltiple|r
 Ésta opción no se usará al determinar cuándo se mostrará el aura]=]
@@ -1074,6 +1090,8 @@ every 3 events starting from 2nd and ending at 11th: 2-11/3]=]
 	L["Premade Auras"] = "Premade Auras"
 	--[[Translation missing --]]
 	L["Premade Snippets"] = "Premade Snippets"
+	--[[Translation missing --]]
+	L["Preparing auras: "] = "Preparing auras: "
 	L["Preset"] = "Predefinido"
 	--[[Translation missing --]]
 	L["Press Ctrl+C to copy"] = "Press Ctrl+C to copy"
@@ -1265,6 +1283,8 @@ every 3 events starting from 2nd and ending at 11th: 2-11/3]=]
 	L["Spark Texture"] = "Textura de la chispa"
 	--[[Translation missing --]]
 	L["Specialization"] = "Specialization"
+	--[[Translation missing --]]
+	L["Specific Currency ID"] = "Specific Currency ID"
 	L["Specific Unit"] = "Unidad específica"
 	L["Spell ID"] = "ID de hechizo"
 	--[[Translation missing --]]
@@ -1272,6 +1292,8 @@ every 3 events starting from 2nd and ending at 11th: 2-11/3]=]
 	L["Stack Count"] = "Contador de acumulaciones"
 	L["Stack Info"] = "Información de acumulaciones"
 	L["Stagger"] = "Tambaleo"
+	--[[Translation missing --]]
+	L["Standby"] = "Standby"
 	L["Star"] = "Estrella"
 	L["Start"] = "Comenzar"
 	L["Start Angle"] = "Ángulo de inicio"
@@ -1293,6 +1315,8 @@ every 3 events starting from 2nd and ending at 11th: 2-11/3]=]
 	L["Sub Elements"] = "Sub Elements"
 	--[[Translation missing --]]
 	L["Sub Option %i"] = "Sub Option %i"
+	--[[Translation missing --]]
+	L["Supports multiple entries, separated by commas"] = "Supports multiple entries, separated by commas"
 	--[[Translation missing --]]
 	L["Swipe Overlay Settings"] = "Swipe Overlay Settings"
 	--[[Translation missing --]]
@@ -1339,15 +1363,21 @@ every 3 events starting from 2nd and ending at 11th: 2-11/3]=]
 Make sure you can trust the person who sent it!]=] ] = [=[This aura contains custom Lua code.
 Make sure you can trust the person who sent it!]=]
 	--[[Translation missing --]]
+	L["This aura is marked as an update to an aura '%s', but cannot be used to update that aura. This usually happens if an aura is moved out of a group."] = "This aura is marked as an update to an aura '%s', but cannot be used to update that aura. This usually happens if an aura is moved out of a group."
+	--[[Translation missing --]]
+	L["This aura is marked as an update to auras '%s', but cannot be used to update them. This usually happens if an aura is moved out of a group."] = "This aura is marked as an update to auras '%s', but cannot be used to update them. This usually happens if an aura is moved out of a group."
+	--[[Translation missing --]]
 	L[ [=[This aura was created with a different version (%s) of World of Warcraft.
 It might not work correctly!]=] ] = [=[This aura was created with a different version (%s) of World of Warcraft.
 It might not work correctly!]=]
 	--[[Translation missing --]]
 	L[ [=[This aura was created with a newer version of WeakAuras.
-It might not work correctly with your version!]=] ] = [=[This aura was created with a newer version of WeakAuras.
-It might not work correctly with your version!]=]
+Upgrade your version of WeakAuras or wait for next release before installing this aura.]=] ] = [=[This aura was created with a newer version of WeakAuras.
+Upgrade your version of WeakAuras or wait for next release before installing this aura.]=]
 	L["This display is currently loaded"] = "Esta aura está cargada"
 	L["This display is not currently loaded"] = "Esta aura no está cargada"
+	--[[Translation missing --]]
+	L["This display is on standby, it will be loaded when needed."] = "This display is on standby, it will be loaded when needed."
 	--[[Translation missing --]]
 	L["This enables the collection of debug logs. Custom code can add debug information to the log through the function DebugPrint."] = "This enables the collection of debug logs. Custom code can add debug information to the log through the function DebugPrint."
 	--[[Translation missing --]]
@@ -1442,7 +1472,9 @@ It might not work correctly with your version!]=]
 	--[[Translation missing --]]
 	L["Uses Texture Coordinates to rotate the texture."] = "Uses Texture Coordinates to rotate the texture."
 	--[[Translation missing --]]
-	L["Uses UnitIsVisible() to check if in range. This is polled every second."] = "Uses UnitIsVisible() to check if in range. This is polled every second."
+	L["Uses UnitInRange() to check if in range. Matches default raid frames out of range behavior, which is between 25 to 40 yards depending on your class and spec."] = "Uses UnitInRange() to check if in range. Matches default raid frames out of range behavior, which is between 25 to 40 yards depending on your class and spec."
+	--[[Translation missing --]]
+	L["Uses UnitIsVisible() to check if game client has loaded a object for this unit. This distance is around 100 yards. This is polled every second."] = "Uses UnitIsVisible() to check if game client has loaded a object for this unit. This distance is around 100 yards. This is polled every second."
 	--[[Translation missing --]]
 	L["Value %i"] = "Value %i"
 	--[[Translation missing --]]
@@ -1504,7 +1536,7 @@ WeakAuras will always run custom grow code if you include 'changed' in this list
 	L["Your Saved Snippets"] = "Your Saved Snippets"
 	L["Z Offset"] = "Posición de Z"
 	L["Z Rotation"] = "Rotación de Z"
-	L["Zoom"] = "Ampliar"
+	L["Zoom"] = "Zoom"
 	L["Zoom In"] = "Acercar"
 	L["Zoom Out"] = "Alejar"
 

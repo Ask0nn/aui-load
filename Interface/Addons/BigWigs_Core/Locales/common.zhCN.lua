@@ -4,7 +4,8 @@ if not L then return end
 -- Prototype.lua common words
 L.you = "你 %s"
 L.you_icon = "|T13700%2$d:0|t你 %1$s"
-L.underyou = "你脚下：%s"
+L.underyou = "%s在你脚下"
+L.aboveyou = "%s在你面前"
 L.other = "%s：%s"
 L.onboss = "首领%s"
 L.buff_boss = "首领增益：%s"
@@ -22,7 +23,8 @@ L.count_rticon = "%s（%d{rt%d}）"
 L.rticon = "%s（{rt%d}）"
 L.near = "%s在你附近"
 L.on_group = "队伍 %s" -- spell on group
---L.boss = "BOSS"
+L.boss = "首领"
+L.plus = "%s + %s" -- Spell 1 + Spell 2
 
 L.phase = "阶段%d"
 L.stage = "阶段%d"
@@ -32,24 +34,28 @@ L.mythic = "史诗模式"
 L.hard = "困难模式"
 L.active = "激活" -- When a boss becomes active, after speech finishes
 L.general = "通用" -- General settings, i.e. things that apply to normal, heroic and mythic mode.
-L.absorb = "吸收" -- Used for shield-like abilities that absorb damage or healing
+L.door_open = "门开了" -- When a door is open, usually after a speech from an NPC
+L.gate_open = "门开了" -- When a gate is open, usually after a speech from an NPC
 
 L.duration = "%s持续%s秒" -- Spell for 10 seconds
 L.over = "%s结束" -- Spell Over
 L.removed = "%s移除" -- Spell Removed
 L.removed_from = "%2$s已移除%1$s" -- Spell removed from Player
 L.removed_by = "%s被%s移除" -- Spell removed by Player
-L.removed_after = "%s在%.1f秒后移除" -- "Spell removed after 1.1s" (s = seconds)
+L.removed_after = "%s移除，用时 %.1f 秒" -- "Spell removed after 1.1s" (s = seconds)
 L.incoming = "即将%s" -- Spell Incoming
-L.interrupted = "%s已打断" -- Spell Interrupted
+L.interrupted = "已打断%s" -- Spell Interrupted
 L.interrupted_by = "%2$s已打断%1$s" -- Spell interrupted by Player
 L.no = "缺少%s" -- No Spell
 L.intermission = "阶段转换"
 L.percent = "%d%% - %s" -- 20% - Spell
 L.cancelled = "%s取消" -- Spell Cancelled
+L.you_die = "你将死亡"
+L.you_die_sec = "你将在%d秒后死亡" -- "You die in 15 sec" (sec = seconds)
 
 -- Add related
 L.add_spawned = "小怪刷新"
+L.adds_spawned = "小怪刷新"
 L.spawned = "%s已刷新"
 L.spawning = "%s刷新"
 L.next_add = "下一波小怪"
@@ -63,6 +69,7 @@ L.small_add = "小型增援" -- singular
 L.small_adds = "小型增援" -- plural
 
 -- Mob related
+L.killed = "%s已击杀"
 L.mob_killed = "%s已击杀（%d/%d）"
 L.mob_remaining = "%s已击杀，%d剩余"
 
@@ -115,6 +122,7 @@ L.west = "西"
 L.north_west = "西北"
 
 -- Common ability name replacements
+L.absorb = "吸收" -- Used for shield-like abilities that absorb damage or healing
 L.tank_combo = "坦克连击" -- Used for tank swap mechanics where the boss casts a sequence of tank buster attacks
 L.laser = "激光" -- Used for abilities that act like a laser. Usually from the boss to a player, or, from the boss to a specific area
 L.lasers = "激光" -- Plural of L.lasers
@@ -134,7 +142,10 @@ L.fear = "恐惧" -- For abilities that cause you to flee in fear
 L.breath = "吐息" -- When a boss breathes fire/frost/etc on to a player or the raid e.g. a Dragon breathing fire on everyone
 L.roar = "咆哮" -- When a boss opens their mouth to let out a loud roar, sometimes used to inflict damage on the raid
 L.leap = "跳跃" -- When a boss leaps through the air from one location to another location, or from a location to a player, etc
+L.charge = "冲锋" -- When a boss select a new target and charges at it quickly, in the same way someone playing a warrior can charge at a target
 L.full_energy = "满能量" -- When a boss reaches full/maximum energy, usually the boss will cast something big and powerful when this happens
+L.weakened = "虚弱" -- When a boss becomes weakened and sometimes takes extra damage, usually the "hit all your cooldowns" part of the fight
+L.immune = "免疫" -- When a boss becomes immune to all damage and you can no longer hurt it
 L.pool = "水池" -- A pool or puddle on the ground, usually something bad that you should avoid standing in
 L.pools = "水池" -- Plural of L.pool
 L.totem = "图腾" -- A totem, usually summoned by a boss, the same thing that shamans summon
@@ -145,3 +156,15 @@ L.rift = "裂隙" -- Can be used in a similar way as a portal e.g. "Time Rift" b
 L.rifts = "裂隙" -- Plural of L.rift
 L.orb = "宝珠" -- A ball/sphere object usually moving and you need to avoid it
 L.orbs = "宝珠" -- Plural for L.orb
+L.curse = "诅咒" -- Any curse-type dispellable debuff, or debuffs called "Curse of XYZ", etc.
+L.curses = "诅咒" -- Plural of L.curse
+L.spirit = "精魂" -- Sometimes a boss will summon spirits, similar to ghosts, but not exactly, although you might have the same word for both. e.g. "Spirits of X" or "Wild Spirits"
+L.spirits = "精魂" -- Plural of L.spirit
+L.tornado = "旋风" -- 'A tornado is a violently rotating column of air that is in contact with both the surface of the Earth and a cloud' - Wikipedia
+L.tornadoes = "旋风" -- Plural of L.tornado
+L.frontal_cone = "正面技能" -- Usually a bad Area-of-Effect ability cast by the boss in a cone/triangle/pizza shape in front of them, don't stand in front of the boss!
+L.fear = "恐惧" -- Similar to a warlock or priest ability, when a boss casts a fear on a player or multiple players, that makes them run around out of control
+L.mark = "印记" -- Short name for abilites with "Mark" in the name, for example "Mark of Death" or "Toxic Mark" or "Mark of Frost" etc.
+L.marks = "印记" -- Plural of L.marks
+L.mind_control = "精神控制" -- Any kind of Mind Control ability, where a player loses control of their character
+L.mind_control_short = "精神控制" -- Short version of Mind Control, mainly for bars

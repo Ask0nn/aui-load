@@ -126,13 +126,13 @@ local timersMythic = {
 		[411241] = {17.8, 16.7, 20.0, 20.0, 20.0, 0}, -- Void Claws
 	},
 	[3] = { -- Non decimal timers are taken from a stream (not precise)
-		[404027] = {24.6, 60.0, 57.6}, -- Void Bomb
-		[404288] = {4.6, 53.0, 78.8, 35.3, 34.1}, -- Infinite Duress
-		[403741] = {6.9, 57.6, 93.0, 60}, -- Cosmic Ascension
-		[405486] = {18.6, 80.0, 84.0}, -- Hurtling Barrage
+		[404027] = {24.6, 60.0, 57.6, 90.6}, -- Void Bomb
+		[404288] = {5.6, 53.0, 78.8, 35.3, 34.1}, -- Infinite Duress
+		[403741] = {6.9, 57.6, 93.0, 55.3}, -- Cosmic Ascension
+		[405486] = {18.6, 80.0, 84.0, 63.5}, -- Hurtling Barrage
 		[403625] = {44.6, 73.0, 76.5}, -- Scouring Eternity
-		[403520] = {23.4, 38.2, 26.5, 40.0, 47.0, 34.7}, -- Embrace of Nothingness
-		[408429] = {19.8, 17.7, 36.4, 15.3, 55.2, 35.3}, -- Void Slash
+		[403520] = {23.4, 38.2, 26.5, 40.0, 47.0, 34.7, 26.5}, -- Embrace of Nothingness
+		[408429] = {19.8, 17.7, 36.4, 15.3, 55.2, 35.3, 42.3, 15.3}, -- Void Slash
 	},
 }
 
@@ -433,9 +433,9 @@ do
 				text = CL.bomb
 			end
 			if args.spellId ~= 406428 then -- Dont show message for motes, already have Oblivion messages
-				self:PersonalMessage(spellId, "underyou", text) -- SetOption:404027,401500,406989,406428:::
+				self:PersonalMessage(spellId, "underyou", text) -- SetOption:404027,401500,406989,402746:::
 			end
-			self:PlaySound(spellId, "underyou") -- SetOption:404027,401500,406989,406428:::
+			self:PlaySound(spellId, "underyou") -- SetOption:404027,401500,406989,406428,402746:::
 		end
 	end
 end
@@ -513,7 +513,7 @@ do
 		playerList[args.destName] = count -- Set raid marker
 		if self:Me(args.destGUID) then
 			self:PlaySound(args.spellId, "warning")
-			self:Say(args.spellId, CL.rticon:format(L.mass_disintergrate_single, count))
+			self:Say(args.spellId, CL.rticon:format(L.mass_disintergrate_single, count), nil, ("Disintegrate ({rt%d})"):format(count))
 			self:SayCountdown(args.spellId, 6, count)
 		end
 		self:TargetsMessage(args.spellId, "cyan", playerList, nil, CL.count:format(L.mass_disintergrate, massDisintergrateCount - 1))
@@ -644,7 +644,7 @@ function mod:VoidFractureApplied(args)
 		self:PersonalMessage(404218, nil, CL.bomb)
 		self:PlaySound(404218, "warning")
 		if args.spellId == 404218 then -- Initial say only for the Stage 2 debuffs
-			self:Say(404218, CL.bomb)
+			self:Say(404218, CL.bomb, nil, "Bomb")
 		end
 		local _, _, duration = self:UnitDebuff(args.destName, args.spellId) -- Duration depends on when bomb is picked up, so always different
 		if duration < 2 then -- dont countdown below 2, just run
@@ -747,7 +747,7 @@ do
 		if self:Me(args.destGUID) then
 			onMe = true
 			self:TargetBar(404288, 16, args.destName, L.infinite_duress)
-			self:Say(404288, L.infinite_duress)
+			self:Say(404288, L.infinite_duress, nil, "Infinite Duress")
 			self:SayCountdown(404288, 16)
 			self:PlaySound(404288, "warning")
 		end
@@ -869,7 +869,7 @@ do
 		if self:Me(args.destGUID) then
 			self:PersonalMessage(args.spellId)
 			self:PlaySound(args.spellId, "warning")
-			self:Say(args.spellId, CL.rticon:format(args.spellName, icon))
+			self:Say(args.spellId, CL.rticon:format(args.spellName, icon), nil, ("Hurtling Barrage ({rt%d})"):format(icon))
 			self:SayCountdown(args.spellId, 7, icon)
 		end
 		self:CustomIcon(hurlingBarrageMarker, args.destName, icon)
@@ -903,7 +903,7 @@ function mod:EmbraceOfNothingnessApplied(args)
 	self:TargetMessage(args.spellId, "yellow", args.destName, CL.count:format(L.embrace_of_nothingness, embraceOfNothingnessCount-1))
 	if self:Me(args.destGUID) then
 		self:PlaySound(args.spellId, "warning")
-		self:Yell(args.spellId, L.embrace_of_nothingness)
+		self:Yell(args.spellId, L.embrace_of_nothingness, nil, "Black Hole")
 		self:YellCountdown(args.spellId, 8)
 	end
 end

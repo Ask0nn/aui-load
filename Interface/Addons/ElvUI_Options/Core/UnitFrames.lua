@@ -83,7 +83,7 @@ local function GetOptionsTable_PrivateAuras(updateFunc, groupName, numUnits)
 	config.args.countdownNumbers = ACH:Toggle(L["Cooldown Numbers"], nil, 4)
 
 	config.args.icon = ACH:Group(L["Icon"], nil, 10, nil, function(info) return E.db.unitframe.units[groupName].privateAuras.icon[info[#info]] end, function(info, value) E.db.unitframe.units[groupName].privateAuras.icon[info[#info]] = value updateFunc(UF, groupName, numUnits) end)
-	config.args.icon.args.point = ACH:Select(L["Direction"], nil, 1, C.Values.SidePositions)
+	config.args.icon.args.point = ACH:Select(L["Direction"], nil, 1, C.Values.EdgePositions)
 	config.args.icon.args.offset = ACH:Range(L["Offset"], nil, 2, { min = -4, max = 64, step = 1 })
 	config.args.icon.args.amount = ACH:Range(L["Amount"], nil, 3, { min = 1, max = 5, step = 1 })
 	config.args.icon.args.size = ACH:Range(L["Size"], nil, 4, { min = 6, max = 80, step = 1 })
@@ -278,16 +278,24 @@ end
 local function GetOptionsTable_AuraWatch(updateFunc, groupName, numGroup, subGroup)
 	local config = ACH:Group(L["Aura Indicator"], nil, nil, nil, function(info) return E.db.unitframe.units[groupName].buffIndicator[info[#info]] end, function(info, value) E.db.unitframe.units[groupName].buffIndicator[info[#info]] = value updateFunc(UF, groupName, numGroup) end)
 	config.args.enable = ACH:Toggle(L["Enable"], nil, 1)
-	config.args.size = ACH:Range(L["Size"], nil, 2, { min = 6, max = 48, step = 1 })
-	config.args.countFontSize = ACH:Range(L["Font Size"], nil, 3, { min = 4, max = 20, step = 1 })
-	config.args.profileSpecific = ACH:Toggle(L["Profile Specific"], L["Use the profile specific filter Aura Indicator (Profile) instead of the global filter Aura Indicator."], 4)
-	config.args.configureButton = ACH:Execute(L["Configure Auras"], nil, 5, function() local configString = format('Aura Indicator (%s)', groupName == 'pet' and 'Pet' or E.db.unitframe.units[groupName].buffIndicator.profileSpecific and 'Profile' or 'Class') C:SetToFilterConfig(configString) end)
+
+	config.args.generalGroup = ACH:Group(' ', nil, 2)
+	config.args.generalGroup.args.profileSpecific = ACH:Toggle(L["Profile Specific"], L["Use the profile specific filter Aura Indicator (Profile) instead of the global filter Aura Indicator."], 1)
+	config.args.generalGroup.args.size = ACH:Range(L["Size"], nil, 2, { min = 6, max = 48, step = 1 })
+	config.args.generalGroup.args.configureButton = ACH:Execute(L["Configure Auras"], nil, 3, function() local configString = format('Aura Indicator (%s)', groupName == 'pet' and 'Pet' or E.db.unitframe.units[groupName].buffIndicator.profileSpecific and 'Profile' or 'Class') C:SetToFilterConfig(configString) end)
+	config.args.generalGroup.inline = true
+
+	config.args.countGroup = ACH:Group(L["Count Text"], nil, 15)
+	config.args.countGroup.args.countFont = ACH:SharedMediaFont(L["Font"], nil, 1)
+	config.args.countGroup.args.countFontSize = ACH:Range(L["Font Size"], nil, 2, { min = 4, max = 24, step = 1 })
+	config.args.countGroup.args.countFontOutline = ACH:FontFlags(L["Font Outline"], L["Set the font outline."], 3)
+	config.args.countGroup.inline = true
 
 	if subGroup then
 		config.get = function(info) return E.db.unitframe.units[groupName][subGroup].buffIndicator[info[#info]] end
 		config.set = function(info, value) E.db.unitframe.units[groupName][subGroup].buffIndicator[info[#info]] = value updateFunc(UF, groupName, numGroup) end
 	else
-		config.args.applyToAll = ACH:Group(' ', nil, 50, nil, function(info) return BuffIndicator_ApplyToAll(info, nil, E.db.unitframe.units[groupName].buffIndicator.profileSpecific, groupName == 'pet') end, function(info, value) BuffIndicator_ApplyToAll(info, value, E.db.unitframe.units[groupName].buffIndicator.profileSpecific, groupName == 'pet') updateFunc(UF, groupName, numGroup) end)
+		config.args.applyToAll = ACH:Group(L["Apply To All"], nil, 50, nil, function(info) return BuffIndicator_ApplyToAll(info, nil, E.db.unitframe.units[groupName].buffIndicator.profileSpecific, groupName == 'pet') end, function(info, value) BuffIndicator_ApplyToAll(info, value, E.db.unitframe.units[groupName].buffIndicator.profileSpecific, groupName == 'pet') updateFunc(UF, groupName, numGroup) end)
 		config.args.applyToAll.inline = true
 		config.args.applyToAll.args.header = ACH:Description(L["|cffFF3333Warning:|r Changing options in this section will apply to all Aura Indicator auras. To change only one Aura, please click \"Configure Auras\" and change that specific Auras settings. If \"Profile Specific\" is selected it will apply to that filter set."], 1)
 		config.args.applyToAll.args.style = ACH:Select(L["Style"], nil, 2, { timerOnly = L["Timer Only"], coloredIcon = L["Colored Icon"], texturedIcon = L["Textured Icon"] })
@@ -466,26 +474,26 @@ local individual = {
 	pettarget = true
 }
 
+local function UpdateCustomTextFrame(frame)
+	if frame and frame.customTexts then
+		UF:Configure_CustomTexts(frame)
+		frame:UpdateTags()
+	end
+end
+
 local function UpdateCustomTextGroup(unit)
 	if unit == 'party' or unit:find('raid') then
 		for _, child in next, { UF[unit]:GetChildren() } do
-
 			for _, subchild in next, { child:GetChildren() } do
-				UF:Configure_CustomTexts(subchild)
-				subchild:UpdateTags()
+				UpdateCustomTextFrame(subchild)
 			end
 		end
 	elseif unit == 'boss' or unit == 'arena' then
 		for i = 1, 10 do
-			local unitframe = UF[unit..i]
-			if unitframe then
-				UF:Configure_CustomTexts(unitframe)
-				unitframe:UpdateTags()
-			end
+			UpdateCustomTextFrame(UF[unit..i])
 		end
 	else
-		UF:Configure_CustomTexts(UF[unit])
-		UF[unit]:UpdateTags()
+		UpdateCustomTextFrame(UF[unit])
 	end
 end
 
@@ -582,23 +590,26 @@ local function GetOptionsTable_Fader(updateFunc, groupName, numUnits)
 	local config = ACH:Group(L["Fader"], nil, nil, nil, function(info) return E.db.unitframe.units[groupName].fader[info[#info]] end, function(info, value) E.db.unitframe.units[groupName].fader[info[#info]] = value updateFunc(UF, groupName, numUnits) end)
 	config.args.enable = ACH:Toggle(L["Enable"], nil, 1)
 	config.args.range = ACH:Toggle(L["Range"], nil, 2, nil, nil, nil, nil, nil, disabled, groupName == 'player')
-	config.args.hover = ACH:Toggle(L["Hover"], nil, 3, nil, nil, nil, nil, nil, disabledOrRanged)
-	config.args.combat = ACH:Toggle(L["Combat"], nil, 4, nil, nil, nil, nil, nil, disabledOrRanged)
-	config.args.unittarget = ACH:Toggle(L["Unit Target"], nil, 5, nil, nil, nil, nil, nil, disabledOrRanged, groupName == 'player')
-	config.args.playertarget = ACH:Toggle(groupName == 'player' and L["Target"] or L["Player Target"], nil, 6, nil, nil, nil, nil, nil, disabledOrRanged)
-	config.args.focus = ACH:Toggle(L["Focus"], nil, 7, nil, nil, nil, nil, nil, disabledOrRanged)
-	config.args.health = ACH:Toggle(L["Health"], nil, 8, nil, nil, nil, nil, nil, disabledOrRanged)
-	config.args.power = ACH:Toggle(L["Power"], nil, 9, nil, nil, nil, nil, nil, disabledOrRanged)
-	config.args.vehicle = ACH:Toggle(L["Vehicle"], nil, 10, nil, nil, nil, nil, nil, disabledOrRanged)
-	config.args.casting = ACH:Toggle(L["Casting"], nil, 11, nil, nil, nil, nil, nil, disabledOrRanged)
+	config.args.unittarget = ACH:Toggle(L["Unit Target"], nil, 3, nil, nil, nil, nil, nil, disabledOrRanged, groupName == 'player')
 
-	config.args.spacer1 = ACH:Spacer(12, 'full')
-	config.args.delay = ACH:Range(L["Fade Out Delay"], nil, 13, { min = 0, max = 3, step = 0.01 }, nil, nil, nil, disabledOrRanged)
-	config.args.smooth = ACH:Range(L["Smooth"], nil, 14, { min = 0, max = 1, step = 0.01 }, nil, nil, nil, disabled)
-	config.args.minAlpha = ACH:Range(L["Min Alpha"], nil, 15, { min = 0, max = 1, step = 0.01 }, nil, nil, nil, disabled)
-	config.args.maxAlpha = ACH:Range(L["Max Alpha"], nil, 16, { min = 0, max = 1, step = 0.01 }, nil, nil, nil, disabled)
+	config.args.spacer1 = ACH:Spacer(10, 'full')
+	config.args.hover = ACH:Toggle(L["Hover"], nil, 11, nil, nil, nil, nil, nil, disabledOrRanged)
+	config.args.combat = ACH:Toggle(L["Combat"], nil, 12, nil, nil, nil, nil, nil, disabledOrRanged)
+	config.args.playertarget = ACH:Toggle(groupName == 'player' and L["Target"] or L["Player Target"], nil, 13, nil, nil, nil, nil, nil, disabledOrRanged)
+	config.args.focus = ACH:Toggle(L["Focus"], nil, 14, nil, nil, nil, nil, nil, disabledOrRanged)
+	config.args.health = ACH:Toggle(L["Health"], nil, 15, nil, nil, nil, nil, nil, disabledOrRanged)
+	config.args.power = ACH:Toggle(L["Power"], nil, 16, nil, nil, nil, nil, nil, disabledOrRanged)
+	config.args.vehicle = ACH:Toggle(L["Vehicle"], nil, 17, nil, nil, nil, nil, nil, disabledOrRanged)
+	config.args.casting = ACH:Toggle(L["Casting"], nil, 18, nil, nil, nil, nil, nil, disabledOrRanged)
+	config.args.dynamicflight = ACH:Toggle(E.NewSign..L["Dynamic Flight"], nil, 19, nil, nil, nil, nil, nil, disabledOrRanged)
 
-	config.args.instanceDifficulties = ACH:Group(L["Instance Difficulties"], nil, 30, nil, function(info) return E.db.unitframe.units[groupName].fader.instanceDifficulties[info[#info]] end, function(info, value) E.db.unitframe.units[groupName].fader.instanceDifficulties[info[#info]] = value updateFunc(UF, groupName, numUnits) end)
+	config.args.spacer2 = ACH:Spacer(30, 'full')
+	config.args.delay = ACH:Range(L["Fade Out Delay"], nil, 31, { min = 0, max = 3, step = 0.01 }, nil, nil, nil, disabledOrRanged)
+	config.args.smooth = ACH:Range(L["Smooth"], nil, 32, { min = 0, max = 1, step = 0.01 }, nil, nil, nil, disabled)
+	config.args.minAlpha = ACH:Range(L["Min Alpha"], nil, 33, { min = 0, max = 1, step = 0.01 }, nil, nil, nil, disabled)
+	config.args.maxAlpha = ACH:Range(L["Max Alpha"], nil, 34, { min = 0, max = 1, step = 0.01 }, nil, nil, nil, disabled)
+
+	config.args.instanceDifficulties = ACH:Group(L["Instance Difficulties"], nil, 40, nil, function(info) return E.db.unitframe.units[groupName].fader.instanceDifficulties[info[#info]] end, function(info, value) E.db.unitframe.units[groupName].fader.instanceDifficulties[info[#info]] = value updateFunc(UF, groupName, numUnits) end)
 	config.args.instanceDifficulties.args.none = ACH:Toggle(L["None"], nil, 1, nil, nil, nil, nil, nil, disabled)
 	config.args.instanceDifficulties.args.dungeonNormal = ACH:Toggle(L["Dungeon (normal)"], nil, 2, nil, nil, nil, nil, nil, disabled)
 	config.args.instanceDifficulties.args.dungeonHeroic = ACH:Toggle(L["Dungeon (heroic)"], nil, 3, nil, nil, nil, nil, nil, disabled)
@@ -704,7 +715,7 @@ local function GetOptionsTable_Portrait(updateFunc, groupName, numUnits)
 	local config = ACH:Group(L["Portrait"], nil, nil, nil, function(info) return E.db.unitframe.units[groupName].portrait[info[#info]] end, function(info, value) E.db.unitframe.units[groupName].portrait[info[#info]] = value updateFunc(UF, groupName, numUnits) end)
 	config.args.warning = ACH:Description(function() return (E.db.unitframe.units[groupName].orientation == 'MIDDLE' and L["Overlay mode is forced when the Frame Orientation is set to Middle."]) or '' end, 1, 'medium', nil, nil, nil, nil, 'full')
 	config.args.enable = ACH:Toggle(L["Enable"], nil, 2, nil, L["If you have a lot of 3D Portraits active then it will likely have a big impact on your FPS. Disable some portraits if you experience FPS issues."])
-	config.args.style = ACH:Select(L["Style"], L["Select the display method of the portrait."], 3, { ['2D'] = L["2D"], ['3D'] = L["3D"], Class = L["CLASS"] })
+	config.args.style = ACH:Select(L["Style"], L["Select the display method of the portrait."], 3, { ['3D'] = L["3D"], Class = L["CLASS"] })
 	config.args.paused = ACH:Toggle(L["Pause"], nil, 4, nil, nil, nil, nil, nil, nil, function() return E.db.unitframe.units[groupName].portrait.style ~= '3D' end)
 	config.args.overlay = ACH:Toggle(L["Overlay"], L["The Portrait will overlay the Healthbar. This will be automatically happen if the Frame Orientation is set to Middle."], 5, nil, nil, nil, function(info) return (E.db.unitframe.units[groupName].orientation == 'MIDDLE') or E.db.unitframe.units[groupName].portrait[info[#info]] end, nil, function() return E.db.unitframe.units[groupName].orientation == 'MIDDLE' end)
 	config.args.fullOverlay = ACH:Toggle(L["Full Overlay"], L["This option allows the overlay to span the whole health, including the background."], 6, nil, nil, nil, nil, nil, function() return not (E.db.unitframe.units[groupName].orientation == 'MIDDLE' or E.db.unitframe.units[groupName].portrait.overlay) end)
@@ -953,7 +964,7 @@ local function GetOptionsTable_GeneralGroup(updateFunc, groupName, numUnits)
 	end
 
 	if groupName == 'arena' then
-		config.args.pvpSpecIcon = ACH:Toggle(L["Spec Icon"], L["Display icon on arena frame indicating the units talent specialization or the units faction if inside a battleground."], 5)
+		config.args.pvpSpecIcon = ACH:Toggle(L["Spec Icon"], L["Display icon on arena frame indicating the units talent specialization or the units faction if inside a battleground."], 5, nil, nil, nil, nil, nil, function() return E.db.unitframe.units[groupName].orientation == 'MIDDLE' end)
 	else
 		config.args.threatStyle = ACH:Select(L["Threat Display Mode"], nil, 7, threatValues)
 	end
@@ -1546,7 +1557,7 @@ Arena.generalGroup = GetOptionsTable_GeneralGroup(UF.CreateAndUpdateUFGroup, 'ar
 Arena.pvpTrinket = ACH:Group(L["PVP Trinket"], nil, nil, nil, function(info) return E.db.unitframe.units.arena.pvpTrinket[info[#info]] end, function(info, value) E.db.unitframe.units.arena.pvpTrinket[info[#info]] = value UF:CreateAndUpdateUFGroup('arena', 5) end)
 Arena.pvpTrinket.args.enable = ACH:Toggle(L["Enable"], nil, 1)
 Arena.pvpTrinket.args.size = ACH:Range(L["Size"], nil, 2, { min = 12, max = 64, step = 1 })
-Arena.pvpTrinket.args.anchorPoint = ACH:Select(L["Position"], nil, 3, C.Values.AllPoints)
+Arena.pvpTrinket.args.position = ACH:Select(L["Position"], nil, 3, C.Values.SidePositions)
 Arena.pvpTrinket.args.xOffset = ACH:Range(L["X-Offset"], nil, 4, { min = -100, max = 100, step = 1 })
 Arena.pvpTrinket.args.yOffset = ACH:Range(L["Y-Offset"], nil, 5, { min = -100, max = 100, step = 1 })
 

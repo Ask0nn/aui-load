@@ -25,20 +25,19 @@ do
 	tbl.bossPrototype = boss
 end
 
-local isClassicEra = BigWigsLoader.isVanilla
-local isClassic = BigWigsLoader.isWrath
-
 local L = BigWigsAPI:GetLocale("BigWigs: Common")
+local loader = BigWigsLoader
 local UnitAffectingCombat, UnitIsPlayer, UnitPosition, UnitIsConnected = UnitAffectingCombat, UnitIsPlayer, UnitPosition, UnitIsConnected
 local C_EncounterJournal_GetSectionInfo = function(key) return BigWigsAPI:GetLocale("BigWigs: Encounter Info")[key] end
 local GetSpellInfo, GetSpellTexture, GetTime, IsSpellKnown = GetSpellInfo, GetSpellTexture, GetTime, IsSpellKnown
 local UnitGroupRolesAssigned = UnitGroupRolesAssigned or function(_) end
-local SendChatMessage, GetInstanceInfo, Timer, SetRaidTarget = BigWigsLoader.SendChatMessage, BigWigsLoader.GetInstanceInfo, BigWigsLoader.CTimerAfter, BigWigsLoader.SetRaidTarget
-local UnitName, UnitGUID, UnitHealth, UnitHealthMax = BigWigsLoader.UnitName, BigWigsLoader.UnitGUID, BigWigsLoader.UnitHealth, BigWigsLoader.UnitHealthMax
-local UnitDetailedThreatSituation = BigWigsLoader.UnitDetailedThreatSituation
-local isClassic, isRetail = BigWigsLoader.isClassic, BigWigsLoader.isRetail
+local SendChatMessage, GetInstanceInfo, Timer, SetRaidTarget = loader.SendChatMessage, loader.GetInstanceInfo, loader.CTimerAfter, loader.SetRaidTarget
+local UnitName, UnitGUID, UnitHealth, UnitHealthMax = loader.UnitName, loader.UnitGUID, loader.UnitHealth, loader.UnitHealthMax
+local UnitDetailedThreatSituation = loader.UnitDetailedThreatSituation
+local isClassic, isRetail, isClassicEra = loader.isClassic, loader.isRetail, loader.isVanilla
 local format, find, gsub, band, tremove, twipe = string.format, string.find, string.gsub, bit.band, table.remove, table.wipe
 local select, type, next, tonumber = select, type, next, tonumber
+local PlaySoundFile = loader.PlaySoundFile
 local C = core.C
 local pName = UnitName("player")
 local cpName
@@ -519,10 +518,10 @@ function boss:Disable(isWipe)
 		end
 
 		if self.missing then
-			local newBar = "New timer for %q at stage %d with placement %d and value %.2f on %d running ".. BigWigsLoader:GetVersionString() ..", tell the authors."
+			local newBar = "New timer for %q at stage %d with placement %d and value %.2f on %d running ".. loader:GetVersionString() ..", tell the authors."
 			local newBarError = "New timer for %q at stage %d with placement %d and value %.2f."
 			local difficultyToText = {[14] = "N", [15] = "H", [16] = "M", [17] = "LFR"}
-			local errorHeader = format("BigWigs is missing timers on %q running %s, tell the devs!", difficultyToText[self:Difficulty()] or self:Difficulty(), BigWigsLoader:GetVersionString())
+			local errorHeader = format("BigWigs is missing timers on %q running %s, tell the devs!", difficultyToText[self:Difficulty()] or self:Difficulty(), loader:GetVersionString())
 			local errorStrings = {errorHeader}
 			for key, stageTbl in next, self.missing do
 				for stage = 0, 5, 0.5 do
@@ -663,7 +662,6 @@ do
 	end
 
 	local args = {}
-	local COMBATLOG_OBJECT_TYPE_PLAYER = COMBATLOG_OBJECT_TYPE_PLAYER
 	local CombatLogGetCurrentEventInfo = CombatLogGetCurrentEventInfo
 	bossUtilityFrame:SetScript("OnEvent", function()
 		local time, event, _, sourceGUID, sourceName, sourceFlags, sourceRaidFlags, destGUID, destName, destFlags, destRaidFlags, spellId, spellName, _, extraSpellId, amount = CombatLogGetCurrentEventInfo()
@@ -677,7 +675,7 @@ do
 						local m = eventMap[self][event]
 						if m and m[mobId] then
 							local func = m[mobId]
-							args.mobId, args.destGUID, args.destName, args.destFlags, args.destRaidFlags = mobId, destGUID, destName, destFlags, args.destRaidFlags
+							args.mobId, args.destGUID, args.destName, args.destFlags, args.destRaidFlags, args.time = mobId, destGUID, destName, destFlags, destRaidFlags, time
 							if type(func) == "function" then
 								func(args)
 							else
@@ -690,12 +688,8 @@ do
 				for i = #enabledModules, 1, -1 do
 					local self = enabledModules[i]
 					local m = eventMap[self][event]
-					local func = m and (m[spellId] or m[spellName] or m["*"])
-					if func then
-						-- Classic Era: By default we only care about non-player spells (exempting "*")
-						if m[spellName] and band(sourceFlags, COMBATLOG_OBJECT_TYPE_PLAYER) ~= 0 and (not unfilteredEventSpells[self][event] or not unfilteredEventSpells[self][event][spellName]) then
-							return
-						end
+					if m and (m[spellId] or m["*"]) then
+						local func = m[spellId] or m["*"]
 						-- DEVS! Please ask if you need args attached to the table that we've missed out!
 						args.sourceGUID, args.sourceName, args.sourceFlags, args.sourceRaidFlags = sourceGUID, sourceName, sourceFlags, sourceRaidFlags
 						args.destGUID, args.destName, args.destFlags, args.destRaidFlags = destGUID, destName, destFlags, destRaidFlags
@@ -718,30 +712,15 @@ do
 		if not event or not func then core:Print(format(missingArgument, self.moduleName)) return end
 		if type(func) ~= "function" and not self[func] then core:Print(format(missingFunction, self.moduleName, func)) return end
 		if not eventMap[self][event] then eventMap[self][event] = {} end
-		local numSpells = select("#", ...)
-		local nofilter = select(numSpells, ...) == true
-		if nofilter then numSpells = numSpells - 1 end
-		for i = 1, numSpells do
-			local spell = select(i, ...)
-			if type(spell) == "number" then
-				local id = spell
-				if isClassicEra then
-					spell = GetSpellInfo(spell)
-				elseif not GetSpellInfo(spell) then
-					spell = nil
+		for i = 1, select("#", ...) do
+			local id = select(i, ...)
+			if (type(id) == "number" and GetSpellInfo(id)) or id == "*" then
+				if eventMap[self][event][id] then
+					core:Print(format(multipleRegistration, self.moduleName, event, id))
 				end
-				if not spell then
-					core:Print(format(invalidId, self.moduleName, tostring(id), event))
-					return
-				end
-			end
-			if eventMap[self][event][spell] then
-				core:Print(format(multipleRegistration, self.moduleName, event, spell))
-			end
-			eventMap[self][event][spell] = func
-			if nofilter then
-				if not unfilteredEventSpells[self][event] then unfilteredEventSpells[self][event] = {} end
-				unfilteredEventSpells[self][event][spell] = true
+				eventMap[self][event][id] = func
+			else
+				core:Print(format(invalidId, self.moduleName, tostring(id), event))
 			end
 		end
 		allowedEvents[event] = true
@@ -1442,7 +1421,7 @@ function boss:GetHealth(unit)
 end
 
 do
-	local UnitAura = UnitAura
+	local UnitAura = C_UnitAuras and C_UnitAuras.GetAuraDataByIndex or UnitAura
 	local blacklist = {}
 	--- Get the buff info of a unit.
 	-- @string unit unit token or name
@@ -1459,6 +1438,14 @@ do
 			local t1, t2, t3, t4, t5
 			for i = 1, 100 do
 				local name, _, stack, _, duration, expirationTime, _, _, _, spellId, _, _, _, _, _, value = UnitAura(unit, i, "HELPFUL")
+				if type(name) == "table" then
+					stack = name.applications
+					duration = name.duration
+					expirationTime = name.expirationTime
+					spellId = name.spellId
+					value = name.points and name.points[1]
+					name = name.name
+				end
 
 				if name == spell then
 					if not blacklist[spellId] then
@@ -1475,6 +1462,14 @@ do
 		else
 			for i = 1, 100 do
 				local name, _, stack, auraType, duration, expirationTime, _, _, _, spellId, _, _, _, _, _, value = UnitAura(unit, i, "HELPFUL")
+				if type(name) == "table" then
+					stack = name.applications
+					duration = name.duration
+					expirationTime = name.expirationTime
+					spellId = name.spellId
+					value = name.points and name.points[1]
+					name = name.name
+				end
 
 				if not spellId then
 					return
@@ -1505,6 +1500,14 @@ do
 			local t1, t2, t3, t4, t5
 			for i = 1, 100 do
 				local name, _, stack, _, duration, expirationTime, _, _, _, spellId, _, _, _, _, _, value = UnitAura(unit, i, "HARMFUL")
+				if type(name) == "table" then
+					stack = name.applications
+					duration = name.duration
+					expirationTime = name.expirationTime
+					spellId = name.spellId
+					value = name.points and name.points[1]
+					name = name.name
+				end
 
 				if name == spell then
 					if not blacklist[spellId] then
@@ -1521,6 +1524,14 @@ do
 		else
 			for i = 1, 100 do
 				local name, _, stack, auraType, duration, expirationTime, _, _, _, spellId, _, _, _, _, _, value = UnitAura(unit, i, "HARMFUL")
+				if type(name) == "table" then
+					stack = name.applications
+					duration = name.duration
+					expirationTime = name.expirationTime
+					spellId = name.spellId
+					value = name.points and name.points[1]
+					name = name.name
+				end
 
 				if not spellId then
 					return
@@ -2209,16 +2220,6 @@ do
 		end
 	end
 
-	local markerIcons = {
-		"|T137001:0|t",
-		"|T137002:0|t",
-		"|T137003:0|t",
-		"|T137004:0|t",
-		"|T137005:0|t",
-		"|T137006:0|t",
-		"|T137007:0|t",
-		"|T137008:0|t",
-	}
 	local comma = (GetLocale() == "zhTW" or GetLocale() == "zhCN") and "，" or ", "
 	local tconcat = table.concat
 	do
@@ -2242,7 +2243,7 @@ do
 				else
 					if markers then
 						for i = 1, playersInTable do
-							playerTable[i] = markerIcons[markers[i]] .. playerTable[i]
+							playerTable[i] = self:GetIconTexture(markers[i]) .. playerTable[i]
 						end
 					end
 					local list = tconcat(playerTable, comma, 1, playersInTable)
@@ -2348,7 +2349,7 @@ do
 						local name = playerTable[i]
 						local hasMarker = playerTable[name]
 						if hasMarker then
-							local markerFromTable = markerIcons[hasMarker]
+							local markerFromTable = self:GetIconTexture(hasMarker)
 							if markerFromTable then
 								tbl[#tbl+1] = markerFromTable .. self:ColorName(name)
 							else
@@ -2801,6 +2802,25 @@ do
 	end
 end
 
+do
+	local markerIcons = {
+		"|T137001:0|t",
+		"|T137002:0|t",
+		"|T137003:0|t",
+		"|T137004:0|t",
+		"|T137005:0|t",
+		"|T137006:0|t",
+		"|T137007:0|t",
+		"|T137008:0|t",
+	}
+	--- Get the raid target icon texture from a number ranging from 1-8
+	-- @number position The number from 1-8
+	-- @return string A texture you can embed into a string
+	function boss:GetIconTexture(position)
+		return markerIcons[position]
+	end
+end
+
 -------------------------------------------------------------------------------
 -- Chat.
 -- @section chat
@@ -2978,8 +2998,15 @@ function boss:PlayVictorySound()
 	self:SendMessage("BigWigs_VictorySound", self)
 end
 
+--- Play a sound file.
+-- @param sound Either a FileID (number), or the path to a sound file (string)
+-- @string[opt] channel the channel the sound should play on, defaults to "Master"
+function boss:PlaySoundFile(sound, channel)
+	PlaySoundFile(sound, channel or "Master")
+end
+
 do
-	local SendAddonMessage, IsInGroup = BigWigsLoader.SendAddonMessage, IsInGroup
+	local SendAddonMessage, IsInGroup = loader.SendAddonMessage, IsInGroup
 	--- Send an addon sync to other players.
 	-- @param msg the sync message/prefix
 	-- @param[opt] extra other optional value you want to send
@@ -3063,12 +3090,6 @@ function boss:Berserk(seconds, noMessages, customBoss, customBerserk, customFina
 	end
 
 	if noMessages ~= 0 then
-		-- Half-way to enrage warning.
-		local half = seconds / 2
-		local m = half % 60
-		local halfMin = (half - m) / 60
-		self:DelayedMessage(key, half + m, "yellow", format(L.custom_min, berserk, halfMin))
-
 		self:DelayedMessage(key, seconds - 60, "orange", format(L.custom_min, berserk, 1))
 		self:DelayedMessage(key, seconds - 30, "orange", format(L.custom_sec, berserk, 30))
 		self:DelayedMessage(key, seconds - 10, "orange", format(L.custom_sec, berserk, 10))

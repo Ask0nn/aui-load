@@ -1,18 +1,18 @@
-## Interface: 100105
+## Interface: 100205
 ## Author: Ripdisk
-## Version: 8.0.1
+## Version: 9.9.9
 ## Title: |cff7381ffAtrocityUI|r
 ## Notes: AtrocityUI Installer and Media
 ## DefaultState: enabled
 ## SavedVariables: AtrocityUIDB
-## X-BigWigs: 8.0.0
-## X-Details: 8.0.0
-## X-ElvUI: 8.0.0
-## X-MRT: 7.0.0
-## X-OmniCD: 7.1.0
-## X-Plater: 8.0.1
-## X-WeakAuras: 8.0.1
-## X-WarpDeplete: 7.1.0
+## X-BigWigs: 9.9.9
+## X-Details: 9.9.9
+## X-ElvUI: 9.9.9
+## X-MRT: 9.9.9
+## X-OmniCD: 9.9.9
+## X-Plater: 9.9.9
+## X-WeakAuras: 9.9.9
+## X-WarpDeplete: 9.9.9
 ## RequiredDeps: ElvUI
 ## OptionalDeps: AtrocityMedia
 

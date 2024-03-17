@@ -7,6 +7,10 @@ local LibTalentTree = LibStub:NewLibrary(MAJOR, MINOR);
 
 if not LibTalentTree then return end -- No upgrade needed
 
+if not C_ClassTalents or not C_ClassTalents.InitializeViewLoadout then
+    error('LibTalentTree requires C_ClassTalents.InitializeViewLoadout to be available');
+end
+
 local MAX_LEVEL = 70;
 -- taken from ClassTalentUtil.GetVisualsForClassID
 local CLASS_OFFSETS = {
@@ -57,20 +61,20 @@ local BASE_PAN_OFFSET_Y = -30;
 ---@field targetNode number # TraitNodeID
 
 ---@class libNodeInfo
----@field ID: number # TraitNodeID
----@field posX: number
----@field posY: number
----@field type: nodeType # see Enum.TraitNodeType
----@field maxRanks: number
----@field flags: nodeFlags # see Enum.TraitNodeFlag
----@field groupIDs: number[]
----@field visibleEdges: visibleEdge[] # The order does not always match C_Traits
----@field conditionIDs: number[]
----@field entryIDs: number[] # TraitEntryID - generally, choice nodes will have 2, otherwise there's just 1
----@field specInfo: table<number, number[]> # specId: conditionType[] Deprecated, will be removed in 10.1.0; see Enum.TraitConditionType
----@field visibleForSpecs: table<number, boolean> # specId: true/false, true if a node is visible for a spec; added in 10.1.0
----@field grantedForSpecs: table<number, boolean> # specId: true/false, true if a node is granted for free, for a spec; added in 10.1.0
----@field isClassNode: boolean
+---@field ID number # TraitNodeID
+---@field posX number
+---@field posY number
+---@field type nodeType # see Enum.TraitNodeType
+---@field maxRanks number
+---@field flags nodeFlags # see Enum.TraitNodeFlag
+---@field groupIDs number[]
+---@field visibleEdges visibleEdge[] # The order does not always match C_Traits
+---@field conditionIDs number[]
+---@field entryIDs number[] # TraitEntryID - generally, choice nodes will have 2, otherwise there's just 1
+---@field specInfo table<number, number[]> # specId: conditionType[] Deprecated, will be removed in 10.1.0; see Enum.TraitConditionType
+---@field visibleForSpecs table<number, boolean> # specId: true/false, true if a node is visible for a spec; added in 10.1.0
+---@field grantedForSpecs table<number, boolean> # specId: true/false, true if a node is granted for free, for a spec; added in 10.1.0
+---@field isClassNode boolean
 
 ---@class entryInfo
 ---@field definitionID number # TraitDefinitionID
@@ -256,11 +260,7 @@ local function buildCache()
     end
 end
 
-if C_ClassTalents and C_ClassTalents.InitializeViewLoadout then
-    buildCache();
-else
-    error('LibTalentTree requires C_ClassTalents.InitializeViewLoadout to be available');
-end
+buildCache();
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------

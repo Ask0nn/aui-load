@@ -9,7 +9,6 @@ local ClearOnBarHighlightMarks = ClearOnBarHighlightMarks
 local ClearOverrideBindings = ClearOverrideBindings
 local CreateFrame = CreateFrame
 local GetBindingKey = GetBindingKey
-local GetCVarBool = GetCVarBool
 local GetOverrideBarIndex = GetOverrideBarIndex
 local GetSpellBookItemInfo = GetSpellBookItemInfo
 local GetTempShapeshiftBarIndex = GetTempShapeshiftBarIndex
@@ -25,9 +24,9 @@ local PetDismiss = PetDismiss
 local RegisterStateDriver = RegisterStateDriver
 local SecureHandlerSetFrameRef = SecureHandlerSetFrameRef
 local SetClampedTextureRotation = SetClampedTextureRotation
-local SetCVar = SetCVar
 local SetModifiedClick = SetModifiedClick
 local SetOverrideBindingClick = SetOverrideBindingClick
+local UIParent = UIParent
 local UnitAffectingCombat = UnitAffectingCombat
 local UnitCastingInfo = UnitCastingInfo
 local UnitChannelInfo = UnitChannelInfo
@@ -52,6 +51,8 @@ local C_PetBattles_IsInBattle = C_PetBattles and C_PetBattles.IsInBattle
 local C_PlayerInfo_GetGlidingInfo = C_PlayerInfo and C_PlayerInfo.GetGlidingInfo
 local ClearPetActionHighlightMarks = ClearPetActionHighlightMarks or PetActionBar.ClearPetActionHighlightMarks
 local ActionBarController_UpdateAllSpellHighlights = ActionBarController_UpdateAllSpellHighlights
+
+local GetCVarBool = C_CVar.GetCVarBool
 
 local LAB = E.Libs.LAB
 local LSM = E.Libs.LSM
@@ -90,7 +91,7 @@ AB.barDefaults = {
 
 do
 	-- https://github.com/Gethe/wow-ui-source/blob/6eca162dbca161e850b735bd5b08039f96caf2df/Interface/FrameXML/OverrideActionBar.lua#L136
-	local fullConditions = (E.Retail or E.Wrath) and format('[vehicleui][possessbar] %d; [overridebar] %d;', GetVehicleBarIndex(), GetOverrideBarIndex()) or ''
+	local fullConditions = (E.Retail or E.Wrath) and format('[overridebar] %d; [vehicleui][possessbar] %d;', GetOverrideBarIndex(), GetVehicleBarIndex()) or ''
 	AB.barDefaults.bar1.conditions = fullConditions..format('[shapeshift] %d; [bar:2] 2; [bar:3] 3; [bar:4] 4; [bar:5] 5; [bar:6] 6; [bonusbar:5] 11;', GetTempShapeshiftBarIndex())
 end
 
@@ -200,26 +201,10 @@ function AB:TrimIcon(button, masque)
 	local icon = button.icon or button.Icon
 	if not icon then return end
 
-	local left, right, top, bottom = unpack(button.db and button.db.customCoords or E.TexCoords)
-	local changeRatio = button.db and not button.db.keepSizeRatio
-
-	if changeRatio then
-		local width, height = button:GetSize()
-		local ratio = width / height
-		if ratio > 1 then
-			local trimAmount = (1 - (1 / ratio)) * 0.5
-			top = top + trimAmount
-			bottom = bottom - trimAmount
-		else
-			local trimAmount = (1 - ratio) * 0.5
-			left = left + trimAmount
-			right = right - trimAmount
-		end
-	end
-
-	-- always when masque is off, otherwise only when keepSizeRatio is off
-	if not masque or changeRatio then
-		icon:SetTexCoord(left, right, top, bottom)
+	if button.db and not button.db.keepSizeRatio then
+		icon:SetTexCoord(E:CropRatio(button, button.db.customCoords))
+	elseif not masque then
+		icon:SetTexCoord(unpack(E.TexCoords))
 	end
 end
 
@@ -244,10 +229,39 @@ function AB:MoverMagic(bar) -- ~Simpy
 	end
 end
 
+function AB:ActivePages(page)
+	local pages = {}
+	local clean = gsub(page, '%[.-]', '')
+
+	for _, index in next, { strsplit(';', clean) } do
+		local num = tonumber(index)
+		if num then
+			pages[num] = true
+		end
+	end
+
+	return pages
+end
+
+function AB:HandleButtonState(button, index, vehicleIndex, pages)
+	for k = 1, 18 do
+		if pages and pages[k] then
+			button:SetState(k, 'action', (k - 1) * 12 + index)
+		else
+			button:SetState(k, 'empty')
+		end
+	end
+
+	if pages and vehicleIndex and index == 12 then
+		button:SetState(vehicleIndex, 'custom', AB.customExitButton)
+	end
+end
+
 function AB:PositionAndSizeBar(barName)
 	local db = AB.db[barName]
 	local bar = AB.handledBars[barName]
 
+	local enabled = db.enabled
 	local buttonSpacing = db.buttonSpacing
 	local backdropSpacing = db.backdropSpacing
 	local buttonsPerRow = db.buttonsPerRow
@@ -276,7 +290,16 @@ function AB:PositionAndSizeBar(barName)
 
 	local _, horizontal, anchorUp, anchorLeft = AB:GetGrowth(point)
 	local button, lastButton, lastColumnButton, anchorRowButton, lastShownButton
+	local vehicleIndex = (E.Retail or E.Wrath) and GetVehicleBarIndex()
 
+	-- paging needs to be updated even if the bar is disabled
+	local defaults = AB.barDefaults[barName]
+	local page = AB:GetPage(barName, defaults.page, defaults.conditions)
+	RegisterStateDriver(bar, 'page', page)
+	bar:SetAttribute('page', page)
+
+	local reticleColor = E:UpdateClassColor(AB.db.targetReticleColor)
+	local pages = enabled and AB:ActivePages(page) or nil
 	for i = 1, NUM_ACTIONBAR_BUTTONS do
 		lastButton = bar.buttons[i-1]
 		lastColumnButton = bar.buttons[i-buttonsPerRow]
@@ -296,6 +319,12 @@ function AB:PositionAndSizeBar(barName)
 			lastShownButton = button
 		end
 
+		local targetReticle = button.TargetReticleAnimFrame
+		if targetReticle then
+			targetReticle.Base:SetVertexColor(reticleColor.r, reticleColor.g, reticleColor.b)
+		end
+
+		AB:HandleButtonState(button, i, vehicleIndex, pages)
 		AB:HandleButton(bar, button, i, lastButton, lastColumnButton)
 		AB:StyleButton(button, nil, bar.MasqueGroup and E.private.actionbar.masque.actionbars)
 	end
@@ -307,13 +336,7 @@ function AB:PositionAndSizeBar(barName)
 		AB:UpdateMasque(bar)
 	end
 
-	-- paging needs to be updated even if the bar is disabled
-	local defaults = AB.barDefaults[barName]
-	local page = AB:GetPage(barName, defaults.page, defaults.conditions)
-	RegisterStateDriver(bar, 'page', page)
-	bar:SetAttribute('page', page)
-
-	if db.enabled then
+	if enabled then
 		E:EnableMover(bar.mover.name)
 		bar:Show()
 
@@ -353,25 +376,25 @@ function AB:CreateBar(id)
 	AB:HookScript(bar, 'OnEnter', 'Bar_OnEnter')
 	AB:HookScript(bar, 'OnLeave', 'Bar_OnLeave')
 
-	local vehicleIndex = (E.Retail or E.Wrath) and GetVehicleBarIndex()
-
 	for i = 1, 12 do
 		local button = LAB:CreateButton(i, format('%sButton%d', barName, i), bar)
-		button:SetState(0, 'action', i)
 
 		button.AuraCooldown.targetAura = true
 		E:RegisterCooldown(button.AuraCooldown, 'actionbar')
 
-		for k = 1, 18 do
-			button:SetState(k, 'action', (k - 1) * 12 + i)
-		end
-
-		if vehicleIndex and i == 12 then
-			button:SetState(vehicleIndex, 'custom', AB.customExitButton)
-		end
-
 		if E.Retail then
 			button.ProfessionQualityOverlayFrame = CreateFrame('Frame', nil, button, 'ActionButtonProfessionOverlayTemplate')
+		end
+
+		local targetReticle = button.TargetReticleAnimFrame
+		if targetReticle then
+			targetReticle:SetAllPoints()
+
+			targetReticle.Base:SetTexCoord(unpack(E.TexCoords))
+			targetReticle.Base:SetTexture(E.Media.Textures.TargetReticle)
+			targetReticle.Base:SetInside()
+
+			targetReticle.Highlight:SetInside()
 		end
 
 		button.MasqueSkinned = true -- skip LAB styling (we handle it and masque as well)
@@ -461,7 +484,7 @@ function AB:CreateVehicleLeave()
 	E:CreateMover(holder, 'VehicleLeaveButton', L["VehicleLeaveButton"], nil, nil, nil, 'ALL,ACTIONBARS', nil, 'actionbar,extraButtons,vehicleExitButton')
 
 	button:ClearAllPoints()
-	button:SetParent(_G.UIParent)
+	button:SetParent(UIParent)
 	button:Point('CENTER', holder)
 
 	-- taints because of EditModeManager, in UpdateBottomActionBarPositions
@@ -488,7 +511,7 @@ function AB:CreateVehicleLeave()
 	hooksecurefunc(button, 'SetPoint', function(_, _, parent)
 		if parent ~= holder then
 			button:ClearAllPoints()
-			button:SetParent(_G.UIParent)
+			button:SetParent(UIParent)
 			button:Point('CENTER', holder)
 		end
 	end)
@@ -599,7 +622,7 @@ function AB:UpdateButtonSettings(specific)
 	for barName, bar in pairs(AB.handledBars) do
 		if not specific or specific == barName then
 			AB:UpdateButtonConfig(barName, bar.bindButtons) -- config them first
-			AB:PositionAndSizeBar(barName) -- db is set here, button style also runs here
+			AB:PositionAndSizeBar(barName) -- db is set here, button style, and paging also runs here
 
 			for _, button in ipairs(bar.buttons) do
 				AB:StyleFlyout(button)
@@ -636,6 +659,8 @@ function AB:UpdateButtonSettings(specific)
 			if LAB.FlyoutButtons then
 				AB:LAB_FlyoutSpells()
 			end
+		elseif (E.Wrath and E.myclass == 'SHAMAN') and AB.db.totemBar.enable then
+			AB:PositionAndSizeTotemBar()
 		end
 	end
 end
@@ -682,9 +707,11 @@ function AB:StyleButton(button, noBackdrop, useMasque, ignoreNormal)
 
 	if flash then
 		if AB.db.flashAnimation then
+			local flashOffset = E.PixelMode and 2 or 4
+
 			flash:SetColorTexture(1.0, 0.2, 0.2, 0.45)
 			flash:ClearAllPoints()
-			flash:SetOutside(icon, 2, 2)
+			flash:SetOutside(icon, flashOffset, flashOffset)
 			flash:SetDrawLayer('BACKGROUND', -1)
 		else
 			flash:SetTexture()
@@ -926,7 +953,6 @@ do
 	end
 end
 
-local SpellBookTooltip = CreateFrame('GameTooltip', 'ElvUISpellBookTooltip', E.UIParent, 'GameTooltipTemplate')
 function AB:SpellBookTooltipOnUpdate(elapsed)
 	self.elapsed = (self.elapsed or 0) + elapsed
 	if self.elapsed < TOOLTIP_UPDATE_TIME then return end
@@ -938,7 +964,7 @@ end
 
 function AB:SpellButtonOnEnter(_, tt)
 	-- TT:MODIFIER_STATE_CHANGED uses this function to safely update the spellbook tooltip when the actionbar module is disabled
-	if not tt then tt = SpellBookTooltip end
+	if not tt then tt = E.SpellBookTooltip end
 
 	if tt:IsForbidden() then return end
 	tt:SetOwner(self, 'ANCHOR_RIGHT')
@@ -976,7 +1002,7 @@ function AB:SpellButtonOnEnter(_, tt)
 		tt:AddLine(_G.SPELLBOOK_SPELL_NOT_ON_ACTION_BAR, color.r, color.g, color.b)
 	end
 
-	if tt == SpellBookTooltip then
+	if tt == E.SpellBookTooltip then
 		tt:SetScript('OnUpdate', (needsUpdate and AB.SpellBookTooltipOnUpdate) or nil)
 	end
 
@@ -989,7 +1015,7 @@ end
 
 function AB:UpdateSpellBookTooltip(event)
 	-- only need to check the shown state when its not called from TT:MODIFIER_STATE_CHANGED which already checks the shown state
-	local button = (not event or SpellBookTooltip:IsShown()) and SpellBookTooltip:GetOwner()
+	local button = (not event or E.SpellBookTooltip:IsShown()) and E.SpellBookTooltip:GetOwner()
 	if button then AB.SpellButtonOnEnter(button) end
 end
 
@@ -1001,8 +1027,8 @@ function AB:SpellButtonOnLeave()
 		ActionBarController_UpdateAllSpellHighlights()
 	end
 
-	SpellBookTooltip:Hide()
-	SpellBookTooltip:SetScript('OnUpdate', nil)
+	E.SpellBookTooltip:Hide()
+	E.SpellBookTooltip:SetScript('OnUpdate', nil)
 end
 
 function AB:ButtonEventsRegisterFrame(added)
@@ -1304,7 +1330,9 @@ function AB:UpdateButtonConfig(barName, buttonName)
 	bar.buttonConfig.hideElements.macro = not db.macrotext
 	bar.buttonConfig.hideElements.hotkey = not db.hotkeytext
 
+	bar.buttonConfig.enabled = db.enabled -- only used to keep events off for targetReticle
 	bar.buttonConfig.showGrid = db.showGrid
+	bar.buttonConfig.targetReticle = db.targetReticle
 	bar.buttonConfig.clickOnDown = GetCVarBool('ActionButtonUseKeyDown')
 	bar.buttonConfig.outOfRangeColoring = (AB.db.useRangeColorText and 'hotkey') or 'button'
 	bar.buttonConfig.colors.range = E:SetColorTable(bar.buttonConfig.colors.range, AB.db.noRangeColor)
@@ -1381,6 +1409,7 @@ function AB:FixKeybindText(button)
 		text = gsub(text, 'SHIFT%-', L["KEY_SHIFT"])
 		text = gsub(text, 'ALT%-', L["KEY_ALT"])
 		text = gsub(text, 'CTRL%-', L["KEY_CTRL"])
+		text = gsub(text, 'META%-', L["KEY_META"])
 		text = gsub(text, 'BUTTON', L["KEY_MOUSEBUTTON"])
 		text = gsub(text, 'MOUSEWHEELUP', L["KEY_MOUSEWHEELUP"])
 		text = gsub(text, 'MOUSEWHEELDOWN', L["KEY_MOUSEWHEELDOWN"])
@@ -1690,7 +1719,7 @@ function AB:Initialize()
 	LAB.RegisterCallback(AB, 'OnCooldownUpdate', AB.LAB_CooldownUpdate)
 	LAB.RegisterCallback(AB, 'OnCooldownDone', AB.LAB_CooldownDone)
 
-	AB.fadeParent = CreateFrame('Frame', 'Elv_ABFade', _G.UIParent)
+	AB.fadeParent = CreateFrame('Frame', 'Elv_ABFade', UIParent)
 	AB.fadeParent:SetAlpha(1 - (AB.db.globalFadeAlpha or 0))
 	AB.fadeParent:RegisterEvent('PLAYER_REGEN_DISABLED')
 	AB.fadeParent:RegisterEvent('PLAYER_REGEN_ENABLED')
@@ -1771,7 +1800,7 @@ function AB:Initialize()
 	end
 
 	-- We handle actionbar lock for regular bars, but the lock on PetBar needs to be handled by WoW so make some necessary updates
-	SetCVar('lockActionBars', (AB.db.lockActionBars and 1 or 0))
+	E:SetCVar('lockActionBars', AB.db.lockActionBars and 1 or 0)
 	_G.LOCK_ACTIONBAR = (AB.db.lockActionBars and '1' or '0') -- Keep an eye on this, in case it taints
 
 	if E.Retail then

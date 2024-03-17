@@ -4,41 +4,41 @@ local atrocityUI = select(2, ...)
 atrocityUI.VMRT["1440p"] = {
 	["Note"] = {
 		["Outline"] = true,
-		["FontSize"] = 15,
+		["FontSize"] = 14,
+		["Alpha"] = 100,
 		["AutoLoad"] = {
 		},
-		["Left"] = -1.999897599220276,
+		["LastUpdateTime"] = 1704222966,
+		["Left"] = -1.999898195266724,
 		["HideOutsideRaid"] = true,
 		["ShowOnlyInRaid"] = true,
+		["PersonalWidth"] = 200.0001220703125,
 		["OnlyPromoted"] = true,
 		["Fix"] = true,
-		["BlackNames"] = {
-		},
-		["ScaleBack"] = 0,
-		["Text1"] = "{time:00:39}00:39 - ||cfff88379AoE 1 - 205k||r - ||cffc59a6cJacobw||r {spell:97462}  ||cff006fdcJustdb||r {spell:192077}  ||cff33937fDudeguyfive||r {spell:363534}  \n{time:00:53}00:53 - ||cffdf9dc3Heart||r - ||cff33937fDudeguyfive||r {spell:374968}  ||cfffefefeTwistedbenke||r {spell:64843}  \n{time:01:16}01:16 - ||cffaa0000AoE 2 - 411k||r - ||cffa22fc8Dcn||r {spell:196718}  ||cfffefefeTwistedbenke||r {spell:265202}  ||cff006fdcJustdb||r {spell:98008}  ||cfffe7b09Kadss||r {spell:77764}  ||cfffefefeDbpriest||r {spell:64843}  ||cffc59a6cTriplew||r {spell:97462}  \n{time:01:30}01:30 - ||cffdf9dc3Heart||r - ||cfffe7b09Kadss||r {spell:77764}  \n{time:01:53}01:53 - ||cffe68e3dAoE 3 - 616k||r - ||cfff38bb9Karztuh||r {spell:31821}  ||cff33937fDudeguyfive||r {spell:359816}  {everyone} {text}Personals{/text}  ||cfffefefeTwistedbenke||r {spell:64901}  ||cfffefefeDbpriest||r {spell:265202}  \n{time:02:07}02:07 - ||cffdf9dc3Heart||r - ||cfff38bb9Flowbss||r {spell:204018}  ||cfff38bb9Karztuh||r {spell:199448}  ||cff33937fDudeguyfive||r {spell:357170}  \n{time:02:30}02:30 - ||cffe68e3dAoE 4 - 821k||r - ||cffc31d39Syzlakdeekay||r {spell:51052}  {everyone} {text}Personals{/text}  ||cff33937fDudeguyfive||r {spell:374227}  ||cff33937fWingwong||r {spell:374227}  ||cff33937fGoosomething||r {spell:374227}  \n{time:02:44}02:30 - ||cff555555Break Walls||r - ||cfffe7b09Kadss||r {spell:77764}  \n{time:00:57,SCS:409313:1}03:44 - ||cff8dc63fcorruption movement||r - Reltwo {spell:77764}  ||cff33937fGoosomething||r {spell:374968}  \n{time:01:03,SCS:409313:1}03:50 - ||cffaa0000AoE 2 - 275k||r - {everyone} {text}Personals{/text}  ||cff33937fDudeguyfive||r {spell:370984}  \n{time:01:26,SCS:409313:1}04:13 - ||cfff1c232Tank Break Wall DOT||r - ||cfffefefeTwistedbenke||r {spell:64843}  ||cff33937fDudeguyfive||r \n{time:01:33,SCS:409313:1}04:20 - ||cffaa0000AoE 3 - 410k||r - ||cffc59a6cJacobw||r {spell:97462}  ||cfffefefeTwistedbenke||r {spell:265202}  ||cffa22fc8Dcn||r {spell:196718}  Waveweaver {spell:192077}  ||cff33937fDudeguyfive||r {spell:363534}  ||cff33937fDudeguyfive||r {spell:359816}  ||cff006fdcJustdb||r {spell:98008}  \n{time:01:37,SCS:409313:1}04:24 - ||cffab8b00DoT 7s remaining||r - ||cfffefefeDbpriest||r {spell:64901}  \n{time:01:40,SCS:409313:1}04:27 - ||cff8811ffBreak Walls||r - ||cff33937fDudeguyfive||r {spell:374968}  ||cfffefefeDbpriest||r {spell:265202}  \n{time:01:43,SCS:409313:1}04:30 - ||cff8dc63fcorruption movement||r - ||cfffe7b09Kadss||r {spell:77764}  \n{time:01:50,SCS:409313:1}04:37 - ||cffdf9dc3Volcanic Heart 6||r - ||cff33937fDudeguyfive||r {spell:374227}  ||cff33937fWingwong||r {spell:374227}  \n{time:02:04,SCS:409313:1}04:51 - ||cffaa0000AoE 4 - 531k||r - ||cfff38bb9Karztuh||r {spell:31821}  ||cffc31d39Syzlakdeekay||r {spell:51052}  ||cfffefefeDbpriest||r {spell:64843}  ||cffc59a6cTriplew||r {spell:97462}  \n{time:02:15,SCS:409313:1}05:02 - ||cffdf9dc3Volcanic Heart 7||r - ||cfff38bb9Flowbss||r {spell:199448}  ||cfff38bb9Karztuh||r {spell:199448}  ||cff33937fDudeguyfive||r {spell:357170}  ||cfffefefeTwistedbenke||r {spell:47788}  \n{time:00:42,SAR:404045:1}05:57 - Big Bang - ||cff33937fGoosomething||r {spell:374968}  \n{time:00:49,SAR:404045:1}06:04 - ||cfff1c232DoT 20s||r - ||cfffefefeTwistedbenke||r {spell:64901}  \n{time:01:12,SAR:404045:1}06:27 - Big Bang - ||cff006fdcFriddlop||r {spell:192077}  ||cff33937fDudeguyfive||r {spell:374968}  \n{time:01:42,SAR:404045:1}06:57 - Big Bang - ||cff33937fDudeguyfive||r {spell:374227}  ||cff33937fWingwong||r {spell:374227}  ||cff33937fGoosomething||r {spell:374227}  ||cff33937fWingwong||r {spell:374968}  \n\"\n\n",
-		["OptionsFormatting"] = true,
-		["enabled"] = true,
-		["Strata"] = "BACKGROUND",
-		["SelfText"] = "",
-		["LastUpdateName"] = "Dudeguyfive-Mal'Ganis",
-		["TimerOnlyMy"] = true,
-		["LastUpdateTime"] = 1689126533,
-		["FontName"] = "Interface\\AddOns\\ElvUI\\Media\\Fonts\\Expressway.ttf",
-		["Width"] = 487,
 		["BlackLastUpdateName"] = {
 		},
+		["ScaleBack"] = 0,
+		["Text1"] = " ",
+		["PersonalHeight"] = 100.0000076293945,
+		["enabled"] = true,
+		["Height"] = 224.0000152587891,
+		["FontName"] = "Interface\\AddOns\\ElvUI\\Media\\Fonts\\Expressway.ttf",
+		["LastUpdateName"] = "Atrocityedge",
+		["Black"] = {
+		},
+		["Top"] = 1376.000732421875,
+		["TimerPassedHide"] = true,
+		["Width"] = 386,
+		["EnableWhenReceive"] = true,
+		["HideInCombat"] = true,
 		["BlackLastUpdateTime"] = {
 		},
-		["Black"] = {
-			"", -- [1]
-			"", -- [2]
-			"", -- [3]
+		["OptionsFormatting"] = true,
+		["TimerOnlyMy"] = true,
+		["SelfText"] = "",
+		["Strata"] = "BACKGROUND",
+		["BlackNames"] = {
 		},
-		["EnableWhenReceive"] = true,
-		["Height"] = 360,
-		["TimerPassedHide"] = true,
-		["Top"] = 1441.00048828125,
-		["Alpha"] = 100,
 	},
 	["ProfileKeys"] = {
 		["Transmogguy-KirinTor"] = "default",
@@ -72,44 +72,50 @@ atrocityUI.VMRT["1440p"] = {
 		["Atrocityxz-Bloodscalp"] = "default",
 		["Traydora-MythicDungeonHeroes-US"] = "default",
 		["Temozo-MythicDungeonHeroes-US"] = "default",
-		["Atrocityhaku-Mal'Ganis"] = "AtrocityUI",
-		["Atrocityfive-Illidan"] = "AtrocityUI",
 		["Atrocitybmah-Frostwolf"] = "default",
-		["Atrocitywm-USMythicDungeons"] = "default",
+		["Atrocitydark-Mal'Ganis"] = "AtrocityUI",
+		["Atrocitysaga-Mal'Ganis"] = "AtrocityUI",
 		["Atrocitydk-MythicDungeonHeroes-US"] = "default",
 		["Gidle-Illidan"] = "default",
-		["Transmogguy-Dawnbringer"] = "default",
+		["Atrocityhaku-Mal'Ganis"] = "AtrocityUI",
+		["Atrocityzero-Mal'Ganis"] = "default",
+		["Atrocityfive-Illidan"] = "AtrocityUI",
+		["Atrocityxe-Mal'Ganis"] = "default",
+		["Atrocitywm-USMythicDungeons"] = "default",
 		["Atrocitybmah-Azralon"] = "default",
-		["Atrocitypbj-MythicDungeonHeroes-US"] = "default",
+		["Atrocityxe-USMythicDungeons"] = "AtrocityUI",
+		["Transmogguy-Dawnbringer"] = "default",
+		["Testggxx-Illidan"] = "default",
+		["Atrocityyh-MythicDungeonHeroes-US"] = "default",
 		["Atrocityr-MythicDungeonHeroes-US"] = "default",
 		["Transmogguy-Frostwolf"] = "default",
 		["Nkarrija-Illidan"] = "default",
 		["Atrocityr-Illidan"] = "AtrocityUI",
 		["Atrocityev-Illidan"] = "default",
-		["Atrocityxe-USMythicDungeons"] = "AtrocityUI",
-		["Atrocityyh-MythicDungeonHeroes-US"] = "default",
-		["Atrocitychad-MythicDungeonHeroes-US"] = "default",
+		["Atrocitym-Illidan"] = "AtrocityUI",
+		["Atrocityfour-Illidan"] = "default",
+		["Atrocityw-Illidan"] = "AtrocityUI",
 		["Atrocityzu-MythicDungeonHeroes-US"] = "default",
-		["Atrocity-Whisperwind"] = "default",
-		["Atrocityy-Illidan"] = "default",
-		["Zeroego-Illidan"] = "default",
+		["Atrocitychad-MythicDungeonHeroes-US"] = "default",
 		["Atrocityd-Illidan"] = "default",
+		["Zeroego-Illidan"] = "default",
+		["Atrocitybmah-KirinTor"] = "default",
 		["Padmaster-Illidan"] = "AtrocityUI",
 		["Atrocitywarr-Illidan"] = "default",
 		["Atrocitypork-MythicDungeonHeroes-US"] = "default",
-		["Atrocitym-Illidan"] = "AtrocityUI",
-		["Atrocityfour-Illidan"] = "default",
-		["Atrocityedgy-MythicDungeonHeroes-US"] = "default",
-		["Atrocitybmah-Kargath"] = "default",
 		["Atrocityhunt-Illidan"] = "AtrocityUI",
-		["Atrocity-MythicDungeonHeroes-US"] = "default",
 		["Atrocityskye-Mal'Ganis"] = "AtrocityUI",
-		["Atrocityctc-MythicDungeonHeroes-US"] = "default",
+		["Atrocitysnow-Mal'Ganis"] = "AtrocityUI",
+		["Atrocitybmah-Kargath"] = "default",
 		["Atrocityhulk-MythicDungeonHeroes-US"] = "default",
-		["Atrocitybmah-Ravenholdt"] = "default",
+		["Atrocity-MythicDungeonHeroes-US"] = "default",
+		["Atrocitybmah-Drak'thul"] = "default",
+		["Atrocityw-Mal'Ganis"] = "default",
+		["Atrocityedgy-MythicDungeonHeroes-US"] = "default",
+		["Tartetalla-Illidan"] = "default",
 		["Atrocitysake-Mal'Ganis"] = "AtrocityUI",
 		["Atrocityjune-Mal'Ganis"] = "AtrocityUI",
-		["Atrocityxo-MythicDungeonHeroes-US"] = "default",
+		["Transmoguy-Dawnbringer"] = "default",
 		["Atrocity-USMythicDungeons"] = "AtrocityUI",
 		["Atrocitybmah-Mal'Ganis"] = "default",
 		["Atrocitydab-MythicDungeonHeroes-US"] = "default",
@@ -118,37 +124,38 @@ atrocityUI.VMRT["1440p"] = {
 		["Atrocityh-Illidan"] = "default",
 		["Atrocitybna-MythicDungeonHeroes-US"] = "default",
 		["Atrocitykfk-Illidan"] = "AtrocityUI",
-		["Transmoguy-Dawnbringer"] = "default",
+		["Atrocitydh-MythicDungeonHeroes-US"] = "default",
 		["Atrocityev-Mal'Ganis"] = "AtrocityUI",
 		["Testinyo-USMythicDungeons"] = "default",
-		["Atrocitydh-MythicDungeonHeroes-US"] = "default",
+		["Atrocityxo-MythicDungeonHeroes-US"] = "default",
 		["Atrocitynoir-Mal'Ganis"] = "AtrocityUI",
-		["Atrocitybmah-KirinTor"] = "default",
-		["Atrocitybmah-Drak'thul"] = "default",
+		["Atrocityctc-MythicDungeonHeroes-US"] = "default",
+		["Atrocitybmah-Ravenholdt"] = "default",
 		["Atrocitywoot-MythicDungeonHeroes-US"] = "default",
-		["Tartetalla-Illidan"] = "default",
-		["Teiltelteil-Illidan"] = "default",
 		["Atrocityp-Illidan"] = "AtrocityUI",
+		["Teiltelteil-Illidan"] = "default",
 		["Atrocitybmah-Andorhal"] = "default",
+		["Atrocity-Whisperwind"] = "default",
 		["Atrocitydr-Illidan"] = "AtrocityUI",
 		["Atrocitybmah-Gundrak"] = "default",
-		["Atrocityw-Illidan"] = "AtrocityUI",
 		["Atrocityz-MythicDungeonHeroes-US"] = "default",
+		["Atrocityy-Illidan"] = "default",
 		["Atrocitywl-Mal'Ganis"] = "default",
 		["Atrocitysix-Illidan"] = "AtrocityUI",
-		["Testggxx-Illidan"] = "default",
+		["Atrocitypbj-MythicDungeonHeroes-US"] = "default",
 		["Atrocitybdx-MythicDungeonHeroes-US"] = "default",
 		["Givemount-MythicDungeonHeroes-US"] = "default",
 		["Atrocitybmah-Akama"] = "default",
 		["Atrocitymagi-Illidan"] = "AtrocityUI",
 		["Atrocity-Illidan"] = "AtrocityUI",
-		["Atrocityxe-Mal'Ganis"] = "default",
+		["Atrocityedge-Mal'Ganis"] = "AtrocityUI",
 	},
 	["Encounter"] = {
 		["names"] = {
 			[2580] = "Balakar Khan",
 			[1868] = "Patrol Captain Gerdo",
 			[2581] = "Teera and Maruuk",
+			[2709] = "Igira the Cruel",
 			[2582] = "Leymor",
 			[1869] = "Talixae Flamewreath",
 			[2583] = "Telash Greywing",
@@ -160,119 +167,160 @@ atrocityUI.VMRT["1440p"] = {
 			[1808] = "God-King Skovald",
 			[2590] = "The Primal Council",
 			[1682] = "Ner'zhul",
+			[1746] = "Witherbark",
 			[2592] = "Sennarth, The Cold Breath",
+			[2084] = "Priestess Alun'za",
+			[2085] = "Vol'kaal",
 			[1748] = "Grimrail Enforcers",
+			[2086] = "Rezan",
+			[2087] = "Yazma",
 			[1749] = "Fleshrender Nok'gar",
+			[1047] = "Ozumat",
+			[1418] = "Wise Mari",
 			[1750] = "Oshir",
+			[1044] = "Commander Ulthok",
+			[2728] = "Council of Dreams",
+			[1045] = "Lady Naz'jar",
+			[1751] = "Archmage Sol",
 			[1815] = "Tirathon Saltheril",
+			[2094] = "Council o' Captains",
 			[1688] = "Nhallish",
+			[2731] = "Larodar, Keeper of the Flame",
 			[1816] = "Ash'Golm",
+			[1042] = "Asaad",
 			[2605] = "Kurog Grimtotem",
-			[2606] = "Kokia Blazehoof",
+			[1043] = "Grand Vizier Ertan",
+			[2096] = "Lord Harlan Sweete",
+			[1817] = "Glazer",
 			[2607] = "Raszageth the Storm-Eater",
 			[1754] = "Skulloc, Son of Gruul",
 			[1818] = "Cordana Felsong",
-			[2609] = "Melidrussa Chillworn",
-			[2610] = "Magmatusk",
 			[2356] = "Ventunax",
+			[2609] = "Melidrussa Chillworn",
+			[2737] = "Volcoross",
+			[2610] = "Magmatusk",
+			[2824] = "Smolderon",
+			[2611] = "Warlord Sargha",
+			[1756] = "Yalnu",
 			[2357] = "Kin-Tara",
+			[2613] = "Chargath, Bane of Scales",
 			[2358] = "Oryphrion",
+			[1757] = "Ancient Protectors",
 			[2359] = "Devos, Paragon of Loyalty",
 			[2360] = "Kryxis the Voracious",
+			[1439] = "Sha of Doubt",
+			[1041] = "Altairus",
 			[2361] = "Executor Tarvold",
+			[2312] = "Trixie & Naeno",
 			[2362] = "Grand Proctor Beryllia",
 			[2363] = "General Kaal",
+			[2618] = "Primal Tsunami",
+			[1679] = "Bonemaw",
 			[2364] = "Kul'tharok",
-			[2365] = "Gorechop",
 			[2366] = "Xav the Unfallen",
+			[2365] = "Gorechop",
+			[2565] = "Echo of Doragosa",
+			[2111] = "Elder Leaxa",
+			[2614] = "Broodkeeper Diurna",
 			[2112] = "Sporecaller Zancha",
+			[2113] = "Heartsbane Triad",
 			[2623] = "Kyrakka and Erkhart Stormvein",
 			[2017] = "Viz'aduum the Watcher",
+			[2114] = "Soulbound Goliath",
+			[2436] = "Guardian of the First Ones",
+			[2115] = "Raal the Gluttonous",
 			[1954] = "Maiden of Virtue",
+			[2116] = "Lord and Lady Waycrest",
+			[1805] = "Hymdall",
+			[2117] = "Gorak Tul",
+			[2616] = "Gulping Goliath",
 			[2118] = "Cragmaw the Infested",
-			[2611] = "Warlord Sargha",
-			[1418] = "Wise Mari",
+			[2689] = "The Vigilant Steward, Zskarn",
+			[1677] = "Sadana Bloodfury",
+			[2688] = "Kazzara, the Hellforged",
+			[2617] = "Khajin the Unyielding",
+			[2687] = "The Amalgamation Chamber",
 			[1957] = "Opera Hall",
-			[1042] = "Asaad",
-			[1043] = "Grand Vizier Ertan",
-			[2111] = "Elder Leaxa",
-			[2123] = "Unbound Abomination",
-			[1041] = "Altairus",
-			[2613] = "Chargath, Bane of Scales",
-			[1817] = "Glazer",
-			[2380] = "Echelon",
 			[2381] = "Lord Chamberlain",
-			[2636] = "The Raging Tempest",
-			[1416] = "Liu Flameheart",
-			[2382] = "Globgrog",
+			[2380] = "Echelon",
+			[1793] = "Dargrul the Underking",
+			[2123] = "Unbound Abomination",
+			[2430] = "Painsmith Raznal",
+			[1832] = "Amalgam of Souls",
+			[2684] = "Echo of Neltharion",
 			[1959] = "Mana Devourer",
+			[1792] = "Naraxas",
+			[2636] = "The Raging Tempest",
+			[1705] = "Imperator Mar'gok",
+			[2382] = "Globgrog",
 			[2383] = "Hungering Destroyer",
-			[1806] = "Hyrja",
-			[2384] = "Doctor Ickus",
+			[1833] = "Ilysanna Ravencrest",
+			[1834] = "Smashspite the Hateful",
+			[2639] = "Terros",
 			[2257] = "Tussle Tonks",
 			[2385] = "Domina Venomblade",
 			[2258] = "K.U.-J.0.",
 			[2386] = "Stradama Margrave",
 			[2259] = "Machinist's Garden",
-			[2387] = "Blightbone",
+			[1835] = "Lord Kur'talos Ravencrest",
 			[2260] = "King Mechagon",
 			[2388] = "Amarth, The Harvester",
-			[1705] = "Imperator Mar'gok",
+			[1836] = "Archdruid Glaidalis",
 			[2389] = "Surgeon Stitchflesh",
-			[2312] = "Trixie & Naeno",
 			[2390] = "Nalthor the Rimebinder",
-			[2095] = "Ring of Booty",
-			[2391] = "An Affront of Challengers",
-			[2616] = "Gulping Goliath",
-			[2392] = "Mistcaller",
-			[1805] = "Hymdall",
-			[2393] = "Tred'ova",
-			[2617] = "Khajin the Unyielding",
-			[2394] = "The Manastorms",
-			[1677] = "Sadana Bloodfury",
-			[2395] = "Hakkar, the Soulflayer",
-			[2635] = "Dathea, Ascended",
-			[2396] = "Mueh'zala",
-			[2436] = "Guardian of the First Ones",
-			[2397] = "Ingra Maloch",
 			[1964] = "The Curator",
-			[2398] = "Shriekwing",
+			[1837] = "Oakheart",
+			[2391] = "An Affront of Challengers",
+			[2680] = "Rashok, the Elder",
+			[2392] = "Mistcaller",
+			[2387] = "Blightbone",
+			[1838] = "Dresaron",
+			[1960] = "Attumen the Huntsman",
+			[2394] = "The Manastorms",
+			[2395] = "Hakkar, the Soulflayer",
+			[1839] = "Shade of Xavius",
 			[1809] = "Odyn",
-			[2399] = "Sludgefist",
+			[2396] = "Mueh'zala",
 			[1965] = "Shade of Medivh",
+			[2397] = "Ingra Maloch",
+			[2677] = "Fyrakk the Blazing",
+			[2398] = "Shriekwing",
+			[2512] = "Vigilant Guardian",
+			[2399] = "Sludgefist",
+			[2095] = "Ring of Booty",
 			[2400] = "Dealer Xy'exa",
-			[2689] = "The Vigilant Steward, Zskarn",
+			[2393] = "Tred'ova",
 			[2401] = "Halkias, the Sin-Stained Goliath",
 			[2529] = "Halondrus the Reclaimer",
-			[1715] = "Rocketspark and Borka",
 			[2402] = "Sun King's Salvation",
+			[1715] = "Rocketspark and Borka",
 			[2403] = "High Adjudicator Aleez",
-			[2688] = "Kazzara, the Hellforged",
+			[2786] = "Tindral Sageswift, Seer of the Flame",
 			[2404] = "Mordretha",
-			[2618] = "Primal Tsunami",
+			[2673] = "Chrono-Lord Deios",
 			[2405] = "Artificer Xy'mox",
-			[2687] = "The Amalgamation Chamber",
+			[2672] = "Time-Lost Battlefield",
 			[2406] = "Lady Inerva Darkvein",
-			[2639] = "Terros",
+			[2291] = "HK-8 Aerial Oppression Unit",
 			[2407] = "Sire Denathrius",
-			[2512] = "Vigilant Guardian",
-			[1793] = "Dargrul the Underking",
-			[2430] = "Painsmith Raznal",
+			[1723] = "Ko'ragh",
 			[2412] = "The Council of Blood",
+			[2417] = "Stone Legion Generals",
+			[2667] = "Manifested Timeways",
 			[2537] = "The Jailer",
 			[1719] = "Twin Ogron",
-			[2684] = "Echo of Neltharion",
-			[1792] = "Naraxas",
+			[1722] = "Tectus, The Living Mountain",
+			[2666] = "Chronikar",
 			[2539] = "Lihuvim, Principal Architect",
 			[1720] = "Brackenspore",
 			[2540] = "Dausegne, the Fallen Oracle",
-			[2615] = "Watcher Irideus",
-			[2637] = "Granyth",
+			[2668] = "Blight of Galakrond",
 			[1721] = "Kargath Bladefist",
+			[2669] = "Iridikron",
 			[2542] = "Skolex, the Insatiable Ravener",
-			[2417] = "Stone Legion Generals",
+			[2670] = "Tyr, the Infinite Keeper",
 			[2543] = "Lords of Dread",
-			[1722] = "Tectus, The Living Mountain",
+			[2671] = "Morchie",
 			[2544] = "Prototype Pantheon",
 			[1850] = "Inquisitor Tormentorum",
 			[2290] = "King Gobbamak",
@@ -281,13 +329,13 @@ atrocityUI.VMRT["1440p"] = {
 			[2419] = "Timecap'n Hooktail",
 			[2292] = "Gunker",
 			[1706] = "The Butcher",
-			[2291] = "HK-8 Aerial Oppression Unit",
-			[1723] = "Ko'ragh",
+			[1961] = "Moroes",
+			[2615] = "Watcher Irideus",
 			[2549] = "Rygelon",
 			[2422] = "Kel'Thuzad",
-			[2680] = "Rashok, the Elder",
+			[2637] = "Granyth",
 			[2423] = "The Tarragrue",
-			[1961] = "Moroes",
+			[2384] = "Doctor Ickus",
 			[2424] = "Mailroom Mayhem",
 			[1790] = "Rokmora",
 			[2425] = "Zo'phex the Sentinel",
@@ -305,7 +353,7 @@ atrocityUI.VMRT["1440p"] = {
 			[2431] = "Fatescribe Roh-Kalo",
 			[2559] = "Chrono-Lord Deios",
 			[2432] = "Remnant of Ner'zhul",
-			[1960] = "Attumen the Huntsman",
+			[2635] = "Dathea, Ascended",
 			[2433] = "The Eye of the Jailer",
 			[2612] = "Forgemaster Gorek",
 			[2434] = "Soulrender Dormazain",
@@ -315,10 +363,10 @@ atrocityUI.VMRT["1440p"] = {
 			[1732] = "Nitrogg Thundertower",
 			[2564] = "Crawth",
 			[2437] = "So'azmi",
-			[2565] = "Echo of Doragosa",
+			[2820] = "Gnarlroot",
 			[2693] = "The Forgotten Experiments",
-			[1679] = "Bonemaw",
-			[2614] = "Broodkeeper Diurna",
+			[1806] = "Hyrja",
+			[1416] = "Liu Flameheart",
 			[2567] = "Gutshot",
 			[2440] = "Myza's Oasis",
 			[2568] = "Treemouth",
@@ -326,15 +374,285 @@ atrocityUI.VMRT["1440p"] = {
 			[2569] = "Decatriarch Wratheye",
 			[2442] = "So'leah",
 			[2570] = "Hackclaw's War-Band",
-			[1439] = "Sha of Doubt",
+			[2606] = "Kokia Blazehoof",
 			[1417] = "Lorewalker Stonestep",
 			[1736] = "Skylord Tovra",
 			[2093] = "Skycap'n Kragg",
-			[2094] = "Council o' Captains",
+			[2708] = "Nymue, Weaver of the Cycle",
 			[2063] = "Aggramar",
-			[2096] = "Lord Harlan Sweete",
+			[1046] = "Mindbender Ghur'sha",
 		},
 		["list"] = {
+			["Atrocitysoju"] = {
+				"^2590^15^1674698894^5^0^27^389.33^", -- [1]
+				"^2590^15^1674698975^152^1^29^391.70^Jetsp", -- [2]
+				"^2635^15^1674699381^206^1^29^393.97^Arcinde", -- [3]
+				"^2639^15^1674699908^0^0^29^393.17^", -- [4]
+				"^2639^15^1674699947^208^1^29^391.91^Kxingxing", -- [5]
+				"^2592^15^1674700372^0^0^27^392.64^", -- [6]
+				"^2592^15^1674700490^226^1^30^392.78^Relpriest", -- [7]
+				"^2605^15^1674700767^2^0^28^392.78^Goozee", -- [8]
+				"^2605^15^1674700845^0^0^28^394.08^", -- [9]
+				"^2605^15^1674700927^279^1^30^395.99^Jetsp", -- [10]
+				"^2614^15^1674701546^312^1^30^393.65^Relpriest", -- [11]
+				"^2607^15^1674702137^364^0^30^392.41^Relpriest", -- [12]
+				"^2607^15^1674702598^654^1^30^393.15^Relpriest", -- [13]
+				"^2587^16^1674703923^206^1^20^396.91^Kimsamsung", -- [14]
+				"^2590^16^1674704458^5^0^20^398.57^", -- [15]
+				"^2590^16^1674704575^271^1^20^398.91^Relpriest", -- [16]
+				"^2609^8^1674781854^174^1^5^403.34^", -- [17]
+				"^2606^8^1674782846^175^1^5^399.06^Lilgayecho-Illidan", -- [18]
+				"^2623^8^1674783401^126^1^5^395.94^", -- [19]
+				"^1677^8^1674891884^131^0^5^404.94^Atrocitysoju", -- [20]
+				"^1677^8^1674892110^164^1^5^404.94^", -- [21]
+				"^1688^8^1674892469^142^1^5^404.94^Roymixd", -- [22]
+				"^1679^8^1674893057^159^1^5^404.94^Roymixd", -- [23]
+				"^1682^8^1674893395^157^0^5^402.91^Quigs", -- [24]
+				"^1682^8^1674893595^153^1^5^402.91^Hardyw", -- [25]
+				"^2587^16^1675224877^191^1^20^398.89^", -- [26]
+				"^2590^16^1675225362^5^0^20^398.89^", -- [27]
+				"^2590^16^1675225426^260^1^20^398.89^Zekkelock", -- [28]
+				"^1677^8^1675480368^170^1^5^407.82^", -- [29]
+				"^1688^8^1675480651^148^1^5^407.82^", -- [30]
+				"^1679^8^1675481053^164^1^5^407.82^", -- [31]
+				"^1682^8^1675481356^228^1^5^407.82^", -- [32]
+				"^1868^8^1675482269^136^1^5^406.07^", -- [33]
+				"^1869^8^1675483046^117^1^5^406.07^", -- [34]
+				"^1870^8^1675483352^173^1^5^406.07^Flowbsy", -- [35]
+				"^1868^8^1675484168^105^0^5^410.16^Mestupid-Illidan", -- [36]
+				"^1868^8^1675484304^131^1^5^410.16^", -- [37]
+				"^1869^8^1675485015^92^1^5^410.16^", -- [38]
+				"^1870^8^1675485391^153^1^5^410.16^", -- [39]
+				"^2637^8^1675734111^161^1^5^407.29^", -- [40]
+				"^2636^8^1675734620^187^1^5^407.29^", -- [41]
+				"^2581^8^1675735302^193^1^5^407.29^", -- [42]
+				"^2580^8^1675735709^245^1^5^407.29^Mallaarkus-Illidan", -- [43]
+				"^2563^8^1675803389^131^1^5^408.27^", -- [44]
+				"^2564^8^1675803824^160^1^5^408.27^", -- [45]
+				"^2562^8^1675804659^115^1^5^408.27^", -- [46]
+				"^2565^8^1675805064^147^1^5^408.27^", -- [47]
+				"^2562^8^1675805718^125^1^5^408.27^", -- [48]
+				"^2563^8^1675806163^105^1^5^408.27^", -- [49]
+				"^2564^8^1675806549^181^1^5^408.27^", -- [50]
+				"^2565^8^1675807207^160^1^5^408.27^Weewpp", -- [51]
+				"^2563^8^1675817668^101^1^5^412.40^", -- [52]
+				"^2564^8^1675818046^148^1^5^412.40^", -- [53]
+				"^2562^8^1675818553^108^1^5^412.40^", -- [54]
+				"^2565^8^1675818937^137^1^5^412.40^Kallie-Illidan", -- [55]
+				"^2587^16^1675832122^162^1^20^406.77^Gazoo", -- [56]
+				"^2590^16^1675832598^6^0^20^406.75^Gazoo", -- [57]
+				"^2590^16^1675832672^201^1^20^406.75^Reldruid", -- [58]
+				"^1868^8^1676925181^163^1^5^406.51^", -- [59]
+				"^1869^8^1676925991^109^1^5^406.51^Moneybag", -- [60]
+				"^1870^8^1676926293^182^1^5^406.51^", -- [61]
+				"^1677^8^1676927828^162^1^5^414.90^", -- [62]
+				"^1688^8^1676928096^165^1^5^414.90^", -- [63]
+				"^1679^8^1676928513^210^1^5^414.90^", -- [64]
+				"^1682^8^1676928839^246^1^5^414.90^Mbdeez", -- [65]
+				"^1868^8^1676930020^164^1^5^410.48^Mbdeez", -- [66]
+				"^1869^8^1676930688^98^1^5^410.48^", -- [67]
+				"^1870^8^1676930954^168^1^5^410.48^", -- [68]
+				"^1868^8^1676931907^143^1^5^410.10^", -- [69]
+				"^1869^8^1676932498^116^1^5^410.10^", -- [70]
+				"^1870^8^1676932799^144^1^5^410.10^Mbdeez", -- [71]
+				"^2587^16^1677030995^0^0^20^416.70^", -- [72]
+				"^2587^16^1677031137^138^1^20^416.82^", -- [73]
+				"^2590^16^1677031558^7^0^20^416.46^", -- [74]
+				"^2590^16^1677031654^157^1^20^416.58^", -- [75]
+				"^2635^16^1677032181^393^1^20^415.88^Etcchi", -- [76]
+				"^2639^16^1677032934^1^0^20^414.70^", -- [77]
+				"^2639^16^1677032993^289^1^20^414.70^Belade", -- [78]
+				"^2592^16^1677033494^0^0^20^415.34^", -- [79]
+				"^2592^16^1677033543^355^1^20^415.20^Etcchi", -- [80]
+				"^2605^16^1677034008^2^0^20^414.77^", -- [81]
+				"^2605^16^1677034205^462^1^20^417.09^Etcchi", -- [82]
+				"^2614^16^1677034994^0^0^20^418.38^", -- [83]
+				"^2614^16^1677035270^242^0^20^418.48^Winternights", -- [84]
+				"^2614^16^1677035634^520^1^20^418.84^Triplew", -- [85]
+				"^1418^8^1677532237^146^1^5^407.84^Atrocitysoju", -- [86]
+				"^1417^8^1677532645^74^1^5^404.72^", -- [87]
+				"^1416^8^1677533265^129^1^5^404.72^", -- [88]
+				"^1439^8^1677533706^183^1^5^404.72^Moneybag", -- [89]
+				"^2587^16^1677636146^139^1^20^417.02^Jacobww", -- [90]
+				"^2590^16^1677636620^8^0^20^416.91^", -- [91]
+				"^2590^16^1677636694^162^1^20^416.74^", -- [92]
+				"^2639^16^1677637273^1^0^20^416.14^", -- [93]
+				"^2639^16^1677637431^291^1^20^417.26^Ladiesnight", -- [94]
+				"^2592^16^1677637958^0^0^20^419.43^", -- [95]
+				"^2592^16^1677638059^347^1^20^419.24^Jacobww", -- [96]
+				"^2605^16^1677638472^1^0^20^418.84^Tryinggd", -- [97]
+				"^2605^16^1677639123^436^1^20^419.12^Tryinggd", -- [98]
+				"^2635^16^1677639896^393^1^20^419.47^Xulanghavoc-Illidan", -- [99]
+				"^2614^16^1677640726^0^0^20^419.79^", -- [100]
+				"^2614^16^1677640818^128^0^20^419.79^Gdxo", -- [101]
+				"^2614^16^1677641045^503^1^20^419.79^Relvoker", -- [102]
+				"^2607^16^1677642328^197^0^20^417.17^Nidmufy-Illidan", -- [103]
+				"^2607^16^1677642659^428^0^20^417.41^Nidmufy-Illidan", -- [104]
+				"^2607^16^1677643168^799^0^20^417.43^Nidmufy-Illidan", -- [105]
+				"^2607^16^1677644074^239^0^20^417.65^Nidmufy-Illidan", -- [106]
+				"^2607^16^1677644407^589^0^20^417.59^Nidmufy-Illidan", -- [107]
+				"^2607^16^1677645092^235^0^20^417.60^Nidmufy-Illidan", -- [108]
+				"^2607^16^1677645436^159^0^20^417.33^Nidmufy-Illidan", -- [109]
+				"^2607^16^1677645706^812^1^20^417.62^Nidmufy-Illidan", -- [110]
+				"^2615^1^1677690919^44^1^5^185.84^", -- [111]
+				"^2616^1^1677691077^28^1^5^185.84^", -- [112]
+				"^2617^1^1677691186^33^1^5^185.84^", -- [113]
+				"^2618^1^1677691307^30^1^5^185.84^", -- [114]
+				"^1868^8^1677803091^135^1^5^412.88^", -- [115]
+				"^1869^8^1677803689^101^1^5^412.88^", -- [116]
+				"^1870^8^1677803965^148^1^5^412.88^", -- [117]
+				"^1677^8^1678226862^109^1^5^407.10^", -- [118]
+				"^1688^8^1678227100^96^1^5^407.10^", -- [119]
+				"^1679^8^1678227504^100^1^5^407.10^", -- [120]
+				"^1682^8^1678227763^140^1^5^406.36^Atrocitysoju", -- [121]
+				"^2587^16^1678327290^21^0^20^412.01^Goosy", -- [122]
+				"^2587^16^1678327481^131^1^20^419.27^Etchqtpi-Area52", -- [123]
+				"^2590^16^1678327883^6^0^20^419.71^", -- [124]
+				"^2590^16^1678328019^163^1^20^419.00^Etcchi", -- [125]
+				"^2635^16^1678328616^388^1^20^418.98^Etcchi", -- [126]
+				"^2639^16^1678329266^0^0^20^419.02^", -- [127]
+				"^2639^16^1678329360^279^1^20^419.03^Etcchi", -- [128]
+				"^2592^16^1678329811^0^0^20^419.03^", -- [129]
+				"^2614^16^1678331519^555^1^20^419.04^Belade", -- [130]
+				"^2607^16^1678332546^117^0^20^419.69^Reltwo", -- [131]
+				"^2607^16^1678332887^264^0^20^419.52^Karzastrasza", -- [132]
+				"^2607^16^1678333261^760^1^20^419.20^Synepm", -- [133]
+				"^2639^16^1678844029^0^0^20^342.02^", -- [134]
+				"^2639^16^1678844114^290^1^20^342.03^Etchqtpi-Area52", -- [135]
+				"^2592^16^1678844618^0^0^20^332.82^", -- [136]
+				"^2592^16^1678844681^324^1^20^338.08^Etchqtpi-Area52", -- [137]
+				"^2605^16^1678845066^0^0^20^375.47^", -- [138]
+				"^2605^16^1678845205^433^1^20^413.81^Etchqtpi-Area52", -- [139]
+				"^2614^16^1678845844^0^0^20^415.09^", -- [140]
+				"^2614^16^1678846158^506^1^20^417.85^Etchqtpi-Area52", -- [141]
+				"^2607^16^1678846951^22^0^20^419.79^Zekkeh", -- [142]
+				"^2607^16^1678847084^184^0^20^419.97^Etchqtpi-Area52", -- [143]
+				"^2607^16^1678847352^760^1^20^419.89^Etchqtpi-Area52", -- [144]
+				"^2587^16^1679447006^132^1^20^417.95^", -- [145]
+				"^2590^16^1679447380^6^0^20^417.70^", -- [146]
+				"^2590^16^1679447444^163^1^20^418.06^Wingwong", -- [147]
+				"^2635^16^1679447895^347^1^20^417.35^Blackwalnut", -- [148]
+				"^2639^16^1679448464^0^0^20^417.35^", -- [149]
+				"^2639^16^1679448565^1^0^20^417.22^Zekkeh", -- [150]
+				"^2639^16^1679448603^261^1^20^417.24^Blackwalnut", -- [151]
+				"^2614^16^1679450409^0^0^20^418.78^", -- [152]
+				"^2614^16^1679450513^533^1^20^418.60^Jacobww", -- [153]
+				"^2607^16^1679451497^743^1^20^419.22^Blackwalnut", -- [154]
+				"^1677^8^1679627673^148^1^5^402.50^", -- [155]
+				"^1688^8^1679627945^139^1^5^402.50^Uddydoxx", -- [156]
+				"^1679^8^1679628389^215^1^5^402.50^Uny-Arygos", -- [157]
+				"^1682^8^1679628735^198^1^5^398.77^Atrocitysoju", -- [158]
+				"^2587^16^1680751089^137^1^20^416.15^", -- [159]
+				"^2590^16^1680751492^5^0^20^414.23^", -- [160]
+				"^2590^16^1680751545^170^1^20^415.09^Beladesham", -- [161]
+				"^2635^16^1680752064^333^1^20^417.18^Busdrivergus", -- [162]
+				"^2639^16^1680752734^265^1^20^417.37^Flowbie", -- [163]
+				"^2592^16^1680753210^0^0^20^417.37^", -- [164]
+				"^2592^16^1680753252^338^1^20^417.37^Memewizardx", -- [165]
+				"^2605^16^1680753699^2^0^20^417.02^", -- [166]
+				"^2605^16^1680753909^184^0^20^417.27^Twopalz", -- [167]
+				"^2605^16^1680754238^428^1^20^416.82^Carodk-Zul'jin", -- [168]
+				"^2614^16^1680754821^5^0^20^417.06^", -- [169]
+				"^2614^16^1680755195^226^0^20^417.95^Gazoo", -- [170]
+				"^2614^16^1680755513^498^1^20^417.95^Twopalz", -- [171]
+				"^2684^14^1683655156^0^0^27^418.22^", -- [172]
+				"^2684^14^1683655440^355^0^30^415.05^Twistedstu-Illidan", -- [173]
+				"^2684^14^1683655894^218^0^30^415.39^Twistedstu-Illidan", -- [174]
+				"^2684^14^1683656183^274^1^30^415.39^Icespice-Hyjal", -- [175]
+				"^2688^15^1683685780^0^0^26^412.62^", -- [176]
+				"^2688^15^1683685846^165^1^30^419.25^Reldruid", -- [177]
+				"^2687^15^1683686207^0^0^30^419.28^", -- [178]
+				"^2687^15^1683686245^176^1^30^419.28^", -- [179]
+				"^2693^15^1683686595^0^0^30^419.29^", -- [180]
+				"^2693^15^1683686645^203^1^30^419.32^Starshopping", -- [181]
+				"^2682^15^1683687036^11^0^30^419.23^", -- [182]
+				"^2682^15^1683687099^155^1^30^419.28^Jetsp", -- [183]
+				"^2680^15^1683687306^0^0^30^419.38^", -- [184]
+				"^2680^15^1683687347^221^1^30^419.48^Zoopalz", -- [185]
+				"^2689^15^1683687669^0^0^30^419.37^", -- [186]
+				"^2689^15^1683687719^204^1^30^419.46^Quigs", -- [187]
+				"^2683^15^1683688090^0^0^30^420.45^", -- [188]
+				"^2683^15^1683688162^201^1^30^420.45^Zoopalz", -- [189]
+				"^2684^15^1683688539^0^0^30^420.39^", -- [190]
+				"^2684^15^1683688606^117^0^30^420.39^Flowbee", -- [191]
+				"^2684^15^1683688789^118^0^30^420.39^Xyronicz", -- [192]
+				"^2684^15^1683688980^281^1^30^420.37^Zoopalz", -- [193]
+				"^2587^16^1683735356^131^1^20^421.53^", -- [194]
+				"^2590^16^1683735731^7^0^20^421.50^", -- [195]
+				"^2590^16^1683735788^166^1^20^421.50^", -- [196]
+				"^2693^14^1683739989^0^0^28^417.38^", -- [197]
+				"^2693^14^1683740075^199^1^30^416.63^Tryingw", -- [198]
+				"^2688^14^1683754819^141^1^30^332.50^Syzrogue", -- [199]
+				"^2687^14^1683755213^0^0^30^420.59^", -- [200]
+				"^2687^14^1683755250^136^1^30^420.56^", -- [201]
+				"^2693^14^1683755541^0^0^30^420.56^", -- [202]
+				"^2693^14^1683755591^174^1^30^420.56^Syzrogue", -- [203]
+				"^2682^14^1683756071^106^1^30^420.55^Syzrogue", -- [204]
+				"^2680^14^1683756274^188^1^30^420.41^Syzrogue", -- [205]
+				"^2689^14^1683756524^1^0^30^420.41^", -- [206]
+				"^2689^14^1683756680^150^1^30^420.55^Syzrogue", -- [207]
+				"^2683^14^1683756979^0^0^30^420.51^", -- [208]
+				"^2683^14^1683757028^149^1^30^420.52^", -- [209]
+				"^2685^14^1683765877^293^1^30^360.19^Xyronicz", -- [210]
+				"^2685^15^1683778863^0^0^29^410.17^", -- [211]
+				"^2685^15^1683779036^312^0^30^420.81^Starshopping", -- [212]
+				"^2685^15^1683779455^308^0^30^420.64^Arcinde", -- [213]
+				"^2685^15^1683779875^380^1^30^420.58^Dosomething", -- [214]
+				"^2093^8^1683825449^161^1^5^426.67^", -- [215]
+				"^2094^8^1683825908^187^1^5^426.67^Dcn", -- [216]
+				"^2095^8^1683826291^168^1^5^426.67^Dcn", -- [217]
+				"^2096^8^1683826699^174^1^5^426.67^", -- [218]
+				"^2093^8^1683830945^107^1^5^427.69^", -- [219]
+				"^2094^8^1683831228^115^1^5^427.69^", -- [220]
+				"^2095^8^1683831608^105^1^5^427.21^", -- [221]
+				"^2096^8^1683831818^129^1^5^427.21^", -- [222]
+				"^2555^8^1683832402^97^1^5^427.64^Dcn", -- [223]
+				"^2556^8^1683832594^127^1^5^427.64^", -- [224]
+				"^2557^8^1683832809^114^1^5^427.64^", -- [225]
+				"^2558^8^1683833118^100^1^5^427.64^", -- [226]
+				"^2559^8^1683833616^168^1^5^427.64^Atrocitysoju", -- [227]
+				"^2111^8^1683834152^112^1^5^427.64^Atrocitysoju", -- [228]
+				"^2118^8^1683834438^171^1^5^427.64^", -- [229]
+				"^2112^8^1683834745^162^1^5^427.64^Dcn", -- [230]
+				"^2123^8^1683835246^156^1^5^427.64^", -- [231]
+				"^2688^15^1684274597^178^1^30^410.69^Jetsmonk-Illidan", -- [232]
+				"^2687^15^1684274989^0^0^30^410.69^", -- [233]
+				"^2687^15^1684275044^186^1^30^425.09^Zoozzoozz", -- [234]
+				"^2693^15^1684275405^1^0^28^425.53^", -- [235]
+				"^2693^15^1684275495^221^1^30^421.36^Zoozzoozz", -- [236]
+				"^2682^15^1684276060^186^1^30^426.90^Zoozzoozz", -- [237]
+				"^2680^15^1684276362^233^1^30^426.95^Hardyw", -- [238]
+				"^2689^15^1684276682^0^0^30^422.70^", -- [239]
+				"^2689^15^1684276732^200^1^30^422.70^Karzwnba", -- [240]
+				"^2683^15^1684277088^0^0^30^422.67^", -- [241]
+				"^2683^15^1684277135^194^1^30^422.73^Karzlgx", -- [242]
+				"^2684^15^1684277572^0^0^30^422.83^", -- [243]
+				"^2684^15^1684277615^195^0^30^422.83^Karzlgx", -- [244]
+				"^2684^15^1684277870^268^1^30^422.83^Karzlgx", -- [245]
+				"^2685^15^1684278349^0^0^29^426.58^", -- [246]
+				"^2685^15^1684278481^294^0^30^426.78^Karzlgx", -- [247]
+				"^2685^15^1684278845^0^0^30^426.30^Karzlgx", -- [248]
+				"^2685^15^1684279267^347^1^30^383.51^Karzlgx", -- [249]
+				"^2684^14^1684297654^9^0^30^408.91^", -- [250]
+				"^2684^14^1684297716^160^1^30^422.59^Karzchinafan", -- [251]
+				"^2685^14^1684297997^0^0^30^422.59^", -- [252]
+				"^2685^14^1684298256^258^1^30^419.56^Karzchinafan", -- [253]
+				"^2093^8^1685833159^117^1^5^436.34^Cdhunt-Illidan", -- [254]
+				"^2094^8^1685833555^131^1^5^436.34^Criser-Zul'jin", -- [255]
+				"^2095^8^1685834095^113^1^5^436.34^", -- [256]
+				"^2096^8^1685834437^111^1^5^436.34^", -- [257]
+				"^2111^8^1686083068^94^1^5^438.76^", -- [258]
+				"^2118^8^1686083388^142^1^5^438.76^", -- [259]
+				"^2112^8^1686083638^128^1^5^438.76^Atrocitysoju", -- [260]
+				"^2123^8^1686083963^163^1^5^438.76^Comedragon-Area52", -- [261]
+				"^1790^8^1686170787^75^0^5^427.50^Nathansmith-Illidan", -- [262]
+				"^1790^8^1686170926^102^0^5^427.50^Nathansmith-Illidan", -- [263]
+				"^1790^8^1686171176^123^0^5^427.50^Notnnk-Illidan", -- [264]
+				"^2111^8^1686868143^61^1^5^436.04^", -- [265]
+				"^2118^8^1686868390^87^1^5^436.04^", -- [266]
+				"^2112^8^1686868584^86^1^5^436.04^", -- [267]
+				"^2123^8^1686868872^115^1^5^436.04^", -- [268]
+			},
 			["Atrocityhunt"] = {
 			},
 			["Atrocitytres"] = {
@@ -382,9 +700,372 @@ atrocityUI.VMRT["1440p"] = {
 				"^2112^8^1686872302^122^1^5^431.01^", -- [35]
 				"^2123^8^1686872794^139^1^5^431.01^", -- [36]
 			},
+			["Atrocitynoir"] = {
+				"^2680^15^1686530523^221^1^21^392.41^", -- [1]
+				"^2687^15^1686530963^1^0^20^431.09^", -- [2]
+				"^2687^15^1686531210^172^1^22^430.55^", -- [3]
+				"^2693^15^1686531599^5^0^22^430.95^", -- [4]
+				"^2693^15^1686531741^195^1^23^431.07^", -- [5]
+				"^2689^15^1686532042^0^0^23^431.58^", -- [6]
+				"^2689^15^1686532133^190^1^23^431.54^Balloonboy", -- [7]
+				"^2683^15^1686532511^0^0^22^431.24^", -- [8]
+				"^2683^15^1686532633^191^1^22^430.89^", -- [9]
+				"^2684^15^1686533038^0^0^22^430.89^", -- [10]
+				"^2684^15^1686533155^289^1^22^431.24^Jetk-Illidan", -- [11]
+				"^2685^15^1686533597^0^0^21^431.14^", -- [12]
+				"^2685^15^1686533841^376^1^23^430.71^Rosabee-Gilneas", -- [13]
+				"^2555^8^1686755775^66^1^5^431.51^", -- [14]
+				"^2556^8^1686755963^61^1^5^431.51^", -- [15]
+				"^2557^8^1686756138^94^1^5^431.51^", -- [16]
+				"^2558^8^1686756441^99^1^5^431.51^", -- [17]
+				"^2559^8^1686756924^114^1^5^431.51^Phobiuz-Zul'jin", -- [18]
+				"^2610^8^1686761049^42^1^5^425.80^", -- [19]
+				"^2613^8^1686761211^56^1^5^425.80^", -- [20]
+				"^2612^8^1686761514^53^1^5^425.80^", -- [21]
+				"^2611^8^1686761715^53^1^5^425.80^", -- [22]
+				"^2688^15^1686790915^162^1^21^418.10^Busdrivergus", -- [23]
+				"^2682^15^1686791344^7^0^22^420.25^", -- [24]
+				"^2682^15^1686791426^109^1^23^421.01^", -- [25]
+				"^2680^15^1686791618^197^1^23^419.99^Twistedsp", -- [26]
+				"^2687^15^1686792076^167^1^24^420.31^Croneszy-Area52", -- [27]
+				"^2693^15^1686792436^8^0^22^418.48^", -- [28]
+				"^2693^15^1686792502^192^1^23^419.08^Uddydoxx", -- [29]
+				"^2689^15^1686792773^0^0^22^418.65^", -- [30]
+				"^2689^15^1686792874^169^1^23^419.97^Uddydoxx", -- [31]
+				"^2683^15^1686793207^0^0^22^419.24^", -- [32]
+				"^2683^15^1686793269^170^1^23^419.24^", -- [33]
+				"^2684^15^1686793649^0^0^22^423.36^", -- [34]
+				"^2684^15^1686793722^274^1^23^423.46^Aestie", -- [35]
+				"^2685^15^1686794137^0^0^23^423.40^", -- [36]
+				"^2685^15^1686794282^360^1^24^425.15^Iamaburden", -- [37]
+				"^2688^16^1686795406^0^0^20^436.51^", -- [38]
+				"^2688^16^1686795472^264^1^20^436.47^", -- [39]
+				"^2682^16^1686796050^7^0^20^436.47^", -- [40]
+				"^2682^16^1686796133^234^1^20^436.47^Carodk", -- [41]
+				"^2687^16^1686796635^0^0^20^436.47^", -- [42]
+				"^2687^16^1686796738^259^1^20^436.47^Disciplinae", -- [43]
+				"^2693^16^1686797187^5^0^20^436.50^", -- [44]
+				"^2693^16^1686797308^342^0^20^436.50^Syzlakk", -- [45]
+				"^2693^16^1686797769^354^1^20^436.50^Gdxo", -- [46]
+				"^2610^8^1686884799^85^1^5^430.91^", -- [47]
+				"^2613^8^1686885112^90^1^5^430.91^", -- [48]
+				"^2612^8^1686885546^36^0^5^430.91^Jetsmonk-Illidan", -- [49]
+				"^2612^8^1686885719^103^1^5^430.91^", -- [50]
+				"^2611^8^1686886069^105^1^5^430.91^", -- [51]
+				"^2610^8^1686926706^87^1^5^436.14^", -- [52]
+				"^2613^8^1686926955^90^1^5^436.14^", -- [53]
+				"^2612^8^1686927349^71^1^5^436.14^", -- [54]
+				"^2611^8^1686927647^95^1^5^436.14^Scot-Illidan", -- [55]
+				"^2610^8^1686928851^89^1^5^433.51^Jetsmonk-Illidan", -- [56]
+				"^2613^8^1686929071^84^1^5^433.51^", -- [57]
+				"^2612^8^1686929535^83^1^5^433.51^Doloflan-Draka", -- [58]
+				"^2611^8^1686929799^86^1^5^433.51^", -- [59]
+				"^2610^8^1686961340^87^1^5^435.18^", -- [60]
+				"^2613^8^1686961620^87^1^5^435.18^", -- [61]
+				"^2612^8^1686961965^87^1^5^435.18^", -- [62]
+				"^2611^8^1686962347^96^1^5^435.18^", -- [63]
+				"^2615^8^1686963197^116^1^5^433.52^Jetsmonk-Illidan", -- [64]
+				"^2616^8^1686963498^86^1^5^433.52^", -- [65]
+				"^2617^8^1686963743^82^1^5^433.52^", -- [66]
+				"^2618^8^1686963998^222^1^5^433.52^Jetsmonk-Illidan", -- [67]
+				"^2111^8^1686964873^58^1^5^435.01^Jetsmonk-Illidan", -- [68]
+				"^2118^8^1686965146^81^1^5^435.01^", -- [69]
+				"^2112^8^1686965355^71^1^5^435.01^Atrocitynoir", -- [70]
+				"^2123^8^1686965709^107^1^5^435.01^", -- [71]
+				"^1043^8^1686966590^61^1^5^434.59^", -- [72]
+				"^1041^8^1686966974^92^1^5^434.59^", -- [73]
+				"^1042^8^1686967553^85^1^5^434.59^", -- [74]
+				"^2688^16^1687317821^1^0^20^441.01^", -- [75]
+				"^2688^16^1687317882^218^1^20^441.05^Kadornus", -- [76]
+				"^2682^16^1687318378^7^0^20^441.01^", -- [77]
+				"^2682^16^1687318463^236^1^20^441.01^Kamsahabnida", -- [78]
+				"^2680^16^1687318759^0^0^20^441.06^", -- [79]
+				"^2680^16^1687319189^357^1^20^441.07^Kadornus", -- [80]
+				"^2687^16^1687319721^0^0^20^441.08^", -- [81]
+				"^2687^16^1687320023^250^1^20^440.90^Twistedm", -- [82]
+				"^2693^16^1687320446^5^0^20^440.99^", -- [83]
+				"^2693^16^1687320548^294^1^20^440.99^Belade", -- [84]
+				"^2689^16^1687320930^0^0^20^440.99^", -- [85]
+				"^2682^15^1687904329^97^1^30^434.03^Uddydoxx", -- [86]
+				"^2680^15^1687904476^0^0^30^435.41^", -- [87]
+				"^2680^15^1687904525^189^1^30^435.41^Gregsh-Tichondrius", -- [88]
+				"^2687^15^1687904875^0^0^30^435.41^", -- [89]
+				"^2687^15^1687904937^146^1^30^435.41^", -- [90]
+				"^2693^15^1687905307^8^0^30^435.86^", -- [91]
+				"^2693^15^1687905384^174^1^30^435.86^Goozee", -- [92]
+				"^2689^15^1687905664^0^0^27^436.44^", -- [93]
+				"^2689^15^1687905800^195^1^30^435.73^Genguu-Illidan", -- [94]
+				"^2683^15^1687906193^0^0^28^435.25^", -- [95]
+				"^2683^15^1687906279^183^1^30^435.00^Junkstam", -- [96]
+				"^2684^15^1687906680^0^0^28^434.78^", -- [97]
+				"^2684^15^1687906770^272^1^30^434.63^Stinnkypoopy-Illidan", -- [98]
+				"^2685^15^1687907205^1^0^29^434.67^", -- [99]
+				"^2685^15^1687907321^321^1^30^435.26^Junkstam", -- [100]
+				"^2688^16^1688000629^0^0^20^439.14^", -- [101]
+				"^2688^16^1688000752^238^0^20^439.14^Zekkeh", -- [102]
+				"^2688^16^1688001067^228^1^20^439.14^Kimsamsung", -- [103]
+				"^2682^16^1688001624^7^0^20^439.14^", -- [104]
+				"^2682^16^1688001739^280^1^20^439.17^Zekkeh", -- [105]
+				"^2687^16^1688002264^0^0^20^439.17^", -- [106]
+				"^2687^16^1688002403^289^1^20^439.57^Jetw", -- [107]
+				"^2693^16^1688002872^0^0^20^439.28^", -- [108]
+				"^2688^16^1694048643^0^0^20^429.70^", -- [109]
+				"^2688^16^1694048731^230^1^20^431.05^Tydrapriest", -- [110]
+				"^2682^16^1694049248^9^0^20^433.33^", -- [111]
+				"^2682^16^1694049297^262^1^20^433.33^Jacobxaxa", -- [112]
+				"^2680^16^1694049622^0^0^20^433.33^", -- [113]
+				"^2680^16^1694049796^396^0^20^435.76^Tydrapriest", -- [114]
+				"^2680^16^1694050369^391^0^20^435.76^Tydrapriest", -- [115]
+				"^2680^16^1694050922^395^0^20^435.76^Flowbie", -- [116]
+				"^2680^16^1694051486^374^1^20^435.76^Bowguytome", -- [117]
+				"^2687^16^1694052027^0^0^20^435.76^", -- [118]
+				"^2687^16^1694052127^258^1^20^436.18^Bowguytome", -- [119]
+				"^2693^16^1694052558^6^0^20^436.33^", -- [120]
+				"^2693^16^1694052649^354^0^20^436.54^Twistedsp", -- [121]
+				"^2693^16^1694053160^185^0^20^436.54^Atrocitynoir", -- [122]
+				"^2693^16^1694053442^338^1^20^436.54^Dbtwo", -- [123]
+				"^2688^16^1694653318^204^1^20^439.00^Goosynatty", -- [124]
+				"^2682^16^1694653801^6^0^20^439.00^", -- [125]
+				"^2682^16^1694653866^198^0^20^439.05^Caroimb", -- [126]
+				"^2682^16^1694654160^167^0^20^439.05^Anarchyhunt", -- [127]
+				"^2682^16^1694654357^12^0^20^439.05^Caprisunfan", -- [128]
+				"^2682^16^1694654416^233^1^20^439.05^", -- [129]
+				"^2680^16^1694654710^0^0^20^439.13^", -- [130]
+				"^2680^16^1694654788^349^1^20^439.22^Decenaryz", -- [131]
+				"^2687^16^1694655289^0^0^20^439.22^", -- [132]
+				"^2687^16^1694655352^249^1^20^439.18^Tydrapriest", -- [133]
+				"^2693^16^1694655772^5^0^20^438.89^", -- [134]
+				"^2693^16^1694655867^256^1^20^439.35^Atrocitynoir", -- [135]
+				"^2684^16^1694656328^0^0^20^441.97^", -- [136]
+				"^2684^16^1694656487^119^0^20^445.92^Twistedbenke", -- [137]
+				"^2684^16^1694656682^367^1^20^445.92^Arcinde", -- [138]
+				"^2685^16^1694657172^9^0^20^445.90^Trippygodx", -- [139]
+				"^2685^16^1694657371^406^0^20^445.90^Floormopzz", -- [140]
+				"^2685^16^1694657882^413^1^20^445.90^Aestis", -- [141]
+				"^2688^16^1695258004^0^0^20^444.55^Weewev", -- [142]
+				"^2688^16^1696467596^205^1^20^443.79^Wearesofkd", -- [143]
+				"^2682^16^1696468068^8^0^20^443.79^", -- [144]
+				"^2682^16^1696468140^148^0^20^443.86^Bradew", -- [145]
+				"^2682^16^1696468373^139^1^20^443.86^Weew", -- [146]
+				"^2680^16^1696468586^0^0^20^443.65^", -- [147]
+				"^2680^16^1696468660^365^1^20^443.88^Jt", -- [148]
+				"^2687^16^1696469196^0^0^20^443.85^", -- [149]
+				"^2687^16^1696469254^262^1^20^443.85^Weew", -- [150]
+				"^2693^16^1696469684^5^0^20^443.72^", -- [151]
+				"^2693^16^1696469805^243^1^20^444.46^", -- [152]
+				"^2684^16^1696470284^1^0^20^444.78^", -- [153]
+				"^2684^16^1696470511^418^0^20^444.93^Zekkeh", -- [154]
+				"^2684^16^1696471046^100^0^20^444.93^Flowbie", -- [155]
+				"^2684^16^1696471259^187^0^20^445.17^Affine", -- [156]
+				"^2684^16^1696471526^418^1^20^445.17^Drumilli", -- [157]
+				"^2685^16^1696472068^1^0^20^445.17^", -- [158]
+				"^2685^16^1696472292^201^0^20^445.51^Dbtwo", -- [159]
+				"^2685^16^1696472580^407^0^20^445.51^Dudeguyfive", -- [160]
+				"^2685^16^1696473093^447^1^20^445.51^Anarchydru", -- [161]
+				"^2688^16^1697072250^205^1^20^444.13^Kalecgoose", -- [162]
+				"^2682^16^1697072731^17^0^20^444.13^", -- [163]
+				"^2682^16^1697072786^137^1^20^444.13^", -- [164]
+				"^2680^16^1697072993^1^0^20^444.13^", -- [165]
+				"^2680^16^1697073045^339^1^20^444.13^Gazoo", -- [166]
+				"^2687^16^1697073559^0^0^20^444.13^", -- [167]
+				"^2687^16^1697073610^233^1^20^444.22^", -- [168]
+				"^2693^16^1697073995^5^0^20^444.22^", -- [169]
+				"^2693^16^1697074040^247^1^20^444.23^Caroimb", -- [170]
+				"^2684^16^1697074522^0^0^20^445.19^", -- [171]
+				"^2684^16^1697074694^376^0^20^445.19^Zekkeh", -- [172]
+				"^2684^16^1697075158^369^0^20^445.19^Gazoo", -- [173]
+				"^2684^16^1697075620^291^0^20^445.19^Drumilli", -- [174]
+				"^2684^16^1697075984^403^1^20^445.19^Kalecgoose", -- [175]
+				"^2685^16^1697076505^0^0^20^445.19^", -- [176]
+				"^2685^16^1697076669^202^0^20^445.35^Gazoo", -- [177]
+				"^2685^16^1697076956^228^0^20^445.30^Dkdx", -- [178]
+				"^2685^16^1697077275^407^0^20^445.30^Flowbee", -- [179]
+				"^2685^16^1697077771^444^0^20^445.30^Dkdx", -- [180]
+				"^2685^16^1697078332^356^0^20^445.30^Flowbee", -- [181]
+				"^2685^16^1697078786^451^0^20^445.30^Sendemail", -- [182]
+				"^2685^16^1697079323^430^0^20^445.30^Dkdx", -- [183]
+				"^2685^16^1697079871^367^0^20^445.30^Affine", -- [184]
+				"^2685^16^1697080306^455^1^20^445.30^", -- [185]
+				"^2820^15^1699987544^0^0^29^446.83^", -- [186]
+				"^2820^15^1699987640^199^1^30^447.24^", -- [187]
+				"^2709^15^1699987896^0^0^30^447.31^", -- [188]
+				"^2709^15^1699987985^124^0^30^447.31^Jacobww", -- [189]
+				"^2709^15^1699988200^255^1^30^447.31^Dbtwo", -- [190]
+				"^2728^15^1699988693^0^0^30^447.24^", -- [191]
+				"^2728^15^1699988773^143^0^30^446.85^Carodubya", -- [192]
+				"^2728^15^1699989000^244^1^30^447.20^Ympzz", -- [193]
+				"^2708^15^1699989393^0^0^30^447.28^", -- [194]
+				"^2708^15^1699989485^219^0^30^447.28^Karzastrasza", -- [195]
+				"^2708^15^1699989796^214^0^30^447.28^Affine", -- [196]
+				"^2708^15^1699990086^284^1^30^447.28^Atrocitynoir", -- [197]
+				"^2737^15^1699990669^0^0^30^447.28^", -- [198]
+				"^2737^15^1699990729^190^1^30^447.28^Karzastrasza", -- [199]
+				"^2731^15^1699991060^0^0^30^447.28^", -- [200]
+				"^2731^15^1699991151^301^0^30^447.48^Xyroleaf", -- [201]
+				"^2731^15^1699991527^326^0^30^447.40^Syzdk", -- [202]
+				"^2731^15^1699991956^291^1^30^447.48^Wingwong", -- [203]
+				"^2824^15^1699992516^150^0^30^447.48^Syzdk", -- [204]
+				"^2824^15^1699992759^145^0^30^447.32^Wingwong", -- [205]
+				"^2824^15^1699992982^395^0^30^447.31^Tometv", -- [206]
+				"^2824^15^1699993465^240^0^30^447.31^Dbtwo", -- [207]
+				"^2824^15^1699993792^293^0^30^447.31^Aestisc", -- [208]
+				"^2824^15^1699994178^303^0^30^447.31^Affine", -- [209]
+				"^2824^15^1699994594^307^1^30^447.31^Flowbee", -- [210]
+				"^2786^15^1699995118^151^0^30^447.17^Tometv", -- [211]
+				"^2786^15^1699995367^307^0^30^447.17^Twistedx", -- [212]
+				"^2786^15^1699995790^440^0^30^447.17^Twistedx", -- [213]
+				"^2786^15^1699996329^417^0^30^447.17^Moneybag", -- [214]
+				"^2786^15^1699996832^202^0^30^447.17^Drippygodx", -- [215]
+				"^2786^15^1699997098^0^0^30^447.17^", -- [216]
+				"^2786^15^1699997156^545^0^30^447.17^Beladepr", -- [217]
+				"^2786^15^1699997795^483^1^30^447.19^Tometv", -- [218]
+				"^2820^14^1700068887^0^0^24^449.39^", -- [219]
+				"^2820^14^1700069027^126^1^30^449.41^", -- [220]
+				"^2709^14^1700069201^0^0^30^449.41^", -- [221]
+				"^2709^14^1700069263^173^1^30^449.41^", -- [222]
+				"^2728^14^1700069672^0^0^30^449.34^", -- [223]
+				"^2728^14^1700069714^134^1^30^449.34^", -- [224]
+				"^2708^14^1700069951^0^0^30^449.41^", -- [225]
+				"^2708^14^1700069995^120^1^30^449.41^Gdxo", -- [226]
+				"^2737^14^1700070357^0^0^30^449.43^", -- [227]
+				"^2737^14^1700070437^98^1^30^449.56^Wingwong", -- [228]
+				"^2731^14^1700070675^0^0^30^449.56^", -- [229]
+				"^2731^14^1700070720^144^1^30^449.56^", -- [230]
+				"^2824^14^1700071004^0^0^30^449.56^", -- [231]
+				"^2824^14^1700071075^127^1^30^449.56^", -- [232]
+				"^2786^14^1700071331^219^1^30^449.56^Gamzo", -- [233]
+				"^2677^15^1700092272^103^0^30^450.91^Atrocitynoir", -- [234]
+				"^2677^15^1700092462^132^0^30^450.91^Kadornus", -- [235]
+				"^2677^15^1700092787^92^0^30^450.88^Zoopalz", -- [236]
+				"^2677^15^1700092961^398^0^30^450.88^Zoopalz", -- [237]
+				"^2677^15^1700093553^490^1^30^450.88^Zoopalz", -- [238]
+				"^2820^15^1700607776^165^1^30^449.08^Nocontrol", -- [239]
+				"^2709^15^1700607993^0^0^30^452.76^", -- [240]
+				"^2709^15^1700608046^215^1^30^452.76^Carodubya", -- [241]
+				"^2728^15^1700608536^0^0^30^452.76^", -- [242]
+				"^2728^15^1700608574^215^1^30^452.76^Dcn", -- [243]
+				"^2708^15^1700608908^0^0^29^452.82^", -- [244]
+				"^2708^15^1700608980^227^1^30^455.07^Flowbs", -- [245]
+				"^2737^15^1700609507^0^0^30^455.08^", -- [246]
+				"^2737^15^1700609546^158^1^30^455.17^Daxp", -- [247]
+				"^2731^15^1700609899^0^0^30^455.13^", -- [248]
+				"^2731^15^1700609944^229^1^30^455.13^Twistedx", -- [249]
+				"^2824^15^1700610383^263^1^30^455.13^Daxp", -- [250]
+				"^2786^15^1700610818^405^1^30^455.22^Zekkelock", -- [251]
+				"^2677^15^1700633287^483^0^30^456.10^Karzdouyu", -- [252]
+				"^2677^15^1700633890^343^0^30^455.99^Wingwong", -- [253]
+				"^2677^15^1700634309^470^1^30^455.99^Daxp", -- [254]
+			},
+			["Atrocitykfk"] = {
+				"^2395^8^1656198900^116^1^5^265.62^", -- [1]
+				"^2394^8^1656199252^136^1^5^265.62^", -- [2]
+				"^2400^8^1656199703^129^1^5^265.62^Atrocitykfk", -- [3]
+				"^2396^8^1656199920^198^1^5^265.62^Atrocitykfk", -- [4]
+			},
 			["Atrocityx"] = {
 			},
 			["Atrocitysp"] = {
+			},
+			["Atrocitysix"] = {
+				"^2609^23^1669950863^102^1^5^302.81^", -- [1]
+				"^2606^23^1669951244^103^1^5^302.81^", -- [2]
+				"^2623^23^1669951470^88^1^5^302.81^", -- [3]
+				"^2610^23^1669951948^70^1^5^288.94^", -- [4]
+				"^2613^23^1669952181^86^1^5^298.12^", -- [5]
+				"^2612^23^1669952572^95^1^5^299.03^", -- [6]
+				"^2611^23^1669952856^74^1^5^299.03^", -- [7]
+				"^2637^23^1669953507^71^1^5^305.92^", -- [8]
+				"^2636^23^1669953775^91^1^5^306.52^Mallaarkus", -- [9]
+				"^2581^23^1669954085^2^0^5^310.10^", -- [10]
+				"^2581^23^1669954128^72^1^5^310.10^", -- [11]
+				"^2580^23^1669954382^146^1^5^310.10^", -- [12]
+				"^2582^23^1669954966^79^1^5^309.36^", -- [13]
+				"^2585^23^1669955206^80^1^5^310.27^", -- [14]
+				"^2583^23^1669955335^80^1^5^311.23^Mallaarkus", -- [15]
+				"^2584^23^1669955444^92^1^5^311.23^", -- [16]
+				"^2570^23^1669955969^81^1^5^314.59^Ericsenior", -- [17]
+				"^2567^23^1669956219^54^1^5^314.59^", -- [18]
+				"^2568^23^1669956429^91^0^5^311.92^Atrocitysix", -- [19]
+				"^2568^23^1669956585^83^1^5^311.92^", -- [20]
+				"^2569^23^1669956823^59^0^5^313.38^Dankscale", -- [21]
+				"^2569^23^1669956971^67^1^5^311.71^Mallaarkus", -- [22]
+				"^2562^23^1669957386^79^1^5^319.44^Ericsenior", -- [23]
+				"^2563^23^1669957634^45^1^5^321.85^", -- [24]
+				"^2564^23^1669957839^72^1^5^317.20^", -- [25]
+				"^2565^23^1669957965^89^1^5^317.56^", -- [26]
+				"^2615^23^1669958366^66^1^5^325.50^", -- [27]
+				"^2616^23^1669958568^77^1^5^325.50^Ericsenior", -- [28]
+				"^2617^23^1669958786^63^1^5^320.50^", -- [29]
+				"^2618^23^1669959004^51^1^5^321.67^", -- [30]
+				"^2555^23^1669959416^78^1^5^322.27^", -- [31]
+				"^2556^23^1669959523^57^1^5^324.40^Mallaarkus", -- [32]
+				"^2557^23^1669959654^69^1^5^323.92^", -- [33]
+				"^2558^23^1669959861^89^1^5^324.38^", -- [34]
+				"^2559^23^1669960305^91^1^5^324.83^", -- [35]
+				"^2609^23^1670434043^58^1^5^371.06^", -- [36]
+				"^2606^23^1670434298^48^1^5^365.44^", -- [37]
+				"^2623^23^1670434427^54^1^5^365.44^", -- [38]
+				"^2610^23^1670434669^53^1^5^368.00^Atrocitysix", -- [39]
+				"^2613^23^1670434801^42^1^5^368.00^", -- [40]
+				"^2612^23^1670434968^54^1^5^368.06^", -- [41]
+				"^2611^23^1670435109^50^1^5^368.06^", -- [42]
+				"^2636^23^1670435515^54^1^5^365.62^", -- [43]
+				"^2637^23^1670435602^50^1^5^365.62^", -- [44]
+				"^2581^23^1670435822^46^1^5^365.09^", -- [45]
+				"^2580^23^1670435978^58^1^5^365.09^", -- [46]
+				"^2582^23^1670436256^43^1^5^368.27^", -- [47]
+				"^2585^23^1670436403^24^1^5^370.59^", -- [48]
+				"^2583^23^1670436490^58^1^5^370.59^", -- [49]
+				"^2584^23^1670436558^53^1^5^370.59^", -- [50]
+				"^2570^23^1670436835^49^1^5^370.48^Drenacouggla", -- [51]
+				"^2568^23^1670436978^52^1^5^370.48^", -- [52]
+				"^2567^23^1670437096^27^1^5^370.48^", -- [53]
+				"^2569^23^1670437317^106^1^5^368.52^Atrocitysix", -- [54]
+				"^2562^23^1670437619^52^1^5^365.19^", -- [55]
+				"^2563^23^1670437751^40^1^5^365.19^", -- [56]
+				"^2564^23^1670437909^46^1^5^365.19^", -- [57]
+				"^2565^23^1670438009^48^1^5^365.19^", -- [58]
+				"^2555^23^1670438351^38^1^5^365.42^", -- [59]
+				"^2556^23^1670438411^44^1^5^368.67^Drenacouggla", -- [60]
+				"^2557^23^1670438499^54^1^5^367.61^", -- [61]
+				"^2558^23^1670438632^30^1^5^370.59^", -- [62]
+				"^2559^23^1670438811^66^1^5^370.59^", -- [63]
+				"^2615^23^1670452427^66^1^5^368.27^", -- [64]
+				"^2616^23^1670452609^54^1^5^370.44^", -- [65]
+				"^2617^23^1670452750^49^1^5^370.44^Drenacouggla", -- [66]
+				"^2618^23^1670452897^37^1^5^370.44^", -- [67]
+				"^2398^15^1670888754^26^1^30^378.62^", -- [68]
+				"^2418^15^1670888882^30^1^30^378.64^", -- [69]
+				"^2399^15^1670889005^66^1^29^378.75^", -- [70]
+				"^2592^14^1670994670^320^1^30^374.12^Innocentius", -- [71]
+				"^2605^14^1670995164^0^0^30^373.88^", -- [72]
+				"^2605^14^1670995238^321^1^30^373.52^Innocentius", -- [73]
+				"^2635^14^1670995880^269^1^30^377.99^Innocentius", -- [74]
+				"^2614^14^1670996331^0^0^30^378.16^", -- [75]
+				"^2614^14^1670996391^363^1^30^378.16^Northernhunt", -- [76]
+				"^2607^14^1670997093^268^0^30^378.01^Systemdaemon-Area52", -- [77]
+				"^2607^14^1670997393^20^0^30^377.93^Chime-Jaedenar", -- [78]
+				"^2607^14^1670997481^673^1^30^377.98^Innocentius", -- [79]
+				"^2635^15^1671064677^251^1^30^385.48^Atlasdumpy", -- [80]
+				"^2614^15^1671065189^0^0^30^385.52^", -- [81]
+				"^2614^15^1671065473^1^0^30^385.22^", -- [82]
+				"^2614^15^1671065506^239^0^30^385.30^Atrocitysix", -- [83]
+				"^2614^15^1671065854^0^0^30^385.30^", -- [84]
+				"^2614^15^1671065940^403^1^30^384.95^Pencilpete", -- [85]
+				"^2607^15^1671097288^192^0^30^384.10^Rikusson", -- [86]
+				"^2607^15^1671097580^256^0^30^384.17^Benbrm", -- [87]
+				"^2607^15^1671131402^633^1^30^382.07^Ericsmagetwo", -- [88]
+				"^2587^15^1671564202^170^1^30^388.36^Strydem-Kil'jaeden", -- [89]
+				"^2590^15^1671564759^0^0^30^389.37^", -- [90]
+				"^2590^15^1671564820^192^1^30^389.37^Mizithra-Proudmoore", -- [91]
+				"^2639^15^1671565422^0^0^30^391.52^", -- [92]
+				"^2639^15^1671565491^247^1^30^392.18^Daddydh-MoonGuard", -- [93]
+				"^2592^15^1671565936^0^0^30^392.20^", -- [94]
+				"^2592^15^1671565988^275^1^30^392.60^Rikunatty", -- [95]
+				"^2605^15^1671566400^5^0^30^392.60^", -- [96]
+				"^2605^15^1671566464^320^1^30^391.06^Malaarkus", -- [97]
+				"^2607^15^1671582621^25^0^30^387.24^Rivenzp", -- [98]
+				"^2607^15^1671582755^656^1^30^387.24^Scottbestiee", -- [99]
 			},
 			["Atrocityp"] = {
 			},
@@ -1032,7 +1713,7 @@ atrocityUI.VMRT["1440p"] = {
 				"^2685^15^1684288144^0^0^29^423.95^", -- [116]
 				"^2685^15^1684288271^340^1^30^424.24^Jetsp", -- [117]
 			},
-			["Atrocityxe"] = {
+			["Atrocitymagi"] = {
 			},
 			["Atrocityr"] = {
 			},
@@ -2177,116 +2858,1269 @@ atrocityUI.VMRT["1440p"] = {
 				"^2685^14^1683761847^310^1^30^408.39^Zoozzoozz-Mal'Ganis", -- [1138]
 				"^2693^15^1684294043^0^0^30^413.53^", -- [1139]
 				"^2693^15^1684294089^269^1^30^402.50^Karzgenome-Mal'Ganis", -- [1140]
+				"^2670^8^1701682970^65^1^5^440.80^", -- [1141]
+				"^2671^8^1701683368^74^1^5^440.80^", -- [1142]
+				"^2672^8^1701683621^54^1^5^440.80^", -- [1143]
+				"^2673^8^1701683854^127^1^5^440.80^", -- [1144]
 			},
-			["Atrocitynoir"] = {
-				"^2680^15^1686530523^221^1^21^392.41^", -- [1]
-				"^2687^15^1686530963^1^0^20^431.09^", -- [2]
-				"^2687^15^1686531210^172^1^22^430.55^", -- [3]
-				"^2693^15^1686531599^5^0^22^430.95^", -- [4]
-				"^2693^15^1686531741^195^1^23^431.07^", -- [5]
-				"^2689^15^1686532042^0^0^23^431.58^", -- [6]
-				"^2689^15^1686532133^190^1^23^431.54^Balloonboy", -- [7]
-				"^2683^15^1686532511^0^0^22^431.24^", -- [8]
-				"^2683^15^1686532633^191^1^22^430.89^", -- [9]
-				"^2684^15^1686533038^0^0^22^430.89^", -- [10]
-				"^2684^15^1686533155^289^1^22^431.24^Jetk-Illidan", -- [11]
-				"^2685^15^1686533597^0^0^21^431.14^", -- [12]
-				"^2685^15^1686533841^376^1^23^430.71^Rosabee-Gilneas", -- [13]
-				"^2555^8^1686755775^66^1^5^431.51^", -- [14]
-				"^2556^8^1686755963^61^1^5^431.51^", -- [15]
-				"^2557^8^1686756138^94^1^5^431.51^", -- [16]
-				"^2558^8^1686756441^99^1^5^431.51^", -- [17]
-				"^2559^8^1686756924^114^1^5^431.51^Phobiuz-Zul'jin", -- [18]
-				"^2610^8^1686761049^42^1^5^425.80^", -- [19]
-				"^2613^8^1686761211^56^1^5^425.80^", -- [20]
-				"^2612^8^1686761514^53^1^5^425.80^", -- [21]
-				"^2611^8^1686761715^53^1^5^425.80^", -- [22]
-				"^2688^15^1686790915^162^1^21^418.10^Busdrivergus", -- [23]
-				"^2682^15^1686791344^7^0^22^420.25^", -- [24]
-				"^2682^15^1686791426^109^1^23^421.01^", -- [25]
-				"^2680^15^1686791618^197^1^23^419.99^Twistedsp", -- [26]
-				"^2687^15^1686792076^167^1^24^420.31^Croneszy-Area52", -- [27]
-				"^2693^15^1686792436^8^0^22^418.48^", -- [28]
-				"^2693^15^1686792502^192^1^23^419.08^Uddydoxx", -- [29]
-				"^2689^15^1686792773^0^0^22^418.65^", -- [30]
-				"^2689^15^1686792874^169^1^23^419.97^Uddydoxx", -- [31]
-				"^2683^15^1686793207^0^0^22^419.24^", -- [32]
-				"^2683^15^1686793269^170^1^23^419.24^", -- [33]
-				"^2684^15^1686793649^0^0^22^423.36^", -- [34]
-				"^2684^15^1686793722^274^1^23^423.46^Aestie", -- [35]
-				"^2685^15^1686794137^0^0^23^423.40^", -- [36]
-				"^2685^15^1686794282^360^1^24^425.15^Iamaburden", -- [37]
-				"^2688^16^1686795406^0^0^20^436.51^", -- [38]
-				"^2688^16^1686795472^264^1^20^436.47^", -- [39]
-				"^2682^16^1686796050^7^0^20^436.47^", -- [40]
-				"^2682^16^1686796133^234^1^20^436.47^Carodk", -- [41]
-				"^2687^16^1686796635^0^0^20^436.47^", -- [42]
-				"^2687^16^1686796738^259^1^20^436.47^Disciplinae", -- [43]
-				"^2693^16^1686797187^5^0^20^436.50^", -- [44]
-				"^2693^16^1686797308^342^0^20^436.50^Syzlakk", -- [45]
-				"^2693^16^1686797769^354^1^20^436.50^Gdxo", -- [46]
-				"^2610^8^1686884799^85^1^5^430.91^", -- [47]
-				"^2613^8^1686885112^90^1^5^430.91^", -- [48]
-				"^2612^8^1686885546^36^0^5^430.91^Jetsmonk-Illidan", -- [49]
-				"^2612^8^1686885719^103^1^5^430.91^", -- [50]
-				"^2611^8^1686886069^105^1^5^430.91^", -- [51]
-				"^2610^8^1686926706^87^1^5^436.14^", -- [52]
-				"^2613^8^1686926955^90^1^5^436.14^", -- [53]
-				"^2612^8^1686927349^71^1^5^436.14^", -- [54]
-				"^2611^8^1686927647^95^1^5^436.14^Scot-Illidan", -- [55]
-				"^2610^8^1686928851^89^1^5^433.51^Jetsmonk-Illidan", -- [56]
-				"^2613^8^1686929071^84^1^5^433.51^", -- [57]
-				"^2612^8^1686929535^83^1^5^433.51^Doloflan-Draka", -- [58]
-				"^2611^8^1686929799^86^1^5^433.51^", -- [59]
-				"^2610^8^1686961340^87^1^5^435.18^", -- [60]
-				"^2613^8^1686961620^87^1^5^435.18^", -- [61]
-				"^2612^8^1686961965^87^1^5^435.18^", -- [62]
-				"^2611^8^1686962347^96^1^5^435.18^", -- [63]
-				"^2615^8^1686963197^116^1^5^433.52^Jetsmonk-Illidan", -- [64]
-				"^2616^8^1686963498^86^1^5^433.52^", -- [65]
-				"^2617^8^1686963743^82^1^5^433.52^", -- [66]
-				"^2618^8^1686963998^222^1^5^433.52^Jetsmonk-Illidan", -- [67]
-				"^2111^8^1686964873^58^1^5^435.01^Jetsmonk-Illidan", -- [68]
-				"^2118^8^1686965146^81^1^5^435.01^", -- [69]
-				"^2112^8^1686965355^71^1^5^435.01^Atrocitynoir", -- [70]
-				"^2123^8^1686965709^107^1^5^435.01^", -- [71]
-				"^1043^8^1686966590^61^1^5^434.59^", -- [72]
-				"^1041^8^1686966974^92^1^5^434.59^", -- [73]
-				"^1042^8^1686967553^85^1^5^434.59^", -- [74]
-				"^2688^16^1687317821^1^0^20^441.01^", -- [75]
-				"^2688^16^1687317882^218^1^20^441.05^Kadornus", -- [76]
-				"^2682^16^1687318378^7^0^20^441.01^", -- [77]
-				"^2682^16^1687318463^236^1^20^441.01^Kamsahabnida", -- [78]
-				"^2680^16^1687318759^0^0^20^441.06^", -- [79]
-				"^2680^16^1687319189^357^1^20^441.07^Kadornus", -- [80]
-				"^2687^16^1687319721^0^0^20^441.08^", -- [81]
-				"^2687^16^1687320023^250^1^20^440.90^Twistedm", -- [82]
-				"^2693^16^1687320446^5^0^20^440.99^", -- [83]
-				"^2693^16^1687320548^294^1^20^440.99^Belade", -- [84]
-				"^2689^16^1687320930^0^0^20^440.99^", -- [85]
-				"^2682^15^1687904329^97^1^30^434.03^Uddydoxx", -- [86]
-				"^2680^15^1687904476^0^0^30^435.41^", -- [87]
-				"^2680^15^1687904525^189^1^30^435.41^Gregsh-Tichondrius", -- [88]
-				"^2687^15^1687904875^0^0^30^435.41^", -- [89]
-				"^2687^15^1687904937^146^1^30^435.41^", -- [90]
-				"^2693^15^1687905307^8^0^30^435.86^", -- [91]
-				"^2693^15^1687905384^174^1^30^435.86^Goozee", -- [92]
-				"^2689^15^1687905664^0^0^27^436.44^", -- [93]
-				"^2689^15^1687905800^195^1^30^435.73^Genguu-Illidan", -- [94]
-				"^2683^15^1687906193^0^0^28^435.25^", -- [95]
-				"^2683^15^1687906279^183^1^30^435.00^Junkstam", -- [96]
-				"^2684^15^1687906680^0^0^28^434.78^", -- [97]
-				"^2684^15^1687906770^272^1^30^434.63^Stinnkypoopy-Illidan", -- [98]
-				"^2685^15^1687907205^1^0^29^434.67^", -- [99]
-				"^2685^15^1687907321^321^1^30^435.26^Junkstam", -- [100]
-				"^2688^16^1688000629^0^0^20^439.14^", -- [101]
-				"^2688^16^1688000752^238^0^20^439.14^Zekkeh", -- [102]
-				"^2688^16^1688001067^228^1^20^439.14^Kimsamsung", -- [103]
-				"^2682^16^1688001624^7^0^20^439.14^", -- [104]
-				"^2682^16^1688001739^280^1^20^439.17^Zekkeh", -- [105]
-				"^2687^16^1688002264^0^0^20^439.17^", -- [106]
-				"^2687^16^1688002403^289^1^20^439.57^Jetw", -- [107]
-				"^2693^16^1688002872^0^0^20^439.28^", -- [108]
+			["Atrocityedge"] = {
+				"^2820^15^1700000559^191^1^30^447.57^", -- [1]
+				"^2709^15^1700000849^0^0^30^447.65^", -- [2]
+				"^2709^15^1700000910^248^1^30^447.66^Syzlakdeekay", -- [3]
+				"^2728^15^1700001409^0^0^30^447.64^", -- [4]
+				"^2728^15^1700001457^224^0^30^447.66^Aestis", -- [5]
+				"^2728^15^1700001743^258^1^30^447.58^Madbillainy", -- [6]
+				"^2708^15^1700002129^0^0^30^447.66^", -- [7]
+				"^2708^15^1700002218^267^1^30^447.61^", -- [8]
+				"^2737^15^1700002760^0^0^30^447.60^", -- [9]
+				"^2737^15^1700002807^185^1^30^447.61^", -- [10]
+				"^2731^15^1700003154^0^0^30^447.60^", -- [11]
+				"^2731^15^1700003212^296^1^30^447.61^Tydrapriest", -- [12]
+				"^2824^15^1700003829^208^0^30^447.34^Triplew", -- [13]
+				"^2824^15^1700004114^118^0^30^447.34^Triplew", -- [14]
+				"^2824^15^1700004325^311^1^30^447.34^Karzlgx", -- [15]
+				"^2786^15^1700004814^278^0^30^447.26^Liltome", -- [16]
+				"^2786^15^1700005166^101^0^30^447.26^Anarchysmoge", -- [17]
+				"^2786^15^1700005328^309^0^30^447.26^Liltome", -- [18]
+				"^2786^15^1700005724^459^0^30^447.26^Drumilli", -- [19]
+				"^2786^15^1700006265^454^0^30^447.26^Dingding", -- [20]
+				"^2786^15^1700006794^438^1^30^447.26^Daxp", -- [21]
+				"^2677^15^1700008340^0^0^27^447.21^", -- [22]
+				"^2677^15^1700008375^0^0^27^447.21^", -- [23]
+				"^2677^15^1700008450^0^0^26^447.21^", -- [24]
+				"^2677^15^1700008522^0^0^24^447.21^", -- [25]
+				"^2677^15^1700008577^0^0^25^447.21^", -- [26]
+				"^2677^15^1700008644^0^0^25^447.21^", -- [27]
+				"^1746^8^1700058284^137^1^5^456.12^", -- [28]
+				"^1757^8^1700058863^100^1^5^456.12^", -- [29]
+				"^1751^8^1700059115^92^1^5^456.12^Karzastrasza", -- [30]
+				"^1756^8^1700059266^126^1^5^456.12^", -- [31]
+				"^1836^8^1700059999^107^1^5^455.88^Atrocityedge", -- [32]
+				"^1837^8^1700060411^98^1^5^455.88^Atrocityedge", -- [33]
+				"^1838^8^1700060559^194^1^5^455.88^Karzastrasza", -- [34]
+				"^1839^8^1700061086^109^1^5^455.88^Jacobxaxa", -- [35]
+				"^2086^8^1700061418^127^1^5^456.01^Kamsahabnida", -- [36]
+				"^2085^8^1700061902^134^1^5^456.01^", -- [37]
+				"^2084^8^1700062347^72^1^5^456.01^", -- [38]
+				"^2087^8^1700062605^159^1^5^456.01^", -- [39]
+				"^2113^8^1700063228^109^1^5^456.01^", -- [40]
+				"^2114^8^1700063727^147^1^5^456.01^Atrocityedge", -- [41]
+				"^2115^8^1700064150^94^1^5^456.01^Atrocityedge", -- [42]
+				"^2116^8^1700064771^127^1^5^456.01^", -- [43]
+				"^2117^8^1700065007^107^1^5^456.01^", -- [44]
+				"^2086^8^1700065315^62^1^5^456.01^Karzastrasza", -- [45]
+				"^2085^8^1700065622^81^1^5^456.01^", -- [46]
+				"^2084^8^1700065919^110^1^5^456.01^", -- [47]
+				"^2087^8^1700066095^92^1^5^456.01^", -- [48]
+				"^2820^14^1700071930^0^0^29^446.02^", -- [49]
+				"^2820^14^1700071973^127^1^30^447.93^", -- [50]
+				"^2709^14^1700072145^0^0^30^447.93^", -- [51]
+				"^2709^14^1700072191^186^1^30^447.93^", -- [52]
+				"^2728^14^1700072594^0^0^30^447.92^", -- [53]
+				"^2728^14^1700072673^135^1^30^448.15^", -- [54]
+				"^2708^14^1700072913^0^0^30^448.18^", -- [55]
+				"^2708^14^1700072958^122^1^30^448.18^", -- [56]
+				"^2737^14^1700073317^0^0^30^448.21^", -- [57]
+				"^2737^14^1700073365^104^1^30^448.24^", -- [58]
+				"^2731^14^1700073590^0^0^30^448.24^", -- [59]
+				"^2731^14^1700073628^161^1^30^448.26^Flowbs", -- [60]
+				"^2824^14^1700073892^0^0^30^448.28^", -- [61]
+				"^2824^14^1700073965^134^1^30^448.25^Aestis", -- [62]
+				"^2786^14^1700074391^233^1^30^448.20^", -- [63]
+				"^2677^14^1700088091^332^1^30^446.16^", -- [64]
+				"^2820^7^1700091187^105^1^25^0.00^", -- [65]
+				"^2709^7^1700091346^133^1^25^449.35^", -- [66]
+				"^2824^7^1700091595^110^1^25^449.30^", -- [67]
+				"^2677^15^1700098150^495^1^30^449.12^Flowbee", -- [68]
+				"^2820^16^1700106009^0^0^20^462.42^", -- [69]
+				"^2820^16^1700106159^301^1^20^462.42^Atrocityedge", -- [70]
+				"^2709^16^1700106513^1^0^20^462.42^", -- [71]
+				"^2709^16^1700107099^164^0^20^462.57^Kadss", -- [72]
+				"^2709^16^1700107410^184^0^20^462.57^Qrypticzz", -- [73]
+				"^2709^16^1700107676^277^0^20^462.57^Jacobxaxa", -- [74]
+				"^2709^16^1700108077^9^0^20^463.69^Triyng", -- [75]
+				"^2709^16^1700108144^383^1^20^463.00^Twistedm", -- [76]
+				"^2728^16^1700108758^0^0^20^462.54^", -- [77]
+				"^2728^16^1700109075^102^0^20^462.73^Tydrapally", -- [78]
+				"^2728^16^1700109405^136^0^20^462.73^Bowguytome", -- [79]
+				"^2728^16^1700109650^35^0^20^462.73^Twistedm", -- [80]
+				"^2728^16^1700109728^16^0^20^462.73^Zoozz", -- [81]
+				"^2728^16^1700109801^354^0^20^462.73^Localsingles", -- [82]
+				"^2728^16^1700110202^0^0^20^462.73^", -- [83]
+				"^2728^16^1700110254^165^0^20^462.73^Bowguytome", -- [84]
+				"^2728^16^1700110500^168^0^20^462.73^Kamsahabnida", -- [85]
+				"^2728^16^1700110949^447^1^20^462.73^Jacobxaxa", -- [86]
+				"^2737^16^1700111813^0^0^20^462.72^", -- [87]
+				"^2737^16^1700112418^279^1^20^462.90^Whiteboydrip", -- [88]
+				"^2731^16^1700112871^0^0^20^462.90^", -- [89]
+				"^2731^16^1700113090^109^0^20^462.90^Flowbss", -- [90]
+				"^2731^16^1700113302^0^0^20^462.90^", -- [91]
+				"^2731^16^1700113508^104^0^20^463.14^Whiteboydrip", -- [92]
+				"^2731^16^1700113695^197^0^20^462.91^Atrocityedge", -- [93]
+				"^2731^16^1700114030^198^0^20^462.91^Whiteboydrip", -- [94]
+				"^2731^16^1700114329^186^0^20^463.04^Beladedoinks", -- [95]
+				"^2666^8^1700147012^93^1^5^464.74^Anarchyhunt", -- [96]
+				"^2667^8^1700147291^93^1^5^464.74^", -- [97]
+				"^2668^8^1700147638^94^1^5^464.74^", -- [98]
+				"^2669^8^1700147873^126^1^5^464.74^", -- [99]
+				"^1832^8^1700148458^100^1^5^464.74^", -- [100]
+				"^1833^8^1700148892^104^1^5^464.74^Anarchyhunt", -- [101]
+				"^1834^8^1700149369^144^1^5^464.74^Qrypticzz", -- [102]
+				"^1835^8^1700149613^133^1^5^464.74^", -- [103]
+				"^2113^8^1700150054^106^1^5^465.10^", -- [104]
+				"^2114^8^1700150396^122^1^5^465.10^", -- [105]
+				"^2115^8^1700150742^96^1^5^465.10^", -- [106]
+				"^2116^8^1700151078^95^1^5^465.10^", -- [107]
+				"^2117^8^1700151197^109^1^5^465.10^", -- [108]
+				"^2084^8^1700151997^72^1^5^465.26^", -- [109]
+				"^2086^8^1700152185^127^1^5^465.26^Anarchyhunt", -- [110]
+				"^2085^8^1700152529^113^1^5^465.26^", -- [111]
+				"^2087^8^1700152686^82^0^5^465.26^Anarchyhunt", -- [112]
+				"^2087^8^1700152810^132^1^5^465.26^", -- [113]
+				"^2670^8^1700153722^135^1^5^465.38^", -- [114]
+				"^2671^8^1700154397^149^1^5^465.38^Localsingles", -- [115]
+				"^2672^8^1700154783^91^1^5^465.38^", -- [116]
+				"^2673^8^1700155121^186^1^5^465.38^", -- [117]
+				"^1836^8^1700155754^111^1^5^465.46^", -- [118]
+				"^1837^8^1700156106^109^1^5^465.46^Atrocityedge", -- [119]
+				"^1838^8^1700156249^192^1^5^465.46^", -- [120]
+				"^1839^8^1700156588^117^1^5^465.46^Anarchyhunt", -- [121]
+				"^1832^8^1700157457^109^1^5^465.75^", -- [122]
+				"^1833^8^1700157958^84^1^5^465.75^Anarchyhunt", -- [123]
+				"^1834^8^1700158483^106^1^5^465.75^", -- [124]
+				"^1835^8^1700158700^127^1^5^465.75^", -- [125]
+				"^1836^8^1700160223^64^1^5^465.91^", -- [126]
+				"^1837^8^1700160445^67^1^5^465.91^", -- [127]
+				"^1838^8^1700160527^174^1^5^465.91^Atrocityedge", -- [128]
+				"^1839^8^1700160780^82^1^5^465.91^Anarchyhunt", -- [129]
+				"^1836^8^1700161076^76^1^5^465.84^Twistedm", -- [130]
+				"^1837^8^1700161315^74^1^5^465.84^", -- [131]
+				"^1838^8^1700161403^164^1^5^465.84^Anarchyhunt", -- [132]
+				"^1839^8^1700161661^82^1^5^465.84^Anarchyhunt", -- [133]
+				"^1746^8^1700162348^127^1^5^466.04^", -- [134]
+				"^1757^8^1700162782^125^0^5^466.04^Twistedm", -- [135]
+				"^1757^8^1700162951^140^1^5^466.04^Anarchyhunt", -- [136]
+				"^1751^8^1700163344^95^1^5^466.04^", -- [137]
+				"^1756^8^1700163487^119^1^5^466.04^", -- [138]
+				"^2084^8^1700164091^98^1^5^466.04^", -- [139]
+				"^2086^8^1700164311^85^1^5^466.04^", -- [140]
+				"^2085^8^1700164517^11^0^5^466.04^", -- [141]
+				"^2085^8^1700164559^97^1^5^466.04^", -- [142]
+				"^2087^8^1700164699^87^1^5^466.04^", -- [143]
+				"^1045^8^1700165597^138^1^5^466.12^", -- [144]
+				"^1044^8^1700165759^98^1^5^466.12^", -- [145]
+				"^1046^8^1700166102^120^1^5^466.12^", -- [146]
+				"^1047^8^1700166561^123^1^5^466.12^", -- [147]
+				"^1045^8^1700167466^146^1^5^466.21^Twistedm", -- [148]
+				"^1044^8^1700167641^101^1^5^466.21^", -- [149]
+				"^1046^8^1700167993^108^1^5^466.21^", -- [150]
+				"^1047^8^1700168425^147^0^5^466.21^Twistedm", -- [151]
+				"^1047^8^1700168614^122^1^5^466.21^", -- [152]
+				"^2666^8^1700170474^119^1^5^466.54^Atrocityedge", -- [153]
+				"^2667^8^1700170876^119^1^5^466.54^Localsingles", -- [154]
+				"^2668^8^1700171265^143^1^5^466.54^", -- [155]
+				"^2669^8^1700171539^67^0^5^466.54^Twistedm", -- [156]
+				"^2669^8^1700171696^146^1^5^466.54^", -- [157]
+				"^2113^8^1700172132^155^1^5^466.54^Twistedm", -- [158]
+				"^2114^8^1700172455^110^1^5^466.54^", -- [159]
+				"^2115^8^1700172741^116^1^5^466.54^Twistedm", -- [160]
+				"^2116^8^1700173076^84^1^5^466.54^", -- [161]
+				"^2117^8^1700173178^93^1^5^466.54^", -- [162]
+				"^1836^8^1700173649^102^1^5^466.70^", -- [163]
+				"^1837^8^1700173977^91^1^5^466.70^", -- [164]
+				"^1838^8^1700174109^124^1^5^466.70^", -- [165]
+				"^1839^8^1700174402^98^1^5^466.70^Anarchyhunt", -- [166]
+				"^1836^8^1700174912^96^1^5^466.99^", -- [167]
+				"^1837^8^1700175291^86^1^5^466.99^", -- [168]
+				"^1838^8^1700175412^121^1^5^466.99^", -- [169]
+				"^1839^8^1700175698^113^1^5^466.99^Anarchyhunt", -- [170]
+				"^1045^8^1700177316^131^1^5^466.54^", -- [171]
+				"^1044^8^1700177464^104^1^5^466.54^", -- [172]
+				"^1046^8^1700177750^93^1^5^466.54^", -- [173]
+				"^1047^8^1700178141^130^1^5^466.54^Localsingles", -- [174]
+				"^1836^8^1700178697^94^1^5^466.54^", -- [175]
+				"^1837^8^1700179019^92^1^5^466.54^", -- [176]
+				"^1838^8^1700179138^132^1^5^466.54^", -- [177]
+				"^1839^8^1700179431^100^1^5^466.54^", -- [178]
+				"^2708^16^1700183043^98^0^20^463.90^Triyng", -- [179]
+				"^2708^16^1700183237^66^0^20^463.90^Beladedoinks", -- [180]
+				"^2708^16^1700183370^114^0^20^463.90^Sendemail", -- [181]
+				"^2708^16^1700183588^312^0^20^463.90^Whiteboydrip", -- [182]
+				"^2708^16^1700184028^100^0^20^463.90^Triyng", -- [183]
+				"^2708^16^1700184218^105^0^20^463.90^Anarchyhunt", -- [184]
+				"^2708^16^1700184467^129^0^20^463.90^Anarchyhunt", -- [185]
+				"^2708^16^1700184670^0^0^20^463.90^", -- [186]
+				"^2708^16^1700184752^259^0^20^463.97^Triyng", -- [187]
+				"^2708^16^1700185185^348^0^20^466.85^Sendemail", -- [188]
+				"^2708^16^1700185650^121^0^20^466.85^Anarchyhunt", -- [189]
+				"^2708^16^1700185904^245^0^20^466.85^Triyng", -- [190]
+				"^2708^16^1700186264^228^0^20^466.88^Tydrapally", -- [191]
+				"^2708^16^1700186579^241^0^20^466.88^Qrypticzz", -- [192]
+				"^2708^16^1700186918^436^0^20^466.88^Kamsahabnida", -- [193]
+				"^2708^16^1700187497^311^0^20^466.88^Twistedm", -- [194]
+				"^2708^16^1700188204^359^0^20^466.88^Triyng", -- [195]
+				"^2708^16^1700188699^451^1^20^466.88^Jacobxaxa", -- [196]
+				"^2731^16^1700189493^1^0^20^466.88^", -- [197]
+				"^2731^16^1700190991^203^0^20^467.24^Atrocityedge", -- [198]
+				"^2731^16^1700191314^177^0^20^468.24^Zoozz", -- [199]
+				"^2731^16^1700191816^81^0^20^467.24^Beladedoinks", -- [200]
+				"^2731^16^1700191959^0^0^20^467.24^", -- [201]
+				"^2731^16^1700192029^344^0^20^467.24^Flowbss", -- [202]
+				"^2731^16^1700192894^85^0^20^467.24^Drippygodx", -- [203]
+				"^2731^16^1700193098^226^0^20^467.24^Kadss", -- [204]
+				"^2731^16^1700193438^218^0^20^467.24^Qrypticzz", -- [205]
+				"^2731^16^1700193764^375^0^20^467.24^Tydrapally", -- [206]
+				"^2731^16^1700194537^365^0^20^467.17^Qrypticzz", -- [207]
+				"^2731^16^1700195088^299^0^20^467.17^Whiteboydrip", -- [208]
+				"^2731^16^1700195507^402^0^20^467.10^Kadss", -- [209]
+				"^2731^16^1700196074^51^0^20^467.10^Zoozz", -- [210]
+				"^2731^16^1700196234^407^0^20^467.10^Sendemail", -- [211]
+				"^2731^16^1700196778^402^0^20^467.10^Drippygodx", -- [212]
+				"^2731^16^1700197459^0^0^20^467.10^", -- [213]
+				"^2731^16^1700197639^405^0^20^467.10^Tydrapally", -- [214]
+				"^2731^16^1700198354^61^0^20^467.17^Whiteboydrip", -- [215]
+				"^2731^16^1700198529^302^0^20^467.17^Atrocityedge", -- [216]
+				"^2731^16^1700198923^288^0^20^467.17^Kamsahabnida", -- [217]
+				"^2731^16^1700199320^400^1^20^467.17^Qrypticzz", -- [218]
+				"^2824^16^1700199857^7^0^20^467.17^Drippygodx", -- [219]
+				"^2824^16^1700199921^0^0^20^467.17^", -- [220]
+				"^2824^16^1700200023^128^0^20^467.17^Kadss", -- [221]
+				"^2666^8^1700248421^99^1^5^469.07^", -- [222]
+				"^2667^8^1700248743^85^1^5^469.07^", -- [223]
+				"^2668^8^1700249114^137^1^5^469.07^Atrocityedge", -- [224]
+				"^2669^8^1700249359^130^1^5^469.07^", -- [225]
+				"^1836^8^1700249875^90^1^5^469.24^", -- [226]
+				"^1837^8^1700250168^93^1^5^469.24^", -- [227]
+				"^1838^8^1700250286^140^1^5^469.24^Atrocityedge", -- [228]
+				"^1839^8^1700250557^87^1^5^469.24^Anarchyhunt", -- [229]
+				"^1045^8^1700251293^128^1^5^469.19^", -- [230]
+				"^1044^8^1700251441^89^1^5^469.19^", -- [231]
+				"^1046^8^1700251737^92^1^5^469.19^", -- [232]
+				"^1047^8^1700252047^125^1^5^469.19^Localsingles", -- [233]
+				"^2670^8^1700252835^105^1^5^469.19^", -- [234]
+				"^2671^8^1700253427^74^1^5^469.19^Twistedm", -- [235]
+				"^2672^8^1700253694^77^1^5^469.19^", -- [236]
+				"^2673^8^1700253967^162^1^5^469.19^", -- [237]
+				"^1836^8^1700255140^112^1^5^469.55^Atrocityedge", -- [238]
+				"^1837^8^1700255459^97^1^5^469.55^", -- [239]
+				"^1838^8^1700255569^151^1^5^469.55^", -- [240]
+				"^1839^8^1700255850^102^1^5^469.55^", -- [241]
+				"^2084^8^1700256359^99^1^5^469.91^Localsingles", -- [242]
+				"^2086^8^1700256665^113^1^5^469.91^", -- [243]
+				"^2085^8^1700256915^158^1^5^469.91^", -- [244]
+				"^2087^8^1700257119^104^1^5^469.91^Twistedm", -- [245]
+				"^2113^8^1700257513^91^1^5^469.95^", -- [246]
+				"^2114^8^1700257765^99^1^5^469.95^", -- [247]
+				"^2115^8^1700258088^74^1^5^469.95^Twistedm", -- [248]
+				"^2116^8^1700258447^138^1^5^469.95^Anarchyhunt", -- [249]
+				"^2117^8^1700258613^95^1^5^469.95^Anarchyhunt", -- [250]
+				"^1746^8^1700259414^114^1^5^469.95^", -- [251]
+				"^1757^8^1700259860^97^1^5^469.95^", -- [252]
+				"^1751^8^1700260098^83^1^5^469.95^", -- [253]
+				"^1756^8^1700260229^130^1^5^469.95^", -- [254]
+				"^1045^8^1700260981^127^1^5^469.99^Atrocityedge", -- [255]
+				"^1044^8^1700261124^90^1^5^469.99^", -- [256]
+				"^1046^8^1700261413^93^1^5^469.99^", -- [257]
+				"^1047^8^1700261736^112^1^5^469.99^", -- [258]
+				"^2666^8^1700262098^103^1^5^469.99^Twistedm", -- [259]
+				"^2667^8^1700262439^89^1^5^469.99^", -- [260]
+				"^2668^8^1700262754^135^1^5^469.99^Atrocityedge", -- [261]
+				"^2669^8^1700263049^93^0^5^469.99^Qrypticzz", -- [262]
+				"^2669^8^1700263209^133^1^5^469.99^", -- [263]
+				"^2084^8^1700269998^72^1^5^469.80^", -- [264]
+				"^2085^8^1700270278^118^1^5^469.80^", -- [265]
+				"^2086^8^1700270417^79^1^5^469.80^", -- [266]
+				"^2087^8^1700270597^79^0^5^469.80^Xybeaned", -- [267]
+				"^2087^8^1700270728^130^1^5^469.80^", -- [268]
+				"^1045^8^1700271608^135^1^5^469.85^Atrocityedge", -- [269]
+				"^1044^8^1700271759^76^1^5^469.85^", -- [270]
+				"^1046^8^1700272057^100^1^5^469.85^", -- [271]
+				"^1047^8^1700272419^105^1^5^470.22^Millipthree", -- [272]
+				"^1045^8^1700273128^126^1^5^469.84^", -- [273]
+				"^1044^8^1700273272^102^1^5^469.84^", -- [274]
+				"^1046^8^1700273576^79^1^5^469.84^", -- [275]
+				"^1047^8^1700273953^116^1^5^469.84^", -- [276]
+				"^1045^8^1700274916^134^1^5^469.84^Anarchyhunt", -- [277]
+				"^1044^8^1700275069^73^1^5^469.84^", -- [278]
+				"^1046^8^1700275352^92^1^5^469.84^", -- [279]
+				"^1047^8^1700275747^101^1^5^469.84^", -- [280]
+				"^1836^8^1700276398^95^1^5^470.16^", -- [281]
+				"^1837^8^1700276720^103^1^5^470.16^Anarchyhunt", -- [282]
+				"^1838^8^1700276869^152^1^5^470.16^Anarchyhunt", -- [283]
+				"^1839^8^1700277152^109^1^5^470.16^Xybeaned", -- [284]
+				"^2824^16^1700281648^73^0^20^470.78^Flowbss", -- [285]
+				"^2824^16^1700281981^76^0^20^470.78^Flowbss", -- [286]
+				"^2824^16^1700282160^155^0^20^470.78^Twistedm", -- [287]
+				"^2824^16^1700282435^0^0^20^470.78^", -- [288]
+				"^2824^16^1700282474^147^0^20^470.78^Qrypticzz", -- [289]
+				"^2824^16^1700282801^117^0^20^470.78^Drippygodx", -- [290]
+				"^2824^16^1700283039^62^0^20^470.78^Anarchyhunt", -- [291]
+				"^2824^16^1700283211^254^0^20^470.78^Anarchyhunt", -- [292]
+				"^2824^16^1700283569^201^0^20^470.78^Drippygodx", -- [293]
+				"^2824^16^1700283937^136^0^20^470.78^Anarchyhunt", -- [294]
+				"^2824^16^1700284163^0^0^20^470.78^", -- [295]
+				"^2824^16^1700284207^58^0^20^470.79^Atrocityedge", -- [296]
+				"^2824^16^1700284390^250^0^20^470.79^Gkn", -- [297]
+				"^2824^16^1700284754^93^0^20^470.79^Drippygodx", -- [298]
+				"^2824^16^1700285062^180^0^20^470.79^Dcn", -- [299]
+				"^2824^16^1700285394^118^0^20^470.79^Beladedoinks", -- [300]
+				"^2824^16^1700285609^230^0^20^470.79^Beladedoinks", -- [301]
+				"^2824^16^1700285925^72^0^20^470.79^Anarchyhunt", -- [302]
+				"^2824^16^1700286356^234^0^20^470.79^Millipthree", -- [303]
+				"^2824^16^1700286717^97^0^20^470.79^Aestisqtt", -- [304]
+				"^2824^16^1700287096^144^0^20^470.79^Atrocityedge", -- [305]
+				"^2824^16^1700287448^57^0^20^470.79^Beladedoinks", -- [306]
+				"^2824^16^1700287600^75^0^20^470.79^Kadss", -- [307]
+				"^2824^16^1700349866^45^0^20^472.71^Drippygodx", -- [308]
+				"^2824^16^1700350003^49^0^20^472.71^Anarchyhunt", -- [309]
+				"^2824^16^1700350145^166^0^20^472.71^Kadss", -- [310]
+				"^2824^16^1700350415^246^0^20^472.76^Kadss", -- [311]
+				"^2824^16^1700350774^354^0^20^472.76^Atrocityedge", -- [312]
+				"^2824^16^1700351285^271^0^20^472.76^Triyng", -- [313]
+				"^2824^16^1700351732^345^0^20^472.80^Beladedoinks", -- [314]
+				"^2824^16^1700352267^146^0^20^472.80^Millipthree", -- [315]
+				"^2824^16^1700352512^274^0^20^472.80^Kadss", -- [316]
+				"^2824^16^1700352883^71^0^20^472.80^Beladedoinks", -- [317]
+				"^2824^16^1700353036^331^0^20^472.80^Dcn", -- [318]
+				"^2824^16^1700353505^428^0^20^472.80^Anarchyhunt", -- [319]
+				"^2824^16^1700354092^189^0^20^472.80^Anarchyhunt", -- [320]
+				"^2824^16^1700354380^142^0^20^472.80^Kadss", -- [321]
+				"^2824^16^1700354665^262^0^20^472.81^Twistedm", -- [322]
+				"^2824^16^1700355116^72^0^20^472.81^Drippygodx", -- [323]
+				"^2824^16^1700355290^261^0^20^472.81^Flowbss", -- [324]
+				"^2824^16^1700355673^359^0^20^472.81^Triyng", -- [325]
+				"^2824^16^1700356315^140^0^20^472.81^Atrocityedge", -- [326]
+				"^2824^16^1700356596^74^0^20^472.81^Drippygodx", -- [327]
+				"^2824^16^1700356750^73^0^20^472.81^Tydrapally", -- [328]
+				"^2824^16^1700357389^177^0^20^472.81^Drippygodx", -- [329]
+				"^2824^16^1700357670^148^0^20^472.81^Beladedoinks", -- [330]
+				"^2824^16^1700357914^317^0^20^472.81^Kadss", -- [331]
+				"^2824^16^1700358341^73^0^20^472.81^Anarchyhunt", -- [332]
+				"^2824^16^1700358666^434^0^20^472.81^Aestisqtt", -- [333]
+				"^2824^16^1700359474^55^0^20^472.81^Anarchyhunt", -- [334]
+				"^2824^16^1700359629^194^0^20^472.81^Twistedm", -- [335]
+				"^2824^16^1700359911^70^0^20^472.81^Anarchyhunt", -- [336]
+				"^2824^16^1700360094^358^0^20^472.81^Bowguytome", -- [337]
+				"^2824^16^1700360614^138^0^20^472.81^Bowguytome", -- [338]
+				"^2824^16^1700360870^315^0^20^472.81^Karzastrasza", -- [339]
+				"^2824^16^1700361223^5^0^20^472.81^", -- [340]
+				"^2824^16^1700361311^73^0^20^472.81^Atrocityedge", -- [341]
+				"^2824^16^1700361479^373^0^20^472.81^Weewk", -- [342]
+				"^2824^16^1700361953^168^0^20^472.81^Dcn", -- [343]
+				"^2824^16^1700362224^140^0^20^472.81^Kadss", -- [344]
+				"^2824^16^1700362454^361^0^20^472.81^Weewk", -- [345]
+				"^2824^16^1700362922^163^0^20^472.81^Karzastrasza", -- [346]
+				"^2824^16^1700363182^263^0^20^472.81^Drippygodx", -- [347]
+				"^2824^16^1700363535^163^0^20^472.81^Dcn", -- [348]
+				"^2824^16^1700363785^138^0^20^472.81^Beladedoinks", -- [349]
+				"^2824^16^1700365260^193^0^20^472.81^Beladedoinks", -- [350]
+				"^2824^16^1700365546^70^0^20^472.81^Atrocityedge", -- [351]
+				"^2824^16^1700365706^428^0^20^472.81^Twistedm", -- [352]
+				"^2824^16^1700366249^116^0^20^472.81^Triyng", -- [353]
+				"^2824^16^1700366460^145^0^20^472.81^Atrocityedge", -- [354]
+				"^2824^16^1700366803^98^0^20^472.81^Tydrapally", -- [355]
+				"^2824^16^1700367062^215^0^20^472.81^Bowguytome", -- [356]
+				"^2824^16^1700367369^363^0^20^472.81^Drippygodx", -- [357]
+				"^2824^16^1700367955^57^0^20^472.81^Twistedm", -- [358]
+				"^2824^16^1700368084^138^0^20^472.81^Karzastrasza", -- [359]
+				"^2824^16^1700368302^231^0^20^472.81^Beladedoinks", -- [360]
+				"^2824^16^1700368623^435^0^20^472.81^Twistedm", -- [361]
+				"^2824^16^1700369194^359^0^20^472.81^Flowbss", -- [362]
+				"^2824^16^1700369674^334^0^20^472.81^Beladedoinks", -- [363]
+				"^2824^16^1700370102^45^0^20^472.81^Dcn", -- [364]
+				"^2824^16^1700370231^441^0^20^472.81^Bowguytome", -- [365]
+				"^2824^16^1700370843^0^0^20^472.81^", -- [366]
+				"^2824^16^1700370928^163^0^20^472.81^Bowguytome", -- [367]
+				"^2824^16^1700371279^164^0^20^472.81^Qrypticzz", -- [368]
+				"^2824^16^1700371529^362^0^20^472.81^Triyng", -- [369]
+				"^2824^16^1700372045^333^0^20^472.81^Beladedoinks", -- [370]
+				"^2824^16^1700372483^303^0^20^472.81^Triyng", -- [371]
+				"^2824^16^1700372862^179^0^20^472.81^Qrypticzz", -- [372]
+				"^2824^16^1700373114^163^0^20^472.81^Beladedoinks", -- [373]
+				"^2824^16^1700373349^420^0^20^472.81^Qrypticzz", -- [374]
+				"^2824^16^1700373879^337^0^20^472.81^Gkn", -- [375]
+				"^2824^16^1700374307^168^0^20^472.81^Zoozz", -- [376]
+				"^2824^16^1700374595^262^0^20^472.81^Tydrapally", -- [377]
+				"^2824^16^1700374991^50^0^20^472.81^Dcn", -- [378]
+				"^2824^16^1700375112^143^0^20^472.81^Triyng", -- [379]
+				"^2824^16^1700375335^86^0^20^472.81^Beladedoinks", -- [380]
+				"^2824^16^1700375510^355^0^20^472.81^Beladedoinks", -- [381]
+				"^2824^16^1700375949^364^0^20^472.81^Triyng", -- [382]
+				"^2824^16^1700376446^267^0^20^472.81^Triyng", -- [383]
+				"^2824^16^1700376811^69^0^20^472.81^Anarchyhunt", -- [384]
+				"^2824^16^1700376963^385^0^20^472.81^Dcn", -- [385]
+				"^2824^16^1700435256^398^0^20^473.13^Anarchyhunt", -- [386]
+				"^2824^16^1700435747^420^1^20^473.13^Beladedoinks", -- [387]
+				"^2786^16^1700439891^28^0^20^473.59^Kadss", -- [388]
+				"^2786^16^1700440003^32^0^20^473.59^Beladedoinks", -- [389]
+				"^2786^16^1700440135^33^0^20^473.59^Millipthree", -- [390]
+				"^2786^16^1700440272^30^0^20^473.59^Anarchyhunt", -- [391]
+				"^2786^16^1700440453^30^0^20^473.59^Triyng", -- [392]
+				"^2786^16^1700440647^44^0^20^473.59^Triyng", -- [393]
+				"^2786^16^1700440812^82^0^20^473.59^Gkn", -- [394]
+				"^2786^16^1700440976^43^0^20^473.59^Tydrapally", -- [395]
+				"^2786^16^1700441116^68^0^20^473.59^Millipthree", -- [396]
+				"^2786^16^1700441340^68^0^20^473.59^Millipthree", -- [397]
+				"^2786^16^1700441617^40^0^20^473.59^Anarchyhunt", -- [398]
+				"^2786^16^1700441812^72^0^20^473.59^Triyng", -- [399]
+				"^2786^16^1700441991^42^0^20^473.59^Kadss", -- [400]
+				"^2786^16^1700442101^70^0^20^473.59^Qrypticzz", -- [401]
+				"^2786^16^1700442602^47^0^20^473.61^Millipthree", -- [402]
+				"^2786^16^1700442784^66^0^20^473.69^Millipthree", -- [403]
+				"^2786^16^1700442922^69^0^20^473.69^Millipthree", -- [404]
+				"^2786^16^1700443078^64^0^20^473.69^Kadss", -- [405]
+				"^2786^16^1700443223^64^0^20^473.69^Qrypticzz", -- [406]
+				"^2786^16^1700443369^66^0^20^473.69^Bowguytome", -- [407]
+				"^2786^16^1700443522^35^0^20^473.69^Anarchyhunt", -- [408]
+				"^2786^16^1700443658^73^0^20^473.69^Triyng", -- [409]
+				"^2786^16^1700443807^76^0^20^473.69^Qrypticzz", -- [410]
+				"^2786^16^1700444045^45^0^20^473.69^Gkn", -- [411]
+				"^2786^16^1700444183^79^0^20^473.69^Kadss", -- [412]
+				"^2786^16^1700444351^35^0^20^473.69^Twistedm", -- [413]
+				"^2786^16^1700444458^66^0^20^473.69^Millipthree", -- [414]
+				"^2786^16^1700444627^65^0^20^473.69^Atrocityedge", -- [415]
+				"^2786^16^1700444779^66^0^20^473.69^Anarchyhunt", -- [416]
+				"^2786^16^1700444986^72^0^20^473.69^Gkn", -- [417]
+				"^2786^16^1700445152^69^0^20^473.69^Tydrapally", -- [418]
+				"^2786^16^1700445457^46^0^20^473.73^Sendemail", -- [419]
+				"^2786^16^1700445606^63^0^20^473.73^Twistedm", -- [420]
+				"^2786^16^1700445788^72^0^20^473.73^Millipthree", -- [421]
+				"^2786^16^1700449104^42^0^20^473.56^Bowguytome", -- [422]
+				"^2786^16^1700449221^56^0^20^473.46^Dcn", -- [423]
+				"^2786^16^1700449351^67^0^20^473.46^Tydrapally", -- [424]
+				"^2786^16^1700449527^67^0^20^473.46^Dcn", -- [425]
+				"^2786^16^1700449683^44^0^20^473.46^Dcn", -- [426]
+				"^2786^16^1700449844^49^0^20^473.54^Anarchyhunt", -- [427]
+				"^2786^16^1700449984^70^0^20^473.54^Triyng", -- [428]
+				"^2786^16^1700450160^67^0^20^473.54^Syzlakdeekay", -- [429]
+				"^2786^16^1700450326^49^0^20^473.54^Anarchyhunt", -- [430]
+				"^2786^16^1700450523^72^0^20^473.64^Syzlakdeekay", -- [431]
+				"^2786^16^1700450695^177^0^20^473.64^Kadss", -- [432]
+				"^2786^16^1700450966^57^0^20^473.64^Millipthree", -- [433]
+				"^2786^16^1700451088^70^0^20^473.64^Triyng", -- [434]
+				"^2786^16^1700451246^82^0^20^473.64^Dcn", -- [435]
+				"^2786^16^1700451400^50^0^20^473.64^Anarchyhunt", -- [436]
+				"^2786^16^1700451584^164^0^20^473.64^Twistedm", -- [437]
+				"^2786^16^1700451822^40^0^20^473.64^Twistedm", -- [438]
+				"^2786^16^1700452440^68^0^20^473.46^Millipthree", -- [439]
+				"^2786^16^1700452580^31^0^20^473.46^Bowguytome", -- [440]
+				"^2786^16^1700452672^47^0^20^473.46^Anarchyhunt", -- [441]
+				"^2786^16^1700452790^162^0^20^473.46^Triyng", -- [442]
+				"^2786^16^1700453065^37^0^20^473.46^Gkn", -- [443]
+				"^2786^16^1700453166^70^0^20^473.46^Beladedoinks", -- [444]
+				"^2786^16^1700453321^42^0^20^473.46^Kadss", -- [445]
+				"^2786^16^1700453431^91^0^20^473.46^Bowguytome", -- [446]
+				"^2786^16^1700453596^66^0^20^473.46^Atrocityedge", -- [447]
+				"^2786^16^1700453821^69^0^20^473.46^Millipthree", -- [448]
+				"^2786^16^1700454060^98^0^20^473.46^Bowguytome", -- [449]
+				"^2786^16^1700454261^122^0^20^473.46^Kadss", -- [450]
+				"^2786^16^1700454467^157^0^20^473.46^Qrypticzz", -- [451]
+				"^2786^16^1700454689^78^0^20^473.46^Dcn", -- [452]
+				"^2786^16^1700454849^162^0^20^473.46^Twistedm", -- [453]
+				"^2786^16^1700455121^100^0^20^473.46^Bowguytome", -- [454]
+				"^2786^16^1700455313^69^0^20^473.46^Jacobxaxa", -- [455]
+				"^2786^16^1700455580^76^0^20^473.56^Bowguytome", -- [456]
+				"^2786^16^1700455739^69^0^20^473.56^Kadss", -- [457]
+				"^2786^16^1700455888^161^0^20^473.56^Bowguytome", -- [458]
+				"^2786^16^1700456150^100^0^20^473.56^Beladedoinks", -- [459]
+				"^2786^16^1700456316^33^0^20^473.56^Qrypticzz", -- [460]
+				"^2786^16^1700456443^92^0^20^473.56^Triyng", -- [461]
+				"^2786^16^1700456648^74^0^20^473.56^Qrypticzz", -- [462]
+				"^2786^16^1700456808^160^0^20^473.56^Weewk", -- [463]
+				"^2786^16^1700457039^80^0^20^474.62^Qrypticzz", -- [464]
+				"^2786^16^1700457211^85^0^20^473.56^Syzlakdeekay", -- [465]
+				"^2786^16^1700457365^116^0^20^473.56^Sendemail", -- [466]
+				"^2786^16^1700457563^68^0^20^473.56^Atrocityedge", -- [467]
+				"^2786^16^1700457704^72^0^20^473.56^Localsingles", -- [468]
+				"^2786^16^1700457845^31^0^20^473.56^Beladedoinks", -- [469]
+				"^2786^16^1700457938^96^0^20^473.56^Kadss", -- [470]
+				"^2786^16^1700458099^100^0^20^473.56^Gkn", -- [471]
+				"^2786^16^1700458373^179^0^20^468.40^Localsingles", -- [472]
+				"^2786^16^1700529142^42^0^20^473.82^Dcn", -- [473]
+				"^2786^16^1700529309^46^0^20^473.82^Twistedm", -- [474]
+				"^2786^16^1700529447^73^0^20^473.82^Gkn", -- [475]
+				"^2786^16^1700529617^90^0^20^473.82^Tydrapally", -- [476]
+				"^2786^16^1700529825^50^0^20^473.82^Weewk", -- [477]
+				"^2786^16^1700529934^179^0^20^473.80^Tydrapally", -- [478]
+				"^2786^16^1700530755^40^0^20^473.80^Qrypticzz", -- [479]
+				"^2786^16^1700530864^31^0^20^473.80^Qrypticzz", -- [480]
+				"^2786^16^1700530956^157^0^20^473.80^Kadss", -- [481]
+				"^2786^16^1700531195^78^0^20^473.80^Triyng", -- [482]
+				"^2786^16^1700531352^176^0^20^473.80^Millipthree", -- [483]
+				"^2786^16^1700531608^110^0^20^473.80^Atrocityedge", -- [484]
+				"^2786^16^1700531824^55^0^20^473.80^Triyng", -- [485]
+				"^2786^16^1700531956^176^0^20^473.80^Dcn", -- [486]
+				"^2786^16^1700532395^174^0^20^473.80^Beladedoinks", -- [487]
+				"^2786^16^1700532708^45^0^20^473.80^Dcn", -- [488]
+				"^2786^16^1700532833^181^0^20^473.88^Sendemail", -- [489]
+				"^2786^16^1700533112^57^0^20^473.88^Millipthree", -- [490]
+				"^2786^16^1700533254^177^0^20^473.88^Twistedm", -- [491]
+				"^2786^16^1700533570^182^0^20^473.88^Atrocityedge", -- [492]
+				"^2786^16^1700533946^161^0^20^474.02^Weewk", -- [493]
+				"^2786^16^1700534188^180^0^20^474.02^Gkn", -- [494]
+				"^2786^16^1700534438^95^0^20^474.02^Triyng", -- [495]
+				"^2786^16^1700534609^178^0^20^474.02^Sendemail", -- [496]
+				"^2786^16^1700534894^180^0^20^474.02^Aestisqtt", -- [497]
+				"^2786^16^1700535239^179^0^20^474.02^Beladedoinks", -- [498]
+				"^2786^16^1700535565^186^0^20^473.94^Qrypticzz", -- [499]
+				"^2786^16^1700535846^59^0^20^473.94^Sendemail", -- [500]
+				"^2786^16^1700535966^195^0^20^473.94^Atrocityedge", -- [501]
+				"^2786^16^1700536304^116^0^20^473.94^Millipthree", -- [502]
+				"^2786^16^1700536507^82^0^20^473.94^Weewk", -- [503]
+				"^2786^16^1700536683^66^0^20^473.94^Kadss", -- [504]
+				"^2786^16^1700536830^180^0^20^473.94^Kadss", -- [505]
+				"^2786^16^1700537287^65^0^20^473.94^Millipthree", -- [506]
+				"^2786^16^1700537422^95^0^20^473.94^Tydrapally", -- [507]
+				"^2786^16^1700538615^178^0^20^474.06^Qrypticzz", -- [508]
+				"^2786^16^1700538881^57^0^20^474.06^Qrypticzz", -- [509]
+				"^2786^16^1700539029^178^0^20^474.06^Gkn", -- [510]
+				"^2786^16^1700539299^54^0^20^474.06^Jacobxaxa", -- [511]
+				"^2786^16^1700539419^53^0^20^474.06^Anarchyhunt", -- [512]
+				"^2786^16^1700539558^111^0^20^474.06^Triyng", -- [513]
+				"^2786^16^1700539759^180^0^20^474.06^Bowguytome", -- [514]
+				"^2786^16^1700540184^33^0^20^474.11^Twistedm", -- [515]
+				"^2786^16^1700540299^67^0^20^474.11^Dcn", -- [516]
+				"^2786^16^1700540425^111^0^20^474.11^Sendemail", -- [517]
+				"^2786^16^1700540601^181^0^20^474.11^Tydrapally", -- [518]
+				"^2786^16^1700540872^170^0^20^474.11^Triyng", -- [519]
+				"^2786^16^1700541154^196^0^20^474.11^Weewk", -- [520]
+				"^2786^16^1700541465^184^0^20^474.11^Jacobxaxa", -- [521]
+				"^2786^16^1700541788^184^0^20^474.11^Tydrapally", -- [522]
+				"^2786^16^1700542050^177^0^20^474.11^Syzlakdeekay", -- [523]
+				"^2786^16^1700542316^66^0^20^474.11^Qrypticzz", -- [524]
+				"^2786^16^1700542526^50^0^20^474.11^Beladedoinks", -- [525]
+				"^2786^16^1700542646^193^0^20^474.11^Beladedoinks", -- [526]
+				"^2786^16^1700542947^174^0^20^474.11^Bowguytome", -- [527]
+				"^2786^16^1700543203^206^0^20^474.11^Triyng", -- [528]
+				"^2786^16^1700543526^178^0^20^474.11^Jacobxaxa", -- [529]
+				"^2786^16^1700543791^66^0^20^474.11^Bowguytome", -- [530]
+				"^2786^16^1700543950^111^0^20^474.11^Jacobxaxa", -- [531]
+				"^2786^16^1700544133^159^0^20^474.11^Anarchyhunt", -- [532]
+				"^2786^16^1700544368^181^0^20^474.11^Syzlakdeekay", -- [533]
+				"^2786^16^1700544648^68^0^20^474.11^Bowguytome", -- [534]
+				"^2786^16^1700544783^67^0^20^474.11^Dcn", -- [535]
+				"^2786^16^1700544952^182^0^20^474.11^Atrocityedge", -- [536]
+				"^2786^16^1700545222^56^0^20^474.11^Qrypticzz", -- [537]
+				"^2786^16^1700545351^111^0^20^474.11^Weewk", -- [538]
+				"^2786^16^1700545537^159^0^20^474.11^Qrypticzz", -- [539]
+				"^2786^16^1700545840^71^0^20^473.93^Millipthree", -- [540]
+				"^2786^16^1700545979^200^0^20^473.93^Weewk", -- [541]
+				"^1746^8^1700598917^137^1^5^473.71^", -- [542]
+				"^1757^8^1700599273^125^1^5^473.71^", -- [543]
+				"^1751^8^1700599541^94^1^5^473.71^", -- [544]
+				"^1756^8^1700599749^173^1^5^473.71^", -- [545]
+				"^2670^8^1700600510^141^1^5^472.45^", -- [546]
+				"^2671^8^1700601035^134^1^5^472.45^", -- [547]
+				"^2672^8^1700601459^108^1^5^472.45^", -- [548]
+				"^2673^8^1700601816^199^1^5^472.45^Atrocityedge", -- [549]
+				"^2670^8^1700602561^33^0^5^471.80^Atrocityedge", -- [550]
+				"^2670^8^1700602625^184^0^5^471.80^Dxaugtwo", -- [551]
+				"^2670^8^1700602840^160^1^5^471.80^", -- [552]
+				"^2671^8^1700603408^123^1^5^471.80^Atrocityedge", -- [553]
+				"^2672^8^1700603807^117^1^5^471.80^", -- [554]
+				"^2673^8^1700604096^215^1^5^471.80^Atrocityedge", -- [555]
+				"^2820^15^1700615582^43^0^28^455.70^Trippygodx", -- [556]
+				"^2820^15^1700615712^165^1^30^455.60^Dudeguyfive", -- [557]
+				"^2709^15^1700615925^4^0^30^455.60^", -- [558]
+				"^2709^15^1700615975^212^1^30^455.54^Priesttwo", -- [559]
+				"^2728^15^1700616391^0^0^30^455.59^", -- [560]
+				"^2728^15^1700616490^246^1^30^455.79^Localsingles", -- [561]
+				"^2708^15^1700616857^0^0^30^455.79^", -- [562]
+				"^2708^15^1700616903^230^1^30^455.84^Kadv", -- [563]
+				"^2737^15^1700617392^0^0^30^456.25^", -- [564]
+				"^2737^15^1700617450^170^1^30^456.25^Tryingc", -- [565]
+				"^2731^15^1700617757^0^0^30^456.25^", -- [566]
+				"^2731^15^1700617813^242^1^30^456.31^Flowbee", -- [567]
+				"^2824^15^1700618164^0^0^30^456.08^", -- [568]
+				"^2824^15^1700618251^253^1^30^456.09^Anarchyrogue", -- [569]
+				"^2786^15^1700618728^405^1^30^456.27^Localsingles", -- [570]
+				"^2677^15^1700630750^322^0^30^457.88^Liltome", -- [571]
+				"^2677^15^1700631160^448^1^30^457.35^Karzaugieaug", -- [572]
+				"^2820^16^1700701593^0^0^20^475.25^", -- [573]
+				"^2820^16^1700701665^226^1^20^475.25^Jasonbournex", -- [574]
+				"^2709^16^1700701978^0^0^20^475.25^", -- [575]
+				"^2709^16^1700702290^128^0^20^475.12^Drippygodx", -- [576]
+				"^2709^16^1700702542^300^1^20^475.12^Beladedoinks", -- [577]
+				"^2728^16^1700703116^0^0^20^475.37^", -- [578]
+				"^2728^16^1700703308^235^0^20^475.45^Drippygodx", -- [579]
+				"^2728^16^1700703710^237^0^20^475.45^Triyng", -- [580]
+				"^2728^16^1700704081^347^1^20^475.45^", -- [581]
+				"^2708^16^1700704559^0^0^20^475.45^", -- [582]
+				"^2708^16^1700705090^395^1^20^475.65^Flowbss", -- [583]
+				"^2737^16^1700705823^0^0^20^475.65^", -- [584]
+				"^2737^16^1700705972^255^1^20^475.69^Kadss", -- [585]
+				"^2731^16^1700706378^0^0^20^475.69^", -- [586]
+				"^2731^16^1700706657^294^0^20^475.63^Beladedoinks", -- [587]
+				"^2731^16^1700707098^375^0^20^475.63^Aestisqtt", -- [588]
+				"^2731^16^1700707505^27^0^20^475.63^Zoozz", -- [589]
+				"^2731^16^1700707602^0^0^20^475.65^", -- [590]
+				"^2731^16^1700707673^372^1^20^475.65^Twistedm", -- [591]
+				"^2824^16^1700710256^282^0^20^476.73^Kadss", -- [592]
+				"^2824^16^1700710695^240^0^20^476.85^Atrocityedge", -- [593]
+				"^2824^16^1700711019^136^0^20^476.85^Drippygodx", -- [594]
+				"^2824^16^1700711246^395^1^20^476.85^Beladedoinks", -- [595]
+				"^2786^16^1700713325^64^0^20^477.82^Kadss", -- [596]
+				"^2786^16^1700713472^90^0^20^477.82^Jasonbournex", -- [597]
+				"^2786^16^1700713804^70^0^20^477.84^Millipthree", -- [598]
+				"^2786^16^1700713981^77^0^20^477.84^Kadss", -- [599]
+				"^2786^16^1700714151^34^0^20^477.84^Jasonbournex", -- [600]
+				"^2786^16^1700714249^171^0^20^477.84^Atrocityedge", -- [601]
+				"^2786^16^1700714522^106^0^20^477.84^Kadss", -- [602]
+				"^2786^16^1700714708^179^0^20^477.84^Tydrapally", -- [603]
+				"^2786^16^1700714982^158^0^20^477.84^Millipthree", -- [604]
+				"^2786^16^1700715218^179^0^20^477.96^Kadss", -- [605]
+				"^2786^16^1700715483^68^0^20^478.05^Tydrapally", -- [606]
+				"^2786^16^1700715615^71^0^20^478.05^Millipthree", -- [607]
+				"^2786^16^1700715770^183^0^20^478.05^Weewk", -- [608]
+				"^2786^16^1700716041^182^0^20^478.05^Weewk", -- [609]
+				"^2786^16^1700716594^67^0^20^478.05^Weewk", -- [610]
+				"^2786^16^1700716735^108^0^20^478.05^Anarchyhunt", -- [611]
+				"^2786^16^1700716916^196^0^20^478.05^Dcn", -- [612]
+				"^2786^16^1700717221^182^0^20^478.05^Bowguytome", -- [613]
+				"^2786^16^1700717494^63^0^20^478.05^Dcn", -- [614]
+				"^2786^16^1700717622^69^0^20^478.05^Twistedm", -- [615]
+				"^2786^16^1700717762^70^0^20^478.05^Jasonbournex", -- [616]
+				"^2786^16^1700718027^177^0^20^478.21^Cranetrain", -- [617]
+				"^2786^16^1700718291^47^0^20^478.29^Beladedoinks", -- [618]
+				"^2786^16^1700718401^98^0^20^478.29^Bowguytome", -- [619]
+				"^2786^16^1700718570^65^0^20^478.29^Qrypticzz", -- [620]
+				"^2786^16^1700718751^53^0^20^478.29^Triyng", -- [621]
+				"^2786^16^1700718893^165^0^20^478.29^Dcn", -- [622]
+				"^2786^16^1700719167^34^0^20^478.29^Beladedoinks", -- [623]
+				"^2786^16^1700719280^54^0^20^478.29^Dcn", -- [624]
+				"^2786^16^1700719398^207^0^20^478.29^Dcn", -- [625]
+				"^2786^16^1700791546^67^0^20^479.37^Millipthree", -- [626]
+				"^2786^16^1700791730^180^0^20^479.37^Gkn", -- [627]
+				"^2786^16^1700792024^55^0^20^479.37^Sendemail", -- [628]
+				"^2786^16^1700792178^71^0^20^479.37^Jasonbournex", -- [629]
+				"^2786^16^1700792364^107^0^20^479.37^Millipthree", -- [630]
+				"^2786^16^1700792530^183^0^20^479.37^Kadss", -- [631]
+				"^2786^16^1700792787^204^0^20^479.37^Millipthree", -- [632]
+				"^2786^16^1700793122^86^0^20^479.38^Dcn", -- [633]
+				"^2786^16^1700793272^67^0^20^479.38^Sendemail", -- [634]
+				"^2786^16^1700793407^206^0^20^479.38^Millipthree", -- [635]
+				"^2786^16^1700793688^228^0^20^479.38^Dcn", -- [636]
+				"^2786^16^1700794149^228^0^20^479.38^Bowguytome", -- [637]
+				"^2786^16^1700794527^205^0^20^479.38^Beladedoinks", -- [638]
+				"^2786^16^1700794825^109^0^20^479.38^Sendemail", -- [639]
+				"^2786^16^1700795003^67^0^20^479.38^Jasonbournex", -- [640]
+				"^2786^16^1700795139^183^0^20^479.38^Triyng", -- [641]
+				"^2786^16^1700795427^106^0^20^479.38^Jasonbournex", -- [642]
+				"^2786^16^1700795619^51^0^20^479.38^Dcn", -- [643]
+				"^2786^16^1700795736^91^0^20^479.38^Sendemail", -- [644]
+				"^2786^16^1700795895^54^0^20^479.38^Qrypticzz", -- [645]
+				"^2786^16^1700796024^78^0^20^479.38^Jasonbournex", -- [646]
+				"^2786^16^1700796201^36^0^20^479.38^Bowguytome", -- [647]
+				"^2786^16^1700796323^179^0^20^479.38^Bowguytome", -- [648]
+				"^2786^16^1700796617^182^0^20^479.38^Millipthree", -- [649]
+				"^2786^16^1700796892^30^0^20^479.38^Gkn", -- [650]
+				"^2786^16^1700796996^105^0^20^479.38^Aestisqtt", -- [651]
+				"^2786^16^1700797211^183^0^20^479.38^Aestisqtt", -- [652]
+				"^2786^16^1700797470^38^0^20^479.38^Weewk", -- [653]
+				"^2786^16^1700797574^228^0^20^479.38^Kadss", -- [654]
+				"^2786^16^1700797913^68^0^20^479.38^Sendemail", -- [655]
+				"^2786^16^1700798067^195^0^20^479.38^Sendemail", -- [656]
+				"^2786^16^1700798893^242^0^20^479.38^Bowguytome", -- [657]
+				"^2786^16^1700799239^183^0^20^479.38^Beladedoinks", -- [658]
+				"^2786^16^1700799495^228^0^20^479.38^Jasonbournex", -- [659]
+				"^2786^16^1700799819^203^0^20^479.38^Atrocityedge", -- [660]
+				"^2786^16^1700800112^184^0^20^479.38^Twistedm", -- [661]
+				"^2786^16^1700800381^181^0^20^479.38^Jasonbournex", -- [662]
+				"^2786^16^1700800638^234^0^20^479.38^Aestisqtt", -- [663]
+				"^2786^16^1700801015^66^0^20^479.38^Dcn", -- [664]
+				"^2786^16^1700801153^41^0^20^479.38^Weewk", -- [665]
+				"^2786^16^1700801272^99^0^20^479.38^Twistedm", -- [666]
+				"^2786^16^1700801444^193^0^20^479.38^Aestisqtt", -- [667]
+				"^2786^16^1700801723^192^0^20^479.38^Sendemail", -- [668]
+				"^2786^16^1700802061^229^0^20^479.38^Triyng", -- [669]
+				"^2786^16^1700802498^178^0^20^479.38^Dcn", -- [670]
+				"^2786^16^1700802809^102^0^20^479.38^Twistedm", -- [671]
+				"^2786^16^1700802973^180^0^20^479.38^Kadss", -- [672]
+				"^2786^16^1700803242^236^0^20^479.38^Millipthree", -- [673]
+				"^2786^16^1700803559^179^0^20^479.38^Heatersonly", -- [674]
+				"^2786^16^1700803791^0^0^20^479.38^", -- [675]
+				"^2786^16^1700803846^71^0^20^479.38^Gkn", -- [676]
+				"^2786^16^1700803972^70^0^20^479.38^Sendemail", -- [677]
+				"^2786^16^1700804134^182^0^20^479.38^Aestisqtt", -- [678]
+				"^2786^16^1700804382^203^0^20^479.38^Anarchyhunt", -- [679]
+				"^2786^16^1700804628^1^0^20^479.38^", -- [680]
+				"^2786^16^1700804678^185^0^20^479.38^Anarchyhunt", -- [681]
+				"^2786^16^1700804932^301^0^20^479.38^Beladedoinks", -- [682]
+				"^2786^16^1700805352^181^0^20^479.38^Anarchyhunt", -- [683]
+				"^2786^16^1700805621^205^0^20^479.38^Aestisqtt", -- [684]
+				"^2786^16^1700805944^57^0^20^479.38^Gkn", -- [685]
+				"^2786^16^1700806098^311^0^20^479.38^Gkn", -- [686]
+				"^1832^8^1700868074^116^1^5^473.90^", -- [687]
+				"^1833^8^1700868425^128^1^5^473.90^", -- [688]
+				"^1834^8^1700868878^113^1^5^473.90^", -- [689]
+				"^1835^8^1700869077^138^1^5^473.90^Purpurkle-Area52", -- [690]
+				"^2786^16^1700874544^309^0^20^479.42^Millipthree", -- [691]
+				"^2786^16^1700875065^183^0^20^479.46^Dcn", -- [692]
+				"^2786^16^1700875345^179^0^20^479.46^Aestisqtt", -- [693]
+				"^2786^16^1700875616^107^0^20^479.46^Weewk", -- [694]
+				"^2786^16^1700875780^311^0^20^479.46^Twistedm", -- [695]
+				"^2786^16^1700876326^316^0^20^479.42^Gkn", -- [696]
+				"^2786^16^1700876798^179^0^20^479.42^Anarchyhunt", -- [697]
+				"^2786^16^1700877060^318^0^20^479.42^Jasonbournex", -- [698]
+				"^2786^16^1700877620^318^0^20^479.42^Beladedoinks", -- [699]
+				"^2786^16^1700878063^201^0^20^479.42^Bowguytome", -- [700]
+				"^2786^16^1700878345^97^0^20^479.42^Millipthree", -- [701]
+				"^2786^16^1700878552^162^0^20^479.42^Triyng", -- [702]
+				"^2786^16^1700878783^60^0^20^479.42^Gkn", -- [703]
+				"^2786^16^1700878919^204^0^20^479.42^Dcn", -- [704]
+				"^2786^16^1700879192^182^0^20^479.42^Sendemail", -- [705]
+				"^2786^16^1700879444^315^0^20^479.42^Millipthree", -- [706]
+				"^2786^16^1700879970^321^0^20^479.42^Jasonbournex", -- [707]
+				"^2786^16^1700880381^179^0^20^479.42^Triyng", -- [708]
+				"^2786^16^1700880691^297^0^20^479.42^Bowguytome", -- [709]
+				"^2786^16^1700881244^45^0^20^479.42^Dcn", -- [710]
+				"^2786^16^1700881397^30^0^20^479.42^Qrypticzz", -- [711]
+				"^2786^16^1700881497^204^0^20^479.42^Kadss", -- [712]
+				"^2786^16^1700881829^181^0^20^479.42^Jasonbournex", -- [713]
+				"^2786^16^1700882779^64^0^20^479.42^Tydrapally", -- [714]
+				"^2786^16^1700882913^362^0^20^479.42^Dcn", -- [715]
+				"^2786^16^1700883438^178^0^20^479.42^Sendemail", -- [716]
+				"^2786^16^1700883708^68^0^20^479.42^Flowbss", -- [717]
+				"^2786^16^1700883875^180^0^20^479.42^Jasonbournex", -- [718]
+				"^2786^16^1700884133^99^0^20^479.42^Jasonbournex", -- [719]
+				"^2786^16^1700884303^203^0^20^479.42^Millipthree", -- [720]
+				"^2786^16^1700884582^223^0^20^479.42^Beladedoinks", -- [721]
+				"^2786^16^1700884868^91^0^20^479.45^Gkn", -- [722]
+				"^2786^16^1700885135^205^0^20^479.45^Dcn", -- [723]
+				"^2786^16^1700885419^70^0^20^479.45^Anarchyhunt", -- [724]
+				"^2786^16^1700885555^202^0^20^479.45^Bowguytome", -- [725]
+				"^2786^16^1700885836^28^0^20^479.45^Qrypticzz", -- [726]
+				"^2786^16^1700885955^67^0^20^479.45^Kadss", -- [727]
+				"^2786^16^1700886150^370^0^20^479.45^Bowguytome", -- [728]
+				"^2786^16^1700886712^54^0^20^479.45^Beladedoinks", -- [729]
+				"^2786^16^1700886815^179^0^20^479.45^Jasonbournex", -- [730]
+				"^2786^16^1700887086^95^0^20^479.45^Kadss", -- [731]
+				"^2786^16^1700887247^45^0^20^479.45^Anarchyhunt", -- [732]
+				"^2786^16^1700887390^316^0^20^479.45^Qrypticzz", -- [733]
+				"^2786^16^1700887925^231^0^20^479.45^Qrypticzz", -- [734]
+				"^2786^16^1700888287^233^0^20^479.45^Bowguytome", -- [735]
+				"^2786^16^1700888602^371^0^20^479.45^Millipthree", -- [736]
+				"^2786^16^1700889382^233^0^20^479.45^Jasonbournex", -- [737]
+				"^2786^16^1700889723^103^0^20^479.45^Beladedoinks", -- [738]
+				"^2786^16^1700889908^182^0^20^479.45^Kadss", -- [739]
+				"^2786^16^1700890278^314^0^20^479.45^Gkn", -- [740]
+				"^2786^16^1700890683^204^0^20^479.45^Triyng", -- [741]
+				"^2786^16^1700890950^216^0^20^479.45^Zoozz", -- [742]
+				"^2786^16^1700891259^232^0^20^479.45^Gkn", -- [743]
+				"^2786^16^1700891594^211^0^20^479.45^Jasonbournex", -- [744]
+				"^2786^16^1700891897^67^0^20^479.45^Twistedm", -- [745]
+				"^2786^16^1700892026^333^0^20^479.45^Qrypticzz", -- [746]
+				"^2728^14^1700892724^0^0^24^476.78^", -- [747]
+				"^2728^14^1700892827^96^1^30^474.75^", -- [748]
+				"^2677^14^1700953218^285^1^30^473.75^Hewasforced", -- [749]
+				"^2786^16^1700953989^42^0^20^479.53^Kadss", -- [750]
+				"^2786^16^1700954111^176^0^20^479.53^Tydrapally", -- [751]
+				"^2786^16^1700954353^67^0^20^479.53^Triyng", -- [752]
+				"^2786^16^1700954580^181^0^20^479.53^Bowguytome", -- [753]
+				"^2786^16^1700954847^179^0^20^479.53^Heatersonly", -- [754]
+				"^2786^16^1700955134^100^0^20^479.53^Jasonbournex", -- [755]
+				"^2786^16^1700955318^69^0^20^479.53^Bowguytome", -- [756]
+				"^2786^16^1700955452^230^0^20^479.53^Qrypticzz", -- [757]
+				"^2786^16^1700955753^92^0^20^479.53^Twistedm", -- [758]
+				"^2786^16^1700955907^316^0^20^479.53^Anarchyhunt", -- [759]
+				"^2786^16^1700956323^201^0^20^479.53^Bowguytome", -- [760]
+				"^2786^16^1700956599^352^0^20^479.53^Flowbss", -- [761]
+				"^2786^16^1700957025^67^0^20^479.53^Beladedoinks", -- [762]
+				"^2786^16^1700957182^203^0^20^479.53^Jasonbournex", -- [763]
+				"^2786^16^1700957501^181^0^20^479.54^Beladedoinks", -- [764]
+				"^2786^16^1700957757^226^0^20^479.54^Dcn", -- [765]
+				"^2786^16^1700958142^230^0^20^479.53^Beladedoinks", -- [766]
+				"^2786^16^1700958468^179^0^20^479.53^Millipthree", -- [767]
+				"^2786^16^1700958722^390^0^20^479.53^Gkn", -- [768]
+				"^2786^16^1700959286^316^0^20^479.53^Bowguytome", -- [769]
+				"^2786^16^1700959674^180^0^20^479.63^Kadss", -- [770]
+				"^2786^16^1700959927^179^0^20^479.58^Anarchyhunt", -- [771]
+				"^2786^16^1700960191^85^0^20^479.58^Weewk", -- [772]
+				"^2786^16^1700960342^206^0^20^479.58^Weewk", -- [773]
+				"^2786^16^1700960615^212^0^20^479.58^Flowbss", -- [774]
+				"^2786^16^1700962202^319^0^20^458.50^Weewk", -- [775]
+				"^2786^16^1700962601^67^0^20^458.50^Qrypticzz", -- [776]
+				"^2786^16^1700962732^376^0^20^458.50^Millipthree", -- [777]
+				"^2786^16^1700963201^181^0^20^458.50^Triyng", -- [778]
+				"^2786^16^1700963475^177^0^20^458.50^Kadss", -- [779]
+				"^2786^16^1700963731^219^0^20^458.50^Millipthree", -- [780]
+				"^2786^16^1700964034^179^0^20^458.50^Beladedoinks", -- [781]
+				"^2786^16^1700964277^315^0^20^458.50^Gkn", -- [782]
+				"^2786^16^1700964677^230^0^20^458.50^Bowguytome", -- [783]
+				"^2786^16^1700964979^92^0^20^458.50^Millipthree", -- [784]
+				"^2786^16^1700965137^185^0^20^458.50^Triyng", -- [785]
+				"^2786^16^1700965403^374^0^20^458.50^Beladedoinks", -- [786]
+				"^2786^16^1700966280^66^0^20^458.50^Triyng", -- [787]
+				"^2786^16^1700966416^1^0^20^458.50^", -- [788]
+				"^2786^16^1700966463^226^0^20^458.50^Millipthree", -- [789]
+				"^2786^16^1700966762^92^0^20^458.50^Beladedoinks", -- [790]
+				"^2786^16^1700966908^228^0^20^458.50^Jasonbournex", -- [791]
+				"^2786^16^1700967283^434^0^20^458.50^Weewk", -- [792]
+				"^2786^16^1700967829^316^0^20^458.47^Heatersonly", -- [793]
+				"^2786^16^1700968232^233^0^20^458.47^Heatersonly", -- [794]
+				"^2786^16^1700968541^231^0^20^458.50^Twistedm", -- [795]
+				"^2786^16^1700968847^219^0^20^458.50^Kadss", -- [796]
+				"^2786^16^1700969136^200^0^20^458.50^Anarchyhunt", -- [797]
+				"^2786^16^1700969423^438^0^20^458.50^Jasonbournex", -- [798]
+				"^2786^16^1700970634^180^0^20^458.50^Anarchyhunt", -- [799]
+				"^2786^16^1700970875^230^0^20^458.50^Gkn", -- [800]
+				"^2786^16^1700971178^233^0^20^458.50^Qrypticzz", -- [801]
+				"^2786^16^1700971656^231^0^20^458.50^Kadss", -- [802]
+				"^2786^16^1700971949^315^0^20^458.50^Qrypticzz", -- [803]
+				"^2786^16^1700972387^231^0^20^458.50^Twistedm", -- [804]
+				"^2786^16^1700972694^232^0^20^458.50^Atrocityedge", -- [805]
+				"^2786^16^1700972997^346^0^20^458.50^Flowbss", -- [806]
+				"^2786^16^1700973422^229^0^20^458.50^Heatersonly", -- [807]
+				"^2786^16^1700974279^177^0^20^458.50^Jasonbournex", -- [808]
+				"^2786^16^1700974513^27^0^20^457.37^Kadss", -- [809]
+				"^2786^16^1700974618^66^0^20^457.37^Triyng", -- [810]
+				"^2786^16^1700974749^202^0^20^456.10^Millipthree", -- [811]
+				"^2786^16^1700975029^234^0^20^456.10^Millipthree", -- [812]
+				"^2786^16^1700975339^179^0^20^456.10^Millipthree", -- [813]
+				"^2786^16^1700975576^312^0^20^456.10^Kadss", -- [814]
+				"^2786^16^1700976075^180^0^20^456.10^Dcn", -- [815]
+				"^2786^16^1700976490^434^0^20^456.10^Kadss", -- [816]
+				"^2786^16^1700977052^232^0^20^456.10^Weewk", -- [817]
+				"^2786^16^1700977356^367^0^20^454.83^Jasonbournex", -- [818]
+				"^2786^16^1700977844^390^0^20^454.83^Bowguytome", -- [819]
+				"^2786^16^1700978381^183^0^20^453.27^Beladedoinks", -- [820]
+				"^2786^16^1700978629^66^0^20^453.27^Bowguytome", -- [821]
+				"^2786^16^1700978756^67^0^20^453.27^Sendemail", -- [822]
+				"^2786^16^1700978890^435^0^20^453.27^Beladedoinks", -- [823]
+				"^2786^16^1701039730^1^0^20^479.34^", -- [824]
+				"^2786^16^1701040415^31^0^20^479.45^Atrocityedge", -- [825]
+				"^2786^16^1701040515^312^0^20^479.45^Qrypticzz", -- [826]
+				"^2786^16^1701040897^230^0^20^479.45^Triyng", -- [827]
+				"^2786^16^1701041210^205^0^20^479.45^Anarchyhunt", -- [828]
+				"^2786^16^1701041492^439^0^20^479.45^Sendemail", -- [829]
+				"^2786^16^1701042088^177^0^20^479.45^Twistedm", -- [830]
+				"^2786^16^1701042350^179^0^20^479.45^Qrypticzz", -- [831]
+				"^2786^16^1701042642^69^0^20^479.45^Bowguytome", -- [832]
+				"^2786^16^1701042781^179^0^20^479.45^Heatersonly", -- [833]
+				"^2786^16^1701043029^67^0^20^479.45^Beladedoinks", -- [834]
+				"^2786^16^1701043188^318^0^20^479.45^Heatersonly", -- [835]
+				"^2786^16^1701043571^67^0^20^479.45^Dcn", -- [836]
+				"^2786^16^1701043955^99^0^20^479.45^Jasonbournex", -- [837]
+				"^2786^16^1701044109^404^0^20^479.45^Anarchyhunt", -- [838]
+				"^2786^16^1701044941^437^0^20^479.45^Jacobxaxa", -- [839]
+				"^2786^16^1701045521^158^0^20^479.45^Jasonbournex", -- [840]
+				"^2786^16^1701045863^180^0^20^479.45^Kadss", -- [841]
+				"^2786^16^1701046103^440^0^20^479.45^Atrocityedge", -- [842]
+				"^2786^16^1701046690^210^0^20^479.42^Jasonbournex", -- [843]
+				"^2786^16^1701046992^433^0^20^479.42^Triyng", -- [844]
+				"^2786^16^1701047526^313^0^20^479.42^Dcn", -- [845]
+				"^2786^16^1701047907^438^0^20^479.42^Triyng", -- [846]
+				"^2786^16^1701048499^180^0^20^479.64^Twistedm", -- [847]
+				"^2786^16^1701048749^445^1^20^479.53^Anarchyhunt", -- [848]
+				"^2677^16^1701050043^52^0^20^479.53^Bowguytome", -- [849]
+				"^2677^16^1701052409^74^0^20^479.70^Anarchyhunt", -- [850]
+				"^2677^16^1701052569^91^0^20^479.70^Twistedm", -- [851]
+				"^2677^16^1701052882^76^0^20^479.70^Qrypticzz", -- [852]
+				"^2677^16^1701053080^94^0^20^479.70^Aestisqtt", -- [853]
+				"^2677^16^1701053269^90^0^20^479.70^Triyng", -- [854]
+				"^2677^16^1701053646^74^0^20^479.70^Tydrapally", -- [855]
+				"^2677^16^1701053876^97^0^20^479.70^Kadss", -- [856]
+				"^2677^16^1701054096^119^0^20^479.70^Drippygodx", -- [857]
+				"^2677^16^1701054323^125^0^20^479.70^Kadss", -- [858]
+				"^2677^16^1701054573^145^0^20^479.70^Kadss", -- [859]
+				"^2677^16^1701055283^80^0^20^479.70^Jacobxaxa", -- [860]
+				"^2677^16^1701055442^116^0^20^479.70^Atrocityedge", -- [861]
+				"^2677^16^1701055641^117^0^20^479.70^Drippygodx", -- [862]
+				"^2677^16^1701055910^105^0^20^479.70^Jacobxaxa", -- [863]
+				"^2677^16^1701056092^125^0^20^479.70^Drippygodx", -- [864]
+				"^2677^16^1701056365^147^0^20^479.70^Millipthree", -- [865]
+				"^2677^16^1701056621^97^0^20^479.70^Gkn", -- [866]
+				"^2677^16^1701056837^108^0^20^479.70^Beladedoinks", -- [867]
+				"^2677^16^1701057106^125^0^20^479.70^Tydrapally", -- [868]
+				"^2677^16^1701057535^161^0^20^479.70^Anarchyhunt", -- [869]
+				"^2677^16^1701057834^119^0^20^479.70^Beladedoinks", -- [870]
+				"^2677^16^1701058043^149^0^20^479.70^Kadss", -- [871]
+				"^2677^16^1701058272^139^0^20^479.70^Heatersonly", -- [872]
+				"^2677^16^1701058635^118^0^20^479.70^Twistedm", -- [873]
+				"^2677^16^1701058911^129^0^20^479.70^Millipthree", -- [874]
+				"^2677^16^1701059455^163^0^20^479.70^Dcn", -- [875]
+				"^2677^16^1701059814^170^0^20^479.70^Triyng", -- [876]
+				"^2677^16^1701060074^143^0^20^479.70^Tydrapally", -- [877]
+				"^2677^16^1701060851^170^0^20^479.70^Atrocityedge", -- [878]
+				"^2677^16^1701061129^57^0^20^479.70^Atrocityedge", -- [879]
+				"^2677^16^1701061264^173^0^20^479.70^Beladedoinks", -- [880]
+				"^2677^16^1701061524^60^0^20^479.70^Millipthree", -- [881]
+				"^2677^16^1701061660^168^0^20^479.70^Anarchyhunt", -- [882]
+				"^2677^16^1701061917^97^0^20^479.70^Atrocityedge", -- [883]
+				"^2677^16^1701062136^161^0^20^479.70^Beladedoinks", -- [884]
+				"^2677^16^1701062376^95^0^20^479.70^Millipthree", -- [885]
+				"^2677^16^1701062540^178^0^20^479.70^Kadss", -- [886]
+				"^2677^16^1701062811^174^0^20^479.70^Atrocityedge", -- [887]
+				"^2677^16^1701063082^78^0^20^479.70^Kadss", -- [888]
+				"^2677^16^1701063228^133^0^20^479.70^Anarchyhunt", -- [889]
+				"^2677^16^1701134067^122^0^20^479.30^Bowguytome", -- [890]
+				"^2677^16^1701134466^178^0^20^479.30^Kadss", -- [891]
+				"^2677^16^1701134844^182^0^20^479.30^Kadss", -- [892]
+				"^2677^16^1701135247^181^0^20^479.30^Twistedm", -- [893]
+				"^2677^16^1701135516^182^0^20^479.30^Dcn", -- [894]
+				"^2677^16^1701135992^171^0^20^479.30^Sendemail", -- [895]
+				"^2677^16^1701136342^165^0^20^479.30^Atrocityedge", -- [896]
+				"^2677^16^1701136659^182^0^20^479.30^Millipthree", -- [897]
+				"^2677^16^1701137130^175^0^20^479.30^Dcn", -- [898]
+				"^2677^16^1701137681^174^0^20^479.30^Beladedoinks", -- [899]
+				"^2677^16^1701138237^122^0^20^479.34^Triyng", -- [900]
+				"^2677^16^1701138528^176^0^20^479.34^Beladedoinks", -- [901]
+				"^2677^16^1701138954^198^0^20^479.34^Tydrapally", -- [902]
+				"^2677^16^1701139286^181^0^20^479.34^Tydrapally", -- [903]
+				"^2677^16^1701139636^176^0^20^479.34^Beladedoinks", -- [904]
+				"^2677^16^1701139951^173^0^20^479.34^Twistedm", -- [905]
+				"^2677^16^1701140422^199^0^20^479.34^Millipthree", -- [906]
+				"^2677^16^1701140935^201^0^20^479.34^Atrocityedge", -- [907]
+				"^2677^16^1701142121^199^0^20^479.34^Atrocityedge", -- [908]
+				"^2677^16^1701142427^176^0^20^479.34^Drippygodx", -- [909]
+				"^2677^16^1701142679^202^0^20^479.34^Kadss", -- [910]
+				"^2677^16^1701142974^57^0^20^479.34^Triyng", -- [911]
+				"^2677^16^1701143098^76^0^20^479.34^Triyng", -- [912]
+				"^2677^16^1701143284^119^0^20^479.34^Drippygodx", -- [913]
+				"^2677^16^1701143502^265^0^20^479.34^Heatersonly", -- [914]
+				"^2677^16^1701144517^117^0^20^479.34^Beladedoinks", -- [915]
+				"^2677^16^1701144745^232^0^20^479.34^Beladedoinks", -- [916]
+				"^2677^16^1701145202^77^0^20^479.34^Twistedm", -- [917]
+				"^2677^16^1701145384^261^0^20^479.34^Beladedoinks", -- [918]
+				"^2677^16^1701145823^183^0^20^479.34^Dcn", -- [919]
+				"^2677^16^1701146114^82^0^20^479.34^Twistedm", -- [920]
+				"^2677^16^1701146413^177^0^20^479.34^Triyng", -- [921]
+				"^2677^16^1701146677^191^0^20^479.34^Millipthree", -- [922]
+				"^2677^16^1701147032^274^0^20^479.34^Triyng", -- [923]
+				"^2677^16^1701147696^198^0^20^479.34^Kalecgoose", -- [924]
+				"^2677^16^1701148017^264^0^20^479.34^Triyng", -- [925]
+				"^2677^16^1701148387^194^0^20^479.34^Kalecgoose", -- [926]
+				"^2677^16^1701148679^267^0^20^479.34^Twistedm", -- [927]
+				"^2677^16^1701149079^267^0^20^479.34^Dcn", -- [928]
+				"^2677^16^1701149494^262^0^20^479.34^Triyng", -- [929]
+				"^2677^16^1701149852^188^0^20^479.34^Zoozz", -- [930]
+				"^2677^16^1701150117^140^0^20^479.34^Triyng", -- [931]
+				"^2677^16^1701150316^189^0^20^479.34^Gkn", -- [932]
+				"^2820^15^1701214058^134^1^30^443.63^", -- [933]
+				"^2709^15^1701214265^0^0^30^477.46^", -- [934]
+				"^2709^15^1701214307^157^1^30^477.46^Weewk", -- [935]
+				"^2728^15^1701214644^0^0^30^477.45^", -- [936]
+				"^2728^15^1701214741^144^1^30^478.29^Millipthree", -- [937]
+				"^2708^15^1701215036^149^1^30^478.21^Anarchyhunt", -- [938]
+				"^2737^15^1701215409^0^0^30^478.21^", -- [939]
+				"^2737^15^1701215453^119^1^30^478.21^", -- [940]
+				"^2731^15^1701215682^0^0^30^478.21^", -- [941]
+				"^2731^15^1701215741^171^1^30^478.64^", -- [942]
+				"^2824^15^1701216047^0^0^30^478.64^", -- [943]
+				"^2824^15^1701216178^175^1^30^478.64^", -- [944]
+				"^2786^15^1701216814^306^1^30^470.46^", -- [945]
+				"^2677^15^1701217288^382^1^30^470.65^Syzlakdeekay", -- [946]
+				"^2820^16^1701219699^0^0^20^480.27^", -- [947]
+				"^2820^16^1701219787^203^1^20^479.75^", -- [948]
+				"^2709^16^1701220081^0^0^20^479.75^", -- [949]
+				"^2709^16^1701220207^271^1^20^479.73^Tydrapally", -- [950]
+				"^2728^16^1701220753^0^0^20^479.77^", -- [951]
+				"^2728^16^1701220823^349^1^20^479.70^Jasonbournex", -- [952]
+				"^2708^16^1701221461^0^0^20^479.71^", -- [953]
+				"^2708^16^1701221885^66^0^20^479.73^Twistedm", -- [954]
+				"^2708^16^1701222058^247^0^20^479.73^Zoozz", -- [955]
+				"^2708^16^1701222409^369^1^20^479.73^", -- [956]
+				"^2737^16^1701223090^0^0^20^479.76^", -- [957]
+				"^2737^16^1701223321^221^1^20^479.86^Jasonbournex", -- [958]
+				"^2731^16^1701223739^0^0^20^479.86^", -- [959]
+				"^2824^16^1701224510^419^0^20^479.95^Tydrapally", -- [960]
+				"^2824^16^1701225101^357^0^20^479.95^Drippygodx", -- [961]
+				"^2824^16^1701225559^433^0^20^479.95^Beladedoinks", -- [962]
+				"^2824^16^1701226092^140^0^20^479.81^Qrypticzz", -- [963]
+				"^2824^16^1701226332^413^1^20^479.81^Beladedoinks", -- [964]
+				"^2786^16^1701229383^179^0^20^480.77^Twistedm", -- [965]
+				"^2786^16^1701229649^207^0^20^480.77^Anarchyhunt", -- [966]
+				"^2786^16^1701229920^180^0^20^480.77^Bowguytome", -- [967]
+				"^2786^16^1701230181^204^0^20^480.77^Bowguytome", -- [968]
+				"^2786^16^1701230473^224^0^20^480.77^Bowguytome", -- [969]
+				"^2786^16^1701230863^482^0^20^480.77^Anarchyhunt", -- [970]
+				"^2786^16^1701231418^230^0^20^480.77^Kadss", -- [971]
+				"^2786^16^1701231721^436^0^20^480.77^Jacobxaxa", -- [972]
+				"^2786^16^1701232229^230^0^20^480.77^Jasonbournex", -- [973]
+				"^2786^16^1701232555^183^0^20^480.77^Weewk", -- [974]
+				"^2786^16^1701232892^180^0^20^480.77^Tydrapally", -- [975]
+				"^2786^16^1701233161^181^0^20^480.77^Sendemail", -- [976]
+				"^2786^16^1701233409^204^0^20^480.77^Millipthree", -- [977]
+				"^2786^16^1701233696^67^0^20^480.77^Flowbss", -- [978]
+				"^2786^16^1701233831^406^0^20^480.77^Dcn", -- [979]
+				"^2786^16^1701234299^439^0^20^480.84^Jacobxaxa", -- [980]
+				"^2786^16^1701234799^467^1^20^480.84^Gkn", -- [981]
+				"^2677^16^1701235897^181^0^20^481.26^Atrocityedge", -- [982]
+				"^2677^16^1701236184^204^0^20^481.26^Triyng", -- [983]
+				"^2677^16^1701236483^57^0^20^481.26^Twistedm", -- [984]
+				"^2677^16^1701236597^188^0^20^481.26^Drippygodx", -- [985]
+				"^2677^16^1701236920^204^0^20^481.26^Triyng", -- [986]
+				"^2677^16^1701237240^204^0^20^481.26^Kadss", -- [987]
+				"^2677^16^1701237532^192^0^20^481.26^Twistedm", -- [988]
+				"^1836^8^1701292603^81^1^5^481.41^", -- [989]
+				"^1837^8^1701292883^72^1^5^481.41^", -- [990]
+				"^1838^8^1701293015^81^1^5^481.41^", -- [991]
+				"^1839^8^1701293214^82^1^5^481.41^", -- [992]
+				"^1836^8^1701293621^80^1^5^481.41^", -- [993]
+				"^1837^8^1701293896^74^1^5^481.41^", -- [994]
+				"^1838^8^1701293991^102^1^5^481.41^", -- [995]
+				"^1839^8^1701294207^102^1^5^481.41^Atrocityedge", -- [996]
+				"^2677^16^1701306810^119^0^20^481.94^Tydrapally", -- [997]
+				"^2677^16^1701307057^163^0^20^481.94^Millipthree", -- [998]
+				"^2677^16^1701307291^171^0^20^481.94^Triyng", -- [999]
+				"^2677^16^1701307538^182^0^20^481.94^Drippygodx", -- [1000]
+				"^2677^16^1701307849^277^0^20^481.94^Aestisqtt", -- [1001]
+				"^2677^16^1701308228^182^0^20^481.94^Anarchyhunt", -- [1002]
+				"^2677^16^1701308518^188^0^20^481.94^Triyng", -- [1003]
+				"^2677^16^1701308905^279^0^20^481.94^Aestisqtt", -- [1004]
+				"^2677^16^1701309316^280^0^20^481.94^Flowbss", -- [1005]
+				"^2677^16^1701309699^183^0^20^481.94^Drippygodx", -- [1006]
+				"^2677^16^1701309980^301^0^20^481.94^Triyng", -- [1007]
+				"^2677^16^1701310387^160^0^20^481.94^Tydrapally", -- [1008]
+				"^2677^16^1701310623^213^0^20^481.94^Qrypticzz", -- [1009]
+				"^2677^16^1701311051^300^0^20^481.94^Gkn", -- [1010]
+				"^2677^16^1701311678^195^0^20^481.94^Kadss", -- [1011]
+				"^2677^16^1701311995^292^0^20^481.94^Drippygodx", -- [1012]
+				"^2677^16^1701312436^288^0^20^481.94^Gkn", -- [1013]
+				"^2677^16^1701312968^201^0^20^481.94^Aestisqtt", -- [1014]
+				"^2677^16^1701313259^291^0^20^484.44^Dcn", -- [1015]
+				"^2677^16^1701313685^294^0^20^481.96^Dcn", -- [1016]
+				"^2677^16^1701314256^281^0^20^481.96^Atrocityedge", -- [1017]
+				"^2677^16^1701314725^297^0^20^481.96^Drippygodx", -- [1018]
+				"^2677^16^1701315922^305^0^20^481.96^Sendemail", -- [1019]
+				"^2677^16^1701316521^328^0^20^481.96^Anarchyhunt", -- [1020]
+				"^2677^16^1701317205^332^0^20^481.96^Kadss", -- [1021]
+				"^2677^16^1701317694^85^0^20^481.96^Twistedm", -- [1022]
+				"^2677^16^1701317924^321^0^20^481.96^Kadss", -- [1023]
+				"^2677^16^1701318366^155^0^20^481.96^Aestisqtt", -- [1024]
+				"^2677^16^1701318601^289^0^20^481.96^Qrypticzz", -- [1025]
+				"^2677^16^1701318979^356^0^20^481.96^Tydrapally", -- [1026]
+				"^2677^16^1701319489^328^0^20^481.96^Aestisqtt", -- [1027]
+				"^2677^16^1701319907^186^0^20^481.96^Drippygodx", -- [1028]
+				"^2677^16^1701320190^251^0^20^481.96^Twistedm", -- [1029]
+				"^2677^16^1701321620^152^0^20^482.01^Twistedm", -- [1030]
+				"^2677^16^1701321857^289^0^20^481.96^Aestisqtt", -- [1031]
+				"^2677^16^1701322220^259^0^20^481.96^Drippygodx", -- [1032]
+				"^2677^16^1701322602^191^0^20^481.96^Kalecgoose", -- [1033]
+				"^2677^16^1701322868^445^0^20^481.96^Aestisqtt", -- [1034]
+				"^2677^16^1701323520^267^0^20^481.96^Triyng", -- [1035]
+				"^2677^16^1701323903^395^0^20^481.96^Weewk", -- [1036]
+				"^2677^16^1701393038^355^0^20^482.20^Anarchyhunt", -- [1037]
+				"^2677^16^1701393507^194^0^20^482.20^Atrocityedge", -- [1038]
+				"^2677^16^1701393803^145^0^20^482.20^Twistedm", -- [1039]
+				"^2677^16^1701394058^300^0^20^482.20^Drippygodx", -- [1040]
+				"^2677^16^1701394433^182^0^20^482.20^Beladedoinks", -- [1041]
+				"^2677^16^1701394719^266^0^20^482.20^Atrocityedge", -- [1042]
+				"^2677^16^1701395104^224^0^20^482.20^Drippygodx", -- [1043]
+				"^2677^16^1701395402^268^0^20^482.20^Atrocityedge", -- [1044]
+				"^2677^16^1701395781^256^0^20^482.20^Jacobxaxa", -- [1045]
+				"^2677^16^1701396160^304^0^20^482.20^Beladedoinks", -- [1046]
+				"^2677^16^1701396571^195^0^20^482.20^Sendemail", -- [1047]
+				"^2677^16^1701396844^282^0^20^482.20^Millipthree", -- [1048]
+				"^2677^16^1701397199^404^0^20^482.20^Tydrapally", -- [1049]
+				"^2677^16^1701397698^439^0^20^482.20^Heatersonly", -- [1050]
+				"^2677^16^1701398398^253^0^20^482.20^Drippygodx", -- [1051]
+				"^2677^16^1701398816^363^0^20^482.20^Drippygodx", -- [1052]
+				"^2677^16^1701399580^221^0^20^482.20^Qrypticzz", -- [1053]
+				"^2677^16^1701399911^483^0^20^482.20^Millipthree", -- [1054]
+				"^2677^16^1701400758^346^0^20^482.20^Weewk", -- [1055]
+				"^2677^16^1701401427^501^0^20^482.20^Anarchyhunt", -- [1056]
+				"^2677^16^1701402251^190^0^20^482.20^Aestisqtt", -- [1057]
+				"^2677^16^1701402524^492^0^20^482.20^Gkn", -- [1058]
+				"^2677^16^1701404893^201^0^20^482.20^Drippygodx", -- [1059]
+				"^2677^16^1701405188^474^0^20^482.20^Drippygodx", -- [1060]
+				"^2677^16^1701405803^305^0^20^482.20^Triyng", -- [1061]
+				"^2677^16^1701406184^204^0^20^482.20^Sendemail", -- [1062]
+				"^2677^16^1701406503^475^0^20^482.20^Weewk", -- [1063]
+				"^2677^16^1701407112^214^0^20^482.20^Tydrapally", -- [1064]
+				"^2677^16^1701407412^203^0^20^482.20^Gkn", -- [1065]
+				"^2677^16^1701407729^376^0^20^482.20^Dcn", -- [1066]
+				"^2677^16^1701408297^350^0^20^482.20^Atrocityedge", -- [1067]
+				"^2677^16^1701408829^318^0^20^482.20^Dcn", -- [1068]
+				"^2677^16^1701409252^514^0^20^482.20^Gkn", -- [1069]
+				"^2677^16^1701409914^119^0^20^482.20^Dcn", -- [1070]
+				"^2677^16^1701410068^14^0^20^482.20^Kadss", -- [1071]
+				"^2677^16^1701410146^411^0^20^482.20^Kadss", -- [1072]
+				"^2677^16^1701410674^199^0^20^482.20^Triyng", -- [1073]
+				"^2677^16^1701480925^299^0^20^482.16^Beladedoinks", -- [1074]
+				"^2677^16^1701481303^523^0^20^482.16^Kadss", -- [1075]
+				"^2677^16^1701482096^474^0^20^482.16^Sendemail", -- [1076]
+				"^2677^16^1701482704^354^0^20^482.16^Atrocityedge", -- [1077]
+				"^2677^16^1701483214^183^0^20^482.16^Kadss", -- [1078]
+				"^2677^16^1701483506^218^0^20^482.16^Beladedoinks", -- [1079]
+				"^2677^16^1701483817^487^0^20^482.16^Millipthree", -- [1080]
+				"^2677^16^1701484489^373^0^20^482.16^Drippygodx", -- [1081]
+				"^2677^16^1701485006^485^0^20^482.16^Weewk", -- [1082]
+				"^2677^16^1701485638^308^0^20^482.16^Kadss", -- [1083]
+				"^2677^16^1701486015^282^0^20^482.16^Twistedm", -- [1084]
+				"^2677^16^1701486389^188^0^20^482.16^Triyng", -- [1085]
+				"^2677^16^1701486708^399^0^20^482.16^Twistedm", -- [1086]
+				"^2677^16^1701487259^478^0^20^482.16^Drippygodx", -- [1087]
+				"^2677^16^1701488505^270^0^20^482.16^Weewk", -- [1088]
+				"^2677^16^1701488868^290^0^20^482.16^Millipthree", -- [1089]
+				"^2677^16^1701489227^404^0^20^482.16^Anarchyhunt", -- [1090]
+				"^2677^16^1701489777^375^0^20^482.16^Sendemail", -- [1091]
+				"^2677^16^1701491285^318^0^20^482.11^Kadss", -- [1092]
+				"^2677^16^1701491697^113^0^20^482.11^Beladedoinks", -- [1093]
+				"^2677^16^1701491884^218^0^20^482.11^Twistedm", -- [1094]
+				"^2677^16^1701492180^522^0^20^482.11^Beladedoinks", -- [1095]
+				"^2677^16^1701492841^306^0^20^482.11^Kadss", -- [1096]
+				"^2677^16^1701493255^326^0^20^482.11^Kadss", -- [1097]
+				"^2677^16^1701493787^436^0^20^482.11^Beladedoinks", -- [1098]
+				"^2677^16^1701494309^550^0^20^482.11^Twistedm", -- [1099]
+				"^2677^16^1701495092^400^0^20^482.11^Gkn", -- [1100]
+				"^2677^16^1701495682^534^0^20^482.11^Twistedm", -- [1101]
+				"^2677^16^1701496471^146^0^20^482.11^Triyng", -- [1102]
+				"^2677^16^1701496717^305^0^20^482.11^Kadss", -- [1103]
+				"^2677^16^1701497128^583^0^20^482.11^Drippygodx", -- [1104]
+				"^2677^16^1701497876^199^0^20^482.11^Drippygodx", -- [1105]
+				"^2677^16^1701498159^353^0^20^482.11^Qrypticzz", -- [1106]
+				"^2677^16^1701498593^250^0^20^482.11^Twistedm", -- [1107]
+				"^2670^8^1701551858^166^1^5^479.04^Roymixd", -- [1108]
+				"^2672^8^1701552793^131^0^5^479.04^Fbh-Illidan", -- [1109]
+				"^2677^16^1701558348^412^0^20^482.13^Qrypticzz", -- [1110]
+				"^2677^16^1701558850^266^0^20^482.13^Weewk", -- [1111]
+				"^2677^16^1701559194^247^0^20^482.13^Millipthree", -- [1112]
+				"^2677^16^1701559582^322^0^20^482.13^Twistedm", -- [1113]
+				"^2677^16^1701559986^291^0^20^482.13^Atrocityedge", -- [1114]
+				"^2677^16^1701560371^282^0^20^482.13^Millipthree", -- [1115]
+				"^2677^16^1701560785^376^0^20^482.13^Drippygodx", -- [1116]
+				"^2677^16^1701561272^209^0^20^482.13^Millipthree", -- [1117]
+				"^2677^16^1701561745^190^0^20^482.11^Kadss", -- [1118]
+				"^2677^16^1701562015^529^0^20^482.11^Triyng", -- [1119]
+				"^2677^16^1701562676^509^0^20^482.11^Anarchyhunt", -- [1120]
+				"^2677^16^1701563412^521^0^20^482.11^Dcn", -- [1121]
+				"^2677^16^1701564134^483^0^20^482.11^Drippygodx", -- [1122]
+				"^2677^16^1701564725^264^0^20^482.11^Atrocityedge", -- [1123]
+				"^2677^16^1701565073^374^0^20^482.11^Beladedoinks", -- [1124]
+				"^2677^16^1701565560^119^0^20^482.11^Tydrapally", -- [1125]
+				"^2677^16^1701565752^284^0^20^482.11^Qrypticzz", -- [1126]
+				"^2677^16^1701566123^414^0^20^482.11^Drippygodx", -- [1127]
+				"^2677^16^1701568544^186^0^20^482.11^Tydrapally", -- [1128]
+				"^2677^16^1701568808^436^0^20^482.11^Kadss", -- [1129]
+				"^2677^16^1701569329^183^0^20^482.11^Gkn", -- [1130]
+				"^2677^16^1701569592^492^0^20^482.11^Beladedoinks", -- [1131]
+				"^2677^16^1701570222^202^0^20^482.11^Qrypticzz", -- [1132]
+				"^2677^16^1701570503^283^0^20^482.11^Drippygodx", -- [1133]
+				"^2677^16^1701570887^545^0^20^482.11^Atrocityedge", -- [1134]
+				"^2677^16^1701571562^271^0^20^482.11^Beladedoinks", -- [1135]
+				"^2677^16^1701571906^474^0^20^482.11^Dcn", -- [1136]
+				"^2677^16^1701572560^328^0^20^482.11^Tydrapally", -- [1137]
+				"^2677^16^1701572970^520^0^20^482.11^Triyng", -- [1138]
+				"^2677^16^1701573834^351^0^20^482.11^Qrypticzz", -- [1139]
+				"^2677^16^1701574264^137^0^20^482.18^Triyng", -- [1140]
+				"^2677^16^1701574465^501^0^20^482.18^Twistedm", -- [1141]
+				"^2677^16^1701575049^523^0^20^482.18^Gkn", -- [1142]
+				"^2677^16^1701575784^548^0^20^482.18^Millipthree", -- [1143]
+				"^2677^16^1701576460^198^0^20^482.18^Gkn", -- [1144]
+				"^2677^16^1701576725^374^0^20^482.18^Kalecgoose", -- [1145]
+				"^2677^16^1701577265^512^0^20^482.18^Dcn", -- [1146]
+				"^2677^16^1701577871^114^0^20^482.18^Anarchyhunt", -- [1147]
+				"^2677^16^1701578116^372^0^20^482.18^Atrocityedge", -- [1148]
+				"^2677^16^1701578943^564^0^20^482.18^Millipthree", -- [1149]
+				"^2677^16^1701579658^378^0^20^482.18^Aestisqtt", -- [1150]
+				"^2677^16^1701580133^613^0^20^482.18^Weewk", -- [1151]
+				"^2677^16^1701581092^442^0^20^482.18^Dcn", -- [1152]
+				"^2677^16^1701581646^191^0^20^482.18^Atrocityedge", -- [1153]
+				"^2677^16^1701581921^618^0^20^482.18^Kadss", -- [1154]
+				"^2677^16^1701582670^286^0^20^482.18^Qrypticzz", -- [1155]
+				"^2677^16^1701583030^477^0^20^482.18^Millipthree", -- [1156]
+				"^2677^16^1701583582^424^0^20^482.18^Kadss", -- [1157]
+				"^2677^16^1701584175^154^0^20^482.18^Drippygodx", -- [1158]
+				"^2677^16^1701584413^202^0^20^482.18^Drippygodx", -- [1159]
+				"^2677^16^1701584726^564^0^20^482.18^Dcn", -- [1160]
+				"^2677^16^1701585391^393^0^20^482.18^Millipthree", -- [1161]
+				"^2677^16^1701645063^258^0^20^482.26^Kadss", -- [1162]
+				"^2677^16^1701645462^376^0^20^482.26^Beladedoinks", -- [1163]
+				"^2677^16^1701645920^533^0^20^482.11^Dcn", -- [1164]
+				"^2677^16^1701646529^580^0^20^482.11^Drippygodx", -- [1165]
+				"^2677^16^1701647221^184^0^20^482.11^Zoozz", -- [1166]
+				"^2677^16^1701647483^576^0^20^482.11^Dcn", -- [1167]
+				"^2677^16^1701648214^178^0^20^482.11^Twistedm", -- [1168]
+				"^2677^16^1701648479^363^0^20^482.11^Drippygodx", -- [1169]
+				"^2677^16^1701648921^520^0^20^482.11^Jacobxaxa", -- [1170]
+				"^2677^16^1701649583^442^0^20^482.11^Weewk", -- [1171]
+				"^2677^16^1701650180^216^0^20^482.11^Kadss", -- [1172]
+				"^2677^16^1701650470^576^0^20^482.11^Tydrapally", -- [1173]
+				"^2677^16^1701651176^211^0^20^482.11^Twistedm", -- [1174]
+				"^2677^16^1701651454^195^0^20^482.11^Drippygodx", -- [1175]
+				"^2677^16^1701651727^272^0^20^482.11^Qrypticzz", -- [1176]
+				"^2677^16^1701652076^311^0^20^482.11^Zoozz", -- [1177]
+				"^2677^16^1701652463^194^0^20^482.11^Kalecgoose", -- [1178]
+				"^2677^16^1701652792^280^0^20^482.11^Jacobxaxa", -- [1179]
+				"^2677^16^1701653158^182^0^20^482.11^Qrypticzz", -- [1180]
+				"^2677^16^1701654995^141^0^20^482.11^Drippygodx", -- [1181]
+				"^2677^16^1701655186^370^0^20^482.11^Beladedoinks", -- [1182]
+				"^2677^16^1701655622^604^0^20^482.11^Beladedoinks", -- [1183]
+				"^2677^16^1701656414^559^0^20^482.11^Drippygodx", -- [1184]
+				"^2677^16^1701657068^205^0^20^482.11^Qrypticzz", -- [1185]
+				"^2677^16^1701657336^475^0^20^482.11^Dcn", -- [1186]
+				"^2677^16^1701657896^497^0^20^482.11^Kadss", -- [1187]
+				"^2677^16^1701658471^616^0^20^482.11^Drippygodx", -- [1188]
+				"^2677^16^1701659279^490^0^20^482.11^Dcn", -- [1189]
+				"^2677^16^1701659843^271^0^20^482.11^Weewk", -- [1190]
+				"^2677^16^1701660202^190^0^20^482.11^Qrypticzz", -- [1191]
+				"^2677^16^1701660619^202^0^20^482.11^Kadss", -- [1192]
+				"^2677^16^1701660890^373^0^20^482.11^Dcn", -- [1193]
+				"^2677^16^1701661339^568^0^20^482.11^Beladedoinks", -- [1194]
+				"^2677^16^1701661997^578^0^20^482.11^Dcn", -- [1195]
+				"^2677^16^1701662824^477^0^20^482.11^Sendemail", -- [1196]
+				"^2677^16^1701663419^254^0^20^482.26^Millipthree", -- [1197]
+				"^2677^16^1701663771^200^0^20^482.26^Drippygodx", -- [1198]
+				"^2677^16^1701664124^534^0^20^482.26^Dcn", -- [1199]
+				"^2677^16^1701664777^292^0^20^482.26^Weewk", -- [1200]
+				"^2677^16^1701665544^323^0^20^482.26^Twistedm", -- [1201]
+				"^2677^16^1701665933^626^1^20^482.26^Atrocityedge", -- [1202]
+				"^1045^8^1701874433^163^1^5^475.66^Atrocityedge", -- [1203]
+				"^1044^8^1701874624^129^1^5^475.66^", -- [1204]
+				"^1046^8^1701874980^133^1^5^475.66^", -- [1205]
+				"^1047^8^1701875337^149^1^5^475.66^", -- [1206]
+				"^2670^8^1701877726^151^1^5^475.09^", -- [1207]
+				"^2672^8^1701878393^115^1^5^475.09^", -- [1208]
+				"^2671^8^1701878612^147^1^5^475.09^", -- [1209]
+				"^2673^8^1701878958^230^1^5^475.09^Mestupid-Illidan", -- [1210]
+				"^1045^8^1701880114^141^1^5^478.90^", -- [1211]
+				"^1044^8^1701880275^117^1^5^478.90^", -- [1212]
+				"^1046^8^1701880590^126^1^5^478.90^Salvo-Illidan", -- [1213]
+				"^1047^8^1701880961^141^1^5^478.90^", -- [1214]
+				"^2666^8^1701966863^134^1^5^474.23^Mestupid-Illidan", -- [1215]
+				"^2667^8^1701967186^146^0^5^474.23^Death", -- [1216]
+				"^2667^8^1701967362^176^1^5^474.23^Death", -- [1217]
+				"^2668^8^1701967749^207^1^5^474.23^Atrocityedge", -- [1218]
+				"^2669^8^1701968120^117^0^5^474.23^Atrocityedge", -- [1219]
+				"^2669^8^1701968293^348^1^5^474.23^Death", -- [1220]
+				"^2086^8^1702342982^136^1^5^468.10^", -- [1221]
+				"^2084^8^1702343462^100^1^5^468.10^", -- [1222]
+				"^2085^8^1702343732^148^1^5^468.10^", -- [1223]
+				"^2087^8^1702343950^204^1^5^468.10^Mbdeez", -- [1224]
+				"^2820^16^1702432974^212^1^20^482.48^Bbiggbossdr", -- [1225]
+				"^2709^16^1702433245^0^0^20^482.48^", -- [1226]
+				"^2709^16^1702433409^299^1^20^482.48^Bbiggbossdr", -- [1227]
+				"^2728^16^1702433934^0^0^20^482.48^", -- [1228]
+				"^2728^16^1702434068^352^0^20^482.48^Bbiggbossdr", -- [1229]
+				"^2728^16^1702434575^248^0^20^482.50^Bbiggbossdr", -- [1230]
+				"^2728^16^1702434954^353^1^20^482.50^Bbiggbossdr", -- [1231]
+				"^2708^16^1702435964^418^0^20^482.82^Bbiggbossdr", -- [1232]
+				"^2708^16^1702436478^380^0^20^482.86^Bbiggbossdr", -- [1233]
+				"^2708^16^1702436935^369^0^20^482.86^Bbiggbossdr", -- [1234]
+				"^2708^16^1702437405^374^0^20^482.82^Bbiggbossdr", -- [1235]
+				"^2708^16^1702438022^388^1^20^482.80^Bbiggbossdr", -- [1236]
+				"^2737^16^1702438688^11^0^20^482.75^", -- [1237]
+				"^2737^16^1702438931^229^1^20^482.47^Bbiggbossdr", -- [1238]
+				"^2731^16^1702439347^0^0^20^482.94^", -- [1239]
+				"^2731^16^1702439548^0^0^20^482.81^", -- [1240]
+				"^2824^16^1702440445^146^0^20^482.95^Triyng", -- [1241]
+				"^2824^16^1702441050^165^0^20^482.95^Dcn", -- [1242]
+				"^2824^16^1702441300^414^1^20^482.95^Atrocityedge", -- [1243]
+				"^2820^16^1703037826^245^1^20^484.01^Bbiggbossdr", -- [1244]
+				"^2709^16^1703038125^0^0^20^484.01^", -- [1245]
+				"^2709^16^1703038203^281^1^20^484.01^Bbiggbossdr", -- [1246]
+				"^2728^16^1703038676^0^0^20^484.01^", -- [1247]
+				"^2728^16^1703038748^72^0^20^484.03^Bbiggbossdr", -- [1248]
+				"^2728^16^1703038897^336^1^20^484.03^Bbiggbossdr", -- [1249]
+				"^2708^16^1703039348^0^0^20^484.01^", -- [1250]
+				"^2708^16^1703039446^114^0^20^484.01^Bbiggbossdr", -- [1251]
+				"^2708^16^1703039649^377^1^20^484.02^Bbiggbossdr", -- [1252]
+				"^2737^16^1703040274^0^0^20^484.06^", -- [1253]
+				"^2737^16^1703040422^221^1^20^483.96^Bbiggbossdr", -- [1254]
+				"^2731^16^1703040772^0^0^20^484.00^", -- [1255]
+				"^2731^16^1703040926^335^1^20^484.00^Bbiggbossdr", -- [1256]
+				"^2824^16^1703041594^399^1^20^483.94^Bbiggbossdr", -- [1257]
 			},
 			["Atrocityfive"] = {
 				"^1868^8^1671408114^77^1^5^400.34^", -- [1]
@@ -2591,376 +4425,377 @@ atrocityUI.VMRT["1440p"] = {
 				"^2614^15^1673301921^339^1^30^394.25^Impecdh", -- [300]
 				"^2607^15^1673302672^591^1^30^394.03^Impecdh", -- [301]
 			},
-			["Atrocitysoju"] = {
-				"^2590^15^1674698894^5^0^27^389.33^", -- [1]
-				"^2590^15^1674698975^152^1^29^391.70^Jetsp", -- [2]
-				"^2635^15^1674699381^206^1^29^393.97^Arcinde", -- [3]
-				"^2639^15^1674699908^0^0^29^393.17^", -- [4]
-				"^2639^15^1674699947^208^1^29^391.91^Kxingxing", -- [5]
-				"^2592^15^1674700372^0^0^27^392.64^", -- [6]
-				"^2592^15^1674700490^226^1^30^392.78^Relpriest", -- [7]
-				"^2605^15^1674700767^2^0^28^392.78^Goozee", -- [8]
-				"^2605^15^1674700845^0^0^28^394.08^", -- [9]
-				"^2605^15^1674700927^279^1^30^395.99^Jetsp", -- [10]
-				"^2614^15^1674701546^312^1^30^393.65^Relpriest", -- [11]
-				"^2607^15^1674702137^364^0^30^392.41^Relpriest", -- [12]
-				"^2607^15^1674702598^654^1^30^393.15^Relpriest", -- [13]
-				"^2587^16^1674703923^206^1^20^396.91^Kimsamsung", -- [14]
-				"^2590^16^1674704458^5^0^20^398.57^", -- [15]
-				"^2590^16^1674704575^271^1^20^398.91^Relpriest", -- [16]
-				"^2609^8^1674781854^174^1^5^403.34^", -- [17]
-				"^2606^8^1674782846^175^1^5^399.06^Lilgayecho-Illidan", -- [18]
-				"^2623^8^1674783401^126^1^5^395.94^", -- [19]
-				"^1677^8^1674891884^131^0^5^404.94^Atrocitysoju", -- [20]
-				"^1677^8^1674892110^164^1^5^404.94^", -- [21]
-				"^1688^8^1674892469^142^1^5^404.94^Roymixd", -- [22]
-				"^1679^8^1674893057^159^1^5^404.94^Roymixd", -- [23]
-				"^1682^8^1674893395^157^0^5^402.91^Quigs", -- [24]
-				"^1682^8^1674893595^153^1^5^402.91^Hardyw", -- [25]
-				"^2587^16^1675224877^191^1^20^398.89^", -- [26]
-				"^2590^16^1675225362^5^0^20^398.89^", -- [27]
-				"^2590^16^1675225426^260^1^20^398.89^Zekkelock", -- [28]
-				"^1677^8^1675480368^170^1^5^407.82^", -- [29]
-				"^1688^8^1675480651^148^1^5^407.82^", -- [30]
-				"^1679^8^1675481053^164^1^5^407.82^", -- [31]
-				"^1682^8^1675481356^228^1^5^407.82^", -- [32]
-				"^1868^8^1675482269^136^1^5^406.07^", -- [33]
-				"^1869^8^1675483046^117^1^5^406.07^", -- [34]
-				"^1870^8^1675483352^173^1^5^406.07^Flowbsy", -- [35]
-				"^1868^8^1675484168^105^0^5^410.16^Mestupid-Illidan", -- [36]
-				"^1868^8^1675484304^131^1^5^410.16^", -- [37]
-				"^1869^8^1675485015^92^1^5^410.16^", -- [38]
-				"^1870^8^1675485391^153^1^5^410.16^", -- [39]
-				"^2637^8^1675734111^161^1^5^407.29^", -- [40]
-				"^2636^8^1675734620^187^1^5^407.29^", -- [41]
-				"^2581^8^1675735302^193^1^5^407.29^", -- [42]
-				"^2580^8^1675735709^245^1^5^407.29^Mallaarkus-Illidan", -- [43]
-				"^2563^8^1675803389^131^1^5^408.27^", -- [44]
-				"^2564^8^1675803824^160^1^5^408.27^", -- [45]
-				"^2562^8^1675804659^115^1^5^408.27^", -- [46]
-				"^2565^8^1675805064^147^1^5^408.27^", -- [47]
-				"^2562^8^1675805718^125^1^5^408.27^", -- [48]
-				"^2563^8^1675806163^105^1^5^408.27^", -- [49]
-				"^2564^8^1675806549^181^1^5^408.27^", -- [50]
-				"^2565^8^1675807207^160^1^5^408.27^Weewpp", -- [51]
-				"^2563^8^1675817668^101^1^5^412.40^", -- [52]
-				"^2564^8^1675818046^148^1^5^412.40^", -- [53]
-				"^2562^8^1675818553^108^1^5^412.40^", -- [54]
-				"^2565^8^1675818937^137^1^5^412.40^Kallie-Illidan", -- [55]
-				"^2587^16^1675832122^162^1^20^406.77^Gazoo", -- [56]
-				"^2590^16^1675832598^6^0^20^406.75^Gazoo", -- [57]
-				"^2590^16^1675832672^201^1^20^406.75^Reldruid", -- [58]
-				"^1868^8^1676925181^163^1^5^406.51^", -- [59]
-				"^1869^8^1676925991^109^1^5^406.51^Moneybag", -- [60]
-				"^1870^8^1676926293^182^1^5^406.51^", -- [61]
-				"^1677^8^1676927828^162^1^5^414.90^", -- [62]
-				"^1688^8^1676928096^165^1^5^414.90^", -- [63]
-				"^1679^8^1676928513^210^1^5^414.90^", -- [64]
-				"^1682^8^1676928839^246^1^5^414.90^Mbdeez", -- [65]
-				"^1868^8^1676930020^164^1^5^410.48^Mbdeez", -- [66]
-				"^1869^8^1676930688^98^1^5^410.48^", -- [67]
-				"^1870^8^1676930954^168^1^5^410.48^", -- [68]
-				"^1868^8^1676931907^143^1^5^410.10^", -- [69]
-				"^1869^8^1676932498^116^1^5^410.10^", -- [70]
-				"^1870^8^1676932799^144^1^5^410.10^Mbdeez", -- [71]
-				"^2587^16^1677030995^0^0^20^416.70^", -- [72]
-				"^2587^16^1677031137^138^1^20^416.82^", -- [73]
-				"^2590^16^1677031558^7^0^20^416.46^", -- [74]
-				"^2590^16^1677031654^157^1^20^416.58^", -- [75]
-				"^2635^16^1677032181^393^1^20^415.88^Etcchi", -- [76]
-				"^2639^16^1677032934^1^0^20^414.70^", -- [77]
-				"^2639^16^1677032993^289^1^20^414.70^Belade", -- [78]
-				"^2592^16^1677033494^0^0^20^415.34^", -- [79]
-				"^2592^16^1677033543^355^1^20^415.20^Etcchi", -- [80]
-				"^2605^16^1677034008^2^0^20^414.77^", -- [81]
-				"^2605^16^1677034205^462^1^20^417.09^Etcchi", -- [82]
-				"^2614^16^1677034994^0^0^20^418.38^", -- [83]
-				"^2614^16^1677035270^242^0^20^418.48^Winternights", -- [84]
-				"^2614^16^1677035634^520^1^20^418.84^Triplew", -- [85]
-				"^1418^8^1677532237^146^1^5^407.84^Atrocitysoju", -- [86]
-				"^1417^8^1677532645^74^1^5^404.72^", -- [87]
-				"^1416^8^1677533265^129^1^5^404.72^", -- [88]
-				"^1439^8^1677533706^183^1^5^404.72^Moneybag", -- [89]
-				"^2587^16^1677636146^139^1^20^417.02^Jacobww", -- [90]
-				"^2590^16^1677636620^8^0^20^416.91^", -- [91]
-				"^2590^16^1677636694^162^1^20^416.74^", -- [92]
-				"^2639^16^1677637273^1^0^20^416.14^", -- [93]
-				"^2639^16^1677637431^291^1^20^417.26^Ladiesnight", -- [94]
-				"^2592^16^1677637958^0^0^20^419.43^", -- [95]
-				"^2592^16^1677638059^347^1^20^419.24^Jacobww", -- [96]
-				"^2605^16^1677638472^1^0^20^418.84^Tryinggd", -- [97]
-				"^2605^16^1677639123^436^1^20^419.12^Tryinggd", -- [98]
-				"^2635^16^1677639896^393^1^20^419.47^Xulanghavoc-Illidan", -- [99]
-				"^2614^16^1677640726^0^0^20^419.79^", -- [100]
-				"^2614^16^1677640818^128^0^20^419.79^Gdxo", -- [101]
-				"^2614^16^1677641045^503^1^20^419.79^Relvoker", -- [102]
-				"^2607^16^1677642328^197^0^20^417.17^Nidmufy-Illidan", -- [103]
-				"^2607^16^1677642659^428^0^20^417.41^Nidmufy-Illidan", -- [104]
-				"^2607^16^1677643168^799^0^20^417.43^Nidmufy-Illidan", -- [105]
-				"^2607^16^1677644074^239^0^20^417.65^Nidmufy-Illidan", -- [106]
-				"^2607^16^1677644407^589^0^20^417.59^Nidmufy-Illidan", -- [107]
-				"^2607^16^1677645092^235^0^20^417.60^Nidmufy-Illidan", -- [108]
-				"^2607^16^1677645436^159^0^20^417.33^Nidmufy-Illidan", -- [109]
-				"^2607^16^1677645706^812^1^20^417.62^Nidmufy-Illidan", -- [110]
-				"^2615^1^1677690919^44^1^5^185.84^", -- [111]
-				"^2616^1^1677691077^28^1^5^185.84^", -- [112]
-				"^2617^1^1677691186^33^1^5^185.84^", -- [113]
-				"^2618^1^1677691307^30^1^5^185.84^", -- [114]
-				"^1868^8^1677803091^135^1^5^412.88^", -- [115]
-				"^1869^8^1677803689^101^1^5^412.88^", -- [116]
-				"^1870^8^1677803965^148^1^5^412.88^", -- [117]
-				"^1677^8^1678226862^109^1^5^407.10^", -- [118]
-				"^1688^8^1678227100^96^1^5^407.10^", -- [119]
-				"^1679^8^1678227504^100^1^5^407.10^", -- [120]
-				"^1682^8^1678227763^140^1^5^406.36^Atrocitysoju", -- [121]
-				"^2587^16^1678327290^21^0^20^412.01^Goosy", -- [122]
-				"^2587^16^1678327481^131^1^20^419.27^Etchqtpi-Area52", -- [123]
-				"^2590^16^1678327883^6^0^20^419.71^", -- [124]
-				"^2590^16^1678328019^163^1^20^419.00^Etcchi", -- [125]
-				"^2635^16^1678328616^388^1^20^418.98^Etcchi", -- [126]
-				"^2639^16^1678329266^0^0^20^419.02^", -- [127]
-				"^2639^16^1678329360^279^1^20^419.03^Etcchi", -- [128]
-				"^2592^16^1678329811^0^0^20^419.03^", -- [129]
-				"^2614^16^1678331519^555^1^20^419.04^Belade", -- [130]
-				"^2607^16^1678332546^117^0^20^419.69^Reltwo", -- [131]
-				"^2607^16^1678332887^264^0^20^419.52^Karzastrasza", -- [132]
-				"^2607^16^1678333261^760^1^20^419.20^Synepm", -- [133]
-				"^2639^16^1678844029^0^0^20^342.02^", -- [134]
-				"^2639^16^1678844114^290^1^20^342.03^Etchqtpi-Area52", -- [135]
-				"^2592^16^1678844618^0^0^20^332.82^", -- [136]
-				"^2592^16^1678844681^324^1^20^338.08^Etchqtpi-Area52", -- [137]
-				"^2605^16^1678845066^0^0^20^375.47^", -- [138]
-				"^2605^16^1678845205^433^1^20^413.81^Etchqtpi-Area52", -- [139]
-				"^2614^16^1678845844^0^0^20^415.09^", -- [140]
-				"^2614^16^1678846158^506^1^20^417.85^Etchqtpi-Area52", -- [141]
-				"^2607^16^1678846951^22^0^20^419.79^Zekkeh", -- [142]
-				"^2607^16^1678847084^184^0^20^419.97^Etchqtpi-Area52", -- [143]
-				"^2607^16^1678847352^760^1^20^419.89^Etchqtpi-Area52", -- [144]
-				"^2587^16^1679447006^132^1^20^417.95^", -- [145]
-				"^2590^16^1679447380^6^0^20^417.70^", -- [146]
-				"^2590^16^1679447444^163^1^20^418.06^Wingwong", -- [147]
-				"^2635^16^1679447895^347^1^20^417.35^Blackwalnut", -- [148]
-				"^2639^16^1679448464^0^0^20^417.35^", -- [149]
-				"^2639^16^1679448565^1^0^20^417.22^Zekkeh", -- [150]
-				"^2639^16^1679448603^261^1^20^417.24^Blackwalnut", -- [151]
-				"^2614^16^1679450409^0^0^20^418.78^", -- [152]
-				"^2614^16^1679450513^533^1^20^418.60^Jacobww", -- [153]
-				"^2607^16^1679451497^743^1^20^419.22^Blackwalnut", -- [154]
-				"^1677^8^1679627673^148^1^5^402.50^", -- [155]
-				"^1688^8^1679627945^139^1^5^402.50^Uddydoxx", -- [156]
-				"^1679^8^1679628389^215^1^5^402.50^Uny-Arygos", -- [157]
-				"^1682^8^1679628735^198^1^5^398.77^Atrocitysoju", -- [158]
-				"^2587^16^1680751089^137^1^20^416.15^", -- [159]
-				"^2590^16^1680751492^5^0^20^414.23^", -- [160]
-				"^2590^16^1680751545^170^1^20^415.09^Beladesham", -- [161]
-				"^2635^16^1680752064^333^1^20^417.18^Busdrivergus", -- [162]
-				"^2639^16^1680752734^265^1^20^417.37^Flowbie", -- [163]
-				"^2592^16^1680753210^0^0^20^417.37^", -- [164]
-				"^2592^16^1680753252^338^1^20^417.37^Memewizardx", -- [165]
-				"^2605^16^1680753699^2^0^20^417.02^", -- [166]
-				"^2605^16^1680753909^184^0^20^417.27^Twopalz", -- [167]
-				"^2605^16^1680754238^428^1^20^416.82^Carodk-Zul'jin", -- [168]
-				"^2614^16^1680754821^5^0^20^417.06^", -- [169]
-				"^2614^16^1680755195^226^0^20^417.95^Gazoo", -- [170]
-				"^2614^16^1680755513^498^1^20^417.95^Twopalz", -- [171]
-				"^2684^14^1683655156^0^0^27^418.22^", -- [172]
-				"^2684^14^1683655440^355^0^30^415.05^Twistedstu-Illidan", -- [173]
-				"^2684^14^1683655894^218^0^30^415.39^Twistedstu-Illidan", -- [174]
-				"^2684^14^1683656183^274^1^30^415.39^Icespice-Hyjal", -- [175]
-				"^2688^15^1683685780^0^0^26^412.62^", -- [176]
-				"^2688^15^1683685846^165^1^30^419.25^Reldruid", -- [177]
-				"^2687^15^1683686207^0^0^30^419.28^", -- [178]
-				"^2687^15^1683686245^176^1^30^419.28^", -- [179]
-				"^2693^15^1683686595^0^0^30^419.29^", -- [180]
-				"^2693^15^1683686645^203^1^30^419.32^Starshopping", -- [181]
-				"^2682^15^1683687036^11^0^30^419.23^", -- [182]
-				"^2682^15^1683687099^155^1^30^419.28^Jetsp", -- [183]
-				"^2680^15^1683687306^0^0^30^419.38^", -- [184]
-				"^2680^15^1683687347^221^1^30^419.48^Zoopalz", -- [185]
-				"^2689^15^1683687669^0^0^30^419.37^", -- [186]
-				"^2689^15^1683687719^204^1^30^419.46^Quigs", -- [187]
-				"^2683^15^1683688090^0^0^30^420.45^", -- [188]
-				"^2683^15^1683688162^201^1^30^420.45^Zoopalz", -- [189]
-				"^2684^15^1683688539^0^0^30^420.39^", -- [190]
-				"^2684^15^1683688606^117^0^30^420.39^Flowbee", -- [191]
-				"^2684^15^1683688789^118^0^30^420.39^Xyronicz", -- [192]
-				"^2684^15^1683688980^281^1^30^420.37^Zoopalz", -- [193]
-				"^2587^16^1683735356^131^1^20^421.53^", -- [194]
-				"^2590^16^1683735731^7^0^20^421.50^", -- [195]
-				"^2590^16^1683735788^166^1^20^421.50^", -- [196]
-				"^2693^14^1683739989^0^0^28^417.38^", -- [197]
-				"^2693^14^1683740075^199^1^30^416.63^Tryingw", -- [198]
-				"^2688^14^1683754819^141^1^30^332.50^Syzrogue", -- [199]
-				"^2687^14^1683755213^0^0^30^420.59^", -- [200]
-				"^2687^14^1683755250^136^1^30^420.56^", -- [201]
-				"^2693^14^1683755541^0^0^30^420.56^", -- [202]
-				"^2693^14^1683755591^174^1^30^420.56^Syzrogue", -- [203]
-				"^2682^14^1683756071^106^1^30^420.55^Syzrogue", -- [204]
-				"^2680^14^1683756274^188^1^30^420.41^Syzrogue", -- [205]
-				"^2689^14^1683756524^1^0^30^420.41^", -- [206]
-				"^2689^14^1683756680^150^1^30^420.55^Syzrogue", -- [207]
-				"^2683^14^1683756979^0^0^30^420.51^", -- [208]
-				"^2683^14^1683757028^149^1^30^420.52^", -- [209]
-				"^2685^14^1683765877^293^1^30^360.19^Xyronicz", -- [210]
-				"^2685^15^1683778863^0^0^29^410.17^", -- [211]
-				"^2685^15^1683779036^312^0^30^420.81^Starshopping", -- [212]
-				"^2685^15^1683779455^308^0^30^420.64^Arcinde", -- [213]
-				"^2685^15^1683779875^380^1^30^420.58^Dosomething", -- [214]
-				"^2093^8^1683825449^161^1^5^426.67^", -- [215]
-				"^2094^8^1683825908^187^1^5^426.67^Dcn", -- [216]
-				"^2095^8^1683826291^168^1^5^426.67^Dcn", -- [217]
-				"^2096^8^1683826699^174^1^5^426.67^", -- [218]
-				"^2093^8^1683830945^107^1^5^427.69^", -- [219]
-				"^2094^8^1683831228^115^1^5^427.69^", -- [220]
-				"^2095^8^1683831608^105^1^5^427.21^", -- [221]
-				"^2096^8^1683831818^129^1^5^427.21^", -- [222]
-				"^2555^8^1683832402^97^1^5^427.64^Dcn", -- [223]
-				"^2556^8^1683832594^127^1^5^427.64^", -- [224]
-				"^2557^8^1683832809^114^1^5^427.64^", -- [225]
-				"^2558^8^1683833118^100^1^5^427.64^", -- [226]
-				"^2559^8^1683833616^168^1^5^427.64^Atrocitysoju", -- [227]
-				"^2111^8^1683834152^112^1^5^427.64^Atrocitysoju", -- [228]
-				"^2118^8^1683834438^171^1^5^427.64^", -- [229]
-				"^2112^8^1683834745^162^1^5^427.64^Dcn", -- [230]
-				"^2123^8^1683835246^156^1^5^427.64^", -- [231]
-				"^2688^15^1684274597^178^1^30^410.69^Jetsmonk-Illidan", -- [232]
-				"^2687^15^1684274989^0^0^30^410.69^", -- [233]
-				"^2687^15^1684275044^186^1^30^425.09^Zoozzoozz", -- [234]
-				"^2693^15^1684275405^1^0^28^425.53^", -- [235]
-				"^2693^15^1684275495^221^1^30^421.36^Zoozzoozz", -- [236]
-				"^2682^15^1684276060^186^1^30^426.90^Zoozzoozz", -- [237]
-				"^2680^15^1684276362^233^1^30^426.95^Hardyw", -- [238]
-				"^2689^15^1684276682^0^0^30^422.70^", -- [239]
-				"^2689^15^1684276732^200^1^30^422.70^Karzwnba", -- [240]
-				"^2683^15^1684277088^0^0^30^422.67^", -- [241]
-				"^2683^15^1684277135^194^1^30^422.73^Karzlgx", -- [242]
-				"^2684^15^1684277572^0^0^30^422.83^", -- [243]
-				"^2684^15^1684277615^195^0^30^422.83^Karzlgx", -- [244]
-				"^2684^15^1684277870^268^1^30^422.83^Karzlgx", -- [245]
-				"^2685^15^1684278349^0^0^29^426.58^", -- [246]
-				"^2685^15^1684278481^294^0^30^426.78^Karzlgx", -- [247]
-				"^2685^15^1684278845^0^0^30^426.30^Karzlgx", -- [248]
-				"^2685^15^1684279267^347^1^30^383.51^Karzlgx", -- [249]
-				"^2684^14^1684297654^9^0^30^408.91^", -- [250]
-				"^2684^14^1684297716^160^1^30^422.59^Karzchinafan", -- [251]
-				"^2685^14^1684297997^0^0^30^422.59^", -- [252]
-				"^2685^14^1684298256^258^1^30^419.56^Karzchinafan", -- [253]
-				"^2093^8^1685833159^117^1^5^436.34^Cdhunt-Illidan", -- [254]
-				"^2094^8^1685833555^131^1^5^436.34^Criser-Zul'jin", -- [255]
-				"^2095^8^1685834095^113^1^5^436.34^", -- [256]
-				"^2096^8^1685834437^111^1^5^436.34^", -- [257]
-				"^2111^8^1686083068^94^1^5^438.76^", -- [258]
-				"^2118^8^1686083388^142^1^5^438.76^", -- [259]
-				"^2112^8^1686083638^128^1^5^438.76^Atrocitysoju", -- [260]
-				"^2123^8^1686083963^163^1^5^438.76^Comedragon-Area52", -- [261]
-				"^1790^8^1686170787^75^0^5^427.50^Nathansmith-Illidan", -- [262]
-				"^1790^8^1686170926^102^0^5^427.50^Nathansmith-Illidan", -- [263]
-				"^1790^8^1686171176^123^0^5^427.50^Notnnk-Illidan", -- [264]
-				"^2111^8^1686868143^61^1^5^436.04^", -- [265]
-				"^2118^8^1686868390^87^1^5^436.04^", -- [266]
-				"^2112^8^1686868584^86^1^5^436.04^", -- [267]
-				"^2123^8^1686868872^115^1^5^436.04^", -- [268]
+			["Atrocitywl"] = {
+				"^2395^8^1633377025^120^1^5^242.06^", -- [1]
+				"^2394^8^1633377588^143^1^5^242.06^Weewpp-Mal'Ganis", -- [2]
+				"^2400^8^1633378187^100^1^5^238.02^", -- [3]
+				"^2396^8^1633378352^188^1^5^238.02^", -- [4]
+				"^2423^15^1633551942^5^0^18^242.95^", -- [5]
+				"^2423^15^1633552017^5^0^18^243.60^", -- [6]
+				"^2423^15^1633552076^8^0^18^242.86^", -- [7]
+				"^2423^15^1633552468^187^1^22^244.21^Bendyneck-Hyjal", -- [8]
+				"^2391^8^1649115663^199^1^5^254.99^", -- [9]
+				"^2365^8^1649116209^167^1^5^254.99^", -- [10]
+				"^2364^8^1649116872^199^0^5^254.99^Atrocitywl", -- [11]
+				"^2364^8^1649117142^207^1^5^254.99^", -- [12]
+				"^2366^8^1649117595^219^1^5^256.33^Tagzzsou", -- [13]
+				"^2404^8^1649117880^253^1^5^256.33^Tagzzsou", -- [14]
+				"^2397^8^1649735426^58^1^5^265.07^", -- [15]
+				"^2392^8^1649735775^136^1^5^263.19^", -- [16]
+				"^2393^8^1649736139^82^1^5^259.73^", -- [17]
+				"^2384^8^1649780012^139^1^5^263.89^", -- [18]
+				"^2385^8^1649780418^146^1^5^260.56^", -- [19]
+				"^2386^8^1649780679^162^1^5^260.56^", -- [20]
+				"^2382^8^1649781324^94^1^5^265.89^", -- [21]
+				"^2384^8^1649781856^118^1^5^265.89^", -- [22]
+				"^2385^8^1649782161^121^1^5^265.89^", -- [23]
+				"^2386^8^1649782376^173^1^5^265.89^", -- [24]
+				"^2382^8^1652756346^123^1^5^267.46^", -- [25]
+				"^2384^8^1652756753^168^1^5^267.46^", -- [26]
+				"^2385^8^1652757094^153^1^5^267.46^", -- [27]
+				"^2386^8^1652757347^174^1^5^267.46^", -- [28]
+				"^2401^8^1652935525^131^1^5^265.18^Twistedsp", -- [29]
+				"^2380^8^1652935720^107^1^5^265.18^", -- [30]
+				"^2403^8^1652935919^106^1^5^265.18^", -- [31]
+				"^2381^8^1652936142^126^1^5^265.18^", -- [32]
+				"^2426^8^1652996453^96^1^5^266.62^", -- [33]
+				"^2419^8^1652996730^69^1^5^266.62^", -- [34]
+				"^2442^8^1652996979^126^1^5^266.62^", -- [35]
+				"^2426^8^1656196202^154^1^5^272.61^Jacobw", -- [36]
+				"^2419^8^1656196469^110^1^5^272.61^", -- [37]
+				"^2442^8^1656196705^187^1^5^272.61^Twistedsp", -- [38]
+				"^2426^8^1656557724^106^1^5^270.20^", -- [39]
+				"^2419^8^1656558019^97^1^5^270.20^", -- [40]
+				"^2442^8^1656558327^154^1^5^270.20^", -- [41]
 			},
-			["Atrocitysix"] = {
-				"^2609^23^1669950863^102^1^5^302.81^", -- [1]
-				"^2606^23^1669951244^103^1^5^302.81^", -- [2]
-				"^2623^23^1669951470^88^1^5^302.81^", -- [3]
-				"^2610^23^1669951948^70^1^5^288.94^", -- [4]
-				"^2613^23^1669952181^86^1^5^298.12^", -- [5]
-				"^2612^23^1669952572^95^1^5^299.03^", -- [6]
-				"^2611^23^1669952856^74^1^5^299.03^", -- [7]
-				"^2637^23^1669953507^71^1^5^305.92^", -- [8]
-				"^2636^23^1669953775^91^1^5^306.52^Mallaarkus", -- [9]
-				"^2581^23^1669954085^2^0^5^310.10^", -- [10]
-				"^2581^23^1669954128^72^1^5^310.10^", -- [11]
-				"^2580^23^1669954382^146^1^5^310.10^", -- [12]
-				"^2582^23^1669954966^79^1^5^309.36^", -- [13]
-				"^2585^23^1669955206^80^1^5^310.27^", -- [14]
-				"^2583^23^1669955335^80^1^5^311.23^Mallaarkus", -- [15]
-				"^2584^23^1669955444^92^1^5^311.23^", -- [16]
-				"^2570^23^1669955969^81^1^5^314.59^Ericsenior", -- [17]
-				"^2567^23^1669956219^54^1^5^314.59^", -- [18]
-				"^2568^23^1669956429^91^0^5^311.92^Atrocitysix", -- [19]
-				"^2568^23^1669956585^83^1^5^311.92^", -- [20]
-				"^2569^23^1669956823^59^0^5^313.38^Dankscale", -- [21]
-				"^2569^23^1669956971^67^1^5^311.71^Mallaarkus", -- [22]
-				"^2562^23^1669957386^79^1^5^319.44^Ericsenior", -- [23]
-				"^2563^23^1669957634^45^1^5^321.85^", -- [24]
-				"^2564^23^1669957839^72^1^5^317.20^", -- [25]
-				"^2565^23^1669957965^89^1^5^317.56^", -- [26]
-				"^2615^23^1669958366^66^1^5^325.50^", -- [27]
-				"^2616^23^1669958568^77^1^5^325.50^Ericsenior", -- [28]
-				"^2617^23^1669958786^63^1^5^320.50^", -- [29]
-				"^2618^23^1669959004^51^1^5^321.67^", -- [30]
-				"^2555^23^1669959416^78^1^5^322.27^", -- [31]
-				"^2556^23^1669959523^57^1^5^324.40^Mallaarkus", -- [32]
-				"^2557^23^1669959654^69^1^5^323.92^", -- [33]
-				"^2558^23^1669959861^89^1^5^324.38^", -- [34]
-				"^2559^23^1669960305^91^1^5^324.83^", -- [35]
-				"^2609^23^1670434043^58^1^5^371.06^", -- [36]
-				"^2606^23^1670434298^48^1^5^365.44^", -- [37]
-				"^2623^23^1670434427^54^1^5^365.44^", -- [38]
-				"^2610^23^1670434669^53^1^5^368.00^Atrocitysix", -- [39]
-				"^2613^23^1670434801^42^1^5^368.00^", -- [40]
-				"^2612^23^1670434968^54^1^5^368.06^", -- [41]
-				"^2611^23^1670435109^50^1^5^368.06^", -- [42]
-				"^2636^23^1670435515^54^1^5^365.62^", -- [43]
-				"^2637^23^1670435602^50^1^5^365.62^", -- [44]
-				"^2581^23^1670435822^46^1^5^365.09^", -- [45]
-				"^2580^23^1670435978^58^1^5^365.09^", -- [46]
-				"^2582^23^1670436256^43^1^5^368.27^", -- [47]
-				"^2585^23^1670436403^24^1^5^370.59^", -- [48]
-				"^2583^23^1670436490^58^1^5^370.59^", -- [49]
-				"^2584^23^1670436558^53^1^5^370.59^", -- [50]
-				"^2570^23^1670436835^49^1^5^370.48^Drenacouggla", -- [51]
-				"^2568^23^1670436978^52^1^5^370.48^", -- [52]
-				"^2567^23^1670437096^27^1^5^370.48^", -- [53]
-				"^2569^23^1670437317^106^1^5^368.52^Atrocitysix", -- [54]
-				"^2562^23^1670437619^52^1^5^365.19^", -- [55]
-				"^2563^23^1670437751^40^1^5^365.19^", -- [56]
-				"^2564^23^1670437909^46^1^5^365.19^", -- [57]
-				"^2565^23^1670438009^48^1^5^365.19^", -- [58]
-				"^2555^23^1670438351^38^1^5^365.42^", -- [59]
-				"^2556^23^1670438411^44^1^5^368.67^Drenacouggla", -- [60]
-				"^2557^23^1670438499^54^1^5^367.61^", -- [61]
-				"^2558^23^1670438632^30^1^5^370.59^", -- [62]
-				"^2559^23^1670438811^66^1^5^370.59^", -- [63]
-				"^2615^23^1670452427^66^1^5^368.27^", -- [64]
-				"^2616^23^1670452609^54^1^5^370.44^", -- [65]
-				"^2617^23^1670452750^49^1^5^370.44^Drenacouggla", -- [66]
-				"^2618^23^1670452897^37^1^5^370.44^", -- [67]
-				"^2398^15^1670888754^26^1^30^378.62^", -- [68]
-				"^2418^15^1670888882^30^1^30^378.64^", -- [69]
-				"^2399^15^1670889005^66^1^29^378.75^", -- [70]
-				"^2592^14^1670994670^320^1^30^374.12^Innocentius", -- [71]
-				"^2605^14^1670995164^0^0^30^373.88^", -- [72]
-				"^2605^14^1670995238^321^1^30^373.52^Innocentius", -- [73]
-				"^2635^14^1670995880^269^1^30^377.99^Innocentius", -- [74]
-				"^2614^14^1670996331^0^0^30^378.16^", -- [75]
-				"^2614^14^1670996391^363^1^30^378.16^Northernhunt", -- [76]
-				"^2607^14^1670997093^268^0^30^378.01^Systemdaemon-Area52", -- [77]
-				"^2607^14^1670997393^20^0^30^377.93^Chime-Jaedenar", -- [78]
-				"^2607^14^1670997481^673^1^30^377.98^Innocentius", -- [79]
-				"^2635^15^1671064677^251^1^30^385.48^Atlasdumpy", -- [80]
-				"^2614^15^1671065189^0^0^30^385.52^", -- [81]
-				"^2614^15^1671065473^1^0^30^385.22^", -- [82]
-				"^2614^15^1671065506^239^0^30^385.30^Atrocitysix", -- [83]
-				"^2614^15^1671065854^0^0^30^385.30^", -- [84]
-				"^2614^15^1671065940^403^1^30^384.95^Pencilpete", -- [85]
-				"^2607^15^1671097288^192^0^30^384.10^Rikusson", -- [86]
-				"^2607^15^1671097580^256^0^30^384.17^Benbrm", -- [87]
-				"^2607^15^1671131402^633^1^30^382.07^Ericsmagetwo", -- [88]
-				"^2587^15^1671564202^170^1^30^388.36^Strydem-Kil'jaeden", -- [89]
-				"^2590^15^1671564759^0^0^30^389.37^", -- [90]
-				"^2590^15^1671564820^192^1^30^389.37^Mizithra-Proudmoore", -- [91]
-				"^2639^15^1671565422^0^0^30^391.52^", -- [92]
-				"^2639^15^1671565491^247^1^30^392.18^Daddydh-MoonGuard", -- [93]
-				"^2592^15^1671565936^0^0^30^392.20^", -- [94]
-				"^2592^15^1671565988^275^1^30^392.60^Rikunatty", -- [95]
-				"^2605^15^1671566400^5^0^30^392.60^", -- [96]
-				"^2605^15^1671566464^320^1^30^391.06^Malaarkus", -- [97]
-				"^2607^15^1671582621^25^0^30^387.24^Rivenzp", -- [98]
-				"^2607^15^1671582755^656^1^30^387.24^Scottbestiee", -- [99]
+			["Atrocityskye"] = {
+				"^2570^8^1684798266^157^1^5^425.88^Atrocityskye", -- [1]
+				"^2568^8^1684798841^122^1^5^425.88^", -- [2]
+				"^2567^8^1684799091^97^1^5^425.88^Magnemight-Area52", -- [3]
+				"^2569^8^1684799480^189^0^5^425.88^Atrocityskye", -- [4]
+				"^2569^8^1684799777^14^0^5^425.88^Afrancesado-Ragnaros", -- [5]
+				"^2569^8^1684799845^164^1^5^425.88^", -- [6]
+				"^2111^8^1684859038^153^1^5^420.60^Carow", -- [7]
+				"^2118^8^1684859482^188^1^5^420.60^Mestupid-Illidan", -- [8]
+				"^2112^8^1684859792^133^1^5^420.60^", -- [9]
+				"^2123^8^1684860155^192^1^5^420.60^", -- [10]
+				"^2688^15^1684895476^1^0^27^422.42^", -- [11]
+				"^2688^15^1684895548^151^1^29^422.85^Madbillainy", -- [12]
+				"^2682^15^1684895987^6^0^30^423.16^", -- [13]
+				"^2682^15^1684896046^115^1^30^423.16^", -- [14]
+				"^2680^15^1684896216^0^0^30^423.16^", -- [15]
+				"^2680^15^1684896274^216^1^30^423.16^Sworc-Illidan", -- [16]
+				"^2687^15^1684896710^0^0^30^423.22^", -- [17]
+				"^2687^15^1684896756^163^1^30^423.22^Jetk-Illidan", -- [18]
+				"^2693^15^1684897099^0^0^30^423.22^", -- [19]
+				"^2693^15^1684897139^191^1^30^423.28^Twistedx", -- [20]
+				"^2689^15^1684897404^4^0^30^423.28^", -- [21]
+				"^2689^15^1684897441^6^0^30^423.28^", -- [22]
+				"^2689^15^1684897479^5^0^30^423.31^", -- [23]
+				"^2689^15^1684897533^182^1^30^423.49^Iamaburden", -- [24]
+				"^2683^15^1684897892^0^0^30^423.59^", -- [25]
+				"^2683^15^1684897945^186^1^30^423.59^Disciplinae", -- [26]
+				"^2684^15^1684898318^0^0^29^423.67^", -- [27]
+				"^2684^15^1684898389^0^0^30^423.67^", -- [28]
+				"^2684^15^1684898438^312^1^30^423.67^Winternights", -- [29]
+				"^2685^15^1684898877^0^0^30^423.81^", -- [30]
+				"^2685^15^1684898993^279^0^30^423.85^Xybeaned", -- [31]
+				"^2685^15^1684899344^400^1^30^423.85^Deydorra", -- [32]
+				"^1043^8^1684969694^116^1^5^425.31^Atrocityskye", -- [33]
+				"^1041^8^1684970140^137^1^5^425.31^Atrocityskye", -- [34]
+				"^1042^8^1684970560^154^1^5^425.31^Tryang", -- [35]
+				"^2111^8^1685111020^94^1^5^420.50^", -- [36]
+				"^2118^8^1685111330^116^0^5^420.50^Zekkelock", -- [37]
+				"^2118^8^1685111517^168^1^5^420.50^", -- [38]
+				"^2112^8^1685111806^128^1^5^420.50^", -- [39]
+				"^2123^8^1685112157^208^1^5^420.50^Zekkelock", -- [40]
+				"^1790^8^1685132384^139^1^5^427.52^Atrocityskye", -- [41]
+				"^1791^8^1685132817^205^1^5^427.52^Atrocityskye", -- [42]
+				"^1792^8^1685133150^133^1^5^427.52^", -- [43]
+				"^1793^8^1685133423^183^1^5^427.52^Twistedw", -- [44]
+				"^2688^15^1685480390^0^0^24^428.15^", -- [45]
+				"^2688^15^1685480605^0^0^29^428.82^", -- [46]
+				"^2688^15^1685480708^152^1^30^429.03^Mb", -- [47]
+				"^2682^15^1685481171^8^0^30^429.03^", -- [48]
+				"^2682^15^1685481230^114^1^30^429.03^", -- [49]
+				"^2680^15^1685481405^0^0^30^429.08^", -- [50]
+				"^2680^15^1685481442^210^1^30^429.08^Icespice-Hyjal", -- [51]
+				"^2687^15^1685481887^0^0^29^429.26^", -- [52]
+				"^2687^15^1685481961^164^1^30^429.27^Icespice-Hyjal", -- [53]
+				"^2693^15^1685482334^0^0^30^429.27^", -- [54]
+				"^2693^15^1685482372^183^1^30^429.27^", -- [55]
+				"^2689^15^1685482666^0^0^30^429.27^", -- [56]
+				"^2689^15^1685482703^184^1^30^429.45^Shoxy-Illidan", -- [57]
+				"^2683^15^1685483066^0^0^30^429.45^", -- [58]
+				"^2683^15^1685483101^185^1^30^429.45^", -- [59]
+				"^2684^15^1685483499^0^0^30^429.50^", -- [60]
+				"^2684^15^1685483538^278^1^30^429.55^Notnnk-Illidan", -- [61]
+				"^2685^15^1685483975^0^0^29^429.81^", -- [62]
+				"^2685^15^1685484061^195^0^30^429.81^Marydn-Dragonmaw", -- [63]
+				"^2685^15^1685484325^322^0^30^429.83^Jetslock", -- [64]
+				"^2685^15^1685484769^359^1^30^429.95^Icespice-Hyjal", -- [65]
+				"^2570^8^1685540292^118^1^5^431.96^Bioarbor", -- [66]
+				"^2568^8^1685540944^114^1^5^431.96^", -- [67]
+				"^2567^8^1685541201^84^1^5^431.96^", -- [68]
+				"^2569^8^1685541591^91^1^5^431.96^Bioarbor", -- [69]
+				"^2093^8^1685566544^106^1^5^428.74^", -- [70]
+				"^2094^8^1685566918^120^1^5^428.74^", -- [71]
+				"^2095^8^1685567339^105^1^5^428.74^Gazoo", -- [72]
+				"^2096^8^1685567585^104^1^5^428.74^", -- [73]
+				"^2610^8^1685568554^68^1^5^430.60^Tryingg", -- [74]
+				"^2613^8^1685568850^91^1^5^432.08^", -- [75]
+				"^2612^8^1685569279^98^1^5^432.08^", -- [76]
+				"^2611^8^1685569620^90^1^5^432.08^", -- [77]
+				"^1790^8^1685570610^73^1^5^429.93^", -- [78]
+				"^1791^8^1685570964^114^1^5^429.93^", -- [79]
+				"^1792^8^1685571183^76^1^5^429.93^", -- [80]
+				"^1793^8^1685571440^99^1^5^429.93^", -- [81]
+				"^2688^16^1685584410^0^0^20^435.24^", -- [82]
+				"^2688^16^1685584505^294^1^20^435.24^Bumpercars", -- [83]
+				"^2682^16^1685585116^7^0^20^435.25^", -- [84]
+				"^2682^16^1685585364^120^0^20^435.33^Waveweaver", -- [85]
+				"^2682^16^1685585558^270^1^20^435.62^Bumpercars", -- [86]
+				"^2687^16^1685586054^0^0^20^435.58^", -- [87]
+				"^2687^16^1685586324^348^1^20^435.52^Belade", -- [88]
+				"^2693^16^1685586904^11^0^20^435.39^", -- [89]
+				"^2093^8^1686084714^129^1^5^436.24^Drcornman-Illidan", -- [90]
+				"^2094^8^1686085060^161^1^5^436.24^Atrocityskye", -- [91]
+				"^2095^8^1686085546^118^1^5^436.24^", -- [92]
+				"^2096^8^1686085811^155^1^5^436.24^", -- [93]
+				"^2093^8^1686086495^119^1^5^438.23^Cddos-Illidan", -- [94]
+				"^2094^8^1686086745^174^1^5^438.23^", -- [95]
+				"^2095^8^1686087314^112^1^5^438.23^Comedragon-Area52", -- [96]
+				"^2096^8^1686087552^160^1^5^438.23^", -- [97]
+				"^2688^15^1686088930^1^0^16^433.39^", -- [98]
+				"^2688^15^1686089310^151^1^21^433.84^Deyjavu", -- [99]
+				"^2682^15^1686089766^7^0^20^433.47^", -- [100]
+				"^2682^15^1686089895^133^1^21^433.33^Nasdaqgriddy", -- [101]
+				"^2680^15^1686090137^205^1^21^433.36^Trippygodx", -- [102]
+				"^2687^15^1686090545^0^0^21^433.40^", -- [103]
+				"^2687^15^1686090591^174^1^21^433.40^Bulgesniffer-Zul'jin", -- [104]
+				"^2693^15^1686090962^6^0^21^432.74^", -- [105]
+				"^2693^15^1686091012^182^1^21^433.00^", -- [106]
+				"^2689^15^1686091271^0^0^20^433.40^", -- [107]
+				"^2689^15^1686091418^167^1^24^433.29^Beavxd-Area52", -- [108]
+				"^2683^15^1686091752^0^0^24^433.37^", -- [109]
+				"^2683^15^1686091795^177^1^24^433.49^", -- [110]
+				"^2684^15^1686092155^0^0^24^433.49^", -- [111]
+				"^2684^15^1686092333^258^1^25^434.36^Bulgesniffer-Zul'jin", -- [112]
+				"^2685^15^1686092712^0^0^21^434.32^", -- [113]
+				"^2685^15^1686092924^388^1^26^434.47^Kimsamsung", -- [114]
+				"^2615^8^1686094532^173^1^5^434.21^ßëãstmøðé-Illidan", -- [115]
+				"^2616^8^1686094972^305^0^5^434.21^Jt", -- [116]
+				"^2616^8^1686095362^153^1^5^434.21^Jt", -- [117]
+				"^2617^8^1686095731^146^1^5^434.21^Atrocityskye", -- [118]
+				"^2618^8^1686096179^63^0^5^434.21^Jt", -- [119]
+				"^2618^8^1686096352^29^0^5^434.38^Atrocityskye", -- [120]
+				"^2618^8^1686096480^266^1^5^434.38^Jt", -- [121]
+				"^1043^8^1686101420^122^1^5^432.19^Atrocityskye", -- [122]
+				"^1041^8^1686101924^159^1^5^432.19^Goopdroop-Illidan", -- [123]
+				"^1042^8^1686102448^68^0^5^432.19^Atrocityskye", -- [124]
+				"^1042^8^1686102559^172^1^5^432.19^", -- [125]
+				"^2688^16^1686111535^0^0^20^438.11^", -- [126]
+				"^2688^16^1686111664^14^0^20^437.93^Zoopalz", -- [127]
+				"^2688^16^1686111785^259^1^20^437.93^Twistedm", -- [128]
+				"^2682^16^1686112316^7^0^20^438.03^", -- [129]
+				"^2682^16^1686112416^237^1^20^438.03^Gazoo", -- [130]
+				"^2687^16^1686112864^0^0^20^437.93^", -- [131]
+				"^2687^16^1686112993^301^1^20^438.03^Atrocityskye", -- [132]
+				"^2693^16^1686113481^6^0^20^438.45^", -- [133]
+				"^2693^16^1686113599^173^0^20^438.46^Kadornus", -- [134]
+				"^2693^16^1686113850^323^1^20^438.75^Zoopalz", -- [135]
+				"^2610^8^1686259053^109^1^5^431.66^", -- [136]
+				"^2613^8^1686259339^117^1^5^431.66^Nathansmith-Illidan", -- [137]
+				"^2612^8^1686259777^100^1^5^431.66^Nathansmith-Illidan", -- [138]
+				"^2611^8^1686260104^77^1^5^431.66^", -- [139]
+				"^2610^8^1686260694^106^1^5^431.71^", -- [140]
+				"^2613^8^1686260973^103^1^5^431.71^", -- [141]
+				"^2612^8^1686261335^113^1^5^431.71^Atrocityskye", -- [142]
+				"^2611^8^1686261657^112^1^5^429.55^Atrocityskye", -- [143]
+				"^2610^8^1686324038^101^1^5^430.84^", -- [144]
+				"^2613^8^1686324339^107^1^5^430.84^", -- [145]
+				"^2612^8^1686324865^84^1^5^430.84^", -- [146]
+				"^2611^8^1686325186^168^1^5^430.84^Yumareach-Tichondrius", -- [147]
+				"^1790^8^1686330106^109^1^5^439.76^", -- [148]
+				"^1791^8^1686330447^135^1^5^439.76^", -- [149]
+				"^1792^8^1686330677^126^1^5^439.76^", -- [150]
+				"^1793^8^1686330897^137^1^5^439.76^", -- [151]
+				"^2610^8^1686672536^72^1^5^440.40^", -- [152]
+				"^2613^8^1686672784^69^1^5^440.40^", -- [153]
+				"^2612^8^1686673173^51^1^5^440.40^", -- [154]
+				"^2611^8^1686673432^66^1^5^440.40^", -- [155]
+				"^2610^8^1686674132^73^1^5^439.05^", -- [156]
+				"^2613^8^1686674416^97^1^5^439.05^", -- [157]
+				"^2612^8^1686674801^84^1^5^439.05^", -- [158]
+				"^2611^8^1686675099^79^1^5^439.05^", -- [159]
+				"^2610^8^1686675693^69^1^5^439.66^", -- [160]
+				"^2613^8^1686675951^84^1^5^439.66^Deyjavu", -- [161]
+				"^2612^8^1686676364^67^1^5^439.66^", -- [162]
+				"^2611^8^1686676638^78^1^5^439.66^", -- [163]
+				"^2610^8^1686677060^70^1^5^438.21^", -- [164]
+				"^2613^8^1686677279^66^1^5^438.21^", -- [165]
+				"^2612^8^1686677625^55^1^5^438.21^", -- [166]
+				"^2611^8^1686677889^74^1^5^438.21^Notnnk-Illidan", -- [167]
+				"^2688^16^1686704064^1^0^20^443.71^", -- [168]
+				"^2688^16^1686704395^263^1^20^441.48^Friddlop", -- [169]
+				"^2682^16^1686704925^8^0^20^441.48^", -- [170]
+				"^2682^16^1686705014^251^1^20^441.30^", -- [171]
+				"^2680^16^1686705511^370^1^20^443.12^Gniyrt", -- [172]
+				"^2687^16^1686706071^0^0^20^443.12^", -- [173]
+				"^2687^16^1686706350^250^1^20^441.34^Tydrapally", -- [174]
+				"^2693^16^1686706773^11^0^20^441.19^", -- [175]
+				"^2693^16^1686706986^263^1^20^442.97^Dudeguyfive", -- [176]
+				"^2689^16^1686707340^0^0^20^442.97^", -- [177]
+				"^2689^16^1686708001^147^0^20^443.79^Flowbzz", -- [178]
+				"^2689^16^1686708221^304^1^20^443.79^Melodrama", -- [179]
+				"^2683^16^1686708702^1^0^20^443.79^", -- [180]
+				"^2683^16^1686709140^336^1^20^444.14^Kadss", -- [181]
+				"^2610^8^1686763560^75^1^5^436.81^", -- [182]
+				"^2613^8^1686763804^79^1^5^436.81^", -- [183]
+				"^2612^8^1686764152^63^1^5^436.81^", -- [184]
+				"^2611^8^1686764445^74^1^5^436.81^", -- [185]
+				"^2610^8^1686779421^78^1^5^432.59^", -- [186]
+				"^2613^8^1686779670^173^1^5^432.59^Atrocityskye", -- [187]
+				"^2612^8^1686780120^55^0^5^432.59^Tydrapally", -- [188]
+				"^2612^8^1686780337^83^1^5^432.59^", -- [189]
+				"^2611^8^1686780660^91^1^5^432.59^", -- [190]
+				"^2610^8^1686870001^79^1^5^434.70^Drineyfive-Illidan", -- [191]
+				"^2613^8^1686870298^106^1^5^434.70^Atrocityskye", -- [192]
+				"^2612^8^1686870701^92^1^5^434.70^Drineyfive-Illidan", -- [193]
+				"^2611^8^1686870999^90^1^5^434.70^", -- [194]
+				"^2610^8^1686882489^95^1^5^434.98^Twistedbenke", -- [195]
+				"^2613^8^1686882791^101^1^5^434.98^", -- [196]
+				"^2612^8^1686883195^106^1^5^434.98^", -- [197]
+				"^2611^8^1686883571^137^1^5^434.98^Bakshang-Garona", -- [198]
+				"^2688^16^1687924105^1^0^20^441.83^", -- [199]
+				"^2688^16^1687924186^213^1^20^442.00^", -- [200]
+				"^2682^16^1687924665^7^0^20^442.01^", -- [201]
+				"^2682^16^1687924775^239^1^20^441.93^", -- [202]
+				"^2680^16^1687925082^0^0^20^0.00^", -- [203]
+				"^2680^16^1687925218^382^1^20^441.86^Kamsahabnida", -- [204]
+				"^2687^16^1687925811^0^0^20^0.00^", -- [205]
+				"^2687^16^1687925943^267^1^20^442.08^Belade", -- [206]
+				"^2693^16^1687926371^6^0^20^442.14^", -- [207]
+				"^2693^16^1687926447^268^1^20^442.14^Kamsahabnida", -- [208]
+				"^2689^16^1687926794^1^0^20^442.15^", -- [209]
+				"^2689^16^1687926934^282^1^20^442.02^", -- [210]
+				"^2685^15^1688008754^392^1^25^434.20^Karzaugieaug", -- [211]
+				"^2688^16^1688951755^212^1^20^441.68^Egyptianwomn", -- [212]
+				"^2682^16^1688952241^7^0^20^441.59^", -- [213]
+				"^2682^16^1688952357^237^1^20^441.66^Gazoo", -- [214]
+				"^2680^16^1688952657^1^0^20^441.72^", -- [215]
+				"^2680^16^1688952752^347^1^20^441.72^", -- [216]
+				"^2687^16^1688953369^0^0^20^441.81^", -- [217]
+				"^2687^16^1688953421^239^1^20^441.81^", -- [218]
+				"^2693^16^1688953853^11^0^20^441.93^", -- [219]
+				"^2693^16^1688953917^261^1^20^441.93^Egyptianwomn", -- [220]
+				"^2688^16^1690338165^0^0^20^445.66^", -- [221]
+				"^2688^16^1690338318^202^1^20^445.45^Summerdaze", -- [222]
+				"^2684^16^1690338704^1^0^20^445.65^", -- [223]
+				"^2684^16^1690338875^135^0^20^445.65^Kadornus", -- [224]
+				"^2684^16^1690339103^431^1^20^445.65^Kadornus", -- [225]
+				"^2685^16^1690339691^1^0^20^445.47^", -- [226]
+				"^2685^16^1690339776^0^0^20^445.55^", -- [227]
+				"^2685^16^1690339949^462^0^20^445.55^Karzastrasza", -- [228]
+				"^2685^16^1690340570^443^1^20^445.55^Flowbs", -- [229]
+				"^2682^16^1690341376^7^0^20^445.67^", -- [230]
+				"^2682^16^1690341478^201^1^20^445.67^", -- [231]
+				"^2680^16^1690341742^0^0^20^445.67^", -- [232]
+				"^2680^16^1690341849^327^1^20^445.84^", -- [233]
+				"^2687^16^1690342355^0^0^20^445.60^", -- [234]
+				"^2687^16^1690342475^228^1^20^445.61^Atrocityskye", -- [235]
+				"^2693^16^1690342880^5^0^20^445.61^", -- [236]
+				"^2693^16^1690342970^232^1^20^445.61^Madbillainy", -- [237]
+				"^2688^16^1692147718^198^1^20^444.76^", -- [238]
+				"^2682^16^1692148173^6^0^20^444.76^", -- [239]
+				"^2682^16^1692148236^187^1^20^444.73^Karzxz", -- [240]
+				"^2680^16^1692148495^0^0^20^444.42^", -- [241]
+				"^2680^16^1692148581^339^1^20^444.57^Caprisunfan", -- [242]
+				"^2687^16^1692149070^0^0^20^444.57^", -- [243]
+				"^2687^16^1692149166^217^1^20^444.78^Twistedm", -- [244]
+				"^2693^16^1692149557^11^0^20^444.78^", -- [245]
+				"^2693^16^1692149622^239^1^20^444.78^Kadss", -- [246]
+				"^2684^16^1692150079^0^0^20^446.94^", -- [247]
+				"^2684^16^1692150162^427^1^20^445.81^Waveweaver", -- [248]
+				"^2685^16^1692150714^0^0^20^445.81^", -- [249]
+				"^2685^16^1692150973^115^0^20^445.82^Hardydidney", -- [250]
+				"^2685^16^1692151207^337^0^20^445.68^Atrocityskye", -- [251]
+				"^2685^16^1692151658^422^1^20^445.68^Justdb", -- [252]
+				"^2688^16^1693357003^0^0^20^445.78^", -- [253]
+				"^2688^16^1693357256^196^1^20^444.09^Twistedm", -- [254]
+				"^2687^16^1693357627^0^0^20^444.09^", -- [255]
+				"^2687^16^1693357667^239^1^20^444.09^Melodrama", -- [256]
+				"^2693^16^1693358070^5^0^20^444.09^", -- [257]
+				"^2693^16^1693358159^253^1^20^444.09^Ladiesnight", -- [258]
+				"^2684^16^1693358613^1^0^20^444.09^", -- [259]
+				"^2684^16^1693358808^383^1^20^444.15^Ladiesnight", -- [260]
+				"^2685^16^1693359312^1^0^20^444.15^", -- [261]
+				"^2685^16^1693359487^244^0^20^444.37^Ladiesnight", -- [262]
+				"^2685^16^1693359867^308^0^20^444.37^Tometv", -- [263]
+				"^2685^16^1693360256^254^0^20^444.37^Melodrama", -- [264]
+				"^2685^16^1693360595^472^1^20^444.37^Atrocityskye", -- [265]
+				"^2688^16^1693962140^12^0^20^444.65^", -- [266]
+				"^2688^16^1693962453^200^1^20^444.82^", -- [267]
+				"^2682^16^1693962926^6^0^20^444.82^", -- [268]
+				"^2682^16^1693962984^181^1^20^444.90^", -- [269]
+				"^2680^16^1693963225^0^0^20^444.75^", -- [270]
+				"^2680^16^1693963309^328^1^20^444.88^Twopalz", -- [271]
+				"^2687^16^1693963789^0^0^20^444.85^", -- [272]
+				"^2687^16^1693963861^209^1^20^445.05^Atrocityskye", -- [273]
+				"^2693^16^1693964210^4^0^20^445.05^", -- [274]
+				"^2693^16^1693964288^260^1^20^445.05^Decen", -- [275]
+				"^2684^16^1693964745^0^0^20^444.95^", -- [276]
+				"^2684^16^1693964861^395^1^20^444.95^Twopalz", -- [277]
+				"^2685^16^1693965383^0^0^20^444.95^", -- [278]
+				"^2685^16^1693965639^254^0^20^445.01^Justdb", -- [279]
+				"^2685^16^1693966005^444^0^20^445.01^Tometv", -- [280]
+				"^2685^16^1693966530^440^1^20^445.01^Trippygodx", -- [281]
+				"^2820^15^1700017867^184^1^30^444.68^Flowbss", -- [282]
+				"^2709^15^1700018115^0^0^30^447.59^", -- [283]
+				"^2709^15^1700018184^240^1^30^447.59^Karzdouyu", -- [284]
+				"^2728^15^1700018651^0^0^30^447.58^", -- [285]
+				"^2728^15^1700018721^237^1^30^447.59^Syzlakk", -- [286]
+				"^2708^15^1700019067^0^0^30^447.61^", -- [287]
+				"^2708^15^1700019185^265^1^30^447.61^Flowbss", -- [288]
+				"^2737^15^1700019685^0^0^30^447.61^", -- [289]
+				"^2737^15^1700019759^192^1^30^447.61^Syzlakk", -- [290]
+				"^2731^15^1700020095^0^0^30^447.61^", -- [291]
+				"^2731^15^1700020141^273^1^30^447.61^Flowbss", -- [292]
+				"^2824^15^1700020532^0^0^30^447.60^", -- [293]
+				"^2824^15^1700020635^329^1^30^447.58^Karzdouyu", -- [294]
+				"^2786^15^1700021181^0^0^30^447.61^", -- [295]
+				"^2786^15^1700021224^434^1^30^447.61^Decenaryz", -- [296]
+				"^2820^14^1700078015^126^1^30^448.74^", -- [297]
+				"^2709^14^1700078189^0^0^30^449.57^", -- [298]
+				"^2709^14^1700078248^175^1^30^449.57^", -- [299]
+				"^2728^14^1700078630^0^0^30^449.27^", -- [300]
+				"^2728^14^1700078692^124^1^30^449.27^", -- [301]
+				"^2708^14^1700078948^0^0^30^449.33^", -- [302]
+				"^2708^14^1700079006^120^1^30^449.35^", -- [303]
+				"^2737^14^1700079347^38^0^30^449.35^Atrocityskye", -- [304]
+				"^2737^14^1700079554^102^1^30^449.35^", -- [305]
+				"^2731^14^1700079772^8^0^30^449.38^", -- [306]
+				"^2731^14^1700079820^154^1^30^449.38^", -- [307]
+				"^2824^14^1700080080^0^0^30^449.38^", -- [308]
+				"^2824^14^1700080146^137^1^30^449.38^", -- [309]
+				"^2786^14^1700080455^224^1^30^449.40^Caprisunfan", -- [310]
+				"^2677^14^1700089683^318^1^30^450.44^Carodh", -- [311]
+				"^2677^15^1700101760^493^1^30^450.49^Zhuntx", -- [312]
+				"^2820^15^1700619657^0^0^30^454.80^", -- [313]
+				"^2820^15^1700619709^165^1^30^454.80^", -- [314]
+				"^2709^15^1700619923^11^0^30^454.80^Zhuntx", -- [315]
+				"^2709^15^1700619997^208^1^30^454.80^", -- [316]
+				"^2728^15^1700620419^0^0^30^454.80^", -- [317]
+				"^2728^15^1700620472^211^1^30^454.80^", -- [318]
+				"^2708^15^1700620875^0^0^30^454.78^", -- [319]
+				"^2708^15^1700620915^226^1^30^454.78^Gazmoon", -- [320]
+				"^2737^15^1700621425^0^0^30^454.78^", -- [321]
+				"^2737^15^1700621465^160^1^30^454.83^Memewizardx", -- [322]
+				"^2731^15^1700621755^0^0^30^454.83^", -- [323]
+				"^2731^15^1700621834^242^1^30^454.88^Syzlakdkay", -- [324]
+				"^2824^15^1700622278^272^1^30^454.74^Karzdouyu", -- [325]
+				"^2786^15^1700622783^391^1^30^454.77^Decenaryz", -- [326]
+				"^2677^15^1700629819^462^1^30^455.48^Gazmoon", -- [327]
 			},
 			["Atrocityw"] = {
 				"^2423^16^1643677317^11^0^20^247.82^", -- [1]
@@ -3170,150 +5005,59 @@ atrocityUI.VMRT["1440p"] = {
 				"^2543^14^1646789758^6^0^11^243.69^", -- [205]
 				"^2543^14^1646789852^424^1^13^240.24^Atlasdk", -- [206]
 			},
-			["Atrocityjune"] = {
-				"^2688^15^1686186154^156^1^25^425.43^Hardyd-Area52", -- [1]
-				"^2682^15^1686186610^6^0^24^425.25^", -- [2]
-				"^2682^15^1686186693^126^1^25^425.65^", -- [3]
-				"^2680^15^1686186945^203^1^25^425.81^Synepm", -- [4]
-				"^2687^15^1686187328^0^0^25^426.05^", -- [5]
-				"^2687^15^1686187386^155^1^24^426.05^", -- [6]
-				"^2693^15^1686187717^6^0^24^428.03^", -- [7]
-				"^2693^15^1686187806^178^1^25^427.99^Gazmoon", -- [8]
-				"^2689^15^1686188066^7^0^25^427.99^", -- [9]
-				"^2689^15^1686188126^154^1^25^428.28^", -- [10]
-				"^2683^15^1686188427^0^0^25^428.36^", -- [11]
-				"^2683^15^1686188490^166^1^25^428.46^", -- [12]
-				"^2684^15^1686188844^0^0^25^429.19^", -- [13]
-				"^2684^15^1686189047^257^1^25^430.03^Hopefulx", -- [14]
-				"^2685^15^1686189431^0^0^24^429.85^", -- [15]
-				"^2685^15^1686189593^262^0^26^429.21^Iamaburden", -- [16]
-				"^2685^15^1686189991^334^1^26^429.30^Iamaburden", -- [17]
-				"^2688^16^1686618104^1^0^20^435.23^", -- [18]
-				"^2688^16^1686618410^298^0^20^433.90^Trippygodx", -- [19]
-				"^2688^16^1686618832^283^1^20^433.90^Xyropyre", -- [20]
-				"^2682^16^1686619460^8^0^20^433.99^", -- [21]
-				"^2682^16^1686619548^300^1^20^434.00^Deyjavu", -- [22]
-				"^2687^16^1686620194^0^0^20^434.32^", -- [23]
-				"^2687^16^1686620310^306^1^20^434.32^Disciplinae", -- [24]
-				"^2688^15^1686693495^13^0^24^434.45^Trapz-Lothar", -- [25]
-				"^2688^15^1686693690^145^1^28^434.81^", -- [26]
-				"^2682^15^1686694103^7^0^28^434.72^", -- [27]
-				"^2682^15^1686694221^97^1^30^434.53^", -- [28]
-				"^2680^15^1686694426^186^1^30^434.24^Flowbie", -- [29]
-				"^2687^15^1686694829^0^0^30^434.24^", -- [30]
-				"^2687^15^1686694914^152^1^29^433.98^Trippygodx", -- [31]
-				"^2693^15^1686695268^6^0^29^433.99^", -- [32]
-				"^2693^15^1686695316^176^1^29^433.99^Icespice-Hyjal", -- [33]
-				"^2689^15^1686695589^0^0^29^433.99^", -- [34]
-				"^2689^15^1686695708^161^1^30^434.03^Marydn-Dragonmaw", -- [35]
-				"^2683^15^1686696050^0^0^30^431.41^", -- [36]
-				"^2683^15^1686696081^174^1^30^434.37^", -- [37]
-				"^2684^15^1686696456^0^0^29^434.81^", -- [38]
-				"^2684^15^1686696593^280^1^30^434.94^Jizzdemondad", -- [39]
-				"^2685^15^1686697019^0^0^28^434.47^", -- [40]
-				"^2685^15^1686697178^371^1^30^435.45^Jizzdemondad", -- [41]
-				"^2610^8^1686698447^73^1^5^435.57^", -- [42]
-				"^2613^8^1686698693^68^1^5^435.57^", -- [43]
-				"^2612^8^1686699122^51^1^5^435.57^", -- [44]
-				"^2611^8^1686699366^92^1^5^435.45^Iamaburden", -- [45]
-				"^2610^8^1686710333^67^1^5^436.91^", -- [46]
-				"^2613^8^1686710547^97^1^5^436.91^Xeserpon-Illidan", -- [47]
-				"^2612^8^1686710905^69^1^5^436.91^", -- [48]
-				"^2611^8^1686711180^72^1^5^436.91^", -- [49]
-				"^2610^8^1686711925^84^1^5^433.04^Lotsofun-Illidan", -- [50]
-				"^2613^8^1686712124^90^1^5^433.04^Xeserpon-Illidan", -- [51]
-				"^2612^8^1686712450^152^1^5^433.04^Atrocityjune", -- [52]
-				"^2611^8^1686712770^100^1^5^433.04^", -- [53]
-				"^2688^16^1686715013^0^0^20^439.85^", -- [54]
-				"^2688^16^1686715211^250^1^20^439.89^Dingding", -- [55]
-				"^2682^16^1686715830^10^0^20^440.02^", -- [56]
-				"^2682^16^1686715891^258^0^20^440.02^Drippygodx", -- [57]
-				"^2682^16^1686716299^226^1^20^439.82^", -- [58]
-				"^2680^16^1686716749^359^1^20^439.91^Kadornus", -- [59]
-				"^2687^16^1686717305^9^0^20^439.91^Twistedm", -- [60]
-				"^2687^16^1686717399^247^1^20^439.91^Dingding", -- [61]
-				"^2693^16^1686717817^13^0^20^439.91^Goosy", -- [62]
-				"^2693^16^1686717903^320^1^20^439.91^Ratdestroyer", -- [63]
-				"^2610^8^1686718789^78^1^5^431.54^Milkbad", -- [64]
-				"^2613^8^1686719066^87^1^5^431.54^", -- [65]
-				"^2612^8^1686719476^102^1^5^431.54^", -- [66]
-				"^2611^8^1686719792^97^1^5^431.54^", -- [67]
-				"^2556^8^1686759668^44^1^5^430.15^", -- [68]
-				"^2555^8^1686759805^46^1^5^0.00^", -- [69]
-				"^2557^8^1686759931^52^1^5^430.15^", -- [70]
-				"^2558^8^1686760117^34^1^5^430.15^", -- [71]
-				"^2559^8^1686760400^61^1^5^430.15^", -- [72]
-				"^2111^8^1686781356^41^1^5^428.98^", -- [73]
-				"^2118^8^1686781515^55^1^5^428.98^", -- [74]
-				"^2112^8^1686781662^58^1^5^428.98^", -- [75]
-				"^2123^8^1686781857^90^1^5^428.98^", -- [76]
-				"^1790^8^1686782499^51^1^5^427.16^", -- [77]
-				"^1791^8^1686782703^48^1^5^427.16^", -- [78]
-				"^1792^8^1686782807^58^1^5^427.16^", -- [79]
-				"^1793^8^1686782948^40^0^5^427.16^Seynt-EmeraldDream", -- [80]
-				"^1793^8^1686783079^59^1^5^427.16^", -- [81]
-				"^2111^8^1686783480^57^1^5^429.21^Rolynd", -- [82]
-				"^2118^8^1686783748^77^1^5^429.21^", -- [83]
-				"^2112^8^1686783908^79^1^5^429.21^", -- [84]
-				"^2123^8^1686784167^95^1^5^429.21^", -- [85]
-				"^2093^8^1686968538^69^1^5^436.07^", -- [86]
-				"^2094^8^1686968752^90^1^5^436.07^", -- [87]
-				"^2095^8^1686969162^59^1^5^436.07^", -- [88]
-				"^2096^8^1686969344^95^1^5^436.07^", -- [89]
-				"^2610^8^1687036548^73^1^5^436.89^", -- [90]
-				"^2613^8^1687036818^89^1^5^436.89^", -- [91]
-				"^2612^8^1687037186^98^1^5^436.89^Iamaburden", -- [92]
-				"^2611^8^1687037556^76^1^5^436.89^", -- [93]
-				"^2610^8^1687038126^74^1^5^436.89^", -- [94]
-				"^2613^8^1687038431^76^1^5^436.89^", -- [95]
-				"^2612^8^1687038809^97^1^5^436.89^Stinnkypoopy-Illidan", -- [96]
-				"^2611^8^1687039167^69^1^5^436.89^", -- [97]
-				"^2610^8^1687039677^72^1^5^436.99^", -- [98]
-				"^2613^8^1687039944^63^1^5^436.99^", -- [99]
-				"^2612^8^1687040353^71^1^5^436.99^", -- [100]
-				"^2611^8^1687040674^71^1^5^438.20^", -- [101]
-				"^2688^16^1687309301^1^0^20^443.19^", -- [102]
-				"^2688^16^1687309391^212^1^20^443.19^Twopalz", -- [103]
-				"^2682^16^1687309887^7^0^20^443.20^", -- [104]
-				"^2682^16^1687309970^239^1^20^442.89^Triplew", -- [105]
-				"^2680^16^1687310294^1^0^20^443.30^", -- [106]
-				"^2680^16^1687310437^356^1^20^443.44^Dingding", -- [107]
-				"^2687^16^1687310960^0^0^20^443.44^", -- [108]
-				"^2687^16^1687311082^251^1^20^443.10^Syzlakdeekay", -- [109]
-				"^2693^16^1687311510^11^0^20^443.26^", -- [110]
-				"^2693^16^1687311602^268^1^20^443.26^Bumpercars", -- [111]
-				"^2689^16^1687311968^0^0^20^443.38^", -- [112]
-				"^2689^16^1687312184^175^0^20^443.95^Zhuntx", -- [113]
-				"^2689^16^1687312435^237^0^20^443.95^Shadowmastr", -- [114]
-				"^2689^16^1687312747^113^0^20^443.95^Zhuntx", -- [115]
-				"^2689^16^1687312891^1^0^20^443.95^Xyronicz", -- [116]
-				"^2689^16^1687312946^305^0^20^443.94^Tryingg", -- [117]
-				"^2689^16^1687313341^159^0^20^443.95^Triplew", -- [118]
-				"^2689^16^1687313581^277^1^20^443.95^Dcn", -- [119]
-				"^2683^16^1687314068^0^0^20^444.51^", -- [120]
-				"^2683^16^1687314344^311^1^20^444.51^Kadss", -- [121]
-				"^1043^8^1687998130^59^1^5^439.54^", -- [122]
-				"^1041^8^1687998554^97^1^5^439.54^", -- [123]
-				"^1042^8^1687998951^85^1^5^440.41^", -- [124]
-				"^2688^16^1689040176^213^1^20^442.22^Dbpriest", -- [125]
-				"^2682^16^1689040681^6^0^20^442.22^", -- [126]
-				"^2682^16^1689040743^214^1^20^442.22^", -- [127]
-				"^2680^16^1689041025^0^0^20^442.22^", -- [128]
-				"^2680^16^1689041113^256^0^20^442.22^Kadv", -- [129]
-				"^2680^16^1689041447^350^1^20^442.22^Jt", -- [130]
-				"^2687^16^1689041993^1^0^20^442.22^", -- [131]
-				"^2687^16^1689042074^255^1^20^442.27^Caprisunfan", -- [132]
-				"^2693^16^1689042514^6^0^20^442.27^", -- [133]
-				"^2693^16^1689042617^269^1^20^442.27^Flowbee", -- [134]
-				"^2688^16^1689123591^203^1^20^444.47^", -- [135]
-				"^2682^16^1689124087^7^0^20^445.30^", -- [136]
-				"^2682^16^1689124176^202^1^20^445.09^Tryingg", -- [137]
-				"^2680^16^1689124435^1^0^20^445.09^", -- [138]
-				"^2680^16^1689124535^332^1^20^445.01^Jacobw", -- [139]
-				"^2687^16^1689125066^0^0^20^445.02^", -- [140]
-				"^2687^16^1689125178^229^1^20^444.19^Dosomething", -- [141]
-				"^2693^16^1689125580^11^0^20^444.42^", -- [142]
-				"^2693^16^1689125695^245^1^20^444.42^Twistedbenke", -- [143]
+			["Atrocitysnow"] = {
+				"^2820^15^1700024663^189^1^30^447.17^Bradew", -- [1]
+				"^2709^15^1700024929^0^0^30^447.22^", -- [2]
+				"^2709^15^1700024971^232^1^30^447.23^Winternights", -- [3]
+				"^2728^15^1700025419^2^0^30^447.17^", -- [4]
+				"^2728^15^1700025471^242^1^30^447.16^Tryingc", -- [5]
+				"^2708^15^1700025826^0^0^30^447.25^", -- [6]
+				"^2708^15^1700025913^268^1^30^447.25^Karzk", -- [7]
+				"^2737^15^1700026460^240^1^30^447.25^Carodk", -- [8]
+				"^2731^15^1700026821^0^0^30^447.25^", -- [9]
+				"^2731^15^1700026871^188^0^30^447.25^Weewev", -- [10]
+				"^2731^15^1700027129^305^1^30^447.25^Iloveherdude", -- [11]
+				"^2824^15^1700027541^0^0^29^447.24^", -- [12]
+				"^2824^15^1700027648^330^0^30^447.25^Atrocitysnow", -- [13]
+				"^2824^15^1700028070^369^0^30^447.25^Iloveherdude", -- [14]
+				"^2824^15^1700028895^214^0^30^446.57^Zekked", -- [15]
+				"^2824^15^1700029187^305^1^30^446.57^Iloveherdude", -- [16]
+				"^2786^15^1700029689^492^0^30^446.52^Iloveherdude", -- [17]
+				"^2786^15^1700030249^113^0^30^446.52^Zekked", -- [18]
+				"^2786^15^1700030440^96^0^30^446.52^Tydrathree", -- [19]
+				"^2786^15^1700030602^543^1^30^446.52^Iloveherdude", -- [20]
+				"^2820^14^1700081170^130^1^30^448.67^", -- [21]
+				"^2709^14^1700081345^0^0^30^448.71^", -- [22]
+				"^2709^14^1700081401^176^1^30^448.76^", -- [23]
+				"^2728^14^1700081799^0^0^30^448.56^", -- [24]
+				"^2728^14^1700081845^134^1^30^448.56^Syzlakdk", -- [25]
+				"^2708^14^1700082082^0^0^30^448.79^", -- [26]
+				"^2708^14^1700082167^120^1^30^448.79^", -- [27]
+				"^2737^14^1700082506^0^0^30^448.79^", -- [28]
+				"^2737^14^1700082588^105^1^30^448.79^", -- [29]
+				"^2731^14^1700082814^0^0^30^448.79^", -- [30]
+				"^2731^14^1700082857^160^1^30^448.79^Melodrama", -- [31]
+				"^2824^14^1700083112^6^0^30^448.79^Karzk", -- [32]
+				"^2824^14^1700083224^143^1^30^448.79^", -- [33]
+				"^2786^14^1700083590^224^1^30^448.84^", -- [34]
+				"^2677^15^1700102713^506^1^30^449.24^Aestie", -- [35]
+				"^2820^15^1700623770^166^1^30^453.19^", -- [36]
+				"^2709^15^1700623985^0^0^30^453.19^", -- [37]
+				"^2709^15^1700624025^233^1^30^453.27^Weewev", -- [38]
+				"^2728^15^1700624454^0^0^29^453.11^", -- [39]
+				"^2728^15^1700624527^260^1^30^453.16^Caprisunfan", -- [40]
+				"^2708^15^1700624902^0^0^29^453.16^", -- [41]
+				"^2708^15^1700624957^244^1^30^453.16^Gazoo", -- [42]
+				"^2737^15^1700625492^0^0^30^453.16^", -- [43]
+				"^2737^15^1700625558^162^1^30^453.16^Aestie", -- [44]
+				"^2731^15^1700625858^0^0^30^453.16^", -- [45]
+				"^2731^15^1700625916^264^1^30^453.16^Atrocitysnow", -- [46]
+				"^2824^15^1700626290^0^0^30^453.16^", -- [47]
+				"^2824^15^1700626496^287^1^30^453.23^Aestie", -- [48]
+				"^2786^15^1700626958^385^1^30^453.37^Xybeaned", -- [49]
+				"^2677^15^1700628347^77^0^30^453.41^Bradew", -- [50]
+				"^2677^15^1700628550^330^0^30^453.41^Milkbad", -- [51]
+				"^2677^15^1700628961^491^1^30^453.47^Tryingg", -- [52]
 			},
 			["Atrocitywar"] = {
 				"^2401^8^1641852051^139^1^5^233.00^Goopwar", -- [1]
@@ -5698,227 +7442,321 @@ atrocityUI.VMRT["1440p"] = {
 				"^2422^16^1669159049^238^1^20^290.40^Telegonlyfan", -- [2380]
 				"^2435^16^1669159697^501^1^20^290.71^Zultra-Tichondrius", -- [2381]
 			},
-			["Atrocityskye"] = {
-				"^2570^8^1684798266^157^1^5^425.88^Atrocityskye", -- [1]
-				"^2568^8^1684798841^122^1^5^425.88^", -- [2]
-				"^2567^8^1684799091^97^1^5^425.88^Magnemight-Area52", -- [3]
-				"^2569^8^1684799480^189^0^5^425.88^Atrocityskye", -- [4]
-				"^2569^8^1684799777^14^0^5^425.88^Afrancesado-Ragnaros", -- [5]
-				"^2569^8^1684799845^164^1^5^425.88^", -- [6]
-				"^2111^8^1684859038^153^1^5^420.60^Carow", -- [7]
-				"^2118^8^1684859482^188^1^5^420.60^Mestupid-Illidan", -- [8]
-				"^2112^8^1684859792^133^1^5^420.60^", -- [9]
-				"^2123^8^1684860155^192^1^5^420.60^", -- [10]
-				"^2688^15^1684895476^1^0^27^422.42^", -- [11]
-				"^2688^15^1684895548^151^1^29^422.85^Madbillainy", -- [12]
-				"^2682^15^1684895987^6^0^30^423.16^", -- [13]
-				"^2682^15^1684896046^115^1^30^423.16^", -- [14]
-				"^2680^15^1684896216^0^0^30^423.16^", -- [15]
-				"^2680^15^1684896274^216^1^30^423.16^Sworc-Illidan", -- [16]
-				"^2687^15^1684896710^0^0^30^423.22^", -- [17]
-				"^2687^15^1684896756^163^1^30^423.22^Jetk-Illidan", -- [18]
-				"^2693^15^1684897099^0^0^30^423.22^", -- [19]
-				"^2693^15^1684897139^191^1^30^423.28^Twistedx", -- [20]
-				"^2689^15^1684897404^4^0^30^423.28^", -- [21]
-				"^2689^15^1684897441^6^0^30^423.28^", -- [22]
-				"^2689^15^1684897479^5^0^30^423.31^", -- [23]
-				"^2689^15^1684897533^182^1^30^423.49^Iamaburden", -- [24]
-				"^2683^15^1684897892^0^0^30^423.59^", -- [25]
-				"^2683^15^1684897945^186^1^30^423.59^Disciplinae", -- [26]
-				"^2684^15^1684898318^0^0^29^423.67^", -- [27]
-				"^2684^15^1684898389^0^0^30^423.67^", -- [28]
-				"^2684^15^1684898438^312^1^30^423.67^Winternights", -- [29]
-				"^2685^15^1684898877^0^0^30^423.81^", -- [30]
-				"^2685^15^1684898993^279^0^30^423.85^Xybeaned", -- [31]
-				"^2685^15^1684899344^400^1^30^423.85^Deydorra", -- [32]
-				"^1043^8^1684969694^116^1^5^425.31^Atrocityskye", -- [33]
-				"^1041^8^1684970140^137^1^5^425.31^Atrocityskye", -- [34]
-				"^1042^8^1684970560^154^1^5^425.31^Tryang", -- [35]
-				"^2111^8^1685111020^94^1^5^420.50^", -- [36]
-				"^2118^8^1685111330^116^0^5^420.50^Zekkelock", -- [37]
-				"^2118^8^1685111517^168^1^5^420.50^", -- [38]
-				"^2112^8^1685111806^128^1^5^420.50^", -- [39]
-				"^2123^8^1685112157^208^1^5^420.50^Zekkelock", -- [40]
-				"^1790^8^1685132384^139^1^5^427.52^Atrocityskye", -- [41]
-				"^1791^8^1685132817^205^1^5^427.52^Atrocityskye", -- [42]
-				"^1792^8^1685133150^133^1^5^427.52^", -- [43]
-				"^1793^8^1685133423^183^1^5^427.52^Twistedw", -- [44]
-				"^2688^15^1685480390^0^0^24^428.15^", -- [45]
-				"^2688^15^1685480605^0^0^29^428.82^", -- [46]
-				"^2688^15^1685480708^152^1^30^429.03^Mb", -- [47]
-				"^2682^15^1685481171^8^0^30^429.03^", -- [48]
-				"^2682^15^1685481230^114^1^30^429.03^", -- [49]
-				"^2680^15^1685481405^0^0^30^429.08^", -- [50]
-				"^2680^15^1685481442^210^1^30^429.08^Icespice-Hyjal", -- [51]
-				"^2687^15^1685481887^0^0^29^429.26^", -- [52]
-				"^2687^15^1685481961^164^1^30^429.27^Icespice-Hyjal", -- [53]
-				"^2693^15^1685482334^0^0^30^429.27^", -- [54]
-				"^2693^15^1685482372^183^1^30^429.27^", -- [55]
-				"^2689^15^1685482666^0^0^30^429.27^", -- [56]
-				"^2689^15^1685482703^184^1^30^429.45^Shoxy-Illidan", -- [57]
-				"^2683^15^1685483066^0^0^30^429.45^", -- [58]
-				"^2683^15^1685483101^185^1^30^429.45^", -- [59]
-				"^2684^15^1685483499^0^0^30^429.50^", -- [60]
-				"^2684^15^1685483538^278^1^30^429.55^Notnnk-Illidan", -- [61]
-				"^2685^15^1685483975^0^0^29^429.81^", -- [62]
-				"^2685^15^1685484061^195^0^30^429.81^Marydn-Dragonmaw", -- [63]
-				"^2685^15^1685484325^322^0^30^429.83^Jetslock", -- [64]
-				"^2685^15^1685484769^359^1^30^429.95^Icespice-Hyjal", -- [65]
-				"^2570^8^1685540292^118^1^5^431.96^Bioarbor", -- [66]
-				"^2568^8^1685540944^114^1^5^431.96^", -- [67]
-				"^2567^8^1685541201^84^1^5^431.96^", -- [68]
-				"^2569^8^1685541591^91^1^5^431.96^Bioarbor", -- [69]
-				"^2093^8^1685566544^106^1^5^428.74^", -- [70]
-				"^2094^8^1685566918^120^1^5^428.74^", -- [71]
-				"^2095^8^1685567339^105^1^5^428.74^Gazoo", -- [72]
-				"^2096^8^1685567585^104^1^5^428.74^", -- [73]
-				"^2610^8^1685568554^68^1^5^430.60^Tryingg", -- [74]
-				"^2613^8^1685568850^91^1^5^432.08^", -- [75]
-				"^2612^8^1685569279^98^1^5^432.08^", -- [76]
-				"^2611^8^1685569620^90^1^5^432.08^", -- [77]
-				"^1790^8^1685570610^73^1^5^429.93^", -- [78]
-				"^1791^8^1685570964^114^1^5^429.93^", -- [79]
-				"^1792^8^1685571183^76^1^5^429.93^", -- [80]
-				"^1793^8^1685571440^99^1^5^429.93^", -- [81]
-				"^2688^16^1685584410^0^0^20^435.24^", -- [82]
-				"^2688^16^1685584505^294^1^20^435.24^Bumpercars", -- [83]
-				"^2682^16^1685585116^7^0^20^435.25^", -- [84]
-				"^2682^16^1685585364^120^0^20^435.33^Waveweaver", -- [85]
-				"^2682^16^1685585558^270^1^20^435.62^Bumpercars", -- [86]
-				"^2687^16^1685586054^0^0^20^435.58^", -- [87]
-				"^2687^16^1685586324^348^1^20^435.52^Belade", -- [88]
-				"^2693^16^1685586904^11^0^20^435.39^", -- [89]
-				"^2093^8^1686084714^129^1^5^436.24^Drcornman-Illidan", -- [90]
-				"^2094^8^1686085060^161^1^5^436.24^Atrocityskye", -- [91]
-				"^2095^8^1686085546^118^1^5^436.24^", -- [92]
-				"^2096^8^1686085811^155^1^5^436.24^", -- [93]
-				"^2093^8^1686086495^119^1^5^438.23^Cddos-Illidan", -- [94]
-				"^2094^8^1686086745^174^1^5^438.23^", -- [95]
-				"^2095^8^1686087314^112^1^5^438.23^Comedragon-Area52", -- [96]
-				"^2096^8^1686087552^160^1^5^438.23^", -- [97]
-				"^2688^15^1686088930^1^0^16^433.39^", -- [98]
-				"^2688^15^1686089310^151^1^21^433.84^Deyjavu", -- [99]
-				"^2682^15^1686089766^7^0^20^433.47^", -- [100]
-				"^2682^15^1686089895^133^1^21^433.33^Nasdaqgriddy", -- [101]
-				"^2680^15^1686090137^205^1^21^433.36^Trippygodx", -- [102]
-				"^2687^15^1686090545^0^0^21^433.40^", -- [103]
-				"^2687^15^1686090591^174^1^21^433.40^Bulgesniffer-Zul'jin", -- [104]
-				"^2693^15^1686090962^6^0^21^432.74^", -- [105]
-				"^2693^15^1686091012^182^1^21^433.00^", -- [106]
-				"^2689^15^1686091271^0^0^20^433.40^", -- [107]
-				"^2689^15^1686091418^167^1^24^433.29^Beavxd-Area52", -- [108]
-				"^2683^15^1686091752^0^0^24^433.37^", -- [109]
-				"^2683^15^1686091795^177^1^24^433.49^", -- [110]
-				"^2684^15^1686092155^0^0^24^433.49^", -- [111]
-				"^2684^15^1686092333^258^1^25^434.36^Bulgesniffer-Zul'jin", -- [112]
-				"^2685^15^1686092712^0^0^21^434.32^", -- [113]
-				"^2685^15^1686092924^388^1^26^434.47^Kimsamsung", -- [114]
-				"^2615^8^1686094532^173^1^5^434.21^ßëãstmøðé-Illidan", -- [115]
-				"^2616^8^1686094972^305^0^5^434.21^Jt", -- [116]
-				"^2616^8^1686095362^153^1^5^434.21^Jt", -- [117]
-				"^2617^8^1686095731^146^1^5^434.21^Atrocityskye", -- [118]
-				"^2618^8^1686096179^63^0^5^434.21^Jt", -- [119]
-				"^2618^8^1686096352^29^0^5^434.38^Atrocityskye", -- [120]
-				"^2618^8^1686096480^266^1^5^434.38^Jt", -- [121]
-				"^1043^8^1686101420^122^1^5^432.19^Atrocityskye", -- [122]
-				"^1041^8^1686101924^159^1^5^432.19^Goopdroop-Illidan", -- [123]
-				"^1042^8^1686102448^68^0^5^432.19^Atrocityskye", -- [124]
-				"^1042^8^1686102559^172^1^5^432.19^", -- [125]
-				"^2688^16^1686111535^0^0^20^438.11^", -- [126]
-				"^2688^16^1686111664^14^0^20^437.93^Zoopalz", -- [127]
-				"^2688^16^1686111785^259^1^20^437.93^Twistedm", -- [128]
-				"^2682^16^1686112316^7^0^20^438.03^", -- [129]
-				"^2682^16^1686112416^237^1^20^438.03^Gazoo", -- [130]
-				"^2687^16^1686112864^0^0^20^437.93^", -- [131]
-				"^2687^16^1686112993^301^1^20^438.03^Atrocityskye", -- [132]
-				"^2693^16^1686113481^6^0^20^438.45^", -- [133]
-				"^2693^16^1686113599^173^0^20^438.46^Kadornus", -- [134]
-				"^2693^16^1686113850^323^1^20^438.75^Zoopalz", -- [135]
-				"^2610^8^1686259053^109^1^5^431.66^", -- [136]
-				"^2613^8^1686259339^117^1^5^431.66^Nathansmith-Illidan", -- [137]
-				"^2612^8^1686259777^100^1^5^431.66^Nathansmith-Illidan", -- [138]
-				"^2611^8^1686260104^77^1^5^431.66^", -- [139]
-				"^2610^8^1686260694^106^1^5^431.71^", -- [140]
-				"^2613^8^1686260973^103^1^5^431.71^", -- [141]
-				"^2612^8^1686261335^113^1^5^431.71^Atrocityskye", -- [142]
-				"^2611^8^1686261657^112^1^5^429.55^Atrocityskye", -- [143]
-				"^2610^8^1686324038^101^1^5^430.84^", -- [144]
-				"^2613^8^1686324339^107^1^5^430.84^", -- [145]
-				"^2612^8^1686324865^84^1^5^430.84^", -- [146]
-				"^2611^8^1686325186^168^1^5^430.84^Yumareach-Tichondrius", -- [147]
-				"^1790^8^1686330106^109^1^5^439.76^", -- [148]
-				"^1791^8^1686330447^135^1^5^439.76^", -- [149]
-				"^1792^8^1686330677^126^1^5^439.76^", -- [150]
-				"^1793^8^1686330897^137^1^5^439.76^", -- [151]
-				"^2610^8^1686672536^72^1^5^440.40^", -- [152]
-				"^2613^8^1686672784^69^1^5^440.40^", -- [153]
-				"^2612^8^1686673173^51^1^5^440.40^", -- [154]
-				"^2611^8^1686673432^66^1^5^440.40^", -- [155]
-				"^2610^8^1686674132^73^1^5^439.05^", -- [156]
-				"^2613^8^1686674416^97^1^5^439.05^", -- [157]
-				"^2612^8^1686674801^84^1^5^439.05^", -- [158]
-				"^2611^8^1686675099^79^1^5^439.05^", -- [159]
-				"^2610^8^1686675693^69^1^5^439.66^", -- [160]
-				"^2613^8^1686675951^84^1^5^439.66^Deyjavu", -- [161]
-				"^2612^8^1686676364^67^1^5^439.66^", -- [162]
-				"^2611^8^1686676638^78^1^5^439.66^", -- [163]
-				"^2610^8^1686677060^70^1^5^438.21^", -- [164]
-				"^2613^8^1686677279^66^1^5^438.21^", -- [165]
-				"^2612^8^1686677625^55^1^5^438.21^", -- [166]
-				"^2611^8^1686677889^74^1^5^438.21^Notnnk-Illidan", -- [167]
-				"^2688^16^1686704064^1^0^20^443.71^", -- [168]
-				"^2688^16^1686704395^263^1^20^441.48^Friddlop", -- [169]
-				"^2682^16^1686704925^8^0^20^441.48^", -- [170]
-				"^2682^16^1686705014^251^1^20^441.30^", -- [171]
-				"^2680^16^1686705511^370^1^20^443.12^Gniyrt", -- [172]
-				"^2687^16^1686706071^0^0^20^443.12^", -- [173]
-				"^2687^16^1686706350^250^1^20^441.34^Tydrapally", -- [174]
-				"^2693^16^1686706773^11^0^20^441.19^", -- [175]
-				"^2693^16^1686706986^263^1^20^442.97^Dudeguyfive", -- [176]
-				"^2689^16^1686707340^0^0^20^442.97^", -- [177]
-				"^2689^16^1686708001^147^0^20^443.79^Flowbzz", -- [178]
-				"^2689^16^1686708221^304^1^20^443.79^Melodrama", -- [179]
-				"^2683^16^1686708702^1^0^20^443.79^", -- [180]
-				"^2683^16^1686709140^336^1^20^444.14^Kadss", -- [181]
-				"^2610^8^1686763560^75^1^5^436.81^", -- [182]
-				"^2613^8^1686763804^79^1^5^436.81^", -- [183]
-				"^2612^8^1686764152^63^1^5^436.81^", -- [184]
-				"^2611^8^1686764445^74^1^5^436.81^", -- [185]
-				"^2610^8^1686779421^78^1^5^432.59^", -- [186]
-				"^2613^8^1686779670^173^1^5^432.59^Atrocityskye", -- [187]
-				"^2612^8^1686780120^55^0^5^432.59^Tydrapally", -- [188]
-				"^2612^8^1686780337^83^1^5^432.59^", -- [189]
-				"^2611^8^1686780660^91^1^5^432.59^", -- [190]
-				"^2610^8^1686870001^79^1^5^434.70^Drineyfive-Illidan", -- [191]
-				"^2613^8^1686870298^106^1^5^434.70^Atrocityskye", -- [192]
-				"^2612^8^1686870701^92^1^5^434.70^Drineyfive-Illidan", -- [193]
-				"^2611^8^1686870999^90^1^5^434.70^", -- [194]
-				"^2610^8^1686882489^95^1^5^434.98^Twistedbenke", -- [195]
-				"^2613^8^1686882791^101^1^5^434.98^", -- [196]
-				"^2612^8^1686883195^106^1^5^434.98^", -- [197]
-				"^2611^8^1686883571^137^1^5^434.98^Bakshang-Garona", -- [198]
-				"^2688^16^1687924105^1^0^20^441.83^", -- [199]
-				"^2688^16^1687924186^213^1^20^442.00^", -- [200]
-				"^2682^16^1687924665^7^0^20^442.01^", -- [201]
-				"^2682^16^1687924775^239^1^20^441.93^", -- [202]
-				"^2680^16^1687925082^0^0^20^0.00^", -- [203]
-				"^2680^16^1687925218^382^1^20^441.86^Kamsahabnida", -- [204]
-				"^2687^16^1687925811^0^0^20^0.00^", -- [205]
-				"^2687^16^1687925943^267^1^20^442.08^Belade", -- [206]
-				"^2693^16^1687926371^6^0^20^442.14^", -- [207]
-				"^2693^16^1687926447^268^1^20^442.14^Kamsahabnida", -- [208]
-				"^2689^16^1687926794^1^0^20^442.15^", -- [209]
-				"^2689^16^1687926934^282^1^20^442.02^", -- [210]
-				"^2685^15^1688008754^392^1^25^434.20^Karzaugieaug", -- [211]
-				"^2688^16^1688951755^212^1^20^441.68^Egyptianwomn", -- [212]
-				"^2682^16^1688952241^7^0^20^441.59^", -- [213]
-				"^2682^16^1688952357^237^1^20^441.66^Gazoo", -- [214]
-				"^2680^16^1688952657^1^0^20^441.72^", -- [215]
-				"^2680^16^1688952752^347^1^20^441.72^", -- [216]
-				"^2687^16^1688953369^0^0^20^441.81^", -- [217]
-				"^2687^16^1688953421^239^1^20^441.81^", -- [218]
-				"^2693^16^1688953853^11^0^20^441.93^", -- [219]
-				"^2693^16^1688953917^261^1^20^441.93^Egyptianwomn", -- [220]
+			["Atrocityjune"] = {
+				"^2688^15^1686186154^156^1^25^425.43^Hardyd-Area52", -- [1]
+				"^2682^15^1686186610^6^0^24^425.25^", -- [2]
+				"^2682^15^1686186693^126^1^25^425.65^", -- [3]
+				"^2680^15^1686186945^203^1^25^425.81^Synepm", -- [4]
+				"^2687^15^1686187328^0^0^25^426.05^", -- [5]
+				"^2687^15^1686187386^155^1^24^426.05^", -- [6]
+				"^2693^15^1686187717^6^0^24^428.03^", -- [7]
+				"^2693^15^1686187806^178^1^25^427.99^Gazmoon", -- [8]
+				"^2689^15^1686188066^7^0^25^427.99^", -- [9]
+				"^2689^15^1686188126^154^1^25^428.28^", -- [10]
+				"^2683^15^1686188427^0^0^25^428.36^", -- [11]
+				"^2683^15^1686188490^166^1^25^428.46^", -- [12]
+				"^2684^15^1686188844^0^0^25^429.19^", -- [13]
+				"^2684^15^1686189047^257^1^25^430.03^Hopefulx", -- [14]
+				"^2685^15^1686189431^0^0^24^429.85^", -- [15]
+				"^2685^15^1686189593^262^0^26^429.21^Iamaburden", -- [16]
+				"^2685^15^1686189991^334^1^26^429.30^Iamaburden", -- [17]
+				"^2688^16^1686618104^1^0^20^435.23^", -- [18]
+				"^2688^16^1686618410^298^0^20^433.90^Trippygodx", -- [19]
+				"^2688^16^1686618832^283^1^20^433.90^Xyropyre", -- [20]
+				"^2682^16^1686619460^8^0^20^433.99^", -- [21]
+				"^2682^16^1686619548^300^1^20^434.00^Deyjavu", -- [22]
+				"^2687^16^1686620194^0^0^20^434.32^", -- [23]
+				"^2687^16^1686620310^306^1^20^434.32^Disciplinae", -- [24]
+				"^2688^15^1686693495^13^0^24^434.45^Trapz-Lothar", -- [25]
+				"^2688^15^1686693690^145^1^28^434.81^", -- [26]
+				"^2682^15^1686694103^7^0^28^434.72^", -- [27]
+				"^2682^15^1686694221^97^1^30^434.53^", -- [28]
+				"^2680^15^1686694426^186^1^30^434.24^Flowbie", -- [29]
+				"^2687^15^1686694829^0^0^30^434.24^", -- [30]
+				"^2687^15^1686694914^152^1^29^433.98^Trippygodx", -- [31]
+				"^2693^15^1686695268^6^0^29^433.99^", -- [32]
+				"^2693^15^1686695316^176^1^29^433.99^Icespice-Hyjal", -- [33]
+				"^2689^15^1686695589^0^0^29^433.99^", -- [34]
+				"^2689^15^1686695708^161^1^30^434.03^Marydn-Dragonmaw", -- [35]
+				"^2683^15^1686696050^0^0^30^431.41^", -- [36]
+				"^2683^15^1686696081^174^1^30^434.37^", -- [37]
+				"^2684^15^1686696456^0^0^29^434.81^", -- [38]
+				"^2684^15^1686696593^280^1^30^434.94^Jizzdemondad", -- [39]
+				"^2685^15^1686697019^0^0^28^434.47^", -- [40]
+				"^2685^15^1686697178^371^1^30^435.45^Jizzdemondad", -- [41]
+				"^2610^8^1686698447^73^1^5^435.57^", -- [42]
+				"^2613^8^1686698693^68^1^5^435.57^", -- [43]
+				"^2612^8^1686699122^51^1^5^435.57^", -- [44]
+				"^2611^8^1686699366^92^1^5^435.45^Iamaburden", -- [45]
+				"^2610^8^1686710333^67^1^5^436.91^", -- [46]
+				"^2613^8^1686710547^97^1^5^436.91^Xeserpon-Illidan", -- [47]
+				"^2612^8^1686710905^69^1^5^436.91^", -- [48]
+				"^2611^8^1686711180^72^1^5^436.91^", -- [49]
+				"^2610^8^1686711925^84^1^5^433.04^Lotsofun-Illidan", -- [50]
+				"^2613^8^1686712124^90^1^5^433.04^Xeserpon-Illidan", -- [51]
+				"^2612^8^1686712450^152^1^5^433.04^Atrocityjune", -- [52]
+				"^2611^8^1686712770^100^1^5^433.04^", -- [53]
+				"^2688^16^1686715013^0^0^20^439.85^", -- [54]
+				"^2688^16^1686715211^250^1^20^439.89^Dingding", -- [55]
+				"^2682^16^1686715830^10^0^20^440.02^", -- [56]
+				"^2682^16^1686715891^258^0^20^440.02^Drippygodx", -- [57]
+				"^2682^16^1686716299^226^1^20^439.82^", -- [58]
+				"^2680^16^1686716749^359^1^20^439.91^Kadornus", -- [59]
+				"^2687^16^1686717305^9^0^20^439.91^Twistedm", -- [60]
+				"^2687^16^1686717399^247^1^20^439.91^Dingding", -- [61]
+				"^2693^16^1686717817^13^0^20^439.91^Goosy", -- [62]
+				"^2693^16^1686717903^320^1^20^439.91^Ratdestroyer", -- [63]
+				"^2610^8^1686718789^78^1^5^431.54^Milkbad", -- [64]
+				"^2613^8^1686719066^87^1^5^431.54^", -- [65]
+				"^2612^8^1686719476^102^1^5^431.54^", -- [66]
+				"^2611^8^1686719792^97^1^5^431.54^", -- [67]
+				"^2556^8^1686759668^44^1^5^430.15^", -- [68]
+				"^2555^8^1686759805^46^1^5^0.00^", -- [69]
+				"^2557^8^1686759931^52^1^5^430.15^", -- [70]
+				"^2558^8^1686760117^34^1^5^430.15^", -- [71]
+				"^2559^8^1686760400^61^1^5^430.15^", -- [72]
+				"^2111^8^1686781356^41^1^5^428.98^", -- [73]
+				"^2118^8^1686781515^55^1^5^428.98^", -- [74]
+				"^2112^8^1686781662^58^1^5^428.98^", -- [75]
+				"^2123^8^1686781857^90^1^5^428.98^", -- [76]
+				"^1790^8^1686782499^51^1^5^427.16^", -- [77]
+				"^1791^8^1686782703^48^1^5^427.16^", -- [78]
+				"^1792^8^1686782807^58^1^5^427.16^", -- [79]
+				"^1793^8^1686782948^40^0^5^427.16^Seynt-EmeraldDream", -- [80]
+				"^1793^8^1686783079^59^1^5^427.16^", -- [81]
+				"^2111^8^1686783480^57^1^5^429.21^Rolynd", -- [82]
+				"^2118^8^1686783748^77^1^5^429.21^", -- [83]
+				"^2112^8^1686783908^79^1^5^429.21^", -- [84]
+				"^2123^8^1686784167^95^1^5^429.21^", -- [85]
+				"^2093^8^1686968538^69^1^5^436.07^", -- [86]
+				"^2094^8^1686968752^90^1^5^436.07^", -- [87]
+				"^2095^8^1686969162^59^1^5^436.07^", -- [88]
+				"^2096^8^1686969344^95^1^5^436.07^", -- [89]
+				"^2610^8^1687036548^73^1^5^436.89^", -- [90]
+				"^2613^8^1687036818^89^1^5^436.89^", -- [91]
+				"^2612^8^1687037186^98^1^5^436.89^Iamaburden", -- [92]
+				"^2611^8^1687037556^76^1^5^436.89^", -- [93]
+				"^2610^8^1687038126^74^1^5^436.89^", -- [94]
+				"^2613^8^1687038431^76^1^5^436.89^", -- [95]
+				"^2612^8^1687038809^97^1^5^436.89^Stinnkypoopy-Illidan", -- [96]
+				"^2611^8^1687039167^69^1^5^436.89^", -- [97]
+				"^2610^8^1687039677^72^1^5^436.99^", -- [98]
+				"^2613^8^1687039944^63^1^5^436.99^", -- [99]
+				"^2612^8^1687040353^71^1^5^436.99^", -- [100]
+				"^2611^8^1687040674^71^1^5^438.20^", -- [101]
+				"^2688^16^1687309301^1^0^20^443.19^", -- [102]
+				"^2688^16^1687309391^212^1^20^443.19^Twopalz", -- [103]
+				"^2682^16^1687309887^7^0^20^443.20^", -- [104]
+				"^2682^16^1687309970^239^1^20^442.89^Triplew", -- [105]
+				"^2680^16^1687310294^1^0^20^443.30^", -- [106]
+				"^2680^16^1687310437^356^1^20^443.44^Dingding", -- [107]
+				"^2687^16^1687310960^0^0^20^443.44^", -- [108]
+				"^2687^16^1687311082^251^1^20^443.10^Syzlakdeekay", -- [109]
+				"^2693^16^1687311510^11^0^20^443.26^", -- [110]
+				"^2693^16^1687311602^268^1^20^443.26^Bumpercars", -- [111]
+				"^2689^16^1687311968^0^0^20^443.38^", -- [112]
+				"^2689^16^1687312184^175^0^20^443.95^Zhuntx", -- [113]
+				"^2689^16^1687312435^237^0^20^443.95^Shadowmastr", -- [114]
+				"^2689^16^1687312747^113^0^20^443.95^Zhuntx", -- [115]
+				"^2689^16^1687312891^1^0^20^443.95^Xyronicz", -- [116]
+				"^2689^16^1687312946^305^0^20^443.94^Tryingg", -- [117]
+				"^2689^16^1687313341^159^0^20^443.95^Triplew", -- [118]
+				"^2689^16^1687313581^277^1^20^443.95^Dcn", -- [119]
+				"^2683^16^1687314068^0^0^20^444.51^", -- [120]
+				"^2683^16^1687314344^311^1^20^444.51^Kadss", -- [121]
+				"^1043^8^1687998130^59^1^5^439.54^", -- [122]
+				"^1041^8^1687998554^97^1^5^439.54^", -- [123]
+				"^1042^8^1687998951^85^1^5^440.41^", -- [124]
+				"^2688^16^1689040176^213^1^20^442.22^Dbpriest", -- [125]
+				"^2682^16^1689040681^6^0^20^442.22^", -- [126]
+				"^2682^16^1689040743^214^1^20^442.22^", -- [127]
+				"^2680^16^1689041025^0^0^20^442.22^", -- [128]
+				"^2680^16^1689041113^256^0^20^442.22^Kadv", -- [129]
+				"^2680^16^1689041447^350^1^20^442.22^Jt", -- [130]
+				"^2687^16^1689041993^1^0^20^442.22^", -- [131]
+				"^2687^16^1689042074^255^1^20^442.27^Caprisunfan", -- [132]
+				"^2693^16^1689042514^6^0^20^442.27^", -- [133]
+				"^2693^16^1689042617^269^1^20^442.27^Flowbee", -- [134]
+				"^2688^16^1689123591^203^1^20^444.47^", -- [135]
+				"^2682^16^1689124087^7^0^20^445.30^", -- [136]
+				"^2682^16^1689124176^202^1^20^445.09^Tryingg", -- [137]
+				"^2680^16^1689124435^1^0^20^445.09^", -- [138]
+				"^2680^16^1689124535^332^1^20^445.01^Jacobw", -- [139]
+				"^2687^16^1689125066^0^0^20^445.02^", -- [140]
+				"^2687^16^1689125178^229^1^20^444.19^Dosomething", -- [141]
+				"^2693^16^1689125580^11^0^20^444.42^", -- [142]
+				"^2693^16^1689125695^245^1^20^444.42^Twistedbenke", -- [143]
+				"^2093^8^1689807049^75^1^5^444.21^", -- [144]
+				"^2094^8^1689807355^89^1^5^444.21^", -- [145]
+				"^2095^8^1689807671^50^1^5^444.21^", -- [146]
+				"^2096^8^1689807812^122^1^5^444.21^", -- [147]
+				"^2688^16^1689815795^209^1^20^442.96^Moneybag", -- [148]
+				"^2682^16^1689816269^7^0^20^442.96^", -- [149]
+				"^2682^16^1689816333^216^1^20^442.96^Carodh", -- [150]
+				"^2680^16^1689816607^0^0^20^442.96^", -- [151]
+				"^2680^16^1689816801^0^0^20^442.96^", -- [152]
+				"^2680^16^1689816835^0^0^20^443.03^", -- [153]
+				"^2680^16^1689817236^349^1^20^443.44^Atrocityjune", -- [154]
+				"^2687^16^1689817747^0^0^20^443.44^", -- [155]
+				"^2687^16^1689817793^244^1^20^443.44^Syzlakk", -- [156]
+				"^2693^16^1689818200^5^0^20^443.44^", -- [157]
+				"^2693^16^1689818265^296^1^20^443.44^Syzlakk", -- [158]
+				"^2688^16^1690422064^206^1^20^440.46^Kadv", -- [159]
+				"^2682^16^1690422542^7^0^20^440.46^", -- [160]
+				"^2682^16^1690422618^224^1^20^440.46^Carodh", -- [161]
+				"^2680^16^1690422903^1^0^20^440.46^", -- [162]
+				"^2680^16^1690422982^332^1^20^440.46^", -- [163]
+				"^2687^16^1690423469^0^0^20^440.22^", -- [164]
+				"^2687^16^1690423523^236^1^20^440.22^Twistedm", -- [165]
+				"^2693^16^1690423925^6^0^20^440.22^", -- [166]
+				"^2693^16^1690424006^296^1^20^440.22^Flowbie", -- [167]
+				"^2693^16^1691543913^250^1^20^440.07^Melodrama", -- [168]
+				"^2682^16^1691544380^7^0^20^445.94^", -- [169]
+				"^2682^16^1691544498^200^1^20^446.12^Güyver-Sargeras", -- [170]
+				"^2680^16^1691544758^0^0^20^446.12^", -- [171]
+				"^2680^16^1691544919^358^1^20^446.11^Güyver-Sargeras", -- [172]
+				"^2689^16^1691545365^1^0^20^446.11^", -- [173]
+				"^2689^16^1691545691^277^1^20^446.17^Güyver-Sargeras", -- [174]
+				"^2683^16^1691546144^0^0^20^446.15^", -- [175]
+				"^2683^16^1691546350^313^0^20^446.13^Güyver-Sargeras", -- [176]
+				"^2683^16^1691546759^326^1^20^446.13^Güyver-Sargeras", -- [177]
+				"^2684^16^1691547302^0^0^20^446.35^", -- [178]
+				"^2684^16^1691547491^453^0^20^446.20^Güyver-Sargeras", -- [179]
+				"^2684^16^1691548079^449^1^20^446.20^Güyver-Sargeras", -- [180]
+				"^2685^16^1691548666^0^0^20^446.20^", -- [181]
+				"^2685^16^1691549038^249^0^20^446.25^Güyver-Sargeras", -- [182]
+				"^2685^16^1691549360^407^0^20^446.25^Güyver-Sargeras", -- [183]
+				"^2685^16^1691549874^446^1^20^446.25^Güyver-Sargeras", -- [184]
+				"^2688^16^1692237849^12^0^20^444.62^", -- [185]
+				"^2688^16^1692238225^12^0^20^444.64^Ymmij-Frostmourne", -- [186]
+				"^2688^16^1692238292^221^1^20^444.64^Deyjavu", -- [187]
+				"^2682^16^1692238775^7^0^20^444.64^", -- [188]
+				"^2682^16^1692238866^228^1^20^444.64^", -- [189]
+				"^2680^16^1692239156^0^0^20^444.64^", -- [190]
+				"^2680^16^1692239378^155^0^20^444.64^Muddwarlock-Zul'jin", -- [191]
+				"^2680^16^1692239596^245^0^20^444.64^Bulgesniffer-Zul'jin", -- [192]
+				"^2680^16^1692239914^391^0^20^444.64^Flowbie", -- [193]
+				"^2680^16^1692240377^351^1^20^444.64^Flowbie", -- [194]
+				"^2687^16^1692240919^0^0^20^444.66^", -- [195]
+				"^2687^16^1692240988^252^1^20^444.66^Kadornus", -- [196]
+				"^2693^16^1692241428^5^0^20^444.64^", -- [197]
+				"^2693^16^1692241766^345^1^20^444.64^Flowbie", -- [198]
+				"^2688^16^1694566654^192^1^20^442.63^Karzlgx", -- [199]
+				"^2682^16^1694567099^7^0^20^442.63^", -- [200]
+				"^2682^16^1694567153^183^1^20^442.63^", -- [201]
+				"^2680^16^1694567392^0^0^20^442.63^", -- [202]
+				"^2680^16^1694567472^333^1^20^442.72^", -- [203]
+				"^2687^16^1694567982^0^0^20^443.84^", -- [204]
+				"^2687^16^1694568073^206^1^20^442.73^", -- [205]
+				"^2693^16^1694568430^5^0^20^442.73^", -- [206]
+				"^2693^16^1694568488^238^1^20^442.73^", -- [207]
+				"^2684^16^1694568912^0^0^20^444.09^", -- [208]
+				"^2684^16^1694569055^393^1^20^444.28^Ladiesnight", -- [209]
+				"^2685^16^1694569570^0^0^20^444.28^", -- [210]
+				"^2685^16^1694569776^410^0^20^444.36^Twopalz", -- [211]
+				"^2685^16^1694570270^403^0^20^444.36^Jacobxaxa", -- [212]
+				"^2685^16^1694570752^75^0^20^444.36^Justdb", -- [213]
+				"^2685^16^1694570934^405^1^20^444.36^Gambagang", -- [214]
+				"^2688^16^1695171017^0^0^20^444.25^", -- [215]
+				"^2688^16^1695171504^0^0^20^442.68^", -- [216]
+				"^2688^16^1695171543^189^1^20^442.68^", -- [217]
+				"^2682^16^1695172008^7^0^20^442.68^", -- [218]
+				"^2682^16^1695172100^132^1^20^442.88^Ladiesnight", -- [219]
+				"^2680^16^1695172298^0^0^20^442.88^", -- [220]
+				"^2680^16^1695172368^328^1^20^442.85^", -- [221]
+				"^2687^16^1695172840^0^0^20^443.02^", -- [222]
+				"^2687^16^1695172903^233^1^20^443.23^Belade", -- [223]
+				"^2693^16^1695173300^6^0^20^443.42^", -- [224]
+				"^2693^16^1695173390^237^1^20^443.45^Tometv", -- [225]
+				"^2684^16^1695173808^0^0^20^444.37^", -- [226]
+				"^2684^16^1695173973^1^0^20^444.61^", -- [227]
+				"^2684^16^1695174033^140^0^20^444.61^Gambagang", -- [228]
+				"^2684^16^1695174245^384^1^20^444.61^Ladiesnight", -- [229]
+				"^2685^16^1695174751^0^0^20^0.00^", -- [230]
+				"^2685^16^1695174994^241^0^20^444.72^Atrocityjune", -- [231]
+				"^2685^16^1695175360^367^0^20^444.72^Karzlgx", -- [232]
+				"^2685^16^1695175853^438^1^20^444.72^Karzlgx", -- [233]
+				"^2688^16^1696381310^187^1^20^445.25^", -- [234]
+				"^2682^16^1696381752^8^0^20^445.25^", -- [235]
+				"^2682^16^1696381797^132^1^20^445.25^Tometv", -- [236]
+				"^2680^16^1696381985^0^0^20^445.25^", -- [237]
+				"^2680^16^1696382129^319^1^20^445.23^", -- [238]
+				"^2687^16^1696382619^0^0^20^445.50^", -- [239]
+				"^2687^16^1696382685^217^1^20^445.50^Ladiesnight", -- [240]
+				"^2693^16^1696383059^4^0^20^445.50^", -- [241]
+				"^2693^16^1696383126^225^1^20^445.24^Flowbs", -- [242]
+				"^2684^16^1696383530^0^0^20^445.42^", -- [243]
+				"^2684^16^1696383700^395^1^20^445.61^Atrocityjune", -- [244]
+				"^2685^16^1696384192^0^0^20^445.61^", -- [245]
+				"^2685^16^1696384445^465^0^20^443.27^Tometv", -- [246]
+				"^2685^16^1696384984^415^1^20^445.93^Ladiesnight", -- [247]
+				"^2688^16^1696985831^0^0^20^444.89^", -- [248]
+				"^2688^16^1696985898^203^1^20^444.94^Winternights", -- [249]
+				"^2682^16^1696986351^7^0^20^444.94^", -- [250]
+				"^2682^16^1696986411^138^1^20^444.93^", -- [251]
+				"^2680^16^1696986604^0^0^20^444.98^", -- [252]
+				"^2680^16^1696986661^319^1^20^444.98^", -- [253]
+				"^2687^16^1696987161^0^0^20^444.95^", -- [254]
+				"^2687^16^1696987196^218^1^20^444.95^Gambagang", -- [255]
+				"^2693^16^1696987568^5^0^20^444.95^", -- [256]
+				"^2693^16^1696987611^266^1^20^444.95^Winternights", -- [257]
+				"^2684^16^1696988075^0^0^20^445.78^", -- [258]
+				"^2684^16^1696988309^389^1^20^445.86^Karzaugieaug", -- [259]
+				"^2685^16^1696988801^0^0^20^445.86^", -- [260]
+				"^2685^16^1696988945^316^0^20^446.40^Flowbs", -- [261]
+				"^2685^16^1696989337^420^1^20^445.98^Tometv", -- [262]
+				"^2820^15^1700012156^188^1^30^447.65^Tryinggd", -- [263]
+				"^2709^15^1700012407^0^0^30^447.71^", -- [264]
+				"^2709^15^1700012479^246^1^30^447.73^Dudeguyfive", -- [265]
+				"^2728^15^1700012938^0^0^30^447.66^", -- [266]
+				"^2728^15^1700012990^219^1^30^447.66^", -- [267]
+				"^2708^15^1700013342^0^0^30^447.73^", -- [268]
+				"^2708^15^1700013403^0^0^30^447.73^", -- [269]
+				"^2737^15^1700013929^0^0^30^447.73^", -- [270]
+				"^2737^15^1700013994^184^1^30^447.73^", -- [271]
+				"^2731^15^1700014309^0^0^30^447.73^", -- [272]
+				"^2731^15^1700014361^285^1^30^447.73^Anarchyprst", -- [273]
+				"^2824^15^1700014788^0^0^30^447.74^", -- [274]
+				"^2824^15^1700014853^272^0^30^447.74^Dxdk", -- [275]
+				"^2824^15^1700015235^369^0^30^447.74^Kimsamsung", -- [276]
+				"^2824^15^1700015686^113^0^30^447.74^Dudeguyfive", -- [277]
+				"^2824^15^1700015875^330^1^30^447.73^Xyropyre", -- [278]
+				"^2786^15^1700016488^284^0^30^447.67^Decen", -- [279]
+				"^2786^15^1700016867^457^1^30^447.65^Xyropyre", -- [280]
+				"^2820^14^1700075074^126^1^30^448.48^", -- [281]
+				"^2709^14^1700075245^0^0^30^449.26^", -- [282]
+				"^2709^14^1700075317^189^1^30^449.26^Tryinggd", -- [283]
+				"^2728^14^1700075740^0^0^30^449.20^", -- [284]
+				"^2728^14^1700075783^122^1^30^449.20^", -- [285]
+				"^2708^14^1700076005^0^0^30^449.20^", -- [286]
+				"^2708^14^1700076086^117^1^30^449.20^", -- [287]
+				"^2737^14^1700076433^0^0^30^449.27^", -- [288]
+				"^2737^14^1700076499^100^1^30^449.32^", -- [289]
+				"^2731^14^1700076707^0^0^30^449.32^", -- [290]
+				"^2731^14^1700076764^149^1^30^449.32^", -- [291]
+				"^2824^14^1700077018^0^0^30^449.32^", -- [292]
+				"^2824^14^1700077082^131^1^30^449.34^", -- [293]
+				"^2786^14^1700077372^209^1^30^449.41^", -- [294]
+				"^2677^15^1700099213^233^0^30^449.39^Shadowmastr", -- [295]
+				"^2677^15^1700099520^310^0^30^449.39^Karzaugieaug", -- [296]
+				"^2677^15^1700099935^449^0^30^449.39^Xyropyre", -- [297]
+				"^2677^15^1700100459^485^1^30^449.39^Flowbs", -- [298]
+				"^2820^15^1700611593^0^0^26^454.41^", -- [299]
+				"^2820^15^1700611671^166^1^30^453.56^", -- [300]
+				"^2709^15^1700611892^0^0^30^453.56^", -- [301]
+				"^2709^15^1700611936^217^1^30^453.56^Dosomething", -- [302]
+				"^2728^15^1700612370^0^0^30^453.49^", -- [303]
+				"^2728^15^1700612414^238^1^30^453.51^Dosomething", -- [304]
+				"^2708^15^1700612779^0^0^30^453.50^", -- [305]
+				"^2708^15^1700612865^241^1^30^453.55^Zthree", -- [306]
+				"^2737^15^1700613371^0^0^30^453.63^", -- [307]
+				"^2737^15^1700613441^168^1^30^453.64^Aestis", -- [308]
+				"^2731^15^1700613735^0^0^30^453.64^", -- [309]
+				"^2731^15^1700613802^262^1^30^453.74^Businessonly", -- [310]
+				"^2824^15^1700614259^277^1^30^453.74^Onetrickzz", -- [311]
+				"^2786^15^1700614729^387^1^30^453.83^Carow", -- [312]
+				"^2677^15^1700632188^86^0^30^452.50^Atrocityjune", -- [313]
+				"^2677^15^1700632373^521^1^30^453.59^Jt", -- [314]
 			},
 			["Atrocityev"] = {
 				"^2570^8^1684789011^83^0^5^425.89^Atrocityev", -- [1]
@@ -5981,60 +7819,59 @@ atrocityUI.VMRT["1440p"] = {
 				"^2612^8^1685029264^128^1^5^424.12^", -- [58]
 				"^2611^8^1685029675^156^1^5^424.12^Atrocityev", -- [59]
 			},
-			["Atrocitywl"] = {
-				"^2395^8^1633377025^120^1^5^242.06^", -- [1]
-				"^2394^8^1633377588^143^1^5^242.06^Weewpp-Mal'Ganis", -- [2]
-				"^2400^8^1633378187^100^1^5^238.02^", -- [3]
-				"^2396^8^1633378352^188^1^5^238.02^", -- [4]
-				"^2423^15^1633551942^5^0^18^242.95^", -- [5]
-				"^2423^15^1633552017^5^0^18^243.60^", -- [6]
-				"^2423^15^1633552076^8^0^18^242.86^", -- [7]
-				"^2423^15^1633552468^187^1^22^244.21^Bendyneck-Hyjal", -- [8]
-				"^2391^8^1649115663^199^1^5^254.99^", -- [9]
-				"^2365^8^1649116209^167^1^5^254.99^", -- [10]
-				"^2364^8^1649116872^199^0^5^254.99^Atrocitywl", -- [11]
-				"^2364^8^1649117142^207^1^5^254.99^", -- [12]
-				"^2366^8^1649117595^219^1^5^256.33^Tagzzsou", -- [13]
-				"^2404^8^1649117880^253^1^5^256.33^Tagzzsou", -- [14]
-				"^2397^8^1649735426^58^1^5^265.07^", -- [15]
-				"^2392^8^1649735775^136^1^5^263.19^", -- [16]
-				"^2393^8^1649736139^82^1^5^259.73^", -- [17]
-				"^2384^8^1649780012^139^1^5^263.89^", -- [18]
-				"^2385^8^1649780418^146^1^5^260.56^", -- [19]
-				"^2386^8^1649780679^162^1^5^260.56^", -- [20]
-				"^2382^8^1649781324^94^1^5^265.89^", -- [21]
-				"^2384^8^1649781856^118^1^5^265.89^", -- [22]
-				"^2385^8^1649782161^121^1^5^265.89^", -- [23]
-				"^2386^8^1649782376^173^1^5^265.89^", -- [24]
-				"^2382^8^1652756346^123^1^5^267.46^", -- [25]
-				"^2384^8^1652756753^168^1^5^267.46^", -- [26]
-				"^2385^8^1652757094^153^1^5^267.46^", -- [27]
-				"^2386^8^1652757347^174^1^5^267.46^", -- [28]
-				"^2401^8^1652935525^131^1^5^265.18^Twistedsp", -- [29]
-				"^2380^8^1652935720^107^1^5^265.18^", -- [30]
-				"^2403^8^1652935919^106^1^5^265.18^", -- [31]
-				"^2381^8^1652936142^126^1^5^265.18^", -- [32]
-				"^2426^8^1652996453^96^1^5^266.62^", -- [33]
-				"^2419^8^1652996730^69^1^5^266.62^", -- [34]
-				"^2442^8^1652996979^126^1^5^266.62^", -- [35]
-				"^2426^8^1656196202^154^1^5^272.61^Jacobw", -- [36]
-				"^2419^8^1656196469^110^1^5^272.61^", -- [37]
-				"^2442^8^1656196705^187^1^5^272.61^Twistedsp", -- [38]
-				"^2426^8^1656557724^106^1^5^270.20^", -- [39]
-				"^2419^8^1656558019^97^1^5^270.20^", -- [40]
-				"^2442^8^1656558327^154^1^5^270.20^", -- [41]
+			["Atrocitydark"] = {
+				"^1836^8^1702260265^245^0^5^461.36^Synephunt-Sargeras", -- [1]
+				"^1836^8^1702260643^217^0^5^461.36^Idiöt-Thrall", -- [2]
+				"^2666^8^1702742358^50^0^5^464.25^Cadh-Illidan", -- [3]
+				"^2666^8^1702742561^77^0^5^464.25^Cadh-Illidan", -- [4]
+				"^2666^8^1702743315^109^1^5^463.52^", -- [5]
+				"^2667^8^1702743647^108^1^5^463.52^", -- [6]
+				"^2668^8^1702744017^141^1^5^463.52^", -- [7]
+				"^2669^8^1702744393^187^1^5^463.52^", -- [8]
 			},
 			["Atrocitydr"] = {
 			},
 			["Atrocitydk"] = {
 			},
-			["Atrocitykfk"] = {
-				"^2395^8^1656198900^116^1^5^265.62^", -- [1]
-				"^2394^8^1656199252^136^1^5^265.62^", -- [2]
-				"^2400^8^1656199703^129^1^5^265.62^Atrocitykfk", -- [3]
-				"^2396^8^1656199920^198^1^5^265.62^Atrocitykfk", -- [4]
+			["Atrocitysaga"] = {
+				"^1746^8^1701793982^170^1^5^462.77^", -- [1]
+				"^1757^8^1701794402^158^1^5^462.77^Impecdh-Illidan", -- [2]
+				"^1751^8^1701794717^106^1^5^462.77^", -- [3]
+				"^1756^8^1701794982^193^1^5^462.77^", -- [4]
+				"^1746^8^1701795728^160^1^5^463.10^", -- [5]
+				"^1757^8^1701796161^49^0^5^463.10^Impecdh-Illidan", -- [6]
+				"^1757^8^1701796252^156^1^5^463.10^", -- [7]
+				"^1751^8^1701796575^110^1^5^463.10^", -- [8]
+				"^1756^8^1701796732^190^1^5^463.10^", -- [9]
+				"^2820^14^1701922395^150^1^18^459.75^Kiritodz-Illidan", -- [10]
+				"^2709^14^1701922658^12^0^18^459.75^Deezhunt-Stormrage", -- [11]
+				"^2709^14^1701922761^256^1^18^459.76^Hruharhwa-Tichondrius", -- [12]
+				"^2737^14^1701923342^2^0^17^459.68^Deezhunt-Stormrage", -- [13]
+				"^2737^14^1701923417^139^1^17^459.78^Javiwasabi", -- [14]
+				"^2113^8^1701924731^119^1^5^469.59^", -- [15]
+				"^2114^8^1701925053^145^1^5^469.59^Kennawld-Tichondrius", -- [16]
+				"^2115^8^1701925357^110^1^5^469.59^", -- [17]
+				"^2116^8^1701925711^124^1^5^469.59^", -- [18]
+				"^2117^8^1701925863^113^1^5^469.59^", -- [19]
+				"^1836^8^1701926886^125^1^5^469.88^", -- [20]
+				"^1837^8^1701927294^122^1^5^469.88^Genguu-Illidan", -- [21]
+				"^1838^8^1701927437^263^1^5^469.88^Genguu-Illidan", -- [22]
+				"^1839^8^1701927842^140^1^5^469.88^Genguu-Illidan", -- [23]
+				"^1746^8^1702339778^202^1^5^461.81^", -- [24]
+				"^1757^8^1702340228^106^0^5^461.81^Twisteddh-Illidan", -- [25]
+				"^1757^8^1702340418^196^1^5^461.81^", -- [26]
+				"^1751^8^1702340837^209^0^5^461.81^Twisteddh-Illidan", -- [27]
+				"^1751^8^1702341101^132^0^5^461.81^Twisteddh-Illidan", -- [28]
+				"^1751^8^1702341364^187^1^5^461.81^Twisteddh-Illidan", -- [29]
+				"^1756^8^1702341611^235^1^5^461.81^", -- [30]
+				"^2113^8^1702745467^103^1^5^467.32^", -- [31]
+				"^2114^8^1702745869^106^1^5^467.32^", -- [32]
+				"^2115^8^1702746181^43^0^5^467.32^Nnklol-Illidan", -- [33]
+				"^2115^8^1702746346^141^1^5^467.32^Nnklol-Illidan", -- [34]
+				"^2116^8^1702746857^91^1^5^467.32^", -- [35]
+				"^2117^8^1702747068^94^1^5^467.32^", -- [36]
 			},
-			["Atrocitymagi"] = {
+			["Atrocityxe"] = {
 			},
 			["Atrocityjr"] = {
 				"^2401^8^1641911366^108^1^5^234.56^", -- [1]
@@ -6134,7 +7971,7 @@ atrocityUI.VMRT["1440p"] = {
 		["InvByChat"] = true,
 		["RaidDiff"] = 16,
 		["PromoteRank"] = 2,
-		["LootThreshold"] = 2,
+		["ListInv1"] = "Twistedw\nScottstb\nNickspriest\nDrineytwo\nNoripalb\nMaeveychi\nAdeen\nVilwarr\nAtrocityw\nLipwarrior\nZubang\nGoopwar\nJpcharge\nBenw\nImpecs\nAtlasdumpy\nOnehealplzz\nSoupshop\nImfiredup\nEricsdruid\nBirchon\nKíngflylock",
 		["ListInv2"] = "Twistedm\nScottbrexit\nCerepriest\nDriney\nCiory\nMaeveythree\nAtrocity\nChilldrills\nImpecblue\nJpconetrick\nTrillshaman\nBirchout\nFloormopzz\nKíngflyhunt\nMallark\nEricjunior\nLiphunt\nGoopdtwo\nBabombabam\nThdlock",
 		["Ranks"] = {
 			true, -- [1]
@@ -6148,7 +7985,7 @@ atrocityUI.VMRT["1440p"] = {
 		["MasterLooters"] = "",
 		["LootMethod"] = "group",
 		["PromoteNames"] = "",
-		["ListInv1"] = "Twistedw\nScottstb\nNickspriest\nDrineytwo\nNoripalb\nMaeveychi\nAdeen\nVilwarr\nAtrocityw\nLipwarrior\nZubang\nGoopwar\nJpcharge\nBenw\nImpecs\nAtlasdumpy\nOnehealplzz\nSoupshop\nImfiredup\nEricsdruid\nBirchon\nKíngflylock",
+		["LootThreshold"] = 2,
 		["Rank"] = 1,
 	},
 	["ExCD2"] = {
@@ -6186,8 +8023,8 @@ atrocityUI.VMRT["1440p"] = {
 			["47788;3"] = 1,
 			["6940;1"] = 1,
 			["102342;5"] = 1,
-			["51052;4"] = 1,
 			["73325;4"] = 2,
+			["51052;4"] = 1,
 			["31821;2"] = 2,
 			["73325;3"] = 2,
 			["73325;1"] = 2,
@@ -6198,10 +8035,10 @@ atrocityUI.VMRT["1440p"] = {
 			["64382;2"] = 1,
 			["1044;3"] = 1,
 			["64382;1"] = 1,
-			["10060;3"] = 2,
+			["1044;2"] = 1,
 			["3411;4"] = 1,
 			["1022;2"] = 1,
-			["1044;2"] = 1,
+			["10060;3"] = 2,
 			["64382;3"] = 1,
 			["1022;4"] = 1,
 			["3411;3"] = 1,
@@ -6216,8 +8053,8 @@ atrocityUI.VMRT["1440p"] = {
 			[98008] = 5,
 			[116849] = 20,
 			[10060] = 100,
-			[196718] = 0,
 			[73325] = 70,
+			[196718] = 0,
 			[6940] = 45,
 			[97462] = 0,
 			[51052] = 10,
@@ -6240,162 +8077,144 @@ atrocityUI.VMRT["1440p"] = {
 		},
 		["enabled"] = true,
 		["gnGUIDs"] = {
-			["Milkbad"] = 70,
-			["Atrocitytres"] = 577,
-			["Atrocityhaku"] = 1468,
-			["Chilldrills-Illidan"] = 262,
-			["Colcornman-Illidan"] = 1468,
-			["Jacobxaxa"] = 71,
-			["Bnd-Illidan"] = 258,
-			["Priesttwo"] = 257,
-			["Dotdotdottdd-Illidan"] = 577,
-			["Kadv"] = 1467,
-			["Zipzoop"] = 581,
-			["Scot-Illidan"] = 250,
-			["Xeserpon-Illidan"] = 258,
-			["Gazmoon"] = 102,
-			["Alîcë-WyrmrestAccord"] = 65,
-			["Melodrama"] = 267,
-			["Mbdeez"] = 263,
-			["Dbtwo"] = 264,
-			["Uddydoxx"] = 263,
-			["Saxaboom-Sargeras"] = 253,
-			["Atlasdk-Illidan"] = 250,
-			["Zekkeh"] = 254,
-			["Iamaburden"] = 1467,
-			["Jetk-Illidan"] = 250,
-			["Twistedm"] = 270,
-			["Gazoo"] = 253,
-			["Belade"] = 65,
-			["Kadlock"] = 267,
-			["Localsingles"] = 62,
-			["Tripledk"] = 252,
-			["Genguu-Illidan"] = 577,
-			["Dingding"] = 1467,
-			["Kimsamsung"] = 1467,
-			["Twistedsp"] = 257,
-			["Carodubya"] = 71,
-			["Tryingg"] = 62,
-			["Syzlakdekay"] = 252,
-			["Flowbs"] = 268,
-			["Jacobw"] = 71,
-			["Hopefulx"] = 62,
-			["Bumpercars"] = 1467,
-			["Catsticker-Illidan"] = 581,
-			["Jizztornado"] = 258,
-			["Ilovehisdude"] = 252,
-			["Kadornus"] = 262,
-			["Goosy"] = 102,
-			["Atrocityjr"] = 255,
-			["Goozee"] = 102,
-			["Gdxo"] = 73,
-			["Zhuntx"] = 253,
-			["Madbillainy"] = 70,
-			["Weewev"] = 1473,
-			["Nabaar-Thrall"] = 263,
-			["Zekkelock"] = 267,
-			["Aestisc"] = 261,
-			["Arcinde"] = 267,
-			["Kch-Frostmourne"] = 577,
-			["Buddym"] = 62,
-			["Deyjavu"] = 254,
-			["Karzastrasza"] = 1468,
-			["Stinnkypoopy-Illidan"] = 1467,
-			["Businessonly"] = 261,
-			["Kamsahabnida"] = 1467,
-			["Zoopalz"] = 66,
-			["Davidqx-Zul'jin"] = 102,
-			["Karzdouyu"] = 257,
-			["Decen"] = 577,
-			["Acentt-Kel'Thuzad"] = 105,
-			["Karzgenome"] = 267,
-			["Emsyvoker-Illidan"] = 1468,
-			["Flowbee"] = 581,
-			["Twistedbenke"] = 257,
-			["Syzlakdeekay"] = 252,
-			["Flowbzz"] = 250,
-			["Aestisd"] = 261,
-			["Tydrapally"] = 65,
-			["Shadowmastr"] = 261,
-			["Twopalz"] = 104,
-			["Egyptianwomn"] = 268,
-			["Shaladrin-Illidan"] = 1467,
-			["Boparama-Zul'jin"] = 70,
-			["Hanahmontana"] = 65,
-			["Jetslock"] = 267,
-			["Carodk"] = 252,
-			["Justdb"] = 264,
-			["Atrocityskye"] = 258,
-			["Lotsofun-Illidan"] = 258,
-			["Cvsreceipt"] = 63,
-			["Carow"] = 71,
-			["Hugegamer-Cenarius"] = 1468,
-			["Tryingc"] = 62,
-			["Dbpriest"] = 257,
-			["Hardytriflin"] = 258,
-			["Goosomething"] = 1467,
-			["Onthewing-Zul'jin"] = 71,
-			["Karzaugieaug"] = 1468,
-			["Xybeaned"] = 267,
-			["Atrocityjune"] = 258,
-			["Jacobww"] = 269,
-			["Backtrack-Frostmourne"] = 261,
-			["Friddlop"] = 263,
-			["Atrocityp"] = 70,
-			["Urghamut-Area52"] = 1468,
-			["Busdrivergus"] = 63,
-			["Flowbss"] = 66,
-			["Aestisqtt"] = 261,
-			["Dosomething"] = 1468,
-			["Triplew"] = 72,
-			["Zandersurge-Area52"] = 102,
-			["Balloonboy"] = 63,
-			["Fangtastique-Area52"] = 1468,
-			["Flowbsy"] = 104,
-			["Jacobone"] = 71,
-			["Mb"] = 70,
-			["Hardyvoker"] = 1467,
-			["Jetw"] = 71,
-			["Bulgesniffer-Zul'jin"] = 1468,
-			["Syzlakk"] = 252,
-			["Eosw-Zul'jin"] = 71,
-			["Atrocitydr"] = 105,
-			["Junkstam"] = 1468,
-			["Cddos-Illidan"] = 262,
-			["Gniyrt"] = 62,
-			["Hardyp"] = 258,
-			["Juanpepsi-Ragnaros"] = 72,
-			["Jetsmonk-Illidan"] = 269,
-			["Drippygodx"] = 262,
-			["Cdznutz-Illidan"] = 262,
-			["Gregsh-Tichondrius"] = 263,
-			["Moisês-Ragnaros"] = 105,
-			["Atrocitynoir"] = 258,
-			["Karzlgx"] = 1468,
-			["Twistedp"] = 65,
-			["Sardony-Tichondrius"] = 1467,
-			["Massivebrick"] = 70,
-			["Aestis"] = 261,
-			["Atrocitys"] = 264,
-			["Dragsoda-Illidan"] = 1467,
+			["Tydrapriest"] = 257,
+			["Elaraia-Stormrage"] = 65,
+			["Atrocityhaku"] = 1473,
+			["Mendeeznuts-Illidan"] = 256,
+			["Jacobxaxa"] = 72,
+			["Anarchyp-Mal'Ganis"] = 66,
+			["Tryinggd"] = 62,
+			["Twisteddh-Illidan"] = 577,
+			["Jasonbournex"] = 253,
+			["Krianah-Area52"] = 577,
+			["Atrocitykfk"] = 269,
+			["Blîîght-Kil'jaeden"] = 251,
+			["Ferokan-Stormrage"] = 270,
+			["Earth Spirit"] = 269,
 			["Kadss"] = 102,
-			["Whiteboydrip"] = 1468,
-			["Dudeguyfive"] = 1468,
-			["Weewf"] = 62,
-			["Trippygodx"] = 263,
-			["Doloflan-Draka"] = 258,
-			["Karztuh"] = 65,
-			["Atrocitysoju"] = 71,
-			["Disciplinae"] = 257,
-			["Wingwong"] = 1467,
-			["Atrocitymagi"] = 64,
-			["Caprisunfan"] = 105,
-			["Rileyp-Area52"] = 258,
-			["Waveweaver"] = 263,
-			["Deydorra"] = 70,
-			["Jt"] = 270,
-			["Anarchyprst"] = 258,
+			["Tordragon"] = 1473,
+			["Qiqi-Azralon"] = 581,
+			["Twistedm"] = 270,
+			["Shambalamb-BleedingHollow"] = 263,
+			["Tometv"] = 253,
+			["Pbdubs"] = 72,
+			["Kennawld-Tichondrius"] = 266,
+			["Millip"] = 257,
+			["Durids-BurningLegion"] = 105,
+			["Genguu-Illidan"] = 577,
+			["Zaknáfein-Illidan"] = 66,
+			["Yyxr"] = 1473,
+			["Anarchyhunt"] = 253,
+			["Gemdrops-ArgentDawn"] = 70,
+			["Lorlellameth-Zuluhed"] = 577,
+			["Elpirt"] = 103,
+			["Purpurkle-Area52"] = 253,
+			["Demonictitan-Norgannon"] = 265,
+			["Kadornus"] = 262,
+			["Ub-Tichondrius"] = 1473,
+			["Hruharhwa-Tichondrius"] = 71,
+			["Atrocitysaga"] = 72,
+			["Papelundio-Quel'Thalas"] = 64,
+			["Atrocityjr"] = 253,
+			["Gavein-Sargeras"] = 266,
+			["Milliptwo"] = 257,
+			["Ggez-Ragnaros"] = 256,
+			["Jacobone"] = 71,
+			["Atrocitysoju"] = 72,
+			["Atrocityedge"] = 263,
+			["Weewk"] = 1473,
+			["Dhdx"] = 581,
+			["Death"] = 1467,
+			["Muchentuchen-Illidan"] = 1467,
+			["Qrypticzz"] = 577,
+			["Beladepr"] = 256,
+			["Zoopalz"] = 66,
+			["Bigbrenda-Dalaran"] = 269,
+			["Karzdouyu"] = 258,
+			["Deezhunt-Stormrage"] = 253,
+			["Dxaugtwo"] = 1473,
+			["Deydorra-Mal'Ganis"] = 70,
+			["Willycod-Illidan"] = 70,
+			["Angelicax-Bronzebeard"] = 256,
+			["Triyng"] = 62,
+			["Fire Spirit"] = 269,
+			["Gkn"] = 266,
+			["Javiwasabi"] = 577,
+			["Flowbzz"] = 250,
+			["Zarthron-BleedingHollow"] = 257,
+			["Tydrapally"] = 65,
 			["Dcn"] = 577,
+			["Zakila-AzjolNerub"] = 264,
+			["Mestupid-Illidan"] = 253,
+			["Cháòs"] = 577,
+			["Zthree"] = 253,
+			["Tsowat-Aggramar"] = 269,
+			["Impecdh-Illidan"] = 577,
+			["Syzlakdk"] = 250,
+			["Kiritodz-Illidan"] = 259,
+			["Bodyfour-Area52"] = 264,
+			["Atrocity"] = 577,
+			["Justdb"] = 264,
+			["Stinnky-Illidan"] = 266,
+			["Atrocityskye"] = 257,
+			["Carow"] = 72,
+			["Supersaiyann-Area52"] = 250,
+			["Cadh-Illidan"] = 577,
+			["Idiöt-Thrall"] = 577,
+			["Soakzy-Area52"] = 263,
+			["Roymixd"] = 102,
+			["Mooshings-Illidan"] = 264,
+			["Heatersonly"] = 259,
+			["Flowbss"] = 66,
+			["Fbh-Illidan"] = 253,
+			["Atrocityr"] = 261,
+			["Sendemail"] = 261,
+			["Beladedoinks"] = 256,
+			["Kalecgoose"] = 1473,
+			["Deytime"] = 1473,
+			["Nnklol-Illidan"] = 64,
+			["Millipthree"] = 256,
+			["Tomebtw"] = 64,
+			["Taroboba-Hyjal"] = 270,
+			["Syzlakdeekay"] = 250,
+			["Atrocitydark"] = 577,
+			["Atrocitydr"] = 105,
+			["Whiteboydrip"] = 1468,
+			["Atrocitymagi"] = 62,
+			["Captjimbo-Tichondrius"] = 1473,
+			["Goosynatty"] = 103,
+			["Cranetrain"] = 261,
+			["Tahliia-Tichondrius"] = 270,
+			["Drippygodx"] = 263,
+			["Notsergei"] = 581,
+			["Zoozz"] = 250,
+			["Mìstfit"] = 270,
+			["Twofingers-Rexxar"] = 269,
+			["Atrocityp"] = 65,
+			["Xybeaned"] = 266,
+			["Hardyv-Illidan"] = 1473,
+			["Uwunotafurry-Area52"] = 250,
+			["Leechroy-Sargeras"] = 581,
+			["Atrocitynoir"] = 258,
+			["Salvo-Illidan"] = 260,
+			["Buttèrcùp-Area52"] = 268,
+			["Abracadabler"] = 266,
+			["Ryanado-BleedingHollow"] = 250,
+			["Vynillann-Illidan"] = 577,
+			["Notbower"] = 258,
+			["Atrocityjune"] = 258,
+			["Silvermood-Illidan"] = 256,
+			["Ookookerp-Mal'Ganis"] = 256,
+			["Atrocitysnow"] = 263,
+			["Wingwong"] = 1467,
+			["Mbdeez"] = 263,
+			["Shadowmastr"] = 259,
+			["Dragonchief-Stormrage"] = 1473,
+			["Xyronicz"] = 266,
+			["Atrocitydk"] = 252,
+			["Bbiggbossdr"] = 263,
+			["Synephunt-Sargeras"] = 253,
+			["Bowguytome"] = 253,
 		},
 		["userDB"] = {
 		},
@@ -6406,9 +8225,7 @@ atrocityUI.VMRT["1440p"] = {
 		},
 		["Top"] = 476.1791687011719,
 		["lock"] = true,
-		["Left"] = 452.8424072265625,
 		["SortByAvailability"] = true,
-		["upd4380"] = true,
 		["colSet"] = {
 			{
 				["textureColorTextCastR"] = 1,
@@ -6431,7 +8248,7 @@ atrocityUI.VMRT["1440p"] = {
 				["iconSize"] = 27,
 				["textureColorTimeLineCastR"] = 1,
 				["fontShadow"] = false,
-				["posY"] = 456.1322021484375,
+				["posY"] = 489.1321716308594,
 				["textureColorBackgroundCastG"] = 1,
 				["textureColorTimeLineCastG"] = 1,
 				["textureColorBackgroundCastB"] = 1,
@@ -6513,13 +8330,12 @@ atrocityUI.VMRT["1440p"] = {
 				["methodsAlphaNotInRangeNum"] = 90,
 				["visibilityDisable5ppl"] = true,
 				["posY"] = 226.3601531982422,
-				["enabled"] = true,
 				["methodsOnlyInCombat"] = true,
+				["visibilityPartyType"] = 2,
 				["textureAlphaTimeLine"] = 0.8,
-				["textureAnimation"] = true,
 				["frameScale"] = 100,
 				["frameColumns"] = 1,
-				["visibilityPartyType"] = 2,
+				["textureAnimation"] = true,
 				["visibilityDisableArena"] = true,
 				["fontShadow"] = false,
 				["textureAlphaCooldown"] = 1,
@@ -6710,18 +8526,19 @@ atrocityUI.VMRT["1440p"] = {
 				["textureColorTimeLineCastG"] = 1,
 				["textureColorBackgroundCastB"] = 1,
 				["textureColorTextActiveG"] = 1,
+				["frameColumns"] = 1,
 				["frameAlpha"] = 100,
-				["fontOtherAvailable"] = true,
-				["visibilityDisableArena"] = true,
 				["fontIconCDSize"] = 14,
+				["visibilityDisableArena"] = true,
+				["fontIconName"] = "Interface\\AddOns\\ElvUI\\Core\\Media\\Fonts\\Expressway.ttf",
 				["textureColorTextDefaultG"] = 1,
 				["fontLeftSize"] = 14,
 				["methodsSortByAvailability"] = true,
-				["fontIconName"] = "Interface\\AddOns\\ElvUI\\Core\\Media\\Fonts\\Expressway.ttf",
 				["fontIconOutline"] = true,
+				["textureColorTextActiveR"] = 0.5,
 				["textureSmoothAnimation"] = true,
 				["textureColorBackgroundActiveB"] = 1,
-				["textureColorTextActiveR"] = 0.5,
+				["fontCenterOutline"] = true,
 				["fontRightOutline"] = true,
 				["textureColorBackgroundCooldownR"] = 1,
 				["textureColorTextCooldownB"] = 0.5,
@@ -6730,19 +8547,19 @@ atrocityUI.VMRT["1440p"] = {
 				["visibilityGeneral"] = true,
 				["textureColorTextCastB"] = 0.5,
 				["textureColorBackgroundDefaultG"] = 1,
-				["fontCenterOutline"] = true,
+				["fontRightName"] = "Interface\\AddOns\\ElvUI\\Core\\Media\\Fonts\\Expressway.ttf",
 				["visibilityPartyType"] = 2,
 				["visibilityDisableBG"] = true,
-				["fontRightName"] = "Interface\\AddOns\\ElvUI\\Core\\Media\\Fonts\\Expressway.ttf",
+				["textureColorTimeLineActiveR"] = 1,
 				["textureColorTimeLineCooldownG"] = 1,
 				["textureClassText"] = true,
-				["textureColorTimeLineActiveR"] = 1,
-				["textureColorTimeLineDefaultR"] = 1,
 				["textureColorTextActiveB"] = 0.5,
+				["textureColorTimeLineDefaultR"] = 1,
 				["methodsDisableActive"] = true,
+				["textureColorBackgroundCooldownG"] = 1,
 				["fontIconCDOutline"] = true,
 				["fontCenterSize"] = 14,
-				["textureColorBackgroundCooldownG"] = 1,
+				["textureClassTimeLine"] = false,
 				["textureColorTimeLineDefaultB"] = 1,
 				["frameScale"] = 100,
 				["frameWidth"] = 160,
@@ -6757,8 +8574,8 @@ atrocityUI.VMRT["1440p"] = {
 				["textureColorTimeLineCastB"] = 1,
 				["textureBorderSize"] = 0,
 				["fontIconCDName"] = "Interface\\AddOns\\ElvUI\\Core\\Media\\Fonts\\Expressway.ttf",
-				["textureColorTimeLineDefaultG"] = 1,
 				["fontLeftOutline"] = true,
+				["textureColorTimeLineDefaultG"] = 1,
 				["textureAlphaBackground"] = 0,
 				["textureColorBackgroundDefaultB"] = 1,
 				["textureFile"] = "Interface\\Addons\\AtrocityMedia\\Atrocity.tga",
@@ -6767,7 +8584,7 @@ atrocityUI.VMRT["1440p"] = {
 				["methodsTimeLineAnimation"] = 1,
 				["methodsReverseSorting"] = true,
 				["methodsAlphaNotInRangeNum"] = 49,
-				["textureClassTimeLine"] = false,
+				["frameAnchorBottom"] = true,
 				["fontName"] = "Interface\\AddOns\\ElvUI\\Media\\Fonts\\Expressway.ttf",
 				["fontCenterName"] = "Interface\\AddOns\\ElvUI\\Core\\Media\\Fonts\\Expressway.ttf",
 				["textureColorTimeLineActiveG"] = 1,
@@ -6776,11 +8593,13 @@ atrocityUI.VMRT["1440p"] = {
 				["textureColorTextCooldownR"] = 1,
 				["textTemplateRight"] = "",
 				["textureColorTextDefaultR"] = 1,
-				["textTemplateLeft"] = "%name% %time%",
-				["frameColumns"] = 1,
+				["textTemplateLeft"] = "%name_time%",
+				["fontOtherAvailable"] = true,
 				["textureAlphaCooldown"] = 0.75,
 			}, -- [11]
 		},
+		["Left"] = 452.8424072265625,
+		["upd4380"] = true,
 		["OptFav"] = {
 		},
 	},
@@ -6863,14 +8682,22 @@ atrocityUI.VMRT["1440p"] = {
 	},
 	["Addon"] = {
 		["migrateMRT"] = true,
-		["Version"] = 4760,
+		["Version"] = 4810,
 		["Scale"] = 1,
 		["IconMiniMapHide"] = true,
-		["PreVersion"] = 4760,
+		["PreVersion"] = 4810,
 		["Timer"] = 0.1,
 	},
 	["Marks"] = {
 		["list"] = {
+		},
+	},
+	["BossWatcher"] = {
+		["optionsDamageGraph"] = true,
+		["fightsNum"] = 2,
+		["optionsPositionsDist"] = true,
+		["optionsHealingGraph"] = true,
+		["trackingDamageSpells"] = {
 		},
 	},
 	["LootHistory"] = {
@@ -6882,55 +8709,24 @@ atrocityUI.VMRT["1440p"] = {
 		["list"] = {
 		},
 	},
+	["Profile"] = "AtrocityUI",
+	["LootLink"] = {
+	},
+	["RaidGroups"] = {
+		["KeepPosInGroup"] = true,
+		["upd4550"] = true,
+		["importType"] = 3,
+		["profiles"] = {
+		},
+	},
 	["Profiles"] = {
 		["default"] = {
-			["Timers"] = {
-				["specTimes"] = {
-					[62] = 10,
-					[63] = 10,
-					[250] = 10,
-					[251] = 10,
-					[64] = 10,
-					[253] = 10,
-					[65] = 10,
-					[255] = 10,
-					[66] = 10,
-					[257] = 10,
-					[258] = 10,
-					[259] = 10,
-					[260] = 10,
-					[261] = 25,
-					[262] = 16,
-					[263] = 10,
-					[264] = 10,
-					[265] = 22,
-					[266] = 10,
-					[267] = 10,
-					[268] = 10,
-					[269] = 10,
-					[270] = 10,
-					[70] = 10,
-					[102] = 10,
-					[71] = 10,
-					[103] = 10,
-					[72] = 10,
-					[104] = 10,
-					[73] = 10,
-					[252] = 10,
-					[105] = 10,
-					[254] = 10,
-					[256] = 10,
-					[577] = 10,
-					[581] = 10,
-				},
-				["Type"] = 2,
-				["timeToKillAnalyze"] = 15,
-				["Left"] = 379.2945556640625,
-				["Top"] = 235.8606109619141,
-				["DisableRW"] = true,
-				["Scale"] = 99,
-				["Alpha"] = 100,
+			["BattleRes"] = {
+				["Top"] = 70.00016784667969,
 				["Strata"] = "HIGH",
+				["Scale"] = 100,
+				["Left"] = 456.994873046875,
+				["Alpha"] = 100,
 			},
 			["Encounter"] = {
 				["names"] = {
@@ -6948,10 +8744,16 @@ atrocityUI.VMRT["1440p"] = {
 					[1808] = "God-King Skovald",
 					[2590] = "The Primal Council",
 					[1682] = "Ner'zhul",
+					[1746] = "Witherbark",
 					[2592] = "Sennarth, The Cold Breath",
+					[2084] = "Priestess Alun'za",
+					[2085] = "Vol'kaal",
 					[1748] = "Grimrail Enforcers",
+					[2086] = "Rezan",
+					[2087] = "Yazma",
 					[1749] = "Fleshrender Nok'gar",
 					[1750] = "Oshir",
+					[1751] = "Archmage Sol",
 					[1815] = "Tirathon Saltheril",
 					[1688] = "Nhallish",
 					[1816] = "Ash'Golm",
@@ -6963,8 +8765,10 @@ atrocityUI.VMRT["1440p"] = {
 					[2609] = "Melidrussa Chillworn",
 					[2610] = "Magmatusk",
 					[2356] = "Ventunax",
+					[1756] = "Yalnu",
 					[2357] = "Kin-Tara",
 					[2358] = "Oryphrion",
+					[1757] = "Ancient Protectors",
 					[2359] = "Devos, Paragon of Loyalty",
 					[2360] = "Kryxis the Voracious",
 					[2361] = "Executor Tarvold",
@@ -6976,23 +8780,36 @@ atrocityUI.VMRT["1440p"] = {
 					[2112] = "Sporecaller Zancha",
 					[2623] = "Kyrakka and Erkhart Stormvein",
 					[2017] = "Viz'aduum the Watcher",
+					[2114] = "Soulbound Goliath",
 					[1954] = "Maiden of Virtue",
-					[2118] = "Cragmaw the Infested",
-					[1957] = "Opera Hall",
 					[1439] = "Sha of Doubt",
-					[2123] = "Unbound Abomination",
+					[2116] = "Lord and Lady Waycrest",
 					[1418] = "Wise Mari",
+					[2117] = "Gorak Tul",
 					[2617] = "Khajin the Unyielding",
+					[2118] = "Cragmaw the Infested",
 					[1809] = "Odyn",
-					[2380] = "Echelon",
-					[1041] = "Altairus",
-					[2381] = "Lord Chamberlain",
-					[2096] = "Lord Harlan Sweete",
-					[2382] = "Globgrog",
+					[1043] = "Grand Vizier Ertan",
+					[2111] = "Elder Leaxa",
 					[1679] = "Bonemaw",
-					[2383] = "Hungering Destroyer",
+					[2096] = "Lord Harlan Sweete",
+					[1957] = "Opera Hall",
+					[2094] = "Council o' Captains",
+					[1416] = "Liu Flameheart",
 					[2093] = "Skycap'n Kragg",
+					[2123] = "Unbound Abomination",
+					[1805] = "Hymdall",
+					[2380] = "Echelon",
+					[2312] = "Trixie & Naeno",
+					[1959] = "Mana Devourer",
+					[2095] = "Ring of Booty",
+					[2636] = "The Raging Tempest",
+					[2616] = "Gulping Goliath",
+					[2382] = "Globgrog",
+					[1705] = "Imperator Mar'gok",
+					[2383] = "Hungering Destroyer",
 					[2384] = "Doctor Ickus",
+					[1961] = "Moroes",
 					[2257] = "Tussle Tonks",
 					[2385] = "Domina Venomblade",
 					[2258] = "K.U.-J.0.",
@@ -7001,60 +8818,60 @@ atrocityUI.VMRT["1440p"] = {
 					[2387] = "Blightbone",
 					[2260] = "King Mechagon",
 					[2388] = "Amarth, The Harvester",
-					[1960] = "Attumen the Huntsman",
 					[2389] = "Surgeon Stitchflesh",
-					[1416] = "Liu Flameheart",
+					[1836] = "Archdruid Glaidalis",
+					[1837] = "Oakheart",
 					[2390] = "Nalthor the Rimebinder",
-					[1959] = "Mana Devourer",
-					[2391] = "An Affront of Challengers",
-					[2636] = "The Raging Tempest",
-					[2392] = "Mistcaller",
-					[2095] = "Ring of Booty",
-					[2393] = "Tred'ova",
-					[2312] = "Trixie & Naeno",
-					[2394] = "The Manastorms",
-					[1961] = "Moroes",
-					[2395] = "Hakkar, the Soulflayer",
-					[2618] = "Primal Tsunami",
-					[2396] = "Mueh'zala",
-					[1705] = "Imperator Mar'gok",
-					[2397] = "Ingra Maloch",
-					[2614] = "Broodkeeper Diurna",
-					[2398] = "Shriekwing",
-					[1677] = "Sadana Bloodfury",
-					[2399] = "Sludgefist",
-					[2639] = "Terros",
-					[2400] = "Dealer Xy'exa",
 					[2436] = "Guardian of the First Ones",
+					[2391] = "An Affront of Challengers",
+					[2392] = "Mistcaller",
+					[1965] = "Shade of Medivh",
+					[1838] = "Dresaron",
+					[2393] = "Tred'ova",
+					[2618] = "Primal Tsunami",
+					[2394] = "The Manastorms",
+					[2434] = "Soulrender Dormazain",
+					[1839] = "Shade of Xavius",
+					[1677] = "Sadana Bloodfury",
+					[2396] = "Mueh'zala",
+					[2433] = "The Eye of the Jailer",
+					[2397] = "Ingra Maloch",
+					[2639] = "Terros",
+					[2398] = "Shriekwing",
+					[2432] = "Remnant of Ner'zhul",
+					[2399] = "Sludgefist",
+					[2614] = "Broodkeeper Diurna",
+					[2400] = "Dealer Xy'exa",
+					[1715] = "Rocketspark and Borka",
 					[2401] = "Halkias, the Sin-Stained Goliath",
 					[2529] = "Halondrus the Reclaimer",
 					[2402] = "Sun King's Salvation",
-					[1806] = "Hyrja",
+					[1793] = "Dargrul the Underking",
 					[2403] = "High Adjudicator Aleez",
-					[1964] = "The Curator",
+					[2685] = "Scalecommander Sarkareth",
 					[2404] = "Mordretha",
-					[1715] = "Rocketspark and Borka",
+					[2635] = "Dathea, Ascended",
 					[2405] = "Artificer Xy'mox",
-					[2434] = "Soulrender Dormazain",
+					[2684] = "Echo of Neltharion",
 					[2406] = "Lady Inerva Darkvein",
-					[2613] = "Chargath, Bane of Scales",
+					[1792] = "Naraxas",
 					[2407] = "Sire Denathrius",
-					[2433] = "The Eye of the Jailer",
+					[2395] = "Hakkar, the Soulflayer",
 					[2512] = "Vigilant Guardian",
-					[2432] = "Remnant of Ner'zhul",
-					[2615] = "Watcher Irideus",
+					[1806] = "Hyrja",
+					[2613] = "Chargath, Bane of Scales",
 					[2537] = "The Jailer",
 					[1719] = "Twin Ogron",
-					[2611] = "Warlord Sargha",
+					[2615] = "Watcher Irideus",
 					[2637] = "Granyth",
 					[2539] = "Lihuvim, Principal Architect",
 					[1720] = "Brackenspore",
 					[2540] = "Dausegne, the Fallen Oracle",
-					[2685] = "Scalecommander Sarkareth",
-					[1850] = "Inquisitor Tormentorum",
+					[2425] = "Zo'phex the Sentinel",
+					[2412] = "The Council of Blood",
 					[1721] = "Kargath Bladefist",
 					[2542] = "Skolex, the Insatiable Ravener",
-					[2684] = "Echo of Neltharion",
+					[1850] = "Inquisitor Tormentorum",
 					[2543] = "Lords of Dread",
 					[1722] = "Tectus, The Living Mountain",
 					[2544] = "Prototype Pantheon",
@@ -7064,20 +8881,20 @@ atrocityUI.VMRT["1440p"] = {
 					[2546] = "Anduin Wrynn",
 					[2419] = "Timecap'n Hooktail",
 					[2292] = "Gunker",
-					[2412] = "The Council of Blood",
 					[1706] = "The Butcher",
-					[2291] = "HK-8 Aerial Oppression Unit",
+					[2611] = "Warlord Sargha",
+					[1723] = "Ko'ragh",
 					[2549] = "Rygelon",
 					[2422] = "Kel'Thuzad",
-					[1723] = "Ko'ragh",
+					[2291] = "HK-8 Aerial Oppression Unit",
 					[2423] = "The Tarragrue",
 					[2612] = "Forgemaster Gorek",
 					[2424] = "Mailroom Mayhem",
-					[2425] = "Zo'phex the Sentinel",
+					[1790] = "Rokmora",
 					[2680] = "Rashok, the Elder",
 					[2553] = "Artificer Xy'mox",
 					[2426] = "Hylbrande",
-					[1965] = "Shade of Medivh",
+					[1791] = "Ularogg Cragshaper",
 					[2682] = "Assault of the Zaqali",
 					[2555] = "The Lost Dwarves",
 					[2683] = "Magmorax",
@@ -7089,9 +8906,9 @@ atrocityUI.VMRT["1440p"] = {
 					[2431] = "Fatescribe Roh-Kalo",
 					[2559] = "Chrono-Lord Deios",
 					[2687] = "The Amalgamation Chamber",
-					[2635] = "Dathea, Ascended",
-					[2688] = "Kazzara, the Hellforged",
 					[1817] = "Glazer",
+					[2688] = "Kazzara, the Hellforged",
+					[1964] = "The Curator",
 					[2689] = "The Vigilant Steward, Zskarn",
 					[2562] = "Vexamus",
 					[2435] = "Sylvanas Windrunner",
@@ -7101,8 +8918,8 @@ atrocityUI.VMRT["1440p"] = {
 					[2437] = "So'azmi",
 					[2565] = "Echo of Doragosa",
 					[2693] = "The Forgotten Experiments",
-					[2616] = "Gulping Goliath",
-					[1805] = "Hymdall",
+					[1960] = "Attumen the Huntsman",
+					[2381] = "Lord Chamberlain",
 					[2567] = "Gutshot",
 					[2440] = "Myza's Oasis",
 					[2568] = "Treemouth",
@@ -7110,13 +8927,13 @@ atrocityUI.VMRT["1440p"] = {
 					[2569] = "Decatriarch Wratheye",
 					[2442] = "So'leah",
 					[2570] = "Hackclaw's War-Band",
-					[2094] = "Council o' Captains",
+					[1041] = "Altairus",
 					[1417] = "Lorewalker Stonestep",
 					[1736] = "Skylord Tovra",
-					[2111] = "Elder Leaxa",
-					[1043] = "Grand Vizier Ertan",
-					[2063] = "Aggramar",
+					[2113] = "Heartsbane Triad",
 					[1042] = "Asaad",
+					[2063] = "Aggramar",
+					[2115] = "Raal the Gluttonous",
 				},
 				["list"] = {
 					["Atrocityhunt"] = {
@@ -7135,681 +8952,7 @@ atrocityUI.VMRT["1440p"] = {
 						"^2612^8^1685131275^112^1^5^428.99^", -- [9]
 						"^2611^8^1685131621^120^1^5^428.99^", -- [10]
 					},
-					["Atrocitynoir"] = {
-						"^2111^8^1686016371^66^1^5^420.36^", -- [1]
-						"^2118^8^1686016912^93^1^5^420.36^", -- [2]
-						"^2112^8^1686017185^115^1^5^420.36^", -- [3]
-						"^2123^8^1686017634^107^1^5^420.36^Atrocitynoir", -- [4]
-						"^2111^8^1686066303^69^1^5^424.82^", -- [5]
-						"^2118^8^1686066563^122^0^5^424.82^Dankscale-Illidan", -- [6]
-						"^2118^8^1686066732^118^1^5^424.82^", -- [7]
-						"^2112^8^1686066944^102^1^5^424.82^", -- [8]
-						"^2123^8^1686067315^152^1^5^424.82^Kíngfly-Illidan", -- [9]
-					},
-					["Atrocityfive"] = {
-						"^1868^8^1671408114^77^1^5^400.34^", -- [1]
-						"^1869^8^1671408731^64^1^5^400.34^", -- [2]
-						"^1870^8^1671408997^93^1^5^400.34^", -- [3]
-						"^2637^8^1671424741^102^1^5^402.06^", -- [4]
-						"^2636^8^1671425123^107^1^5^402.06^", -- [5]
-						"^2581^8^1671425762^93^1^5^402.06^Imfiredup", -- [6]
-						"^2580^8^1671426139^168^1^5^402.06^Slapplugia", -- [7]
-						"^2635^15^1671428627^242^0^30^382.87^Moralewar-Destromath", -- [8]
-						"^2635^15^1671428940^267^1^30^384.62^Lôrdsauron", -- [9]
-						"^2614^15^1671429339^11^0^30^383.50^Benwtwo", -- [10]
-						"^2614^15^1671429411^399^1^30^384.28^Ericfour", -- [11]
-						"^1677^8^1671477352^115^1^5^402.10^", -- [12]
-						"^1688^8^1671477685^98^1^5^402.10^Drcornman", -- [13]
-						"^1679^8^1671478050^70^1^5^402.10^Atrocityfive", -- [14]
-						"^1682^8^1671478232^125^1^5^402.10^", -- [15]
-						"^1868^8^1671478880^98^1^5^402.10^Atrocityfive", -- [16]
-						"^1869^8^1671479619^70^1^5^402.10^", -- [17]
-						"^1870^8^1671479869^119^1^5^402.10^Atrocityfive", -- [18]
-						"^1805^8^1671480773^116^1^5^402.72^", -- [19]
-						"^1806^8^1671481170^196^1^5^402.72^Goopd", -- [20]
-						"^1807^8^1671481573^63^0^5^402.72^", -- [21]
-						"^1807^8^1671481699^99^1^5^402.72^", -- [22]
-						"^1808^8^1671482275^112^1^5^402.72^", -- [23]
-						"^1809^8^1671482435^58^0^5^402.72^Atrocityfive", -- [24]
-						"^1809^8^1671482578^125^1^5^402.72^Kspfish", -- [25]
-						"^1868^8^1671483295^79^1^5^402.54^Drcornman", -- [26]
-						"^1869^8^1671483880^62^1^5^402.54^", -- [27]
-						"^1870^8^1671484105^70^1^5^402.54^", -- [28]
-						"^1677^8^1671484763^127^1^5^402.54^", -- [29]
-						"^1688^8^1671485010^90^1^5^402.54^", -- [30]
-						"^1679^8^1671485401^146^1^5^402.54^Drcornman", -- [31]
-						"^1682^8^1671485665^160^1^5^402.09^Kspfish", -- [32]
-						"^2562^8^1671489014^129^1^5^403.25^", -- [33]
-						"^2564^8^1671489654^162^1^5^403.25^", -- [34]
-						"^2563^8^1671489872^139^0^5^403.25^Atrocityfive", -- [35]
-						"^2563^8^1671490209^58^0^5^403.25^Goopd", -- [36]
-						"^2563^8^1671490322^174^1^5^403.25^", -- [37]
-						"^2565^8^1671490757^164^1^5^403.25^Tgatty", -- [38]
-						"^1418^8^1671492824^184^1^5^403.38^Atrocityfive", -- [39]
-						"^1417^8^1671493378^121^1^5^403.38^", -- [40]
-						"^1416^8^1671494036^132^1^5^403.38^", -- [41]
-						"^1439^8^1671494584^154^1^5^403.38^", -- [42]
-						"^2590^14^1671495633^192^1^30^377.50^Shelynddora", -- [43]
-						"^2635^14^1671496240^223^1^30^382.23^Faevelina-ShadowCouncil", -- [44]
-						"^2592^14^1671496699^0^0^30^383.26^", -- [45]
-						"^2592^14^1671496771^241^1^30^383.43^Fungdrag-EmeraldDream", -- [46]
-						"^2605^14^1671497146^0^0^30^383.78^", -- [47]
-						"^2605^14^1671497188^284^1^30^383.78^Fungdrag-EmeraldDream", -- [48]
-						"^2614^14^1671497682^0^0^30^384.94^", -- [49]
-						"^2614^14^1671497787^362^1^30^385.06^Fungdrag-EmeraldDream", -- [50]
-						"^2607^14^1671498548^602^1^30^386.37^Ezcamada-Azralon", -- [51]
-						"^2590^15^1671499922^0^0^30^390.38^", -- [52]
-						"^2590^15^1671499954^269^0^30^390.38^Marcrützou", -- [53]
-						"^2590^15^1671500356^238^1^30^389.45^Venamous-Ner'zhul", -- [54]
-						"^1868^8^1671502396^101^1^5^403.23^", -- [55]
-						"^1869^8^1671502943^0^0^5^403.23^", -- [56]
-						"^1869^8^1671503081^74^1^5^403.23^", -- [57]
-						"^1870^8^1671503364^106^1^5^403.23^Marcrützou", -- [58]
-						"^1805^8^1671504183^139^1^5^403.38^", -- [59]
-						"^1806^8^1671504723^291^0^5^403.38^Goopd", -- [60]
-						"^1806^8^1671505086^130^1^5^403.38^", -- [61]
-						"^1807^8^1671505516^70^0^5^403.38^", -- [62]
-						"^1807^8^1671505685^108^1^5^403.38^", -- [63]
-						"^1808^8^1671506404^128^1^5^403.38^", -- [64]
-						"^1809^8^1671506579^137^1^5^403.38^", -- [65]
-						"^2562^8^1671519426^135^1^5^403.75^Marcrützou", -- [66]
-						"^2563^8^1671519750^84^0^5^403.75^Jacobseven", -- [67]
-						"^2563^8^1671519874^87^0^5^403.75^Atrocityfive", -- [68]
-						"^2563^8^1671520001^114^0^5^403.75^Jacobseven", -- [69]
-						"^2563^8^1671520192^142^1^5^403.75^", -- [70]
-						"^2564^8^1671520666^138^1^5^403.75^", -- [71]
-						"^2565^8^1671521161^158^1^5^403.75^Atrocityfive", -- [72]
-						"^2609^8^1671522231^160^1^5^403.38^", -- [73]
-						"^2606^8^1671523217^70^0^5^402.96^Smackedwb", -- [74]
-						"^2606^8^1671523332^81^0^5^402.97^Smackedwb", -- [75]
-						"^2606^8^1671523455^140^0^5^405.69^Jacobseven", -- [76]
-						"^2587^15^1671567474^169^1^30^380.02^Mileycyris-Kael'thas", -- [77]
-						"^2590^15^1671568052^5^0^30^380.32^", -- [78]
-						"^2590^15^1671568106^198^1^30^380.32^Huwkeyez-Mal'Ganis", -- [79]
-						"^2639^15^1671568647^0^0^30^391.13^", -- [80]
-						"^2639^15^1671568703^241^1^30^391.13^Adåm-MoonGuard", -- [81]
-						"^2592^15^1671569137^0^0^30^391.20^", -- [82]
-						"^2592^15^1671569180^258^1^30^391.03^Podra", -- [83]
-						"^2605^15^1671569557^6^0^29^390.93^Atrocityfive", -- [84]
-						"^2605^15^1671569663^312^1^30^390.55^Selliane-Stormrage", -- [85]
-						"^2635^15^1671570728^0^0^30^388.49^", -- [86]
-						"^2635^15^1671571540^299^1^30^376.87^Guitson-Azralon", -- [87]
-						"^2614^15^1671571994^0^0^30^377.68^", -- [88]
-						"^2614^15^1671572177^525^0^30^377.63^Podra", -- [89]
-						"^2614^15^1671572911^411^1^30^377.40^Podra", -- [90]
-						"^2607^15^1671586759^612^1^30^384.30^Ericsenior", -- [91]
-						"^2582^8^1671592997^171^1^5^406.11^", -- [92]
-						"^2585^8^1671593621^38^0^5^406.11^Atlasdk", -- [93]
-						"^2585^8^1671593905^136^0^5^406.11^Atrocityfive", -- [94]
-						"^2585^8^1671594208^8^0^5^406.11^", -- [95]
-						"^2585^8^1671594252^225^1^5^406.11^Atrocityfive", -- [96]
-						"^2583^8^1671594798^217^1^5^406.11^Tgatty", -- [97]
-						"^2584^8^1671595039^85^0^5^406.11^Sangwing", -- [98]
-						"^2584^8^1671595186^217^1^5^406.11^", -- [99]
-						"^1868^8^1671601807^140^1^5^407.17^Cdznutz", -- [100]
-						"^1869^8^1671602526^92^1^5^407.17^", -- [101]
-						"^1870^8^1671602795^406^1^5^407.17^Mellamolip", -- [102]
-						"^2607^16^1671652788^38^0^20^406.35^Trilltwo", -- [103]
-						"^2607^16^1671652943^290^0^20^406.37^Peepiceek", -- [104]
-						"^2607^16^1671653750^141^0^20^406.27^Baboomfive", -- [105]
-						"^2607^16^1671654095^111^0^20^406.27^Drcornman", -- [106]
-						"^2607^16^1671654280^165^0^20^406.27^Drenacochad", -- [107]
-						"^2607^16^1671654648^215^0^20^406.27^Slapplugia", -- [108]
-						"^2607^16^1671655051^368^0^20^406.27^Imexileb", -- [109]
-						"^2607^16^1671656883^5^0^20^408.93^", -- [110]
-						"^2607^16^1671658756^45^0^20^408.97^Kspfish", -- [111]
-						"^2607^16^1671658940^154^0^20^408.87^Trilltwo", -- [112]
-						"^2607^16^1671659277^271^0^20^408.87^Ericsmagetwo", -- [113]
-						"^2607^16^1671659650^248^0^20^408.87^Drineytwo", -- [114]
-						"^2607^16^1671659981^143^0^20^408.97^Scótt", -- [115]
-						"^2607^16^1671660376^196^0^20^410.31^Drineytwo", -- [116]
-						"^2607^16^1671660757^205^0^20^408.73^Atrocityfive", -- [117]
-						"^2607^16^1671661070^334^0^20^408.87^Impecs", -- [118]
-						"^2607^16^1671661654^337^0^20^408.51^Drenacochad", -- [119]
-						"^2607^16^1671662143^291^0^20^408.87^Nickspriestb", -- [120]
-						"^2607^16^1671662682^107^0^20^408.73^Drineytwo", -- [121]
-						"^2607^16^1671662870^302^0^20^408.73^Atrocityfive", -- [122]
-						"^2607^16^1671663275^316^0^20^408.52^Drcornman", -- [123]
-						"^2607^16^1671663756^286^0^20^408.65^Drenacochad", -- [124]
-						"^2607^16^1671666702^166^0^20^408.87^Trilltwo", -- [125]
-						"^2607^16^1671666955^242^0^20^408.82^Splatthree", -- [126]
-						"^2607^16^1671667276^212^0^20^408.62^Nickspriestb", -- [127]
-						"^2607^16^1671667602^105^0^20^408.73^Drcornman", -- [128]
-						"^2607^16^1671667785^286^0^20^408.73^Impecs", -- [129]
-						"^2607^16^1671668494^295^0^20^408.59^Trilltwo", -- [130]
-						"^2607^16^1671669182^75^0^20^408.62^Splatthree", -- [131]
-						"^2607^16^1671669458^267^0^20^408.66^Ericsmagetwo", -- [132]
-						"^2607^16^1671669826^358^0^20^408.39^Imfiredup", -- [133]
-						"^2607^16^1671670363^289^0^20^408.68^Nickspriestb", -- [134]
-						"^2607^16^1671670806^313^0^20^408.73^Ericsmagetwo", -- [135]
-						"^2607^16^1671671342^387^0^20^408.25^Imfiredup", -- [136]
-						"^2607^16^1671672541^316^0^20^408.73^Ericsmagetwo", -- [137]
-						"^2607^16^1671673180^214^0^20^408.73^Nickspriestb", -- [138]
-						"^2607^16^1671673482^107^0^20^408.73^Kspfish", -- [139]
-						"^2607^16^1671673661^332^0^20^408.73^Baboomfive", -- [140]
-						"^2607^16^1671674128^306^0^20^408.74^Trilltwo", -- [141]
-						"^2607^16^1671674630^195^0^20^408.62^Drcornman", -- [142]
-						"^2607^16^1671674915^371^0^20^408.60^Nickspriestb", -- [143]
-						"^2607^16^1671675357^301^0^20^408.53^Baboomfive", -- [144]
-						"^2607^16^1671675764^470^0^20^408.42^Drcornman", -- [145]
-						"^2607^16^1671677360^281^0^20^408.66^Ericsmagetwo", -- [146]
-						"^2607^16^1671677767^104^0^20^408.73^Kspfish", -- [147]
-						"^2607^16^1671678016^302^0^20^408.06^Imexileb", -- [148]
-						"^2607^16^1671678452^157^0^20^407.99^Drenacochad", -- [149]
-						"^2607^16^1671678696^147^0^20^407.99^Atrocityfive", -- [150]
-						"^2607^16^1671679000^287^0^20^407.99^Imfiredup", -- [151]
-						"^2607^16^1671679559^367^0^20^408.59^Mellamolip", -- [152]
-						"^2607^16^1671680143^457^0^20^408.49^Impecs", -- [153]
-						"^2607^16^1671681114^407^0^20^408.60^Ericsmagetwo", -- [154]
-						"^2607^16^1671681623^307^0^20^408.67^Imexileb", -- [155]
-						"^2607^16^1671682106^207^0^20^408.75^Drineytwo", -- [156]
-						"^2607^16^1671684476^301^0^20^408.64^Imexileb", -- [157]
-						"^2607^16^1671684892^205^0^20^408.40^Drineytwo", -- [158]
-						"^2607^16^1671685211^188^0^20^408.62^Ericsmagetwo", -- [159]
-						"^2607^16^1671685515^294^0^20^408.44^Drcornman", -- [160]
-						"^2607^16^1671685917^315^0^20^408.44^Impecs", -- [161]
-						"^2607^16^1671686323^219^0^20^408.57^Impecs", -- [162]
-						"^2607^16^1671686617^136^0^20^408.80^Baboomfive", -- [163]
-						"^2607^16^1671686848^310^0^20^408.94^Nickspriestb", -- [164]
-						"^2607^16^1671687289^310^0^20^408.62^Drineytwo", -- [165]
-						"^2607^16^1671687767^169^0^20^408.72^Jpc", -- [166]
-						"^2607^16^1671688002^459^0^20^408.57^Drineytwo", -- [167]
-						"^2607^16^1671688806^255^0^20^408.84^Splatthree", -- [168]
-						"^2607^16^1671689118^414^0^20^408.84^Baboomfive", -- [169]
-						"^2607^16^1671689799^52^0^20^408.31^Drineytwo", -- [170]
-						"^2607^16^1671689950^359^0^20^408.34^Jpc", -- [171]
-						"^2607^16^1671690426^212^0^20^408.84^Drenacochad", -- [172]
-						"^2607^16^1671690799^24^0^20^385.79^Kspfish", -- [173]
-						"^2607^16^1671690932^511^0^20^384.63^Drineytwo", -- [174]
-						"^2607^16^1671692063^480^0^20^408.62^Jpc", -- [175]
-						"^2607^16^1671692866^358^0^20^408.72^Imfiredup", -- [176]
-						"^2607^16^1671693318^211^0^20^408.42^Atrocityfive", -- [177]
-						"^2607^16^1671693716^49^0^20^408.42^Kspfish", -- [178]
-						"^2607^16^1671693850^108^0^20^408.42^Baboomfive", -- [179]
-						"^2607^16^1671694021^37^0^20^408.42^Imfiredup", -- [180]
-						"^2607^16^1671694826^206^0^20^408.95^Kspfish", -- [181]
-						"^2607^16^1671695143^105^0^20^409.09^Imfiredup", -- [182]
-						"^2607^16^1671695320^511^0^20^409.09^Atrocityfive", -- [183]
-						"^2607^16^1671695950^53^0^20^408.86^Benw", -- [184]
-						"^2607^16^1671696101^301^0^20^408.86^Baboomfive", -- [185]
-						"^2607^16^1671696551^230^0^20^408.31^Ericsmagetwo", -- [186]
-						"^2607^16^1671696866^25^0^20^408.79^Nickspriestb", -- [187]
-						"^2607^16^1671696977^110^0^20^408.79^Drenacochad", -- [188]
-						"^2607^16^1671697219^418^0^20^408.79^Drenacochad", -- [189]
-						"^2607^16^1671697775^363^0^20^408.81^Drcornman", -- [190]
-						"^2607^16^1671698321^384^0^20^408.65^Trilltwo", -- [191]
-						"^2607^16^1671698825^211^0^20^408.84^Drenacochad", -- [192]
-						"^2607^16^1671699123^209^0^20^408.77^Trilltwo", -- [193]
-						"^2607^16^1671699416^184^0^20^408.77^Baboomfive", -- [194]
-						"^2607^16^1671699679^450^0^20^408.93^Baboomfive", -- [195]
-						"^2607^16^1671736182^356^0^20^408.67^Atrocityfive", -- [196]
-						"^2607^16^1671736688^60^0^20^408.43^Imfiredup", -- [197]
-						"^2607^16^1671736905^516^0^20^408.31^Nickspriestb", -- [198]
-						"^2607^16^1671737755^455^0^20^408.45^Trilltwo", -- [199]
-						"^2607^16^1671738432^598^0^20^408.87^Ericsmagetwo", -- [200]
-						"^2607^16^1671739586^99^0^20^408.78^Slapplugia", -- [201]
-						"^2607^16^1671739773^210^0^20^408.78^Drenacochad", -- [202]
-						"^2607^16^1671740078^219^0^20^408.78^Nickspriestb", -- [203]
-						"^2607^16^1671740397^532^0^20^408.82^Trilltwo", -- [204]
-						"^2607^16^1671741022^18^0^20^408.47^Drenacochad", -- [205]
-						"^2607^16^1671741413^149^0^20^408.78^Ericsmagetwo", -- [206]
-						"^2607^16^1671741649^524^0^20^408.83^Kspfish", -- [207]
-						"^2607^16^1671742382^487^0^20^408.90^Baboomfive", -- [208]
-						"^2607^16^1671743118^24^0^20^399.00^Imfiredup", -- [209]
-						"^2607^16^1671743268^321^0^20^399.00^Peepiceek", -- [210]
-						"^2607^16^1671743697^207^0^20^409.14^Ericsmagetwo", -- [211]
-						"^2607^16^1671744075^598^0^20^409.14^Kspfish", -- [212]
-						"^2607^16^1671746510^591^0^20^409.04^Splatthree", -- [213]
-						"^2607^16^1671747412^308^0^20^409.02^Atrocityfive", -- [214]
-						"^2607^16^1671747821^607^0^20^410.81^Drenacochad", -- [215]
-						"^2607^16^1671749382^553^0^20^408.88^Kspfish", -- [216]
-						"^2607^16^1671750083^101^0^20^408.58^Imfiredup", -- [217]
-						"^2607^16^1671750328^481^0^20^408.65^Cdznutz", -- [218]
-						"^2607^16^1671753085^219^0^20^409.00^Splatthree", -- [219]
-						"^2607^16^1671753423^481^0^20^409.00^Slapplugia", -- [220]
-						"^2607^16^1671754044^343^0^20^408.68^Drenacochad", -- [221]
-						"^2607^16^1671754713^277^0^20^409.04^Slapplugia", -- [222]
-						"^2607^16^1671755173^169^0^20^409.19^Nickspriestb", -- [223]
-						"^2607^16^1671755449^620^0^20^409.19^Drcornman", -- [224]
-						"^2607^16^1671756698^607^0^20^389.75^Cdznutz", -- [225]
-						"^2607^16^1671757712^590^0^20^408.93^Rikudelts", -- [226]
-						"^2607^16^1671758435^611^0^20^408.90^Drineytwo", -- [227]
-						"^2607^16^1671759334^620^0^20^409.12^Atrocityfive", -- [228]
-						"^2607^16^1671760476^530^0^20^408.90^Kspfish", -- [229]
-						"^2607^16^1671761232^608^0^20^408.94^Imexileb", -- [230]
-						"^2607^16^1671762021^249^0^20^408.86^Slapplugia", -- [231]
-						"^2607^16^1671762427^128^0^20^408.83^Impecs", -- [232]
-						"^2607^16^1671762631^728^0^20^408.69^Cdznutz", -- [233]
-						"^2607^16^1671763659^607^0^20^398.30^Cdznutz", -- [234]
-						"^2607^16^1671764498^289^0^20^408.79^Baboomfive", -- [235]
-						"^2607^16^1671764866^104^0^20^408.89^Nickspriestb", -- [236]
-						"^2607^16^1671765060^796^0^20^408.94^Kspfish", -- [237]
-						"^2607^16^1671767268^807^0^20^408.87^Imfiredup", -- [238]
-						"^2607^16^1671768301^305^0^20^408.81^Rikudelts", -- [239]
-						"^2607^16^1671768673^191^0^20^408.91^Trilltwo", -- [240]
-						"^2607^16^1671771514^632^0^20^409.36^Slapplugia", -- [241]
-						"^2607^16^1671772327^757^0^20^408.66^Cdznutz", -- [242]
-						"^2607^16^1671773576^30^0^20^408.94^Nickspriestb", -- [243]
-						"^2607^16^1671773734^535^0^20^409.23^Drcornman", -- [244]
-						"^2607^16^1671774428^274^0^20^408.91^Drenacochad", -- [245]
-						"^2607^16^1671774863^139^0^20^408.98^Drcornman", -- [246]
-						"^2607^16^1671775064^296^0^20^408.98^Peepiceek", -- [247]
-						"^2607^16^1671775448^353^0^20^408.81^Imexileb", -- [248]
-						"^2607^16^1671775889^480^0^20^409.58^Trilltwo", -- [249]
-						"^2607^16^1671776577^551^0^20^409.66^Atrocityfive", -- [250]
-						"^2607^16^1671777423^147^0^20^400.05^Baboomfive", -- [251]
-						"^2607^16^1671777646^794^0^20^400.05^Drenacochad", -- [252]
-						"^2607^16^1671778825^783^0^20^407.65^Nickspriestb", -- [253]
-						"^2607^16^1671780152^459^0^20^408.81^Nickspriestb", -- [254]
-						"^2607^16^1671780835^761^0^20^408.90^Kspfish", -- [255]
-						"^2607^16^1671781847^526^0^20^408.87^Imfiredup", -- [256]
-						"^2607^16^1671782484^303^0^20^408.82^Splatthree", -- [257]
-						"^2607^16^1671782880^508^0^20^408.85^Cdznutz", -- [258]
-						"^2607^16^1671783607^557^0^20^408.82^Baboomfive", -- [259]
-						"^2607^16^1671784325^803^0^20^408.48^Baboomfive", -- [260]
-						"^1677^8^1672117720^159^1^5^399.94^", -- [261]
-						"^1688^8^1672117976^146^1^5^399.94^", -- [262]
-						"^1679^8^1672118352^222^1^5^399.94^", -- [263]
-						"^1682^8^1672118674^184^1^5^400.05^", -- [264]
-						"^1677^8^1672460411^109^1^5^407.56^Atrocityfive", -- [265]
-						"^1688^8^1672460664^116^1^5^407.56^", -- [266]
-						"^1679^8^1672461130^167^1^5^407.56^", -- [267]
-						"^1682^8^1672461481^144^1^5^407.56^", -- [268]
-						"^2607^16^1672788213^22^0^20^412.87^Ericsmagetwo", -- [269]
-						"^2607^16^1672788930^469^0^20^412.80^Ericsmagetwo", -- [270]
-						"^2607^16^1672789875^174^0^20^412.69^Drenacochad", -- [271]
-						"^2607^16^1672790239^310^0^20^412.53^Kspfish", -- [272]
-						"^2607^16^1672790674^127^0^20^413.02^Drcornman", -- [273]
-						"^2607^16^1672790931^623^0^20^412.43^Drineytwo", -- [274]
-						"^2607^16^1672791718^137^0^20^412.37^Baboomfive", -- [275]
-						"^2607^16^1672791923^230^0^20^412.37^Impecs", -- [276]
-						"^2607^16^1672792266^840^0^20^412.44^Jpc", -- [277]
-						"^2607^16^1672793427^142^0^20^412.67^Cdznutz", -- [278]
-						"^2607^16^1672793665^848^0^20^412.67^Kspfish", -- [279]
-						"^2607^16^1672794764^280^0^20^412.18^Trilltwo", -- [280]
-						"^2607^16^1672795157^309^0^20^412.16^Ericsmagetwo", -- [281]
-						"^2607^16^1672795569^875^0^20^412.20^Atrocityfive", -- [282]
-						"^2607^16^1672796684^37^0^20^412.03^Mellamolip", -- [283]
-						"^2607^16^1672796797^152^0^20^412.03^Drenacochad", -- [284]
-						"^2607^16^1672797103^662^0^20^412.03^Nickspriestb", -- [285]
-						"^2607^16^1672797876^401^0^20^411.94^Drineytwo", -- [286]
-						"^2587^15^1673298178^0^0^26^391.85^", -- [287]
-						"^2587^15^1673298414^149^1^30^396.05^Impecdh", -- [288]
-						"^2590^15^1673298947^4^0^30^395.39^", -- [289]
-						"^2590^15^1673299027^176^1^30^395.39^Impecdh", -- [290]
-						"^2635^15^1673299570^265^1^30^394.12^Atrocityfive", -- [291]
-						"^2639^15^1673300097^6^0^29^393.88^", -- [292]
-						"^2639^15^1673300227^225^1^30^395.31^Atlaschi", -- [293]
-						"^2592^15^1673300642^0^0^30^395.37^", -- [294]
-						"^2592^15^1673300723^231^1^30^395.65^Rikunatty", -- [295]
-						"^2605^15^1673300989^5^0^30^395.71^Sang", -- [296]
-						"^2605^15^1673301172^248^1^30^392.93^Impecdh", -- [297]
-						"^2614^15^1673301594^1^0^29^393.79^", -- [298]
-						"^2614^15^1673301869^0^0^30^394.25^", -- [299]
-						"^2614^15^1673301921^339^1^30^394.25^Impecdh", -- [300]
-						"^2607^15^1673302672^591^1^30^394.03^Impecdh", -- [301]
-					},
-					["Atrocityx"] = {
-					},
-					["Atrocitysp"] = {
-					},
-					["Atrocityloki"] = {
-						"^2587^16^1675828976^189^1^20^404.44^Drippygodx", -- [1]
-						"^2590^16^1675829507^7^0^20^401.98^", -- [2]
-						"^2590^16^1675829584^214^1^20^401.98^Egyptianwomn", -- [3]
-						"^2587^16^1677121064^146^1^20^413.38^Gazoo", -- [4]
-						"^2590^16^1677121472^8^0^20^413.36^", -- [5]
-						"^2590^16^1677121612^156^1^20^413.26^", -- [6]
-						"^2635^16^1677122253^252^0^20^413.06^Syzlakdekay", -- [7]
-						"^2635^16^1677122600^346^0^20^413.06^Ratdestroyer", -- [8]
-						"^2635^16^1677123072^427^1^20^413.25^Affine", -- [9]
-						"^2639^16^1677123844^0^0^20^413.66^", -- [10]
-						"^2639^16^1677123914^287^1^20^413.60^Karzastrasza", -- [11]
-						"^2592^16^1677124421^0^0^20^413.90^", -- [12]
-						"^2592^16^1677124522^115^0^20^413.90^Iloveherdude", -- [13]
-						"^2592^16^1677124857^283^0^20^413.61^Flowbss", -- [14]
-						"^2592^16^1677125227^354^1^20^413.66^Ratdestroyer", -- [15]
-						"^2605^16^1677125644^5^0^20^413.66^Tryinggd", -- [16]
-						"^2605^16^1677125988^461^1^20^413.61^Atrocityloki", -- [17]
-						"^1868^8^1677534812^109^1^5^398.91^", -- [18]
-						"^1869^8^1677535571^97^1^5^398.91^", -- [19]
-						"^1870^8^1677535849^140^1^5^398.91^Moneybag", -- [20]
-						"^2615^1^1677632190^37^1^5^369.94^", -- [21]
-						"^2616^1^1677632336^28^1^5^369.94^", -- [22]
-						"^2617^1^1677632454^22^1^5^351.09^", -- [23]
-						"^2618^1^1677632558^15^1^5^370.83^", -- [24]
-						"^2587^16^1677647278^137^1^20^416.07^", -- [25]
-						"^2590^16^1677647712^5^0^20^415.31^", -- [26]
-						"^2590^16^1677647775^179^1^20^415.31^Syzlakdekay", -- [27]
-						"^2635^16^1677648262^207^0^20^415.27^Gazoo", -- [28]
-						"^2635^16^1677648560^416^0^20^415.27^Zekkelock", -- [29]
-						"^2635^16^1677649093^380^1^20^415.27^Jetw", -- [30]
-						"^2639^16^1677649773^0^0^20^415.86^", -- [31]
-						"^2639^16^1677649854^298^1^20^415.90^Xyroleaf", -- [32]
-						"^1868^8^1677804977^135^1^5^407.57^", -- [33]
-						"^1869^8^1677805532^95^1^5^407.57^", -- [34]
-						"^1870^8^1677805796^159^1^5^407.57^", -- [35]
-						"^1868^8^1678228635^82^1^5^411.86^", -- [36]
-						"^1869^8^1678229302^59^1^5^411.86^", -- [37]
-						"^1870^8^1678229546^101^1^5^411.86^", -- [38]
-						"^2587^16^1678250154^144^1^20^414.73^Iloveherdude", -- [39]
-						"^2590^16^1678250585^6^0^20^416.05^", -- [40]
-						"^2590^16^1678250678^165^1^20^416.29^Syzlakdekay", -- [41]
-						"^2635^16^1678251192^279^0^20^416.33^Reldruid", -- [42]
-						"^2635^16^1678251602^390^1^20^416.33^Ratdestroyer", -- [43]
-						"^2639^16^1678252283^0^0^20^416.47^", -- [44]
-						"^2639^16^1678252336^293^1^20^416.49^Reldruid", -- [45]
-						"^2592^16^1678252862^0^0^20^416.53^", -- [46]
-						"^2592^16^1678252999^334^1^20^416.42^Quigs", -- [47]
-						"^2605^16^1678253399^1^0^20^416.91^", -- [48]
-						"^2605^16^1678253538^478^1^20^416.93^Justdb", -- [49]
-						"^2592^16^1678930796^404^1^20^410.06^Jacobw", -- [50]
-						"^2605^16^1678931264^3^0^20^418.06^Tryingc", -- [51]
-						"^2605^16^1678931488^423^1^20^417.87^Decenaryz", -- [52]
-						"^2614^16^1678932067^0^0^20^418.44^", -- [53]
-						"^2614^16^1678932271^507^1^20^419.06^Ladiesnight", -- [54]
-						"^2607^16^1678933196^261^0^20^418.79^Twistedx", -- [55]
-						"^2607^16^1678933554^297^0^20^418.75^Flowbs", -- [56]
-						"^2607^16^1678933951^806^0^20^418.88^Decenaryz", -- [57]
-						"^2607^16^1678934882^154^0^20^419.23^Twistedx", -- [58]
-						"^2607^16^1678935138^288^0^20^418.88^Zekkelock", -- [59]
-						"^2607^16^1678935516^551^0^20^419.07^Relpriest", -- [60]
-						"^2607^16^1678936144^531^0^20^419.35^Twistedx", -- [61]
-						"^2607^16^1678936799^569^0^20^419.30^Kimsamsung", -- [62]
-						"^2607^16^1678937468^746^1^20^418.65^Kimsamsung", -- [63]
-						"^2587^16^1679533099^18^0^20^418.75^", -- [64]
-						"^2587^16^1679533331^114^1^20^419.44^", -- [65]
-						"^2590^16^1679533712^8^0^20^419.54^", -- [66]
-						"^2590^16^1679533814^166^1^20^417.44^Etchqtpi", -- [67]
-						"^2635^16^1679534346^44^0^20^419.48^Kadss", -- [68]
-						"^2635^16^1679534482^360^1^20^419.48^Etchqtpi", -- [69]
-						"^2639^16^1679535095^0^0^20^419.69^", -- [70]
-						"^2639^16^1679535167^287^1^20^419.74^Etchqtpi", -- [71]
-						"^2592^16^1679535681^0^0^20^419.78^", -- [72]
-						"^2592^16^1679535741^348^1^20^419.49^Etchqtpi", -- [73]
-						"^2605^16^1679536150^0^0^20^419.49^", -- [74]
-						"^2605^16^1679536342^417^1^20^419.37^Etchqtpi", -- [75]
-						"^2614^16^1679536991^0^0^20^416.60^", -- [76]
-						"^2614^16^1679537272^78^0^20^416.81^Etchqtpi", -- [77]
-						"^2614^16^1679537537^344^0^20^416.81^Etchqtpi", -- [78]
-						"^2614^16^1679537972^552^0^20^416.69^Twistedx", -- [79]
-						"^2614^16^1679538615^245^0^20^416.65^Etchqtpi", -- [80]
-						"^2614^16^1679538952^533^1^20^416.67^Etchqtpi", -- [81]
-						"^2607^16^1679539915^273^0^20^419.34^Hardyp", -- [82]
-						"^2607^16^1679540365^234^0^20^419.12^Winternights", -- [83]
-						"^2607^16^1679540721^716^1^20^419.76^Kimsamsung", -- [84]
-						"^2587^16^1680656510^135^1^20^416.09^Relvoker", -- [85]
-						"^2590^16^1680656898^6^0^20^416.62^", -- [86]
-						"^2590^16^1680656962^168^1^20^416.62^", -- [87]
-						"^2614^16^1680657315^0^0^20^416.03^", -- [88]
-						"^2614^16^1680657851^174^0^20^418.89^Kamsahabnida", -- [89]
-						"^2614^16^1680658106^460^1^20^418.65^Relvoker", -- [90]
-						"^2607^16^1680658934^663^1^20^418.82^Gdxo", -- [91]
-						"^2684^14^1683659826^0^0^30^415.38^", -- [92]
-						"^2684^14^1683659869^231^1^30^415.38^Jetslock", -- [93]
-						"^2688^15^1683677130^0^0^23^420.63^", -- [94]
-						"^2688^15^1683678326^171^1^30^420.39^", -- [95]
-						"^2687^15^1683678688^1^0^30^420.39^", -- [96]
-						"^2687^15^1683678750^179^1^30^420.35^Flowbie", -- [97]
-						"^2693^15^1683679130^0^0^30^420.38^", -- [98]
-						"^2693^15^1683679168^214^1^30^420.38^Aestisc", -- [99]
-						"^2682^15^1683679584^11^0^30^420.22^", -- [100]
-						"^2682^15^1683679661^159^1^30^420.30^", -- [101]
-						"^2680^15^1683679876^0^0^30^420.28^", -- [102]
-						"^2680^15^1683679911^230^1^30^420.28^Egyptianwomn", -- [103]
-						"^2689^15^1683680226^5^0^30^420.28^", -- [104]
-						"^2689^15^1683680262^4^0^30^420.28^", -- [105]
-						"^2689^15^1683680306^202^1^30^420.28^Mbdeez", -- [106]
-						"^2683^15^1683680686^1^0^30^420.43^", -- [107]
-						"^2683^15^1683680724^207^1^30^420.43^Shamilli", -- [108]
-						"^2684^15^1683681121^0^0^30^420.43^", -- [109]
-						"^2684^15^1683681160^315^1^30^420.43^Mbdeez", -- [110]
-						"^2693^14^1683738568^6^0^30^389.21^", -- [111]
-						"^2693^14^1683738619^204^1^30^409.35^Jacobjr-Illidan", -- [112]
-						"^2688^14^1683748455^0^0^26^411.19^", -- [113]
-						"^2688^14^1683748588^128^1^30^409.92^Zekkeh", -- [114]
-						"^2687^14^1683749110^0^0^30^407.11^", -- [115]
-						"^2687^14^1683749157^128^1^30^408.44^", -- [116]
-						"^2693^14^1683749432^0^0^30^421.36^", -- [117]
-						"^2693^14^1683749479^167^1^30^421.36^", -- [118]
-						"^2682^14^1683749887^7^0^30^420.00^", -- [119]
-						"^2682^14^1683749928^9^0^30^421.31^", -- [120]
-						"^2682^14^1683749967^118^1^30^418.83^", -- [121]
-						"^2680^14^1683750160^172^1^30^419.21^", -- [122]
-						"^2689^14^1683750413^0^0^30^419.05^", -- [123]
-						"^2689^14^1683750483^141^1^30^419.05^", -- [124]
-						"^2683^14^1683750770^0^0^30^418.88^", -- [125]
-						"^2683^14^1683750868^145^1^30^418.88^", -- [126]
-						"^2685^14^1683763905^374^1^30^419.56^Nocontrol", -- [127]
-						"^2685^15^1683776129^422^1^30^420.90^Disciplinae", -- [128]
-						"^2688^15^1684289328^0^0^29^425.92^", -- [129]
-						"^2688^15^1684289398^155^1^30^425.76^Relvoker", -- [130]
-						"^2687^15^1684289770^0^0^30^425.32^", -- [131]
-						"^2687^15^1684289810^172^1^30^425.32^Decenaryz", -- [132]
-						"^2693^15^1684290151^0^0^29^425.32^", -- [133]
-						"^2693^15^1684290226^196^1^30^422.12^Atrocityloki", -- [134]
-						"^2682^15^1684290715^158^1^30^425.16^", -- [135]
-						"^2680^15^1684290955^212^1^30^425.76^Memewizardx", -- [136]
-						"^2689^15^1684291249^1^0^30^425.68^", -- [137]
-						"^2689^15^1684291332^178^1^30^425.91^Tryang", -- [138]
-						"^2683^15^1684291661^0^0^30^425.82^", -- [139]
-						"^2683^15^1684291737^184^1^30^425.87^", -- [140]
-						"^2684^15^1684292133^0^0^30^425.85^", -- [141]
-						"^2684^15^1684292178^279^1^30^425.87^Decenaryz", -- [142]
-						"^2685^15^1684292595^0^0^30^425.13^", -- [143]
-						"^2685^15^1684292803^344^1^30^425.61^Syzlakdekay", -- [144]
-						"^2685^14^1684299045^274^1^30^414.23^Karzsigma", -- [145]
-					},
 					["Atrocityp"] = {
-					},
-					["Padmaster"] = {
-						"^2401^8^1631664333^116^1^5^245.71^", -- [1]
-						"^2380^8^1631664563^111^1^5^245.71^", -- [2]
-						"^2403^8^1631664821^102^1^5^245.71^", -- [3]
-						"^2381^8^1631665015^119^1^5^245.71^", -- [4]
-						"^2423^16^1631836523^11^0^20^249.13^", -- [5]
-						"^2423^16^1631836604^10^0^20^250.19^", -- [6]
-						"^2423^16^1631836674^5^0^20^249.67^", -- [7]
-						"^2423^16^1631836712^5^0^20^249.92^", -- [8]
-						"^2423^16^1631836864^100^0^20^250.03^Avade", -- [9]
-						"^2423^16^1631837023^216^1^20^250.03^Seenin", -- [10]
-						"^2433^16^1631837589^312^1^20^250.14^Ödalia", -- [11]
-						"^2429^16^1631838151^261^1^20^250.18^Ftbabbler", -- [12]
-						"^2432^16^1631838677^8^0^20^250.39^Ftbabbler", -- [13]
-						"^2432^16^1631838756^250^0^20^250.38^Ftbabbler", -- [14]
-						"^2432^16^1631839108^81^0^20^250.38^Atlasxo", -- [15]
-						"^2432^16^1631839242^253^1^20^250.38^Ftbabbler", -- [16]
-						"^2434^16^1631839846^330^1^20^250.63^Ftbabbler", -- [17]
-						"^2430^16^1631840392^5^0^20^250.30^", -- [18]
-						"^2430^16^1631840459^354^1^20^250.59^Ödalia", -- [19]
-						"^2436^16^1631840998^56^0^20^250.93^Xyroblast", -- [20]
-						"^2436^16^1631841126^269^1^20^250.77^Ftbabbler", -- [21]
-						"^2431^16^1631841641^334^1^20^251.62^Thebucket", -- [22]
-						"^2422^16^1631842391^376^0^20^251.62^Ftbabbler", -- [23]
-						"^2422^16^1631842847^562^1^20^251.59^Ftbabbler", -- [24]
-						"^2435^16^1631843617^380^0^20^251.79^Seenin", -- [25]
-						"^2435^16^1631844090^840^1^20^251.88^Tanglilord", -- [26]
-						"^2382^8^1632169192^114^1^5^247.86^Xantu", -- [27]
-						"^2384^8^1632169728^110^1^5^247.86^", -- [28]
-						"^2385^8^1632170024^89^1^5^247.86^", -- [29]
-						"^2386^8^1632170197^144^1^5^247.86^Brambi", -- [30]
-						"^2401^8^1632249129^114^1^5^247.35^Tryingw-Mal'Ganis", -- [31]
-						"^2380^8^1632249391^97^1^5^247.35^", -- [32]
-						"^2403^8^1632249559^54^0^5^247.35^Padmaster", -- [33]
-						"^2381^8^1632249969^101^1^5^247.35^", -- [34]
-						"^2063^7^1632264307^16^1^10^253.31^", -- [35]
-						"^2423^16^1632355370^226^1^20^251.17^Darkeewar", -- [36]
-						"^2429^16^1632356671^277^1^20^241.34^Geiwokan", -- [37]
-						"^2432^16^1632357336^246^1^20^251.82^Geiwokan", -- [38]
-						"^2434^16^1632357842^310^0^20^251.81^Geiwokan", -- [39]
-						"^2434^16^1632358242^386^1^20^251.91^Geiwokan", -- [40]
-						"^2430^16^1632358889^6^0^20^251.77^", -- [41]
-						"^2430^16^1632358928^134^0^20^251.79^Ödalia", -- [42]
-						"^2430^16^1632359109^397^1^20^251.79^Ödalia", -- [43]
-						"^2436^16^1632359836^266^1^20^252.45^Maeveythree", -- [44]
-						"^2431^16^1632360291^356^1^20^239.10^Ödalia", -- [45]
-						"^2422^16^1632360701^1^0^20^239.10^Padmaster", -- [46]
-						"^2422^16^1632361001^245^0^20^238.06^Ödalia", -- [47]
-						"^2422^16^1632361308^412^1^20^238.06^Ödalia", -- [48]
-						"^2435^16^1632361867^209^0^20^252.22^Padmaster", -- [49]
-						"^2435^16^1632362144^829^1^20^252.22^Ödalia", -- [50]
-						"^2423^16^1632960059^10^0^20^249.86^", -- [51]
-						"^2423^16^1632960148^7^0^20^249.73^", -- [52]
-						"^2423^16^1632960224^10^0^20^249.73^", -- [53]
-						"^2423^16^1632960274^5^0^20^249.73^", -- [54]
-						"^2423^16^1632960346^53^0^20^249.77^Skreehelios", -- [55]
-						"^2423^16^1632960448^207^1^20^249.05^Skreehelios", -- [56]
-						"^2429^16^1632961517^266^1^20^249.15^Bgatagi-Mal'Ganis", -- [57]
-						"^2432^16^1632962029^6^0^20^250.12^", -- [58]
-						"^2432^16^1632962093^210^0^20^252.76^Podra", -- [59]
-						"^2432^16^1632962376^148^0^20^252.76^Imexilerogue", -- [60]
-						"^2432^16^1632962579^205^1^20^252.76^Podra", -- [61]
-						"^2434^16^1632962956^343^1^20^252.76^Lip", -- [62]
-						"^2430^16^1632963451^7^0^20^252.78^", -- [63]
-						"^2430^16^1632963492^346^1^20^252.78^Podra", -- [64]
-						"^2436^16^1632964138^252^1^20^252.80^Podra", -- [65]
-						"^2431^16^1632964600^295^0^20^240.64^Ödalia", -- [66]
-						"^2431^16^1632964952^280^0^20^240.64^Ödalia", -- [67]
-						"^2431^16^1632965309^351^1^20^240.64^Ödalia", -- [68]
-						"^2422^16^1632965948^224^0^20^240.59^Ödalia", -- [69]
-						"^2422^16^1632966231^131^0^20^240.59^Ödalia", -- [70]
-						"^2422^16^1632966415^414^1^20^240.50^Ödalia", -- [71]
-						"^2435^16^1632967065^767^1^20^252.80^Bgatagi-Mal'Ganis", -- [72]
-						"^2401^8^1633116003^97^1^5^243.91^", -- [73]
-						"^2380^8^1633116132^118^1^5^243.91^", -- [74]
-						"^2403^8^1633116358^84^1^5^243.91^", -- [75]
-						"^2381^8^1633116483^120^1^5^243.91^Weewm-Mal'Ganis", -- [76]
-						"^2063^7^1633323214^26^1^10^253.44^", -- [77]
-						"^2063^7^1633451336^19^1^10^255.31^", -- [78]
-						"^2423^16^1633478282^10^0^20^250.83^", -- [79]
-						"^2423^16^1633478352^10^0^20^250.83^", -- [80]
-						"^2423^16^1633478431^10^0^20^251.09^", -- [81]
-						"^2423^16^1633478629^229^1^20^250.56^Extremistt", -- [82]
-						"^2433^16^1633479153^296^1^20^250.84^Podra", -- [83]
-						"^2429^16^1633479711^261^1^20^252.47^Dirtysock-Rexxar", -- [84]
-						"^2436^16^1633480275^37^0^20^253.16^Scottbrexit", -- [85]
-						"^2436^16^1633480370^236^1^20^252.48^Podra", -- [86]
-						"^2422^16^1633480894^394^0^20^253.00^Skulpt-Thrall", -- [87]
-						"^2422^16^1633481340^232^0^20^253.00^Skulpt-Thrall", -- [88]
-						"^2422^16^1633481676^402^1^20^252.66^Skulpt-Thrall", -- [89]
-						"^2435^16^1633482243^825^0^20^252.22^Podra", -- [90]
-						"^2435^16^1633483199^189^0^20^252.40^Skulpt-Thrall", -- [91]
-						"^2435^16^1633483475^753^1^20^252.93^Skulpt-Thrall", -- [92]
-						"^2401^8^1633992338^65^1^5^249.86^", -- [93]
-						"^2380^8^1633992439^70^1^5^249.86^", -- [94]
-						"^2403^8^1633992669^59^1^5^249.86^", -- [95]
-						"^2381^8^1633992819^73^1^5^252.53^Padmaster", -- [96]
-						"^2423^16^1634174890^5^0^20^239.02^", -- [97]
-						"^2423^16^1634174957^5^0^20^239.02^", -- [98]
-						"^2423^16^1634175017^5^0^20^239.02^", -- [99]
-						"^2423^16^1634175078^6^0^20^239.02^", -- [100]
-						"^2423^16^1634175145^212^1^20^239.02^", -- [101]
-						"^2436^16^1634175482^4^0^20^239.02^", -- [102]
-						"^2436^16^1634175546^191^0^20^239.02^Maeveycakes", -- [103]
-						"^2436^16^1634175838^296^1^20^239.02^Cryptidezz", -- [104]
-						"^2422^16^1634176490^391^1^20^239.08^", -- [105]
-						"^2387^8^1634244987^74^1^5^248.38^", -- [106]
-						"^2388^8^1634245368^61^1^5^248.38^", -- [107]
-						"^2389^8^1634245682^46^1^5^248.38^", -- [108]
-						"^2390^8^1634245744^87^1^5^250.92^", -- [109]
-						"^2423^16^1634695594^10^0^20^249.82^", -- [110]
-						"^2423^16^1634695658^10^0^20^250.60^", -- [111]
-						"^2423^16^1634695725^10^0^20^250.15^", -- [112]
-						"^2423^16^1634695789^11^0^20^250.15^", -- [113]
-						"^2423^16^1634696135^233^1^20^250.40^", -- [114]
-						"^2433^16^1634696687^315^1^20^250.47^Missundead", -- [115]
-						"^2429^16^1634697258^274^1^20^250.47^Padmaster", -- [116]
-						"^2432^16^1634697918^240^1^20^250.03^Vilw", -- [117]
-						"^2434^16^1634698330^346^1^20^250.72^", -- [118]
-						"^2430^16^1634698884^4^0^20^250.98^", -- [119]
-						"^2430^16^1634698922^404^1^20^250.98^Missundead", -- [120]
-						"^2436^16^1634699561^288^1^20^250.89^Missundead", -- [121]
-						"^2431^16^1634700235^191^0^20^252.39^Ericsmage", -- [122]
-						"^2431^16^1634700576^130^0^20^252.39^Thdemon", -- [123]
-						"^2431^16^1634700786^356^1^20^252.39^Sang", -- [124]
-						"^2422^16^1634701418^267^0^20^252.39^Missundead", -- [125]
-						"^2422^16^1634701733^413^1^20^252.39^Missundead", -- [126]
-						"^2435^16^1634702277^188^0^20^251.12^Missundead", -- [127]
-						"^2435^16^1634702538^466^0^20^251.12^Missundead", -- [128]
-						"^2435^16^1634703066^201^0^20^251.12^Missundead", -- [129]
-						"^2435^16^1634703360^816^1^20^252.24^Missundead", -- [130]
-						"^2063^7^1635741893^20^1^10^255.75^", -- [131]
-						"^2423^16^1635992623^10^0^20^251.60^", -- [132]
-						"^2423^16^1635992708^11^0^20^251.78^", -- [133]
-						"^2423^16^1635992764^9^0^20^251.62^", -- [134]
-						"^2423^16^1635992824^10^0^20^251.62^", -- [135]
-						"^2423^16^1635992865^9^0^20^251.62^", -- [136]
-						"^2423^16^1635992968^209^1^20^251.54^Twistedjr", -- [137]
-						"^2433^16^1635993492^272^1^20^251.62^Stankylip", -- [138]
-						"^2429^16^1635994000^261^1^20^251.62^Drineym", -- [139]
-						"^2436^16^1635994500^3^0^20^251.78^", -- [140]
-						"^2436^16^1635994540^256^1^20^251.57^", -- [141]
-						"^2422^16^1635995058^343^0^20^251.66^Twistedjr", -- [142]
-						"^2422^16^1635995501^387^1^20^251.66^Norialaxo", -- [143]
-						"^2435^16^1635996014^443^0^20^251.73^Padmaster", -- [144]
-						"^2435^16^1635996539^227^0^20^251.81^Kíngflyhunt", -- [145]
-						"^2435^16^1635996829^641^0^20^251.81^Drineym", -- [146]
-						"^2435^16^1635997548^755^1^20^251.81^Drineym", -- [147]
-						"^2423^16^1636599801^10^0^20^251.55^", -- [148]
-						"^2423^16^1636599856^10^0^20^251.55^", -- [149]
-						"^2423^16^1636599912^4^0^20^251.46^", -- [150]
-						"^2423^16^1636599981^9^0^20^251.30^", -- [151]
-						"^2423^16^1636600021^60^0^20^251.30^Thdlockb", -- [152]
-						"^2423^16^1636600138^203^1^20^251.30^Padmaster", -- [153]
-						"^2433^16^1636600690^299^1^20^251.60^Estaup", -- [154]
-						"^2429^16^1636601249^260^1^20^251.79^", -- [155]
-						"^2436^16^1636601782^4^0^20^251.78^", -- [156]
-						"^2436^16^1636601843^200^0^20^251.58^Floormopzz", -- [157]
-						"^2436^16^1636602119^12^0^20^251.76^Skreehelios", -- [158]
-						"^2436^16^1636602208^255^1^20^251.76^Estaup", -- [159]
-						"^2422^16^1636602751^412^1^20^251.37^Maeveycakes", -- [160]
-						"^2435^16^1636603306^18^0^20^251.06^Padmaster", -- [161]
-						"^2435^16^1636603538^198^0^20^251.06^Floormopzz", -- [162]
-						"^2435^16^1636603799^778^1^20^251.88^Padmaster", -- [163]
-						"^2382^8^1636945489^95^1^5^250.62^Lipwarlock", -- [164]
-						"^2384^8^1636945963^106^1^5^250.62^Padmaster", -- [165]
-						"^2385^8^1636946200^99^1^5^250.62^", -- [166]
-						"^2386^8^1636946468^140^1^5^250.62^Lipwarlock", -- [167]
-						"^2423^16^1637715390^4^0^20^251.63^", -- [168]
-						"^2423^16^1637715460^5^0^20^251.63^", -- [169]
-						"^2423^16^1637715531^4^0^20^251.70^", -- [170]
-						"^2423^16^1637715585^13^0^20^251.86^", -- [171]
-						"^2423^16^1637715718^199^1^20^252.16^Ohappy", -- [172]
-						"^2433^16^1637716266^283^1^20^252.18^Isaybu", -- [173]
-						"^2429^16^1637716794^266^1^20^252.13^Isaybu", -- [174]
-						"^2432^16^1637717347^5^0^20^252.01^", -- [175]
-						"^2432^16^1637717432^215^1^20^251.99^Ohappy", -- [176]
-						"^2434^16^1637717861^322^1^20^252.29^Ohappy", -- [177]
-						"^2430^16^1637718333^5^0^20^252.47^", -- [178]
-						"^2430^16^1637718377^72^0^20^252.45^Ohappy", -- [179]
-						"^2430^16^1637718506^326^1^20^252.45^Ohappy", -- [180]
-						"^2436^16^1637719089^32^0^20^252.31^Soupshop", -- [181]
-						"^2436^16^1637719195^251^1^20^252.35^Ohappy", -- [182]
-						"^2431^16^1637719658^335^1^20^252.16^Ohappy", -- [183]
-						"^2422^16^1637720244^416^1^20^250.72^Ohappy", -- [184]
-						"^2435^16^1637720839^764^1^20^251.02^Ohappy", -- [185]
-						"^2435^16^1640756004^865^0^20^252.36^Mauri", -- [186]
-						"^2435^16^1640756945^851^1^20^252.08^Mauri", -- [187]
-						"^2423^16^1641430288^10^0^20^253.67^", -- [188]
-						"^2423^16^1641430347^6^0^20^253.67^", -- [189]
-						"^2423^16^1641430404^6^0^20^253.67^", -- [190]
-						"^2423^16^1641430460^8^0^20^253.69^", -- [191]
-						"^2423^16^1641430501^69^0^20^253.54^Scottdk", -- [192]
-						"^2423^16^1641430659^159^1^20^253.67^Scottdk", -- [193]
-						"^2429^16^1641431633^253^1^20^253.70^Juffo-Mal'Ganis", -- [194]
-						"^2432^16^1641432110^5^0^20^253.61^Drineym", -- [195]
-						"^2432^16^1641432192^211^1^20^253.61^Juffo-Mal'Ganis", -- [196]
-						"^2434^16^1641432602^310^1^20^253.41^Juffo-Mal'Ganis", -- [197]
-						"^2430^16^1641433089^5^0^20^253.49^", -- [198]
-						"^2430^16^1641433130^213^0^20^253.60^Juffo-Mal'Ganis", -- [199]
-						"^2430^16^1641433399^73^0^20^253.60^Juffo-Mal'Ganis", -- [200]
-						"^2430^16^1641433550^326^1^20^253.60^Juffo-Mal'Ganis", -- [201]
-						"^2436^16^1641433996^29^0^20^253.59^Lip", -- [202]
-						"^2436^16^1641434098^46^0^20^253.84^Juffo-Mal'Ganis", -- [203]
-						"^2436^16^1641434194^252^1^20^253.96^Juffo-Mal'Ganis", -- [204]
-						"^2431^16^1641434668^327^1^20^242.72^Juffo-Mal'Ganis", -- [205]
-						"^2422^16^1641435406^379^1^20^242.22^Juffo-Mal'Ganis", -- [206]
-						"^2435^16^1641435965^881^1^20^253.99^Odeon-EchoIsles", -- [207]
 					},
 					["Atrocitydh"] = {
 						"^2397^8^1631665834^54^1^5^246.22^", -- [1]
@@ -8125,13 +9268,830 @@ atrocityUI.VMRT["1440p"] = {
 						"^2549^16^1667350647^77^0^20^301.38^Lip", -- [311]
 						"^2549^16^1667350815^226^1^20^301.35^Maeveychi", -- [312]
 					},
-					["Atrocitys"] = {
-					},
 					["Atrocitysake"] = {
 					},
-					["Atrocityxe"] = {
+					["Atrocitymagi"] = {
 					},
 					["Atrocityr"] = {
+					},
+					["Atrocitywl"] = {
+						"^2395^8^1633377025^120^1^5^242.06^", -- [1]
+						"^2394^8^1633377588^143^1^5^242.06^Weewpp-Mal'Ganis", -- [2]
+						"^2400^8^1633378187^100^1^5^238.02^", -- [3]
+						"^2396^8^1633378352^188^1^5^238.02^", -- [4]
+						"^2423^15^1633551942^5^0^18^242.95^", -- [5]
+						"^2423^15^1633552017^5^0^18^243.60^", -- [6]
+						"^2423^15^1633552076^8^0^18^242.86^", -- [7]
+						"^2423^15^1633552468^187^1^22^244.21^Bendyneck-Hyjal", -- [8]
+						"^2391^8^1649115663^199^1^5^254.99^", -- [9]
+						"^2365^8^1649116209^167^1^5^254.99^", -- [10]
+						"^2364^8^1649116872^199^0^5^254.99^Atrocitywl", -- [11]
+						"^2364^8^1649117142^207^1^5^254.99^", -- [12]
+						"^2366^8^1649117595^219^1^5^256.33^Tagzzsou", -- [13]
+						"^2404^8^1649117880^253^1^5^256.33^Tagzzsou", -- [14]
+						"^2397^8^1649735426^58^1^5^265.07^", -- [15]
+						"^2392^8^1649735775^136^1^5^263.19^", -- [16]
+						"^2393^8^1649736139^82^1^5^259.73^", -- [17]
+						"^2384^8^1649780012^139^1^5^263.89^", -- [18]
+						"^2385^8^1649780418^146^1^5^260.56^", -- [19]
+						"^2386^8^1649780679^162^1^5^260.56^", -- [20]
+						"^2382^8^1649781324^94^1^5^265.89^", -- [21]
+						"^2384^8^1649781856^118^1^5^265.89^", -- [22]
+						"^2385^8^1649782161^121^1^5^265.89^", -- [23]
+						"^2386^8^1649782376^173^1^5^265.89^", -- [24]
+						"^2382^8^1652756346^123^1^5^267.46^", -- [25]
+						"^2384^8^1652756753^168^1^5^267.46^", -- [26]
+						"^2385^8^1652757094^153^1^5^267.46^", -- [27]
+						"^2386^8^1652757347^174^1^5^267.46^", -- [28]
+						"^2401^8^1652935525^131^1^5^265.18^Twistedsp", -- [29]
+						"^2380^8^1652935720^107^1^5^265.18^", -- [30]
+						"^2403^8^1652935919^106^1^5^265.18^", -- [31]
+						"^2381^8^1652936142^126^1^5^265.18^", -- [32]
+						"^2426^8^1652996453^96^1^5^266.62^", -- [33]
+						"^2419^8^1652996730^69^1^5^266.62^", -- [34]
+						"^2442^8^1652996979^126^1^5^266.62^", -- [35]
+						"^2426^8^1656196202^154^1^5^272.61^Jacobw", -- [36]
+						"^2419^8^1656196469^110^1^5^272.61^", -- [37]
+						"^2442^8^1656196705^187^1^5^272.61^Twistedsp", -- [38]
+						"^2426^8^1656557724^106^1^5^270.20^", -- [39]
+						"^2419^8^1656558019^97^1^5^270.20^", -- [40]
+						"^2442^8^1656558327^154^1^5^270.20^", -- [41]
+					},
+					["Atrocityw"] = {
+						"^2423^16^1643677317^11^0^20^247.82^", -- [1]
+						"^2423^16^1643677375^8^0^20^245.94^", -- [2]
+						"^2423^16^1643677470^9^0^20^247.11^", -- [3]
+						"^2423^16^1643678006^6^0^20^244.96^", -- [4]
+						"^2423^16^1643678071^215^1^20^244.96^Babombabam", -- [5]
+						"^2433^16^1643678644^318^1^20^246.66^Birc", -- [6]
+						"^2429^16^1643679129^278^1^20^246.72^Jpcharge", -- [7]
+						"^2432^16^1643679641^7^0^20^248.14^", -- [8]
+						"^2432^16^1643679699^236^0^20^247.46^Tagzz", -- [9]
+						"^2432^16^1643680062^216^1^20^248.49^Tagzz", -- [10]
+						"^2434^16^1643680511^356^1^20^249.47^Bonebaby", -- [11]
+						"^2436^16^1643681731^254^1^20^250.90^Jpconetrick", -- [12]
+						"^2431^16^1643682248^229^0^20^252.12^Lipwar", -- [13]
+						"^2431^16^1643682532^349^1^20^252.12^Cerepaladin", -- [14]
+						"^2422^16^1643683290^147^0^20^250.89^Domeynicus", -- [15]
+						"^2422^16^1643683510^228^0^20^251.19^Scottdk", -- [16]
+						"^2422^16^1643683770^228^0^20^249.64^Zubang", -- [17]
+						"^2422^16^1643684129^424^1^20^251.78^Onehealplzz", -- [18]
+						"^2423^16^1643856337^10^0^20^252.02^", -- [19]
+						"^2423^16^1643856461^9^0^20^252.05^", -- [20]
+						"^2423^16^1643856532^10^0^20^252.46^", -- [21]
+						"^2423^16^1643856591^10^0^20^252.32^", -- [22]
+						"^2423^16^1643856764^218^1^20^251.32^Goopwar", -- [23]
+						"^2433^16^1643857325^363^0^20^251.63^Ericsdruid", -- [24]
+						"^2433^16^1643857730^281^1^20^251.63^Onehealplzz", -- [25]
+						"^2429^16^1643858231^262^1^20^252.74^Goopwar", -- [26]
+						"^2432^16^1643858720^5^0^20^251.19^", -- [27]
+						"^2432^16^1643858827^212^1^20^252.13^Maeveychi", -- [28]
+						"^2434^16^1643859247^314^1^20^253.01^Lipwar", -- [29]
+						"^2430^16^1643859710^5^0^20^252.68^", -- [30]
+						"^2430^16^1643859760^329^1^20^252.81^", -- [31]
+						"^2436^16^1643860233^3^0^20^252.86^", -- [32]
+						"^2436^16^1643860328^256^1^20^253.41^Renownispain", -- [33]
+						"^2431^16^1643860761^337^1^20^253.56^Flappybirch", -- [34]
+						"^2422^16^1643861425^428^1^20^253.28^Flappybirch", -- [35]
+						"^2435^16^1643862128^767^1^20^253.69^Drineytwo", -- [36]
+						"^2423^16^1644719868^5^0^20^249.57^", -- [37]
+						"^2423^16^1644719920^5^0^20^252.17^Lipwarrior", -- [38]
+						"^2423^16^1644720008^10^0^20^251.72^", -- [39]
+						"^2423^16^1644720063^5^0^20^247.71^", -- [40]
+						"^2423^16^1644720104^72^0^20^249.26^Goopwar", -- [41]
+						"^2423^16^1644720238^207^1^20^249.54^Impecs", -- [42]
+						"^2433^16^1644720721^297^1^20^249.53^Jpcharge", -- [43]
+						"^2429^16^1644721224^271^1^20^249.81^Atlasdumpy", -- [44]
+						"^2432^16^1644721741^7^0^20^249.97^", -- [45]
+						"^2432^16^1644721809^157^0^20^252.50^Goopwar", -- [46]
+						"^2432^16^1644722020^237^1^20^249.90^Zubang", -- [47]
+						"^2434^16^1644722487^320^1^20^250.38^Zubang", -- [48]
+						"^2430^16^1644722945^6^0^20^251.62^", -- [49]
+						"^2430^16^1644722997^337^1^20^253.42^Atrocityw", -- [50]
+						"^2436^16^1644723428^4^0^20^251.65^", -- [51]
+						"^2436^16^1644723513^256^1^20^251.41^", -- [52]
+						"^2422^16^1644724106^410^0^20^253.40^Twistedp", -- [53]
+						"^2422^16^1644724574^439^1^20^253.40^Benw", -- [54]
+						"^2435^16^1644725158^541^0^20^253.97^Zubang", -- [55]
+						"^2435^16^1644725757^745^1^20^254.50^Twistedp", -- [56]
+						"^2423^16^1645153303^5^0^20^252.57^", -- [57]
+						"^2423^16^1645153386^5^0^20^252.45^", -- [58]
+						"^2423^16^1645153448^8^0^20^248.64^", -- [59]
+						"^2423^16^1645153526^10^0^20^248.64^Atrocityw", -- [60]
+						"^2423^16^1645153570^6^0^20^248.17^", -- [61]
+						"^2423^16^1645153745^224^1^20^247.44^Goopwar", -- [62]
+						"^2433^16^1645154319^318^1^20^245.61^Bonebaby", -- [63]
+						"^2429^16^1645154840^285^1^20^246.44^Soupshop", -- [64]
+						"^2432^16^1645155356^5^0^20^245.72^", -- [65]
+						"^2432^16^1645155521^231^1^20^244.84^Drineytwo", -- [66]
+						"^2434^16^1645155919^353^1^20^245.24^", -- [67]
+						"^2430^16^1645156430^5^0^20^248.01^", -- [68]
+						"^2430^16^1645156471^357^1^20^248.27^Birchon", -- [69]
+						"^2436^16^1645156967^23^0^20^251.94^Twistedp", -- [70]
+						"^2436^16^1645157051^264^1^20^251.82^", -- [71]
+						"^2431^16^1645157490^384^1^20^250.09^Atlasdumpy", -- [72]
+						"^2422^16^1645158070^3^0^20^250.34^Imfiredup", -- [73]
+						"^2422^16^1645158287^224^0^20^250.09^Vilwarr", -- [74]
+						"^2422^16^1645158559^414^1^20^250.09^Twistedp", -- [75]
+						"^2435^16^1645159242^747^1^20^254.50^Aroaria", -- [76]
+						"^2423^16^1645664416^6^0^20^253.25^", -- [77]
+						"^2423^16^1645664484^13^0^20^253.25^", -- [78]
+						"^2423^16^1645664538^9^0^20^253.10^Onehealplzz", -- [79]
+						"^2423^16^1645664588^6^0^20^253.10^", -- [80]
+						"^2423^16^1645664719^197^1^20^252.49^Atrocityw", -- [81]
+						"^2433^16^1645665250^269^1^20^253.20^Kíngflylock", -- [82]
+						"^2429^16^1645665716^254^1^20^253.29^", -- [83]
+						"^2432^16^1645666213^6^0^20^253.62^", -- [84]
+						"^2432^16^1645666281^221^1^20^253.23^Jpcharge", -- [85]
+						"^2434^16^1645666661^330^1^20^252.57^", -- [86]
+						"^2430^16^1645667162^5^0^20^253.72^", -- [87]
+						"^2430^16^1645667214^344^1^20^253.72^Goopwar", -- [88]
+						"^2436^16^1645667725^4^0^20^253.22^", -- [89]
+						"^2436^16^1645667782^264^0^20^253.22^Stuart", -- [90]
+						"^2436^16^1645668172^257^1^20^253.66^Atlasdumpy", -- [91]
+						"^2431^16^1645668629^355^1^20^253.75^", -- [92]
+						"^2422^16^1645669331^141^0^20^253.48^Birchon", -- [93]
+						"^2422^16^1645669580^266^0^20^253.48^Adeen-Mal'Ganis", -- [94]
+						"^2422^16^1645669895^409^1^20^253.50^", -- [95]
+						"^2435^16^1645670730^234^0^20^255.03^Noripalb", -- [96]
+						"^2435^16^1645671028^797^0^20^255.17^Atlasdumpy", -- [97]
+						"^2435^16^1645671895^672^0^20^253.42^Baelhorne-Area52", -- [98]
+						"^2435^16^1645672867^628^0^20^252.19^Atlasdumpy", -- [99]
+						"^2435^16^1645673748^202^0^20^254.23^Onehealplzz", -- [100]
+						"^2435^16^1645674013^843^1^20^254.23^Derpingtoast-Zul'jin", -- [101]
+						"^2435^15^1645917286^635^1^30^249.39^Impecdk", -- [102]
+						"^2422^15^1645918807^94^0^30^250.53^Warloke-Azralon", -- [103]
+						"^2422^15^1645918958^339^1^30^251.98^Maeveythree", -- [104]
+						"^2391^8^1646107168^87^1^5^253.96^", -- [105]
+						"^2364^8^1646107723^146^1^5^253.96^Estaup", -- [106]
+						"^2365^8^1646108143^76^1^5^253.96^", -- [107]
+						"^2366^8^1646108518^91^1^5^254.56^", -- [108]
+						"^2404^8^1646108660^92^1^5^254.56^Impecblue", -- [109]
+						"^2512^15^1646185487^516^1^27^248.36^Telegonw-Tichondrius", -- [110]
+						"^2540^15^1646186434^226^1^26^254.24^Bucketbill", -- [111]
+						"^2544^15^1646186961^82^0^26^254.59^Telegonw-Tichondrius", -- [112]
+						"^2544^15^1646187114^456^0^25^254.56^Telegonw-Tichondrius", -- [113]
+						"^2544^15^1646187784^397^1^25^254.36^Imnnk", -- [114]
+						"^2539^15^1646188440^388^1^27^254.04^Tagzz", -- [115]
+						"^2542^15^1646189213^287^1^27^253.90^Bucketbill", -- [116]
+						"^2553^15^1646189740^347^1^26^254.45^Bucketbill", -- [117]
+						"^2529^15^1646197002^395^1^24^254.97^Bucketbill", -- [118]
+						"^2387^8^1646263542^60^0^5^255.74^Lipwarrior", -- [119]
+						"^2387^8^1646263632^169^1^5^255.74^", -- [120]
+						"^2388^8^1646264231^97^1^5^255.74^", -- [121]
+						"^2389^8^1646264741^142^1^5^255.74^Thdlockb", -- [122]
+						"^2390^8^1646264900^203^1^5^255.74^Thdlockb", -- [123]
+						"^2426^8^1646350030^197^1^5^256.41^Maeveythree", -- [124]
+						"^2419^8^1646350523^146^1^5^256.41^", -- [125]
+						"^2442^8^1646351106^465^1^5^256.41^Imexilewar", -- [126]
+						"^2401^8^1646355912^209^1^5^251.94^Thdemon", -- [127]
+						"^2380^8^1646356158^247^1^5^251.94^Thdemon", -- [128]
+						"^2403^8^1646356501^166^1^5^251.94^", -- [129]
+						"^2381^8^1646356791^166^1^5^251.94^Maeveytwo", -- [130]
+						"^2357^8^1646357808^163^1^5^252.28^", -- [131]
+						"^2356^8^1646358532^151^1^5^252.28^Maeveytwo", -- [132]
+						"^2358^8^1646358821^229^1^5^252.28^", -- [133]
+						"^2359^8^1646359275^250^1^5^252.28^", -- [134]
+						"^2397^8^1646360161^163^1^5^256.15^", -- [135]
+						"^2392^8^1646360741^198^1^5^256.15^Maeveythree", -- [136]
+						"^2393^8^1646361143^192^1^5^256.15^", -- [137]
+						"^2400^8^1646362264^157^1^5^252.85^", -- [138]
+						"^2394^8^1646362766^199^1^5^252.85^Atrocityw", -- [139]
+						"^2395^8^1646363409^160^1^5^252.38^", -- [140]
+						"^2396^8^1646363616^32^0^5^252.85^Thdemon", -- [141]
+						"^2396^8^1646363683^272^1^5^252.85^", -- [142]
+						"^2391^8^1646364388^186^1^5^253.18^Lip", -- [143]
+						"^2366^8^1646364858^26^0^5^253.18^Thdemon", -- [144]
+						"^2366^8^1646364915^194^1^5^253.18^Atrocityw", -- [145]
+						"^2365^8^1646365423^175^1^5^253.18^", -- [146]
+						"^2364^8^1646365956^181^1^5^252.25^", -- [147]
+						"^2404^8^1646366191^215^1^5^252.25^Lip", -- [148]
+						"^2425^8^1646368408^163^1^5^252.75^Lipwar", -- [149]
+						"^2441^8^1646368944^296^1^5^252.75^Atrocityw", -- [150]
+						"^2424^8^1646369728^190^1^5^252.75^Goopdfour", -- [151]
+						"^2440^8^1646370197^73^0^5^252.75^Lipwar", -- [152]
+						"^2440^8^1646370349^268^1^5^252.75^Goopdfour", -- [153]
+						"^2437^8^1646370754^175^0^5^252.75^Atrocityw", -- [154]
+						"^2437^8^1646371007^55^0^5^252.25^Goopdfour", -- [155]
+						"^2437^8^1646371126^172^1^5^252.25^", -- [156]
+						"^2423^16^1646415752^5^0^20^253.36^", -- [157]
+						"^2423^16^1646416161^10^0^20^254.41^", -- [158]
+						"^2423^16^1646416201^260^1^20^254.39^Babombabam", -- [159]
+						"^2422^16^1646416735^231^0^20^255.27^Vilwarr", -- [160]
+						"^2422^16^1646417021^414^1^20^255.39^Babombabam", -- [161]
+						"^2360^8^1646424418^133^1^5^254.81^", -- [162]
+						"^2361^8^1646425223^124^1^5^254.81^Wheatp-Tichondrius", -- [163]
+						"^2362^8^1646425421^164^1^5^254.81^", -- [164]
+						"^2363^8^1646425944^177^1^5^254.81^", -- [165]
+						"^2546^15^1646428522^166^0^22^255.98^Mallarkus", -- [166]
+						"^2546^15^1646428794^242^0^22^255.78^Mallarkus", -- [167]
+						"^2546^15^1646429136^500^0^22^255.81^Bucketbill", -- [168]
+						"^2546^15^1646429778^547^0^22^255.89^Mallarkus", -- [169]
+						"^2546^15^1646431152^4^0^21^255.94^Nickspriestb", -- [170]
+						"^2546^15^1646431393^425^0^22^255.87^Mallarkus", -- [171]
+						"^2546^15^1646431910^715^0^22^255.19^Bucketbill", -- [172]
+						"^2546^15^1646432890^46^0^22^255.20^Atrocityw", -- [173]
+						"^2546^15^1646433007^629^1^22^255.20^Bucketbill", -- [174]
+						"^2382^8^1646504019^75^0^5^255.06^Podh", -- [175]
+						"^2382^8^1646504174^131^1^5^255.06^Podh", -- [176]
+						"^2384^8^1646504717^175^1^5^255.06^", -- [177]
+						"^2385^8^1646505191^42^0^5^255.06^Podh", -- [178]
+						"^2385^8^1646505280^157^1^5^255.06^Podh", -- [179]
+						"^2386^8^1646505541^187^1^5^255.06^Podh", -- [180]
+						"^2546^14^1646532491^545^1^30^253.02^Flappybirch", -- [181]
+						"^2529^14^1646615118^291^1^23^238.22^Bubbadubstep", -- [182]
+						"^2539^14^1646616201^206^1^20^244.56^Atrocityw", -- [183]
+						"^2544^14^1646621399^289^1^30^247.35^Ltelegon", -- [184]
+						"^2395^8^1646699437^111^1^5^250.66^", -- [185]
+						"^2394^8^1646700129^146^1^5^250.66^", -- [186]
+						"^2400^8^1646700927^124^1^5^252.83^", -- [187]
+						"^2396^8^1646701126^151^1^5^252.83^", -- [188]
+						"^2400^8^1646703709^102^1^5^255.19^", -- [189]
+						"^2394^8^1646704142^132^1^5^255.10^", -- [190]
+						"^2395^8^1646704521^79^1^5^255.10^", -- [191]
+						"^2396^8^1646704655^136^1^5^255.10^", -- [192]
+						"^2400^8^1646706253^174^1^5^253.51^Powercleans-Mal'Ganis", -- [193]
+						"^2394^8^1646706816^157^1^5^253.51^", -- [194]
+						"^2395^8^1646707247^118^1^5^253.51^", -- [195]
+						"^2396^8^1646707425^236^1^5^253.51^", -- [196]
+						"^2400^8^1646709124^97^1^5^253.53^", -- [197]
+						"^2394^8^1646709539^135^1^5^253.53^", -- [198]
+						"^2395^8^1646709919^102^1^5^253.53^", -- [199]
+						"^2396^8^1646710077^155^1^5^253.53^", -- [200]
+						"^2543^15^1646776267^6^0^26^257.45^", -- [201]
+						"^2543^15^1646776381^510^1^26^257.42^Liphunt", -- [202]
+						"^2549^15^1646777296^347^1^26^257.56^Podh", -- [203]
+						"^2549^14^1646789323^237^1^15^203.51^Mallarkus", -- [204]
+						"^2543^14^1646789758^6^0^11^243.69^", -- [205]
+						"^2543^14^1646789852^424^1^13^240.24^Atlasdk", -- [206]
+					},
+					["Atrocitydark"] = {
+						"^1746^8^1701971729^0^0^5^463.62^", -- [1]
+						"^1757^8^1701972279^75^0^5^463.62^Atrocitydark", -- [2]
+						"^1757^8^1701972403^26^0^5^463.62^Kennawld-Tichondrius", -- [3]
+						"^1757^8^1701972481^50^0^5^463.62^Atrocitydark", -- [4]
+						"^1757^8^1701972570^199^1^5^463.62^", -- [5]
+						"^1751^8^1701973022^165^1^5^463.62^Death", -- [6]
+						"^1756^8^1701973236^275^1^5^463.62^", -- [7]
+						"^1746^8^1701973994^173^1^5^463.71^", -- [8]
+						"^1757^8^1701974529^17^0^5^463.71^Atrocitydark", -- [9]
+						"^1757^8^1701974597^187^1^5^463.71^Mestupid-Illidan", -- [10]
+						"^1751^8^1701974929^149^1^5^463.71^", -- [11]
+						"^1756^8^1701975128^250^1^5^463.71^", -- [12]
+						"^2084^8^1701976774^101^1^5^464.45^", -- [13]
+						"^2086^8^1701976993^46^0^5^464.45^Mestupid-Illidan", -- [14]
+						"^2086^8^1701977090^184^1^5^464.45^Death", -- [15]
+						"^2085^8^1701977423^160^1^5^464.45^", -- [16]
+						"^2087^8^1701977664^214^1^5^464.45^Atrocitydark", -- [17]
+						"^2113^8^1701978494^153^1^5^466.54^Jasonbournex", -- [18]
+						"^2114^8^1701978776^168^1^5^466.54^Jasonbournex", -- [19]
+						"^2115^8^1701978978^12^0^5^466.54^Kennawld-Tichondrius", -- [20]
+						"^2115^8^1701979203^166^1^5^466.54^Xerpon-Illidan", -- [21]
+						"^2116^8^1701979569^157^1^5^466.54^", -- [22]
+						"^2117^8^1701979739^145^1^5^466.54^", -- [23]
+					},
+					["Atrocitydr"] = {
+					},
+					["Atrocitysix"] = {
+						"^2609^23^1669950863^102^1^5^302.81^", -- [1]
+						"^2606^23^1669951244^103^1^5^302.81^", -- [2]
+						"^2623^23^1669951470^88^1^5^302.81^", -- [3]
+						"^2610^23^1669951948^70^1^5^288.94^", -- [4]
+						"^2613^23^1669952181^86^1^5^298.12^", -- [5]
+						"^2612^23^1669952572^95^1^5^299.03^", -- [6]
+						"^2611^23^1669952856^74^1^5^299.03^", -- [7]
+						"^2637^23^1669953507^71^1^5^305.92^", -- [8]
+						"^2636^23^1669953775^91^1^5^306.52^Mallaarkus", -- [9]
+						"^2581^23^1669954085^2^0^5^310.10^", -- [10]
+						"^2581^23^1669954128^72^1^5^310.10^", -- [11]
+						"^2580^23^1669954382^146^1^5^310.10^", -- [12]
+						"^2582^23^1669954966^79^1^5^309.36^", -- [13]
+						"^2585^23^1669955206^80^1^5^310.27^", -- [14]
+						"^2583^23^1669955335^80^1^5^311.23^Mallaarkus", -- [15]
+						"^2584^23^1669955444^92^1^5^311.23^", -- [16]
+						"^2570^23^1669955969^81^1^5^314.59^Ericsenior", -- [17]
+						"^2567^23^1669956219^54^1^5^314.59^", -- [18]
+						"^2568^23^1669956429^91^0^5^311.92^Atrocitysix", -- [19]
+						"^2568^23^1669956585^83^1^5^311.92^", -- [20]
+						"^2569^23^1669956823^59^0^5^313.38^Dankscale", -- [21]
+						"^2569^23^1669956971^67^1^5^311.71^Mallaarkus", -- [22]
+						"^2562^23^1669957386^79^1^5^319.44^Ericsenior", -- [23]
+						"^2563^23^1669957634^45^1^5^321.85^", -- [24]
+						"^2564^23^1669957839^72^1^5^317.20^", -- [25]
+						"^2565^23^1669957965^89^1^5^317.56^", -- [26]
+						"^2615^23^1669958366^66^1^5^325.50^", -- [27]
+						"^2616^23^1669958568^77^1^5^325.50^Ericsenior", -- [28]
+						"^2617^23^1669958786^63^1^5^320.50^", -- [29]
+						"^2618^23^1669959004^51^1^5^321.67^", -- [30]
+						"^2555^23^1669959416^78^1^5^322.27^", -- [31]
+						"^2556^23^1669959523^57^1^5^324.40^Mallaarkus", -- [32]
+						"^2557^23^1669959654^69^1^5^323.92^", -- [33]
+						"^2558^23^1669959861^89^1^5^324.38^", -- [34]
+						"^2559^23^1669960305^91^1^5^324.83^", -- [35]
+						"^2609^23^1670434043^58^1^5^371.06^", -- [36]
+						"^2606^23^1670434298^48^1^5^365.44^", -- [37]
+						"^2623^23^1670434427^54^1^5^365.44^", -- [38]
+						"^2610^23^1670434669^53^1^5^368.00^Atrocitysix", -- [39]
+						"^2613^23^1670434801^42^1^5^368.00^", -- [40]
+						"^2612^23^1670434968^54^1^5^368.06^", -- [41]
+						"^2611^23^1670435109^50^1^5^368.06^", -- [42]
+						"^2636^23^1670435515^54^1^5^365.62^", -- [43]
+						"^2637^23^1670435602^50^1^5^365.62^", -- [44]
+						"^2581^23^1670435822^46^1^5^365.09^", -- [45]
+						"^2580^23^1670435978^58^1^5^365.09^", -- [46]
+						"^2582^23^1670436256^43^1^5^368.27^", -- [47]
+						"^2585^23^1670436403^24^1^5^370.59^", -- [48]
+						"^2583^23^1670436490^58^1^5^370.59^", -- [49]
+						"^2584^23^1670436558^53^1^5^370.59^", -- [50]
+						"^2570^23^1670436835^49^1^5^370.48^Drenacouggla", -- [51]
+						"^2568^23^1670436978^52^1^5^370.48^", -- [52]
+						"^2567^23^1670437096^27^1^5^370.48^", -- [53]
+						"^2569^23^1670437317^106^1^5^368.52^Atrocitysix", -- [54]
+						"^2562^23^1670437619^52^1^5^365.19^", -- [55]
+						"^2563^23^1670437751^40^1^5^365.19^", -- [56]
+						"^2564^23^1670437909^46^1^5^365.19^", -- [57]
+						"^2565^23^1670438009^48^1^5^365.19^", -- [58]
+						"^2555^23^1670438351^38^1^5^365.42^", -- [59]
+						"^2556^23^1670438411^44^1^5^368.67^Drenacouggla", -- [60]
+						"^2557^23^1670438499^54^1^5^367.61^", -- [61]
+						"^2558^23^1670438632^30^1^5^370.59^", -- [62]
+						"^2559^23^1670438811^66^1^5^370.59^", -- [63]
+						"^2615^23^1670452427^66^1^5^368.27^", -- [64]
+						"^2616^23^1670452609^54^1^5^370.44^", -- [65]
+						"^2617^23^1670452750^49^1^5^370.44^Drenacouggla", -- [66]
+						"^2618^23^1670452897^37^1^5^370.44^", -- [67]
+						"^2398^15^1670888754^26^1^30^378.62^", -- [68]
+						"^2418^15^1670888882^30^1^30^378.64^", -- [69]
+						"^2399^15^1670889005^66^1^29^378.75^", -- [70]
+						"^2592^14^1670994670^320^1^30^374.12^Innocentius", -- [71]
+						"^2605^14^1670995164^0^0^30^373.88^", -- [72]
+						"^2605^14^1670995238^321^1^30^373.52^Innocentius", -- [73]
+						"^2635^14^1670995880^269^1^30^377.99^Innocentius", -- [74]
+						"^2614^14^1670996331^0^0^30^378.16^", -- [75]
+						"^2614^14^1670996391^363^1^30^378.16^Northernhunt", -- [76]
+						"^2607^14^1670997093^268^0^30^378.01^Systemdaemon-Area52", -- [77]
+						"^2607^14^1670997393^20^0^30^377.93^Chime-Jaedenar", -- [78]
+						"^2607^14^1670997481^673^1^30^377.98^Innocentius", -- [79]
+						"^2635^15^1671064677^251^1^30^385.48^Atlasdumpy", -- [80]
+						"^2614^15^1671065189^0^0^30^385.52^", -- [81]
+						"^2614^15^1671065473^1^0^30^385.22^", -- [82]
+						"^2614^15^1671065506^239^0^30^385.30^Atrocitysix", -- [83]
+						"^2614^15^1671065854^0^0^30^385.30^", -- [84]
+						"^2614^15^1671065940^403^1^30^384.95^Pencilpete", -- [85]
+						"^2607^15^1671097288^192^0^30^384.10^Rikusson", -- [86]
+						"^2607^15^1671097580^256^0^30^384.17^Benbrm", -- [87]
+						"^2607^15^1671131402^633^1^30^382.07^Ericsmagetwo", -- [88]
+						"^2587^15^1671564202^170^1^30^388.36^Strydem-Kil'jaeden", -- [89]
+						"^2590^15^1671564759^0^0^30^389.37^", -- [90]
+						"^2590^15^1671564820^192^1^30^389.37^Mizithra-Proudmoore", -- [91]
+						"^2639^15^1671565422^0^0^30^391.52^", -- [92]
+						"^2639^15^1671565491^247^1^30^392.18^Daddydh-MoonGuard", -- [93]
+						"^2592^15^1671565936^0^0^30^392.20^", -- [94]
+						"^2592^15^1671565988^275^1^30^392.60^Rikunatty", -- [95]
+						"^2605^15^1671566400^5^0^30^392.60^", -- [96]
+						"^2605^15^1671566464^320^1^30^391.06^Malaarkus", -- [97]
+						"^2607^15^1671582621^25^0^30^387.24^Rivenzp", -- [98]
+						"^2607^15^1671582755^656^1^30^387.24^Scottbestiee", -- [99]
+					},
+					["Atrocitykfk"] = {
+						"^2395^8^1656198900^116^1^5^265.62^", -- [1]
+						"^2394^8^1656199252^136^1^5^265.62^", -- [2]
+						"^2400^8^1656199703^129^1^5^265.62^Atrocitykfk", -- [3]
+						"^2396^8^1656199920^198^1^5^265.62^Atrocitykfk", -- [4]
+					},
+					["Atrocityjr"] = {
+						"^2401^8^1641911366^108^1^5^234.56^", -- [1]
+						"^2380^8^1641911555^137^1^5^234.56^", -- [2]
+						"^2403^8^1641911820^123^1^5^234.56^", -- [3]
+						"^2381^8^1641912038^118^1^5^234.56^Impecs", -- [4]
+						"^2423^16^1642042498^10^0^20^251.21^", -- [5]
+						"^2423^16^1642042564^10^0^20^251.21^", -- [6]
+						"^2423^16^1642042630^10^0^20^251.21^", -- [7]
+						"^2423^16^1642042687^9^0^20^251.21^", -- [8]
+						"^2423^16^1642042739^10^0^20^251.21^", -- [9]
+						"^2423^16^1642042785^193^1^20^251.21^Vilw", -- [10]
+						"^2433^16^1642043299^280^1^20^251.67^Norichixo", -- [11]
+						"^2429^16^1642043804^249^1^20^251.60^Malarkus", -- [12]
+						"^2432^16^1642044287^6^0^20^251.65^", -- [13]
+						"^2432^16^1642044366^206^1^20^251.63^Malarkus", -- [14]
+						"^2430^16^1642045348^7^0^20^252.24^", -- [15]
+						"^2430^16^1642045396^354^1^20^252.27^Xeseviwl", -- [16]
+						"^2436^16^1642045862^6^0^20^252.19^", -- [17]
+						"^2436^16^1642045944^44^0^20^252.06^Scottbrexit", -- [18]
+						"^2436^16^1642046039^253^1^20^252.06^Malarkus", -- [19]
+						"^2431^16^1642046536^336^1^20^252.16^Driney", -- [20]
+						"^2422^16^1642047184^48^0^20^252.10^Rivénz", -- [21]
+						"^2422^16^1642047329^407^1^20^252.15^Jpcwicked", -- [22]
+						"^2435^16^1642047914^766^1^20^252.31^Malarkus", -- [23]
+						"^2423^16^1642640053^10^0^20^251.12^", -- [24]
+						"^2423^16^1642640132^10^0^20^251.39^", -- [25]
+						"^2423^16^1642640186^5^0^20^251.39^", -- [26]
+						"^2423^16^1642640266^11^0^20^251.39^", -- [27]
+						"^2423^16^1642640494^191^1^20^251.80^Goopm", -- [28]
+						"^2422^16^1642640788^8^0^20^251.64^", -- [29]
+						"^2422^16^1642640982^402^1^20^251.64^Jpcwicked", -- [30]
+						"^2435^16^1642641576^310^0^20^252.11^Anikarin-Dalaran", -- [31]
+						"^2435^16^1642641936^789^1^20^252.11^Anikarin-Dalaran", -- [32]
+						"^2433^16^1642643159^34^0^20^252.47^Rivenzxd", -- [33]
+						"^2433^16^1642643250^262^1^20^252.47^", -- [34]
+						"^2429^16^1642643693^245^1^20^252.52^", -- [35]
+						"^2432^16^1642644149^7^0^20^252.52^", -- [36]
+						"^2432^16^1642644216^196^1^20^252.52^", -- [37]
+						"^2434^16^1642644571^29^0^20^252.56^Vilw", -- [38]
+						"^2434^16^1642644685^290^1^20^252.56^", -- [39]
+						"^2430^16^1642645124^7^0^20^252.69^", -- [40]
+						"^2430^16^1642645171^312^1^20^252.66^Rivenzxd", -- [41]
+						"^2436^16^1642645628^4^0^20^252.72^", -- [42]
+						"^2436^16^1642645668^251^1^20^252.72^Atrocityjr", -- [43]
+						"^2426^8^1651557959^159^1^5^260.16^Atrocityjr", -- [44]
+						"^2419^8^1651558237^128^1^5^260.16^Atrocityjr", -- [45]
+						"^2442^8^1651558498^232^1^5^260.16^Atrocityjr", -- [46]
+						"^2397^8^1652759040^147^1^5^260.11^", -- [47]
+						"^2392^8^1652759469^216^1^5^260.11^Xeseviwl", -- [48]
+						"^2393^8^1652759836^175^1^5^260.11^", -- [49]
+						"^2425^8^1652825841^79^1^5^262.49^", -- [50]
+						"^2441^8^1652826226^171^1^5^262.49^Atlasxo", -- [51]
+						"^2424^8^1652826612^150^1^5^262.58^Atlasxo", -- [52]
+						"^2440^8^1652826947^157^1^5^262.58^", -- [53]
+						"^2437^8^1652827171^110^1^5^262.58^", -- [54]
+						"^2395^8^1652937062^74^1^5^260.26^", -- [55]
+						"^2394^8^1652937651^134^1^5^263.72^", -- [56]
+						"^2400^8^1652938232^129^1^5^263.72^Twistedsp", -- [57]
+						"^2396^8^1652938432^156^1^5^263.72^", -- [58]
+						"^2426^8^1652980510^97^1^5^268.38^", -- [59]
+						"^2419^8^1652980760^151^1^5^268.38^", -- [60]
+						"^2442^8^1652981154^151^1^5^267.28^", -- [61]
+						"^2396^8^1652999495^233^1^5^261.76^Atrocityjr", -- [62]
+						"^2400^8^1653000665^75^1^5^262.61^", -- [63]
+						"^2394^8^1653001206^130^1^5^258.86^", -- [64]
+						"^2395^8^1653001753^72^1^5^258.86^", -- [65]
+						"^2396^8^1653001883^154^1^5^258.86^", -- [66]
+						"^2397^8^1653512129^129^1^5^268.25^", -- [67]
+						"^2392^8^1653512511^197^1^5^268.25^", -- [68]
+						"^2393^8^1653512904^132^1^5^268.25^", -- [69]
+						"^2395^8^1654548671^83^1^5^272.15^", -- [70]
+						"^2394^8^1654549320^154^1^5^272.15^", -- [71]
+						"^2400^8^1654550139^124^1^5^272.15^", -- [72]
+						"^2396^8^1654550381^260^1^5^272.15^Powercleans-Mal'Ganis", -- [73]
+						"^2292^8^1666665133^103^1^5^291.12^", -- [74]
+						"^2312^8^1666665511^64^1^5^291.12^Twistedstu", -- [75]
+						"^2290^8^1666665794^94^1^5^291.12^Twistedstu", -- [76]
+						"^2291^8^1666666023^111^1^5^291.34^", -- [77]
+						"^2423^16^1666816860^9^0^20^283.22^", -- [78]
+						"^2423^16^1666816933^5^0^20^283.22^", -- [79]
+						"^2423^16^1666816998^5^0^20^283.22^", -- [80]
+						"^2423^16^1666817068^5^0^20^283.22^", -- [81]
+						"^2423^16^1666817126^133^1^20^283.22^Ericsdruid", -- [82]
+						"^2422^16^1666817445^9^0^20^282.33^", -- [83]
+						"^2422^16^1666817591^255^0^20^282.33^Smackedh", -- [84]
+						"^2422^16^1666817902^229^0^20^282.33^Trillshaman", -- [85]
+						"^2422^16^1666818247^301^1^20^282.22^Podra", -- [86]
+					},
+					["Atrocityx"] = {
+					},
+					["Atrocitysp"] = {
+					},
+					["Atrocitysoju"] = {
+						"^2590^15^1674698894^5^0^27^389.33^", -- [1]
+						"^2590^15^1674698975^152^1^29^391.70^Jetsp", -- [2]
+						"^2635^15^1674699381^206^1^29^393.97^Arcinde", -- [3]
+						"^2639^15^1674699908^0^0^29^393.17^", -- [4]
+						"^2639^15^1674699947^208^1^29^391.91^Kxingxing", -- [5]
+						"^2592^15^1674700372^0^0^27^392.64^", -- [6]
+						"^2592^15^1674700490^226^1^30^392.78^Relpriest", -- [7]
+						"^2605^15^1674700767^2^0^28^392.78^Goozee", -- [8]
+						"^2605^15^1674700845^0^0^28^394.08^", -- [9]
+						"^2605^15^1674700927^279^1^30^395.99^Jetsp", -- [10]
+						"^2614^15^1674701546^312^1^30^393.65^Relpriest", -- [11]
+						"^2607^15^1674702137^364^0^30^392.41^Relpriest", -- [12]
+						"^2607^15^1674702598^654^1^30^393.15^Relpriest", -- [13]
+						"^2587^16^1674703923^206^1^20^396.91^Kimsamsung", -- [14]
+						"^2590^16^1674704458^5^0^20^398.57^", -- [15]
+						"^2590^16^1674704575^271^1^20^398.91^Relpriest", -- [16]
+						"^2609^8^1674781854^174^1^5^403.34^", -- [17]
+						"^2606^8^1674782846^175^1^5^399.06^Lilgayecho-Illidan", -- [18]
+						"^2623^8^1674783401^126^1^5^395.94^", -- [19]
+						"^1677^8^1674891884^131^0^5^404.94^Atrocitysoju", -- [20]
+						"^1677^8^1674892110^164^1^5^404.94^", -- [21]
+						"^1688^8^1674892469^142^1^5^404.94^Roymixd", -- [22]
+						"^1679^8^1674893057^159^1^5^404.94^Roymixd", -- [23]
+						"^1682^8^1674893395^157^0^5^402.91^Quigs", -- [24]
+						"^1682^8^1674893595^153^1^5^402.91^Hardyw", -- [25]
+					},
+					["Padmaster"] = {
+						"^2401^8^1631664333^116^1^5^245.71^", -- [1]
+						"^2380^8^1631664563^111^1^5^245.71^", -- [2]
+						"^2403^8^1631664821^102^1^5^245.71^", -- [3]
+						"^2381^8^1631665015^119^1^5^245.71^", -- [4]
+						"^2423^16^1631836523^11^0^20^249.13^", -- [5]
+						"^2423^16^1631836604^10^0^20^250.19^", -- [6]
+						"^2423^16^1631836674^5^0^20^249.67^", -- [7]
+						"^2423^16^1631836712^5^0^20^249.92^", -- [8]
+						"^2423^16^1631836864^100^0^20^250.03^Avade", -- [9]
+						"^2423^16^1631837023^216^1^20^250.03^Seenin", -- [10]
+						"^2433^16^1631837589^312^1^20^250.14^Ödalia", -- [11]
+						"^2429^16^1631838151^261^1^20^250.18^Ftbabbler", -- [12]
+						"^2432^16^1631838677^8^0^20^250.39^Ftbabbler", -- [13]
+						"^2432^16^1631838756^250^0^20^250.38^Ftbabbler", -- [14]
+						"^2432^16^1631839108^81^0^20^250.38^Atlasxo", -- [15]
+						"^2432^16^1631839242^253^1^20^250.38^Ftbabbler", -- [16]
+						"^2434^16^1631839846^330^1^20^250.63^Ftbabbler", -- [17]
+						"^2430^16^1631840392^5^0^20^250.30^", -- [18]
+						"^2430^16^1631840459^354^1^20^250.59^Ödalia", -- [19]
+						"^2436^16^1631840998^56^0^20^250.93^Xyroblast", -- [20]
+						"^2436^16^1631841126^269^1^20^250.77^Ftbabbler", -- [21]
+						"^2431^16^1631841641^334^1^20^251.62^Thebucket", -- [22]
+						"^2422^16^1631842391^376^0^20^251.62^Ftbabbler", -- [23]
+						"^2422^16^1631842847^562^1^20^251.59^Ftbabbler", -- [24]
+						"^2435^16^1631843617^380^0^20^251.79^Seenin", -- [25]
+						"^2435^16^1631844090^840^1^20^251.88^Tanglilord", -- [26]
+						"^2382^8^1632169192^114^1^5^247.86^Xantu", -- [27]
+						"^2384^8^1632169728^110^1^5^247.86^", -- [28]
+						"^2385^8^1632170024^89^1^5^247.86^", -- [29]
+						"^2386^8^1632170197^144^1^5^247.86^Brambi", -- [30]
+						"^2401^8^1632249129^114^1^5^247.35^Tryingw-Mal'Ganis", -- [31]
+						"^2380^8^1632249391^97^1^5^247.35^", -- [32]
+						"^2403^8^1632249559^54^0^5^247.35^Padmaster", -- [33]
+						"^2381^8^1632249969^101^1^5^247.35^", -- [34]
+						"^2063^7^1632264307^16^1^10^253.31^", -- [35]
+						"^2423^16^1632355370^226^1^20^251.17^Darkeewar", -- [36]
+						"^2429^16^1632356671^277^1^20^241.34^Geiwokan", -- [37]
+						"^2432^16^1632357336^246^1^20^251.82^Geiwokan", -- [38]
+						"^2434^16^1632357842^310^0^20^251.81^Geiwokan", -- [39]
+						"^2434^16^1632358242^386^1^20^251.91^Geiwokan", -- [40]
+						"^2430^16^1632358889^6^0^20^251.77^", -- [41]
+						"^2430^16^1632358928^134^0^20^251.79^Ödalia", -- [42]
+						"^2430^16^1632359109^397^1^20^251.79^Ödalia", -- [43]
+						"^2436^16^1632359836^266^1^20^252.45^Maeveythree", -- [44]
+						"^2431^16^1632360291^356^1^20^239.10^Ödalia", -- [45]
+						"^2422^16^1632360701^1^0^20^239.10^Padmaster", -- [46]
+						"^2422^16^1632361001^245^0^20^238.06^Ödalia", -- [47]
+						"^2422^16^1632361308^412^1^20^238.06^Ödalia", -- [48]
+						"^2435^16^1632361867^209^0^20^252.22^Padmaster", -- [49]
+						"^2435^16^1632362144^829^1^20^252.22^Ödalia", -- [50]
+						"^2423^16^1632960059^10^0^20^249.86^", -- [51]
+						"^2423^16^1632960148^7^0^20^249.73^", -- [52]
+						"^2423^16^1632960224^10^0^20^249.73^", -- [53]
+						"^2423^16^1632960274^5^0^20^249.73^", -- [54]
+						"^2423^16^1632960346^53^0^20^249.77^Skreehelios", -- [55]
+						"^2423^16^1632960448^207^1^20^249.05^Skreehelios", -- [56]
+						"^2429^16^1632961517^266^1^20^249.15^Bgatagi-Mal'Ganis", -- [57]
+						"^2432^16^1632962029^6^0^20^250.12^", -- [58]
+						"^2432^16^1632962093^210^0^20^252.76^Podra", -- [59]
+						"^2432^16^1632962376^148^0^20^252.76^Imexilerogue", -- [60]
+						"^2432^16^1632962579^205^1^20^252.76^Podra", -- [61]
+						"^2434^16^1632962956^343^1^20^252.76^Lip", -- [62]
+						"^2430^16^1632963451^7^0^20^252.78^", -- [63]
+						"^2430^16^1632963492^346^1^20^252.78^Podra", -- [64]
+						"^2436^16^1632964138^252^1^20^252.80^Podra", -- [65]
+						"^2431^16^1632964600^295^0^20^240.64^Ödalia", -- [66]
+						"^2431^16^1632964952^280^0^20^240.64^Ödalia", -- [67]
+						"^2431^16^1632965309^351^1^20^240.64^Ödalia", -- [68]
+						"^2422^16^1632965948^224^0^20^240.59^Ödalia", -- [69]
+						"^2422^16^1632966231^131^0^20^240.59^Ödalia", -- [70]
+						"^2422^16^1632966415^414^1^20^240.50^Ödalia", -- [71]
+						"^2435^16^1632967065^767^1^20^252.80^Bgatagi-Mal'Ganis", -- [72]
+						"^2401^8^1633116003^97^1^5^243.91^", -- [73]
+						"^2380^8^1633116132^118^1^5^243.91^", -- [74]
+						"^2403^8^1633116358^84^1^5^243.91^", -- [75]
+						"^2381^8^1633116483^120^1^5^243.91^Weewm-Mal'Ganis", -- [76]
+						"^2063^7^1633323214^26^1^10^253.44^", -- [77]
+						"^2063^7^1633451336^19^1^10^255.31^", -- [78]
+						"^2423^16^1633478282^10^0^20^250.83^", -- [79]
+						"^2423^16^1633478352^10^0^20^250.83^", -- [80]
+						"^2423^16^1633478431^10^0^20^251.09^", -- [81]
+						"^2423^16^1633478629^229^1^20^250.56^Extremistt", -- [82]
+						"^2433^16^1633479153^296^1^20^250.84^Podra", -- [83]
+						"^2429^16^1633479711^261^1^20^252.47^Dirtysock-Rexxar", -- [84]
+						"^2436^16^1633480275^37^0^20^253.16^Scottbrexit", -- [85]
+						"^2436^16^1633480370^236^1^20^252.48^Podra", -- [86]
+						"^2422^16^1633480894^394^0^20^253.00^Skulpt-Thrall", -- [87]
+						"^2422^16^1633481340^232^0^20^253.00^Skulpt-Thrall", -- [88]
+						"^2422^16^1633481676^402^1^20^252.66^Skulpt-Thrall", -- [89]
+						"^2435^16^1633482243^825^0^20^252.22^Podra", -- [90]
+						"^2435^16^1633483199^189^0^20^252.40^Skulpt-Thrall", -- [91]
+						"^2435^16^1633483475^753^1^20^252.93^Skulpt-Thrall", -- [92]
+						"^2401^8^1633992338^65^1^5^249.86^", -- [93]
+						"^2380^8^1633992439^70^1^5^249.86^", -- [94]
+						"^2403^8^1633992669^59^1^5^249.86^", -- [95]
+						"^2381^8^1633992819^73^1^5^252.53^Padmaster", -- [96]
+						"^2423^16^1634174890^5^0^20^239.02^", -- [97]
+						"^2423^16^1634174957^5^0^20^239.02^", -- [98]
+						"^2423^16^1634175017^5^0^20^239.02^", -- [99]
+						"^2423^16^1634175078^6^0^20^239.02^", -- [100]
+						"^2423^16^1634175145^212^1^20^239.02^", -- [101]
+						"^2436^16^1634175482^4^0^20^239.02^", -- [102]
+						"^2436^16^1634175546^191^0^20^239.02^Maeveycakes", -- [103]
+						"^2436^16^1634175838^296^1^20^239.02^Cryptidezz", -- [104]
+						"^2422^16^1634176490^391^1^20^239.08^", -- [105]
+						"^2387^8^1634244987^74^1^5^248.38^", -- [106]
+						"^2388^8^1634245368^61^1^5^248.38^", -- [107]
+						"^2389^8^1634245682^46^1^5^248.38^", -- [108]
+						"^2390^8^1634245744^87^1^5^250.92^", -- [109]
+						"^2423^16^1634695594^10^0^20^249.82^", -- [110]
+						"^2423^16^1634695658^10^0^20^250.60^", -- [111]
+						"^2423^16^1634695725^10^0^20^250.15^", -- [112]
+						"^2423^16^1634695789^11^0^20^250.15^", -- [113]
+						"^2423^16^1634696135^233^1^20^250.40^", -- [114]
+						"^2433^16^1634696687^315^1^20^250.47^Missundead", -- [115]
+						"^2429^16^1634697258^274^1^20^250.47^Padmaster", -- [116]
+						"^2432^16^1634697918^240^1^20^250.03^Vilw", -- [117]
+						"^2434^16^1634698330^346^1^20^250.72^", -- [118]
+						"^2430^16^1634698884^4^0^20^250.98^", -- [119]
+						"^2430^16^1634698922^404^1^20^250.98^Missundead", -- [120]
+						"^2436^16^1634699561^288^1^20^250.89^Missundead", -- [121]
+						"^2431^16^1634700235^191^0^20^252.39^Ericsmage", -- [122]
+						"^2431^16^1634700576^130^0^20^252.39^Thdemon", -- [123]
+						"^2431^16^1634700786^356^1^20^252.39^Sang", -- [124]
+						"^2422^16^1634701418^267^0^20^252.39^Missundead", -- [125]
+						"^2422^16^1634701733^413^1^20^252.39^Missundead", -- [126]
+						"^2435^16^1634702277^188^0^20^251.12^Missundead", -- [127]
+						"^2435^16^1634702538^466^0^20^251.12^Missundead", -- [128]
+						"^2435^16^1634703066^201^0^20^251.12^Missundead", -- [129]
+						"^2435^16^1634703360^816^1^20^252.24^Missundead", -- [130]
+						"^2063^7^1635741893^20^1^10^255.75^", -- [131]
+						"^2423^16^1635992623^10^0^20^251.60^", -- [132]
+						"^2423^16^1635992708^11^0^20^251.78^", -- [133]
+						"^2423^16^1635992764^9^0^20^251.62^", -- [134]
+						"^2423^16^1635992824^10^0^20^251.62^", -- [135]
+						"^2423^16^1635992865^9^0^20^251.62^", -- [136]
+						"^2423^16^1635992968^209^1^20^251.54^Twistedjr", -- [137]
+						"^2433^16^1635993492^272^1^20^251.62^Stankylip", -- [138]
+						"^2429^16^1635994000^261^1^20^251.62^Drineym", -- [139]
+						"^2436^16^1635994500^3^0^20^251.78^", -- [140]
+						"^2436^16^1635994540^256^1^20^251.57^", -- [141]
+						"^2422^16^1635995058^343^0^20^251.66^Twistedjr", -- [142]
+						"^2422^16^1635995501^387^1^20^251.66^Norialaxo", -- [143]
+						"^2435^16^1635996014^443^0^20^251.73^Padmaster", -- [144]
+						"^2435^16^1635996539^227^0^20^251.81^Kíngflyhunt", -- [145]
+						"^2435^16^1635996829^641^0^20^251.81^Drineym", -- [146]
+						"^2435^16^1635997548^755^1^20^251.81^Drineym", -- [147]
+						"^2423^16^1636599801^10^0^20^251.55^", -- [148]
+						"^2423^16^1636599856^10^0^20^251.55^", -- [149]
+						"^2423^16^1636599912^4^0^20^251.46^", -- [150]
+						"^2423^16^1636599981^9^0^20^251.30^", -- [151]
+						"^2423^16^1636600021^60^0^20^251.30^Thdlockb", -- [152]
+						"^2423^16^1636600138^203^1^20^251.30^Padmaster", -- [153]
+						"^2433^16^1636600690^299^1^20^251.60^Estaup", -- [154]
+						"^2429^16^1636601249^260^1^20^251.79^", -- [155]
+						"^2436^16^1636601782^4^0^20^251.78^", -- [156]
+						"^2436^16^1636601843^200^0^20^251.58^Floormopzz", -- [157]
+						"^2436^16^1636602119^12^0^20^251.76^Skreehelios", -- [158]
+						"^2436^16^1636602208^255^1^20^251.76^Estaup", -- [159]
+						"^2422^16^1636602751^412^1^20^251.37^Maeveycakes", -- [160]
+						"^2435^16^1636603306^18^0^20^251.06^Padmaster", -- [161]
+						"^2435^16^1636603538^198^0^20^251.06^Floormopzz", -- [162]
+						"^2435^16^1636603799^778^1^20^251.88^Padmaster", -- [163]
+						"^2382^8^1636945489^95^1^5^250.62^Lipwarlock", -- [164]
+						"^2384^8^1636945963^106^1^5^250.62^Padmaster", -- [165]
+						"^2385^8^1636946200^99^1^5^250.62^", -- [166]
+						"^2386^8^1636946468^140^1^5^250.62^Lipwarlock", -- [167]
+						"^2423^16^1637715390^4^0^20^251.63^", -- [168]
+						"^2423^16^1637715460^5^0^20^251.63^", -- [169]
+						"^2423^16^1637715531^4^0^20^251.70^", -- [170]
+						"^2423^16^1637715585^13^0^20^251.86^", -- [171]
+						"^2423^16^1637715718^199^1^20^252.16^Ohappy", -- [172]
+						"^2433^16^1637716266^283^1^20^252.18^Isaybu", -- [173]
+						"^2429^16^1637716794^266^1^20^252.13^Isaybu", -- [174]
+						"^2432^16^1637717347^5^0^20^252.01^", -- [175]
+						"^2432^16^1637717432^215^1^20^251.99^Ohappy", -- [176]
+						"^2434^16^1637717861^322^1^20^252.29^Ohappy", -- [177]
+						"^2430^16^1637718333^5^0^20^252.47^", -- [178]
+						"^2430^16^1637718377^72^0^20^252.45^Ohappy", -- [179]
+						"^2430^16^1637718506^326^1^20^252.45^Ohappy", -- [180]
+						"^2436^16^1637719089^32^0^20^252.31^Soupshop", -- [181]
+						"^2436^16^1637719195^251^1^20^252.35^Ohappy", -- [182]
+						"^2431^16^1637719658^335^1^20^252.16^Ohappy", -- [183]
+						"^2422^16^1637720244^416^1^20^250.72^Ohappy", -- [184]
+						"^2435^16^1637720839^764^1^20^251.02^Ohappy", -- [185]
+						"^2435^16^1640756004^865^0^20^252.36^Mauri", -- [186]
+						"^2435^16^1640756945^851^1^20^252.08^Mauri", -- [187]
+						"^2423^16^1641430288^10^0^20^253.67^", -- [188]
+						"^2423^16^1641430347^6^0^20^253.67^", -- [189]
+						"^2423^16^1641430404^6^0^20^253.67^", -- [190]
+						"^2423^16^1641430460^8^0^20^253.69^", -- [191]
+						"^2423^16^1641430501^69^0^20^253.54^Scottdk", -- [192]
+						"^2423^16^1641430659^159^1^20^253.67^Scottdk", -- [193]
+						"^2429^16^1641431633^253^1^20^253.70^Juffo-Mal'Ganis", -- [194]
+						"^2432^16^1641432110^5^0^20^253.61^Drineym", -- [195]
+						"^2432^16^1641432192^211^1^20^253.61^Juffo-Mal'Ganis", -- [196]
+						"^2434^16^1641432602^310^1^20^253.41^Juffo-Mal'Ganis", -- [197]
+						"^2430^16^1641433089^5^0^20^253.49^", -- [198]
+						"^2430^16^1641433130^213^0^20^253.60^Juffo-Mal'Ganis", -- [199]
+						"^2430^16^1641433399^73^0^20^253.60^Juffo-Mal'Ganis", -- [200]
+						"^2430^16^1641433550^326^1^20^253.60^Juffo-Mal'Ganis", -- [201]
+						"^2436^16^1641433996^29^0^20^253.59^Lip", -- [202]
+						"^2436^16^1641434098^46^0^20^253.84^Juffo-Mal'Ganis", -- [203]
+						"^2436^16^1641434194^252^1^20^253.96^Juffo-Mal'Ganis", -- [204]
+						"^2431^16^1641434668^327^1^20^242.72^Juffo-Mal'Ganis", -- [205]
+						"^2422^16^1641435406^379^1^20^242.22^Juffo-Mal'Ganis", -- [206]
+						"^2435^16^1641435965^881^1^20^253.99^Odeon-EchoIsles", -- [207]
+					},
+					["Atrocityfour"] = {
+					},
+					["Atrocityedge"] = {
+						"^1790^8^1698609770^124^1^5^437.62^", -- [1]
+						"^1791^8^1698610176^140^1^5^437.62^Karzez", -- [2]
+						"^1792^8^1698610404^118^1^5^437.62^", -- [3]
+						"^1793^8^1698610656^146^1^5^437.62^", -- [4]
+						"^2093^8^1698611372^120^1^5^433.02^", -- [5]
+						"^2094^8^1698611672^179^1^5^433.02^Anarchysmoge", -- [6]
+						"^2095^8^1698612089^111^1^5^433.02^", -- [7]
+						"^2096^8^1698612314^146^1^5^433.02^", -- [8]
+						"^1790^8^1698613023^119^1^5^433.90^", -- [9]
+						"^1791^8^1698613396^138^1^5^433.90^", -- [10]
+						"^1792^8^1698613635^120^1^5^433.90^", -- [11]
+						"^1793^8^1698613858^153^1^5^433.90^", -- [12]
+						"^2615^8^1698614588^165^1^5^433.95^", -- [13]
+						"^2616^8^1698614949^150^1^5^433.95^Anarchysmoge", -- [14]
+						"^2617^8^1698615243^120^1^5^433.95^", -- [15]
+						"^2618^8^1698615551^262^1^5^433.95^Karzez", -- [16]
+						"^2615^8^1698616210^136^1^5^434.45^", -- [17]
+						"^2616^8^1698616549^115^1^5^434.45^", -- [18]
+						"^2617^8^1698616815^105^1^5^434.45^", -- [19]
+						"^2618^8^1698617075^260^1^5^434.45^Dingding", -- [20]
+						"^2111^8^1698630313^80^1^5^436.57^Atrocityedge", -- [21]
+						"^2118^8^1698630590^109^1^5^436.57^", -- [22]
+						"^2112^8^1698630771^109^1^5^436.57^", -- [23]
+						"^2123^8^1698631038^111^1^5^436.57^", -- [24]
+						"^2093^8^1698631626^105^1^5^437.56^", -- [25]
+						"^2094^8^1698631894^140^1^5^437.56^Mlark-Illidan", -- [26]
+						"^2095^8^1698632282^87^1^5^437.56^", -- [27]
+						"^2096^8^1698632472^125^1^5^437.56^", -- [28]
+						"^2093^8^1698632857^99^1^5^437.56^", -- [29]
+						"^2094^8^1698633111^143^1^5^437.56^Mlark-Illidan", -- [30]
+						"^2095^8^1698633488^97^1^5^437.56^", -- [31]
+						"^2096^8^1698633683^109^1^5^437.56^", -- [32]
+						"^1790^8^1698634228^109^1^5^437.82^", -- [33]
+						"^1791^8^1698634546^122^1^5^437.82^", -- [34]
+						"^1792^8^1698634771^116^1^5^437.82^", -- [35]
+						"^1793^8^1698634982^130^1^5^437.82^", -- [36]
+						"^2093^8^1698689202^83^1^5^437.34^Gatlas-Illidan", -- [37]
+						"^2094^8^1698689384^115^1^5^437.34^Gatlas-Illidan", -- [38]
+						"^2095^8^1698689758^80^1^5^437.34^", -- [39]
+						"^2096^8^1698689905^97^1^5^437.25^", -- [40]
+						"^2093^8^1698690602^69^1^5^439.15^", -- [41]
+						"^2094^8^1698690799^88^1^5^439.15^Gatlas-Illidan", -- [42]
+						"^2095^8^1698691103^87^1^5^439.15^", -- [43]
+						"^2096^8^1698691244^105^1^5^439.15^Gatlas-Illidan", -- [44]
+						"^2111^8^1698691632^70^1^5^438.82^", -- [45]
+						"^2118^8^1698691857^135^1^5^438.82^Ericsmagetwo-Illidan", -- [46]
+						"^2112^8^1698692036^150^1^5^438.82^Ericsmagetwo-Illidan", -- [47]
+						"^2123^8^1698692353^105^1^5^438.82^Atrocityedge", -- [48]
+						"^1043^8^1698693248^78^1^5^440.11^", -- [49]
+						"^1041^8^1698693564^59^0^5^440.11^Atrocityedge", -- [50]
+						"^1041^8^1698693675^119^1^5^440.11^", -- [51]
+						"^1042^8^1698694045^102^1^5^440.11^", -- [52]
+						"^2610^8^1698694670^73^1^5^438.88^Gatlas-Illidan", -- [53]
+						"^2613^8^1698694878^85^0^5^438.88^Rikusauce-Illidan", -- [54]
+						"^2613^8^1698695015^94^1^5^438.88^Atrocityedge", -- [55]
+						"^2612^8^1698695445^68^1^5^438.88^", -- [56]
+						"^2611^8^1698695659^105^1^5^438.88^Rikusauce-Illidan", -- [57]
+						"^2093^8^1698703008^81^1^5^441.29^", -- [58]
+						"^2094^8^1698703224^102^1^5^441.29^", -- [59]
+						"^2095^8^1698703521^73^1^5^441.89^", -- [60]
+						"^2096^8^1698703653^111^1^5^441.89^Cdabench-Illidan", -- [61]
+						"^2093^8^1698703937^81^1^5^441.29^", -- [62]
+						"^2094^8^1698704175^101^1^5^441.29^Dxaugtwo", -- [63]
+						"^2095^8^1698704465^73^1^5^441.29^", -- [64]
+						"^2096^8^1698704602^93^1^5^441.29^", -- [65]
+						"^2111^8^1698704945^50^1^5^441.29^", -- [66]
+						"^2118^8^1698705193^75^1^5^441.29^", -- [67]
+						"^2112^8^1698705306^78^1^5^441.29^", -- [68]
+						"^2123^8^1698705530^71^1^5^441.29^Atrocityedge", -- [69]
+						"^2688^16^1699330244^0^0^20^444.72^", -- [70]
+						"^2688^16^1699330312^201^1^20^444.72^Jacobw", -- [71]
+						"^2682^16^1699330828^8^0^20^444.72^", -- [72]
+						"^2682^16^1699330945^170^1^20^444.58^Gazmoon", -- [73]
+						"^2680^16^1699331185^1^0^20^444.58^", -- [74]
+						"^2680^16^1699331241^341^1^20^444.58^Aestisqtt", -- [75]
+						"^2687^16^1699331751^0^0^20^444.63^", -- [76]
+						"^2687^16^1699331817^222^1^20^444.70^Gazmoon", -- [77]
+						"^2693^16^1699332205^5^0^20^444.72^", -- [78]
+						"^2693^16^1699332254^334^1^20^444.72^Kadornuss", -- [79]
+						"^2684^16^1699332804^1^0^20^444.81^", -- [80]
+						"^2684^16^1699332987^386^1^20^444.93^Xyronicz", -- [81]
+						"^2685^16^1699333568^0^0^20^444.93^", -- [82]
+						"^2685^16^1699333741^69^0^20^444.93^Kadornuss", -- [83]
+						"^2685^16^1699333887^244^0^20^444.93^Twistedx", -- [84]
+						"^2685^16^1699334251^427^1^20^444.93^Gamzo", -- [85]
+						"^2688^16^1699578464^0^0^20^446.54^", -- [86]
+						"^2688^16^1699578720^189^1^20^446.91^", -- [87]
+						"^2684^16^1699579057^1^0^20^447.33^", -- [88]
+						"^2684^16^1699579136^380^1^20^447.59^Carow-Mal'Ganis", -- [89]
+						"^2685^16^1699579628^0^0^20^447.59^", -- [90]
+						"^2685^16^1699579689^0^0^20^447.64^", -- [91]
+						"^2685^16^1699579806^151^0^20^447.68^Syzdk-Mal'Ganis", -- [92]
+						"^2685^16^1699580075^402^1^20^447.77^Tydrapally-Mal'Ganis", -- [93]
+						"^2682^16^1699580745^10^0^20^447.77^", -- [94]
+						"^2682^16^1699580859^134^1^20^447.14^", -- [95]
+						"^2680^16^1699581051^0^0^20^447.14^", -- [96]
+						"^2680^16^1699581088^308^1^20^447.14^", -- [97]
+						"^2687^16^1699581566^1^0^20^447.10^", -- [98]
+						"^2687^16^1699581642^221^1^20^447.06^Atrocityedge-Mal'Ganis", -- [99]
+						"^2693^16^1699582022^4^0^20^446.93^", -- [100]
+						"^2693^16^1699582093^5^0^20^446.96^", -- [101]
+						"^2693^16^1699582130^229^1^20^446.96^Flowbss-Mal'Ganis", -- [102]
 					},
 					["Atrocity"] = {
 						"^2391^8^1631661874^112^1^5^246.60^", -- [1]
@@ -9268,352 +11228,71 @@ atrocityUI.VMRT["1440p"] = {
 						"^2607^15^1673309376^504^0^30^389.70^Drenacobruv", -- [1132]
 						"^2607^15^1673310054^673^1^30^390.81^Drenacobruv", -- [1133]
 					},
-					["Atrocitysix"] = {
-						"^2609^23^1669950863^102^1^5^302.81^", -- [1]
-						"^2606^23^1669951244^103^1^5^302.81^", -- [2]
-						"^2623^23^1669951470^88^1^5^302.81^", -- [3]
-						"^2610^23^1669951948^70^1^5^288.94^", -- [4]
-						"^2613^23^1669952181^86^1^5^298.12^", -- [5]
-						"^2612^23^1669952572^95^1^5^299.03^", -- [6]
-						"^2611^23^1669952856^74^1^5^299.03^", -- [7]
-						"^2637^23^1669953507^71^1^5^305.92^", -- [8]
-						"^2636^23^1669953775^91^1^5^306.52^Mallaarkus", -- [9]
-						"^2581^23^1669954085^2^0^5^310.10^", -- [10]
-						"^2581^23^1669954128^72^1^5^310.10^", -- [11]
-						"^2580^23^1669954382^146^1^5^310.10^", -- [12]
-						"^2582^23^1669954966^79^1^5^309.36^", -- [13]
-						"^2585^23^1669955206^80^1^5^310.27^", -- [14]
-						"^2583^23^1669955335^80^1^5^311.23^Mallaarkus", -- [15]
-						"^2584^23^1669955444^92^1^5^311.23^", -- [16]
-						"^2570^23^1669955969^81^1^5^314.59^Ericsenior", -- [17]
-						"^2567^23^1669956219^54^1^5^314.59^", -- [18]
-						"^2568^23^1669956429^91^0^5^311.92^Atrocitysix", -- [19]
-						"^2568^23^1669956585^83^1^5^311.92^", -- [20]
-						"^2569^23^1669956823^59^0^5^313.38^Dankscale", -- [21]
-						"^2569^23^1669956971^67^1^5^311.71^Mallaarkus", -- [22]
-						"^2562^23^1669957386^79^1^5^319.44^Ericsenior", -- [23]
-						"^2563^23^1669957634^45^1^5^321.85^", -- [24]
-						"^2564^23^1669957839^72^1^5^317.20^", -- [25]
-						"^2565^23^1669957965^89^1^5^317.56^", -- [26]
-						"^2615^23^1669958366^66^1^5^325.50^", -- [27]
-						"^2616^23^1669958568^77^1^5^325.50^Ericsenior", -- [28]
-						"^2617^23^1669958786^63^1^5^320.50^", -- [29]
-						"^2618^23^1669959004^51^1^5^321.67^", -- [30]
-						"^2555^23^1669959416^78^1^5^322.27^", -- [31]
-						"^2556^23^1669959523^57^1^5^324.40^Mallaarkus", -- [32]
-						"^2557^23^1669959654^69^1^5^323.92^", -- [33]
-						"^2558^23^1669959861^89^1^5^324.38^", -- [34]
-						"^2559^23^1669960305^91^1^5^324.83^", -- [35]
-						"^2609^23^1670434043^58^1^5^371.06^", -- [36]
-						"^2606^23^1670434298^48^1^5^365.44^", -- [37]
-						"^2623^23^1670434427^54^1^5^365.44^", -- [38]
-						"^2610^23^1670434669^53^1^5^368.00^Atrocitysix", -- [39]
-						"^2613^23^1670434801^42^1^5^368.00^", -- [40]
-						"^2612^23^1670434968^54^1^5^368.06^", -- [41]
-						"^2611^23^1670435109^50^1^5^368.06^", -- [42]
-						"^2636^23^1670435515^54^1^5^365.62^", -- [43]
-						"^2637^23^1670435602^50^1^5^365.62^", -- [44]
-						"^2581^23^1670435822^46^1^5^365.09^", -- [45]
-						"^2580^23^1670435978^58^1^5^365.09^", -- [46]
-						"^2582^23^1670436256^43^1^5^368.27^", -- [47]
-						"^2585^23^1670436403^24^1^5^370.59^", -- [48]
-						"^2583^23^1670436490^58^1^5^370.59^", -- [49]
-						"^2584^23^1670436558^53^1^5^370.59^", -- [50]
-						"^2570^23^1670436835^49^1^5^370.48^Drenacouggla", -- [51]
-						"^2568^23^1670436978^52^1^5^370.48^", -- [52]
-						"^2567^23^1670437096^27^1^5^370.48^", -- [53]
-						"^2569^23^1670437317^106^1^5^368.52^Atrocitysix", -- [54]
-						"^2562^23^1670437619^52^1^5^365.19^", -- [55]
-						"^2563^23^1670437751^40^1^5^365.19^", -- [56]
-						"^2564^23^1670437909^46^1^5^365.19^", -- [57]
-						"^2565^23^1670438009^48^1^5^365.19^", -- [58]
-						"^2555^23^1670438351^38^1^5^365.42^", -- [59]
-						"^2556^23^1670438411^44^1^5^368.67^Drenacouggla", -- [60]
-						"^2557^23^1670438499^54^1^5^367.61^", -- [61]
-						"^2558^23^1670438632^30^1^5^370.59^", -- [62]
-						"^2559^23^1670438811^66^1^5^370.59^", -- [63]
-						"^2615^23^1670452427^66^1^5^368.27^", -- [64]
-						"^2616^23^1670452609^54^1^5^370.44^", -- [65]
-						"^2617^23^1670452750^49^1^5^370.44^Drenacouggla", -- [66]
-						"^2618^23^1670452897^37^1^5^370.44^", -- [67]
-						"^2398^15^1670888754^26^1^30^378.62^", -- [68]
-						"^2418^15^1670888882^30^1^30^378.64^", -- [69]
-						"^2399^15^1670889005^66^1^29^378.75^", -- [70]
-						"^2592^14^1670994670^320^1^30^374.12^Innocentius", -- [71]
-						"^2605^14^1670995164^0^0^30^373.88^", -- [72]
-						"^2605^14^1670995238^321^1^30^373.52^Innocentius", -- [73]
-						"^2635^14^1670995880^269^1^30^377.99^Innocentius", -- [74]
-						"^2614^14^1670996331^0^0^30^378.16^", -- [75]
-						"^2614^14^1670996391^363^1^30^378.16^Northernhunt", -- [76]
-						"^2607^14^1670997093^268^0^30^378.01^Systemdaemon-Area52", -- [77]
-						"^2607^14^1670997393^20^0^30^377.93^Chime-Jaedenar", -- [78]
-						"^2607^14^1670997481^673^1^30^377.98^Innocentius", -- [79]
-						"^2635^15^1671064677^251^1^30^385.48^Atlasdumpy", -- [80]
-						"^2614^15^1671065189^0^0^30^385.52^", -- [81]
-						"^2614^15^1671065473^1^0^30^385.22^", -- [82]
-						"^2614^15^1671065506^239^0^30^385.30^Atrocitysix", -- [83]
-						"^2614^15^1671065854^0^0^30^385.30^", -- [84]
-						"^2614^15^1671065940^403^1^30^384.95^Pencilpete", -- [85]
-						"^2607^15^1671097288^192^0^30^384.10^Rikusson", -- [86]
-						"^2607^15^1671097580^256^0^30^384.17^Benbrm", -- [87]
-						"^2607^15^1671131402^633^1^30^382.07^Ericsmagetwo", -- [88]
-						"^2587^15^1671564202^170^1^30^388.36^Strydem-Kil'jaeden", -- [89]
-						"^2590^15^1671564759^0^0^30^389.37^", -- [90]
-						"^2590^15^1671564820^192^1^30^389.37^Mizithra-Proudmoore", -- [91]
-						"^2639^15^1671565422^0^0^30^391.52^", -- [92]
-						"^2639^15^1671565491^247^1^30^392.18^Daddydh-MoonGuard", -- [93]
-						"^2592^15^1671565936^0^0^30^392.20^", -- [94]
-						"^2592^15^1671565988^275^1^30^392.60^Rikunatty", -- [95]
-						"^2605^15^1671566400^5^0^30^392.60^", -- [96]
-						"^2605^15^1671566464^320^1^30^391.06^Malaarkus", -- [97]
-						"^2607^15^1671582621^25^0^30^387.24^Rivenzp", -- [98]
-						"^2607^15^1671582755^656^1^30^387.24^Scottbestiee", -- [99]
+					["Atrocitysaga"] = {
 					},
-					["Atrocityfour"] = {
+					["Atrocityzero"] = {
+						"^2113^8^1701370132^91^1^5^461.84^", -- [1]
+						"^2114^8^1701370411^88^1^5^461.84^Bronspawned-Area52", -- [2]
+						"^2115^8^1701370808^60^1^5^461.84^", -- [3]
+						"^2116^8^1701371226^91^1^5^461.84^Mestupid-Illidan", -- [4]
+						"^2117^8^1701371375^70^1^5^461.84^Bronspawned-Area52", -- [5]
+						"^1836^8^1701376419^184^1^5^457.29^", -- [6]
+						"^1837^8^1701377052^84^1^5^457.29^Atrocityzero", -- [7]
+						"^1838^8^1701377162^170^1^5^457.29^", -- [8]
+						"^1839^8^1701377703^106^1^5^457.29^", -- [9]
+						"^2113^8^1701380043^115^1^5^456.40^", -- [10]
+						"^2114^8^1701380516^88^1^5^456.40^", -- [11]
+						"^2115^8^1701380912^76^1^5^456.40^", -- [12]
+						"^2116^8^1701381290^94^1^5^456.40^", -- [13]
+						"^2117^8^1701381439^83^1^5^456.40^", -- [14]
 					},
-					["Atrocitytwo"] = {
-						"^2684^14^1683660652^0^0^29^415.51^", -- [1]
-						"^2684^14^1683660731^251^1^30^415.65^Xalence-Tichondrius", -- [2]
-						"^2693^14^1683740875^199^1^30^408.73^Jacobr", -- [3]
-						"^2693^15^1684296269^331^0^30^405.76^Syzrogue-Mal'Ganis", -- [4]
-						"^2693^15^1684296656^362^1^30^406.22^Karzez-Mal'Ganis", -- [5]
+					["Atrocitynoir"] = {
+						"^2111^8^1686016371^66^1^5^420.36^", -- [1]
+						"^2118^8^1686016912^93^1^5^420.36^", -- [2]
+						"^2112^8^1686017185^115^1^5^420.36^", -- [3]
+						"^2123^8^1686017634^107^1^5^420.36^Atrocitynoir", -- [4]
+						"^2111^8^1686066303^69^1^5^424.82^", -- [5]
+						"^2118^8^1686066563^122^0^5^424.82^Dankscale-Illidan", -- [6]
+						"^2118^8^1686066732^118^1^5^424.82^", -- [7]
+						"^2112^8^1686066944^102^1^5^424.82^", -- [8]
+						"^2123^8^1686067315^152^1^5^424.82^Kíngfly-Illidan", -- [9]
+					},
+					["Atrocitysnow"] = {
+						"^2688^16^1699322051^0^0^20^445.85^", -- [1]
+						"^2688^16^1699322350^207^1^20^446.25^Anarchysmoge", -- [2]
+						"^2682^16^1699322808^7^0^20^446.25^", -- [3]
+						"^2682^16^1699322886^140^1^20^446.25^", -- [4]
+						"^2680^16^1699323095^0^0^20^446.22^", -- [5]
+						"^2680^16^1699323272^353^1^20^446.32^Starshopping", -- [6]
+						"^2687^16^1699323817^0^0^20^446.32^", -- [7]
+						"^2687^16^1699323852^238^1^20^446.32^Tryinggd", -- [8]
+						"^2693^16^1699324262^5^0^20^446.32^", -- [9]
+						"^2693^16^1699324428^251^1^20^446.36^Flowbss", -- [10]
+						"^2684^16^1699324906^1^0^20^446.86^", -- [11]
+						"^2684^16^1699325024^388^1^20^446.86^Beladepr", -- [12]
+						"^2685^16^1699325548^0^0^20^0.00^", -- [13]
+						"^2685^16^1699325746^93^0^20^446.83^Anarchysmoge", -- [14]
+						"^2685^16^1699325913^234^0^20^446.91^Caroimb", -- [15]
+						"^2685^16^1699326224^486^0^20^446.91^Zthree", -- [16]
+						"^2685^16^1699326806^427^1^20^446.91^Syzlakdk", -- [17]
+						"^2688^16^1699409752^0^0^20^446.72^", -- [18]
+						"^2688^16^1699409796^195^1^20^446.72^", -- [19]
+						"^2684^16^1699410235^1^0^20^446.72^", -- [20]
+						"^2684^16^1699410297^239^0^20^446.75^Purepassion-Mal'Ganis", -- [21]
+						"^2684^16^1699410626^376^1^20^446.75^Millip-Mal'Ganis", -- [22]
+						"^2685^16^1699411250^0^0^20^446.80^", -- [23]
+						"^2685^16^1699411300^114^0^20^446.80^Karzaugieaug-Mal'Ganis", -- [24]
+						"^2685^16^1699411490^423^1^20^446.75^Winternights-Mal'Ganis", -- [25]
+						"^2682^16^1699412200^7^0^20^446.81^", -- [26]
+						"^2682^16^1699412281^143^1^20^446.82^", -- [27]
+						"^2680^16^1699412490^0^0^20^446.82^", -- [28]
+						"^2680^16^1699412549^316^1^20^446.79^Kalecgoose-Mal'Ganis", -- [29]
+						"^2687^16^1699413065^0^0^20^446.79^", -- [30]
+						"^2687^16^1699413128^224^1^20^446.79^Kalecgoose-Mal'Ganis", -- [31]
+						"^2693^16^1699413511^5^0^20^446.79^", -- [32]
+						"^2693^16^1699413573^269^1^20^446.79^", -- [33]
 					},
 					["Atrocityskye"] = {
-					},
-					["Atrocityw"] = {
-						"^2423^16^1643677317^11^0^20^247.82^", -- [1]
-						"^2423^16^1643677375^8^0^20^245.94^", -- [2]
-						"^2423^16^1643677470^9^0^20^247.11^", -- [3]
-						"^2423^16^1643678006^6^0^20^244.96^", -- [4]
-						"^2423^16^1643678071^215^1^20^244.96^Babombabam", -- [5]
-						"^2433^16^1643678644^318^1^20^246.66^Birc", -- [6]
-						"^2429^16^1643679129^278^1^20^246.72^Jpcharge", -- [7]
-						"^2432^16^1643679641^7^0^20^248.14^", -- [8]
-						"^2432^16^1643679699^236^0^20^247.46^Tagzz", -- [9]
-						"^2432^16^1643680062^216^1^20^248.49^Tagzz", -- [10]
-						"^2434^16^1643680511^356^1^20^249.47^Bonebaby", -- [11]
-						"^2436^16^1643681731^254^1^20^250.90^Jpconetrick", -- [12]
-						"^2431^16^1643682248^229^0^20^252.12^Lipwar", -- [13]
-						"^2431^16^1643682532^349^1^20^252.12^Cerepaladin", -- [14]
-						"^2422^16^1643683290^147^0^20^250.89^Domeynicus", -- [15]
-						"^2422^16^1643683510^228^0^20^251.19^Scottdk", -- [16]
-						"^2422^16^1643683770^228^0^20^249.64^Zubang", -- [17]
-						"^2422^16^1643684129^424^1^20^251.78^Onehealplzz", -- [18]
-						"^2423^16^1643856337^10^0^20^252.02^", -- [19]
-						"^2423^16^1643856461^9^0^20^252.05^", -- [20]
-						"^2423^16^1643856532^10^0^20^252.46^", -- [21]
-						"^2423^16^1643856591^10^0^20^252.32^", -- [22]
-						"^2423^16^1643856764^218^1^20^251.32^Goopwar", -- [23]
-						"^2433^16^1643857325^363^0^20^251.63^Ericsdruid", -- [24]
-						"^2433^16^1643857730^281^1^20^251.63^Onehealplzz", -- [25]
-						"^2429^16^1643858231^262^1^20^252.74^Goopwar", -- [26]
-						"^2432^16^1643858720^5^0^20^251.19^", -- [27]
-						"^2432^16^1643858827^212^1^20^252.13^Maeveychi", -- [28]
-						"^2434^16^1643859247^314^1^20^253.01^Lipwar", -- [29]
-						"^2430^16^1643859710^5^0^20^252.68^", -- [30]
-						"^2430^16^1643859760^329^1^20^252.81^", -- [31]
-						"^2436^16^1643860233^3^0^20^252.86^", -- [32]
-						"^2436^16^1643860328^256^1^20^253.41^Renownispain", -- [33]
-						"^2431^16^1643860761^337^1^20^253.56^Flappybirch", -- [34]
-						"^2422^16^1643861425^428^1^20^253.28^Flappybirch", -- [35]
-						"^2435^16^1643862128^767^1^20^253.69^Drineytwo", -- [36]
-						"^2423^16^1644719868^5^0^20^249.57^", -- [37]
-						"^2423^16^1644719920^5^0^20^252.17^Lipwarrior", -- [38]
-						"^2423^16^1644720008^10^0^20^251.72^", -- [39]
-						"^2423^16^1644720063^5^0^20^247.71^", -- [40]
-						"^2423^16^1644720104^72^0^20^249.26^Goopwar", -- [41]
-						"^2423^16^1644720238^207^1^20^249.54^Impecs", -- [42]
-						"^2433^16^1644720721^297^1^20^249.53^Jpcharge", -- [43]
-						"^2429^16^1644721224^271^1^20^249.81^Atlasdumpy", -- [44]
-						"^2432^16^1644721741^7^0^20^249.97^", -- [45]
-						"^2432^16^1644721809^157^0^20^252.50^Goopwar", -- [46]
-						"^2432^16^1644722020^237^1^20^249.90^Zubang", -- [47]
-						"^2434^16^1644722487^320^1^20^250.38^Zubang", -- [48]
-						"^2430^16^1644722945^6^0^20^251.62^", -- [49]
-						"^2430^16^1644722997^337^1^20^253.42^Atrocityw", -- [50]
-						"^2436^16^1644723428^4^0^20^251.65^", -- [51]
-						"^2436^16^1644723513^256^1^20^251.41^", -- [52]
-						"^2422^16^1644724106^410^0^20^253.40^Twistedp", -- [53]
-						"^2422^16^1644724574^439^1^20^253.40^Benw", -- [54]
-						"^2435^16^1644725158^541^0^20^253.97^Zubang", -- [55]
-						"^2435^16^1644725757^745^1^20^254.50^Twistedp", -- [56]
-						"^2423^16^1645153303^5^0^20^252.57^", -- [57]
-						"^2423^16^1645153386^5^0^20^252.45^", -- [58]
-						"^2423^16^1645153448^8^0^20^248.64^", -- [59]
-						"^2423^16^1645153526^10^0^20^248.64^Atrocityw", -- [60]
-						"^2423^16^1645153570^6^0^20^248.17^", -- [61]
-						"^2423^16^1645153745^224^1^20^247.44^Goopwar", -- [62]
-						"^2433^16^1645154319^318^1^20^245.61^Bonebaby", -- [63]
-						"^2429^16^1645154840^285^1^20^246.44^Soupshop", -- [64]
-						"^2432^16^1645155356^5^0^20^245.72^", -- [65]
-						"^2432^16^1645155521^231^1^20^244.84^Drineytwo", -- [66]
-						"^2434^16^1645155919^353^1^20^245.24^", -- [67]
-						"^2430^16^1645156430^5^0^20^248.01^", -- [68]
-						"^2430^16^1645156471^357^1^20^248.27^Birchon", -- [69]
-						"^2436^16^1645156967^23^0^20^251.94^Twistedp", -- [70]
-						"^2436^16^1645157051^264^1^20^251.82^", -- [71]
-						"^2431^16^1645157490^384^1^20^250.09^Atlasdumpy", -- [72]
-						"^2422^16^1645158070^3^0^20^250.34^Imfiredup", -- [73]
-						"^2422^16^1645158287^224^0^20^250.09^Vilwarr", -- [74]
-						"^2422^16^1645158559^414^1^20^250.09^Twistedp", -- [75]
-						"^2435^16^1645159242^747^1^20^254.50^Aroaria", -- [76]
-						"^2423^16^1645664416^6^0^20^253.25^", -- [77]
-						"^2423^16^1645664484^13^0^20^253.25^", -- [78]
-						"^2423^16^1645664538^9^0^20^253.10^Onehealplzz", -- [79]
-						"^2423^16^1645664588^6^0^20^253.10^", -- [80]
-						"^2423^16^1645664719^197^1^20^252.49^Atrocityw", -- [81]
-						"^2433^16^1645665250^269^1^20^253.20^Kíngflylock", -- [82]
-						"^2429^16^1645665716^254^1^20^253.29^", -- [83]
-						"^2432^16^1645666213^6^0^20^253.62^", -- [84]
-						"^2432^16^1645666281^221^1^20^253.23^Jpcharge", -- [85]
-						"^2434^16^1645666661^330^1^20^252.57^", -- [86]
-						"^2430^16^1645667162^5^0^20^253.72^", -- [87]
-						"^2430^16^1645667214^344^1^20^253.72^Goopwar", -- [88]
-						"^2436^16^1645667725^4^0^20^253.22^", -- [89]
-						"^2436^16^1645667782^264^0^20^253.22^Stuart", -- [90]
-						"^2436^16^1645668172^257^1^20^253.66^Atlasdumpy", -- [91]
-						"^2431^16^1645668629^355^1^20^253.75^", -- [92]
-						"^2422^16^1645669331^141^0^20^253.48^Birchon", -- [93]
-						"^2422^16^1645669580^266^0^20^253.48^Adeen-Mal'Ganis", -- [94]
-						"^2422^16^1645669895^409^1^20^253.50^", -- [95]
-						"^2435^16^1645670730^234^0^20^255.03^Noripalb", -- [96]
-						"^2435^16^1645671028^797^0^20^255.17^Atlasdumpy", -- [97]
-						"^2435^16^1645671895^672^0^20^253.42^Baelhorne-Area52", -- [98]
-						"^2435^16^1645672867^628^0^20^252.19^Atlasdumpy", -- [99]
-						"^2435^16^1645673748^202^0^20^254.23^Onehealplzz", -- [100]
-						"^2435^16^1645674013^843^1^20^254.23^Derpingtoast-Zul'jin", -- [101]
-						"^2435^15^1645917286^635^1^30^249.39^Impecdk", -- [102]
-						"^2422^15^1645918807^94^0^30^250.53^Warloke-Azralon", -- [103]
-						"^2422^15^1645918958^339^1^30^251.98^Maeveythree", -- [104]
-						"^2391^8^1646107168^87^1^5^253.96^", -- [105]
-						"^2364^8^1646107723^146^1^5^253.96^Estaup", -- [106]
-						"^2365^8^1646108143^76^1^5^253.96^", -- [107]
-						"^2366^8^1646108518^91^1^5^254.56^", -- [108]
-						"^2404^8^1646108660^92^1^5^254.56^Impecblue", -- [109]
-						"^2512^15^1646185487^516^1^27^248.36^Telegonw-Tichondrius", -- [110]
-						"^2540^15^1646186434^226^1^26^254.24^Bucketbill", -- [111]
-						"^2544^15^1646186961^82^0^26^254.59^Telegonw-Tichondrius", -- [112]
-						"^2544^15^1646187114^456^0^25^254.56^Telegonw-Tichondrius", -- [113]
-						"^2544^15^1646187784^397^1^25^254.36^Imnnk", -- [114]
-						"^2539^15^1646188440^388^1^27^254.04^Tagzz", -- [115]
-						"^2542^15^1646189213^287^1^27^253.90^Bucketbill", -- [116]
-						"^2553^15^1646189740^347^1^26^254.45^Bucketbill", -- [117]
-						"^2529^15^1646197002^395^1^24^254.97^Bucketbill", -- [118]
-						"^2387^8^1646263542^60^0^5^255.74^Lipwarrior", -- [119]
-						"^2387^8^1646263632^169^1^5^255.74^", -- [120]
-						"^2388^8^1646264231^97^1^5^255.74^", -- [121]
-						"^2389^8^1646264741^142^1^5^255.74^Thdlockb", -- [122]
-						"^2390^8^1646264900^203^1^5^255.74^Thdlockb", -- [123]
-						"^2426^8^1646350030^197^1^5^256.41^Maeveythree", -- [124]
-						"^2419^8^1646350523^146^1^5^256.41^", -- [125]
-						"^2442^8^1646351106^465^1^5^256.41^Imexilewar", -- [126]
-						"^2401^8^1646355912^209^1^5^251.94^Thdemon", -- [127]
-						"^2380^8^1646356158^247^1^5^251.94^Thdemon", -- [128]
-						"^2403^8^1646356501^166^1^5^251.94^", -- [129]
-						"^2381^8^1646356791^166^1^5^251.94^Maeveytwo", -- [130]
-						"^2357^8^1646357808^163^1^5^252.28^", -- [131]
-						"^2356^8^1646358532^151^1^5^252.28^Maeveytwo", -- [132]
-						"^2358^8^1646358821^229^1^5^252.28^", -- [133]
-						"^2359^8^1646359275^250^1^5^252.28^", -- [134]
-						"^2397^8^1646360161^163^1^5^256.15^", -- [135]
-						"^2392^8^1646360741^198^1^5^256.15^Maeveythree", -- [136]
-						"^2393^8^1646361143^192^1^5^256.15^", -- [137]
-						"^2400^8^1646362264^157^1^5^252.85^", -- [138]
-						"^2394^8^1646362766^199^1^5^252.85^Atrocityw", -- [139]
-						"^2395^8^1646363409^160^1^5^252.38^", -- [140]
-						"^2396^8^1646363616^32^0^5^252.85^Thdemon", -- [141]
-						"^2396^8^1646363683^272^1^5^252.85^", -- [142]
-						"^2391^8^1646364388^186^1^5^253.18^Lip", -- [143]
-						"^2366^8^1646364858^26^0^5^253.18^Thdemon", -- [144]
-						"^2366^8^1646364915^194^1^5^253.18^Atrocityw", -- [145]
-						"^2365^8^1646365423^175^1^5^253.18^", -- [146]
-						"^2364^8^1646365956^181^1^5^252.25^", -- [147]
-						"^2404^8^1646366191^215^1^5^252.25^Lip", -- [148]
-						"^2425^8^1646368408^163^1^5^252.75^Lipwar", -- [149]
-						"^2441^8^1646368944^296^1^5^252.75^Atrocityw", -- [150]
-						"^2424^8^1646369728^190^1^5^252.75^Goopdfour", -- [151]
-						"^2440^8^1646370197^73^0^5^252.75^Lipwar", -- [152]
-						"^2440^8^1646370349^268^1^5^252.75^Goopdfour", -- [153]
-						"^2437^8^1646370754^175^0^5^252.75^Atrocityw", -- [154]
-						"^2437^8^1646371007^55^0^5^252.25^Goopdfour", -- [155]
-						"^2437^8^1646371126^172^1^5^252.25^", -- [156]
-						"^2423^16^1646415752^5^0^20^253.36^", -- [157]
-						"^2423^16^1646416161^10^0^20^254.41^", -- [158]
-						"^2423^16^1646416201^260^1^20^254.39^Babombabam", -- [159]
-						"^2422^16^1646416735^231^0^20^255.27^Vilwarr", -- [160]
-						"^2422^16^1646417021^414^1^20^255.39^Babombabam", -- [161]
-						"^2360^8^1646424418^133^1^5^254.81^", -- [162]
-						"^2361^8^1646425223^124^1^5^254.81^Wheatp-Tichondrius", -- [163]
-						"^2362^8^1646425421^164^1^5^254.81^", -- [164]
-						"^2363^8^1646425944^177^1^5^254.81^", -- [165]
-						"^2546^15^1646428522^166^0^22^255.98^Mallarkus", -- [166]
-						"^2546^15^1646428794^242^0^22^255.78^Mallarkus", -- [167]
-						"^2546^15^1646429136^500^0^22^255.81^Bucketbill", -- [168]
-						"^2546^15^1646429778^547^0^22^255.89^Mallarkus", -- [169]
-						"^2546^15^1646431152^4^0^21^255.94^Nickspriestb", -- [170]
-						"^2546^15^1646431393^425^0^22^255.87^Mallarkus", -- [171]
-						"^2546^15^1646431910^715^0^22^255.19^Bucketbill", -- [172]
-						"^2546^15^1646432890^46^0^22^255.20^Atrocityw", -- [173]
-						"^2546^15^1646433007^629^1^22^255.20^Bucketbill", -- [174]
-						"^2382^8^1646504019^75^0^5^255.06^Podh", -- [175]
-						"^2382^8^1646504174^131^1^5^255.06^Podh", -- [176]
-						"^2384^8^1646504717^175^1^5^255.06^", -- [177]
-						"^2385^8^1646505191^42^0^5^255.06^Podh", -- [178]
-						"^2385^8^1646505280^157^1^5^255.06^Podh", -- [179]
-						"^2386^8^1646505541^187^1^5^255.06^Podh", -- [180]
-						"^2546^14^1646532491^545^1^30^253.02^Flappybirch", -- [181]
-						"^2529^14^1646615118^291^1^23^238.22^Bubbadubstep", -- [182]
-						"^2539^14^1646616201^206^1^20^244.56^Atrocityw", -- [183]
-						"^2544^14^1646621399^289^1^30^247.35^Ltelegon", -- [184]
-						"^2395^8^1646699437^111^1^5^250.66^", -- [185]
-						"^2394^8^1646700129^146^1^5^250.66^", -- [186]
-						"^2400^8^1646700927^124^1^5^252.83^", -- [187]
-						"^2396^8^1646701126^151^1^5^252.83^", -- [188]
-						"^2400^8^1646703709^102^1^5^255.19^", -- [189]
-						"^2394^8^1646704142^132^1^5^255.10^", -- [190]
-						"^2395^8^1646704521^79^1^5^255.10^", -- [191]
-						"^2396^8^1646704655^136^1^5^255.10^", -- [192]
-						"^2400^8^1646706253^174^1^5^253.51^Powercleans-Mal'Ganis", -- [193]
-						"^2394^8^1646706816^157^1^5^253.51^", -- [194]
-						"^2395^8^1646707247^118^1^5^253.51^", -- [195]
-						"^2396^8^1646707425^236^1^5^253.51^", -- [196]
-						"^2400^8^1646709124^97^1^5^253.53^", -- [197]
-						"^2394^8^1646709539^135^1^5^253.53^", -- [198]
-						"^2395^8^1646709919^102^1^5^253.53^", -- [199]
-						"^2396^8^1646710077^155^1^5^253.53^", -- [200]
-						"^2543^15^1646776267^6^0^26^257.45^", -- [201]
-						"^2543^15^1646776381^510^1^26^257.42^Liphunt", -- [202]
-						"^2549^15^1646777296^347^1^26^257.56^Podh", -- [203]
-						"^2549^14^1646789323^237^1^15^203.51^Mallarkus", -- [204]
-						"^2543^14^1646789758^6^0^11^243.69^", -- [205]
-						"^2543^14^1646789852^424^1^13^240.24^Atlasdk", -- [206]
-					},
-					["Atrocityjune"] = {
-						"^2093^8^1685887288^98^1^5^427.54^Drinks-Frostmourne", -- [1]
-						"^2094^8^1685887634^44^0^5^427.54^Atrocityjune", -- [2]
-						"^2094^8^1685887733^97^1^5^427.54^", -- [3]
-						"^2095^8^1685888078^72^1^5^427.54^", -- [4]
-						"^2096^8^1685888314^93^1^5^427.54^", -- [5]
-						"^2111^8^1686014452^82^1^5^425.64^", -- [6]
-						"^2118^8^1686014871^101^1^5^425.64^", -- [7]
-						"^2112^8^1686015097^125^1^5^425.64^Atrocityjune", -- [8]
-						"^2123^8^1686015710^98^1^5^425.64^", -- [9]
-						"^2093^8^1686064974^83^1^5^429.38^Atrocityjune", -- [10]
-						"^2094^8^1686065167^142^1^5^429.38^Kíngflyspb-Illidan", -- [11]
-						"^2095^8^1686065590^96^1^5^429.38^", -- [12]
-						"^2096^8^1686065777^113^1^5^429.38^Atrocityjune", -- [13]
-						"^1043^8^1686103607^277^1^5^426.95^Atrocityjune", -- [14]
-						"^1041^8^1686104254^183^1^5^426.95^Atrocityjune", -- [15]
-						"^1042^8^1686104776^234^1^5^426.95^Atrocityjune", -- [16]
-						"^2111^8^1686105643^113^1^5^429.25^", -- [17]
-						"^2118^8^1686105958^183^1^5^429.25^", -- [18]
-						"^2112^8^1686106276^149^1^5^429.25^", -- [19]
-						"^2123^8^1686106710^190^1^5^429.25^", -- [20]
-						"^2093^8^1686107475^57^0^5^428.81^Profcornman-Illidan", -- [21]
-						"^2093^8^1686107558^160^1^5^428.81^", -- [22]
-						"^2094^8^1686108084^153^1^5^428.81^Atrocityjune", -- [23]
-						"^2095^8^1686108548^189^1^5^428.81^Atrocityjune", -- [24]
-						"^2096^8^1686108906^187^1^5^428.81^Ravilimon-Illidan", -- [25]
 					},
 					["Atrocitywar"] = {
 						"^2401^8^1641852051^139^1^5^233.00^Goopwar", -- [1]
@@ -11998,177 +13677,497 @@ atrocityUI.VMRT["1440p"] = {
 						"^2422^16^1669159049^238^1^20^290.40^Telegonlyfan", -- [2380]
 						"^2435^16^1669159697^501^1^20^290.71^Zultra-Tichondrius", -- [2381]
 					},
-					["Atrocitysoju"] = {
-						"^2590^15^1674698894^5^0^27^389.33^", -- [1]
-						"^2590^15^1674698975^152^1^29^391.70^Jetsp", -- [2]
-						"^2635^15^1674699381^206^1^29^393.97^Arcinde", -- [3]
-						"^2639^15^1674699908^0^0^29^393.17^", -- [4]
-						"^2639^15^1674699947^208^1^29^391.91^Kxingxing", -- [5]
-						"^2592^15^1674700372^0^0^27^392.64^", -- [6]
-						"^2592^15^1674700490^226^1^30^392.78^Relpriest", -- [7]
-						"^2605^15^1674700767^2^0^28^392.78^Goozee", -- [8]
-						"^2605^15^1674700845^0^0^28^394.08^", -- [9]
-						"^2605^15^1674700927^279^1^30^395.99^Jetsp", -- [10]
-						"^2614^15^1674701546^312^1^30^393.65^Relpriest", -- [11]
-						"^2607^15^1674702137^364^0^30^392.41^Relpriest", -- [12]
-						"^2607^15^1674702598^654^1^30^393.15^Relpriest", -- [13]
-						"^2587^16^1674703923^206^1^20^396.91^Kimsamsung", -- [14]
-						"^2590^16^1674704458^5^0^20^398.57^", -- [15]
-						"^2590^16^1674704575^271^1^20^398.91^Relpriest", -- [16]
-						"^2609^8^1674781854^174^1^5^403.34^", -- [17]
-						"^2606^8^1674782846^175^1^5^399.06^Lilgayecho-Illidan", -- [18]
-						"^2623^8^1674783401^126^1^5^395.94^", -- [19]
-						"^1677^8^1674891884^131^0^5^404.94^Atrocitysoju", -- [20]
-						"^1677^8^1674892110^164^1^5^404.94^", -- [21]
-						"^1688^8^1674892469^142^1^5^404.94^Roymixd", -- [22]
-						"^1679^8^1674893057^159^1^5^404.94^Roymixd", -- [23]
-						"^1682^8^1674893395^157^0^5^402.91^Quigs", -- [24]
-						"^1682^8^1674893595^153^1^5^402.91^Hardyw", -- [25]
+					["Atrocityfive"] = {
+						"^1868^8^1671408114^77^1^5^400.34^", -- [1]
+						"^1869^8^1671408731^64^1^5^400.34^", -- [2]
+						"^1870^8^1671408997^93^1^5^400.34^", -- [3]
+						"^2637^8^1671424741^102^1^5^402.06^", -- [4]
+						"^2636^8^1671425123^107^1^5^402.06^", -- [5]
+						"^2581^8^1671425762^93^1^5^402.06^Imfiredup", -- [6]
+						"^2580^8^1671426139^168^1^5^402.06^Slapplugia", -- [7]
+						"^2635^15^1671428627^242^0^30^382.87^Moralewar-Destromath", -- [8]
+						"^2635^15^1671428940^267^1^30^384.62^Lôrdsauron", -- [9]
+						"^2614^15^1671429339^11^0^30^383.50^Benwtwo", -- [10]
+						"^2614^15^1671429411^399^1^30^384.28^Ericfour", -- [11]
+						"^1677^8^1671477352^115^1^5^402.10^", -- [12]
+						"^1688^8^1671477685^98^1^5^402.10^Drcornman", -- [13]
+						"^1679^8^1671478050^70^1^5^402.10^Atrocityfive", -- [14]
+						"^1682^8^1671478232^125^1^5^402.10^", -- [15]
+						"^1868^8^1671478880^98^1^5^402.10^Atrocityfive", -- [16]
+						"^1869^8^1671479619^70^1^5^402.10^", -- [17]
+						"^1870^8^1671479869^119^1^5^402.10^Atrocityfive", -- [18]
+						"^1805^8^1671480773^116^1^5^402.72^", -- [19]
+						"^1806^8^1671481170^196^1^5^402.72^Goopd", -- [20]
+						"^1807^8^1671481573^63^0^5^402.72^", -- [21]
+						"^1807^8^1671481699^99^1^5^402.72^", -- [22]
+						"^1808^8^1671482275^112^1^5^402.72^", -- [23]
+						"^1809^8^1671482435^58^0^5^402.72^Atrocityfive", -- [24]
+						"^1809^8^1671482578^125^1^5^402.72^Kspfish", -- [25]
+						"^1868^8^1671483295^79^1^5^402.54^Drcornman", -- [26]
+						"^1869^8^1671483880^62^1^5^402.54^", -- [27]
+						"^1870^8^1671484105^70^1^5^402.54^", -- [28]
+						"^1677^8^1671484763^127^1^5^402.54^", -- [29]
+						"^1688^8^1671485010^90^1^5^402.54^", -- [30]
+						"^1679^8^1671485401^146^1^5^402.54^Drcornman", -- [31]
+						"^1682^8^1671485665^160^1^5^402.09^Kspfish", -- [32]
+						"^2562^8^1671489014^129^1^5^403.25^", -- [33]
+						"^2564^8^1671489654^162^1^5^403.25^", -- [34]
+						"^2563^8^1671489872^139^0^5^403.25^Atrocityfive", -- [35]
+						"^2563^8^1671490209^58^0^5^403.25^Goopd", -- [36]
+						"^2563^8^1671490322^174^1^5^403.25^", -- [37]
+						"^2565^8^1671490757^164^1^5^403.25^Tgatty", -- [38]
+						"^1418^8^1671492824^184^1^5^403.38^Atrocityfive", -- [39]
+						"^1417^8^1671493378^121^1^5^403.38^", -- [40]
+						"^1416^8^1671494036^132^1^5^403.38^", -- [41]
+						"^1439^8^1671494584^154^1^5^403.38^", -- [42]
+						"^2590^14^1671495633^192^1^30^377.50^Shelynddora", -- [43]
+						"^2635^14^1671496240^223^1^30^382.23^Faevelina-ShadowCouncil", -- [44]
+						"^2592^14^1671496699^0^0^30^383.26^", -- [45]
+						"^2592^14^1671496771^241^1^30^383.43^Fungdrag-EmeraldDream", -- [46]
+						"^2605^14^1671497146^0^0^30^383.78^", -- [47]
+						"^2605^14^1671497188^284^1^30^383.78^Fungdrag-EmeraldDream", -- [48]
+						"^2614^14^1671497682^0^0^30^384.94^", -- [49]
+						"^2614^14^1671497787^362^1^30^385.06^Fungdrag-EmeraldDream", -- [50]
+						"^2607^14^1671498548^602^1^30^386.37^Ezcamada-Azralon", -- [51]
+						"^2590^15^1671499922^0^0^30^390.38^", -- [52]
+						"^2590^15^1671499954^269^0^30^390.38^Marcrützou", -- [53]
+						"^2590^15^1671500356^238^1^30^389.45^Venamous-Ner'zhul", -- [54]
+						"^1868^8^1671502396^101^1^5^403.23^", -- [55]
+						"^1869^8^1671502943^0^0^5^403.23^", -- [56]
+						"^1869^8^1671503081^74^1^5^403.23^", -- [57]
+						"^1870^8^1671503364^106^1^5^403.23^Marcrützou", -- [58]
+						"^1805^8^1671504183^139^1^5^403.38^", -- [59]
+						"^1806^8^1671504723^291^0^5^403.38^Goopd", -- [60]
+						"^1806^8^1671505086^130^1^5^403.38^", -- [61]
+						"^1807^8^1671505516^70^0^5^403.38^", -- [62]
+						"^1807^8^1671505685^108^1^5^403.38^", -- [63]
+						"^1808^8^1671506404^128^1^5^403.38^", -- [64]
+						"^1809^8^1671506579^137^1^5^403.38^", -- [65]
+						"^2562^8^1671519426^135^1^5^403.75^Marcrützou", -- [66]
+						"^2563^8^1671519750^84^0^5^403.75^Jacobseven", -- [67]
+						"^2563^8^1671519874^87^0^5^403.75^Atrocityfive", -- [68]
+						"^2563^8^1671520001^114^0^5^403.75^Jacobseven", -- [69]
+						"^2563^8^1671520192^142^1^5^403.75^", -- [70]
+						"^2564^8^1671520666^138^1^5^403.75^", -- [71]
+						"^2565^8^1671521161^158^1^5^403.75^Atrocityfive", -- [72]
+						"^2609^8^1671522231^160^1^5^403.38^", -- [73]
+						"^2606^8^1671523217^70^0^5^402.96^Smackedwb", -- [74]
+						"^2606^8^1671523332^81^0^5^402.97^Smackedwb", -- [75]
+						"^2606^8^1671523455^140^0^5^405.69^Jacobseven", -- [76]
+						"^2587^15^1671567474^169^1^30^380.02^Mileycyris-Kael'thas", -- [77]
+						"^2590^15^1671568052^5^0^30^380.32^", -- [78]
+						"^2590^15^1671568106^198^1^30^380.32^Huwkeyez-Mal'Ganis", -- [79]
+						"^2639^15^1671568647^0^0^30^391.13^", -- [80]
+						"^2639^15^1671568703^241^1^30^391.13^Adåm-MoonGuard", -- [81]
+						"^2592^15^1671569137^0^0^30^391.20^", -- [82]
+						"^2592^15^1671569180^258^1^30^391.03^Podra", -- [83]
+						"^2605^15^1671569557^6^0^29^390.93^Atrocityfive", -- [84]
+						"^2605^15^1671569663^312^1^30^390.55^Selliane-Stormrage", -- [85]
+						"^2635^15^1671570728^0^0^30^388.49^", -- [86]
+						"^2635^15^1671571540^299^1^30^376.87^Guitson-Azralon", -- [87]
+						"^2614^15^1671571994^0^0^30^377.68^", -- [88]
+						"^2614^15^1671572177^525^0^30^377.63^Podra", -- [89]
+						"^2614^15^1671572911^411^1^30^377.40^Podra", -- [90]
+						"^2607^15^1671586759^612^1^30^384.30^Ericsenior", -- [91]
+						"^2582^8^1671592997^171^1^5^406.11^", -- [92]
+						"^2585^8^1671593621^38^0^5^406.11^Atlasdk", -- [93]
+						"^2585^8^1671593905^136^0^5^406.11^Atrocityfive", -- [94]
+						"^2585^8^1671594208^8^0^5^406.11^", -- [95]
+						"^2585^8^1671594252^225^1^5^406.11^Atrocityfive", -- [96]
+						"^2583^8^1671594798^217^1^5^406.11^Tgatty", -- [97]
+						"^2584^8^1671595039^85^0^5^406.11^Sangwing", -- [98]
+						"^2584^8^1671595186^217^1^5^406.11^", -- [99]
+						"^1868^8^1671601807^140^1^5^407.17^Cdznutz", -- [100]
+						"^1869^8^1671602526^92^1^5^407.17^", -- [101]
+						"^1870^8^1671602795^406^1^5^407.17^Mellamolip", -- [102]
+						"^2607^16^1671652788^38^0^20^406.35^Trilltwo", -- [103]
+						"^2607^16^1671652943^290^0^20^406.37^Peepiceek", -- [104]
+						"^2607^16^1671653750^141^0^20^406.27^Baboomfive", -- [105]
+						"^2607^16^1671654095^111^0^20^406.27^Drcornman", -- [106]
+						"^2607^16^1671654280^165^0^20^406.27^Drenacochad", -- [107]
+						"^2607^16^1671654648^215^0^20^406.27^Slapplugia", -- [108]
+						"^2607^16^1671655051^368^0^20^406.27^Imexileb", -- [109]
+						"^2607^16^1671656883^5^0^20^408.93^", -- [110]
+						"^2607^16^1671658756^45^0^20^408.97^Kspfish", -- [111]
+						"^2607^16^1671658940^154^0^20^408.87^Trilltwo", -- [112]
+						"^2607^16^1671659277^271^0^20^408.87^Ericsmagetwo", -- [113]
+						"^2607^16^1671659650^248^0^20^408.87^Drineytwo", -- [114]
+						"^2607^16^1671659981^143^0^20^408.97^Scótt", -- [115]
+						"^2607^16^1671660376^196^0^20^410.31^Drineytwo", -- [116]
+						"^2607^16^1671660757^205^0^20^408.73^Atrocityfive", -- [117]
+						"^2607^16^1671661070^334^0^20^408.87^Impecs", -- [118]
+						"^2607^16^1671661654^337^0^20^408.51^Drenacochad", -- [119]
+						"^2607^16^1671662143^291^0^20^408.87^Nickspriestb", -- [120]
+						"^2607^16^1671662682^107^0^20^408.73^Drineytwo", -- [121]
+						"^2607^16^1671662870^302^0^20^408.73^Atrocityfive", -- [122]
+						"^2607^16^1671663275^316^0^20^408.52^Drcornman", -- [123]
+						"^2607^16^1671663756^286^0^20^408.65^Drenacochad", -- [124]
+						"^2607^16^1671666702^166^0^20^408.87^Trilltwo", -- [125]
+						"^2607^16^1671666955^242^0^20^408.82^Splatthree", -- [126]
+						"^2607^16^1671667276^212^0^20^408.62^Nickspriestb", -- [127]
+						"^2607^16^1671667602^105^0^20^408.73^Drcornman", -- [128]
+						"^2607^16^1671667785^286^0^20^408.73^Impecs", -- [129]
+						"^2607^16^1671668494^295^0^20^408.59^Trilltwo", -- [130]
+						"^2607^16^1671669182^75^0^20^408.62^Splatthree", -- [131]
+						"^2607^16^1671669458^267^0^20^408.66^Ericsmagetwo", -- [132]
+						"^2607^16^1671669826^358^0^20^408.39^Imfiredup", -- [133]
+						"^2607^16^1671670363^289^0^20^408.68^Nickspriestb", -- [134]
+						"^2607^16^1671670806^313^0^20^408.73^Ericsmagetwo", -- [135]
+						"^2607^16^1671671342^387^0^20^408.25^Imfiredup", -- [136]
+						"^2607^16^1671672541^316^0^20^408.73^Ericsmagetwo", -- [137]
+						"^2607^16^1671673180^214^0^20^408.73^Nickspriestb", -- [138]
+						"^2607^16^1671673482^107^0^20^408.73^Kspfish", -- [139]
+						"^2607^16^1671673661^332^0^20^408.73^Baboomfive", -- [140]
+						"^2607^16^1671674128^306^0^20^408.74^Trilltwo", -- [141]
+						"^2607^16^1671674630^195^0^20^408.62^Drcornman", -- [142]
+						"^2607^16^1671674915^371^0^20^408.60^Nickspriestb", -- [143]
+						"^2607^16^1671675357^301^0^20^408.53^Baboomfive", -- [144]
+						"^2607^16^1671675764^470^0^20^408.42^Drcornman", -- [145]
+						"^2607^16^1671677360^281^0^20^408.66^Ericsmagetwo", -- [146]
+						"^2607^16^1671677767^104^0^20^408.73^Kspfish", -- [147]
+						"^2607^16^1671678016^302^0^20^408.06^Imexileb", -- [148]
+						"^2607^16^1671678452^157^0^20^407.99^Drenacochad", -- [149]
+						"^2607^16^1671678696^147^0^20^407.99^Atrocityfive", -- [150]
+						"^2607^16^1671679000^287^0^20^407.99^Imfiredup", -- [151]
+						"^2607^16^1671679559^367^0^20^408.59^Mellamolip", -- [152]
+						"^2607^16^1671680143^457^0^20^408.49^Impecs", -- [153]
+						"^2607^16^1671681114^407^0^20^408.60^Ericsmagetwo", -- [154]
+						"^2607^16^1671681623^307^0^20^408.67^Imexileb", -- [155]
+						"^2607^16^1671682106^207^0^20^408.75^Drineytwo", -- [156]
+						"^2607^16^1671684476^301^0^20^408.64^Imexileb", -- [157]
+						"^2607^16^1671684892^205^0^20^408.40^Drineytwo", -- [158]
+						"^2607^16^1671685211^188^0^20^408.62^Ericsmagetwo", -- [159]
+						"^2607^16^1671685515^294^0^20^408.44^Drcornman", -- [160]
+						"^2607^16^1671685917^315^0^20^408.44^Impecs", -- [161]
+						"^2607^16^1671686323^219^0^20^408.57^Impecs", -- [162]
+						"^2607^16^1671686617^136^0^20^408.80^Baboomfive", -- [163]
+						"^2607^16^1671686848^310^0^20^408.94^Nickspriestb", -- [164]
+						"^2607^16^1671687289^310^0^20^408.62^Drineytwo", -- [165]
+						"^2607^16^1671687767^169^0^20^408.72^Jpc", -- [166]
+						"^2607^16^1671688002^459^0^20^408.57^Drineytwo", -- [167]
+						"^2607^16^1671688806^255^0^20^408.84^Splatthree", -- [168]
+						"^2607^16^1671689118^414^0^20^408.84^Baboomfive", -- [169]
+						"^2607^16^1671689799^52^0^20^408.31^Drineytwo", -- [170]
+						"^2607^16^1671689950^359^0^20^408.34^Jpc", -- [171]
+						"^2607^16^1671690426^212^0^20^408.84^Drenacochad", -- [172]
+						"^2607^16^1671690799^24^0^20^385.79^Kspfish", -- [173]
+						"^2607^16^1671690932^511^0^20^384.63^Drineytwo", -- [174]
+						"^2607^16^1671692063^480^0^20^408.62^Jpc", -- [175]
+						"^2607^16^1671692866^358^0^20^408.72^Imfiredup", -- [176]
+						"^2607^16^1671693318^211^0^20^408.42^Atrocityfive", -- [177]
+						"^2607^16^1671693716^49^0^20^408.42^Kspfish", -- [178]
+						"^2607^16^1671693850^108^0^20^408.42^Baboomfive", -- [179]
+						"^2607^16^1671694021^37^0^20^408.42^Imfiredup", -- [180]
+						"^2607^16^1671694826^206^0^20^408.95^Kspfish", -- [181]
+						"^2607^16^1671695143^105^0^20^409.09^Imfiredup", -- [182]
+						"^2607^16^1671695320^511^0^20^409.09^Atrocityfive", -- [183]
+						"^2607^16^1671695950^53^0^20^408.86^Benw", -- [184]
+						"^2607^16^1671696101^301^0^20^408.86^Baboomfive", -- [185]
+						"^2607^16^1671696551^230^0^20^408.31^Ericsmagetwo", -- [186]
+						"^2607^16^1671696866^25^0^20^408.79^Nickspriestb", -- [187]
+						"^2607^16^1671696977^110^0^20^408.79^Drenacochad", -- [188]
+						"^2607^16^1671697219^418^0^20^408.79^Drenacochad", -- [189]
+						"^2607^16^1671697775^363^0^20^408.81^Drcornman", -- [190]
+						"^2607^16^1671698321^384^0^20^408.65^Trilltwo", -- [191]
+						"^2607^16^1671698825^211^0^20^408.84^Drenacochad", -- [192]
+						"^2607^16^1671699123^209^0^20^408.77^Trilltwo", -- [193]
+						"^2607^16^1671699416^184^0^20^408.77^Baboomfive", -- [194]
+						"^2607^16^1671699679^450^0^20^408.93^Baboomfive", -- [195]
+						"^2607^16^1671736182^356^0^20^408.67^Atrocityfive", -- [196]
+						"^2607^16^1671736688^60^0^20^408.43^Imfiredup", -- [197]
+						"^2607^16^1671736905^516^0^20^408.31^Nickspriestb", -- [198]
+						"^2607^16^1671737755^455^0^20^408.45^Trilltwo", -- [199]
+						"^2607^16^1671738432^598^0^20^408.87^Ericsmagetwo", -- [200]
+						"^2607^16^1671739586^99^0^20^408.78^Slapplugia", -- [201]
+						"^2607^16^1671739773^210^0^20^408.78^Drenacochad", -- [202]
+						"^2607^16^1671740078^219^0^20^408.78^Nickspriestb", -- [203]
+						"^2607^16^1671740397^532^0^20^408.82^Trilltwo", -- [204]
+						"^2607^16^1671741022^18^0^20^408.47^Drenacochad", -- [205]
+						"^2607^16^1671741413^149^0^20^408.78^Ericsmagetwo", -- [206]
+						"^2607^16^1671741649^524^0^20^408.83^Kspfish", -- [207]
+						"^2607^16^1671742382^487^0^20^408.90^Baboomfive", -- [208]
+						"^2607^16^1671743118^24^0^20^399.00^Imfiredup", -- [209]
+						"^2607^16^1671743268^321^0^20^399.00^Peepiceek", -- [210]
+						"^2607^16^1671743697^207^0^20^409.14^Ericsmagetwo", -- [211]
+						"^2607^16^1671744075^598^0^20^409.14^Kspfish", -- [212]
+						"^2607^16^1671746510^591^0^20^409.04^Splatthree", -- [213]
+						"^2607^16^1671747412^308^0^20^409.02^Atrocityfive", -- [214]
+						"^2607^16^1671747821^607^0^20^410.81^Drenacochad", -- [215]
+						"^2607^16^1671749382^553^0^20^408.88^Kspfish", -- [216]
+						"^2607^16^1671750083^101^0^20^408.58^Imfiredup", -- [217]
+						"^2607^16^1671750328^481^0^20^408.65^Cdznutz", -- [218]
+						"^2607^16^1671753085^219^0^20^409.00^Splatthree", -- [219]
+						"^2607^16^1671753423^481^0^20^409.00^Slapplugia", -- [220]
+						"^2607^16^1671754044^343^0^20^408.68^Drenacochad", -- [221]
+						"^2607^16^1671754713^277^0^20^409.04^Slapplugia", -- [222]
+						"^2607^16^1671755173^169^0^20^409.19^Nickspriestb", -- [223]
+						"^2607^16^1671755449^620^0^20^409.19^Drcornman", -- [224]
+						"^2607^16^1671756698^607^0^20^389.75^Cdznutz", -- [225]
+						"^2607^16^1671757712^590^0^20^408.93^Rikudelts", -- [226]
+						"^2607^16^1671758435^611^0^20^408.90^Drineytwo", -- [227]
+						"^2607^16^1671759334^620^0^20^409.12^Atrocityfive", -- [228]
+						"^2607^16^1671760476^530^0^20^408.90^Kspfish", -- [229]
+						"^2607^16^1671761232^608^0^20^408.94^Imexileb", -- [230]
+						"^2607^16^1671762021^249^0^20^408.86^Slapplugia", -- [231]
+						"^2607^16^1671762427^128^0^20^408.83^Impecs", -- [232]
+						"^2607^16^1671762631^728^0^20^408.69^Cdznutz", -- [233]
+						"^2607^16^1671763659^607^0^20^398.30^Cdznutz", -- [234]
+						"^2607^16^1671764498^289^0^20^408.79^Baboomfive", -- [235]
+						"^2607^16^1671764866^104^0^20^408.89^Nickspriestb", -- [236]
+						"^2607^16^1671765060^796^0^20^408.94^Kspfish", -- [237]
+						"^2607^16^1671767268^807^0^20^408.87^Imfiredup", -- [238]
+						"^2607^16^1671768301^305^0^20^408.81^Rikudelts", -- [239]
+						"^2607^16^1671768673^191^0^20^408.91^Trilltwo", -- [240]
+						"^2607^16^1671771514^632^0^20^409.36^Slapplugia", -- [241]
+						"^2607^16^1671772327^757^0^20^408.66^Cdznutz", -- [242]
+						"^2607^16^1671773576^30^0^20^408.94^Nickspriestb", -- [243]
+						"^2607^16^1671773734^535^0^20^409.23^Drcornman", -- [244]
+						"^2607^16^1671774428^274^0^20^408.91^Drenacochad", -- [245]
+						"^2607^16^1671774863^139^0^20^408.98^Drcornman", -- [246]
+						"^2607^16^1671775064^296^0^20^408.98^Peepiceek", -- [247]
+						"^2607^16^1671775448^353^0^20^408.81^Imexileb", -- [248]
+						"^2607^16^1671775889^480^0^20^409.58^Trilltwo", -- [249]
+						"^2607^16^1671776577^551^0^20^409.66^Atrocityfive", -- [250]
+						"^2607^16^1671777423^147^0^20^400.05^Baboomfive", -- [251]
+						"^2607^16^1671777646^794^0^20^400.05^Drenacochad", -- [252]
+						"^2607^16^1671778825^783^0^20^407.65^Nickspriestb", -- [253]
+						"^2607^16^1671780152^459^0^20^408.81^Nickspriestb", -- [254]
+						"^2607^16^1671780835^761^0^20^408.90^Kspfish", -- [255]
+						"^2607^16^1671781847^526^0^20^408.87^Imfiredup", -- [256]
+						"^2607^16^1671782484^303^0^20^408.82^Splatthree", -- [257]
+						"^2607^16^1671782880^508^0^20^408.85^Cdznutz", -- [258]
+						"^2607^16^1671783607^557^0^20^408.82^Baboomfive", -- [259]
+						"^2607^16^1671784325^803^0^20^408.48^Baboomfive", -- [260]
+						"^1677^8^1672117720^159^1^5^399.94^", -- [261]
+						"^1688^8^1672117976^146^1^5^399.94^", -- [262]
+						"^1679^8^1672118352^222^1^5^399.94^", -- [263]
+						"^1682^8^1672118674^184^1^5^400.05^", -- [264]
+						"^1677^8^1672460411^109^1^5^407.56^Atrocityfive", -- [265]
+						"^1688^8^1672460664^116^1^5^407.56^", -- [266]
+						"^1679^8^1672461130^167^1^5^407.56^", -- [267]
+						"^1682^8^1672461481^144^1^5^407.56^", -- [268]
+						"^2607^16^1672788213^22^0^20^412.87^Ericsmagetwo", -- [269]
+						"^2607^16^1672788930^469^0^20^412.80^Ericsmagetwo", -- [270]
+						"^2607^16^1672789875^174^0^20^412.69^Drenacochad", -- [271]
+						"^2607^16^1672790239^310^0^20^412.53^Kspfish", -- [272]
+						"^2607^16^1672790674^127^0^20^413.02^Drcornman", -- [273]
+						"^2607^16^1672790931^623^0^20^412.43^Drineytwo", -- [274]
+						"^2607^16^1672791718^137^0^20^412.37^Baboomfive", -- [275]
+						"^2607^16^1672791923^230^0^20^412.37^Impecs", -- [276]
+						"^2607^16^1672792266^840^0^20^412.44^Jpc", -- [277]
+						"^2607^16^1672793427^142^0^20^412.67^Cdznutz", -- [278]
+						"^2607^16^1672793665^848^0^20^412.67^Kspfish", -- [279]
+						"^2607^16^1672794764^280^0^20^412.18^Trilltwo", -- [280]
+						"^2607^16^1672795157^309^0^20^412.16^Ericsmagetwo", -- [281]
+						"^2607^16^1672795569^875^0^20^412.20^Atrocityfive", -- [282]
+						"^2607^16^1672796684^37^0^20^412.03^Mellamolip", -- [283]
+						"^2607^16^1672796797^152^0^20^412.03^Drenacochad", -- [284]
+						"^2607^16^1672797103^662^0^20^412.03^Nickspriestb", -- [285]
+						"^2607^16^1672797876^401^0^20^411.94^Drineytwo", -- [286]
+						"^2587^15^1673298178^0^0^26^391.85^", -- [287]
+						"^2587^15^1673298414^149^1^30^396.05^Impecdh", -- [288]
+						"^2590^15^1673298947^4^0^30^395.39^", -- [289]
+						"^2590^15^1673299027^176^1^30^395.39^Impecdh", -- [290]
+						"^2635^15^1673299570^265^1^30^394.12^Atrocityfive", -- [291]
+						"^2639^15^1673300097^6^0^29^393.88^", -- [292]
+						"^2639^15^1673300227^225^1^30^395.31^Atlaschi", -- [293]
+						"^2592^15^1673300642^0^0^30^395.37^", -- [294]
+						"^2592^15^1673300723^231^1^30^395.65^Rikunatty", -- [295]
+						"^2605^15^1673300989^5^0^30^395.71^Sang", -- [296]
+						"^2605^15^1673301172^248^1^30^392.93^Impecdh", -- [297]
+						"^2614^15^1673301594^1^0^29^393.79^", -- [298]
+						"^2614^15^1673301869^0^0^30^394.25^", -- [299]
+						"^2614^15^1673301921^339^1^30^394.25^Impecdh", -- [300]
+						"^2607^15^1673302672^591^1^30^394.03^Impecdh", -- [301]
 					},
 					["Atrocityev"] = {
 					},
-					["Atrocitymagi"] = {
+					["Atrocityloki"] = {
+						"^2587^16^1675828976^189^1^20^404.44^Drippygodx", -- [1]
+						"^2590^16^1675829507^7^0^20^401.98^", -- [2]
+						"^2590^16^1675829584^214^1^20^401.98^Egyptianwomn", -- [3]
+						"^2587^16^1677121064^146^1^20^413.38^Gazoo", -- [4]
+						"^2590^16^1677121472^8^0^20^413.36^", -- [5]
+						"^2590^16^1677121612^156^1^20^413.26^", -- [6]
+						"^2635^16^1677122253^252^0^20^413.06^Syzlakdekay", -- [7]
+						"^2635^16^1677122600^346^0^20^413.06^Ratdestroyer", -- [8]
+						"^2635^16^1677123072^427^1^20^413.25^Affine", -- [9]
+						"^2639^16^1677123844^0^0^20^413.66^", -- [10]
+						"^2639^16^1677123914^287^1^20^413.60^Karzastrasza", -- [11]
+						"^2592^16^1677124421^0^0^20^413.90^", -- [12]
+						"^2592^16^1677124522^115^0^20^413.90^Iloveherdude", -- [13]
+						"^2592^16^1677124857^283^0^20^413.61^Flowbss", -- [14]
+						"^2592^16^1677125227^354^1^20^413.66^Ratdestroyer", -- [15]
+						"^2605^16^1677125644^5^0^20^413.66^Tryinggd", -- [16]
+						"^2605^16^1677125988^461^1^20^413.61^Atrocityloki", -- [17]
+						"^1868^8^1677534812^109^1^5^398.91^", -- [18]
+						"^1869^8^1677535571^97^1^5^398.91^", -- [19]
+						"^1870^8^1677535849^140^1^5^398.91^Moneybag", -- [20]
+						"^2615^1^1677632190^37^1^5^369.94^", -- [21]
+						"^2616^1^1677632336^28^1^5^369.94^", -- [22]
+						"^2617^1^1677632454^22^1^5^351.09^", -- [23]
+						"^2618^1^1677632558^15^1^5^370.83^", -- [24]
+						"^2587^16^1677647278^137^1^20^416.07^", -- [25]
+						"^2590^16^1677647712^5^0^20^415.31^", -- [26]
+						"^2590^16^1677647775^179^1^20^415.31^Syzlakdekay", -- [27]
+						"^2635^16^1677648262^207^0^20^415.27^Gazoo", -- [28]
+						"^2635^16^1677648560^416^0^20^415.27^Zekkelock", -- [29]
+						"^2635^16^1677649093^380^1^20^415.27^Jetw", -- [30]
+						"^2639^16^1677649773^0^0^20^415.86^", -- [31]
+						"^2639^16^1677649854^298^1^20^415.90^Xyroleaf", -- [32]
+						"^1868^8^1677804977^135^1^5^407.57^", -- [33]
+						"^1869^8^1677805532^95^1^5^407.57^", -- [34]
+						"^1870^8^1677805796^159^1^5^407.57^", -- [35]
+						"^1868^8^1678228635^82^1^5^411.86^", -- [36]
+						"^1869^8^1678229302^59^1^5^411.86^", -- [37]
+						"^1870^8^1678229546^101^1^5^411.86^", -- [38]
+						"^2587^16^1678250154^144^1^20^414.73^Iloveherdude", -- [39]
+						"^2590^16^1678250585^6^0^20^416.05^", -- [40]
+						"^2590^16^1678250678^165^1^20^416.29^Syzlakdekay", -- [41]
+						"^2635^16^1678251192^279^0^20^416.33^Reldruid", -- [42]
+						"^2635^16^1678251602^390^1^20^416.33^Ratdestroyer", -- [43]
+						"^2639^16^1678252283^0^0^20^416.47^", -- [44]
+						"^2639^16^1678252336^293^1^20^416.49^Reldruid", -- [45]
+						"^2592^16^1678252862^0^0^20^416.53^", -- [46]
+						"^2592^16^1678252999^334^1^20^416.42^Quigs", -- [47]
+						"^2605^16^1678253399^1^0^20^416.91^", -- [48]
+						"^2605^16^1678253538^478^1^20^416.93^Justdb", -- [49]
+						"^2592^16^1678930796^404^1^20^410.06^Jacobw", -- [50]
+						"^2605^16^1678931264^3^0^20^418.06^Tryingc", -- [51]
+						"^2605^16^1678931488^423^1^20^417.87^Decenaryz", -- [52]
+						"^2614^16^1678932067^0^0^20^418.44^", -- [53]
+						"^2614^16^1678932271^507^1^20^419.06^Ladiesnight", -- [54]
+						"^2607^16^1678933196^261^0^20^418.79^Twistedx", -- [55]
+						"^2607^16^1678933554^297^0^20^418.75^Flowbs", -- [56]
+						"^2607^16^1678933951^806^0^20^418.88^Decenaryz", -- [57]
+						"^2607^16^1678934882^154^0^20^419.23^Twistedx", -- [58]
+						"^2607^16^1678935138^288^0^20^418.88^Zekkelock", -- [59]
+						"^2607^16^1678935516^551^0^20^419.07^Relpriest", -- [60]
+						"^2607^16^1678936144^531^0^20^419.35^Twistedx", -- [61]
+						"^2607^16^1678936799^569^0^20^419.30^Kimsamsung", -- [62]
+						"^2607^16^1678937468^746^1^20^418.65^Kimsamsung", -- [63]
+						"^2587^16^1679533099^18^0^20^418.75^", -- [64]
+						"^2587^16^1679533331^114^1^20^419.44^", -- [65]
+						"^2590^16^1679533712^8^0^20^419.54^", -- [66]
+						"^2590^16^1679533814^166^1^20^417.44^Etchqtpi", -- [67]
+						"^2635^16^1679534346^44^0^20^419.48^Kadss", -- [68]
+						"^2635^16^1679534482^360^1^20^419.48^Etchqtpi", -- [69]
+						"^2639^16^1679535095^0^0^20^419.69^", -- [70]
+						"^2639^16^1679535167^287^1^20^419.74^Etchqtpi", -- [71]
+						"^2592^16^1679535681^0^0^20^419.78^", -- [72]
+						"^2592^16^1679535741^348^1^20^419.49^Etchqtpi", -- [73]
+						"^2605^16^1679536150^0^0^20^419.49^", -- [74]
+						"^2605^16^1679536342^417^1^20^419.37^Etchqtpi", -- [75]
+						"^2614^16^1679536991^0^0^20^416.60^", -- [76]
+						"^2614^16^1679537272^78^0^20^416.81^Etchqtpi", -- [77]
+						"^2614^16^1679537537^344^0^20^416.81^Etchqtpi", -- [78]
+						"^2614^16^1679537972^552^0^20^416.69^Twistedx", -- [79]
+						"^2614^16^1679538615^245^0^20^416.65^Etchqtpi", -- [80]
+						"^2614^16^1679538952^533^1^20^416.67^Etchqtpi", -- [81]
+						"^2607^16^1679539915^273^0^20^419.34^Hardyp", -- [82]
+						"^2607^16^1679540365^234^0^20^419.12^Winternights", -- [83]
+						"^2607^16^1679540721^716^1^20^419.76^Kimsamsung", -- [84]
+						"^2587^16^1680656510^135^1^20^416.09^Relvoker", -- [85]
+						"^2590^16^1680656898^6^0^20^416.62^", -- [86]
+						"^2590^16^1680656962^168^1^20^416.62^", -- [87]
+						"^2614^16^1680657315^0^0^20^416.03^", -- [88]
+						"^2614^16^1680657851^174^0^20^418.89^Kamsahabnida", -- [89]
+						"^2614^16^1680658106^460^1^20^418.65^Relvoker", -- [90]
+						"^2607^16^1680658934^663^1^20^418.82^Gdxo", -- [91]
+						"^2684^14^1683659826^0^0^30^415.38^", -- [92]
+						"^2684^14^1683659869^231^1^30^415.38^Jetslock", -- [93]
+						"^2688^15^1683677130^0^0^23^420.63^", -- [94]
+						"^2688^15^1683678326^171^1^30^420.39^", -- [95]
+						"^2687^15^1683678688^1^0^30^420.39^", -- [96]
+						"^2687^15^1683678750^179^1^30^420.35^Flowbie", -- [97]
+						"^2693^15^1683679130^0^0^30^420.38^", -- [98]
+						"^2693^15^1683679168^214^1^30^420.38^Aestisc", -- [99]
+						"^2682^15^1683679584^11^0^30^420.22^", -- [100]
+						"^2682^15^1683679661^159^1^30^420.30^", -- [101]
+						"^2680^15^1683679876^0^0^30^420.28^", -- [102]
+						"^2680^15^1683679911^230^1^30^420.28^Egyptianwomn", -- [103]
+						"^2689^15^1683680226^5^0^30^420.28^", -- [104]
+						"^2689^15^1683680262^4^0^30^420.28^", -- [105]
+						"^2689^15^1683680306^202^1^30^420.28^Mbdeez", -- [106]
+						"^2683^15^1683680686^1^0^30^420.43^", -- [107]
+						"^2683^15^1683680724^207^1^30^420.43^Shamilli", -- [108]
+						"^2684^15^1683681121^0^0^30^420.43^", -- [109]
+						"^2684^15^1683681160^315^1^30^420.43^Mbdeez", -- [110]
+						"^2693^14^1683738568^6^0^30^389.21^", -- [111]
+						"^2693^14^1683738619^204^1^30^409.35^Jacobjr-Illidan", -- [112]
+						"^2688^14^1683748455^0^0^26^411.19^", -- [113]
+						"^2688^14^1683748588^128^1^30^409.92^Zekkeh", -- [114]
+						"^2687^14^1683749110^0^0^30^407.11^", -- [115]
+						"^2687^14^1683749157^128^1^30^408.44^", -- [116]
+						"^2693^14^1683749432^0^0^30^421.36^", -- [117]
+						"^2693^14^1683749479^167^1^30^421.36^", -- [118]
+						"^2682^14^1683749887^7^0^30^420.00^", -- [119]
+						"^2682^14^1683749928^9^0^30^421.31^", -- [120]
+						"^2682^14^1683749967^118^1^30^418.83^", -- [121]
+						"^2680^14^1683750160^172^1^30^419.21^", -- [122]
+						"^2689^14^1683750413^0^0^30^419.05^", -- [123]
+						"^2689^14^1683750483^141^1^30^419.05^", -- [124]
+						"^2683^14^1683750770^0^0^30^418.88^", -- [125]
+						"^2683^14^1683750868^145^1^30^418.88^", -- [126]
+						"^2685^14^1683763905^374^1^30^419.56^Nocontrol", -- [127]
+						"^2685^15^1683776129^422^1^30^420.90^Disciplinae", -- [128]
+						"^2688^15^1684289328^0^0^29^425.92^", -- [129]
+						"^2688^15^1684289398^155^1^30^425.76^Relvoker", -- [130]
+						"^2687^15^1684289770^0^0^30^425.32^", -- [131]
+						"^2687^15^1684289810^172^1^30^425.32^Decenaryz", -- [132]
+						"^2693^15^1684290151^0^0^29^425.32^", -- [133]
+						"^2693^15^1684290226^196^1^30^422.12^Atrocityloki", -- [134]
+						"^2682^15^1684290715^158^1^30^425.16^", -- [135]
+						"^2680^15^1684290955^212^1^30^425.76^Memewizardx", -- [136]
+						"^2689^15^1684291249^1^0^30^425.68^", -- [137]
+						"^2689^15^1684291332^178^1^30^425.91^Tryang", -- [138]
+						"^2683^15^1684291661^0^0^30^425.82^", -- [139]
+						"^2683^15^1684291737^184^1^30^425.87^", -- [140]
+						"^2684^15^1684292133^0^0^30^425.85^", -- [141]
+						"^2684^15^1684292178^279^1^30^425.87^Decenaryz", -- [142]
+						"^2685^15^1684292595^0^0^30^425.13^", -- [143]
+						"^2685^15^1684292803^344^1^30^425.61^Syzlakdekay", -- [144]
+						"^2685^14^1684299045^274^1^30^414.23^Karzsigma", -- [145]
 					},
-					["Atrocitydr"] = {
+					["Atrocitys"] = {
 					},
 					["Atrocitydk"] = {
 					},
-					["Atrocitykfk"] = {
-						"^2395^8^1656198900^116^1^5^265.62^", -- [1]
-						"^2394^8^1656199252^136^1^5^265.62^", -- [2]
-						"^2400^8^1656199703^129^1^5^265.62^Atrocitykfk", -- [3]
-						"^2396^8^1656199920^198^1^5^265.62^Atrocitykfk", -- [4]
+					["Atrocityjune"] = {
+						"^2093^8^1685887288^98^1^5^427.54^Drinks-Frostmourne", -- [1]
+						"^2094^8^1685887634^44^0^5^427.54^Atrocityjune", -- [2]
+						"^2094^8^1685887733^97^1^5^427.54^", -- [3]
+						"^2095^8^1685888078^72^1^5^427.54^", -- [4]
+						"^2096^8^1685888314^93^1^5^427.54^", -- [5]
+						"^2111^8^1686014452^82^1^5^425.64^", -- [6]
+						"^2118^8^1686014871^101^1^5^425.64^", -- [7]
+						"^2112^8^1686015097^125^1^5^425.64^Atrocityjune", -- [8]
+						"^2123^8^1686015710^98^1^5^425.64^", -- [9]
+						"^2093^8^1686064974^83^1^5^429.38^Atrocityjune", -- [10]
+						"^2094^8^1686065167^142^1^5^429.38^Kíngflyspb-Illidan", -- [11]
+						"^2095^8^1686065590^96^1^5^429.38^", -- [12]
+						"^2096^8^1686065777^113^1^5^429.38^Atrocityjune", -- [13]
+						"^1043^8^1686103607^277^1^5^426.95^Atrocityjune", -- [14]
+						"^1041^8^1686104254^183^1^5^426.95^Atrocityjune", -- [15]
+						"^1042^8^1686104776^234^1^5^426.95^Atrocityjune", -- [16]
+						"^2111^8^1686105643^113^1^5^429.25^", -- [17]
+						"^2118^8^1686105958^183^1^5^429.25^", -- [18]
+						"^2112^8^1686106276^149^1^5^429.25^", -- [19]
+						"^2123^8^1686106710^190^1^5^429.25^", -- [20]
+						"^2093^8^1686107475^57^0^5^428.81^Profcornman-Illidan", -- [21]
+						"^2093^8^1686107558^160^1^5^428.81^", -- [22]
+						"^2094^8^1686108084^153^1^5^428.81^Atrocityjune", -- [23]
+						"^2095^8^1686108548^189^1^5^428.81^Atrocityjune", -- [24]
+						"^2096^8^1686108906^187^1^5^428.81^Ravilimon-Illidan", -- [25]
 					},
-					["Atrocitywl"] = {
-						"^2395^8^1633377025^120^1^5^242.06^", -- [1]
-						"^2394^8^1633377588^143^1^5^242.06^Weewpp-Mal'Ganis", -- [2]
-						"^2400^8^1633378187^100^1^5^238.02^", -- [3]
-						"^2396^8^1633378352^188^1^5^238.02^", -- [4]
-						"^2423^15^1633551942^5^0^18^242.95^", -- [5]
-						"^2423^15^1633552017^5^0^18^243.60^", -- [6]
-						"^2423^15^1633552076^8^0^18^242.86^", -- [7]
-						"^2423^15^1633552468^187^1^22^244.21^Bendyneck-Hyjal", -- [8]
-						"^2391^8^1649115663^199^1^5^254.99^", -- [9]
-						"^2365^8^1649116209^167^1^5^254.99^", -- [10]
-						"^2364^8^1649116872^199^0^5^254.99^Atrocitywl", -- [11]
-						"^2364^8^1649117142^207^1^5^254.99^", -- [12]
-						"^2366^8^1649117595^219^1^5^256.33^Tagzzsou", -- [13]
-						"^2404^8^1649117880^253^1^5^256.33^Tagzzsou", -- [14]
-						"^2397^8^1649735426^58^1^5^265.07^", -- [15]
-						"^2392^8^1649735775^136^1^5^263.19^", -- [16]
-						"^2393^8^1649736139^82^1^5^259.73^", -- [17]
-						"^2384^8^1649780012^139^1^5^263.89^", -- [18]
-						"^2385^8^1649780418^146^1^5^260.56^", -- [19]
-						"^2386^8^1649780679^162^1^5^260.56^", -- [20]
-						"^2382^8^1649781324^94^1^5^265.89^", -- [21]
-						"^2384^8^1649781856^118^1^5^265.89^", -- [22]
-						"^2385^8^1649782161^121^1^5^265.89^", -- [23]
-						"^2386^8^1649782376^173^1^5^265.89^", -- [24]
-						"^2382^8^1652756346^123^1^5^267.46^", -- [25]
-						"^2384^8^1652756753^168^1^5^267.46^", -- [26]
-						"^2385^8^1652757094^153^1^5^267.46^", -- [27]
-						"^2386^8^1652757347^174^1^5^267.46^", -- [28]
-						"^2401^8^1652935525^131^1^5^265.18^Twistedsp", -- [29]
-						"^2380^8^1652935720^107^1^5^265.18^", -- [30]
-						"^2403^8^1652935919^106^1^5^265.18^", -- [31]
-						"^2381^8^1652936142^126^1^5^265.18^", -- [32]
-						"^2426^8^1652996453^96^1^5^266.62^", -- [33]
-						"^2419^8^1652996730^69^1^5^266.62^", -- [34]
-						"^2442^8^1652996979^126^1^5^266.62^", -- [35]
-						"^2426^8^1656196202^154^1^5^272.61^Jacobw", -- [36]
-						"^2419^8^1656196469^110^1^5^272.61^", -- [37]
-						"^2442^8^1656196705^187^1^5^272.61^Twistedsp", -- [38]
-						"^2426^8^1656557724^106^1^5^270.20^", -- [39]
-						"^2419^8^1656558019^97^1^5^270.20^", -- [40]
-						"^2442^8^1656558327^154^1^5^270.20^", -- [41]
+					["Atrocityxe"] = {
 					},
-					["Atrocityjr"] = {
-						"^2401^8^1641911366^108^1^5^234.56^", -- [1]
-						"^2380^8^1641911555^137^1^5^234.56^", -- [2]
-						"^2403^8^1641911820^123^1^5^234.56^", -- [3]
-						"^2381^8^1641912038^118^1^5^234.56^Impecs", -- [4]
-						"^2423^16^1642042498^10^0^20^251.21^", -- [5]
-						"^2423^16^1642042564^10^0^20^251.21^", -- [6]
-						"^2423^16^1642042630^10^0^20^251.21^", -- [7]
-						"^2423^16^1642042687^9^0^20^251.21^", -- [8]
-						"^2423^16^1642042739^10^0^20^251.21^", -- [9]
-						"^2423^16^1642042785^193^1^20^251.21^Vilw", -- [10]
-						"^2433^16^1642043299^280^1^20^251.67^Norichixo", -- [11]
-						"^2429^16^1642043804^249^1^20^251.60^Malarkus", -- [12]
-						"^2432^16^1642044287^6^0^20^251.65^", -- [13]
-						"^2432^16^1642044366^206^1^20^251.63^Malarkus", -- [14]
-						"^2430^16^1642045348^7^0^20^252.24^", -- [15]
-						"^2430^16^1642045396^354^1^20^252.27^Xeseviwl", -- [16]
-						"^2436^16^1642045862^6^0^20^252.19^", -- [17]
-						"^2436^16^1642045944^44^0^20^252.06^Scottbrexit", -- [18]
-						"^2436^16^1642046039^253^1^20^252.06^Malarkus", -- [19]
-						"^2431^16^1642046536^336^1^20^252.16^Driney", -- [20]
-						"^2422^16^1642047184^48^0^20^252.10^Rivénz", -- [21]
-						"^2422^16^1642047329^407^1^20^252.15^Jpcwicked", -- [22]
-						"^2435^16^1642047914^766^1^20^252.31^Malarkus", -- [23]
-						"^2423^16^1642640053^10^0^20^251.12^", -- [24]
-						"^2423^16^1642640132^10^0^20^251.39^", -- [25]
-						"^2423^16^1642640186^5^0^20^251.39^", -- [26]
-						"^2423^16^1642640266^11^0^20^251.39^", -- [27]
-						"^2423^16^1642640494^191^1^20^251.80^Goopm", -- [28]
-						"^2422^16^1642640788^8^0^20^251.64^", -- [29]
-						"^2422^16^1642640982^402^1^20^251.64^Jpcwicked", -- [30]
-						"^2435^16^1642641576^310^0^20^252.11^Anikarin-Dalaran", -- [31]
-						"^2435^16^1642641936^789^1^20^252.11^Anikarin-Dalaran", -- [32]
-						"^2433^16^1642643159^34^0^20^252.47^Rivenzxd", -- [33]
-						"^2433^16^1642643250^262^1^20^252.47^", -- [34]
-						"^2429^16^1642643693^245^1^20^252.52^", -- [35]
-						"^2432^16^1642644149^7^0^20^252.52^", -- [36]
-						"^2432^16^1642644216^196^1^20^252.52^", -- [37]
-						"^2434^16^1642644571^29^0^20^252.56^Vilw", -- [38]
-						"^2434^16^1642644685^290^1^20^252.56^", -- [39]
-						"^2430^16^1642645124^7^0^20^252.69^", -- [40]
-						"^2430^16^1642645171^312^1^20^252.66^Rivenzxd", -- [41]
-						"^2436^16^1642645628^4^0^20^252.72^", -- [42]
-						"^2436^16^1642645668^251^1^20^252.72^Atrocityjr", -- [43]
-						"^2426^8^1651557959^159^1^5^260.16^Atrocityjr", -- [44]
-						"^2419^8^1651558237^128^1^5^260.16^Atrocityjr", -- [45]
-						"^2442^8^1651558498^232^1^5^260.16^Atrocityjr", -- [46]
-						"^2397^8^1652759040^147^1^5^260.11^", -- [47]
-						"^2392^8^1652759469^216^1^5^260.11^Xeseviwl", -- [48]
-						"^2393^8^1652759836^175^1^5^260.11^", -- [49]
-						"^2425^8^1652825841^79^1^5^262.49^", -- [50]
-						"^2441^8^1652826226^171^1^5^262.49^Atlasxo", -- [51]
-						"^2424^8^1652826612^150^1^5^262.58^Atlasxo", -- [52]
-						"^2440^8^1652826947^157^1^5^262.58^", -- [53]
-						"^2437^8^1652827171^110^1^5^262.58^", -- [54]
-						"^2395^8^1652937062^74^1^5^260.26^", -- [55]
-						"^2394^8^1652937651^134^1^5^263.72^", -- [56]
-						"^2400^8^1652938232^129^1^5^263.72^Twistedsp", -- [57]
-						"^2396^8^1652938432^156^1^5^263.72^", -- [58]
-						"^2426^8^1652980510^97^1^5^268.38^", -- [59]
-						"^2419^8^1652980760^151^1^5^268.38^", -- [60]
-						"^2442^8^1652981154^151^1^5^267.28^", -- [61]
-						"^2396^8^1652999495^233^1^5^261.76^Atrocityjr", -- [62]
-						"^2400^8^1653000665^75^1^5^262.61^", -- [63]
-						"^2394^8^1653001206^130^1^5^258.86^", -- [64]
-						"^2395^8^1653001753^72^1^5^258.86^", -- [65]
-						"^2396^8^1653001883^154^1^5^258.86^", -- [66]
-						"^2397^8^1653512129^129^1^5^268.25^", -- [67]
-						"^2392^8^1653512511^197^1^5^268.25^", -- [68]
-						"^2393^8^1653512904^132^1^5^268.25^", -- [69]
-						"^2395^8^1654548671^83^1^5^272.15^", -- [70]
-						"^2394^8^1654549320^154^1^5^272.15^", -- [71]
-						"^2400^8^1654550139^124^1^5^272.15^", -- [72]
-						"^2396^8^1654550381^260^1^5^272.15^Powercleans-Mal'Ganis", -- [73]
-						"^2292^8^1666665133^103^1^5^291.12^", -- [74]
-						"^2312^8^1666665511^64^1^5^291.12^Twistedstu", -- [75]
-						"^2290^8^1666665794^94^1^5^291.12^Twistedstu", -- [76]
-						"^2291^8^1666666023^111^1^5^291.34^", -- [77]
-						"^2423^16^1666816860^9^0^20^283.22^", -- [78]
-						"^2423^16^1666816933^5^0^20^283.22^", -- [79]
-						"^2423^16^1666816998^5^0^20^283.22^", -- [80]
-						"^2423^16^1666817068^5^0^20^283.22^", -- [81]
-						"^2423^16^1666817126^133^1^20^283.22^Ericsdruid", -- [82]
-						"^2422^16^1666817445^9^0^20^282.33^", -- [83]
-						"^2422^16^1666817591^255^0^20^282.33^Smackedh", -- [84]
-						"^2422^16^1666817902^229^0^20^282.33^Trillshaman", -- [85]
-						"^2422^16^1666818247^301^1^20^282.22^Podra", -- [86]
+					["Atrocitytwo"] = {
+						"^2684^14^1683660652^0^0^29^415.51^", -- [1]
+						"^2684^14^1683660731^251^1^30^415.65^Xalence-Tichondrius", -- [2]
+						"^2693^14^1683740875^199^1^30^408.73^Jacobr", -- [3]
+						"^2693^15^1684296269^331^0^30^405.76^Syzrogue-Mal'Ganis", -- [4]
+						"^2693^15^1684296656^362^1^30^406.22^Karzez-Mal'Ganis", -- [5]
 					},
 				},
 			},
@@ -12221,8 +14220,8 @@ atrocityUI.VMRT["1440p"] = {
 					["64382;1"] = 1,
 					["10060;3"] = 1,
 					["3411;4"] = 1,
-					["1022;2"] = 1,
 					["1044;3"] = 1,
+					["1022;2"] = 1,
 					["64382;3"] = 1,
 					["1022;4"] = 1,
 					["3411;3"] = 1,
@@ -12235,8 +14234,8 @@ atrocityUI.VMRT["1440p"] = {
 					[102342] = 25,
 					[98008] = 5,
 					[116849] = 20,
-					[196718] = 0,
 					[73325] = 100,
+					[196718] = 0,
 					[6940] = 45,
 					[97462] = 0,
 					[51052] = 10,
@@ -12256,119 +14255,354 @@ atrocityUI.VMRT["1440p"] = {
 				},
 				["enabled"] = true,
 				["gnGUIDs"] = {
-					["Pokigifs"] = 270,
+					["Runeclaw-Arthas"] = 104,
 					["Milkbad"] = 70,
-					["Karzdouyu"] = 258,
-					["Twistedx"] = 1468,
-					["Domeynicus-Illidan"] = 250,
-					["Goopd-Illidan"] = 102,
+					["Hewasforced"] = 267,
+					["Arimist-Illidan"] = 270,
+					["Jacobxaxa"] = 71,
+					["Priesttwo"] = 257,
 					["Tryinggd"] = 62,
 					["Atrocityxe"] = 267,
-					["Cindrethresh-Illidan"] = 1467,
-					["Kadv"] = 1467,
-					["Syzlakdeekay"] = 250,
+					["Pkalygos-Quel'dorei"] = 1467,
 					["Rainthebell-Illidan"] = 269,
-					["Xeserpon-Illidan"] = 258,
+					["Sush"] = 263,
 					["Drinks-Frostmourne"] = 102,
-					["Gazmoon"] = 102,
-					["Mestupid-Illidan"] = 254,
-					["Boulderbag-Illidan"] = 66,
-					["Anarchyd-Zul'jin"] = 1467,
+					["Smellyfarter-Illidan"] = 255,
+					["Runedance-Azralon"] = 70,
+					["Pliniio-Azralon"] = 102,
+					["Atrocityzero"] = 73,
+					["Dudeguyfive"] = 1468,
+					["Herrington-Zul'jin"] = 70,
 					["Vandreal-Stormrage"] = 66,
-					["Estaup-Illidan"] = 64,
-					["Hardys"] = 262,
-					["Kadss"] = 102,
-					["Notnnk-Illidan"] = 258,
-					["Jacobxaxa"] = 71,
-					["Syzlakdk"] = 252,
-					["Jacobr"] = 261,
-					["Mageox-Area52"] = 63,
-					["Stinnkypoopy-Illidan"] = 1467,
-					["Twanglet-Frostmourne"] = 581,
-					["Hisagne"] = 104,
-					["Dankscale-Illidan"] = 1467,
-					["Caprisunfan"] = 105,
-					["Demonicchoas-Spirestone"] = 266,
-					["Atrocitywl"] = 267,
-					["Tometv"] = 254,
-					["Sarkareth-Illidan"] = 1467,
-					["Rlymisshim-Illidan"] = 577,
-					["Roarzyy-Illidan"] = 258,
-					["Disciplinae"] = 258,
-					["Atrocityjune"] = 258,
-					["Melodrama"] = 266,
-					["Hopefulqt"] = 1467,
-					["Neathy-Kel'Thuzad"] = 70,
-					["Kadlock"] = 266,
+					["Whorcrocs-Illidan"] = 263,
 					["Uddydoxx"] = 263,
-					["Carow"] = 71,
+					["Jpcow-Illidan"] = 261,
 					["Yipdh-Illidan"] = 581,
-					["Atrocityhaku"] = 1467,
+					["Hisagne"] = 104,
+					["Dexmen-Ragnaros"] = 103,
+					["Prumper-Area52"] = 64,
+					["Vevavev-Zul'jin"] = 63,
+					["Profcornman-Illidan"] = 1468,
+					["Kadlock"] = 266,
+					["Cortassodudu-Azralon"] = 102,
+					["Millip"] = 257,
 					["Dingding"] = 1467,
-					["Hardytriflin"] = 258,
-					["Rassputen-Spirestone"] = 250,
-					["Insanity"] = 70,
-					["Xerpon-Illidan"] = 65,
-					["Infiammato-Illidan"] = 63,
-					["Twistedsp"] = 257,
-					["Gobbledegoop-Illidan"] = 102,
+					["Yyxr"] = 1473,
 					["Carodubya"] = 73,
-					["Summerdaze"] = 577,
 					["Reltwo"] = 105,
-					["Saasa-Illidan"] = 264,
-					["Hardyw"] = 267,
-					["Swixh-Zul'jin"] = 255,
-					["Synepm"] = 270,
-					["Twistedw"] = 72,
-					["Speedh-Area52"] = 577,
+					["Zugcleave-Illidan"] = 72,
+					["Aestie"] = 259,
 					["Flowbs"] = 268,
-					["Jacobw"] = 71,
 					["Hopefulx"] = 62,
-					["Zekkelock"] = 266,
-					["Atrocityev"] = 1465,
-					["Atrocitynoir"] = 258,
-					["Hardyvoker"] = 1467,
-					["Karztuh"] = 65,
-					["Kíngflyspb-Illidan"] = 258,
-					["Ravilimon-Illidan"] = 577,
+					["Newiphone-Illidan"] = 256,
+					["Azulean-Area52"] = 1467,
+					["Ghostiehands-Tichondrius"] = 65,
+					["Rae-Azralon"] = 256,
 					["Yodadadr-Illidan"] = 103,
+					["Maliguano-Area52"] = 1467,
+					["Mbw"] = 71,
+					["Goozee"] = 102,
+					["Zhuntx"] = 253,
+					["Hardyd-Area52"] = 102,
+					["Claropes-Ragnaros"] = 102,
+					["Jetsp"] = 258,
+					["Xybeaned"] = 266,
+					["Scyience-BleedingHollow"] = 253,
+					["Shadaddy-Area52"] = 262,
+					["Pangho-Windrunner"] = 269,
+					["Abíde-Quel'dorei"] = 581,
+					["Hopefulqt"] = 1467,
+					["Plúto-Illidan"] = 250,
+					["Atrocityev"] = 1465,
+					["Xyronicz"] = 265,
+					["Kamsahabnida"] = 1467,
+					["Rikusauce-Illidan"] = 103,
+					["Mageox-Area52"] = 63,
+					["Twistedx"] = 1468,
+					["Domeynicus-Illidan"] = 250,
+					["Memewizardx"] = 102,
+					["Cindrethresh-Illidan"] = 1467,
+					["Atrocitywl"] = 267,
+					["Syzlakdeekay"] = 250,
+					["Kimicate-Azralon"] = 71,
+					["Syzlakk"] = 252,
+					["Omegachadd-Area52"] = 264,
+					["Anarchyd-Zul'jin"] = 1467,
+					["Zthree"] = 253,
+					["Tellinor-Alexstrasza"] = 70,
+					["Ladiesnight"] = 102,
+					["Flowbie"] = 73,
+					["Xyroblast"] = 63,
+					["Atrocityjune"] = 258,
+					["Påndachan-Ragnaros"] = 269,
+					["Busdrivergus"] = 63,
+					["Kadornuss"] = 62,
+					["Karzaugieaug"] = 1473,
+					["Weew"] = 103,
+					["Gobbledegoop-Illidan"] = 102,
+					["Winrysaber-Tichondrius"] = 581,
+					["Phenomin-Illidan"] = 253,
+					["Hardyw"] = 267,
+					["Flowbss"] = 66,
+					["Zerlak-Ghostlands"] = 253,
+					["Serenavander-Azralon"] = 253,
+					["Beladedoinks"] = 256,
+					["Forgiveness-Shadowmoon"] = 64,
+					["Midorina-Ragnaros"] = 577,
+					["Rispirhunt-Dalaran"] = 253,
+					["Irotikay-Area52"] = 258,
+					["Winternights"] = 1468,
+					["Thips-Illidan"] = 577,
+					["Denz"] = 64,
+					["Faicorf-Sargeras"] = 64,
+					["Xéph-Area52"] = 266,
+					["Karzlgx"] = 1468,
+					["Aestis"] = 261,
+					["Kíngfly-Illidan"] = 258,
+					["Chamastian-Ragnaros"] = 264,
+					["Hortox-Illidan"] = 71,
+					["Valkiriam-Muradin"] = 253,
+					["Zoozz"] = 250,
+					["Greetje-Area52"] = 266,
+					["Tydratwo"] = 65,
+					["Parsemae-TwistingNether"] = 64,
+					["Pokigifs"] = 270,
+					["Comboostime-Thrall"] = 63,
+					["Atrocityhaku"] = 1467,
+					["Sylric-Azralon"] = 70,
+					["Phenphen-Mug'thol"] = 260,
+					["Darkwarriora-TwistingNether"] = 72,
+					["Charméd-Zul'jin"] = 256,
+					["Eosan-Zul'jin"] = 270,
+					["Kadv"] = 1467,
+					["Alignment-Thrall"] = 102,
+					["Lokgrom-Darkspear"] = 72,
+					["Xeserpon-Illidan"] = 258,
+					["Rlymisshim-Illidan"] = 577,
+					["Phillipala-Azralon"] = 66,
+					["Gazmoon"] = 102,
+					["Onetrickzz"] = 253,
+					["Caroimb"] = 71,
+					["Kekegi-Illidan"] = 269,
+					["Kôld-Tichondrius"] = 70,
+					["Twanglet-Frostmourne"] = 581,
+					["Kadss"] = 102,
+					["Jasonbournex"] = 253,
+					["Brapsamdi-Zul'jin"] = 102,
+					["Dragön-EmeraldDream"] = 263,
+					["Weewpp"] = 256,
+					["Tinito-Ragnaros"] = 103,
+					["Dankscale-Illidan"] = 1467,
+					["Cheesie-Ragnaros"] = 70,
+					["Twistedm"] = 270,
+					["Sarkareth-Illidan"] = 1467,
+					["Tometv"] = 253,
+					["Letug-Zul'jin"] = 1467,
+					["Öpethh-Azralon"] = 102,
+					["Roarzyy-Illidan"] = 258,
+					["Anrchydwagon"] = 1473,
+					["Pbdubs"] = 73,
+					["Kennawld-Tichondrius"] = 266,
+					["Phobosk-Quel'Thalas"] = 258,
+					["Gruknak-Ragnaros"] = 262,
+					["Cdabench-Illidan"] = 263,
+					["Syzlakdk"] = 251,
+					["Mozbet-Kil'jaeden"] = 267,
+					["Moonÿ-Whisperwind"] = 102,
+					["Millipthree"] = 257,
+					["Razorxcut-Tichondrius"] = 1467,
+					["Valatris-Area52"] = 63,
+					["Ethernatos-Illidan"] = 1467,
+					["Fenkiyipyip-EmeraldDream"] = 70,
+					["Madahem-Bloodhoof"] = 70,
+					["Fatalrage-Illidan"] = 72,
+					["Twistedsp"] = 257,
+					["Bambinino-Illidan"] = 581,
+					["Kartirboo-Agamaggan"] = 102,
+					["Riotatw-Tichondrius"] = 262,
+					["Blatzwer-Quel'Thalas"] = 64,
+					["Nukkle-Frostmourne"] = 72,
+					["Kalecgoose"] = 1473,
+					["Swixh-Zul'jin"] = 255,
+					["Quickpew-Tichondrius"] = 253,
+					["Codiciada-Ragnaros"] = 105,
+					["Gorardo-Illidan"] = 72,
+					["Insanity"] = 70,
+					["Jacobw"] = 71,
+					["Dreamclaw-Area52"] = 1467,
+					["Prinns-Ragnaros"] = 258,
+					["Darcobs-Ragnaros"] = 70,
+					["Evaluable-Illidan"] = 263,
+					["Linkdon-BleedingHollow"] = 70,
+					["Fimas-Tichondrius"] = 260,
+					["Kíngflyspb-Illidan"] = 258,
+					["Illidome-Crushridge"] = 577,
+					["Sanguishin-Hyjal"] = 266,
+					["Atrocitysaga"] = 73,
+					["Fênrry-Azralon"] = 1473,
+					["Ravilimon-Illidan"] = 577,
+					["Gdxo"] = 73,
+					["Temporarý-BleedingHollow"] = 577,
+					["Jetw"] = 72,
+					["Karzsigma"] = 264,
+					["Tigrao-Area52"] = 102,
+					["Milliptwo"] = 257,
+					["Frosteflakes-Tichondrius"] = 62,
+					["Madbillainy"] = 70,
+					["Epock-Exodar"] = 72,
+					["Gatlas-Illidan"] = 253,
+					["Dreamweaves-Area52"] = 102,
+					["Atrocitynoir"] = 258,
+					["Karztuh"] = 65,
+					["Zekkelock"] = 266,
+					["Atrocityfour"] = 577,
+					["Crackasbank-BloodFurnace"] = 105,
+					["Hardys"] = 262,
+					["Atrocityedge"] = 263,
+					["Dratak-Haomarush"] = 73,
+					["Flasharama-Zul'jin"] = 256,
+					["Qryptix"] = 577,
+					["Montanhah-Azralon"] = 72,
+					["Pulldog-WyrmrestAccord"] = 73,
+					["Nahson-Skullcrusher"] = 102,
+					["Ronnydk-Tichondrius"] = 250,
+					["Dhdx"] = 577,
+					["Xyropyre"] = 1467,
+					["Leýto-Quel'Thalas"] = 253,
+					["Atrocitydark"] = 581,
+					["Death"] = 1473,
+					["Neathy-Kel'Thuzad"] = 70,
+					["Businessonly"] = 260,
+					["Qrypticzz"] = 577,
+					["Xerpon-Illidan"] = 65,
+					["Ãnastasía-BlackDragonflight"] = 70,
+					["Jt"] = 270,
+					["Ninimy-Illidan"] = 263,
+					["Karzdouyu"] = 258,
+					["Disciplinae"] = 258,
+					["Dxaugtwo"] = 1473,
+					["Ericsmagetwo-Illidan"] = 63,
+					["Saturday-Skullcrusher"] = 66,
+					["Meteteladrui-Daggerspine"] = 102,
+					["Elusiveshot-Tichondrius"] = 253,
+					["Goopd-Illidan"] = 102,
+					["Sternwind-BleedingHollow"] = 65,
+					["Impecd-Illidan"] = 104,
+					["Garrósh-Frostmane"] = 72,
+					["Bronspawned-Area52"] = 253,
+					["Xyroleaf"] = 262,
+					["Immorta-Garrosh"] = 72,
+					["Simonon-Magtheridon"] = 267,
+					["Surge-BleedingHollow"] = 263,
+					["Komotodragon-Illidan"] = 1467,
+					["Kazzandry-Ragnaros"] = 70,
+					["Gurukakko-Ragnaros"] = 72,
+					["Daikini-Duskwood"] = 104,
+					["Candywinds-Area52"] = 262,
+					["Tydrapally"] = 65,
+					["Aestisqtt"] = 261,
+					["Mestupid-Illidan"] = 253,
+					["Jenservil-Quel'Thalas"] = 577,
+					["Twopalz"] = 104,
+					["Mallark-Illidan"] = 253,
+					["Drooknyr-Zul'jin"] = 1467,
+					["Boulderbag-Illidan"] = 66,
+					["Estaup-Illidan"] = 64,
+					["Lunchie-Area52"] = 102,
+					["Jáyson-WyrmrestAccord"] = 72,
+					["Puppiesqt-Area52"] = 102,
+					["Toasted-Quel'dorei"] = 263,
+					["Notnnk-Illidan"] = 258,
+					["Pleasurer"] = 72,
+					["Stinnkypoopy-Illidan"] = 1467,
+					["Jacobr"] = 261,
+					["Melodrama"] = 266,
+					["Summerdaze"] = 577,
+					["Twistedjr"] = 104,
+					["Mlark-Illidan"] = 253,
+					["Kaylormage-Illidan"] = 64,
+					["Tydrathree"] = 65,
+					["Sparhalo-Cenarius"] = 102,
+					["Deyjavu"] = 254,
+					["Demonicchoas-Spirestone"] = 266,
+					["Boufton-Illidan"] = 1467,
+					["Gniyrt"] = 62,
+					["Tryingc"] = 62,
+					["Hopperdh-Illidan"] = 581,
+					["Grinnah-Gurubashi"] = 251,
+					["Jpctolv-Illidan"] = 261,
+					["Blueknight-Mug'thol"] = 250,
+					["Selinaa"] = 105,
+					["Speedh-Area52"] = 577,
+					["Karzez"] = 253,
+					["Carow"] = 71,
+					["Tylôrd-Area52"] = 251,
+					["Zeodeon-Ragnaros"] = 102,
+					["Droki-Uldum"] = 263,
+					["Hardytriflin"] = 258,
+					["Unxciento-Ragnaros"] = 70,
+					["Justdb"] = 264,
+					["Caprisunfan"] = 105,
+					["Infiammato-Illidan"] = 63,
+					["Obeisance-Ragnaros"] = 102,
+					["Weld-Azralon"] = 253,
+					["Bradew"] = 268,
+					["Kernêl-Ragnaros"] = 577,
+					["Saasa-Illidan"] = 264,
+					["Goosy"] = 102,
+					["Felstrider-Spirestone"] = 577,
+					["Rupertifa-Area52"] = 1467,
+					["Jeffreyxo-Illidan"] = 256,
+					["Neru-Thrall"] = 269,
+					["Atrocitysnow"] = 263,
+					["Maghog-Moonrunner"] = 263,
+					["Glimmerpog-Thrall"] = 65,
+					["Beladepr"] = 256,
+					["Rassputen-Spirestone"] = 250,
+					["Anarchysmoge"] = 253,
+					["Sohfa-Thrall"] = 581,
+					["Hardyvoker"] = 1467,
+					["Christoffyra-Area52"] = 1467,
+					["Kioblast-Area52"] = 256,
+					["Zoopalz"] = 66,
+					["Pok-BurningLegion"] = 253,
 					["Iloveherdude"] = 71,
 					["Whiteboydrip"] = 1468,
-					["Atrocityloki"] = 577,
-					["Mbw"] = 71,
-					["Karzsigma"] = 264,
-					["Jetw"] = 72,
-					["Gdxo"] = 73,
+					["Atrocityloki"] = 581,
+					["Gawaÿne"] = 70,
+					["Starshopping"] = 251,
+					["Purepassion"] = 260,
+					["Twistedw"] = 72,
 					["Drippygodx"] = 262,
-					["Frosteflakes-Tichondrius"] = 62,
-					["Hardyd-Area52"] = 102,
-					["Madbillainy"] = 70,
-					["Jetsp"] = 258,
-					["Xyropyre"] = 1467,
-					["Xybeaned"] = 266,
+					["Demoevó-Area52"] = 1467,
+					["Stompnstab-WyrmrestAccord"] = 260,
 					["Bulgesniffer-Zul'jin"] = 1468,
-					["Justdb"] = 264,
-					["Aestis"] = 261,
-					["Atrocityfour"] = 577,
-					["Kíngfly-Illidan"] = 258,
-					["Bambinino-Illidan"] = 581,
-					["Gniyrt"] = 62,
-					["Zoopalz"] = 66,
-					["Syzlakk"] = 252,
-					["Trippygodx"] = 263,
-					["Ladiesnight"] = 102,
-					["Deyjavu"] = 254,
-					["Zekked"] = 102,
-					["Zoozz"] = 250,
-					["Profcornman-Illidan"] = 1468,
+					["Cthü-Area52"] = 256,
+					["Chaosbriar-WyrmrestAccord"] = 1467,
+					["Nickydeez-ShatteredHand"] = 64,
+					["Wearesofkd"] = 256,
+					["Gamzo"] = 265,
+					["Synepm"] = 270,
+					["Goosomething"] = 1467,
+					["Albitr-Area52"] = 250,
 					["Gooptroop-Illidan"] = 1467,
-					["Greetje-Area52"] = 266,
+					["Simrahk-Barthilas"] = 104,
+					["Lars-Tichondrius"] = 261,
+					["Canegód-Quel'Thalas"] = 263,
+					["Trippygodx"] = 263,
+					["Mercyella"] = 269,
+					["Weewev"] = 1467,
+					["Zekked"] = 102,
+					["Havetopuwu-Tichondrius"] = 581,
+					["Lindiaum-Azralon"] = 261,
+					["Weewmo"] = 266,
+					["Sírio-BleedingHollow"] = 1473,
 					["Rileyp-Area52"] = 258,
 					["Waveweaver"] = 263,
-					["Tydrapally"] = 65,
-					["Businessonly"] = 261,
-					["Goosomething"] = 1467,
-					["Kamsahabnida"] = 1467,
+					["Atrocityw"] = 71,
+					["Bhronic-Zul'jin"] = 63,
+					["Silethors-Zul'jin"] = 263,
+					["Jhdelaluz-Area52"] = 66,
 				},
 				["userDB"] = {
 				},
@@ -12380,8 +14614,6 @@ atrocityUI.VMRT["1440p"] = {
 				["Top"] = 476.1791687011719,
 				["Left"] = 452.8424072265625,
 				["lock"] = true,
-				["SortByAvailability"] = true,
-				["upd4380"] = true,
 				["colSet"] = {
 					{
 						["textureColorTextCastR"] = 1,
@@ -12677,13 +14909,13 @@ atrocityUI.VMRT["1440p"] = {
 						["textureColorTextActiveG"] = 1,
 						["fontOtherAvailable"] = true,
 						["fontIconCDSize"] = 14,
-						["frameColumns"] = 1,
+						["frameAlpha"] = 100,
 						["fontIconName"] = "Interface\\AddOns\\ElvUI\\Core\\Media\\Fonts\\Expressway.ttf",
 						["fontIconOutline"] = true,
 						["fontCenterOutline"] = true,
 						["textureColorTextDefaultG"] = 1,
 						["fontLeftSize"] = 14,
-						["textureColorTextDefaultR"] = 1,
+						["methodsSortByAvailability"] = true,
 						["textureColorTextActiveR"] = 0.5,
 						["visibilityDisableArena"] = true,
 						["textureSmoothAnimation"] = true,
@@ -12698,7 +14930,7 @@ atrocityUI.VMRT["1440p"] = {
 						["textureColorTextCastB"] = 0.5,
 						["fontRightName"] = "Interface\\AddOns\\ElvUI\\Core\\Media\\Fonts\\Expressway.ttf",
 						["textureColorTimeLineActiveR"] = 1,
-						["frameLines"] = 8,
+						["visibilityPartyType"] = 2,
 						["visibilityDisableBG"] = true,
 						["textureClassText"] = true,
 						["textureColorTimeLineCooldownG"] = 1,
@@ -12738,16 +14970,18 @@ atrocityUI.VMRT["1440p"] = {
 						["fontName"] = "Interface\\AddOns\\ElvUI\\Media\\Fonts\\Expressway.ttf",
 						["fontCenterName"] = "Interface\\AddOns\\ElvUI\\Core\\Media\\Fonts\\Expressway.ttf",
 						["textureColorTimeLineActiveG"] = 1,
-						["visibilityPartyType"] = 2,
+						["frameLines"] = 8,
 						["textureSmoothAnimationDuration"] = 50,
 						["textureColorTextCooldownR"] = 1,
 						["textTemplateRight"] = "",
-						["methodsSortByAvailability"] = true,
+						["textureColorTextDefaultR"] = 1,
 						["textTemplateLeft"] = "%name% %time%",
-						["frameAlpha"] = 100,
+						["frameColumns"] = 1,
 						["textureAlphaCooldown"] = 0.75,
 					}, -- [11]
 				},
+				["upd4380"] = true,
+				["SortByAvailability"] = true,
 				["OptFav"] = {
 				},
 			},
@@ -12762,29 +14996,6 @@ atrocityUI.VMRT["1440p"] = {
 				["Soulbinds"] = {
 				},
 			},
-			["RaidCheck"] = {
-				["BuffsCheck"] = true,
-				["ReadyCheckLeft"] = 1534.394409179688,
-				["ReadyCheckFrameScale"] = 110,
-				["FlaskExp"] = 1,
-				["ReadyCheckFrameOnlyRL"] = true,
-				["RCW_Mini"] = true,
-				["FlaskLQ"] = true,
-				["WeaponEnch"] = {
-					["Atrocityhaku-Mal'Ganis"] = 194820,
-					["Atrocitysoju-Mal'Ganis"] = 194823,
-					["Atrocityfive-Illidan"] = 194823,
-					["Atrocitynoir-Mal'Ganis"] = 194820,
-					["Atrocityloki-Mal'Ganis"] = 194823,
-					["Atrocityjune-Mal'Ganis"] = 194820,
-					["Atrocitytwo-Illidan"] = 194823,
-					["Atrocity-Illidan"] = 194823,
-				},
-				["ReadyCheckSortClass"] = true,
-				["ReadyCheckTop"] = 1103.48486328125,
-				["RunesCheck"] = true,
-				["ReadyCheckFrameTimerFade"] = 4,
-			},
 			["InspectViewer"] = {
 				["ColorizeLowIlvl685"] = false,
 				["ColorizeNoEnch"] = true,
@@ -12793,38 +15004,79 @@ atrocityUI.VMRT["1440p"] = {
 				["ColorizeLowIlvl"] = true,
 				["ColorizeNoValorUpgrade"] = false,
 			},
-			["InviteTool"] = {
-				["AutoRaidDiff"] = true,
-				["Words"] = "inv invite 123",
-				["AutoPromote"] = true,
-				["ListInv3"] = "Twistedm\nScottbrexit\nCerepriest\nDriney\nCiory\nMaeveythree\nAtrocity\nChilldrills\nImpecblue\nJpconetrick\nTrillshaman\nBirchout\nFloormopzz\nKíngflyhunt\nMalarkus\nBucketbill\nEricjunior\nLiphunt\nGoopdtwo\nBenimjeans\nThdlock\nMallark",
-				["InvByChat"] = true,
-				["RaidDiff"] = 16,
-				["PromoteRank"] = 2,
-				["LootThreshold"] = 2,
-				["ListInv2"] = "Twistedm\nScottbrexit\nCerepriest\nDriney\nCiory\nMaeveythree\nAtrocity\nChilldrills\nImpecblue\nJpconetrick\nTrillshaman\nBirchout\nFloormopzz\nKíngflyhunt\nMallark\nEricjunior\nLiphunt\nGoopdtwo\nBabombabam\nThdlock",
-				["Ranks"] = {
-					true, -- [1]
-					true, -- [2]
-					true, -- [3]
-					true, -- [4]
-					true, -- [5]
-					false, -- [6]
+			["RaidCheck"] = {
+				["BuffsCheck"] = true,
+				["ReadyCheckLeft"] = 1534.394409179688,
+				["ReadyCheckFrameScale"] = 110,
+				["ReadyCheckFrameOnlyRL"] = true,
+				["FlaskExp"] = 1,
+				["RunesCheck"] = true,
+				["RCW_Mini"] = true,
+				["ReadyCheckTop"] = 1103.48486328125,
+				["WeaponEnch"] = {
+					["Atrocityloki-Mal'Ganis"] = 194823,
+					["Atrocityedge-Mal'Ganis"] = -33757,
+					["Atrocityzero-Mal'Ganis"] = 194820,
+					["Atrocityhaku-Mal'Ganis"] = 194820,
+					["Atrocity-Illidan"] = 194823,
+					["Atrocityfive-Illidan"] = 194823,
+					["Atrocitynoir-Mal'Ganis"] = 194820,
+					["Atrocitysoju-Mal'Ganis"] = 194823,
+					["Atrocityjune-Mal'Ganis"] = 194820,
+					["Atrocitytwo-Illidan"] = 194823,
+					["Atrocitysnow-Mal'Ganis"] = -33757,
 				},
-				["ListInv4"] = "Twistedw\nScottdk\nNickspriest\nDrineytwo\nNoripalb\nMaeveychi\nVilwarr\nRenownispain\nAtrocityw\nBenw\nLipwar\nZubang\nGoopwar\nImpecs\nAtlasdk\nOnehealplzz\nSoupshop\nImfiredup\nEricsdruid\nBirchon\nKíngflylock\nLipwarrior",
-				["MasterLooters"] = "",
-				["LootMethod"] = "group",
-				["PromoteNames"] = "",
-				["ListInv1"] = "Twistedw\nScottstb\nNickspriest\nDrineytwo\nNoripalb\nMaeveychi\nAdeen\nVilwarr\nAtrocityw\nLipwarrior\nZubang\nGoopwar\nJpcharge\nBenw\nImpecs\nAtlasdumpy\nOnehealplzz\nSoupshop\nImfiredup\nEricsdruid\nBirchon\nKíngflylock",
-				["Rank"] = 1,
+				["ReadyCheckSortClass"] = true,
+				["FlaskLQ"] = true,
+				["ReadyCheckFrameTimerFade"] = 4,
 			},
-			["BossWatcher"] = {
-				["optionsDamageGraph"] = true,
-				["fightsNum"] = 2,
-				["optionsPositionsDist"] = true,
-				["optionsHealingGraph"] = true,
-				["trackingDamageSpells"] = {
+			["Timers"] = {
+				["specTimes"] = {
+					[62] = 10,
+					[63] = 10,
+					[250] = 10,
+					[251] = 10,
+					[64] = 10,
+					[253] = 10,
+					[65] = 10,
+					[255] = 10,
+					[66] = 10,
+					[257] = 10,
+					[258] = 10,
+					[259] = 10,
+					[260] = 10,
+					[261] = 25,
+					[262] = 16,
+					[263] = 10,
+					[264] = 10,
+					[265] = 22,
+					[266] = 10,
+					[267] = 10,
+					[268] = 10,
+					[269] = 10,
+					[270] = 10,
+					[70] = 10,
+					[102] = 10,
+					[71] = 10,
+					[103] = 10,
+					[72] = 10,
+					[104] = 10,
+					[73] = 10,
+					[252] = 10,
+					[105] = 10,
+					[254] = 10,
+					[256] = 10,
+					[577] = 10,
+					[581] = 10,
 				},
+				["Type"] = 2,
+				["timeToKillAnalyze"] = 15,
+				["Left"] = 379.2945556640625,
+				["Top"] = 235.8606109619141,
+				["DisableRW"] = true,
+				["Scale"] = 99,
+				["Alpha"] = 100,
+				["Strata"] = "HIGH",
 			},
 			["LootHistory"] = {
 				["disable"] = true,
@@ -12833,6 +15085,14 @@ atrocityUI.VMRT["1440p"] = {
 				["bossNames"] = {
 				},
 				["list"] = {
+				},
+			},
+			["BossWatcher"] = {
+				["optionsDamageGraph"] = true,
+				["fightsNum"] = 2,
+				["optionsPositionsDist"] = true,
+				["optionsHealingGraph"] = true,
+				["trackingDamageSpells"] = {
 				},
 			},
 			["WhoPulled"] = {
@@ -12854,24 +15114,23 @@ atrocityUI.VMRT["1440p"] = {
 				["AutoLoad"] = {
 				},
 				["Left"] = -2.000007629394531,
-				["HideOutsideRaid"] = true,
 				["ShowOnlyInRaid"] = true,
 				["SelfText"] = "",
 				["Fix"] = true,
-				["Alpha"] = 100,
+				["FontName"] = "Interface\\AddOns\\ElvUI\\Media\\Fonts\\Expressway.ttf",
 				["ScaleBack"] = 0,
-				["Text1"] = "||cffc41e3aFlowbzz||r ||cffa330c9Atrocityloki||r ||cffff7c0aGoozee||r ||cffc41e3aSyzlakk||r ||cfffff468Aestisc||r ||cffffffffTwistedsp||r ||cff33937fRelvoker||r ||cff3fc7ebLocalsingles||r ||cff33937fKamsahabnida||r ||cfff48cbaKarzykn||r \n||cffc69b6dGdxo||r ||cff00ff98Jacobww||r ||cff0070ddHxrdy||r ||cffc69b6dCarow||r ||cfffff468Shadowmastr||r ||cff8788eeMelodrama||r ||cfff48cbaBeladepal||r ||cff8788eeGaz||r ||cffaad372Tometv||r ||cff3fc7ebTryingg||r ",
+				["Text1"] = "intstart\nnpc:202969\nspell:411302 \n{skull}||cffa330c9Qrypticzz||r ||cffc69b6dCarow||r ||cffaad372Tometv||r ||cff3fc7ebBusdrivergus||r \n{skull}||cff0070ddTrippygodx||r ||cff0070ddAtrocityedge||r ||cffaad372Zhuntx||r ||cff33937fKarzlgx||r \nnpc:202971\nspell:404754\n{square} ||cffa330c9Qrypticzz||r ||cff33937fDingding||r \n{square} ||cff0070ddTrippygodx||r ||cff33937fDxaugtwo||r \n{cross} ||cff0070ddAtrocityedge||r\n{cross} ||cffc69b6dCarow||r ||cffaad372Tometv||r \n{skull} ||cfffff468Businessonly||r \n{skull} ||cffaad372Zhuntx||r ||cff33937fKarzlgx||r \nintend\n\n\"\n{time:00:41}00:41 - ||cff7030a0Breath||r - ||cffc59a6cJacobxaxa||r {spell:97462}  ||cffa330c9Decenaryz||r {spell:196718}  ||cfffefefeTwistedsp||r {spell:62618} ||cffc41e3aCarodk||r {spell:51052}\n{time:00:59}00:59 - ||cff7030a0Breath||r - ||cfffefefeTwistedbenke||r {spell:64901}  \n{time:01:29}01:29 - ||cff8811ffDisintegrate||r - ||cfff48cbaTydrapally||r {spell:31821}  {everyone} {text}Personals{/text}  ||cff006fdcJustdb||r {spell:98008}  ||cff33937fAnarchyd||r {spell:374227}  ||cff33937fDingding||r {spell:374227}  ||cff33937fKarzlgx||r {spell:374227}  ||cffc31d39Syzdk||r {spell:51052} ||cffc69b6dFlowbie||r {spell:97462}  \n{time:00:09,SAA:403284:1}01:52 - ||cff969696Intermission Cast||r - ||cffff7c0aGoosy||r {spell:77764} ||cff33937fKarzlgx||r {spell:374968}  \n{time:01:08,SAR:410625:1}03:16 - ||cff0072c6Knock Dispel||r - ||cff00fe97Egyptianwomn||r {text}RING OF PEACE NOW{/text}  \n{time:01:50,SAR:410625:1}03:58 - ||cff90caf9Go Down||r - {everyone} {text}GO DOWN{/text} ||cfff48cbaTydrapally||r  {spell:1022} ||cffff7c0aGoosy||r {spell:77764} ||cff33937fKarzlgx||r {spell:374968}  \n{time:00:24,SAA:410654:1}04:16 - ||cff90caf9Come Up||r - {everyone} {text}DO NOT COME UP{/text}  \n{time:00:42,SAA:410654:1}04:34 - ||cfff26722Meteor Soak||r - ||cffc31d39Syzdk||r {spell:51052}  \n{time:01:17,SAA:410654:1}05:09 - ||cff238e47Big Circle||r - {everyone} {text}Personals{/text}  ||cff33937fDingding||r {spell:374227}  ||cff33937fDosomething||r {spell:374227}  ||cff33937fGoosomething||r {spell:374227}  ||cff33937fDosomething||r {spell:374968}  \n{time:01:21,SAA:410654:1}05:13 - ||cffee55554 Stacks||r - ||cfffefefeTwistedbenke||r {spell:64901}  \n{time:02:28,SAA:410654:1}06:20 - ||cff00ffffKnock Debuff||r - ||cffc59a6cJacobxaxa||r {spell:97462}  ||cfff38bb9Belade||r {spell:31821}  ||cff006fdcJustdb||r {spell:192077}  \n{time:03:06,SAA:410654:1}06:58 - ||cff90caf9All Up||r - {everyone} {text}DONT COME UP {/text}  \n{time:03:14,SAA:410654:1}07:06 - ||cfff26722Meteor Soak||r - ||cffc31d39Syzlakdeekay||r {spell:51052}  \n\"\n\n",
 				["OptionsFormatting"] = true,
 				["enabled"] = true,
+				["Top"] = 1373.00048828125,
+				["Alpha"] = 100,
+				["LastUpdateName"] = "Atrocityedge",
+				["TimerOnlyMy"] = true,
 				["BlackLastUpdateName"] = {
 				},
-				["LastUpdateTime"] = 1680658803,
-				["LastUpdateName"] = "Gdxo-Mal'Ganis",
-				["TimerOnlyMy"] = true,
-				["EnableWhenReceive"] = true,
-				["TimerPassedHide"] = true,
+				["LastUpdateTime"] = 1699805209,
 				["Width"] = 486.9999084472656,
-				["Top"] = 1373.00048828125,
+				["EnableWhenReceive"] = true,
 				["Black"] = {
 					"", -- [1]
 					"", -- [2]
@@ -12879,7 +15138,7 @@ atrocityUI.VMRT["1440p"] = {
 				},
 				["BlackLastUpdateTime"] = {
 				},
-				["FontName"] = "Interface\\AddOns\\ElvUI\\Media\\Fonts\\Expressway.ttf",
+				["TimerPassedHide"] = true,
 				["Height"] = 360,
 				["OnlyPromoted"] = true,
 				["FontSize"] = 16,
@@ -12923,33 +15182,33 @@ atrocityUI.VMRT["1440p"] = {
 					},
 				},
 			},
-			["BattleRes"] = {
-				["Top"] = 70.00016784667969,
-				["Strata"] = "HIGH",
-				["Scale"] = 100,
-				["Left"] = 456.994873046875,
-				["Alpha"] = 100,
+			["InviteTool"] = {
+				["AutoRaidDiff"] = true,
+				["Words"] = "inv invite 123",
+				["AutoPromote"] = true,
+				["ListInv3"] = "Twistedm\nScottbrexit\nCerepriest\nDriney\nCiory\nMaeveythree\nAtrocity\nChilldrills\nImpecblue\nJpconetrick\nTrillshaman\nBirchout\nFloormopzz\nKíngflyhunt\nMalarkus\nBucketbill\nEricjunior\nLiphunt\nGoopdtwo\nBenimjeans\nThdlock\nMallark",
+				["InvByChat"] = true,
+				["RaidDiff"] = 16,
+				["PromoteRank"] = 2,
+				["ListInv1"] = "Twistedw\nScottstb\nNickspriest\nDrineytwo\nNoripalb\nMaeveychi\nAdeen\nVilwarr\nAtrocityw\nLipwarrior\nZubang\nGoopwar\nJpcharge\nBenw\nImpecs\nAtlasdumpy\nOnehealplzz\nSoupshop\nImfiredup\nEricsdruid\nBirchon\nKíngflylock",
+				["ListInv2"] = "Twistedm\nScottbrexit\nCerepriest\nDriney\nCiory\nMaeveythree\nAtrocity\nChilldrills\nImpecblue\nJpconetrick\nTrillshaman\nBirchout\nFloormopzz\nKíngflyhunt\nMallark\nEricjunior\nLiphunt\nGoopdtwo\nBabombabam\nThdlock",
+				["Ranks"] = {
+					true, -- [1]
+					true, -- [2]
+					true, -- [3]
+					true, -- [4]
+					true, -- [5]
+					false, -- [6]
+				},
+				["ListInv4"] = "Twistedw\nScottdk\nNickspriest\nDrineytwo\nNoripalb\nMaeveychi\nVilwarr\nRenownispain\nAtrocityw\nBenw\nLipwar\nZubang\nGoopwar\nImpecs\nAtlasdk\nOnehealplzz\nSoupshop\nImfiredup\nEricsdruid\nBirchon\nKíngflylock\nLipwarrior",
+				["MasterLooters"] = "",
+				["LootMethod"] = "group",
+				["PromoteNames"] = "",
+				["LootThreshold"] = 2,
+				["Rank"] = 1,
 			},
 		},
 		["AtrocityUI"] = {
-		},
-	},
-	["Profile"] = "AtrocityUI",
-	["LootLink"] = {
-	},
-	["RaidGroups"] = {
-		["KeepPosInGroup"] = true,
-		["upd4550"] = true,
-		["importType"] = 3,
-		["profiles"] = {
-		},
-	},
-	["BossWatcher"] = {
-		["optionsDamageGraph"] = true,
-		["fightsNum"] = 2,
-		["optionsPositionsDist"] = true,
-		["optionsHealingGraph"] = true,
-		["trackingDamageSpells"] = {
 		},
 	},
 	["Logging"] = {
@@ -12994,23 +15253,29 @@ atrocityUI.VMRT["1440p"] = {
 		["BuffsCheck"] = true,
 		["ReadyCheckLeft"] = 1534.394409179688,
 		["ReadyCheckFrameScale"] = 110,
-		["FlaskExp"] = 1,
 		["FlaskLQ"] = true,
 		["RCW_Mini"] = true,
-		["ReadyCheckSortClass"] = true,
+		["FlaskExp"] = 1,
 		["WeaponEnch"] = {
-			["Atrocityhaku-Mal'Ganis"] = 194820,
 			["Atrocityev-Mal'Ganis"] = 194820,
-			["Atrocitysoju-Mal'Ganis"] = 194820,
+			["Atrocitysnow-Mal'Ganis"] = -33757,
+			["Atrocitysaga-Mal'Ganis"] = 194820,
 			["Atrocityskye-Mal'Ganis"] = 194820,
-			["Atrocitynoir-Mal'Ganis"] = 194820,
+			["Atrocitydark-Mal'Ganis"] = 194820,
+			["Atrocityhaku-Mal'Ganis"] = 194820,
 			["Atrocityjune-Mal'Ganis"] = 194820,
+			["Atrocityfive-Illidan"] = 194823,
+			["Atrocitynoir-Mal'Ganis"] = 194820,
+			["Atrocitysoju-Mal'Ganis"] = 194820,
 			["Atrocitysake-Mal'Ganis"] = 194823,
 			["Atrocity-Illidan"] = 194823,
-			["Atrocityfive-Illidan"] = 194823,
+			["Atrocityedge-Mal'Ganis"] = -33757,
 		},
+		["ReadyCheckFont"] = "Interface\\AddOns\\ElvUI\\Core\\Media\\Fonts\\Expressway.ttf",
 		["ReadyCheckTop"] = 1103.48486328125,
+		["ReadyCheckSortClass"] = true,
 		["RunesCheck"] = true,
+		["ReadyCheckFontSize"] = 14,
 		["ReadyCheckFrameTimerFade"] = 4,
 	},
 }

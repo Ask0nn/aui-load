@@ -1,13 +1,13 @@
 local E, L, V, P, G = unpack(ElvUI)
 local CH = E:GetModule('Chat')
 local LO = E:GetModule('Layout')
-local Skins = E:GetModule('Skins')
+local S = E:GetModule('Skins')
 local LSM = E.Libs.LSM
 
 local _G = _G
 local issecurevariable = issecurevariable
 local gsub, strfind, gmatch, format = gsub, strfind, gmatch, format
-local ipairs, sort, wipe, date, time, difftime = ipairs, sort, wipe, date, time, difftime
+local ipairs, sort, wipe, time, difftime = ipairs, sort, wipe, time, difftime
 local pairs, unpack, select, pcall, next, tonumber, type = pairs, unpack, select, pcall, next, tonumber, type
 local strlower, strsub, strlen, strupper, strtrim, strmatch = strlower, strsub, strlen, strupper, strtrim, strmatch
 local tostring, tinsert, tremove, tconcat = tostring, tinsert, tremove, table.concat
@@ -23,7 +23,6 @@ local GetBNPlayerLink = GetBNPlayerLink
 local GetChannelName = GetChannelName
 local GetChatWindowInfo = GetChatWindowInfo
 local GetCursorPosition = GetCursorPosition
-local GetCVar, GetCVarBool = GetCVar, GetCVarBool
 local GetGuildRosterMOTD = GetGuildRosterMOTD
 local GetInstanceInfo = GetInstanceInfo
 local GetMouseFocus = GetMouseFocus
@@ -46,6 +45,7 @@ local RemoveExtraSpaces = RemoveExtraSpaces
 local RemoveNewlines = RemoveNewlines
 local ToggleFrame = ToggleFrame
 local ToggleQuickJoinPanel = ToggleQuickJoinPanel
+local UIParent = UIParent
 local UnitExists = UnitExists
 local UnitGroupRolesAssigned = UnitGroupRolesAssigned
 local UnitIsGroupLeader = UnitIsGroupLeader
@@ -53,12 +53,11 @@ local UnitIsUnit = UnitIsUnit
 local UnitName = UnitName
 
 local C_Club_GetInfoFromLastCommunityChatLine = C_Club.GetInfoFromLastCommunityChatLine
-local C_DateAndTime_GetCurrentCalendarTime = C_DateAndTime.GetCurrentCalendarTime
 local C_LFGList_GetActivityInfoTable = C_LFGList.GetActivityInfoTable
 local C_LFGList_GetSearchResultInfo = C_LFGList.GetSearchResultInfo
-
 local C_VoiceChat_GetMemberName = C_VoiceChat.GetMemberName
 local C_VoiceChat_SetPortraitTexture = C_VoiceChat.SetPortraitTexture
+local PanelTemplates_TabResize = PanelTemplates_TabResize
 
 local BNET_CLIENT_WOW = BNET_CLIENT_WOW
 local LFG_LIST_AND_MORE = LFG_LIST_AND_MORE
@@ -66,6 +65,9 @@ local UNKNOWN = UNKNOWN
 
 local GetGroupMembers = E.Retail and C_SocialQueue.GetGroupMembers
 local GetGroupQueues = E.Retail and C_SocialQueue.GetGroupQueues
+
+local GetCVar = C_CVar.GetCVar
+local GetCVarBool = C_CVar.GetCVarBool
 
 local IsChatLineCensored = C_ChatInfo and C_ChatInfo.IsChatLineCensored
 local GetChannelRuleset = E.Retail and C_ChatInfo.GetChannelRuleset
@@ -91,6 +93,7 @@ CH.Keywords = {}
 CH.PluginMessageFilters = {}
 CH.Smileys = {}
 CH.TalkingList = {}
+CH.FontHeights = { 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32 }
 CH.RoleIcons = {
 	TANK = E:TextureString(E.Media.Textures.Tank, ':15:15:0:0:64:64:2:56:2:56'),
 	HEALER = E:TextureString(E.Media.Textures.Healer, ':15:15:0:0:64:64:2:56:2:56'),
@@ -321,26 +324,39 @@ do --this can save some main file locals
 	if E.Classic then
 		-- Simpy (5099: Myzrael)
 		z['Player-5099-01947A77']	= itsSimpy -- Warlock: Simpy
-		-- Luckyone (5261: Nek'Rosh, 5220: Stitches)
-		z["Lucky-Nek'Rosh"]		= ElvBlue -- [Horde] Rogue
-		z["Luckyone-Nek'Rosh"]	= ElvBlue -- [Horde] Hunter
-		z['Luckyone-Stitches']	= ElvBlue -- [Horde] Hunter
-		z["Luckyone-Shazzrah"]	= ElvBlue -- [Horde] Hunter
+		-- Luckyone Seasonal (5826: Lone Wolf EU)
+		z['Player-5826-0202765F']	= ElvBlue -- [Alliance] Hunter
+		z['Player-5826-020F7F10']	= ElvBlue -- [Alliance] Paladin
+		z['Player-5826-02172E79']	= ElvBlue -- [Alliance] Warlock
+		z['Player-5826-0234253E']	= ElvBlue -- [Alliance] Mage
+		z['Player-5826-02342508']	= ElvBlue -- [Alliance] Priest
+		z['Player-5826-023424EF']	= ElvBlue -- [Alliance] Druid
+		z['Player-5826-02342520']	= ElvBlue -- [Alliance] Rogue
+		z['Player-5826-02342556']	= ElvBlue -- [Alliance] Warrior
+		-- Luckyone Hardcore
+		z["Lucky-Nek'Rosh"]			= ElvBlue -- [Horde] Rogue
+		z["Luckyone-Nek'Rosh"]		= ElvBlue -- [Horde] Hunter
+		z["Unluckyone-Nek'Rosh"] 	= ElvBlue -- [Horde] Mage
+		z["Gigachad-Nek'Rosh"] 		= ElvBlue -- [Horde] Druid
+		-- Luckyone Classic Era (5233: Firemaw)
+		z['Player-5233-01D22A72']	= ElvBlue -- [Horde] Hunter: Unluckyone
+		z['Player-5233-01D27011']	= ElvBlue -- [Horde] Druid: Luckydruid
 	elseif E.Wrath then
 		-- Simpy (4373: Myzrael)
-		z['Player-4373-011657A7']		= itsSimpy -- Paladin:		Cutepally
-		z['Player-4373-032FFEE2']		= itsSimpy -- Shaman:		Kalline
-		z['Player-4373-03351BC7']		= itsSimpy -- [Horde] DK:	Imsojelly
-		-- Luckyone (4440: Everlook, 4476: Gehennas, 4811: Giantstalker)
-		z['Player-4476-03BF41C9']	= ElvBlue -- [Horde] Hunter: Luckyone
-		z['Player-4476-049F4831']	= ElvBlue -- [Horde] DK: Luckygrip
-		z['Player-4440-037C92D4']	= ElvBlue -- [Alliance] Druid: Luckyone
-		z['Player-4440-037C7CC8']	= ElvBlue -- [Alliance] Priest: Luckypriest
-		z['Player-4440-03AD654A']	= ElvBlue -- [Alliance] Rogue: Luckyrogue
-		z['Player-4440-037C7E29']	= ElvBlue -- [Alliance] DK: Luckydk
-		z['Player-4440-03ADE2DF']	= ElvBlue -- [Alliance] Shaman: Luckykek
-		z['Player-4811-038DA128']	= ElvBlue -- [Alliance] Paladin: Luckyone
-		z['Luckyhunter-Everlook']	= ElvBlue -- [Alliance] Hunter
+		z['Player-4373-011657A7']	= itsSimpy -- Paladin:		Cutepally
+		z['Player-4373-032FFEE2']	= itsSimpy -- Shaman:		Kalline
+		z['Player-4373-03351BC7']	= itsSimpy -- [Horde] DK:	Imsojelly
+		-- Luckyone (4467: Firemaw, 4440: Everlook, 4476: Gehennas)
+		z['Player-4467-04540395']	= ElvBlue -- [Alliance] Druid
+		z['Player-4467-04542B4A']	= ElvBlue -- [Alliance] Priest
+		z['Player-4467-04571AA2']	= ElvBlue -- [Alliance] Warlock
+		z['Player-4467-04571A8D']	= ElvBlue -- [Alliance] DK
+		z['Player-4467-04571A9F']	= ElvBlue -- [Alliance] Mage
+		z['Player-4467-04571A98']	= ElvBlue -- [Alliance] Warrior
+		z['Player-4467-04571911']	= ElvBlue -- [Alliance] Paladin
+		z['Player-4440-03AD654A']	= ElvBlue -- [Alliance] Rogue
+		z['Player-4440-03ADE2DF']	= ElvBlue -- [Alliance] Shaman
+		z['Player-4476-03BF41C9']	= ElvBlue -- [Horde] Hunter
 		-- Repooc
 		z['Poocsdk-Mankrik']		= ElvBlue -- [Horde] DK
 		z['Repooc-Mankrik']			= ElvBlue
@@ -357,8 +373,8 @@ do --this can save some main file locals
 		z['Zinxbe-Spirestone']		= itsElv
 		z['Whorlock-Spirestone']	= itsElv
 		-- Blazeflack
-		z['Blazii-Silvermoon']	= ElvBlue -- Priest
-		z['Chazii-Silvermoon']	= ElvBlue -- Shaman
+		z['Blazii-Silvermoon']		= ElvBlue -- Priest
+		z['Chazii-Silvermoon']		= ElvBlue -- Shaman
 		-- Merathilis (1401: Shattrath/Garrosh)
 		z['Player-1401-04217BB2']	= ElvPurple	-- [Alliance] Warlock:	Asragoth
 		z['Player-1401-0421EB9F']	= ElvBlue	-- [Alliance] Warrior:	Brìtt
@@ -375,57 +391,57 @@ do --this can save some main file locals
 		z['Player-1401-041C0AE2']	= ElvGreen	-- [Alliance] Hunter:	Róhal
 		z['Player-1401-05CEABFA']	= ElvRed	-- [Alliance] DK:		Jahzzy
 		-- Luckyone (1598: LaughingSkull)
-		z['Player-1598-0F5E4639']	= ElvBlue -- [Horde] Druid: 	Luckyone
-		z['Player-1598-0F46FF5A']	= ElvBlue -- [Horde] Evoker: 	Luckyevoker
-		z['Player-1598-0BFF3341']	= ElvBlue -- [Horde] DH: 		Luckydh
-		z['Player-1598-0BD22704']	= ElvBlue -- [Horde] Priest: 	Luckypriest
-		z['Player-1598-0BEFA545']	= ElvBlue -- [Horde] Monk: 		Luckymonkas
-		z['Player-1598-0E1A06DE']	= ElvBlue -- [Horde] Rogue: 	Luckyrogue
-		z['Player-1598-0BF2E377']	= ElvBlue -- [Horde] Hunter: 	Luckyhunter
-		z['Player-1598-0BF18248']	= ElvBlue -- [Horde] DK: 		Luckydk
-		z['Player-1598-0BFABB95']	= ElvBlue -- [Horde] Mage: 		Luckymage
-		z['Player-1598-0E67511D']	= ElvBlue -- [Horde] Paladin: 	Luckypala
-		z['Player-1598-0C0DD01B']	= ElvBlue -- [Horde] Warlock: 	Luckywl
-		z['Player-1598-0BF8013A']	= ElvBlue -- [Horde] Warrior: 	Notlucky
-		z['Player-1598-0BF56103']	= ElvBlue -- [Horde] Shaman: 	Unluckyone
-		z['Player-1598-0F3E51B0']	= ElvBlue -- [Alliance] Druid:	Luckydruid
+		z['Player-1598-0F5E4639']	= ElvBlue -- [Alliance] Druid: Luckyone
+		z['Player-1598-0F3E51B0']	= ElvBlue -- [Alliance] Druid: Luckydruid
+		z['Player-1598-0F46FF5A']	= ElvBlue -- [Horde] Evoker
+		z['Player-1598-0BFF3341']	= ElvBlue -- [Horde] DH
+		z['Player-1598-0BD22704']	= ElvBlue -- [Horde] Priest
+		z['Player-1598-0BEFA545']	= ElvBlue -- [Horde] Monk
+		z['Player-1598-0E1A06DE']	= ElvBlue -- [Horde] Rogue
+		z['Player-1598-0BF2E377']	= ElvBlue -- [Horde] Hunter
+		z['Player-1598-0BF18248']	= ElvBlue -- [Horde] DK
+		z['Player-1598-0BFABB95']	= ElvBlue -- [Horde] Mage
+		z['Player-1598-0E67511D']	= ElvBlue -- [Horde] Paladin
+		z['Player-1598-0C0DD01B']	= ElvBlue -- [Horde] Warlock
+		z['Player-1598-0BF8013A']	= ElvBlue -- [Horde] Warrior
+		z['Player-1598-0BF56103']	= ElvBlue -- [Horde] Shaman
 		-- Repooc
-		z['Sifpooc-Stormrage']			= itsPooc	-- [Alliance] DH
-		z['Fragmented-Stormrage']		= itsPooc	-- [Alliance] Warlock
-		z['Dapooc-Stormrage']			= itsPooc	-- [Alliance] Druid
-		z['Poocvoker-Stormrage']		= itsPooc	-- [Alliance] Evoker
-		z['Sifupooc-Stormrage']			= itsPooc	-- [Alliance] Monk
-		z['Pooc-Stormrage']				= itsPooc	-- [Alliance] Paladin
-		z['Repøøc-Stormrage']			= itsPooc	-- [Alliance] Shaman
+		z['Sifpooc-Stormrage']		= itsPooc	-- [Alliance] DH
+		z['Fragmented-Stormrage']	= itsPooc	-- [Alliance] Warlock
+		z['Dapooc-Stormrage']		= itsPooc	-- [Alliance] Druid
+		z['Poocvoker-Stormrage']	= itsPooc	-- [Alliance] Evoker
+		z['Sifupooc-Stormrage']		= itsPooc	-- [Alliance] Monk
+		z['Pooc-Stormrage']			= itsPooc	-- [Alliance] Paladin
+		z['Repøøc-Stormrage']		= itsPooc	-- [Alliance] Shaman
 		-- Simpy (1168: Cenarius, 125: Cenarion Circle)
-		z['Player-1168-069A1283']		= itsSimpy -- Hunter:	Arieva
-		z['Player-1168-0698394A']		= itsSimpy -- Rogue:	Buddercup
-		z['Player-1168-069A3A12']		= itsSimpy -- Paladin:	Cutepally
-		z['Player-1168-0A99F54B']		= itsSimpy -- Mage:		Cuddle
-		z['Player-1168-0680170F']		= itsSimpy -- DK:		Ezek
-		z['Player-1168-06981C6F']		= itsSimpy -- Warrior:	Glice
-		z['Player-1168-0698066B']		= itsSimpy -- Shaman:	Kalline
-		z['Player-1168-06989ADF']		= itsSimpy -- Druid:	Puttietat
-		z['Player-1168-069837CD']		= itsSimpy -- Warlock:	Simpy
-		z['Player-1168-06984CD4']		= itsSimpy -- Monk:		Twigly
-		z['Player-1168-0A98C560']		= itsSimpy -- [Horde] Evoker:	Imsofire
-		z['Player-1168-090A34ED']		= itsSimpy -- [Horde] Shaman:	Imsobeefy
-		z['Player-1168-090A34E6']		= itsSimpy -- [Horde] Priest:	Imsocheesy
-		z['Player-1168-069838E1']		= itsSimpy -- [Horde] DK:		Imsojelly
-		z['Player-1168-0870FBCE']		= itsSimpy -- [Horde] Druid:	Imsojuicy
-		z['Player-1168-07C00783']		= itsSimpy -- [Horde] DH:		Imsopeachy
-		z['Player-1168-07B41C4C']		= itsSimpy -- [Horde] Paladin:	Imsosalty
-		z['Player-1168-0870F320']		= itsSimpy -- [Horde] Mage:		Imsospicy
-		z['Player-1168-0A395531']		= itsSimpy -- [Horde] Hunter:	Imsonutty
-		z['Player-1168-0A395540']		= itsSimpy -- [Horde] Monk:		Imsotasty
-		z['Player-1168-0A39554F']		= itsSimpy -- [Horde] Warlock:	Imsosaucy
-		z['Player-1168-0A395551']		= itsSimpy -- [Horde] Rogue:	Imsodrippy
-		z['Player-125-0A62DE05']		= itsSimpy -- [RP] Evoker:	Lumee
-		z['Player-125-09A7F9ED']		= itsSimpy -- [RP] Warrior:	Bunne
-		z['Player-125-09A8CC43']		= itsSimpy -- [RP] Monk:	Loppie
-		z['Player-125-09A7EB72']		= itsSimpy -- [RP] Mage:	Loppybunny
-		z['Player-125-09A7DAD9']		= itsSimpy -- [RP] DH:		Rubee
-		z['Player-125-09A8E282']		= itsSimpy -- [RP] Priest:	Wennie
+		z['Player-1168-069A1283']	= itsSimpy -- Hunter:	Arieva
+		z['Player-1168-0698394A']	= itsSimpy -- Rogue:	Buddercup
+		z['Player-1168-069A3A12']	= itsSimpy -- Paladin:	Cutepally
+		z['Player-1168-0A99F54B']	= itsSimpy -- Mage:		Cuddle
+		z['Player-1168-0680170F']	= itsSimpy -- DK:		Ezek
+		z['Player-1168-06981C6F']	= itsSimpy -- Warrior:	Glice
+		z['Player-1168-0698066B']	= itsSimpy -- Shaman:	Kalline
+		z['Player-1168-06989ADF']	= itsSimpy -- Druid:	Puttietat
+		z['Player-1168-069837CD']	= itsSimpy -- Warlock:	Simpy
+		z['Player-1168-06984CD4']	= itsSimpy -- Monk:		Twigly
+		z['Player-1168-0A98C560']	= itsSimpy -- [Horde] Evoker:	Imsofire
+		z['Player-1168-090A34ED']	= itsSimpy -- [Horde] Shaman:	Imsobeefy
+		z['Player-1168-090A34E6']	= itsSimpy -- [Horde] Priest:	Imsocheesy
+		z['Player-1168-069838E1']	= itsSimpy -- [Horde] DK:		Imsojelly
+		z['Player-1168-0870FBCE']	= itsSimpy -- [Horde] Druid:	Imsojuicy
+		z['Player-1168-07C00783']	= itsSimpy -- [Horde] DH:		Imsopeachy
+		z['Player-1168-07B41C4C']	= itsSimpy -- [Horde] Paladin:	Imsosalty
+		z['Player-1168-0870F320']	= itsSimpy -- [Horde] Mage:		Imsospicy
+		z['Player-1168-0A395531']	= itsSimpy -- [Horde] Hunter:	Imsonutty
+		z['Player-1168-0A395540']	= itsSimpy -- [Horde] Monk:		Imsotasty
+		z['Player-1168-0A39554F']	= itsSimpy -- [Horde] Warlock:	Imsosaucy
+		z['Player-1168-0A395551']	= itsSimpy -- [Horde] Rogue:	Imsodrippy
+		z['Player-125-0A62DE05']	= itsSimpy -- [RP] Evoker:	Lumee
+		z['Player-125-09A7F9ED']	= itsSimpy -- [RP] Warrior:	Bunne
+		z['Player-125-09A8CC43']	= itsSimpy -- [RP] Monk:	Loppie
+		z['Player-125-09A7EB72']	= itsSimpy -- [RP] Mage:	Loppybunny
+		z['Player-125-09A7DAD9']	= itsSimpy -- [RP] DH:		Rubee
+		z['Player-125-09A8E282']	= itsSimpy -- [RP] Priest:	Wennie
 		-- Melbelle (Simpys Bestie)
 		z['Melbelle-Bladefist']		= itsMel -- Hunter
 		z['Deathchaser-Bladefist']	= itsMel -- DH
@@ -453,7 +469,7 @@ do --this can save some main file locals
 		z['Gur-Area52']				= itsThradex -- Horde
 		z['Archmage-Area52']		= itsThradex -- Horde
 		z['Counselor-Area52']		= itsThradex -- Horde
-		z['Psychiatrist-Area 52']	= itsThradex -- Horde
+		z['Psychiatrist-Area52']	= itsThradex -- Horde
 		z['Monk-CenarionCircle']	= itsThradex
 		z['Thradex-Stormrage']		= itsThradex
 		z['Wrecked-Stormrage']		= itsThradex
@@ -464,17 +480,17 @@ do --this can save some main file locals
 		z['Akavaya-BurningLegion']		= Gem
 		z['Athyneos-BurningLegion']		= Gem
 		-- Affinity
-		z['Affinichi-Illidan']	= Bathrobe
-		z['Affinitii-Illidan']	= Bathrobe
-		z['Affinity-Illidan']	= Bathrobe
-		z['Uplift-Illidan']		= Bathrobe
+		z['Affinichi-Illidan']		= Bathrobe
+		z['Affinitii-Illidan']		= Bathrobe
+		z['Affinity-Illidan']		= Bathrobe
+		z['Uplift-Illidan']			= Bathrobe
 		-- Tirain (NOTE: lol)
-		z['Tierone-Spirestone']	= TyroneBiggums
-		z['Tirain-Spirestone']	= TyroneBiggums
-		z['Sinth-Spirestone']	= TyroneBiggums
-		z['Tee-Spirestone']		= TyroneBiggums
-		z['Teepac-Area52']		= TyroneBiggums
-		z['Teekettle-Area52']	= TyroneBiggums
+		z['Tierone-Spirestone']		= TyroneBiggums
+		z['Tirain-Spirestone']		= TyroneBiggums
+		z['Sinth-Spirestone']		= TyroneBiggums
+		z['Tee-Spirestone']			= TyroneBiggums
+		z['Teepac-Area52']			= TyroneBiggums
+		z['Teekettle-Area52']		= TyroneBiggums
 		-- Mis (NOTE: I will forever have the picture you accidently shared of the manikin wearing a strapon burned in my brain)
 		z['Twunk-Area52']			= itsMis
 		z['Twunkie-Area52']			= itsMis
@@ -492,7 +508,7 @@ do --this can save some main file locals
 		z['Bladesdruid-Spirestone']	= SuperBear
 		z['Rollerblade-Spirestone']	= SuperBear
 		--Bozaum
-		z['Bozaum-Spirestone']	= Beer
+		z['Bozaum-Spirestone']		= Beer
 	end
 end
 
@@ -598,7 +614,8 @@ end
 function CH:ChatFrameTab_SetAlpha(_, skip)
 	if skip then return end
 	local chat = CH:GetOwner(self)
-	self:SetAlpha((not chat.isDocked or self.selected) and 1 or 0.6, true)
+	local selected = _G.GeneralDockManager.selected
+	self:SetAlpha((not chat.isDocked or chat == selected) and 1 or 0.6, true)
 end
 
 do
@@ -645,7 +662,7 @@ do
 				if Name then
 					_G.ChatFrame_SendTell(Name, self.chatFrame)
 				else
-					_G.UIErrorsFrame:AddMessage(E.InfoColor .. L["Invalid Target"])
+					_G.UIErrorsFrame:AddMessage(L["Invalid Target"], 1.0, 0.2, 0.2, 1.0)
 				end
 			elseif text == '/gr ' then
 				self:SetText(CH:GetGroupDistribution() .. strsub(text, 5))
@@ -759,11 +776,11 @@ function CH:UpdateEditboxFont(chatFrame)
 	local _, fontSize = _G.FCF_GetChatWindowInfo(id)
 
 	local editbox = _G.ChatEdit_ChooseBoxForSend(chatFrame)
-	editbox:FontTemplate(font, fontSize, 'NONE')
-	editbox.header:FontTemplate(font, fontSize, 'NONE')
+	editbox:FontTemplate(font, fontSize, 'SHADOW')
+	editbox.header:FontTemplate(font, fontSize, 'SHADOW')
 
 	if editbox.characterCount then
-		editbox.characterCount:FontTemplate(font, fontSize, 'NONE')
+		editbox.characterCount:FontTemplate(font, fontSize, 'SHADOW')
 	end
 
 	-- the header and text will not update the placement without focus
@@ -786,6 +803,10 @@ function CH:StyleChat(frame)
 	frame:SetFading(CH.db.fade)
 
 	tab.Text:FontTemplate(LSM:Fetch('font', CH.db.tabFont), CH.db.tabFontSize, CH.db.tabFontOutline)
+
+	if not frame.isDocked then
+		PanelTemplates_TabResize(tab, tab.sizePadding or 0)
+	end
 
 	if frame.styled then return end
 
@@ -834,14 +855,11 @@ function CH:StyleChat(frame)
 		if right then right:SetTexture() end
 	end
 
+	tab.Text:ClearAllPoints()
+	tab.Text:Point('CENTER', tab, 0, -1)
+
 	hooksecurefunc(tab, 'SetAlpha', CH.ChatFrameTab_SetAlpha)
 
-	if not tab.Left then
-		tab.Left = _G[name..'TabLeft'] or _G[name..'Tab'].Left
-	end
-
-	tab.Text:ClearAllPoints()
-	tab.Text:Point('LEFT', tab, 'LEFT', tab.Left:GetWidth(), 0)
 	tab:Height(22)
 
 	if tab.conversationIcon then
@@ -901,26 +919,13 @@ function CH:StyleChat(frame)
 	frame.styled = true
 end
 
-function CH:GetChatTime()
-	local unix = time()
-	local realm = not CH.db.timeStampLocalTime and C_DateAndTime_GetCurrentCalendarTime()
-	if realm then -- blizzard is weird
-		realm.day = realm.monthDay
-		realm.min = realm.minute
-		realm.sec = date('%S', unix) -- no seconds from CalendarTime
-		realm = time(realm)
-	end
-
-	return realm or unix
-end
-
 function CH:AddMessageEdits(frame, msg, isHistory, historyTime)
 	if not strmatch(msg, '^|Helvtime|h') and not strmatch(msg, '^|Hcpl:') then
 		local historyTimestamp --we need to extend the arguments on AddMessage so we can properly handle times without overriding
 		if isHistory == 'ElvUI_ChatHistory' then historyTimestamp = historyTime end
 
 		if CH.db.timeStampFormat and CH.db.timeStampFormat ~= 'NONE' then
-			local timeStamp = BetterDate(CH.db.timeStampFormat, historyTimestamp or CH:GetChatTime())
+			local timeStamp = BetterDate(CH.db.timeStampFormat, historyTimestamp or E:GetDateTime(CH.db.timeStampLocalTime, true))
 			timeStamp = gsub(timeStamp, ' ', '')
 			timeStamp = gsub(timeStamp, 'AM', ' AM')
 			timeStamp = gsub(timeStamp, 'PM', ' PM')
@@ -1222,13 +1227,13 @@ function CH:UpdateChatTab(chat)
 
 	local tab = CH:GetTab(chat)
 	if chat == CH.LeftChatWindow then
-		tab:SetParent(_G.LeftChatPanel or _G.UIParent)
-		chat:SetParent(_G.LeftChatPanel or _G.UIParent)
+		tab:SetParent(_G.LeftChatPanel or UIParent)
+		chat:SetParent(_G.LeftChatPanel or UIParent)
 
 		CH:HandleFadeTabs(chat, fadeLeft)
 	elseif chat == CH.RightChatWindow then
-		tab:SetParent(_G.RightChatPanel or _G.UIParent)
-		chat:SetParent(_G.RightChatPanel or _G.UIParent)
+		tab:SetParent(_G.RightChatPanel or UIParent)
+		chat:SetParent(_G.RightChatPanel or UIParent)
 
 		CH:HandleFadeTabs(chat, fadeRight)
 	else
@@ -1236,8 +1241,8 @@ function CH:UpdateChatTab(chat)
 		local parent = CH:GetDockerParent(docker, chat)
 
 		-- we need to update the tab parent to mimic the docker if its not docked
-		if not chat.isDocked then tab:SetParent(parent or _G.UIParent) end
-		chat:SetParent(parent or _G.UIParent)
+		if not chat.isDocked then tab:SetParent(parent or UIParent) end
+		chat:SetParent(parent or UIParent)
 
 		if parent and docker == CH.LeftChatWindow then
 			CH:HandleFadeTabs(chat, fadeLeft)
@@ -1831,8 +1836,8 @@ function CH:MessageFormatter(frame, info, chatType, chatGroup, chatTarget, chann
 	end
 
 	local showLink = 1
-	local isMonster = strsub(chatType, 1, 7) == 'MONSTER'
-	if isMonster or strsub(chatType, 1, 9) == 'RAID_BOSS' then
+	local bossMonster = strsub(chatType, 1, 9) == 'RAID_BOSS' or strsub(chatType, 1, 7) == 'MONSTER'
+	if bossMonster then
 		showLink = nil
 
 		-- fix blizzard formatting errors from localization strings
@@ -1903,7 +1908,7 @@ function CH:MessageFormatter(frame, info, chatType, chatGroup, chatTarget, chann
 
 	-- Player Flags
 	local pflag = GetPFlag(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17)
-	if not isMonster then
+	if not bossMonster then
 		local chatIcon, pluginChatIcon = specialChatIcons[arg12] or specialChatIcons[playerName], CH:GetPluginIcon(arg12, playerName)
 		if type(chatIcon) == 'function' then
 			local icon, prettify, var1, var2, var3 = chatIcon()
@@ -2129,8 +2134,7 @@ function CH:ChatFrame_MessageEventHandler(frame, event, arg1, arg2, arg3, arg4, 
 			-- Append [Share] hyperlink
 			frame:AddMessage(format(arg1, GetPlayerLink(arg2, format('[%s]', coloredName))), info.r, info.g, info.b, info.id, nil, nil, nil, nil, nil, isHistory, historyTime)
 		elseif strsub(chatType,1,18) == 'GUILD_ACHIEVEMENT' then
-			local message = format(arg1, GetPlayerLink(arg2, format('[%s]', coloredName)))
-			frame:AddMessage(message, info.r, info.g, info.b, info.id, nil, nil, nil, nil, nil, isHistory, historyTime)
+			frame:AddMessage(format(arg1, GetPlayerLink(arg2, format('[%s]', coloredName))), info.r, info.g, info.b, info.id, nil, nil, nil, nil, nil, isHistory, historyTime)
 		elseif chatType == 'PING' then
 			frame:AddMessage(arg1, info.r, info.g, info.b, info.id, nil, nil, nil, nil, nil, isHistory, historyTime)
 		elseif chatType == 'IGNORED' then
@@ -2270,7 +2274,8 @@ function CH:ChatFrame_MessageEventHandler(frame, event, arg1, arg2, arg3, arg4, 
 			end
 
 			-- beep boops
-			local alertType = notChatHistory and not CH.SoundTimer and not strfind(event, '_INFORM') and CH.db.channelAlerts[historyTypes[event]]
+			local historyType = notChatHistory and not CH.SoundTimer and not strfind(event, '_INFORM') and historyTypes[event]
+			local alertType = (historyType ~= 'CHANNEL' and CH.db.channelAlerts[historyType]) or (historyType == 'CHANNEL' and CH.db.channelAlerts.CHANNEL[arg9])
 			if alertType and alertType ~= 'None' and arg2 ~= PLAYER_NAME and (not CH.db.noAlertInCombat or not InCombatLockdown()) then
 				CH.SoundTimer = E:Delay(5, CH.ThrottleSound)
 				PlaySoundFile(LSM:Fetch('sound', alertType), 'Master')
@@ -2368,7 +2373,7 @@ do
 	function CH:StyleOverflowButton()
 		local btn = _G.GeneralDockManagerOverflowButton
 		local wasSkinned = btn.isSkinned -- keep this before HandleNextPrev
-		Skins:HandleNextPrevButton(btn, 'down', overflowColor, true)
+		S:HandleNextPrevButton(btn, 'down', overflowColor, true)
 		btn:SetHighlightTexture(E.Media.Textures.ArrowUpGlow)
 
 		if not wasSkinned then
@@ -2381,7 +2386,7 @@ do
 
 		local hl = btn:GetHighlightTexture()
 		hl:SetVertexColor(unpack(E.media.rgbvaluecolor))
-		hl:SetRotation(Skins.ArrowRotation.down)
+		hl:SetRotation(S.ArrowRotation.down)
 
 		btn.list:SetTemplate('Transparent')
 	end
@@ -2753,7 +2758,7 @@ function CH:SaveChatHistory(event, ...)
 
 	if #tempHistory > 0 and not CH:MessageIsProtected(tempHistory[1]) then
 		tempHistory[50] = event
-		tempHistory[51] = CH:GetChatTime()
+		tempHistory[51] = E:GetDateTime(CH.db.timeStampLocalTime, true)
 
 		local coloredName, battleTag
 		if tempHistory[13] and tempHistory[13] > 0 then coloredName, battleTag = CH:GetBNFriendColor(tempHistory[2], tempHistory[13], true) end
@@ -3069,7 +3074,7 @@ end
 function CH:GetAnchorParents(chat)
 	local Left = (chat == CH.LeftChatWindow and _G.LeftChatPanel)
 	local Right = (chat == CH.RightChatWindow and _G.RightChatPanel)
-	local Chat, TabPanel = Left or Right or _G.UIParent
+	local Chat, TabPanel = Left or Right or UIParent
 	if CH.db.panelTabBackdrop and not ((CH.db.panelBackdrop == 'HIDEBOTH') or (Left and CH.db.panelBackdrop == 'RIGHT') or (Right and CH.db.panelBackdrop == 'LEFT')) then
 		TabPanel = (Left and _G.LeftChatTab) or (Right and _G.RightChatTab)
 	end
@@ -3112,7 +3117,7 @@ function CH:HandleChatVoiceIcons()
 		end
 	elseif CH.db.pinVoiceButtons then
 		for index, button in ipairs(channelButtons) do
-			Skins:HandleButton(button, nil, nil, true)
+			S:HandleButton(button, nil, nil, true)
 			button.Icon:SetDesaturated(CH.db.desaturateVoiceIcons)
 			button:ClearAllPoints()
 
@@ -3170,7 +3175,7 @@ function CH:CreateChatVoicePanel()
 	channelButtons[1]:Point('TOP', Holder, 'TOP', 0, -2)
 
 	for _, button in ipairs(channelButtons) do
-		Skins:HandleButton(button, nil, nil, true)
+		S:HandleButton(button, nil, nil, true)
 		button.Icon:SetParent(button)
 		button.Icon:SetDesaturated(CH.db.desaturateVoiceIcons)
 		button:SetParent(Holder)
@@ -3270,7 +3275,7 @@ function CH:BuildCopyChatFrame()
 	local scrollArea = CreateFrame('ScrollFrame', 'CopyChatScrollFrame', frame, 'UIPanelScrollFrameTemplate')
 	scrollArea:Point('TOPLEFT', frame, 'TOPLEFT', 8, -30)
 	scrollArea:Point('BOTTOMRIGHT', frame, 'BOTTOMRIGHT', -30, 8)
-	Skins:HandleScrollBar(_G.CopyChatScrollFrameScrollBar)
+	S:HandleScrollBar(_G.CopyChatScrollFrameScrollBar)
 	scrollArea:SetScript('OnSizeChanged', function(scroll)
 		_G.CopyChatFrameEditBox:Width(scroll:GetWidth())
 		_G.CopyChatFrameEditBox:Height(scroll:GetHeight())
@@ -3301,7 +3306,7 @@ function CH:BuildCopyChatFrame()
 	close:Point('TOPRIGHT')
 	close:SetFrameLevel(close:GetFrameLevel() + 1)
 	close:EnableMouse(true)
-	Skins:HandleCloseButton(close)
+	S:HandleCloseButton(close)
 end
 
 CH.TabStyles = {
@@ -3607,6 +3612,7 @@ function CH:Initialize()
 	if not ElvCharacterDB.ChatEditHistory then ElvCharacterDB.ChatEditHistory = {} end
 	if not ElvCharacterDB.ChatHistoryLog or not CH.db.chatHistory then ElvCharacterDB.ChatHistoryLog = {} end
 
+	_G.CHAT_FONT_HEIGHTS = CH.FontHeights
 	_G.ChatFrameMenuButton:Kill()
 
 	CH:SetupChat()
@@ -3690,18 +3696,18 @@ function CH:Initialize()
 		local ChatTypeInfo = _G.ChatTypeInfo
 		local info = ChatTypeInfo[chatType]
 		local chanTarget = editbox:GetAttribute('channelTarget')
-		local chanName = chanTarget and GetChannelName(chanTarget)
+		local chanIndex = chanTarget and GetChannelName(chanTarget)
 
 		--Increase inset on right side to make room for character count text
 		local insetLeft, insetRight, insetTop, insetBottom = editbox:GetTextInsets()
 		editbox:SetTextInsets(insetLeft, insetRight + 30, insetTop, insetBottom)
 		editbox:SetTemplate(nil, true)
 
-		if chanName and (chatType == 'CHANNEL') then
-			if chanName == 0 then
+		if chanIndex and (chatType == 'CHANNEL') then
+			if chanIndex == 0 then
 				editbox:SetBackdropBorderColor(unpack(E.media.bordercolor))
 			else
-				info = ChatTypeInfo[chatType..chanName]
+				info = ChatTypeInfo[chatType..chanIndex]
 				editbox:SetBackdropBorderColor(info.r, info.g, info.b)
 			end
 		else

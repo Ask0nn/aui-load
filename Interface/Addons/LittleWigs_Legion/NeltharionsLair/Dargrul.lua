@@ -152,7 +152,7 @@ function mod:BurningHatred(args)
 	if self:MobId(args.sourceGUID) == 101476 then -- Molten Charskin
 		self:TargetMessage(args.spellId, "red", args.destName, CL.fixate)
 		if self:Me(args.destGUID) then
-			self:Say(args.spellId, CL.fixate)
+			self:Say(args.spellId, CL.fixate, nil, "Fixate")
 			self:PlaySound(args.spellId, "warning", nil, args.destName)
 		else
 			self:PlaySound(args.spellId, "alert", nil, args.destName)
@@ -160,9 +160,17 @@ function mod:BurningHatred(args)
 	end
 end
 
-function mod:CrystalCracked(args)
-	self:Message(args.spellId, "green")
-	self:PlaySound(args.spellId, "info")
+do
+	local prev = 0
+	function mod:CrystalCracked(args)
+		-- sometimes this applies twice in the same tick, throttle to prevent duplicate alerts
+		local t = args.time
+		if t - prev > 1 then
+			prev = t
+			self:Message(args.spellId, "green")
+			self:PlaySound(args.spellId, "info")
+		end
+	end
 end
 
 do

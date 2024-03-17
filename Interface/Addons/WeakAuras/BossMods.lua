@@ -156,11 +156,11 @@ Private.ExecEnv.BossMods.DBM = {
 
   EventCallback = function(self, event, ...)
     if event == "DBM_Announce" then
-      local spellId = select(4, ...)
-      WeakAuras.ScanEvents("DBM_Announce", spellId, ...)
+      local message, icon, _, spellId, _, count = ...
+      WeakAuras.ScanEvents("DBM_Announce", spellId, message, icon)
       if self.isGeneric then
-        local message, icon = ...
-        WeakAuras.ScanEvents("BossMod_Announce", spellId, message, icon)
+        count = count and tostring(count) or "0"
+        WeakAuras.ScanEvents("BossMod_Announce", spellId, message, icon, count)
       end
     elseif event == "DBM_TimerStart" then
       local timerId, msg, duration, icon, timerType, spellId, dbmType, _, _, _, _, _, timerCount = ...
@@ -594,7 +594,7 @@ Private.event_prototypes["DBM Timer"] = {
     return ret:format(
       trigger.use_count and trigger.count or "",
       trigger.use_id and trigger.id or "",
-      trigger.use_spellId and trigger.spellId or "",
+      trigger.use_spellId and tostring(trigger.spellId) or "",
       trigger.use_message and trigger.message or "",
       trigger.use_message and trigger.message_operator or "",
       trigger.use_cloneId and "true" or "false",
@@ -681,6 +681,7 @@ Private.ExecEnv.BossMods.BigWigs = {
     state.addon = bar.addon
     state.spellId = bar.spellId
     state.text = bar.text
+    state.message = bar.text
     state.name = bar.text
     state.duration = bar.duration + extendTimer
     state.expirationTime = bar.expirationTime + extendTimer
@@ -812,7 +813,8 @@ Private.ExecEnv.BossMods.BigWigs = {
       WeakAuras.ScanEvents("BigWigs_Message", ...)
       if self.isGeneric then
         local _, spellId, text, _, icon = ...
-        WeakAuras.ScanEvents("BossMod_Announce", spellId, text, icon)
+        local count = text and text:match("%((%d+)%)") or text:match("（(%d+)）") or "0"
+        WeakAuras.ScanEvents("BossMod_Announce", spellId, text, icon, count)
       end
     elseif event == "BigWigs_StartBar" then
       local addon, spellId, text, duration, icon, isCD = ...
@@ -1032,8 +1034,8 @@ Private.event_prototypes["BigWigs Message"] = {
     {
       name = "spellId",
       init = "arg",
-      display = L["Key"],
-      desc = L["The 'Key' value can be found in the BigWigs options of a specific spell"],
+      display = L["ID"],
+      desc = L["The 'ID' value can be found in the BigWigs options of a specific spell"],
       type = "spell",
       conditionType = "string",
       noValidation = true,
@@ -1220,7 +1222,7 @@ Private.event_prototypes["BigWigs Timer"] = {
     ]=]
     return ret:format(
       trigger.use_count and trigger.count or "",
-      trigger.use_spellId and trigger.spellId or "",
+      trigger.use_spellId and tostring(trigger.spellId) or "",
       trigger.use_text and trigger.text or "",
       trigger.use_text and trigger.text_operator or "",
       trigger.use_cloneId and "true" or "false",
@@ -1236,8 +1238,8 @@ Private.event_prototypes["BigWigs Timer"] = {
   args = {
     {
       name = "spellId",
-      display = L["Key"],
-      desc = L["The 'Key' value can be found in the BigWigs options of a specific spell"],
+      display = L["ID"],
+      desc = L["The 'ID' value can be found in the BigWigs options of a specific spell"],
       type = "spell",
       conditionType = "string",
       noValidation = true,
@@ -1404,7 +1406,7 @@ Private.event_prototypes["Boss Mod Announce"] = {
     {
       name = "spellId",
       init = "arg",
-      display = L["Key"],
+      display = L["ID"],
       store = true,
       type = "spell",
       conditionType = "string",
@@ -1433,6 +1435,20 @@ Private.event_prototypes["Boss Mod Announce"] = {
       store = true,
       hidden = true,
       test = "true"
+    },
+    {
+      name = "count",
+      init = "arg",
+      display = L["Count"],
+      desc = L["Occurrence of the event\nCan be a range of values\nCan have multiple values separated by a comma or a space\n\nExamples:\n2nd 5th and 6th events: 2, 5, 6\n2nd to 6th: 2-6\nevery 2 events: /2\nevery 3 events starting from 2nd: 2/3\nevery 3 events starting from 2nd and ending at 11th: 2-11/3\n\nWorks only if Boss Mod addon show counter"],
+      type = "string",
+      preamble = "local counter = Private.ExecEnv.CreateTriggerCounter(%q)",
+      test = "counter:SetCount(tonumber(count) or 0) == nil and counter:Match()",
+      conditionTest = function(state, needle, op, preamble)
+        return preamble:Check(state.count)
+      end,
+      store = true,
+      conditionType = "string",
     },
     {
       name = "cloneId",
@@ -1609,7 +1625,7 @@ Private.event_prototypes["Boss Mod Timer"] = {
 
     return ret:format(
       trigger.use_count and trigger.count or "",
-      trigger.use_spellId and trigger.spellId or "",
+      trigger.use_spellId and tostring(trigger.spellId) or "",
       trigger.use_message and trigger.message or "",
       trigger.use_message and trigger.message_operator or "",
       trigger.use_cloneId and "true" or "false",
@@ -1623,7 +1639,7 @@ Private.event_prototypes["Boss Mod Timer"] = {
   args = {
     {
       name = "spellId",
-      display = L["Key"],
+      display = L["ID"],
       store = true,
       type = "spell",
       conditionType = "string",

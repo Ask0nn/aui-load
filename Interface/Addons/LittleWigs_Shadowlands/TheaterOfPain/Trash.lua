@@ -112,7 +112,7 @@ function mod:GetOptions()
 		331237, -- Bone Spikes
 	}, {
 		[333241] = L.raging_bloodhorn,
-		[341977] = L.diseased_horror,
+		[319290] = L.diseased_horror,
 		[341969] = L.blighted_sludge_spewer,
 		[330586] = L.putrid_butcher,
 		[330614] = L.rancid_gasbag,
@@ -348,7 +348,7 @@ do
 	local function printTarget(self, name, guid)
 		self:TargetMessage(333861, "red", name)
 		if self:Me(guid) then
-			self:Say(333861)
+			self:Say(333861, nil, nil, "Ricocheting Blade")
 			self:PlaySound(333861, "warning", nil, name)
 		else
 			self:PlaySound(333861, "alert", nil, name)

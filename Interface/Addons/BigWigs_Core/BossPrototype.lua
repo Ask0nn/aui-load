@@ -27,18 +27,21 @@ end
 
 local L = BigWigsAPI:GetLocale("BigWigs: Common")
 local LibSpec = LibStub("LibSpecialization")
+local loader = BigWigsLoader
 local UnitAffectingCombat, UnitIsPlayer, UnitPosition, UnitIsConnected, UnitClass, UnitTokenFromGUID = UnitAffectingCombat, UnitIsPlayer, UnitPosition, UnitIsConnected, UnitClass, UnitTokenFromGUID
 local C_EncounterJournal_GetSectionInfo, GetSpellInfo, GetSpellTexture, GetTime, IsSpellKnown, IsPlayerSpell = C_EncounterJournal.GetSectionInfo, GetSpellInfo, GetSpellTexture, GetTime, IsSpellKnown, IsPlayerSpell
-local EJ_GetEncounterInfo, UnitGroupRolesAssigned = EJ_GetEncounterInfo, UnitGroupRolesAssigned
-local SendChatMessage, GetInstanceInfo, Timer, SetRaidTarget = BigWigsLoader.SendChatMessage, BigWigsLoader.GetInstanceInfo, BigWigsLoader.CTimerAfter, BigWigsLoader.SetRaidTarget
-local UnitName, UnitGUID, UnitHealth, UnitHealthMax = BigWigsLoader.UnitName, BigWigsLoader.UnitGUID, BigWigsLoader.UnitHealth, BigWigsLoader.UnitHealthMax
-local UnitDetailedThreatSituation = BigWigsLoader.UnitDetailedThreatSituation
-local isClassic, isRetail = BigWigsLoader.isClassic, BigWigsLoader.isRetail
+local EJ_GetEncounterInfo, UnitGroupRolesAssigned, C_UIWidgetManager = EJ_GetEncounterInfo, UnitGroupRolesAssigned, C_UIWidgetManager
+local SendChatMessage, GetInstanceInfo, Timer, SetRaidTarget = loader.SendChatMessage, loader.GetInstanceInfo, loader.CTimerAfter, loader.SetRaidTarget
+local UnitName, UnitGUID, UnitHealth, UnitHealthMax, Ambiguate = loader.UnitName, loader.UnitGUID, loader.UnitHealth, loader.UnitHealthMax, loader.Ambiguate
+local RegisterAddonMessagePrefix, UnitDetailedThreatSituation = loader.RegisterAddonMessagePrefix, loader.UnitDetailedThreatSituation
+local isClassic, isRetail = loader.isClassic, loader.isRetail
 local format, find, gsub, band, tremove, twipe = string.format, string.find, string.gsub, bit.band, table.remove, table.wipe
 local select, type, next, tonumber = select, type, next, tonumber
+local PlaySoundFile = loader.PlaySoundFile
 local C = core.C
 local pName = UnitName("player")
 local cpName
+local myLocale = GetLocale()
 local hasVoice = BigWigsAPI:HasVoicePack()
 local bossUtilityFrame = CreateFrame("Frame")
 local petUtilityFrame = CreateFrame("Frame")
@@ -50,6 +53,7 @@ local myGUID, myRole, myRolePosition
 local myGroupGUIDs, myGroupRolePositions = {}, {}
 local solo = false
 local classColorMessages = true
+local englishSayMessages = false
 do -- Update some data that may be called at the top of modules (prior to initialization)
 	local _, _, diff = GetInstanceInfo()
 	difficulty = diff
@@ -66,6 +70,12 @@ local updateData = function(module)
 		classColorMessages = false
 	else
 		classColorMessages = true
+	end
+
+	if core.db.profile.englishSayMessages then
+		englishSayMessages = true
+	else
+		englishSayMessages = false
 	end
 
 	local _, role, position = LibSpec:MySpecialization()
@@ -422,10 +432,10 @@ function boss:Disable(isWipe)
 		end
 
 		if self.missing then
-			local newBar = "New timer for %q at stage %d with placement %d and value %.2f on %d running ".. BigWigsLoader:GetVersionString() ..", tell the authors."
+			local newBar = "New timer for %q at stage %d with placement %d and value %.2f on %d running ".. loader:GetVersionString() ..", tell the authors."
 			local newBarError = "New timer for %q at stage %d with placement %d and value %.2f."
 			local difficultyToText = {[14] = "N", [15] = "H", [16] = "M", [17] = "LFR"}
-			local errorHeader = format("BigWigs is missing timers on %q running %s, tell the devs!", difficultyToText[self:Difficulty()] or self:Difficulty(), BigWigsLoader:GetVersionString())
+			local errorHeader = format("BigWigs is missing timers on %q running %s, tell the devs!", difficultyToText[self:Difficulty()] or self:Difficulty(), loader:GetVersionString())
 			local errorStrings = {errorHeader}
 			for key, stageTbl in next, self.missing do
 				for stage = 0, 5, 0.5 do
@@ -735,13 +745,30 @@ end
 do
 	local noID = "Module '%s' tried to register/unregister a widget event without specifying a widget id."
 	local noFunc = "Module '%s' tried to register a widget event with the function '%s' which doesn't exist in the module."
+	local noVisInfoDataFunction = "Module '%s' tried to register for all updates to a widget event, but the visInfoDataFunction is unknown."
 
 	function boss:UPDATE_UI_WIDGET(_, tbl)
 		local id = tbl.widgetID
-		local func = widgetEventMap[self][id]
-		if func then
-			local typeInfo = UIWidgetManager:GetWidgetTypeInfo(tbl.widgetType)
-			local info = typeInfo and typeInfo.visInfoDataFunction(id)
+		local widgetEventEntry = widgetEventMap[self][id]
+		if widgetEventEntry then
+			local func, allUpdates = widgetEventEntry[1], widgetEventEntry[2]
+			local info
+			if allUpdates then
+				-- for known widget types, call the visualization info function directly. this
+				-- skips state checks that Blizzard might have defined in their widget template.
+				local widgetType = tbl.widgetType
+				if widgetType == 2 then -- Enum.UIWidgetVisualizationType.StatusBar
+					info = C_UIWidgetManager.GetStatusBarWidgetVisualizationInfo(id)
+				elseif widgetType == 8 then -- Enum.UIWidgetVisualizationType.TextWithState
+					info = C_UIWidgetManager.GetTextWithStateWidgetVisualizationInfo(id)
+				else -- unknown widget type
+					core:Print(format(noVisInfoDataFunction, self.moduleName))
+					return
+				end
+			else
+				local typeInfo = UIWidgetManager:GetWidgetTypeInfo(tbl.widgetType)
+				info = typeInfo and typeInfo.visInfoDataFunction(id)
+			end
 			if info then
 				local value = info.text -- Remain compatible with older modules
 				if (not value or value == "") and info.barValue then
@@ -758,10 +785,11 @@ do
 	--- Register a callback for a widget event for the specified widget id.
 	-- @number id the id of the widget to listen to
 	-- @param func callback function, passed (widgetId, widgetValue, widgetInfoTable)
-	function boss:RegisterWidgetEvent(id, func)
+	-- @bool[opt] allUpdates If widget update events should always trigger the callback - even if the widget is hidden.
+	function boss:RegisterWidgetEvent(id, func, allUpdates)
 		if type(id) ~= "number" then core:Print(format(noID, self.moduleName)) return end
 		if type(func) ~= "string" or not self[func] then core:Print(format(noFunc, self.moduleName, tostring(func))) return end
-		if not widgetEventMap[self][id] then widgetEventMap[self][id] = func end
+		if not widgetEventMap[self][id] then widgetEventMap[self][id] = { func, allUpdates } end
 		self:RegisterEvent("UPDATE_UI_WIDGET")
 	end
 	--- Unregister a callback for widget events.
@@ -1073,7 +1101,7 @@ do
 		twipe(icons) -- Wipe icon cache
 		twipe(spells)
 		if self.OnWin then self:OnWin() end
-		self:ScheduleTimer("Disable", 1) -- Delay a little to prevent re-enabling
+		Timer(1, function() self:Disable() end) -- Delay a little to prevent re-enabling
 		self:SendMessage("BigWigs_OnBossWin", self)
 		self:SendMessage("BigWigs_VictorySound", self)
 	end
@@ -1131,15 +1159,17 @@ do
 		bossTargetScans[#bossTargetScans+1] = {self, func, solo and 0.1 or tankCheckExpiry, guid, 0} -- Tiny allowance when solo
 	end
 
-
 	function boss:NextTarget(event, unit)
-		self:UnregisterUnitEvent(event, unit)
-		local func = self.bossTargetChecks[unit]
-		self.bossTargetChecks[unit] = nil
 		local id = unit.."target"
 		local playerGUID = UnitGUID(id)
-		local name = self:UnitName(id)
-		func(self, name, playerGUID)
+		-- ignore the boss detargeting their current target before targeting the next player
+		if playerGUID then
+			self:UnregisterUnitEvent(event, unit)
+			local func = self.bossTargetChecks[unit]
+			self.bossTargetChecks[unit] = nil
+			local name = self:UnitName(id)
+			func(self, name, playerGUID)
+		end
 	end
 	--- Register a callback to get the next target a boss swaps to (boss1 - boss5).
 	-- Looks for the boss as defined by the GUID and then returns the next target selected by that boss.
@@ -1360,7 +1390,7 @@ function boss:GetHealth(unit)
 end
 
 do
-	local UnitAura = UnitAura
+	local UnitAura = C_UnitAuras and C_UnitAuras.GetAuraDataByIndex or UnitAura
 	local blacklist = {}
 	--- Get the buff info of a unit.
 	-- @string unit unit token or name
@@ -1377,6 +1407,14 @@ do
 			local t1, t2, t3, t4, t5
 			for i = 1, 100 do
 				local name, _, stack, _, duration, expirationTime, _, _, _, spellId, _, _, _, _, _, value = UnitAura(unit, i, "HELPFUL")
+				if type(name) == "table" then
+					stack = name.applications
+					duration = name.duration
+					expirationTime = name.expirationTime
+					spellId = name.spellId
+					value = name.points and name.points[1]
+					name = name.name
+				end
 
 				if name == spell then
 					if not blacklist[spellId] then
@@ -1393,6 +1431,14 @@ do
 		else
 			for i = 1, 100 do
 				local name, _, stack, auraType, duration, expirationTime, _, _, _, spellId, _, _, _, _, _, value = UnitAura(unit, i, "HELPFUL")
+				if type(name) == "table" then
+					stack = name.applications
+					duration = name.duration
+					expirationTime = name.expirationTime
+					spellId = name.spellId
+					value = name.points and name.points[1]
+					name = name.name
+				end
 
 				if not spellId then
 					return
@@ -1423,6 +1469,14 @@ do
 			local t1, t2, t3, t4, t5
 			for i = 1, 100 do
 				local name, _, stack, _, duration, expirationTime, _, _, _, spellId, _, _, _, _, _, value = UnitAura(unit, i, "HARMFUL")
+				if type(name) == "table" then
+					stack = name.applications
+					duration = name.duration
+					expirationTime = name.expirationTime
+					spellId = name.spellId
+					value = name.points and name.points[1]
+					name = name.name
+				end
 
 				if name == spell then
 					if not blacklist[spellId] then
@@ -1439,6 +1493,14 @@ do
 		else
 			for i = 1, 100 do
 				local name, _, stack, auraType, duration, expirationTime, _, _, _, spellId, _, _, _, _, _, value = UnitAura(unit, i, "HARMFUL")
+				if type(name) == "table" then
+					stack = name.applications
+					duration = name.duration
+					expirationTime = name.expirationTime
+					spellId = name.spellId
+					value = name.points and name.points[1]
+					name = name.name
+				end
 
 				if not spellId then
 					return
@@ -1460,6 +1522,24 @@ end
 function boss:Solo()
 	return solo
 end
+
+--- Register a wrapper around the CHAT_MSG_ADDON event that listens to Transcriptor comms sent by the core on every RAID_BOSS_WHISPER.
+-- @param func callback function, passed (msg, player)
+function boss:RegisterWhisperEmoteComms(func)
+	RegisterAddonMessagePrefix("Transcriptor")
+	self:RegisterEvent("CHAT_MSG_ADDON", function(_, prefix, msg, channel, sender)
+		if channel ~= "RAID" and channel ~= "PARTY" and channel ~= "INSTANCE_CHAT" then
+			return
+		elseif prefix == "Transcriptor" then
+			self[func](self, msg, Ambiguate(sender, "none"))
+		end
+	end)
+end
+
+-------------------------------------------------------------------------------
+-- Gossip API
+-- @section gossip
+--
 
 do
 	local GetOptions = C_GossipInfo.GetOptions
@@ -1563,7 +1643,7 @@ do
 	local function update(_, _, position, player)
 		myGroupRolePositions[player] = position
 	end
-	LibSpec:Register(BigWigsLoader, update)
+	LibSpec:Register(loader, update)
 end
 
 --- Ask LibSpecialization to update the role positions of everyone in your group.
@@ -2039,9 +2119,9 @@ function boss:MessageOld(key, color, sound, text, icon)
 	self:PlaySound(key, sound)
 end
 
-function boss:Message(key, color, text, icon)
+function boss:Message(key, color, text, icon, disableEmphasize)
 	if checkFlag(self, key, C.MESSAGE) then
-		local isEmphasized = band(self.db.profile[key], C.EMPHASIZE) == C.EMPHASIZE
+		local isEmphasized = not disableEmphasize and band(self.db.profile[key], C.EMPHASIZE) == C.EMPHASIZE
 		self:SendMessage("BigWigs_Message", self, key, type(text) == "string" and text or spells[text or key], color, icon ~= false and icons[icon or key], isEmphasized)
 	end
 end
@@ -2176,17 +2256,7 @@ do
 		end
 	end
 
-	local markerIcons = {
-		"|T137001:0|t",
-		"|T137002:0|t",
-		"|T137003:0|t",
-		"|T137004:0|t",
-		"|T137005:0|t",
-		"|T137006:0|t",
-		"|T137007:0|t",
-		"|T137008:0|t",
-	}
-	local comma = (GetLocale() == "zhTW" or GetLocale() == "zhCN") and "，" or ", "
+	local comma = (myLocale == "zhTW" or myLocale == "zhCN") and "，" or ", "
 	local tconcat = table.concat
 	do
 		local function printTargets(self, key, playerTable, color, text, icon, markers)
@@ -2209,7 +2279,7 @@ do
 				else
 					if markers then
 						for i = 1, playersInTable do
-							playerTable[i] = markerIcons[markers[i]] .. playerTable[i]
+							playerTable[i] = self:GetIconTexture(markers[i]) .. playerTable[i]
 						end
 					end
 					local list = tconcat(playerTable, comma, 1, playersInTable)
@@ -2315,7 +2385,7 @@ do
 						local name = playerTable[i]
 						local hasMarker = playerTable[name]
 						if hasMarker then
-							local markerFromTable = markerIcons[hasMarker]
+							local markerFromTable = self:GetIconTexture(hasMarker)
 							if markerFromTable then
 								tbl[#tbl+1] = markerFromTable .. self:ColorName(name)
 							else
@@ -2425,8 +2495,7 @@ do
 	local badNameplateBarTimeLeft = "Attempted to get time left of nameplate bar %q without a valid unitGUID."
 
 	local countString = "%((%d%d?)%)"
-	local l = GetLocale()
-	if l == "zhCN" or l == "zhTW" then
+	if myLocale == "zhCN" or myLocale == "zhTW" then
 		countString = "（(%d%d?)）"
 	end
 
@@ -2759,7 +2828,6 @@ do
 		[0x00000040] = 7, -- COMBATLOG_OBJECT_RAIDTARGET7
 		[0x00000080] = 8, -- COMBATLOG_OBJECT_RAIDTARGET8
 	}
-
 	--- Get the raid target icon currently set on a unit based on its combat log flags.
 	-- @string flags unit bit flags
 	-- @return number The number based on the icon ranging from 1-8 (nil if no icon is set)
@@ -2768,37 +2836,69 @@ do
 	end
 end
 
+do
+	local markerIcons = {
+		"|T137001:0|t",
+		"|T137002:0|t",
+		"|T137003:0|t",
+		"|T137004:0|t",
+		"|T137005:0|t",
+		"|T137006:0|t",
+		"|T137007:0|t",
+		"|T137008:0|t",
+	}
+	--- Get the raid target icon texture from a number ranging from 1-8
+	-- @number position The number from 1-8
+	-- @return string A texture you can embed into a string
+	function boss:GetIconTexture(position)
+		return markerIcons[position]
+	end
+end
+
 -------------------------------------------------------------------------------
 -- Chat.
 -- @section chat
 --
 
---- Send a message in SAY. Generally used for abilities where you need to spread out or run away.
--- @param key the option key
--- @param msg the message to say (if nil, key is used)
--- @bool[opt] directPrint if true, skip formatting the message and print the string directly to chat.
-function boss:Say(key, msg, directPrint)
-	if not checkFlag(self, key, C.SAY) then return end
-	if directPrint then
-		SendChatMessage(msg, "SAY")
-	else
-		SendChatMessage(format(L.on, msg and (type(msg) == "number" and spells[msg] or msg) or spells[key], pName), "SAY")
+do
+	local on = "%s on %s"
+	--- Send a message in SAY. Generally used for abilities where you need to spread out or run away.
+	-- @param key the option key
+	-- @param msg the message to say (if nil, key is used)
+	-- @bool[opt] directPrint if true, skip formatting the message and print the string directly to chat.
+	-- @string[opt] englishText The text string to replace the message with if the user has enabled the option to only print messages in English
+	function boss:Say(key, msg, directPrint, englishText)
+		if not checkFlag(self, key, C.SAY) then return end
+		if directPrint then
+			SendChatMessage(englishSayMessages and englishText or msg, "SAY")
+		else
+			if englishSayMessages and englishText then
+				SendChatMessage(format(on, englishText, pName), "SAY")
+			else
+				SendChatMessage(format(L.on, msg and (type(msg) == "number" and spells[msg] or msg) or spells[key], pName), "SAY")
+			end
+		end
+		self:Debug(":Say", key, msg, directPrint, englishText)
 	end
-	self:Debug(":Say", key, msg, directPrint)
-end
 
---- Send a message in YELL. Generally used for abilities where you need to group up.
--- @param key the option key
--- @param msg the message to yell (if nil, key is used)
--- @bool[opt] directPrint if true, skip formatting the message and print the string directly to chat.
-function boss:Yell(key, msg, directPrint)
-	if not checkFlag(self, key, C.SAY) then return end
-	if directPrint then
-		SendChatMessage(msg, "YELL")
-	else
-		SendChatMessage(format(L.on, msg and (type(msg) == "number" and spells[msg] or msg) or spells[key], pName), "YELL")
+	--- Send a message in YELL. Generally used for abilities where you need to group up.
+	-- @param key the option key
+	-- @param msg the message to yell (if nil, key is used)
+	-- @bool[opt] directPrint if true, skip formatting the message and print the string directly to chat.
+	-- @string[opt] englishText The text string to replace the message with if the user has enabled the option to only print messages in English
+	function boss:Yell(key, msg, directPrint, englishText)
+		if not checkFlag(self, key, C.SAY) then return end
+		if directPrint then
+			SendChatMessage(englishSayMessages and englishText or msg, "YELL")
+		else
+			if englishSayMessages and englishText then
+				SendChatMessage(format(on, englishText, pName), "YELL")
+			else
+				SendChatMessage(format(L.on, msg and (type(msg) == "number" and spells[msg] or msg) or spells[key], pName), "YELL")
+			end
+		end
+		self:Debug(":Yell", key, msg, directPrint, englishText)
 	end
-	self:Debug(":Yell", key, msg, directPrint)
 end
 
 --- Cancel a countdown using say messages.
@@ -2830,11 +2930,12 @@ do
 	-- @number seconds the amount of time in seconds until the countdown expires
 	-- @param[opt] textOrIcon Attach additional text to the countdown if passed a text string, attach a raid icon if passed a number [1-8]
 	-- @number[opt] startAt When to start sending messages in say, default value is at 3 seconds remaining
-	function boss:SayCountdown(key, seconds, textOrIcon, startAt)
+	-- @string[opt] englishText The text string to replace the message with if the user has enabled the option to only print messages in English
+	function boss:SayCountdown(key, seconds, textOrIcon, startAt, englishText)
 		if not checkFlag(self, key, C.SAY_COUNTDOWN) then return end
 		local start = startAt or 3
 		local tbl = {false}
-		local text = type(textOrIcon) == "number" and iconList[textOrIcon] or textOrIcon
+		local text = (type(textOrIcon) == "number" and iconList[textOrIcon]) or (englishSayMessages and englishText) or textOrIcon
 		local function printTime()
 			if not tbl[1] then
 				SendChatMessage(text and format("%s %d", text, start) or start, "SAY")
@@ -2853,11 +2954,12 @@ do
 	-- @number seconds the amount of time in seconds until the countdown expires
 	-- @param[opt] textOrIcon Attach additional text to the countdown if passed a text string, attach a raid icon if passed a number [1-8]
 	-- @number[opt] startAt When to start sending messages in yell, default value is at 3 seconds remaining
-	function boss:YellCountdown(key, seconds, textOrIcon, startAt)
+	-- @string[opt] englishText The text string to replace the message with if the user has enabled the option to only print messages in English
+	function boss:YellCountdown(key, seconds, textOrIcon, startAt, englishText)
 		if not checkFlag(self, key, C.SAY_COUNTDOWN) then return end
 		local start = startAt or 3
 		local tbl = {false}
-		local text = type(textOrIcon) == "number" and iconList[textOrIcon] or textOrIcon
+		local text = (type(textOrIcon) == "number" and iconList[textOrIcon]) or (englishSayMessages and englishText) or textOrIcon
 		local function printTime()
 			if not tbl[1] then
 				SendChatMessage(text and format("%s %d", text, start) or start, "YELL")
@@ -2945,6 +3047,13 @@ function boss:PlayVictorySound()
 	self:SendMessage("BigWigs_VictorySound", self)
 end
 
+--- Play a sound file.
+-- @param sound Either a FileID (number), or the path to a sound file (string)
+-- @string[opt] channel the channel the sound should play on, defaults to "Master"
+function boss:PlaySoundFile(sound, channel)
+	PlaySoundFile(sound, channel or "Master")
+end
+
 --- Register a sound to be played when a Private Aura is applied to you.
 -- @param key the option key
 -- @number[opt] spellId the spell id of the Private Aura if different from the key
@@ -2965,7 +3074,7 @@ function boss:SetPrivateAuraSound(key, spellId, soundCategory)
 end
 
 do
-	local SendAddonMessage, IsInGroup = BigWigsLoader.SendAddonMessage, IsInGroup
+	local SendAddonMessage, IsInGroup = loader.SendAddonMessage, IsInGroup
 	--- Send an addon sync to other players.
 	-- @param msg the sync message/prefix
 	-- @param[opt] extra other optional value you want to send
@@ -2987,8 +3096,7 @@ do
 end
 
 do
-	local l = GetLocale()
-	if l == "zhCN" or l == "zhTW" or l == "koKR" then
+	if myLocale == "zhCN" or myLocale == "zhTW" or myLocale == "koKR" then
 		function boss:AbbreviateNumber(amount)
 			if amount >= 100000000 then -- 100,000,000
 				return format(L.amount_one, amount/100000000)
@@ -3045,16 +3153,10 @@ function boss:Berserk(seconds, noMessages, customBoss, customBerserk, customFina
 
 	if not noMessages then
 		-- Engage warning with minutes to enrage
-		self:MessageOld(key, "yellow", nil, format(L.custom_start, name, berserk, seconds / 60), false)
+		self:Message(key, "yellow", format(L.custom_start, name, berserk, seconds / 60), false)
 	end
 
 	if noMessages ~= 0 then
-		-- Half-way to enrage warning.
-		local half = seconds / 2
-		local m = half % 60
-		local halfMin = (half - m) / 60
-		self:DelayedMessage(key, half + m, "yellow", format(L.custom_min, berserk, halfMin))
-
 		self:DelayedMessage(key, seconds - 60, "orange", format(L.custom_min, berserk, 1))
 		self:DelayedMessage(key, seconds - 30, "orange", format(L.custom_sec, berserk, 30))
 		self:DelayedMessage(key, seconds - 10, "orange", format(L.custom_sec, berserk, 10))

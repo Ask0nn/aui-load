@@ -21,13 +21,14 @@ local MoveViewLeftStop = MoveViewLeftStop
 local PVEFrame_ToggleFrame = PVEFrame_ToggleFrame
 local RemoveExtraSpaces = RemoveExtraSpaces
 local Screenshot = Screenshot
-local SetCVar = SetCVar
+local UIParent = UIParent
 local UnitCastingInfo = UnitCastingInfo
 local UnitIsAFK = UnitIsAFK
 
 local Chat_GetChatCategory = Chat_GetChatCategory
 local ChatHistory_GetAccessID = ChatHistory_GetAccessID
 local ChatFrame_GetMobileEmbeddedTexture = ChatFrame_GetMobileEmbeddedTexture
+
 local C_PetBattles_IsInBattle = C_PetBattles and C_PetBattles.IsInBattle
 
 local CinematicFrame = _G.CinematicFrame
@@ -79,7 +80,7 @@ function AFK:SetAFK(status)
 		CloseAllWindows()
 
 		afk:Show()
-		_G.UIParent:Hide()
+		UIParent:Hide()
 
 		if IsInGuild() then
 			local guildName, guildRankName = GetGuildInfo('player')
@@ -107,7 +108,7 @@ function AFK:SetAFK(status)
 
 		AFK.isAFK = true
 	elseif AFK.isAFK then
-		_G.UIParent:Show()
+		UIParent:Show()
 		afk:Hide()
 
 		AFK:CameraSpin()
@@ -233,7 +234,7 @@ function AFK:Toggle()
 		AFK:RegisterEvent('LFG_PROPOSAL_SHOW', 'OnEvent')
 		AFK:RegisterEvent('UPDATE_BATTLEFIELD_STATUS', 'OnEvent')
 
-		SetCVar('autoClearAFK', '1')
+		E:SetCVar('autoClearAFK', 1)
 	else
 		AFK:UnregisterEvent('PLAYER_FLAGS_CHANGED')
 		AFK:UnregisterEvent('PLAYER_REGEN_DISABLED')
@@ -300,7 +301,7 @@ function AFK:Initialize()
 
 	afk:SetFrameLevel(1)
 	afk:SetScale(E.uiscale)
-	afk:SetAllPoints(_G.UIParent)
+	afk:SetAllPoints(UIParent)
 	afk:EnableKeyboard(true)
 	afk:SetScript('OnKeyDown', AFK.OnKeyDown)
 	afk:Hide()

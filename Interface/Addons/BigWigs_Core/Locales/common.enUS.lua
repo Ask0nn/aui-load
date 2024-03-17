@@ -4,6 +4,7 @@ local L = BigWigsAPI:NewLocale("BigWigs: Common", "enUS")
 L.you = "%s on YOU"
 L.you_icon = "%s on |T13700%d:0|tYOU"
 L.underyou = "%s under YOU"
+L.aboveyou = "%s above YOU"
 L.other = "%s: %s"
 L.onboss = "%s on BOSS"
 L.buff_boss = "Buff on BOSS: %s"
@@ -22,6 +23,7 @@ L.rticon = "%s ({rt%d})"
 L.near = "%s near YOU"
 L.on_group = "%s on GROUP"
 L.boss = "BOSS"
+L.plus = "%s + %s" -- Spell 1 + Spell 2
 
 L.phase = "Phase %d"
 L.stage = "Stage %d"
@@ -31,7 +33,8 @@ L.mythic = "Mythic mode"
 L.hard = "Hard mode"
 L.active = "Active" -- When a boss becomes active, after speech finishes
 L.general = "General" -- General settings, i.e. things that apply to normal, heroic and mythic mode.
-L.absorb = "Absorb" -- Used for shield-like abilities that absorb damage or healing
+L.door_open = "Door open" -- When a door is open, usually after a speech from an NPC
+L.gate_open = "Gate open" -- When a gate is open, usually after a speech from an NPC
 
 L.duration = "%s for %s sec" -- Spell for 10 seconds
 L.over = "%s Over" -- Spell Over
@@ -46,9 +49,12 @@ L.no = "No %s" -- No Spell
 L.intermission = "Intermission"
 L.percent = "%d%% - %s" -- 20% - Spell
 L.cancelled = "%s Cancelled" -- Spell Cancelled
+L.you_die = "You die"
+L.you_die_sec = "You die in %d sec" -- "You die in 15 sec" (sec = seconds)
 
 -- Add related
 L.add_spawned = "Add Spawned"
+L.adds_spawned = "Adds Spawned"
 L.spawned = "%s Spawned"
 L.spawning = "%s Spawning"
 L.next_add = "Next Add"
@@ -62,7 +68,8 @@ L.small_add = "Small Add" -- singular
 L.small_adds = "Small Adds" -- plural
 
 -- Mob related
-L.mob_killed = "%s killed (%d/%d)"
+L.killed = "%s Killed"
+L.mob_killed = "%s Killed (%d/%d)"
 L.mob_remaining = "%s killed, %d remaining"
 
 -- Localizers note:
@@ -114,6 +121,7 @@ L.west = "West"
 L.north_west = "North-West"
 
 -- Common ability name replacements
+L.absorb = "Absorb" -- Used for shield-like abilities that absorb damage or healing
 L.tank_combo = "Tank Combo" -- Used for tank swap mechanics where the boss casts a sequence of tank buster attacks
 L.laser = "Laser" -- Used for abilities that act like a laser. Usually from the boss to a player, or, from the boss to a specific area
 L.lasers = "Lasers" -- Plural of L.lasers
@@ -133,7 +141,10 @@ L.fear = "Fear" -- For abilities that cause you to flee in fear
 L.breath = "Breath" -- When a boss breathes fire/frost/etc on to a player or the raid e.g. a Dragon breathing fire on everyone
 L.roar = "Roar" -- When a boss opens their mouth to let out a loud roar, sometimes used to inflict damage on the raid
 L.leap = "Leap" -- When a boss leaps through the air from one location to another location, or from a location to a player, etc
+L.charge = "Charge" -- When a boss select a new target and charges at it quickly, in the same way someone playing a warrior can charge at a target
 L.full_energy = "Full Energy" -- When a boss reaches full/maximum energy, usually the boss will cast something big and powerful when this happens
+L.weakened = "Weakened" -- When a boss becomes weakened and sometimes takes extra damage, usually the "hit all your cooldowns" part of the fight
+L.immune = "Immune" -- When a boss becomes immune to all damage and you can no longer hurt it
 L.pool = "Pool" -- A pool or puddle on the ground, usually something bad that you should avoid standing in
 L.pools = "Pools" -- Plural of L.pool
 L.totem = "Totem" -- A totem, usually summoned by a boss, the same thing that shamans summon
@@ -144,3 +155,15 @@ L.rift = "Rift" -- Can be used in a similar way as a portal e.g. "Time Rift" but
 L.rifts = "Rifts" -- Plural of L.rift
 L.orb = "Orb" -- A ball/sphere object usually moving and you need to avoid it
 L.orbs = "Orbs" -- Plural for L.orb
+L.curse = "Curse" -- Any curse-type dispellable debuff, or debuffs called "Curse of XYZ", etc.
+L.curses = "Curses" -- Plural of L.curse
+L.spirit = "Spirit" -- Sometimes a boss will summon spirits, similar to ghosts, but not exactly, although you might have the same word for both. e.g. "Spirits of X" or "Wild Spirits"
+L.spirits = "Spirits" -- Plural of L.spirit
+L.tornado = "Tornado" -- 'A tornado is a violently rotating column of air that is in contact with both the surface of the Earth and a cloud' - Wikipedia
+L.tornadoes = "Tornadoes" -- Plural of L.tornado
+L.frontal_cone = "Frontal Cone" -- Usually a bad Area-of-Effect ability cast by the boss in a cone/triangle/pizza shape in front of them, don't stand in front of the boss!
+L.fear = "Fear" -- Similar to a warlock or priest ability, when a boss casts a fear on a player or multiple players, that makes them run around out of control
+L.mark = "Mark" -- Short name for abilites with "Mark" in the name, for example "Mark of Death" or "Toxic Mark" or "Mark of Frost" etc.
+L.marks = "Marks" -- Plural of L.marks
+L.mind_control = "Mind Control" -- Any kind of Mind Control ability, where a player loses control of their character
+L.mind_control_short = "MC" -- Short version of Mind Control, mainly for bars

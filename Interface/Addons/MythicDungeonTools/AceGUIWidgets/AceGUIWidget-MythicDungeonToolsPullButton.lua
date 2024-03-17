@@ -354,7 +354,7 @@ local methods = {
       text = L["Pull Drop Color Settings"],
       notCheckable = 1,
       func = function()
-        MDT:OpenSettingsDialog()
+        MDT:ToggleSettingsDialog()
       end
     })
     local function swatchFunc()
@@ -452,7 +452,6 @@ local methods = {
           if MDT.liveSessionActive and MDT:GetCurrentPreset().uid == MDT.livePresetUID then
             MDT:LiveSession_SendPulls(MDT:GetPulls())
           end
-          MDT:DrawAllHulls()
         end
       })
       tinsert(self.menu, {
@@ -549,7 +548,7 @@ local methods = {
       text = L["Pull Drop Color Settings"],
       notCheckable = 1,
       func = function()
-        MDT:OpenSettingsDialog()
+        MDT:ToggleSettingsDialog()
       end
     })
     local function swatchMultiFunc()
@@ -1143,14 +1142,23 @@ local methods = {
       self.enemyPortraits[idx].fontString:Show()
     end
   end,
-  ["ShowReapingIcon"] = function(self, show, currentPercent, oldPercent)
+  ["ShowReapingIcon"] = function(self, show, currentForces, oldForces, totalForcesMax)
+    local db = MDT:GetDB()
+    --compute percentage
+    local currentPercent = currentForces / totalForcesMax
+    local oldPercent = oldForces / totalForcesMax
     --set percentage here
     self.percentageFontString:Show()
-    local perc = string.format("%.1f%%", currentPercent * 100)
+    local progressText
+    if db.useForcesCount then
+      progressText = string.format("%3d", currentForces)
+    else
+      progressText = string.format("%.1f%%", currentPercent * 100)
+    end
     if show then
       self.reapingIcon:Show()
       self.reapingIcon.overlay:Show()
-      perc = "|cFF00FF00"..perc
+      progressText = "|cFF00FF00"..progressText
 
       local currentReaps = math.floor(currentPercent / 0.2)
       local oldReaps = math.floor(oldPercent / 0.2)
@@ -1166,23 +1174,32 @@ local methods = {
       self.reapingIcon:Hide()
       self.reapingIcon.overlay:Hide()
       self.multiReapingFontString:Hide()
-      perc = "|cFFFFFFFF"..perc
+      progressText = "|cFFFFFFFF"..progressText
     end
     local pullForces = MDT:CountForces(self.index, true)
     if pullForces > 0 then
-      self.percentageFontString:SetText(perc)
+      self.percentageFontString:SetText(progressText)
       self.percentageFontString:Show()
     else
       self.percentageFontString:Hide()
     end
   end,
-  ["ShowPridefulIcon"] = function(self, show, currentPercent, oldPercent)
+  ["ShowPridefulIcon"] = function(self, show, currentForces, oldForces, totalForcesMax)
+    local db = MDT:GetDB()
+    --compute percentage
+    local currentPercent = currentForces / totalForcesMax
+    local oldPercent = oldForces / totalForcesMax
     --set percentage here
     self.percentageFontString:Show()
-    local perc = string.format("%.1f%%", currentPercent * 100)
+    local progressText
+    if db.useForcesCount then
+      progressText = string.format("%3d", currentForces)
+    else
+      progressText = string.format("%.1f%%", currentPercent * 100)
+    end
     if show then
       self.pridefulIcon:Show()
-      perc = "|cFFFFFFFF"..perc
+      progressText = "|cFFFFFFFF"..progressText
 
       local currentPrides = math.floor(currentPercent / 0.2)
       local oldPrides = math.floor(oldPercent / 0.2)
@@ -1197,11 +1214,11 @@ local methods = {
     else
       self.pridefulIcon:Hide()
       self.multiPridefulFontString:Hide()
-      perc = "|cFFFFFFFF"..perc
+      progressText = "|cFFFFFFFF"..progressText
     end
     local pullForces = MDT:CountForces(self.index, true)
     if pullForces > 0 then
-      self.percentageFontString:SetText(perc)
+      self.percentageFontString:SetText(progressText)
       self.percentageFontString:Show()
     else
       self.percentageFontString:Hide()

@@ -121,6 +121,9 @@ function WarpDeplete:UpdateDemoModeForces()
   if self.db.profile.showForcesGlow and self.db.profile.demoForcesGlow then
     self:SetForcesCurrent(92)
     self:SetForcesPull(8)
+  elseif self.db.profile.unclampForcesPercent then
+    self:SetForcesCurrent(101)
+    self:SetForcesPull(3.4)
   else
     self:SetForcesCurrent(34)
     self:SetForcesPull(7)
@@ -148,7 +151,7 @@ function WarpDeplete:EnableDemoMode()
   end
 
   self:SetObjectives(objectives)
-  self:SetKeyDetails(30, {L["Tyrannical"], L["Bolstering"], L["Spiteful"], L["Thundering"]}, {9, 7, 123, 132})
+  self:SetKeyDetails(30, {L["Tyrannical"], L["Bolstering"], L["Spiteful"]}, {9, 7, 123, 132})
 
   self:SetTimerLimit(35 * 60)
   self:SetTimerRemaining(20 * 60)

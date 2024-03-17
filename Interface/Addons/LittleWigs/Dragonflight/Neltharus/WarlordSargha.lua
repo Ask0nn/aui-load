@@ -148,7 +148,7 @@ do
 	end
 end
 
-function mod:BurningEmber(args)
+function mod:BurningEmber()
 	self:StopBar(377477)
 	burningEmberRemaining = burningEmberRemaining - 1
 	self:Message(377477, "yellow")
